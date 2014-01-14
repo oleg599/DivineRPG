@@ -17,7 +17,7 @@ public class EventHelper {
 		if(e.entity instanceof EntityPlayer) {
 			EntityPlayer p = (EntityPlayer) e.entity;
 			if(p.worldObj.isRemote) {
-				FMLClientHandler.instance().getClientPlayerEntity().sendChatMessage("Thank you for downloading and playing DivineRPG " + Reference.MOD_VERSION + ". Enjoy :)");
+				FMLClientHandler.instance().getClientPlayerEntity().sendChatMessage("Brock is Awesome!");
 				FMLClientHandler.instance().getClientPlayerEntity().sendChatMessage("~Love from the DivineRPG staff");
 			}
 		}
