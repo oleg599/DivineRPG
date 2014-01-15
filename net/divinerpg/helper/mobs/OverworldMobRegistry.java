@@ -13,5 +13,11 @@ public class OverworldMobRegistry {
 		DivineRPGMobRegistry.registerDivineRPGMob(EntityCaveCrawler.class, "Cave Crawler");		
 		DivineRPGMobRegistry.registerDivineRPGMob(EntityJungleDramcryx.class, "Jungle Dramcryx");		
 		DivineRPGMobRegistry.registerDivineRPGMob(EntityCyclops.class, "Cyclops");		
+		DivineRPGMobRegistry.registerDivineRPGMob(EntityAncientEntity.class, "Ancient Entity");		
+		DivineRPGMobRegistry.registerDivineRPGMob(EntityWhale.class, "Whale");		
+		DivineRPGMobRegistry.registerDivineRPGMob(EntityHellSpider.class, "Hell Spider");		
+		DivineRPGMobRegistry.registerDivineRPGMob(EntityScorcher.class, "Scorhcer");		
+		DivineRPGMobRegistry.registerDivineRPGMob(EntityEnderSpider.class, "Ender Spider");		
+
 	}
 }

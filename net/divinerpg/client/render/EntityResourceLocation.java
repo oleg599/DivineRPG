@@ -13,5 +13,10 @@ public class EntityResourceLocation {
 	public static ResourceLocation DesertCrawler = new ResourceLocation(Prefix + "DesertCrawler.png");
 	public static ResourceLocation JungleDramcryx = new ResourceLocation(Prefix + "JungleDramcryx.png");
 	public static ResourceLocation Cyclops = new ResourceLocation(Prefix + "Cyclops.png");
+	public static ResourceLocation Ancient = new ResourceLocation(Prefix + "AncientEntity.png");
+	public static ResourceLocation Scorcher = new ResourceLocation(Prefix + "Scorcher.png");
+	public static ResourceLocation HellSpider = new ResourceLocation(Prefix + "HellSpider.png");
+	public static ResourceLocation Whale = new ResourceLocation(Prefix + "Whale.png");
+	public static ResourceLocation EnderSpider = new ResourceLocation(Prefix + "EnderSpider.png");
 
 }

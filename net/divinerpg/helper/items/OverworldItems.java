@@ -3,6 +3,7 @@ package net.divinerpg.helper.items;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.tab.DivineRPGTabs;
 import net.divinerpg.overworld.items.ItemInfernoSword;
+import net.divinerpg.overworld.items.ItemMysteriousClock;
 import net.divinerpg.overworld.items.ItemShickaxe;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -77,8 +78,8 @@ public class OverworldItems {
 	public static final Item sharkFin = new Item().setTextureName(x.prefix + "sharkfin").setUnlocalizedName("SharkFin").setCreativeTab(DivineRPGTabs.items);
 	public static final Item watchingEye = new Item().setTextureName(x.prefix + "watchingeye").setUnlocalizedName("WatchingEye").setCreativeTab(DivineRPGTabs.items);
 	public static final Item whaleFin = new Item().setTextureName(x.prefix + "whalefin").setUnlocalizedName("WhaleFin").setCreativeTab(DivineRPGTabs.items);
-	public static final Item myseriousClock = new Item().setTextureName(x.prefix + "myseriousclock").setUnlocalizedName("myseriousClock").setCreativeTab(DivineRPGTabs.items);
-	
+	public static final Item myseriousClock = new ItemMysteriousClock().setTextureName(x.prefix + "myseriousclock").setUnlocalizedName("myseriousClock").setCreativeTab(DivineRPGTabs.spawner);
+	 
 	public static final Item enderSword = new ItemModSword(EnderSword).setTextureName(x.prefix + "endersword").setUnlocalizedName("enderSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item enderSwordBlue = new ItemModSword(EnderSword).setTextureName(x.prefix + "enderswordblue").setUnlocalizedName("enderSwordBlue").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item enderSwordDark = new ItemModSword(EnderSword).setTextureName(x.prefix + "enderswordblack").setUnlocalizedName("enderSwordDark").setCreativeTab(DivineRPGTabs.swords);
@@ -178,6 +179,7 @@ public class OverworldItems {
 		addItem(sharkFin, "Shark Fin");
 		addItem(watchingEye, "Watching Eye");
 		addItem(whaleFin, "Whale Fin");
+		addItem(myseriousClock, "Mysterious Clock");
 		
 		//Weapons
 		addItem(enderSword, "Ender Sword");
