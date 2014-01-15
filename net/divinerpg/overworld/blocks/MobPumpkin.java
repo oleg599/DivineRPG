@@ -37,9 +37,9 @@ public class MobPumpkin extends BlockDirectional
         return par1 == 1 ? this.top : (par1 == 0 ? this.top : (par2 == 2 && par1 == 2 ? this.front : (par2 == 3 && par1 == 5 ? this.front : (par2 == 0 && par1 == 3 ? this.front : (par2 == 1 && par1 == 4 ? this.front : this.field_149761_L)))));
     }
 
-    public boolean func_149742_c(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
+    public boolean func_149742_c(World world, int par1, int par2, int par3)
     {
-        return  p_149742_1_.func_147439_a(p_149742_2_, p_149742_3_, p_149742_4_).isReplaceable(p_149742_1_, p_149742_2_, p_149742_3_, p_149742_4_) && World.func_147466_a(p_149742_1_, p_149742_2_, p_149742_3_ - 1, p_149742_4_);
+        return  world.func_147439_a(par1, par2, par3).isReplaceable(world, par1, par2, par3) && World.func_147466_a(world, par1, par2 - 1, par3);
     }
 
     public void func_149689_a(World world, int x, int y, int z, EntityLivingBase player, ItemStack item)
