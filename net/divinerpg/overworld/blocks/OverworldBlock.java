@@ -3,6 +3,7 @@ package net.divinerpg.overworld.blocks;
 import java.util.Random;
 
 import net.divinerpg.DivineRPG;
+import net.divinerpg.Reference;
 import net.divinerpg.helper.blocks.OverworldBlocks;
 import net.divinerpg.helper.items.OverworldItems;
 import net.divinerpg.helper.tab.DivineRPGTabs;
@@ -131,4 +132,13 @@ public class OverworldBlock extends Block
 		}
 		return 0;
 	}
+	
+	public Block setUnlocalizedName(String name){
+    	func_149663_c(name);
+    	return this;
+    }
+    
+    public Block setTextureName(String name){
+        return func_149658_d(Reference.prefix + name);
+    }
 }

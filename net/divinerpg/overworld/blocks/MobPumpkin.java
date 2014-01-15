@@ -1,15 +1,12 @@
 package net.divinerpg.overworld.blocks;
 
-import net.divinerpg.DivineRPG;
+import net.divinerpg.Reference;
 import net.divinerpg.helper.tab.DivineRPGTabs;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.monster.EntityIronGolem;
-import net.minecraft.entity.monster.EntitySnowman;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
@@ -53,5 +50,10 @@ public class MobPumpkin extends BlockDirectional
         this.front = icon.registerIcon(this.func_149641_N() + "pumpkin_front");
         this.top = icon.registerIcon(this.func_149641_N() + "pumpkin_top");
         this.field_149761_L = icon.registerIcon(this.func_149641_N() + "pumpkin_side");
+    }
+    
+    public Block setUnlocalizedName(String name){
+    	func_149663_c(name);
+    	return this;
     }
 }

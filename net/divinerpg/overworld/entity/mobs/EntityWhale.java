@@ -6,6 +6,7 @@ import net.divinerpg.helper.items.OverworldItems;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityWaterMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -13,7 +14,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class EntityWhale extends EntityWaterMob {
+public class EntityWhale extends EntityMob {
 	
     private int angerLevel = 0;
     private int randomSoundDelay = 5;
@@ -27,7 +28,7 @@ public class EntityWhale extends EntityWaterMob {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(800.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.4D);
-		//this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(20.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(20.0D);
 	}
 
     public boolean canBreatheUnderwater()
@@ -174,6 +175,6 @@ public class EntityWhale extends EntityWaterMob {
     
     public void onCollideWithPlayer(EntityPlayer par1EntityPlayer)
     {
-    	par1EntityPlayer.attackEntityFrom(DamageSource.causeMobDamage(par1EntityPlayer), (float)this.getEntityAttribute(SharedMonsterAttributes.attackDamage).getAttributeValue());
+    	//par1EntityPlayer.attackEntityFrom(DamageSource.causeMobDamage(par1EntityPlayer), (float)this.getEntityAttribute(SharedMonsterAttributes.attackDamage).getAttributeValue());
     }
 }
