@@ -17,7 +17,7 @@ public class CommonProxy {
 	
 	//ClientProxy
 	public void preInit(FMLPreInitializationEvent event){
-		//ConfigurationHelper.init(event);
+		ConfigurationHelper.init(event);
 		MinecraftForge.EVENT_BUS.register(new EventHelper());
 		OverworldBlocks.init();
 		OverworldItems.init();
@@ -26,7 +26,7 @@ public class CommonProxy {
 	}
 	
 	public void init(FMLInitializationEvent event){
-		int wut = 10;//What the hell does the int do? Mod Generation Weight? Dafaq is that?!?!
+		int wut = 10;//What the hell does the int even do?
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
 	}
 	

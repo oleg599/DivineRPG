@@ -1,6 +1,8 @@
 package net.divinerpg.helper.tab;
 
+import net.divinerpg.helper.blocks.OverworldBlocks;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
 public class DivineRPGTabs {
 	public static CreativeTabs blocks = new BlockTab("Blocks");

@@ -10,7 +10,7 @@ public class SoundLoader {
 	public void load(SoundLoadEvent e){
 		try{
 			for(String sound : Sounds.files){
-				//e.manager.
+				//e.manager. TODO FIND OUT HOW TO ADD A SOUND FILE
 			}
 		}catch(Exception ex){
 

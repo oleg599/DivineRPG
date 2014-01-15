@@ -14,5 +14,4 @@ public class ClientProxy extends CommonProxy{
 		MinecraftForge.EVENT_BUS.register(new SoundLoader());
 		NetworkRegistry.INSTANCE.registerGuiHandler(DivineRPG.instance, new GuiHandler());
 	}
-	
 }
