@@ -27,7 +27,7 @@ public class EntityWhale extends EntityWaterMob {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(800.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.4D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(20.0D);
+		//this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(20.0D);
 	}
 
     public boolean canBreatheUnderwater()
