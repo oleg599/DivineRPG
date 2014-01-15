@@ -1,6 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
-import net.divinerpg.helper.items.OverworldItems;
+import net.divinerpg.helper.items.EndItems;
 import net.divinerpg.overworld.entity.projectiles.EntityTripletProjectile;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -291,7 +291,7 @@ public class EntityEnderTriplets extends EntityMob implements IMob {
 
     protected Item func_146068_u()
     {
-        return OverworldItems.enderShard;
+        return EndItems.enderShard;
     }
 
     /**
@@ -304,7 +304,7 @@ public class EntityEnderTriplets extends EntityMob implements IMob {
         j = this.rand.nextInt(3) + this.rand.nextInt(1 + par2);
 
         for (k = 0; k < j; ++k) {
-            this.func_145779_a(OverworldItems.enderShard, 3);
+            this.func_145779_a(EndItems.enderShard, 3);
         }
     }
 

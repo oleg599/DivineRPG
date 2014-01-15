@@ -1,5 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
+import net.divinerpg.helper.items.EndItems;
 import net.divinerpg.helper.items.OverworldItems;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityEnderman;
@@ -21,13 +22,13 @@ public class EntityEnderWatcher extends EntityEnderman{
 
     protected Item func_146068_u()
     {
-        return OverworldItems.enderShard;
+        return EndItems.enderShard;
     }
     
     protected void dropFewItems(boolean par1, int par2)
     {
         Item item = this.func_146068_u();
-        Item item2 = OverworldItems.watchingEye;
+        Item item2 = EndItems.watchingEye;
 
         if (item != null)
         {

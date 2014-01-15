@@ -2,17 +2,15 @@ package net.divinerpg.overworld.blocks;
 
 import java.util.Random;
 
-import net.divinerpg.DivineRPG;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.blocks.OverworldBlocks;
-import net.divinerpg.helper.items.OverworldItems;
+import net.divinerpg.helper.items.NetherItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
 
 public class OverworldBlock extends Block
 {
@@ -42,7 +40,7 @@ public class OverworldBlock extends Block
 			return getBlock(this);
 		}
 		if(this == OverworldBlocks.bloodGemOre){
-			return OverworldItems.bloodGem;
+			return NetherItems.bloodGem;
 		}
 		if(this == OverworldBlocks.netheriteOre){
 			return getBlock(this);

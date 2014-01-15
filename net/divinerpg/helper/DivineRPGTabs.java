@@ -1,9 +1,8 @@
 package net.divinerpg.helper;
 
-import net.divinerpg.helper.blocks.OverworldBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
+import net.divinerpg.helper.items.EndItems;
 import net.divinerpg.helper.items.OverworldItems;
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -22,7 +21,7 @@ public class DivineRPGTabs {
 	public static CreativeTabs armor = new CreativeTabs("Armor")
 		{public Item getTabIconItem() {return OverworldItems.noImage;}};
 	public static CreativeTabs spawner = new CreativeTabs("Spawner")
-		{public Item getTabIconItem() {return OverworldItems.callWatcher;}};
+		{public Item getTabIconItem() {return EndItems.callWatcher;}};
 	public static CreativeTabs utility = new CreativeTabs("Utility")
 		{public Item getTabIconItem() {return OverworldItems.noImage;}};
 	public static CreativeTabs food = new CreativeTabs("Herbalism")
