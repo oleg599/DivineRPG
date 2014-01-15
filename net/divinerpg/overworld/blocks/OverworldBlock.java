@@ -31,66 +31,65 @@ public class OverworldBlock extends Block
 	}
 
 	public Item func_149650_a(int par1, Random par2, int par3) {
-		
 		if(this == OverworldBlocks.rupeeOre){
-			return getBlock(OverworldBlocks.rupeeOre);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.arlemiteOre){
-			return getBlock(OverworldBlocks.arlemiteOre);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.realmiteOre){
-			return getBlock(OverworldBlocks.realmiteOre);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.bloodGemOre){
 			return OverworldItems.bloodGem;
 		}
 		if(this == OverworldBlocks.netheriteOre){
-			return getBlock(OverworldBlocks.netheriteOre);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.rupeeBlock){
-			return getBlock(OverworldBlocks.rupeeBlock);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.arlemiteBlock){
-			return getBlock(OverworldBlocks.arlemiteBlock);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.realmiteBlock){
-			return getBlock(OverworldBlocks.realmiteBlock);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.bloodGemBlock){
-			return getBlock(OverworldBlocks.bloodGemBlock);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.netheriteBlock){
-			return getBlock(OverworldBlocks.netheriteBlock);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.checker){
-			return getBlock(OverworldBlocks.checker);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.rainbowWool){
-			return getBlock(OverworldBlocks.rainbowWool);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.crate){
-			return getBlock(OverworldBlocks.crate);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.blueStone){
-			return getBlock(OverworldBlocks.blueStone);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.purpleStone){
-			return getBlock(OverworldBlocks.purpleStone);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.blueVane){
-			return getBlock(OverworldBlocks.blueVane);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.cyanVane){
-			return getBlock(OverworldBlocks.cyanVane);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.purpleVane){
-			return getBlock(OverworldBlocks.purpleVane);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.redVane){
-			return getBlock(OverworldBlocks.redVane);
+			return getBlock(this);
 		}
 		if(this == OverworldBlocks.yellowVane){
-			return getBlock(OverworldBlocks.yellowVane);
+			return getBlock(this);
 		}
 		return null;
 	}
