@@ -16,30 +16,33 @@ public class OverworldItems {
 	public static Reference x;
 	public static int HEAD = 0, BODY = 1, LEGS = 2, BOOTS = 3;
 	
-	public static ToolMaterial Rupee = EnumHelper.addToolMaterial("rupee", 6, 2500, 16.0F, 1, 0);
-	public static ToolMaterial Arlemite = EnumHelper.addToolMaterial("arlemite", 3, 3000, 13.0F, 1, 10);
+	public static ToolMaterial Rupee = EnumHelper.addToolMaterial("rupee", 6, 2500, 16.0F, 4, 0);
+	public static ToolMaterial Arlemite = EnumHelper.addToolMaterial("arlemite", 3, 3000, 13.0F, 4, 10);
 	public static ToolMaterial Realmite = EnumHelper.addToolMaterial("realmite", 3, 4000, 12.0F, 1, 10);
-	public static ToolMaterial Inferno = EnumHelper.addToolMaterial("infernosword", 0, -1, 0, 9, 22);
-	public static ToolMaterial RupeeShick = EnumHelper.addToolMaterial("RupeeShick", 4, -1, 16.0F, 7, 15);
-	public static ToolMaterial ArlemiteSword = EnumHelper.addToolMaterial("arlemite", 1, 4000, 1.5F, 6, 10);
-	public static ToolMaterial arlemiteShick = EnumHelper.addToolMaterial("ArlemiteShick", 4, 13000, 15.0F, 7, 15);
-	public static ToolMaterial EnderSword = EnumHelper.addToolMaterial("enderSword", 0, -1, 0, 23, 16);
+	public static ToolMaterial Inferno = EnumHelper.addToolMaterial("infernosword", 0, -1, 0, 7, 22);
+	public static ToolMaterial RupeeShick = EnumHelper.addToolMaterial("RupeeShick", 4, -1, 16.0F, 6, 15);
+	public static ToolMaterial ArlemiteSword = EnumHelper.addToolMaterial("arlemite", 1, 4000, 1.5F, 4, 10);
+	public static ToolMaterial arlemiteShick = EnumHelper.addToolMaterial("ArlemiteShick", 4, 13000, 15.0F, 6, 15);
+	public static ToolMaterial EnderSword = EnumHelper.addToolMaterial("enderSword", 0, -1, 0, 18, 16);
 	public static ToolMaterial SlimeSword = EnumHelper.addToolMaterial("slimesword", 0, 1000, 0, 6, 22);
-	public static ToolMaterial DivineSword = EnumHelper.addToolMaterial("divinesword", 0, -1, 0, 29, 22);
-	public static ToolMaterial AquaSword = EnumHelper.addToolMaterial("aquasword", 1, 10000, 1.5F, 18, 10);
-	public static ToolMaterial Aquatic = EnumHelper.addToolMaterial("Aquatic", 3, 7000, 1.5F, 15, 10);
-	public static ToolMaterial OceanKnife = EnumHelper.addToolMaterial("OceanKnife", 3, 2000, 1.5F, 14, 10);
-	public static ToolMaterial BedrockSword = EnumHelper.addToolMaterial("bedrocksword", 0, 14000, 0, 13, 22);
-	public static ToolMaterial SandSlash = EnumHelper.addToolMaterial("sandslash", 0, 200, 0, 32, 22);
-	public static ToolMaterial BloodgemTool = EnumHelper.addToolMaterial("bloodgem", 0, 520, 2.0F, 5, 15);
-	public static ToolMaterial Cyclops = EnumHelper.addToolMaterial("Cyclopse", 0, 1000, 8.0F, 3.0F, 10);
-	public static ToolMaterial Bedrock = EnumHelper.addToolMaterial("Bedrock", 3, -1, 9.0F, 1, 10);
-	public static ToolMaterial Divine = EnumHelper.addToolMaterial("Divine", 3, 35000, 20.0F, 1, 10);
-	public static ToolMaterial Corrupted = EnumHelper.addToolMaterial("Corrupted", 3, 6000, 16.0F, 1, 10);
+	public static ToolMaterial DivineSword = EnumHelper.addToolMaterial("divinesword", 0, -1, 0, 24, 22);
+	public static ToolMaterial AquaMaul = EnumHelper.addToolMaterial("aquasword", 1, 10000, 1.5F, 18, 10);
+	public static ToolMaterial OceanKnife = EnumHelper.addToolMaterial("OceanKnife", 3, 2000, 0.0F, 9, 10);
+	public static ToolMaterial BedrockSword = EnumHelper.addToolMaterial("bedrocksword", 0, 14000, 0, 8, 22);
+	public static ToolMaterial Sandslash = EnumHelper.addToolMaterial("sandslash", 0, 200, 0, 27, 22);
+	public static ToolMaterial BloodgemTool = EnumHelper.addToolMaterial("bloodgem", 0, 520, 2.0F, 4, 15);
+	public static ToolMaterial Cyclops = EnumHelper.addToolMaterial("Cyclops", 0, 1000, 8.0F, 3, 10);
+	public static ToolMaterial Bedrock = EnumHelper.addToolMaterial("Bedrock", 3, -1, 9.0F, 8, 10);
+	public static ToolMaterial Divine = EnumHelper.addToolMaterial("Divine", 3, 35000, 20.0F, 24, 10);
+	public static ToolMaterial Corrupted = EnumHelper.addToolMaterial("Corrupted", 3, 6000, 16.0F, 8, 10);
 	public static ToolMaterial Donator = EnumHelper.addToolMaterial("Donator", 0, 5000, 0.0F, 7, 22);
-	public static ToolMaterial AquaticDagger = EnumHelper.addToolMaterial("AquaticDagger", 0, 2000, 0.0F, 5, 15);
-	public static ToolMaterial AquaticTrident = EnumHelper.addToolMaterial("AquaticTrident", 0, 7000, 0.0F, 10, 15);
+	public static ToolMaterial AquaDagger = EnumHelper.addToolMaterial("AquaticDagger", 0, 2000, 0.0F, 5, 15);
+	public static ToolMaterial AquaTrident = EnumHelper.addToolMaterial("AquaticTrident", 0, 7000, 0.0F, 10, 15);
 	public static ToolMaterial Aquaton = EnumHelper.addToolMaterial("Aquaton", 0, 10000, 0.0F, 13, 15);
+	public static ToolMaterial FrostSword = EnumHelper.addToolMaterial("FrostSword", 0, 5000, 0.0F, 5, 15);
+	public static ToolMaterial MoltenSword = EnumHelper.addToolMaterial("MoltenSword", 0, 5000, 0.0F, 5, 15);
+	public static ToolMaterial SharkSword = EnumHelper.addToolMaterial("SharkSword", 0, 2000, 0.0F, 7, 15);
+	public static ToolMaterial DeathBringer = EnumHelper.addToolMaterial("DeathBringer", 0, 6000, 0.0F, 8, 15);
 
 	public static final Item rupeeIngot = new Item().setUnlocalizedName("RupeeIngot").setTextureName(x.prefix + "rupeeingot").setCreativeTab(DivineRPGTabs.items);
 	public static final Item arlemiteIngot = new Item().setUnlocalizedName("ArlemiteIngot").setTextureName(x.prefix + "arlemiteingot").setCreativeTab(DivineRPGTabs.items);
@@ -88,14 +91,14 @@ public class OverworldItems {
 	public static final Item enderSwordYellow = new ItemModSword(EnderSword).setTextureName(x.prefix + "enderswordyellow").setUnlocalizedName("enderSwordYellow").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item slimeSword = new ItemModSword(SlimeSword).setTextureName(x.prefix + "slimesword").setUnlocalizedName("SlimeSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item infernoSword = new ItemInfernoSword(Inferno).setTextureName(x.prefix + "infernosword").setUnlocalizedName("InfernoSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item oceanKnife = new ItemModSword(Aquatic).setTextureName(x.prefix + "oceanknife").setUnlocalizedName("AquaticKnife").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item aquaticMaul = new ItemModSword(AquaSword).setTextureName(x.prefix + "aquaticmaul").setUnlocalizedName("aquaMaul").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item oceanKnife = new ItemModSword(OceanKnife).setTextureName(x.prefix + "oceanknife").setUnlocalizedName("OceanKnife").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item aquaticMaul = new ItemModSword(AquaMaul).setTextureName(x.prefix + "aquaticmaul").setUnlocalizedName("aquaMaul").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item arlemiteSword = new ItemModSword(Arlemite).setTextureName(x.prefix + "arlemitesword").setUnlocalizedName("arlemiteSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item bedrockSword = new ItemModSword(BedrockSword).setTextureName(x.prefix + "bedrocksword").setUnlocalizedName("bedrockSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item bloodgemSword = new ItemModSword(BloodgemTool).setTextureName(x.prefix + "bloodgemsword").setUnlocalizedName("bloodgemSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item realmiteSword = new ItemModSword(Realmite).setTextureName(x.prefix + "realmitesword").setUnlocalizedName("realmiteSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item rupeeSword = new ItemModSword(Rupee).setTextureName(x.prefix + "rupeesword").setUnlocalizedName("rupeeSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item sandSlash = new ItemModSword(SandSlash).setTextureName(x.prefix + "sandslash").setUnlocalizedName("sandslashSword").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item sandSlash = new ItemModSword(Sandslash).setTextureName(x.prefix + "sandslash").setUnlocalizedName("sandslashSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item divineSword = new ItemModSword(DivineSword).setTextureName(x.prefix + "divinesword").setUnlocalizedName("divineSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item blueDivineSword = new ItemModSword(DivineSword).setTextureName(x.prefix + "bluedivinesword").setUnlocalizedName("bluedivineSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item yellowDivineSword = new ItemModSword(DivineSword).setTextureName(x.prefix + "yellowdivinesword").setUnlocalizedName("yellowdivineSword").setCreativeTab(DivineRPGTabs.swords);
@@ -107,9 +110,13 @@ public class OverworldItems {
 	public static final Item jungleKnife = new ItemModSword(OceanKnife).setTextureName(x.prefix + "jungleknife").setUnlocalizedName("JungleKnife").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item cyclopsSword = new ItemModSword(Cyclops).setTextureName(x.prefix + "cyclopiansword").setUnlocalizedName("CyclopianSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item donatorSword = new ItemModSword(Donator).setTextureName(x.prefix + "donatorsword").setUnlocalizedName("donatorSword");
-	public static final Item aquaticTrident = new ItemModSword(AquaticTrident).setTextureName(x.prefix + "aquatictrident").setUnlocalizedName("aquaticTrident").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item aquaticDagger = new ItemModSword(AquaticDagger).setTextureName(x.prefix + "aquaticdagegr").setUnlocalizedName("aquaticDagger").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item aquaticTrident = new ItemModSword(AquaTrident).setTextureName(x.prefix + "aquatictrident").setUnlocalizedName("aquaticTrident").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item aquaticDagger = new ItemModSword(AquaDagger).setTextureName(x.prefix + "aquaticdagger").setUnlocalizedName("aquaticDagger").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item aquaton = new ItemModSword(Aquaton).setTextureName(x.prefix + "aquaton").setUnlocalizedName("aquaton").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item frostSword = new ItemModSword(FrostSword).setTextureName(x.prefix + "frostsword").setUnlocalizedName("frostSword").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item moltenSword = new ItemModSword(MoltenSword).setTextureName(x.prefix + "moltensword").setUnlocalizedName("MoltenSword").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item sharkSword = new ItemModSword(SharkSword).setTextureName(x.prefix + "sharksword").setUnlocalizedName("sharkSword").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item deathBringer = new ItemModSword(DeathBringer).setTextureName(x.prefix + "deathbringer").setUnlocalizedName("deathBringer").setCreativeTab(DivineRPGTabs.swords);
 
 	public static final Item rupeeShickaxe = new ItemShickaxe(RupeeShick).setTextureName(x.prefix + "rupeeshickaxe").setUnlocalizedName("RupeeShickaxe");
 	public static final Item rupeePickaxe = new ItemModPickaxe(Rupee).setTextureName(x.prefix + "rupeepickaxe").setUnlocalizedName("rupeePickaxe").setCreativeTab(DivineRPGTabs.tools);
@@ -213,6 +220,10 @@ public class OverworldItems {
 		addItem(aquaticTrident, "Aquatic Trident");
 		addItem(aquaticDagger, "Aquatic Dagger");
 		addItem(aquaton, "Aquaton");
+		addItem(frostSword, "Frost Sword");
+		addItem(moltenSword, "Molten Sword");
+		addItem(sharkSword, "Shark Sword");
+		addItem(deathBringer, "Death Bringer");
 		
 		//Tools
 		addItem(rupeeShickaxe, "Rupee Shickaxe");
