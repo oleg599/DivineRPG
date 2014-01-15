@@ -3,7 +3,7 @@ package net.divinerpg.overworld.items;
 import java.util.List;
 import java.util.Set;
 
-import net.divinerpg.helper.tab.DivineRPGTabs;
+import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;

@@ -1,7 +1,7 @@
 package net.divinerpg.overworld.blocks;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.tab.DivineRPGTabs;
+import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;

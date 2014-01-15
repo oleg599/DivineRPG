@@ -1,6 +1,6 @@
 package net.divinerpg.twilight;
 
-import net.divinerpg.helper.tab.DivineRPGTabs;
+import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

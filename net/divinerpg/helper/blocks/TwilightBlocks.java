@@ -1,7 +1,7 @@
 package net.divinerpg.helper.blocks;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.tab.DivineRPGTabs;
+import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.twilight.BlockModDirt;
 import net.divinerpg.twilight.TwilightBlock;
 import net.divinerpg.twilight.eden.blocks.BlockEdenGrass;

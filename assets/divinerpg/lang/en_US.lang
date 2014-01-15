@@ -24,11 +24,13 @@ tile.JungleSpiderPumpkin.name=Jungle Spider Pumpkin
 tile.HellSpiderPumpkin.name=Hellspider Pumpkin
 
 //Creative Tabs
-itemGroup.Swords=DivineRPG: Swords
+itemGroup.Swords=DivineRPG: Melee Weapons
 itemGroup.Blocks=DivineRPG: Blocks
-itemGroup.Ranged=DivineRPG: Ranged
+itemGroup.Ranged=DivineRPG: Ranged Weapons
 itemGroup.Tools=DivineRPG: Tools
 itemGroup.Armor=DivineRPG: Armor
-itemGroup.Misc=DivineRPG: Misc.
-itemGroup.Items=DivineRPG: Raw Materials
+itemGroup.Vethea=DivineRPG: Vethea
+itemGroup.Utility=DivineRPG: Utility
+itemGroup.Herbalism=DivineRPG: Herbalism
+itemGroup.Materials=DivineRPG: Raw Materials
 itemGroup.Spawner=DivineRPG: Spawner

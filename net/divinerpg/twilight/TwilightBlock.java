@@ -3,9 +3,9 @@ package net.divinerpg.twilight;
 import java.util.Random;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.blocks.OverworldBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.tab.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;

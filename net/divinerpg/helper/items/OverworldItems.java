@@ -1,12 +1,14 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.tab.DivineRPGTabs;
+import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.nether.items.ItemCallOfTheWatcher;
 import net.divinerpg.overworld.items.ItemInfernoSword;
 import net.divinerpg.overworld.items.ItemMysteriousClock;
 import net.divinerpg.overworld.items.ItemShickaxe;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemFood;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -88,7 +90,9 @@ public class OverworldItems {
 	public static final Item watchingEye = new Item().setTextureName(x.prefix + "watchingeye").setUnlocalizedName("WatchingEye").setCreativeTab(DivineRPGTabs.items);
 	public static final Item whaleFin = new Item().setTextureName(x.prefix + "whalefin").setUnlocalizedName("WhaleFin").setCreativeTab(DivineRPGTabs.items);
 	public static final Item myseriousClock = new ItemMysteriousClock().setTextureName(x.prefix + "myseriousclock").setUnlocalizedName("myseriousClock").setCreativeTab(DivineRPGTabs.spawner);
-	 
+	public static final Item callWatcher = new ItemCallOfTheWatcher().setTextureName(x.prefix + "callofthewatcher").setUnlocalizedName("callOfTheWatcher").setCreativeTab(DivineRPGTabs.spawner);
+	public static final Item noImage = new Item().setTextureName(x.prefix + "noimage").setUnlocalizedName("noImage");
+
 	public static final Item enderSword = new ItemModSword(EnderSword).setTextureName(x.prefix + "endersword").setUnlocalizedName("enderSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item enderSwordBlue = new ItemModSword(EnderSword).setTextureName(x.prefix + "enderswordblue").setUnlocalizedName("enderSwordBlue").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item enderSwordDark = new ItemModSword(EnderSword).setTextureName(x.prefix + "enderswordblack").setUnlocalizedName("enderSwordDark").setCreativeTab(DivineRPGTabs.swords);
@@ -160,17 +164,18 @@ public class OverworldItems {
 	public static final Item divineAxe = new ItemModAxe(Divine).setTextureName(x.prefix + "divineaxe").setUnlocalizedName("divineAxe").setCreativeTab(DivineRPGTabs.tools);
 	public static final Item divineShovel = new ItemModShovel(Divine).setTextureName(x.prefix + "divineshovel").setUnlocalizedName("divineShovel").setCreativeTab(DivineRPGTabs.tools);
 	
+	public static final Item bacon = new ItemFood(5, 3.0F, false).setTextureName(x.prefix + "bacon").setUnlocalizedName("bacon").setCreativeTab(DivineRPGTabs.food);
+
+	
 	public static void init(){
 		//Materials
+		addItem(realmiteIngot, "Realmite Ingot");
 		addItem(rupeeIngot, "Rupee Ingot");
 		addItem(arlemiteIngot, "Arlemite Ingot");
-		addItem(realmiteIngot, "Realmite Ingot");
 		addItem(shadowBar, "Shadow Bar");
 		addItem(netheriteIngot, "Netherite Ingot");
 		addItem(bloodGem, "Blood Gem");
 		addItem(netheriteChunk, "Netherite Chunk");
-		
-		//Items
 		addItem(jungleShard, "Jungle Shard");
 		addItem(divineShard, "Divine Shard");
 		addItem(enderShard , "Ender Shard");
@@ -198,7 +203,12 @@ public class OverworldItems {
 		addItem(sharkFin, "Shark Fin");
 		addItem(watchingEye, "Watching Eye");
 		addItem(whaleFin, "Whale Fin");
+		//Temporary
+		addItem(noImage, "NO IMAGE");
+		
+		//Spawner
 		addItem(myseriousClock, "Mysterious Clock");
+		addItem(callWatcher, "Call of the Watcher");
 		
 		//Weapons
 		addItem(enderSword, "Ender Sword");
@@ -267,6 +277,9 @@ public class OverworldItems {
 		addItem(divinePickaxe, "Divine Pickaxe");
 		addItem(divineAxe, "Divine Axe");
 		addItem(divineShovel, "Divine Shovel");
+		
+		//Food
+		addItem(bacon, "Raw Bacon");
 	}
 	
 	public static void addItem(Item item, String name){
