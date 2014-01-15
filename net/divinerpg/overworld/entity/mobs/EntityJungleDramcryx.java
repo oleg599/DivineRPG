@@ -33,7 +33,7 @@ public class EntityJungleDramcryx extends EntityMob {
 	}
 
 	protected Item func_146068_u() {
-		return OverworldItems.jungleShard;
+		return OverworldItems.jungleShards;
 	}
 
 	@Override

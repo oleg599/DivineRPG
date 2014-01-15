@@ -65,13 +65,13 @@ public class EntityAncientEntity extends EntityMob implements IBossDisplayData{
     }
 
     protected Item func_146068_u() {
-        return OverworldItems.divineShard;
+        return OverworldItems.divineShards;
     }
     
     protected void dropFewItems(boolean par1, int par2) {
     	
     	Item i = func_146068_u();
-    	Item i2 = OverworldItems.sandSlash;
+    	Item i2 = OverworldItems.sandslash;
 
         int var3, var4;
         

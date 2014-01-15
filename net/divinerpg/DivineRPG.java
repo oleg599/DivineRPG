@@ -1,6 +1,6 @@
 package net.divinerpg;
 
-import net.divinerpg.helper.blocks.OverworldBlocks;
+import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.items.OverworldItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

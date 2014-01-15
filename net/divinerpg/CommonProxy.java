@@ -19,8 +19,10 @@ public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent event){
 		ConfigurationHelper.init(event);
 		MinecraftForge.EVENT_BUS.register(new EventHelper());
-		OverworldBlocks.init();
+		VanillaBlocks.init();
 		OverworldItems.init();
+		NetherItems.init();
+		EndItems.init();
 		OverworldMobRegistry.init();
 		OverworldRecipeHelper.init();
 		TwilightBlocks.init();

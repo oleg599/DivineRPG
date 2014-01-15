@@ -4,7 +4,7 @@ import java.util.Random;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
-import net.divinerpg.helper.blocks.OverworldBlocks;
+import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.items.NetherItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,15 +12,15 @@ import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 
-public class OverworldBlock extends Block
+public class VanillaBlock extends Block
 {
 
-	public OverworldBlock(Material m)
+	public VanillaBlock(Material m)
 	{
 		super(m);
 		this.func_149647_a(DivineRPGTabs.blocks);
 		func_149672_a(Block.field_149780_i);
-		if(this == OverworldBlocks.purpleStone || this == OverworldBlocks.purpleStone){
+		if(this == VanillaBlocks.purpleStone || this == VanillaBlocks.purpleStone){
 			func_149715_a(1.0F);
 		}
 	}
@@ -30,64 +30,64 @@ public class OverworldBlock extends Block
 	}
 
 	public Item func_149650_a(int par1, Random par2, int par3) {
-		if(this == OverworldBlocks.rupeeOre){
+		if(this == VanillaBlocks.rupeeOre){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.arlemiteOre){
+		if(this == VanillaBlocks.arlemiteOre){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.realmiteOre){
+		if(this == VanillaBlocks.realmiteOre){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.bloodGemOre){
+		if(this == VanillaBlocks.bloodGemOre){
 			return NetherItems.bloodGem;
 		}
-		if(this == OverworldBlocks.netheriteOre){
+		if(this == VanillaBlocks.netheriteOre){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.rupeeBlock){
+		if(this == VanillaBlocks.rupeeBlock){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.arlemiteBlock){
+		if(this == VanillaBlocks.arlemiteBlock){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.realmiteBlock){
+		if(this == VanillaBlocks.realmiteBlock){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.bloodGemBlock){
+		if(this == VanillaBlocks.bloodGemBlock){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.netheriteBlock){
+		if(this == VanillaBlocks.netheriteBlock){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.checker){
+		if(this == VanillaBlocks.checker){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.rainbowWool){
+		if(this == VanillaBlocks.rainbowWool){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.crate){
+		if(this == VanillaBlocks.crate){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.blueStone){
+		if(this == VanillaBlocks.blueStone){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.purpleStone){
+		if(this == VanillaBlocks.purpleStone){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.blueVane){
+		if(this == VanillaBlocks.blueVane){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.cyanVane){
+		if(this == VanillaBlocks.cyanVane){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.purpleVane){
+		if(this == VanillaBlocks.purpleVane){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.redVane){
+		if(this == VanillaBlocks.redVane){
 			return getBlock(this);
 		}
-		if(this == OverworldBlocks.yellowVane){
+		if(this == VanillaBlocks.yellowVane){
 			return getBlock(this);
 		}
 		return null;
@@ -120,7 +120,7 @@ public class OverworldBlock extends Block
 		{
 			int j1 = 0;
 
-			if(this == OverworldBlocks.bloodGemOre){
+			if(this == VanillaBlocks.bloodGemOre){
 				j1 = MathHelper.getRandomIntegerInRange(rand, 0, 4);
 			}
 			return j1;
@@ -135,5 +135,17 @@ public class OverworldBlock extends Block
     
     public Block setTextureName(String name){
         return func_149658_d(Reference.prefix + name);
+    }
+    
+    public Block setHardness(float p_149711_1_)
+    {
+        this.field_149782_v = p_149711_1_;
+
+        if (this.field_149781_w < p_149711_1_ * 5.0F)
+        {
+            this.field_149781_w = p_149711_1_ * 5.0F;
+        }
+
+        return this;
     }
 }

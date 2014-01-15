@@ -47,13 +47,18 @@ public class MobPumpkin extends BlockDirectional
 
     @SideOnly(Side.CLIENT)
     public void func_149651_a(IIconRegister icon) {
-        this.front = icon.registerIcon(this.func_149641_N() + "pumpkin_front");
-        this.top = icon.registerIcon(this.func_149641_N() + "pumpkin_top");
-        this.field_149761_L = icon.registerIcon(this.func_149641_N() + "pumpkin_side");
+        this.front = icon.registerIcon(this.func_149641_N() + "_front");
+        this.top = icon.registerIcon(this.func_149641_N() + "_top");
+        this.field_149761_L = icon.registerIcon(this.func_149641_N() + "_side");
+    }
+    
+    public Block setTextureName(String name){
+        return func_149658_d(Reference.prefix + name);
     }
     
     public Block setUnlocalizedName(String name){
-    	func_149663_c(name);
-    	return this;
+    	return func_149663_c(name);
     }
+    
+    
 }

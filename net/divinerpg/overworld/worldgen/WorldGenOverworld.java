@@ -2,7 +2,7 @@ package net.divinerpg.overworld.worldgen;
 
 import java.util.Random;
 
-import net.divinerpg.helper.blocks.OverworldBlocks;
+import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -30,21 +30,21 @@ public class WorldGenOverworld implements IWorldGenerator{
 			posX = chunkX + rand.nextInt(16);
 			posY = rand.nextInt(15);
 			posZ = chunkZ + rand.nextInt(16);
-			new WorldGenMinable(OverworldBlocks.realmiteOre, 5).generate(world, rand, posX, posY, posZ);
+			new WorldGenMinable(VanillaBlocks.realmiteOre, 5).generate(world, rand, posX, posY, posZ);
 		}
 		
 		for(i = 0; i < 4; i++){
 			posX = chunkX + rand.nextInt(16);
 			posY = rand.nextInt(15);
 			posZ = chunkZ + rand.nextInt(16);
-			new WorldGenMinable(OverworldBlocks.arlemiteOre, 3).generate(world, rand, posX, posY, posZ);
+			new WorldGenMinable(VanillaBlocks.arlemiteOre, 3).generate(world, rand, posX, posY, posZ);
 		}
 		
 		for(i = 0; i < 4; i++){
 			posX = chunkX + rand.nextInt(16);
 			posY = rand.nextInt(15);
 			posZ = chunkZ + rand.nextInt(16);
-			new WorldGenMinable(OverworldBlocks.rupeeOre, 3).generate(world, rand, posX, posY, posZ);
+			new WorldGenMinable(VanillaBlocks.rupeeOre, 3).generate(world, rand, posX, posY, posZ);
 		}
 		
 		for(i = 0; i < 3; i++){
@@ -62,14 +62,14 @@ public class WorldGenOverworld implements IWorldGenerator{
 			posX = chunkX + rand.nextInt(16);
 			posY = rand.nextInt(128);
 			posZ = chunkZ + rand.nextInt(16);
-			new WorldGenMinable(OverworldBlocks.netheriteOre, 3, Blocks.netherrack).generate(world, rand, posX, posY, posZ);
+			new WorldGenMinable(VanillaBlocks.netheriteOre, 3, Blocks.netherrack).generate(world, rand, posX, posY, posZ);
 		}
 		
 		for(i = 0; i < 7; i++){
 			posX = chunkX + rand.nextInt(16);
 			posY = rand.nextInt(128);
 			posZ = chunkZ + rand.nextInt(16);
-			new WorldGenMinable(OverworldBlocks.bloodGemOre, 3, Blocks.netherrack).generate(world, rand, posX, posY, posZ);
+			new WorldGenMinable(VanillaBlocks.bloodGemOre, 3, Blocks.netherrack).generate(world, rand, posX, posY, posZ);
 		}
 	}
 	
