@@ -23,7 +23,7 @@ public class OverworldItems {
 	public static ToolMaterial ArlemiteSword = EnumHelper.addToolMaterial("arlemite", 1, 4000, 1.5F, 6, 10);
 	public static ToolMaterial arlemiteShick = EnumHelper.addToolMaterial("ArlemiteShick", 4, 13000, 15.0F, 7, 15);
 	public static ToolMaterial EnderSword = EnumHelper.addToolMaterial("enderSword", 0, -1, 0, 23, 16);
-	public static ToolMaterial SlimeSword = EnumHelper.addToolMaterial("slimesword", 0, 1000, 0, 11, 22);
+	public static ToolMaterial SlimeSword = EnumHelper.addToolMaterial("slimesword", 0, 1000, 0, 6, 22);
 	public static ToolMaterial DivineSword = EnumHelper.addToolMaterial("divinesword", 0, -1, 0, 29, 22);
 	public static ToolMaterial AquaSword = EnumHelper.addToolMaterial("aquasword", 1, 10000, 1.5F, 18, 10);
 	public static ToolMaterial Aquatic = EnumHelper.addToolMaterial("Aquatic", 3, 7000, 1.5F, 15, 10);
@@ -35,6 +35,10 @@ public class OverworldItems {
 	public static ToolMaterial Bedrock = EnumHelper.addToolMaterial("Bedrock", 3, -1, 9.0F, 1, 10);
 	public static ToolMaterial Divine = EnumHelper.addToolMaterial("Divine", 3, 35000, 20.0F, 1, 10);
 	public static ToolMaterial Corrupted = EnumHelper.addToolMaterial("Corrupted", 3, 6000, 16.0F, 1, 10);
+	public static ToolMaterial Donator = EnumHelper.addToolMaterial("Donator", 0, 5000, 0.0F, 7, 22);
+	public static ToolMaterial AquaticDagger = EnumHelper.addToolMaterial("AquaticDagger", 0, 2000, 0.0F, 5, 15);
+	public static ToolMaterial AquaticTrident = EnumHelper.addToolMaterial("AquaticTrident", 0, 7000, 0.0F, 10, 15);
+	public static ToolMaterial Aquaton = EnumHelper.addToolMaterial("Aquaton", 0, 10000, 0.0F, 13, 15);
 
 	public static final Item rupeeIngot = new Item().setUnlocalizedName("RupeeIngot").setTextureName(x.prefix + "rupeeingot").setCreativeTab(DivineRPGTabs.items);
 	public static final Item arlemiteIngot = new Item().setUnlocalizedName("ArlemiteIngot").setTextureName(x.prefix + "arlemiteingot").setCreativeTab(DivineRPGTabs.items);
@@ -73,7 +77,8 @@ public class OverworldItems {
 	public static final Item sharkFin = new Item().setTextureName(x.prefix + "sharkfin").setUnlocalizedName("SharkFin").setCreativeTab(DivineRPGTabs.items);
 	public static final Item watchingEye = new Item().setTextureName(x.prefix + "watchingeye").setUnlocalizedName("WatchingEye").setCreativeTab(DivineRPGTabs.items);
 	public static final Item whaleFin = new Item().setTextureName(x.prefix + "whalefin").setUnlocalizedName("WhaleFin").setCreativeTab(DivineRPGTabs.items);
-
+	public static final Item myseriousClock = new Item().setTextureName(x.prefix + "myseriousclock").setUnlocalizedName("myseriousClock").setCreativeTab(DivineRPGTabs.items);
+	
 	public static final Item enderSword = new ItemModSword(EnderSword).setTextureName(x.prefix + "endersword").setUnlocalizedName("enderSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item enderSwordBlue = new ItemModSword(EnderSword).setTextureName(x.prefix + "enderswordblue").setUnlocalizedName("enderSwordBlue").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item enderSwordDark = new ItemModSword(EnderSword).setTextureName(x.prefix + "enderswordblack").setUnlocalizedName("enderSwordDark").setCreativeTab(DivineRPGTabs.swords);
@@ -82,7 +87,7 @@ public class OverworldItems {
 	public static final Item enderSwordYellow = new ItemModSword(EnderSword).setTextureName(x.prefix + "enderswordyellow").setUnlocalizedName("enderSwordYellow").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item slimeSword = new ItemModSword(SlimeSword).setTextureName(x.prefix + "slimesword").setUnlocalizedName("SlimeSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item infernoSword = new ItemInfernoSword(Inferno).setTextureName(x.prefix + "infernosword").setUnlocalizedName("InfernoSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item oceanKnife = new ItemModSword(Aquatic).setTextureName(x.prefix + "aquaticknife").setUnlocalizedName("AquaticKnife").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item oceanKnife = new ItemModSword(Aquatic).setTextureName(x.prefix + "oceanknife").setUnlocalizedName("AquaticKnife").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item aquaticMaul = new ItemModSword(AquaSword).setTextureName(x.prefix + "aquaticmaul").setUnlocalizedName("aquaMaul").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item arlemiteSword = new ItemModSword(Arlemite).setTextureName(x.prefix + "arlemitesword").setUnlocalizedName("arlemiteSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item bedrockSword = new ItemModSword(BedrockSword).setTextureName(x.prefix + "bedrocksword").setUnlocalizedName("bedrockSword").setCreativeTab(DivineRPGTabs.swords);
@@ -100,6 +105,10 @@ public class OverworldItems {
 	public static final Item bedrockMaul = new ItemModSword(BedrockSword).setTextureName(x.prefix + "bedrockmaul").setUnlocalizedName("bedrockMaul").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item jungleKnife = new ItemModSword(OceanKnife).setTextureName(x.prefix + "jungleknife").setUnlocalizedName("JungleKnife").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item cyclopsSword = new ItemModSword(Cyclops).setTextureName(x.prefix + "cyclopiansword").setUnlocalizedName("CyclopianSword").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item donatorSword = new ItemModSword(Donator).setTextureName(x.prefix + "donatorsword").setUnlocalizedName("donatorSword");
+	public static final Item aquaticTrident = new ItemModSword(AquaticTrident).setTextureName(x.prefix + "aquatictrident").setUnlocalizedName("aquaticTrident").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item aquaticDagger = new ItemModSword(AquaticDagger).setTextureName(x.prefix + "aquaticdagegr").setUnlocalizedName("aquaticDagger").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item aquaton = new ItemModSword(Aquaton).setTextureName(x.prefix + "aquaton").setUnlocalizedName("aquaton").setCreativeTab(DivineRPGTabs.swords);
 
 	public static final Item rupeeShickaxe = new ItemShickaxe(RupeeShick).setTextureName(x.prefix + "rupeeshickaxe").setUnlocalizedName("RupeeShickaxe");
 	public static final Item rupeePickaxe = new ItemModPickaxe(Rupee).setTextureName(x.prefix + "rupeepickaxe").setUnlocalizedName("rupeePickaxe").setCreativeTab(DivineRPGTabs.tools);
@@ -132,6 +141,7 @@ public class OverworldItems {
 	public static final Item divineShovel = new ItemModShovel(Divine).setTextureName(x.prefix + "divineshovel").setUnlocalizedName("divineShovel").setCreativeTab(DivineRPGTabs.tools);
 	
 	public static void init(){
+		//Materials
 		addItem(rupeeIngot, "Rupee Ingot");
 		addItem(arlemiteIngot, "Arlemite Ingot");
 		addItem(realmiteIngot, "Realmite Ingot");
@@ -139,7 +149,8 @@ public class OverworldItems {
 		addItem(netheriteIngot, "Netherite Ingot");
 		addItem(bloodGem, "Blood Gem");
 		addItem(netheriteChunk, "Netherite Chunk");
-
+		
+		//Items
 		addItem(jungleShard, "Jungle Shard");
 		addItem(divineShard, "Divine Shard");
 		addItem(enderShard , "Ender Shard");
@@ -168,6 +179,7 @@ public class OverworldItems {
 		addItem(watchingEye, "Watching Eye");
 		addItem(whaleFin, "Whale Fin");
 		
+		//Weapons
 		addItem(enderSword, "Ender Sword");
 		addItem(enderSwordBlue, "Blue Ender Sword");
 		addItem(enderSwordDark, "Dark Ender Sword");
@@ -194,7 +206,13 @@ public class OverworldItems {
 		addItem(bedrockMaul, "Bedrock Maul");
 		addItem(jungleKnife, "Jungle Knife");
 		addItem(cyclopsSword, "Cyclopsian Sword");
+		addItem(donatorSword, "Donator Sword");
+		addItem(donatorSword, "Donator Sword");
+		addItem(aquaticTrident, "Aquatic Trident");
+		addItem(aquaticDagger, "Aquatic Dagger");
+		addItem(aquaton, "Aquaton");
 		
+		//Tools
 		addItem(rupeeShickaxe, "Rupee Shickaxe");
 		addItem(arlemiteShickaxe, "Arlemite Shickaxe");
 		addItem(rupeePickaxe, "Rupee Pickaxe");
