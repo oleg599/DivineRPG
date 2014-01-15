@@ -43,6 +43,12 @@ public class OverworldItems {
 	public static ToolMaterial MoltenSword = EnumHelper.addToolMaterial("MoltenSword", 0, 5000, 0.0F, 5, 15);
 	public static ToolMaterial SharkSword = EnumHelper.addToolMaterial("SharkSword", 0, 2000, 0.0F, 7, 15);
 	public static ToolMaterial DeathBringer = EnumHelper.addToolMaterial("DeathBringer", 0, 6000, 0.0F, 8, 15);
+	public static ToolMaterial CrabclawMaul = EnumHelper.addToolMaterial("SharkSword", 0, 4000, 0.0F, 11, 15);
+	public static ToolMaterial PoisonSaber = EnumHelper.addToolMaterial("PosionSaber", 0, 10000, 0.0F, 11, 15);
+	public static ToolMaterial FuryMaul = EnumHelper.addToolMaterial("FuryMaul", 0, -1, 0.0F, 9, 15);
+	public static ToolMaterial ScorchingSword = EnumHelper.addToolMaterial("ScorchingSword", 0, 500, 0.0F, 21, 15);
+	public static ToolMaterial BluefireSword = EnumHelper.addToolMaterial("BluefireSword", 0, 3000, 0.0F, 19, 15);
+	public static ToolMaterial CorruptedMaul = EnumHelper.addToolMaterial("CorruptedMaul", 0, 6000, 0.0F, 13, 15);
 
 	public static final Item rupeeIngot = new Item().setUnlocalizedName("RupeeIngot").setTextureName(x.prefix + "rupeeingot").setCreativeTab(DivineRPGTabs.items);
 	public static final Item arlemiteIngot = new Item().setUnlocalizedName("ArlemiteIngot").setTextureName(x.prefix + "arlemiteingot").setCreativeTab(DivineRPGTabs.items);
@@ -117,6 +123,12 @@ public class OverworldItems {
 	public static final Item moltenSword = new ItemModSword(MoltenSword).setTextureName(x.prefix + "moltensword").setUnlocalizedName("MoltenSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item sharkSword = new ItemModSword(SharkSword).setTextureName(x.prefix + "sharksword").setUnlocalizedName("sharkSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item deathBringer = new ItemModSword(DeathBringer).setTextureName(x.prefix + "deathbringer").setUnlocalizedName("deathBringer").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item crabclawMaul = new ItemModSword(CrabclawMaul).setTextureName(x.prefix + "crabclawmaul").setUnlocalizedName("crabclawMaul").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item poisonSaber = new ItemModSword(PoisonSaber).setTextureName(x.prefix + "poisonsaber").setUnlocalizedName("poisonSaber").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item furyMaul = new ItemModSword(FuryMaul).setTextureName(x.prefix + "furymaul").setUnlocalizedName("furyMaul").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item scorchingSword = new ItemModSword(ScorchingSword).setTextureName(x.prefix + "scorchingsword").setUnlocalizedName("scorchingSword").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item bluefireSword = new ItemModSword(BluefireSword).setTextureName(x.prefix + "bluefiresword").setUnlocalizedName("bluefireSword").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item corruptedMaul = new ItemModSword(CorruptedMaul).setTextureName(x.prefix + "corruptedmaul").setUnlocalizedName("corruptedMaul").setCreativeTab(DivineRPGTabs.swords);
 
 	public static final Item rupeeShickaxe = new ItemShickaxe(RupeeShick).setTextureName(x.prefix + "rupeeshickaxe").setUnlocalizedName("RupeeShickaxe");
 	public static final Item rupeePickaxe = new ItemModPickaxe(Rupee).setTextureName(x.prefix + "rupeepickaxe").setUnlocalizedName("rupeePickaxe").setCreativeTab(DivineRPGTabs.tools);
@@ -224,6 +236,12 @@ public class OverworldItems {
 		addItem(moltenSword, "Molten Sword");
 		addItem(sharkSword, "Shark Sword");
 		addItem(deathBringer, "Death Bringer");
+		addItem(crabclawMaul, "Crabclaw Maul");
+		addItem(poisonSaber, "Poison Saber");
+		addItem(furyMaul, "Fury Maul");
+		addItem(scorchingSword, "Scorching Sword");
+		addItem(bluefireSword, "Bluefire Sword");
+		addItem(corruptedMaul, "Corrupted Maul");
 		
 		//Tools
 		addItem(rupeeShickaxe, "Rupee Shickaxe");
