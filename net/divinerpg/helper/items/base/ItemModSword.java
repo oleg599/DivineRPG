@@ -2,7 +2,9 @@ package net.divinerpg.helper.items.base;
 
 import java.util.List;
 
+import net.divinerpg.Reference;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 
@@ -25,4 +27,9 @@ public class ItemModSword extends ItemSword{
 			infoList.add(item.getMaxDamage() - item.getItemDamage() + " Uses Remaining");
 		}
 	}
+	public Item setTextureName(String par1Str)
+    {
+        this.iconString = (Reference.prefix + par1Str);
+        return this;
+    }
 }

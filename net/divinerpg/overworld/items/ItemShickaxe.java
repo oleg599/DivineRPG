@@ -3,10 +3,12 @@ package net.divinerpg.overworld.items;
 import java.util.List;
 import java.util.Set;
 
+import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 import net.minecraft.world.World;
@@ -103,4 +105,9 @@ public class ItemShickaxe extends ItemTool
 			par3List.add("Infinite Uses");
 		}
 	}
+	public Item setTextureName(String par1Str)
+    {
+        this.iconString = (Reference.prefix + par1Str);
+        return this;
+    }
 }

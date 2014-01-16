@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class OverworldRecipeHelper {
+	
 
 	public static void init(){
 		GameRegistry.addRecipe(new ItemStack(OverworldItems.slimeSword, 1), new Object[] {"SDS", "SDS", "SDS", 'D', Items.diamond_sword, 'S', Items.slime_ball});
@@ -27,9 +28,12 @@ public class OverworldRecipeHelper {
 		GameRegistry.addShapelessRecipe(new ItemStack(OverworldItems.realmiteIngot, 9), new Object[] {VanillaBlocks.realmiteBlock});
 		GameRegistry.addShapelessRecipe(new ItemStack(NetherItems.netheriteIngot, 9), new Object[] {VanillaBlocks.netheriteBlock});
 		GameRegistry.addShapelessRecipe(new ItemStack(NetherItems.bloodGem, 9), new Object[] {VanillaBlocks.bloodGemBlock});
-
 		GameRegistry.addShapelessRecipe(new ItemStack(OverworldItems.shadowBar, 1), new Object[] {OverworldItems.rupeeIngot, OverworldItems.arlemiteIngot});
 
+		GameRegistry.addShapelessRecipe(IS.bacon, IS.rawPork);
+		GameRegistry.addShapelessRecipe(IS.cheese, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk);
+		GameRegistry.addSmelting(IS.egg, IS.boiledEgg, 0.3F);
+		
 		GameRegistry.addRecipe(new ItemStack(OverworldItems.corruptedStone, 1), new Object[] {"III", "III", "III", 'I', OverworldItems.corruptedShards});
 		GameRegistry.addRecipe(new ItemStack(OverworldItems.jungleStone, 1), new Object[] {"III", "III", "III", 'I', OverworldItems.jungleShards});
 		GameRegistry.addRecipe(new ItemStack(OverworldItems.iceStone, 1), new Object[] {"III", "III", "III", 'I', OverworldItems.iceShards});

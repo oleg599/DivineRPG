@@ -1,5 +1,6 @@
 package net.divinerpg.overworld.items;
 
+import net.divinerpg.Reference;
 import net.divinerpg.overworld.entity.mobs.EntityAncientEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -44,4 +45,9 @@ public class ItemMysteriousClock extends Item
 		}
 		return true;
 	}
+	public Item setTextureName(String par1Str)
+    {
+        this.iconString = (Reference.prefix + par1Str);
+        return this;
+    }
 }
