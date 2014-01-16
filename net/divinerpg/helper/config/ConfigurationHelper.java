@@ -25,8 +25,18 @@ public class ConfigurationHelper {
 	keepLoadingVethea, keepLoadingArcana, keepLoadingIceika;
 
 	public static int Eden, WildWoods, Apalachia, Skythern, Mortum, Vethea, Arcana, Iceika;
+	public static int EdenBiome, WildWoodsBiome, ApalachiaBiome, SkythernBiome, MortumBiome, VetheaBiome, ArcanaBiome, IceikaBiome;
 
 	static void dimensionInit(){
+		EdenBiome = cfg.get("Dimension", "Eden Biome ID", 40).getInt();
+		WildWoodsBiome = cfg.get("Dimension", "The Wild Woods Biome ID", 41).getInt();
+		ApalachiaBiome = cfg.get("Dimension", "Apalcha Biome ID", 42).getInt();
+		SkythernBiome = cfg.get("Dimension", "Skythern Biome ID", 43).getInt();
+		MortumBiome = cfg.get("Dimension", "Mortum Biome ID", 44).getInt();
+		VetheaBiome = cfg.get("Dimension", "Vethea Biome ID", 45).getInt();
+		ArcanaBiome = cfg.get("Dimension", "Arcana Biome ID", 46).getInt();
+		IceikaBiome = cfg.get("Dimension", "Iceika Biome ID", 47).getInt();
+		
 		Eden = cfg.get("Dimension", "Eden ID", 10).getInt();
 		WildWoods = cfg.get("Dimension", "The Wild Woods ID", 11).getInt();
 		Apalachia = cfg.get("Dimension", "Apalcha ID", 12).getInt();

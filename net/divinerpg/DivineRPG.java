@@ -21,6 +21,8 @@ public class DivineRPG {
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
 	public static CommonProxy proxy;
 	
+	//Awesome seed: 1414274842007233730
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		proxy.renderThings();

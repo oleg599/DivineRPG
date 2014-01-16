@@ -228,7 +228,6 @@ public class OverworldItems {
 		addItem(jungleKnife, "Jungle Knife");
 		addItem(cyclopsSword, "Cyclopsian Sword");
 		addItem(donatorSword, "Donator Sword");
-		addItem(donatorSword, "Donator Sword");
 		addItem(aquaticTrident, "Aquatic Trident");
 		addItem(aquaticDagger, "Aquatic Dagger");
 		addItem(aquaton, "Aquaton");

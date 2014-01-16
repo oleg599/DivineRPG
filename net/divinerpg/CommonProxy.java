@@ -23,6 +23,7 @@ public class CommonProxy {
 		OverworldItems.init();
 		OverworldMobRegistry.init();
 		OverworldRecipeHelper.init();
+		TwilightBlocks.init();
 	}
 	
 	public void init(FMLInitializationEvent event){
