@@ -43,34 +43,32 @@ public class TwilightBlocks {
 	public static final Block edenPortal = new BlockEdenPortal();
 	
 	public static void init(){
-		addBlock(edenGrass, "Eden Grass");
-		addBlock(wildWoodGrass, "Wild Wood Grass");
-		addBlock(apalachiaGrass, "Apalachia Grass");
-		addBlock(skythernGrass, "Skythern Grass");
-		addBlock(mortumGrass, "Mortum Grass");
+		DivineAPI.addBlock(edenGrass, "Eden Grass");
+		DivineAPI.addBlock(wildWoodGrass, "Wild Wood Grass");
+		DivineAPI.addBlock(apalachiaGrass, "Apalachia Grass");
+		DivineAPI.addBlock(skythernGrass, "Skythern Grass");
+		DivineAPI.addBlock(mortumGrass, "Mortum Grass");
 		
-		addBlock(edenDirt, "Eden Dirt");
-		addBlock(wildWoodDirt, "Wild Wood Dirt");
-		addBlock(apalachiaDirt, "Apalachia Dirt");
-		addBlock(skythernDirt, "Skythern Dirt");
-		addBlock(mortumDirt, "Mortum Dirt");
+		DivineAPI.addBlock(edenDirt, "Eden Dirt");
+		DivineAPI.addBlock(wildWoodDirt, "Wild Wood Dirt");
+		DivineAPI.addBlock(apalachiaDirt, "Apalachia Dirt");
+		DivineAPI.addBlock(skythernDirt, "Skythern Dirt");
+		DivineAPI.addBlock(mortumDirt, "Mortum Dirt");
 		
-		addBlock(edenOre, "Eden Ore");
-		addBlock(wildWoodOre, "Wild Wood Ore");
-		addBlock(apalachiaOre, "Apalachia Ore");
-		addBlock(skythernOre, "Skythern Ore");
-		addBlock(mortumOre, "Mortum Ore");
+		DivineAPI.addBlock(edenOre, "Eden Ore");
+		DivineAPI.addBlock(wildWoodOre, "Wild Wood Ore");
+		DivineAPI.addBlock(apalachiaOre, "Apalachia Ore");
+		DivineAPI.addBlock(skythernOre, "Skythern Ore");
+		DivineAPI.addBlock(mortumOre, "Mortum Ore");
 		
-		addBlock(edenBlock, "Eden Block");
-		addBlock(wildWoodBlock, "Wild Wood Block");
-		addBlock(apalachiaBlock, "Apalachia Block");
-		addBlock(skythernBlock, "Skythern Block");
-		addBlock(mortumBlock, "Mortum Block");
+		DivineAPI.addBlock(edenBlock, "Eden Block");
+		DivineAPI.addBlock(wildWoodBlock, "Wild Wood Block");
+		DivineAPI.addBlock(apalachiaBlock, "Apalachia Block");
+		DivineAPI.addBlock(skythernBlock, "Skythern Block");
+		DivineAPI.addBlock(mortumBlock, "Mortum Block");
+		
+		DivineAPI.addBlock(twilightStone, "Twilight Stone");
+		DivineAPI.addBlock(edenPortal, "Eden Portal");
+		DivineAPI.addBlock(blueFire, "Blue Fire");
 	}
-	
-	public static void addBlock(Block block, String name){
-		GameRegistry.registerBlock(block, name);
-		LanguageRegistry.addName(block, name);
-	}
-	
 }

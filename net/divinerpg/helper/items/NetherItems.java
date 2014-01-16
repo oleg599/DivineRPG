@@ -1,6 +1,7 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.items.base.ItemMod;
 import net.divinerpg.helper.items.base.ItemModSword;
@@ -31,25 +32,20 @@ public class NetherItems {
 	public static final Item bluefireSword = new ItemModSword(ToolMaterialMod.BluefireSword).setTextureName("bluefireSword").setUnlocalizedName("bluefireSword");
 
 	public static void init(){
-		addItem(netheriteIngot, "Netherite Ingot");
-		addItem(bloodgem, "Blood Gem");
-		addItem(netheriteChunk, "Netherite Chunk");
-		addItem(moltenStone , "Molten Stone");
-		addItem(blueFireStone , "Blue Fire Stone");
-		addItem(purpleBlaze, "Purple Blaze");
-		addItem(hellstoneIngot, "Hellstone Ingot");
-		addItem(furyFire, "Fury Fire");
-		addItem(moltenShards , "Molten Shard");
+		DivineAPI.addItem(netheriteIngot, "Netherite Ingot");
+		DivineAPI.addItem(bloodgem, "Blood Gem");
+		DivineAPI.addItem(netheriteChunk, "Netherite Chunk");
+		DivineAPI.addItem(moltenStone , "Molten Stone");
+		DivineAPI.addItem(blueFireStone , "Blue Fire Stone");
+		DivineAPI.addItem(purpleBlaze, "Purple Blaze");
+		DivineAPI.addItem(hellstoneIngot, "Hellstone Ingot");
+		DivineAPI.addItem(furyFire, "Fury Fire");
+		DivineAPI.addItem(moltenShards , "Molten Shard");
 		
-		addItem(infernoSword, "Inferno Sword");
-		addItem(bloodgemSword, "Bloodgem Sword");
-		addItem(moltenSword, "Molten Sword");
-		addItem(scorchingSword, "Scorching Sword");
-		addItem(bluefireSword, "Bluefire Sword");
+		DivineAPI.addItem(infernoSword, "Inferno Sword");
+		DivineAPI.addItem(bloodgemSword, "Bloodgem Sword");
+		DivineAPI.addItem(moltenSword, "Molten Sword");
+		DivineAPI.addItem(scorchingSword, "Scorching Sword");
+		DivineAPI.addItem(bluefireSword, "Bluefire Sword");
 	}
-	
-	public static void addItem(Item item, String name){
-		GameRegistry.registerItem(item, name);
-		LanguageRegistry.addName(item, name);
-	}	
 }

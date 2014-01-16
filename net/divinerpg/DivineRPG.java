@@ -39,17 +39,6 @@ public class DivineRPG {
 		proxy.postInit(event);
 	}
 	
-	/** The dimension renames:
-	 * Dravite = Eden
-	 * Azurite = The Wild Wood
-	 * Uvite = Apalachia
-	 * Mythril = Skythern
-	 * Augite = Mortum
-	 * Vethea = Vethea
-	 * Iceika = Iceika
-	 * Arcana = Dungen Of Arcana
-	 **/
-	
 	/**REMINDERS OF THE UN-NAMED FUNC_^&!!)&_!**/
 	//func_149672_a(); >> setMaterial();
 	//func_149647_a(); >> setCreativeTab();

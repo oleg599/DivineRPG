@@ -1,6 +1,7 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.items.base.ItemMod;
 import net.divinerpg.helper.items.base.ItemModAxe;
@@ -121,102 +122,97 @@ public class OverworldItems {
 
 	public static void init(){
 		//Materials
-		addItem(realmiteIngot, "Realmite Ingot");
-		addItem(rupeeIngot, "Rupee Ingot");
-		addItem(arlemiteIngot, "Arlemite Ingot");
-		addItem(shadowBar, "Shadow Bar");
-		addItem(jungleShards, "Jungle Shard");
-		addItem(divineShards, "Divine Shard");
-		addItem(corruptedShards , "Corrupted Shard");
-		addItem(iceShards, "Frozen Shards");
-		addItem(jungleStone , "Jungle Stone");
-		addItem(divineStone , "Divine Stone");
-		addItem(corruptedStone , "Corrupted Stone");
-		addItem(iceStone , "Ice Stone");
-		addItem(healingStone, "Healing Stone");
-		addItem(shadowStone, "Shadow Stone");
-		addItem(aquaticIngot, "Aquatic Ingot");
-		addItem(aquaticPellets, "Aquatic Pellets");
-		addItem(pureAquaticPellets, "Pure Aquatic Pellets");
-		addItem(cyclopsEye, "Cyclops Eye");
-		addItem(crabClaw, "Crab Claw");
-		addItem(legendaryEnderEye, "Legendary Ender Eye");
-		addItem(sharkFin, "Shark Fin");
-		addItem(whaleFin, "Whale Fin");
+		DivineAPI.addItem(realmiteIngot, "Realmite Ingot");
+		DivineAPI.addItem(rupeeIngot, "Rupee Ingot");
+		DivineAPI.addItem(arlemiteIngot, "Arlemite Ingot");
+		DivineAPI.addItem(shadowBar, "Shadow Bar");
+		DivineAPI.addItem(jungleShards, "Jungle Shard");
+		DivineAPI.addItem(divineShards, "Divine Shard");
+		DivineAPI.addItem(corruptedShards , "Corrupted Shard");
+		DivineAPI.addItem(iceShards, "Frozen Shards");
+		DivineAPI.addItem(jungleStone , "Jungle Stone");
+		DivineAPI.addItem(divineStone , "Divine Stone");
+		DivineAPI.addItem(corruptedStone , "Corrupted Stone");
+		DivineAPI.addItem(iceStone , "Ice Stone");
+		DivineAPI.addItem(healingStone, "Healing Stone");
+		DivineAPI.addItem(shadowStone, "Shadow Stone");
+		DivineAPI.addItem(aquaticIngot, "Aquatic Ingot");
+		DivineAPI.addItem(aquaticPellets, "Aquatic Pellets");
+		DivineAPI.addItem(pureAquaticPellets, "Pure Aquatic Pellets");
+		DivineAPI.addItem(cyclopsEye, "Cyclops Eye");
+		DivineAPI.addItem(crabClaw, "Crab Claw");
+		DivineAPI.addItem(legendaryEnderEye, "Legendary Ender Eye");
+		DivineAPI.addItem(sharkFin, "Shark Fin");
+		DivineAPI.addItem(whaleFin, "Whale Fin");
 		//Temporary
-		addItem(noImage, "NO IMAGE");
+		DivineAPI.addItem(noImage, "NO IMAGE");
 		
 		//Spawner
-		addItem(myseriousClock, "Mysterious Clock");
+		DivineAPI.addItem(myseriousClock, "Mysterious Clock");
 		
 		//Weapons
-		addItem(slimeSword, "Slime Sword");
-		addItem(oceanKnife, "Ocean Knife");
-		addItem(aquaticMaul, "Aquatic Maul");
-		addItem(arlemiteSword, "Arlemite Sword");
-		addItem(bedrockSword, "Bedrock Sword");
-		addItem(realmiteSword, "Realmite Sword");
-		addItem(rupeeSword, "rupee Sword");
-		addItem(sandslash, "Sandslash");
-		addItem(divineSword, "Divine Sword");
-		addItem(blueDivineSword, "Blue Divine Sword");
-		addItem(yellowDivineSword, "Yellow Divine Sword");
-		addItem(pinkDivineSword, "Pink Divine Sword");
-		addItem(purpleDivineSword, "Purple Divine Sword");
-		addItem(redDivineSword, "Red Divine Sword");
-		addItem(greenDivineSword, "Green Divine Sword");
-		addItem(bedrockMaul, "Bedrock Maul");
-		addItem(jungleKnife, "Jungle Knife");
-		addItem(cyclopsSword, "Cyclopsian Sword");
-		addItem(donatorSword, "Donator Sword");
-		addItem(aquaticTrident, "Aquatic Trident");
-		addItem(aquaticDagger, "Aquatic Dagger");
-		addItem(aquaton, "Aquaton");
-		addItem(frostSword, "Frost Sword");
-		addItem(sharkSword, "Shark Sword");
-		addItem(deathBringer, "Death Bringer");
-		addItem(crabclawMaul, "Crabclaw Maul");
-		addItem(poisonSaber, "Poison Saber");
-		addItem(furyMaul, "Fury Maul");
-		addItem(corruptedMaul, "Corrupted Maul");
+		DivineAPI.addItem(slimeSword, "Slime Sword");
+		DivineAPI.addItem(oceanKnife, "Ocean Knife");
+		DivineAPI.addItem(aquaticMaul, "Aquatic Maul");
+		DivineAPI.addItem(arlemiteSword, "Arlemite Sword");
+		DivineAPI.addItem(bedrockSword, "Bedrock Sword");
+		DivineAPI.addItem(realmiteSword, "Realmite Sword");
+		DivineAPI.addItem(rupeeSword, "rupee Sword");
+		DivineAPI.addItem(sandslash, "Sandslash");
+		DivineAPI.addItem(divineSword, "Divine Sword");
+		DivineAPI.addItem(blueDivineSword, "Blue Divine Sword");
+		DivineAPI.addItem(yellowDivineSword, "Yellow Divine Sword");
+		DivineAPI.addItem(pinkDivineSword, "Pink Divine Sword");
+		DivineAPI.addItem(purpleDivineSword, "Purple Divine Sword");
+		DivineAPI.addItem(redDivineSword, "Red Divine Sword");
+		DivineAPI.addItem(greenDivineSword, "Green Divine Sword");
+		DivineAPI.addItem(bedrockMaul, "Bedrock Maul");
+		DivineAPI.addItem(jungleKnife, "Jungle Knife");
+		DivineAPI.addItem(cyclopsSword, "Cyclopsian Sword");
+		DivineAPI.addItem(donatorSword, "Donator Sword");
+		DivineAPI.addItem(aquaticTrident, "Aquatic Trident");
+		DivineAPI.addItem(aquaticDagger, "Aquatic Dagger");
+		DivineAPI.addItem(aquaton, "Aquaton");
+		DivineAPI.addItem(frostSword, "Frost Sword");
+		DivineAPI.addItem(sharkSword, "Shark Sword");
+		DivineAPI.addItem(deathBringer, "Death Bringer");
+		DivineAPI.addItem(crabclawMaul, "Crabclaw Maul");
+		DivineAPI.addItem(poisonSaber, "Poison Saber");
+		DivineAPI.addItem(furyMaul, "Fury Maul");
+		DivineAPI.addItem(corruptedMaul, "Corrupted Maul");
 		
 		//Tools
-		addItem(rupeeShickaxe, "Rupee Shickaxe");
-		addItem(arlemiteShickaxe, "Arlemite Shickaxe");
-		addItem(rupeePickaxe, "Rupee Pickaxe");
-		addItem(rupeeAxe, "Rupee Axe");
-		addItem(rupeeShovel, "Rupee Shovel");
-		addItem(rupeeHoe, "Rupee Hoe");
-		addItem(arlemitePickaxe, "Arlemite Pickaxe");
-		addItem(arlemiteAxe, "Arlemite Axe");
-		addItem(arlemiteShovel, "Arlemite Shovel");
-		addItem(arlemiteHoe, "Arlemite Hoe");
-		addItem(realmitePickaxe, "Realmite Pickaxe");
-		addItem(realmiteAxe, "Realmite Axe");
-		addItem(realmiteShovel, "Realmite Shovel");
-		addItem(realmiteHoe, "Realmite Hoe");
-		addItem(bedrockPickaxe, "Bedrock Pickaxe");
-		addItem(bedrockAxe, "Bedrock Axe");
-		addItem(bedrockShovel, "Bedrock Shovel");
-		addItem(corruptedPickaxe, "Corrupted Pickaxe");
-		addItem(corruptedAxe, "Corrupted Axe");
-		addItem(corruptedShovel, "Corrupted Shovel");
-		addItem(divineShickaxe, "Divine Shickaxe");
-		addItem(divinePickaxe, "Divine Pickaxe");
-		addItem(divineAxe, "Divine Axe");
-		addItem(divineShovel, "Divine Shovel");
+		DivineAPI.addItem(rupeeShickaxe, "Rupee Shickaxe");
+		DivineAPI.addItem(arlemiteShickaxe, "Arlemite Shickaxe");
+		DivineAPI.addItem(rupeePickaxe, "Rupee Pickaxe");
+		DivineAPI.addItem(rupeeAxe, "Rupee Axe");
+		DivineAPI.addItem(rupeeShovel, "Rupee Shovel");
+		DivineAPI.addItem(rupeeHoe, "Rupee Hoe");
+		DivineAPI.addItem(arlemitePickaxe, "Arlemite Pickaxe");
+		DivineAPI.addItem(arlemiteAxe, "Arlemite Axe");
+		DivineAPI.addItem(arlemiteShovel, "Arlemite Shovel");
+		DivineAPI.addItem(arlemiteHoe, "Arlemite Hoe");
+		DivineAPI.addItem(realmitePickaxe, "Realmite Pickaxe");
+		DivineAPI.addItem(realmiteAxe, "Realmite Axe");
+		DivineAPI.addItem(realmiteShovel, "Realmite Shovel");
+		DivineAPI.addItem(realmiteHoe, "Realmite Hoe");
+		DivineAPI.addItem(bedrockPickaxe, "Bedrock Pickaxe");
+		DivineAPI.addItem(bedrockAxe, "Bedrock Axe");
+		DivineAPI.addItem(bedrockShovel, "Bedrock Shovel");
+		DivineAPI.addItem(corruptedPickaxe, "Corrupted Pickaxe");
+		DivineAPI.addItem(corruptedAxe, "Corrupted Axe");
+		DivineAPI.addItem(corruptedShovel, "Corrupted Shovel");
+		DivineAPI.addItem(divineShickaxe, "Divine Shickaxe");
+		DivineAPI.addItem(divinePickaxe, "Divine Pickaxe");
+		DivineAPI.addItem(divineAxe, "Divine Axe");
+		DivineAPI.addItem(divineShovel, "Divine Shovel");
 		
 		//Food
-		addItem(bacon, "Raw Bacon");
-		addItem(boiledEgg, "Boiled Egg");
-		addItem(cheese, "Cheese");
-		addItem(whiteMushroom, "White Mushroom");
-		addItem(advMushroomStew, "Advanced Mushroom Stew");
-		addItem(chickenDinner, "Chicken Dinner");
+		DivineAPI.addItem(bacon, "Raw Bacon");
+		DivineAPI.addItem(boiledEgg, "Boiled Egg");
+		DivineAPI.addItem(cheese, "Cheese");
+		DivineAPI.addItem(whiteMushroom, "White Mushroom");
+		DivineAPI.addItem(advMushroomStew, "Advanced Mushroom Stew");
+		DivineAPI.addItem(chickenDinner, "Chicken Dinner");
 	}
-	
-	public static void addItem(Item item, String name){
-		GameRegistry.registerItem(item, name);
-		LanguageRegistry.addName(item, name);
-	}	
 }

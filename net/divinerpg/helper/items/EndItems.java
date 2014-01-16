@@ -1,6 +1,7 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.items.base.ItemMod;
 import net.divinerpg.helper.items.base.ItemModSword;
@@ -27,21 +28,18 @@ public class EndItems {
 	public static final Item enderSwordYellow = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderswordyellow").setUnlocalizedName("enderSwordYellow").setCreativeTab(DivineRPGTabs.swords);
 	
 	public static void init(){
-		addItem(enderStone , "Ender Stone");
-		addItem(watchingEye, "Watching Eye");
-		addItem(callWatcher, "Call of the Watcher");
-		addItem(enderShard , "Ender Shard");
+		DivineAPI.addItem(enderStone , "Ender Stone");
+		DivineAPI.addItem(watchingEye, "Watching Eye");
+		DivineAPI.addItem(callWatcher, "Call of the Watcher");
+		DivineAPI.addItem(enderShard , "Ender Shard");
 		
-		addItem(enderSword, "Ender Sword");
-		addItem(enderSwordBlue, "Blue Ender Sword");
-		addItem(enderSwordDark, "Dark Ender Sword");
-		addItem(enderSwordGreen, "Green Ender Sword");
-		addItem(enderSwordRed, "Red Ender Sword");
-		addItem(enderSwordYellow, "Yellow Ender Sword");
+		DivineAPI.addItem(enderSword, "Ender Sword");
+		DivineAPI.addItem(enderSwordBlue, "Blue Ender Sword");
+		DivineAPI.addItem(enderSwordDark, "Dark Ender Sword");
+		DivineAPI.addItem(enderSwordGreen, "Green Ender Sword");
+		DivineAPI.addItem(enderSwordRed, "Red Ender Sword");
+		DivineAPI.addItem(enderSwordYellow, "Yellow Ender Sword");
 	}
 	
-	public static void addItem(Item item, String name){
-		GameRegistry.registerItem(item, name);
-		LanguageRegistry.addName(item, name);
-	}	
+
 }

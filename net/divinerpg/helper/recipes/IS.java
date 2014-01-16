@@ -11,6 +11,7 @@ import net.minecraft.item.crafting.CraftingManager;
 
 public class IS {
 		//IS stands for ItemStack
+		//Thank you captain Dipshit, <3 Brock
 		//Food
 		public static ItemStack milk = new ItemStack(Items.milk_bucket);
 		public static ItemStack boiledEgg = new ItemStack(OverworldItems.boiledEgg);

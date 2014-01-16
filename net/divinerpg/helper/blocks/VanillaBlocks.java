@@ -3,6 +3,7 @@ package net.divinerpg.helper.blocks;
 import cpw.mods.fml.common.registry.*;
 import cpw.mods.fml.common.registry.*;
 import net.divinerpg.*;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.overworld.blocks.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -55,47 +56,46 @@ public class VanillaBlocks {
     public static final Block divineRock = new VanillaBlock(rock).setTextureName("divineRock").func_149663_c("divineRock").func_149711_c(1.5F);
 
 	public static void init(){
-		addBlock(rupeeOre, "Rupee Ore");
-		addBlock(arlemiteOre, "Arlemite Ore");
-		addBlock(realmiteOre, "Realmite Ore");
-		addBlock(bloodGemOre, "BloodGem Ore");
-		addBlock(netheriteOre, "Netherite Ore");
+		DivineAPI.addBlock(rupeeOre, "Rupee Ore");
+		DivineAPI.addBlock(arlemiteOre, "Arlemite Ore");
+		DivineAPI.addBlock(realmiteOre, "Realmite Ore");
+		DivineAPI.addBlock(bloodGemOre, "BloodGem Ore");
+		DivineAPI.addBlock(netheriteOre, "Netherite Ore");
 		
-		addBlock(rupeeBlock, "Rupee Block");
-		addBlock(arlemiteBlock, "Arlemite Block");
-		addBlock(realmiteBlock, "Realmite Block");
-		addBlock(bloodgemBlock, "BloodGem Block");
-		addBlock(netheriteBlock, "Netherite Block");
+		DivineAPI.addBlock(rupeeBlock, "Rupee Block");
+		DivineAPI.addBlock(arlemiteBlock, "Arlemite Block");
+		DivineAPI.addBlock(realmiteBlock, "Realmite Block");
+		DivineAPI.addBlock(bloodgemBlock, "BloodGem Block");
+		DivineAPI.addBlock(netheriteBlock, "Netherite Block");
 		
-        addBlock(SpiderPumpkin, "Spider Pumpkin");
-        addBlock(CreeperPumpkin, "Creeper Pumpkin");
-        addBlock(EnderPumpkin, "Enderman Pumpkin");
-        addBlock(SkeletonPumpkin, "Skeleton Pumpkin");
-        addBlock(BlazePumpkin, "Blaze Pumpkin");
-        addBlock(ZombiePumpkin, "Zombie Pumpkin");
-        addBlock(FrostPumpkin, "Frost Pumpkin");
-        addBlock(CyclopsPumpkin, "Cyclops Pumpkin");
-        addBlock(GhastPumpkin, "Ghast Pumpkin");
-        addBlock(GlaconPumpkin, "Glacon Pumpkin");
-        addBlock(EnderWatcherPumpkin, "EnderWatcher Pumpkin");
-        addBlock(JungleSpiderPumpkin, "Jungle Spider Pumpkin");
-        addBlock(HellSpiderPumpkin, "Hell Spider Pumpkin");
+		DivineAPI.addBlock(SpiderPumpkin, "Spider Pumpkin");
+        DivineAPI.addBlock(CreeperPumpkin, "Creeper Pumpkin");
+        DivineAPI.addBlock(EnderPumpkin, "Enderman Pumpkin");
+        DivineAPI.addBlock(SkeletonPumpkin, "Skeleton Pumpkin");
+        DivineAPI.addBlock(BlazePumpkin, "Blaze Pumpkin");
+        DivineAPI.addBlock(ZombiePumpkin, "Zombie Pumpkin");
+        DivineAPI.addBlock(FrostPumpkin, "Frost Pumpkin");
+        DivineAPI.addBlock(CyclopsPumpkin, "Cyclops Pumpkin");
+        DivineAPI.addBlock(GhastPumpkin, "Ghast Pumpkin");
+        DivineAPI.addBlock(GlaconPumpkin, "Glacon Pumpkin");
+        DivineAPI.addBlock(EnderWatcherPumpkin, "EnderWatcher Pumpkin");
+        DivineAPI.addBlock(JungleSpiderPumpkin, "Jungle Spider Pumpkin");
+        DivineAPI.addBlock(HellSpiderPumpkin, "Hell Spider Pumpkin");
         
-        addBlock(checker, "Checker Block");
-        addBlock(rainbowWool, "Rainbow Wool");
-        addBlock(crate, "Crate");
-        addBlock(blueStone, "Blue Stone");
-        addBlock(purpleStone, "Purple Stone");
-        addBlock(blueVane, "Blue Vane");
-        addBlock(cyanVane, "Cyan Vane");
-        addBlock(purpleVane, "Purple Vane");
-        addBlock(redVane, "Red Vane");
-        addBlock(yellowVane, "Yellow Vane");
+        DivineAPI.addBlock(checker, "Checker Block");
+        DivineAPI.addBlock(rainbowWool, "Rainbow Wool");
+        DivineAPI.addBlock(crate, "Crate");
+        DivineAPI.addBlock(blueStone, "Blue Stone");
+        DivineAPI.addBlock(purpleStone, "Purple Stone");
+        DivineAPI.addBlock(blueVane, "Blue Vane");
+        DivineAPI.addBlock(cyanVane, "Cyan Vane");
+        DivineAPI.addBlock(purpleVane, "Purple Vane");
+        DivineAPI.addBlock(redVane, "Red Vane");
+        DivineAPI.addBlock(yellowVane, "Yellow Vane");
+        
+        DivineAPI.addBlock(divineRock, "Divine Rock");
 	}
 	
-	public static void addBlock(Block block, String name){
-		GameRegistry.registerBlock(block, name);
-		LanguageRegistry.addName(block, name);
-	}
+	
 
 }

@@ -1,5 +1,6 @@
 package net.divinerpg;
 
+import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.blocks.*;
 import net.divinerpg.helper.config.*;
 import net.divinerpg.helper.event.EventHelper;
@@ -26,6 +27,7 @@ public class CommonProxy {
 		OverworldMobRegistry.init();
 		OverworldRecipeHelper.init();
 		TwilightBlocks.init();
+		DimensionHelper.init();
 	}
 	
 	public void init(FMLInitializationEvent event){
