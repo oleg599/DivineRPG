@@ -19,18 +19,21 @@ import net.minecraft.item.ItemMonsterPlacer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockEdenPortal extends BlockBreakable
 {
 
+    private String name;
+
     public BlockEdenPortal()
     {
-        super(Reference.prefix + "edenportal", Material.field_151567_E, false);
+        super(Reference.PREFIX + "edenPortal", Material.field_151567_E, false);
         this.func_149675_a(true);
         func_149647_a(DivineRPGTabs.blocks);
-        func_149663_c("EdenPortal");
+        setName("edenPortal");
         //this.setHardness(-1.0F);
         //this.setStepSound(soundGlassFootstep);
         //this.setLightValue(0.75F);
@@ -303,5 +306,27 @@ public class BlockEdenPortal extends BlockBreakable
     @Override
     public Item func_149650_a(int par1, Random par2Random, int par3) {
         return Item.func_150898_a(TwilightBlocks.edenPortal);
+    }
+    
+    public Block setTextureName(String name){
+        return func_149658_d(Reference.PREFIX + name);
+    }
+    
+    public Block setUnlocalizedName(String name){
+        return func_149663_c(name);
+    }
+    
+    public Block setName(String name){
+        this.name = name;
+        setTextureName(name);
+        return setUnlocalizedName(name);
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public String getTextureName(){
+        return Reference.PREFIX + name;
     }
 }

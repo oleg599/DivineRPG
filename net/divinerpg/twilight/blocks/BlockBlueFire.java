@@ -42,7 +42,7 @@ public class BlockBlueFire extends BlockFire
     public BlockBlueFire() {
         super();
         this.func_149675_a(true);
-        func_149663_c("BlueFire");
+        setName("blueFire");
         func_149647_a(DivineRPGTabs.blocks);
     }
 
@@ -412,6 +412,7 @@ public class BlockBlueFire extends BlockFire
         private int flammibility = 0;
     }
     private IdentityHashMap<Block, FireInfo> blockInfo = Maps.newIdentityHashMap();
+    private String name;
 
     public void setFireInfo(Block block, int encouragement, int flammibility)
     {
@@ -480,6 +481,20 @@ public class BlockBlueFire extends BlockFire
         return (newChance > oldChance ? newChance : oldChance);
     }
     public Block setTextureName(String name){
-        return func_149658_d(Reference.prefix + name);
+        return func_149658_d(Reference.PREFIX + name);
+    }
+    
+    public Block setUnlocalizedName(String name){
+        return func_149663_c(name);
+    }
+    
+    public Block setName(String name){
+        this.name = name;
+        setTextureName(name);
+        return setUnlocalizedName(name);
+    }
+    
+    public String getName(){
+        return name;
     }
 }

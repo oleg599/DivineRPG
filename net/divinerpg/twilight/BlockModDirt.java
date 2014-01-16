@@ -14,7 +14,7 @@ public class BlockModDirt extends Block {
     }
     
     public Block setTextureName(String name){
-        return func_149658_d(Reference.prefix + name);
+        return func_149658_d(Reference.PREFIX + name);
     }
 	
 }

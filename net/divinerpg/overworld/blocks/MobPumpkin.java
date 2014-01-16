@@ -16,6 +16,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class MobPumpkin extends BlockDirectional
 {
+    
+    private String name;
     @SideOnly(Side.CLIENT)
     private IIcon top;
     @SideOnly(Side.CLIENT)
@@ -53,11 +55,21 @@ public class MobPumpkin extends BlockDirectional
     }
     
     public Block setTextureName(String name){
-        return func_149658_d(Reference.prefix + name);
+        return func_149658_d(Reference.PREFIX + name);
     }
     
     public Block setUnlocalizedName(String name){
     	return func_149663_c(name);
+    }
+    
+    public Block setName(String name){
+        this.name = name;
+        setTextureName(name);
+        return setUnlocalizedName(name);
+    }
+    
+    public String getName(){
+        return name;
     }
     
     

@@ -11,6 +11,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -18,11 +19,12 @@ public class BlockApalachiaGrass extends Block {
 
 	IIcon top;
 	IIcon bottom;
+    private String name;
 	
     public BlockApalachiaGrass() {
         super(Material.field_151577_b);
         func_149647_a(DivineRPGTabs.blocks);
-        func_149663_c("apalachiaGrass");
+        setName("apalachiaGrass");
         this.func_149675_a(true);
     }
     
@@ -34,9 +36,9 @@ public class BlockApalachiaGrass extends Block {
     
     @SideOnly(Side.CLIENT)
     public void func_149651_a(IIconRegister icon) {
-        this.field_149761_L = icon.registerIcon(Reference.prefix + "apalachiagrass_side");
-        this.top = icon.registerIcon(Reference.prefix + "apalachiagrass_top");
-        this.bottom = icon.registerIcon(Reference.prefix + "apalachiadirt");
+        this.field_149761_L = icon.registerIcon(getTextureName() + "_side");
+        this.top = icon.registerIcon(getTextureName() + "_top");
+        this.bottom = icon.registerIcon(Reference.PREFIX + "apalachiaDirt");
     }
 
     @Override
@@ -82,5 +84,27 @@ public class BlockApalachiaGrass extends Block {
     public boolean func_149852_a(World world, Random rand, int par1, int par2, int par3)
     {
         return true;
+    }
+    
+    public Block setTextureName(String name){
+        return func_149658_d(Reference.PREFIX + name);
+    }
+    
+    public Block setUnlocalizedName(String name){
+        return func_149663_c(name);
+    }
+    
+    public Block setName(String name){
+        this.name = name;
+        setTextureName(name);
+        return setUnlocalizedName(name);
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public String getTextureName(){
+        return Reference.PREFIX + name;
     }
 }

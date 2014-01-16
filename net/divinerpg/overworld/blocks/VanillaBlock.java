@@ -14,6 +14,8 @@ import net.minecraft.world.IBlockAccess;
 
 public class VanillaBlock extends Block
 {
+    
+    private String name;
 
 	public VanillaBlock(Material m)
 	{
@@ -129,12 +131,21 @@ public class VanillaBlock extends Block
 	}
 	
 	public Block setUnlocalizedName(String name){
-    	func_149663_c(name);
-    	return this;
+    	return func_149663_c(name);
     }
     
     public Block setTextureName(String name){
-        return func_149658_d(Reference.prefix + name);
+        return func_149658_d(Reference.PREFIX + name);
+    }
+    
+    public Block setName(String name){
+        this.name = name;
+        setTextureName(name);
+        return setUnlocalizedName(name);
+    }
+    
+    public String getName(){
+        return name;
     }
     
     public Block setHardness(float p_149711_1_)

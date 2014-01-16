@@ -4,6 +4,7 @@ import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.blocks.TwilightBlocks;
@@ -21,11 +22,12 @@ public class BlockWildWoodGrass extends Block {
 
 	IIcon top;
 	IIcon bottom;
+    private String name;
 	
     public BlockWildWoodGrass() {
         super(Material.field_151577_b);
         func_149647_a(DivineRPGTabs.blocks);
-        func_149663_c("wildwoodGrass");
+        setName("wildwoodGrass");
         this.func_149675_a(true);
     }
     
@@ -37,9 +39,9 @@ public class BlockWildWoodGrass extends Block {
     
     @SideOnly(Side.CLIENT)
     public void func_149651_a(IIconRegister icon) {
-        this.field_149761_L = icon.registerIcon(Reference.prefix + "wildwoodgrass_side");
-        this.top = icon.registerIcon(Reference.prefix + "wildwoodgrass_top");
-        this.bottom = icon.registerIcon(Reference.prefix + "wildwooddirt");
+        this.field_149761_L = icon.registerIcon(getTextureName() + "_side");
+        this.top = icon.registerIcon(getTextureName() + "_top");
+        this.bottom = icon.registerIcon(Reference.PREFIX + "wildwoodDirt");
     }
 
     @Override
@@ -85,5 +87,27 @@ public class BlockWildWoodGrass extends Block {
     public boolean func_149852_a(World world, Random rand, int par1, int par2, int par3)
     {
         return true;
+    }
+    
+    public Block setTextureName(String name){
+        return func_149658_d(Reference.PREFIX + name);
+    }
+    
+    public Block setUnlocalizedName(String name){
+        return func_149663_c(name);
+    }
+    
+    public Block setName(String name){
+        this.name = name;
+        setTextureName(name);
+        return setUnlocalizedName(name);
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public String getTextureName(){
+        return Reference.PREFIX + name;
     }
 }

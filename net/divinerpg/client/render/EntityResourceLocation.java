@@ -5,7 +5,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class EntityResourceLocation {
 	
-	public static String Prefix = Reference.prefix + "textures/mobs/";
+	public static String Prefix = Reference.PREFIX + "textures/mobs/";
 	
 	public static ResourceLocation EnderWatcher = new ResourceLocation(Prefix + "EnderWatcher.png");
 	public static ResourceLocation Crab = new ResourceLocation(Prefix + "Crab.png");

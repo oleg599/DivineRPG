@@ -51,7 +51,7 @@ public class ItemMysteriousClock extends Item
 	}
 	public Item setTextureName(String par1Str)
     {
-        this.iconString = (Reference.prefix + par1Str);
+        this.iconString = (Reference.PREFIX + par1Str);
         return this;
     }
 }
