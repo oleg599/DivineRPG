@@ -37,6 +37,11 @@ public class TwilightBlocks {
 	public static final Block skythernBlock = new TwilightBlock(rock).func_149658_d(x.prefix + "skythernblock").func_149663_c("skythernBlock");
 	public static final Block mortumBlock = new TwilightBlock(rock).func_149658_d(x.prefix + "mortumblock").func_149663_c("mortumBlock");
 	
+	
+	public static final Block twilightStone = new TwilightBlock(rock).func_149658_d(x.prefix + "twilightstone").func_149663_c("TwilightStone");
+	public static final Block blueFire = new BlockBlueFire().func_149658_d("fire").func_149663_c("BlueFire");
+	public static final Block edenPortal = new BlockEdenPortal();
+	
 	public static void init(){
 		addBlock(edenGrass, "Eden Grass");
 		addBlock(wildWoodGrass, "Wild Wood Grass");
