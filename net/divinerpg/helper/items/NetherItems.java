@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.items.base.ItemModSword;
 import net.divinerpg.helper.material.DivineRPGToolMaterial;
 import net.divinerpg.overworld.items.ItemInfernoSword;
 import net.minecraft.item.Item;

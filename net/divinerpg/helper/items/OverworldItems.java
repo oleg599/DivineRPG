@@ -2,6 +2,11 @@ package net.divinerpg.helper.items;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.items.base.ItemModAxe;
+import net.divinerpg.helper.items.base.ItemModHoe;
+import net.divinerpg.helper.items.base.ItemModPickaxe;
+import net.divinerpg.helper.items.base.ItemModShovel;
+import net.divinerpg.helper.items.base.ItemModSword;
 import net.divinerpg.helper.material.DivineRPGToolMaterial;
 import net.divinerpg.nether.items.ItemCallOfTheWatcher;
 import net.divinerpg.overworld.items.ItemInfernoSword;

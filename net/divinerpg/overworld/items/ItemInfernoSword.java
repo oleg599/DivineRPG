@@ -2,7 +2,7 @@ package net.divinerpg.overworld.items;
 
 import java.util.List;
 
-import net.divinerpg.helper.items.ItemModSword;
+import net.divinerpg.helper.items.base.ItemModSword;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

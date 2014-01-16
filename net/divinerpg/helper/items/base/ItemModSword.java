@@ -1,4 +1,4 @@
-package net.divinerpg.helper.items;
+package net.divinerpg.helper.items.base;
 
 import java.util.List;
 
