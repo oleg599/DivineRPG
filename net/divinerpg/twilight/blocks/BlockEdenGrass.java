@@ -1,4 +1,4 @@
-package net.divinerpg.twilight.eden.blocks;
+package net.divinerpg.twilight.blocks;
 
 import java.util.Random;
 
@@ -21,6 +21,7 @@ public class BlockEdenGrass extends Block {
 
 	IIcon top;
 	IIcon bottom;
+	IIcon side;
 	
     public BlockEdenGrass() {
         super(Material.field_151577_b);
@@ -30,16 +31,15 @@ public class BlockEdenGrass extends Block {
     }
     
     @SideOnly(Side.CLIENT)
-    public IIcon func_149691_a(int p_149691_1_, int p_149691_2_)
-    {
-        return p_149691_1_ == 1 ? top : (p_149691_1_ == 0 ? bottom : this.field_149761_L);
+    public IIcon func_149691_a(int par1, int par2) {
+        return par1 == 1 ? top : (par1 == 0 ? bottom : side);
     }
     
     @SideOnly(Side.CLIENT)
     public void func_149651_a(IIconRegister icon) {
-        this.field_149761_L = icon.registerIcon(Reference.prefix + "edengrass_side");
-        this.top = icon.registerIcon(Reference.prefix + "edengrass_top");
-        this.bottom = icon.registerIcon(Reference.prefix + "edendirt");
+        side = icon.registerIcon(Reference.prefix + "edengrass_side");
+        top = icon.registerIcon(Reference.prefix + "edengrass_top");
+        bottom = icon.registerIcon(Reference.prefix + "edendirt");
     }
 
     @Override

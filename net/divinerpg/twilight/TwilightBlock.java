@@ -31,6 +31,33 @@ public class TwilightBlock extends Block
 		if(this == TwilightBlocks.edenOre){
 			return getBlock(this);
 		}
+		if(this == TwilightBlocks.wildWoodOre){
+			return getBlock(this);
+		}
+		if(this == TwilightBlocks.apalachiaOre){
+			return getBlock(this);
+		}
+		if(this == TwilightBlocks.skythernOre){
+			return getBlock(this);
+		}
+		if(this == TwilightBlocks.mortumOre){
+			return getBlock(this);
+		}
+		if(this == TwilightBlocks.edenBlock){
+			return getBlock(this);
+		}
+		if(this == TwilightBlocks.wildWoodBlock){
+			return getBlock(this);
+		}
+		if(this == TwilightBlocks.apalachiaBlock){
+			return getBlock(this);
+		}
+		if(this == TwilightBlocks.skythernBlock){
+			return getBlock(this);
+		}
+		if(this == TwilightBlocks.mortumBlock){
+			return getBlock(this);
+		}
 		return null;
 	}
 
