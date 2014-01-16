@@ -23,7 +23,7 @@ public class VanillaBlocks {
 	public static final Block rupeeBlock = new VanillaBlock(rock).setTextureName("rupeeBlock").func_149663_c("rupeeBlock").func_149711_c(3.0F);
 	public static final Block arlemiteBlock = new VanillaBlock(rock).setTextureName("arlemiteBlock").func_149663_c("arlemiteBlock").func_149711_c(3.0F);
 	public static final Block realmiteBlock = new VanillaBlock(rock).setTextureName("realmiteBlock").func_149663_c("realmiteBlock").func_149711_c(3.0F);
-	public static final Block bloodGemBlock = new VanillaBlock(rock).setTextureName("bloodBlock").func_149663_c("bloodBlock").func_149711_c(3.0F);
+	public static final Block bloodgemBlock = new VanillaBlock(rock).setTextureName("bloodgemBlock").func_149663_c("bloodgemBlock").func_149711_c(3.0F);
 	public static final Block netheriteBlock = new VanillaBlock(rock).setTextureName("netheriteBlock").func_149663_c("netheriteBlock").func_149711_c(3.0F);
 	
 	public static final Block SpiderPumpkin = new MobPumpkin().setTextureName("spiderPumpkin").func_149663_c("spiderPumpkin");
@@ -64,7 +64,7 @@ public class VanillaBlocks {
 		addBlock(rupeeBlock, "Rupee Block");
 		addBlock(arlemiteBlock, "Arlemite Block");
 		addBlock(realmiteBlock, "Realmite Block");
-		addBlock(bloodGemBlock, "BloodGem Block");
+		addBlock(bloodgemBlock, "BloodGem Block");
 		addBlock(netheriteBlock, "Netherite Block");
 		
         addBlock(SpiderPumpkin, "Spider Pumpkin");

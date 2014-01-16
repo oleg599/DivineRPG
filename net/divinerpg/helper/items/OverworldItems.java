@@ -2,16 +2,16 @@ package net.divinerpg.helper.items;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.items.base.ItemMod;
 import net.divinerpg.helper.items.base.ItemModAxe;
+import net.divinerpg.helper.items.base.ItemModFood;
 import net.divinerpg.helper.items.base.ItemModHoe;
 import net.divinerpg.helper.items.base.ItemModPickaxe;
 import net.divinerpg.helper.items.base.ItemModShovel;
 import net.divinerpg.helper.items.base.ItemModSword;
-import net.divinerpg.helper.material.DivineRPGToolMaterial;
+import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.nether.items.ItemCallOfTheWatcher;
 import net.divinerpg.overworld.items.ItemInfernoSword;
-import net.divinerpg.overworld.items.ItemMod;
-import net.divinerpg.overworld.items.ItemModFood;
 import net.divinerpg.overworld.items.ItemMysteriousClock;
 import net.divinerpg.overworld.items.ItemShickaxe;
 import net.minecraft.item.Item;
@@ -24,97 +24,100 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class OverworldItems {
 	public static int HEAD = 0, BODY = 1, LEGS = 2, BOOTS = 3;
 
-	public static final Item rupeeIngot = new ItemMod().setUnlocalizedName("rupeeIngot").setTextureName("rupeeIngot").setCreativeTab(DivineRPGTabs.items);
-	public static final Item arlemiteIngot = new ItemMod().setUnlocalizedName("arlemiteIngot").setTextureName("arlemiteIngot").setCreativeTab(DivineRPGTabs.items);
-	public static final Item realmiteIngot = new ItemMod().setUnlocalizedName("realmiteIngot").setTextureName("realmiteIngot").setCreativeTab(DivineRPGTabs.items);
-	public static final Item shadowBar = new ItemMod().setUnlocalizedName("shadowBar").setTextureName("shadowBar").setCreativeTab(DivineRPGTabs.items);
+	public static final Item rupeeIngot = new ItemMod().setUnlocalizedName("rupeeIngot").setTextureName("rupeeIngot");
+	public static final Item arlemiteIngot = new ItemMod().setUnlocalizedName("arlemiteIngot").setTextureName("arlemiteIngot");
+	public static final Item realmiteIngot = new ItemMod().setUnlocalizedName("realmiteIngot").setTextureName("realmiteIngot");
+	public static final Item shadowBar = new ItemMod().setUnlocalizedName("shadowBar").setTextureName("shadowBar");
 	
-	public static final Item jungleShards = new ItemMod().setTextureName("jungleShards").setUnlocalizedName("jungleShards").setCreativeTab(DivineRPGTabs.items);
-	public static final Item iceShards = new ItemMod().setTextureName("iceShards").setUnlocalizedName("iceShards").setCreativeTab(DivineRPGTabs.items);    
-	public static final Item divineShards = new ItemMod().setTextureName("divineShards").setUnlocalizedName("divineShards").setCreativeTab(DivineRPGTabs.items);
-	public static final Item corruptedShards = new ItemMod().setTextureName("corruptedShards").setUnlocalizedName("corruptedShards").setCreativeTab(DivineRPGTabs.items);
+	public static final Item jungleShards = new ItemMod().setTextureName("jungleShards").setUnlocalizedName("jungleShards");
+	public static final Item iceShards = new ItemMod().setTextureName("iceShards").setUnlocalizedName("iceShards");    
+	public static final Item divineShards = new ItemMod().setTextureName("divineShards").setUnlocalizedName("divineShards");
+	public static final Item corruptedShards = new ItemMod().setTextureName("corruptedShards").setUnlocalizedName("corruptedShards");
 
-	public static final Item jungleStone = new ItemMod().setTextureName("jungleStone").setUnlocalizedName("jungleStone").setCreativeTab(DivineRPGTabs.items);
-	public static final Item iceStone = new ItemMod().setTextureName("iceStone").setUnlocalizedName("iceStone").setCreativeTab(DivineRPGTabs.items);
-	public static final Item corruptedStone = new ItemMod().setTextureName("corruptedStone").setUnlocalizedName("corruptedStone").setCreativeTab(DivineRPGTabs.items);
-	public static final Item divineStone = new ItemMod().setTextureName("divineStone").setUnlocalizedName("divineStone").setCreativeTab(DivineRPGTabs.items);
-	public static final Item healingStone = new ItemMod().setTextureName("healingStone").setUnlocalizedName("healingStone").setCreativeTab(DivineRPGTabs.items);
-	public static final Item shadowStone = new ItemMod().setTextureName("shadowStone").setUnlocalizedName("shadowStone").setCreativeTab(DivineRPGTabs.items);
+	public static final Item jungleStone = new ItemMod().setTextureName("jungleStone").setUnlocalizedName("jungleStone");
+	public static final Item iceStone = new ItemMod().setTextureName("iceStone").setUnlocalizedName("iceStone");
+	public static final Item corruptedStone = new ItemMod().setTextureName("corruptedStone").setUnlocalizedName("corruptedStone");
+	public static final Item divineStone = new ItemMod().setTextureName("divineStone").setUnlocalizedName("divineStone");
+	public static final Item healingStone = new ItemMod().setTextureName("healingStone").setUnlocalizedName("healingStone");
+	public static final Item shadowStone = new ItemMod().setTextureName("shadowStone").setUnlocalizedName("shadowStone");
 	
-	public static final Item aquaticIngot = new ItemMod().setTextureName("aquaticIngot").setUnlocalizedName("aquaticIngot").setCreativeTab(DivineRPGTabs.items);
-	public static final Item aquaticPellets = new ItemMod().setTextureName("aquaticPellets").setUnlocalizedName("aquaticPellets").setCreativeTab(DivineRPGTabs.items);
-	public static final Item pureAquaticPellets = new ItemMod().setTextureName("pureAquaticPellets").setUnlocalizedName("pureAquaticPellets").setCreativeTab(DivineRPGTabs.items);
-	public static final Item cyclopsEye = new ItemMod().setTextureName("cyclopsEye").setUnlocalizedName("cyclopsEye").setCreativeTab(DivineRPGTabs.items);
-	public static final Item crabClaw = new ItemMod().setTextureName("crabClaw").setUnlocalizedName("crabClaw").setCreativeTab(DivineRPGTabs.items);
-	public static final Item legendaryEnderEye = new ItemMod().setTextureName("legendaryEnderEye").setUnlocalizedName("legendaryEnderEye").setCreativeTab(DivineRPGTabs.items);
-	public static final Item sharkFin = new ItemMod().setTextureName("sharkFin").setUnlocalizedName("sharkFin").setCreativeTab(DivineRPGTabs.items);
-	public static final Item whaleFin = new ItemMod().setTextureName("whaleFin").setUnlocalizedName("whaleFin").setCreativeTab(DivineRPGTabs.items);
-	public static final Item myseriousClock = new ItemMysteriousClock().setTextureName("myseriousClock").setUnlocalizedName("myseriousClock").setCreativeTab(DivineRPGTabs.spawner);
+	public static final Item aquaticIngot = new ItemMod().setTextureName("aquaticIngot").setUnlocalizedName("aquaticIngot");
+	public static final Item aquaticPellets = new ItemMod().setTextureName("aquaticPellets").setUnlocalizedName("aquaticPellets");
+	public static final Item pureAquaticPellets = new ItemMod().setTextureName("pureAquaticPellets").setUnlocalizedName("pureAquaticPellets");
+	public static final Item cyclopsEye = new ItemMod().setTextureName("cyclopsEye").setUnlocalizedName("cyclopsEye");
+	public static final Item crabClaw = new ItemMod().setTextureName("crabClaw").setUnlocalizedName("crabClaw");
+	public static final Item legendaryEnderEye = new ItemMod().setTextureName("legendaryEnderEye").setUnlocalizedName("legendaryEnderEye");
+	public static final Item sharkFin = new ItemMod().setTextureName("sharkFin").setUnlocalizedName("sharkFin");
+	public static final Item whaleFin = new ItemMod().setTextureName("whaleFin").setUnlocalizedName("whaleFin");
+	public static final Item myseriousClock = new ItemMysteriousClock().setTextureName("myseriousClock").setUnlocalizedName("myseriousClock");
 	public static final Item noImage = new ItemMod().setTextureName("noimage").setUnlocalizedName("noImage");
 
-	public static final Item slimeSword = new ItemModSword(DivineRPGToolMaterial.SlimeSword).setTextureName("slimeSword").setUnlocalizedName("slimeSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item oceanKnife = new ItemModSword(DivineRPGToolMaterial.OceanKnife).setTextureName("oceanKnife").setUnlocalizedName("oceanKnife").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item aquaticMaul = new ItemModSword(DivineRPGToolMaterial.AquaMaul).setTextureName("aquaMaul").setUnlocalizedName("aquaMaul").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item arlemiteSword = new ItemModSword(DivineRPGToolMaterial.Arlemite).setTextureName("arlemiteSword").setUnlocalizedName("arlemiteSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item bedrockSword = new ItemModSword(DivineRPGToolMaterial.BedrockSword).setTextureName("bedrockSword").setUnlocalizedName("bedrockSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item realmiteSword = new ItemModSword(DivineRPGToolMaterial.Realmite).setTextureName("realmiteSword").setUnlocalizedName("realmiteSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item rupeeSword = new ItemModSword(DivineRPGToolMaterial.Rupee).setTextureName("rupeeSword").setUnlocalizedName("rupeeSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item sandslash = new ItemModSword(DivineRPGToolMaterial.Sandslash).setTextureName("sandslash").setUnlocalizedName("sandslash").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item divineSword = new ItemModSword(DivineRPGToolMaterial.DivineSword).setTextureName("divineSword").setUnlocalizedName("divineSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item blueDivineSword = new ItemModSword(DivineRPGToolMaterial.DivineSword).setTextureName("blueDivineSword").setUnlocalizedName("blueDivineSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item yellowDivineSword = new ItemModSword(DivineRPGToolMaterial.DivineSword).setTextureName("yellowDivineSword").setUnlocalizedName("yellowDivineSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item pinkDivineSword = new ItemModSword(DivineRPGToolMaterial.DivineSword).setTextureName("pinkDivineSword").setUnlocalizedName("pinkDivineSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item purpleDivineSword = new ItemModSword(DivineRPGToolMaterial.DivineSword).setTextureName("purpleDivineSword").setUnlocalizedName("purpleDivineSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item redDivineSword = new ItemModSword(DivineRPGToolMaterial.DivineSword).setTextureName("redDivineSword").setUnlocalizedName("redDivineSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item greenDivineSword = new ItemModSword(DivineRPGToolMaterial.DivineSword).setTextureName("greenDivineSword").setUnlocalizedName("greenDivineSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item bedrockMaul = new ItemModSword(DivineRPGToolMaterial.BedrockSword).setTextureName("bedrockMaul").setUnlocalizedName("bedrockMaul").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item jungleKnife = new ItemModSword(DivineRPGToolMaterial.OceanKnife).setTextureName("jungleKnife").setUnlocalizedName("jungleKnife").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item cyclopsSword = new ItemModSword(DivineRPGToolMaterial.Cyclops).setTextureName("cyclopianSword").setUnlocalizedName("cyclopianSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item donatorSword = new ItemModSword(DivineRPGToolMaterial.Donator).setTextureName("donatorSword").setUnlocalizedName("donatorSword");
-	public static final Item aquaticTrident = new ItemModSword(DivineRPGToolMaterial.AquaTrident).setTextureName("aquaticTrident").setUnlocalizedName("aquaticTrident").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item aquaticDagger = new ItemModSword(DivineRPGToolMaterial.AquaDagger).setTextureName("aquaticDagger").setUnlocalizedName("aquaticDagger").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item aquaton = new ItemModSword(DivineRPGToolMaterial.Aquaton).setTextureName("aquaton").setUnlocalizedName("aquaton").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item sharkSword = new ItemModSword(DivineRPGToolMaterial.SharkSword).setTextureName("sharkSword").setUnlocalizedName("sharkSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item deathBringer = new ItemModSword(DivineRPGToolMaterial.DeathBringer).setTextureName("deathBringer").setUnlocalizedName("deathBringer").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item crabclawMaul = new ItemModSword(DivineRPGToolMaterial.CrabclawMaul).setTextureName("crabclawMaul").setUnlocalizedName("crabclawMaul").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item poisonSaber = new ItemModSword(DivineRPGToolMaterial.PoisonSaber).setTextureName("poisonSaber").setUnlocalizedName("poisonSaber").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item furyMaul = new ItemModSword(DivineRPGToolMaterial.FuryMaul).setTextureName("furyMaul").setUnlocalizedName("furyMaul").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item corruptedMaul = new ItemModSword(DivineRPGToolMaterial.CorruptedMaul).setTextureName("corruptedMaul").setUnlocalizedName("corruptedMaul").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item frostSword = new ItemModSword(DivineRPGToolMaterial.FrostSword).setTextureName("frostSword").setUnlocalizedName("frostSword").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item slimeSword = new ItemModSword(ToolMaterialMod.SlimeSword).setTextureName("slimeSword").setUnlocalizedName("slimeSword");
+	public static final Item oceanKnife = new ItemModSword(ToolMaterialMod.OceanKnife).setTextureName("oceanKnife").setUnlocalizedName("oceanKnife");
+	public static final Item aquaticMaul = new ItemModSword(ToolMaterialMod.AquaMaul).setTextureName("aquaMaul").setUnlocalizedName("aquaMaul");
+	public static final Item arlemiteSword = new ItemModSword(ToolMaterialMod.Arlemite).setTextureName("arlemiteSword").setUnlocalizedName("arlemiteSword");
+	public static final Item bedrockSword = new ItemModSword(ToolMaterialMod.BedrockSword).setTextureName("bedrockSword").setUnlocalizedName("bedrockSword");
+	public static final Item realmiteSword = new ItemModSword(ToolMaterialMod.Realmite).setTextureName("realmiteSword").setUnlocalizedName("realmiteSword");
+	public static final Item rupeeSword = new ItemModSword(ToolMaterialMod.Rupee).setTextureName("rupeeSword").setUnlocalizedName("rupeeSword");
+	public static final Item sandslash = new ItemModSword(ToolMaterialMod.Sandslash).setTextureName("sandslash").setUnlocalizedName("sandslash");
+	public static final Item divineSword = new ItemModSword(ToolMaterialMod.DivineSword).setTextureName("divineSword").setUnlocalizedName("divineSword");
+	public static final Item blueDivineSword = new ItemModSword(ToolMaterialMod.DivineSword).setTextureName("blueDivineSword").setUnlocalizedName("blueDivineSword");
+	public static final Item yellowDivineSword = new ItemModSword(ToolMaterialMod.DivineSword).setTextureName("yellowDivineSword").setUnlocalizedName("yellowDivineSword");
+	public static final Item pinkDivineSword = new ItemModSword(ToolMaterialMod.DivineSword).setTextureName("pinkDivineSword").setUnlocalizedName("pinkDivineSword");
+	public static final Item purpleDivineSword = new ItemModSword(ToolMaterialMod.DivineSword).setTextureName("purpleDivineSword").setUnlocalizedName("purpleDivineSword");
+	public static final Item redDivineSword = new ItemModSword(ToolMaterialMod.DivineSword).setTextureName("redDivineSword").setUnlocalizedName("redDivineSword");
+	public static final Item greenDivineSword = new ItemModSword(ToolMaterialMod.DivineSword).setTextureName("greenDivineSword").setUnlocalizedName("greenDivineSword");
+	public static final Item bedrockMaul = new ItemModSword(ToolMaterialMod.BedrockSword).setTextureName("bedrockMaul").setUnlocalizedName("bedrockMaul");
+	public static final Item jungleKnife = new ItemModSword(ToolMaterialMod.OceanKnife).setTextureName("jungleKnife").setUnlocalizedName("jungleKnife");
+	public static final Item cyclopsSword = new ItemModSword(ToolMaterialMod.Cyclops).setTextureName("cyclopianSword").setUnlocalizedName("cyclopianSword");
+	public static final Item donatorSword = new ItemModSword(ToolMaterialMod.Donator).setTextureName("donatorSword").setUnlocalizedName("donatorSword");
+	public static final Item aquaticTrident = new ItemModSword(ToolMaterialMod.AquaTrident).setTextureName("aquaticTrident").setUnlocalizedName("aquaticTrident");
+	public static final Item aquaticDagger = new ItemModSword(ToolMaterialMod.AquaDagger).setTextureName("aquaticDagger").setUnlocalizedName("aquaticDagger");
+	public static final Item aquaton = new ItemModSword(ToolMaterialMod.Aquaton).setTextureName("aquaton").setUnlocalizedName("aquaton");
+	public static final Item sharkSword = new ItemModSword(ToolMaterialMod.SharkSword).setTextureName("sharkSword").setUnlocalizedName("sharkSword");
+	public static final Item deathBringer = new ItemModSword(ToolMaterialMod.DeathBringer).setTextureName("deathBringer").setUnlocalizedName("deathBringer");
+	public static final Item crabclawMaul = new ItemModSword(ToolMaterialMod.CrabclawMaul).setTextureName("crabclawMaul").setUnlocalizedName("crabclawMaul");
+	public static final Item poisonSaber = new ItemModSword(ToolMaterialMod.PoisonSaber).setTextureName("poisonSaber").setUnlocalizedName("poisonSaber");
+	public static final Item furyMaul = new ItemModSword(ToolMaterialMod.FuryMaul).setTextureName("furyMaul").setUnlocalizedName("furyMaul");
+	public static final Item corruptedMaul = new ItemModSword(ToolMaterialMod.CorruptedMaul).setTextureName("corruptedMaul").setUnlocalizedName("corruptedMaul");
+	public static final Item frostSword = new ItemModSword(ToolMaterialMod.FrostSword).setTextureName("frostSword").setUnlocalizedName("frostSword");
 	
-	public static final Item rupeeShickaxe = new ItemShickaxe(DivineRPGToolMaterial.RupeeShick).setTextureName("rupeeShickaxe").setUnlocalizedName("rupeeShickaxe");
-	public static final Item rupeePickaxe = new ItemModPickaxe(DivineRPGToolMaterial.Rupee).setTextureName("rupeePickaxe").setUnlocalizedName("rupeePickaxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item rupeeAxe = new ItemModAxe(DivineRPGToolMaterial.Rupee).setTextureName("rupeeAxe").setUnlocalizedName("rupeeAxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item rupeeShovel = new ItemModShovel(DivineRPGToolMaterial.Rupee).setTextureName("rupeeShovel").setUnlocalizedName("rupeeShovel").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item rupeeHoe = new ItemModHoe(DivineRPGToolMaterial.Rupee).setTextureName("rupeeHoe").setUnlocalizedName("rupeeHoe").setCreativeTab(DivineRPGTabs.tools);
+	public static final Item rupeeShickaxe = new ItemShickaxe(ToolMaterialMod.RupeeShick).setTextureName("rupeeShickaxe").setUnlocalizedName("rupeeShickaxe");
+	public static final Item rupeePickaxe = new ItemModPickaxe(ToolMaterialMod.Rupee).setTextureName("rupeePickaxe").setUnlocalizedName("rupeePickaxe");
+	public static final Item rupeeAxe = new ItemModAxe(ToolMaterialMod.Rupee).setTextureName("rupeeAxe").setUnlocalizedName("rupeeAxe");
+	public static final Item rupeeShovel = new ItemModShovel(ToolMaterialMod.Rupee).setTextureName("rupeeShovel").setUnlocalizedName("rupeeShovel");
+	public static final Item rupeeHoe = new ItemModHoe(ToolMaterialMod.Rupee).setTextureName("rupeeHoe").setUnlocalizedName("rupeeHoe");
 
-	public static final Item arlemiteShickaxe = new ItemShickaxe(DivineRPGToolMaterial.arlemiteShick).setTextureName("arlemiteShickaxe").setUnlocalizedName("arlemiteShickaxe");
-	public static final Item arlemitePickaxe = new ItemModPickaxe(DivineRPGToolMaterial.Arlemite).setTextureName("arlemitePickaxe").setUnlocalizedName("arlemitePickaxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item arlemiteAxe = new ItemModAxe(DivineRPGToolMaterial.Arlemite).setTextureName("arlemiteAxe").setUnlocalizedName("arlemiteAxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item arlemiteShovel = new ItemModShovel(DivineRPGToolMaterial.Arlemite).setTextureName("arlemiteShovel").setUnlocalizedName("arlemiteShovel").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item arlemiteHoe = new ItemModHoe(DivineRPGToolMaterial.Arlemite).setTextureName("arlemiteHoe").setUnlocalizedName("arlemiteHoe").setCreativeTab(DivineRPGTabs.tools);
+	public static final Item arlemiteShickaxe = new ItemShickaxe(ToolMaterialMod.arlemiteShick).setTextureName("arlemiteShickaxe").setUnlocalizedName("arlemiteShickaxe");
+	public static final Item arlemitePickaxe = new ItemModPickaxe(ToolMaterialMod.Arlemite).setTextureName("arlemitePickaxe").setUnlocalizedName("arlemitePickaxe");
+	public static final Item arlemiteAxe = new ItemModAxe(ToolMaterialMod.Arlemite).setTextureName("arlemiteAxe").setUnlocalizedName("arlemiteAxe");
+	public static final Item arlemiteShovel = new ItemModShovel(ToolMaterialMod.Arlemite).setTextureName("arlemiteShovel").setUnlocalizedName("arlemiteShovel");
+	public static final Item arlemiteHoe = new ItemModHoe(ToolMaterialMod.Arlemite).setTextureName("arlemiteHoe").setUnlocalizedName("arlemiteHoe");
 	
-	public static final Item realmitePickaxe = new ItemModPickaxe(DivineRPGToolMaterial.Realmite).setTextureName("realmitePickaxe").setUnlocalizedName("realmitePickaxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item realmiteAxe = new ItemModAxe(DivineRPGToolMaterial.Realmite).setTextureName("realmiteAxe").setUnlocalizedName("realmiteAxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item realmiteShovel = new ItemModShovel(DivineRPGToolMaterial.Realmite).setTextureName("realmiteShovel").setUnlocalizedName("realmiteShovel").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item realmiteHoe = new ItemModHoe(DivineRPGToolMaterial.Realmite).setTextureName("realmiteHoe").setUnlocalizedName("realmiteHoe").setCreativeTab(DivineRPGTabs.tools);
+	public static final Item realmitePickaxe = new ItemModPickaxe(ToolMaterialMod.Realmite).setTextureName("realmitePickaxe").setUnlocalizedName("realmitePickaxe");
+	public static final Item realmiteAxe = new ItemModAxe(ToolMaterialMod.Realmite).setTextureName("realmiteAxe").setUnlocalizedName("realmiteAxe");
+	public static final Item realmiteShovel = new ItemModShovel(ToolMaterialMod.Realmite).setTextureName("realmiteShovel").setUnlocalizedName("realmiteShovel");
+	public static final Item realmiteHoe = new ItemModHoe(ToolMaterialMod.Realmite).setTextureName("realmiteHoe").setUnlocalizedName("realmiteHoe");
 	
-	public static final Item bedrockPickaxe = new ItemModPickaxe(DivineRPGToolMaterial.Bedrock).setTextureName("bedrockPickaxe").setUnlocalizedName("bedrockPickaxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item bedrockAxe = new ItemModAxe(DivineRPGToolMaterial.Bedrock).setTextureName("bedrockAxe").setUnlocalizedName("bedrockAxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item bedrockShovel = new ItemModShovel(DivineRPGToolMaterial.Bedrock).setTextureName("bedrockShovel").setUnlocalizedName("bedrockShovel").setCreativeTab(DivineRPGTabs.tools);
+	public static final Item bedrockPickaxe = new ItemModPickaxe(ToolMaterialMod.Bedrock).setTextureName("bedrockPickaxe").setUnlocalizedName("bedrockPickaxe");
+	public static final Item bedrockAxe = new ItemModAxe(ToolMaterialMod.Bedrock).setTextureName("bedrockAxe").setUnlocalizedName("bedrockAxe");
+	public static final Item bedrockShovel = new ItemModShovel(ToolMaterialMod.Bedrock).setTextureName("bedrockShovel").setUnlocalizedName("bedrockShovel");
 	
-	public static final Item corruptedPickaxe = new ItemModPickaxe(DivineRPGToolMaterial.Corrupted).setTextureName("corruptedPickaxe").setUnlocalizedName("corruptedPickaxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item corruptedAxe = new ItemModAxe(DivineRPGToolMaterial.Corrupted).setTextureName("corruptedAxe").setUnlocalizedName("corruptedAxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item corruptedShovel = new ItemModShovel(DivineRPGToolMaterial.Corrupted).setTextureName("corruptedShovel").setUnlocalizedName("corruptedShovel").setCreativeTab(DivineRPGTabs.tools);
+	public static final Item corruptedPickaxe = new ItemModPickaxe(ToolMaterialMod.Corrupted).setTextureName("corruptedPickaxe").setUnlocalizedName("corruptedPickaxe");
+	public static final Item corruptedAxe = new ItemModAxe(ToolMaterialMod.Corrupted).setTextureName("corruptedAxe").setUnlocalizedName("corruptedAxe");
+	public static final Item corruptedShovel = new ItemModShovel(ToolMaterialMod.Corrupted).setTextureName("corruptedShovel").setUnlocalizedName("corruptedShovel");
 	
-	public static final Item divineShickaxe = new ItemShickaxe(DivineRPGToolMaterial.Divine).setTextureName("divineShickaxe").setUnlocalizedName("divineShickaxe");
-	public static final Item divinePickaxe = new ItemModPickaxe(DivineRPGToolMaterial.Divine).setTextureName("divinePickaxe").setUnlocalizedName("divinePickaxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item divineAxe = new ItemModAxe(DivineRPGToolMaterial.Divine).setTextureName("divineAxe").setUnlocalizedName("divineAxe").setCreativeTab(DivineRPGTabs.tools);
-	public static final Item divineShovel = new ItemModShovel(DivineRPGToolMaterial.Divine).setTextureName("divineShovel").setUnlocalizedName("divineShovel").setCreativeTab(DivineRPGTabs.tools);
+	public static final Item divineShickaxe = new ItemShickaxe(ToolMaterialMod.Divine).setTextureName("divineShickaxe").setUnlocalizedName("divineShickaxe");
+	public static final Item divinePickaxe = new ItemModPickaxe(ToolMaterialMod.Divine).setTextureName("divinePickaxe").setUnlocalizedName("divinePickaxe");
+	public static final Item divineAxe = new ItemModAxe(ToolMaterialMod.Divine).setTextureName("divineAxe").setUnlocalizedName("divineAxe");
+	public static final Item divineShovel = new ItemModShovel(ToolMaterialMod.Divine).setTextureName("divineShovel").setUnlocalizedName("divineShovel");
 	
-	public static final Item bacon = new ItemModFood(5, 3.0F, false).setTextureName("bacon").setUnlocalizedName("bacon").setCreativeTab(DivineRPGTabs.food);
-	public static final Item boiledEgg = new ItemModFood(4, 0.5F, false).setTextureName("boiledEgg").setUnlocalizedName("boiledEgg").setCreativeTab(DivineRPGTabs.food);
-	public static final Item cheese = new ItemModFood(2, 0.2F, false).setTextureName("cheese").setUnlocalizedName("cheese").setCreativeTab(DivineRPGTabs.food);
+	public static final Item bacon = new ItemModFood(5, 3.0F, false).setTextureName("bacon").setUnlocalizedName("bacon");
+	public static final Item boiledEgg = new ItemModFood(4, 0.5F, false).setTextureName("boiledEgg").setUnlocalizedName("boiledEgg");
+	public static final Item cheese = new ItemModFood(2, 0.2F, false).setTextureName("cheese").setUnlocalizedName("cheese");
+	public static final Item whiteMushroom = new ItemModFood(1, 0.1F, false).setTextureName("whiteMushroom").setUnlocalizedName("whiteMushroom");
+	public static final Item advMushroomStew = new ItemModFood(10, 10.0F, false).setTextureName("advancedMushroomStew").setUnlocalizedName("advancedMushroomStew");
+	public static final Item chickenDinner = new ItemModFood(20, 20.0F, false).setTextureName("chickenDinner").setUnlocalizedName("chickenDinner");
 
 	public static void init(){
 		//Materials
@@ -207,6 +210,9 @@ public class OverworldItems {
 		addItem(bacon, "Raw Bacon");
 		addItem(boiledEgg, "Boiled Egg");
 		addItem(cheese, "Cheese");
+		addItem(whiteMushroom, "White Mushroom");
+		addItem(advMushroomStew, "Advanced Mushroom Stew");
+		addItem(chickenDinner, "Chicken Dinner");
 	}
 	
 	public static void addItem(Item item, String name){

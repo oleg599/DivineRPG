@@ -3,7 +3,7 @@ package net.divinerpg.helper.material;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
- public class DivineRPGToolMaterial {
+ public class ToolMaterialMod {
 	
 		    public static ToolMaterial Rupee = EnumHelper.addToolMaterial("rupee", 6, 2500, 16.0F, 4, 0);
 			public static ToolMaterial Arlemite = EnumHelper.addToolMaterial("arlemite", 3, 3000, 13.0F, 4, 10);

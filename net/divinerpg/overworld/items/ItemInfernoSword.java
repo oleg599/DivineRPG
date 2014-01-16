@@ -2,6 +2,7 @@ package net.divinerpg.overworld.items;
 
 import java.util.List;
 
+import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.items.base.ItemModSword;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,6 +15,7 @@ public class ItemInfernoSword extends ItemModSword {
 
 	public ItemInfernoSword(ToolMaterial var2) {
 		super(var2);
+		setCreativeTab(DivineRPGTabs.swords);
 	}
 
 	public boolean hitEntity(ItemStack var1, EntityLivingBase var2, EntityLivingBase var3) {

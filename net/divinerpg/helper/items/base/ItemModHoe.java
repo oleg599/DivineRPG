@@ -3,6 +3,7 @@ package net.divinerpg.helper.items.base;
 import java.util.List;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemHoe;
@@ -12,6 +13,7 @@ public class ItemModHoe extends ItemHoe{
 
 	public ItemModHoe(ToolMaterial p_i45343_1_) {
 		super(p_i45343_1_);
+		setCreativeTab(DivineRPGTabs.tools);
 	}
 	
     @Override

@@ -12,27 +12,23 @@ public class OverworldRecipeHelper {
 	
 
 	public static void init(){
-		GameRegistry.addRecipe(new ItemStack(OverworldItems.slimeSword, 1), new Object[] {"SDS", "SDS", "SDS", 'D', Items.diamond_sword, 'S', Items.slime_ball});
-		GameRegistry.addRecipe(new ItemStack(EndItems.enderSword, 1), new Object[] {" L ", " L ", " S ", 'L', OverworldItems.legendaryEnderEye, 'S', OverworldItems.shadowBar});
+		GameRegistry.addRecipe(IS.slimeSword, new Object[] {"SDS", "SDS", "SDS", 'D', Items.diamond_sword, 'S', Items.slime_ball});
+		GameRegistry.addRecipe(IS.enderSword, " L ", " L ", " S ", 'L', IS.legEnderEye, 'S', IS.shadow);
 
-		GameRegistry.addRecipe(new ItemStack(NetherItems.netheriteChunk, 1), new Object[] {" I ", "III", " I ", 'I', NetherItems.netheriteIngot});
+		GameRegistry.addRecipe(IS.netherChuck, new Object[] {" I ", "III", " I ", 'I', NetherItems.netheriteIngot});
 
-		GameRegistry.addRecipe(new ItemStack(VanillaBlocks.arlemiteBlock, 1), new Object[] {"III", "III", "III", 'I', OverworldItems.arlemiteIngot});
-		GameRegistry.addRecipe(new ItemStack(VanillaBlocks.rupeeBlock, 1), new Object[] {"III", "III", "III", 'I', OverworldItems.rupeeIngot});
-		GameRegistry.addRecipe(new ItemStack(VanillaBlocks.realmiteBlock, 1), new Object[] {"III", "III", "III", 'I', OverworldItems.realmiteIngot});
-		GameRegistry.addRecipe(new ItemStack(VanillaBlocks.netheriteBlock, 1), new Object[] {"III", "III", "III", 'I', NetherItems.netheriteIngot});
-		GameRegistry.addRecipe(new ItemStack(VanillaBlocks.bloodGemBlock, 1), new Object[] {"III", "III", "III", 'I', NetherItems.bloodGem});
+		GameRegistry.addRecipe(IS.arlemiteBlock, new Object[] {"III", "III", "III", 'I', OverworldItems.arlemiteIngot});
+		GameRegistry.addRecipe(IS.rupeeBlock, new Object[] {"III", "III", "III", 'I', OverworldItems.rupeeIngot});
+		GameRegistry.addRecipe(IS.realBlock, new Object[] {"III", "III", "III", 'I', OverworldItems.realmiteIngot});
+		GameRegistry.addRecipe(IS.netherBlock, new Object[] {"III", "III", "III", 'I', NetherItems.netheriteIngot});
+		GameRegistry.addRecipe(IS.bloodBlock, new Object[] {"III", "III", "III", 'I', NetherItems.bloodgem});
 
-		GameRegistry.addShapelessRecipe(new ItemStack(OverworldItems.arlemiteIngot, 9), new Object[] {VanillaBlocks.arlemiteBlock});
-		GameRegistry.addShapelessRecipe(new ItemStack(OverworldItems.rupeeIngot, 9), new Object[] {VanillaBlocks.rupeeBlock});
-		GameRegistry.addShapelessRecipe(new ItemStack(OverworldItems.realmiteIngot, 9), new Object[] {VanillaBlocks.realmiteBlock});
-		GameRegistry.addShapelessRecipe(new ItemStack(NetherItems.netheriteIngot, 9), new Object[] {VanillaBlocks.netheriteBlock});
-		GameRegistry.addShapelessRecipe(new ItemStack(NetherItems.bloodGem, 9), new Object[] {VanillaBlocks.bloodGemBlock});
-		GameRegistry.addShapelessRecipe(new ItemStack(OverworldItems.shadowBar, 1), new Object[] {OverworldItems.rupeeIngot, OverworldItems.arlemiteIngot});
-
-		GameRegistry.addShapelessRecipe(IS.bacon, IS.rawPork);
-		GameRegistry.addShapelessRecipe(IS.cheese, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk);
-		GameRegistry.addSmelting(IS.egg, IS.boiledEgg, 0.3F);
+		GameRegistry.addShapelessRecipe(IS.arlemiteIngot, new Object[] {VanillaBlocks.arlemiteBlock});
+		GameRegistry.addShapelessRecipe(IS.rupeeIngot, new Object[] {VanillaBlocks.rupeeBlock});
+		GameRegistry.addShapelessRecipe(IS.realIngot, new Object[] {VanillaBlocks.realmiteBlock});
+		GameRegistry.addShapelessRecipe(IS.netherIngot, new Object[] {VanillaBlocks.netheriteBlock});
+		GameRegistry.addShapelessRecipe(IS.bloodgem, new Object[] {VanillaBlocks.bloodgemBlock});
+		GameRegistry.addShapelessRecipe(IS.shadow, new Object[] {OverworldItems.rupeeIngot, OverworldItems.arlemiteIngot});
 		
 		GameRegistry.addRecipe(new ItemStack(OverworldItems.corruptedStone, 1), new Object[] {"III", "III", "III", 'I', OverworldItems.corruptedShards});
 		GameRegistry.addRecipe(new ItemStack(OverworldItems.jungleStone, 1), new Object[] {"III", "III", "III", 'I', OverworldItems.jungleShards});
@@ -41,8 +37,16 @@ public class OverworldRecipeHelper {
 		GameRegistry.addRecipe(new ItemStack(OverworldItems.divineStone, 1), new Object[] {"III", "III", "III", 'I', OverworldItems.divineShards});
 		GameRegistry.addRecipe(new ItemStack(EndItems.enderStone, 1), new Object[] {"III", "III", "III", 'I', EndItems.enderShard});
 
-		GameRegistry.addRecipe(new ItemStack(OverworldItems.legendaryEnderEye, 1), new Object[] {"III", "III", "III", 'I', EndItems.enderStone});
+		GameRegistry.addRecipe(IS.legEnderEye, new Object[] {"III", "III", "III", 'I', EndItems.enderStone});
+		
+		GameRegistry.addShapelessRecipe(IS.bacon, IS.rawPork);
+		GameRegistry.addShapelessRecipe(IS.cheese, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk);
+		GameRegistry.addSmelting(IS.egg, IS.boiledEgg, 0.3F);
+		GameRegistry.addShapelessRecipe(IS.advStew, IS.whiteMush, IS.stew);
+		GameRegistry.addShapelessRecipe(IS.chickDinner, IS.advStew, IS.chick, IS.bread);
 
 	}
+	
+	
 	
 }

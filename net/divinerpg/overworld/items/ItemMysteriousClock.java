@@ -1,6 +1,7 @@
 package net.divinerpg.overworld.items;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.overworld.entity.mobs.EntityAncientEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -14,7 +15,8 @@ public class ItemMysteriousClock extends Item
 	public ItemMysteriousClock()
 	{
 		super();
-		this.maxStackSize = 1;
+		setMaxStackSize(1);
+		setCreativeTab(DivineRPGTabs.spawner);
 	}
 
 	/**

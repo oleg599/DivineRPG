@@ -40,7 +40,7 @@ public class VanillaBlock extends Block
 			return getBlock(this);
 		}
 		if(this == VanillaBlocks.bloodGemOre){
-			return NetherItems.bloodGem;
+			return NetherItems.bloodgem;
 		}
 		if(this == VanillaBlocks.netheriteOre){
 			return getBlock(this);
@@ -54,7 +54,7 @@ public class VanillaBlock extends Block
 		if(this == VanillaBlocks.realmiteBlock){
 			return getBlock(this);
 		}
-		if(this == VanillaBlocks.bloodGemBlock){
+		if(this == VanillaBlocks.bloodgemBlock){
 			return getBlock(this);
 		}
 		if(this == VanillaBlocks.netheriteBlock){
