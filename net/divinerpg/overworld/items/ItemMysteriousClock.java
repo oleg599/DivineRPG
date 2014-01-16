@@ -17,6 +17,8 @@ public class ItemMysteriousClock extends Item
 		super();
 		setMaxStackSize(1);
 		setCreativeTab(DivineRPGTabs.spawner);
+		setTextureName("myseriousClock");
+		setUnlocalizedName("myseriousClock");
 	}
 
 	/**

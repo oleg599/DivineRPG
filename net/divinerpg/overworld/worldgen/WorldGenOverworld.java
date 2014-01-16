@@ -69,7 +69,7 @@ public class WorldGenOverworld implements IWorldGenerator{
 			posX = chunkX + rand.nextInt(16);
 			posY = rand.nextInt(128);
 			posZ = chunkZ + rand.nextInt(16);
-			new WorldGenMinable(VanillaBlocks.bloodGemOre, 3, Blocks.netherrack).generate(world, rand, posX, posY, posZ);
+			new WorldGenMinable(VanillaBlocks.bloodgemOre, 3, Blocks.netherrack).generate(world, rand, posX, posY, posZ);
 		}
 	}
 	

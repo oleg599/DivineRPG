@@ -11,20 +11,14 @@ import net.minecraft.item.crafting.CraftingManager;
 
 public class IS {
 		//IS stands for ItemStack
-		//Thank you captain Dipshit, <3 Brock
 		//Food
-		public static ItemStack milk = new ItemStack(Items.milk_bucket);
 		public static ItemStack boiledEgg = new ItemStack(OverworldItems.boiledEgg);
 		public static ItemStack egg = new ItemStack(Items.egg);
 		public static ItemStack bacon = new ItemStack(OverworldItems.bacon, 6);
 		public static ItemStack rawPork = new ItemStack(Items.porkchop);
-		public static ItemStack cheese = new ItemStack(OverworldItems.cheese);
-		public static ItemStack whiteMush = new ItemStack(OverworldItems.cheese);
-		public static ItemStack advStew = new ItemStack(OverworldItems.cheese);
-		public static ItemStack chickDinner = new ItemStack(OverworldItems.cheese);
-		public static ItemStack stew = new ItemStack(Items.mushroom_stew);
-		public static ItemStack chick = new ItemStack(Items.cooked_chicken);
-		public static ItemStack bread = new ItemStack(Items.bread);
+		public static ItemStack cheese = new ItemStack(OverworldItems.cheese, 3);
+		public static ItemStack advStew = new ItemStack(OverworldItems.advMushroomStew);
+		public static ItemStack chickDinner = new ItemStack(OverworldItems.chickenDinner);
 		
 		//Weapons
 		public static ItemStack enderSword = new ItemStack(EndItems.enderSword);
@@ -39,7 +33,13 @@ public class IS {
 		public static ItemStack realIngot = new ItemStack(OverworldItems.realmiteIngot, 9);
 		public static ItemStack netherIngot = new ItemStack(NetherItems.netheriteIngot, 9);
 		public static ItemStack bloodgem = new ItemStack(NetherItems.bloodgem, 9);
-		
+		public static ItemStack corruptStone = new ItemStack(OverworldItems.corruptedStone);
+		public static ItemStack jungleStone = new ItemStack(OverworldItems.jungleStone);
+		public static ItemStack iceStone = new ItemStack(OverworldItems.iceStone);
+		public static ItemStack moltenStone = new ItemStack(NetherItems.moltenStone);
+		public static ItemStack divineStone = new ItemStack(OverworldItems.divineStone);
+		public static ItemStack enderStone = new ItemStack(EndItems.enderStone);
+
 		//Blocks
 		public static ItemStack arlemiteBlock = new ItemStack(VanillaBlocks.arlemiteBlock);
 		public static ItemStack rupeeBlock = new ItemStack(VanillaBlocks.rupeeBlock);

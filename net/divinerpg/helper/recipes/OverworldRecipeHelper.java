@@ -14,7 +14,7 @@ public class OverworldRecipeHelper {
 
 	public static void init(){
 		DivineAPI.addRecipe(IS.slimeSword, "SDS", "SDS", "SDS", 'D', Items.diamond_sword, 'S', Items.slime_ball);
-		DivineAPI.addRecipe(IS.enderSword, " L ", " L ", " S ", 'L', IS.legEnderEye, 'S', IS.shadow);
+		DivineAPI.addRecipe(IS.enderSword, " L ", " L ", " S ", 'L', OverworldItems.legendaryEnderEye, 'S', OverworldItems.shadowBar);
 
 		DivineAPI.addRecipe(IS.netherChuck, " I ", "III", " I ", 'I', NetherItems.netheriteIngot);
 
@@ -31,21 +31,20 @@ public class OverworldRecipeHelper {
 		DivineAPI.addShapelessRecipe(IS.bloodgem, VanillaBlocks.bloodgemBlock);
 		DivineAPI.addShapelessRecipe(IS.shadow, OverworldItems.rupeeIngot, OverworldItems.arlemiteIngot);
 		
-		DivineAPI.addRecipe(new ItemStack(OverworldItems.corruptedStone, 1), "III", "III", "III", 'I', OverworldItems.corruptedShards);
-		DivineAPI.addRecipe(new ItemStack(OverworldItems.jungleStone, 1), "III", "III", "III", 'I', OverworldItems.jungleShards);
-		DivineAPI.addRecipe(new ItemStack(OverworldItems.iceStone, 1), "III", "III", "III", 'I', OverworldItems.iceShards);
-		DivineAPI.addRecipe(new ItemStack(NetherItems.moltenStone, 1), "III", "III", "III", 'I', NetherItems.moltenShards);
-		DivineAPI.addRecipe(new ItemStack(OverworldItems.divineStone, 1), "III", "III", "III", 'I', OverworldItems.divineShards);
-		DivineAPI.addRecipe(new ItemStack(EndItems.enderStone, 1), "III", "III", "III", 'I', EndItems.enderShard);
+		DivineAPI.addRecipe(IS.corruptStone, "III", "III", "III", 'I', OverworldItems.corruptedShards);
+		DivineAPI.addRecipe(IS.enderStone, "III", "III", "III", 'I', OverworldItems.jungleShards);
+		DivineAPI.addRecipe(IS.iceStone, "III", "III", "III", 'I', OverworldItems.iceShards);
+		DivineAPI.addRecipe(IS.moltenStone, "III", "III", "III", 'I', NetherItems.moltenShards);
+		DivineAPI.addRecipe(IS.divineStone, "III", "III", "III", 'I', OverworldItems.divineShards);
+		DivineAPI.addRecipe(IS.enderStone, "III", "III", "III", 'I', EndItems.enderShard);
 
 		DivineAPI.addRecipe(IS.legEnderEye, "III", "III", "III", 'I', EndItems.enderStone);
 		
-		DivineAPI.addShapelessRecipe(IS.bacon, IS.rawPork);
-		DivineAPI.addShapelessRecipe(IS.cheese, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk, IS.milk);
+		DivineAPI.addShapelessRecipe(IS.bacon, Items.porkchop);
+		DivineAPI.addRecipe(IS.cheese, "MMM", "MMM", "MMM", 'M', Items.milk_bucket);
 		DivineAPI.addSmelting(IS.egg, IS.boiledEgg, 0.3F);
-		DivineAPI.addShapelessRecipe(IS.advStew, IS.whiteMush, IS.stew);
-		DivineAPI.addShapelessRecipe(IS.chickDinner, IS.advStew, IS.chick, IS.bread);
-		
+		DivineAPI.addShapelessRecipe(IS.advStew, OverworldItems.whiteMushroom, Items.mushroom_stew);
+		DivineAPI.addShapelessRecipe(IS.chickDinner, OverworldItems.advMushroomStew, Items.cooked_chicken, Items.bread);
 
 	}
 	

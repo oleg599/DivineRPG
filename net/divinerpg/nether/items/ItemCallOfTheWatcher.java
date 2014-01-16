@@ -1,6 +1,7 @@
 package net.divinerpg.nether.items;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.overworld.entity.mobs.EntityAncientEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -14,7 +15,8 @@ public class ItemCallOfTheWatcher extends Item
 	public ItemCallOfTheWatcher()
 	{
 		super();
-		this.maxStackSize = 1;
+		setMaxStackSize(1);
+		setCreativeTab(DivineRPGTabs.spawner);
 	}
 	/**
 	 * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return

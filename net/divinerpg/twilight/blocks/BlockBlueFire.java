@@ -11,6 +11,7 @@ import java.util.IdentityHashMap;
 import java.util.Map.Entry;
 import java.util.Random;
 
+import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
@@ -477,5 +478,8 @@ public class BlockBlueFire extends BlockFire
     {
         int newChance = world.func_147439_a(x, y, z).getFireSpreadSpeed(world, x, y, z, face);
         return (newChance > oldChance ? newChance : oldChance);
+    }
+    public Block setTextureName(String name){
+        return func_149658_d(Reference.prefix + name);
     }
 }

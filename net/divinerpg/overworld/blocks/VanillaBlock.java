@@ -39,7 +39,7 @@ public class VanillaBlock extends Block
 		if(this == VanillaBlocks.realmiteOre){
 			return getBlock(this);
 		}
-		if(this == VanillaBlocks.bloodGemOre){
+		if(this == VanillaBlocks.bloodgemOre){
 			return NetherItems.bloodgem;
 		}
 		if(this == VanillaBlocks.netheriteOre){
@@ -120,7 +120,7 @@ public class VanillaBlock extends Block
 		{
 			int j1 = 0;
 
-			if(this == VanillaBlocks.bloodGemOre){
+			if(this == VanillaBlocks.bloodgemOre){
 				j1 = MathHelper.getRandomIntegerInRange(rand, 0, 4);
 			}
 			return j1;

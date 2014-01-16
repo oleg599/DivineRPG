@@ -15,17 +15,17 @@ public class EndItems {
 	public static Reference x;
 	public static int HEAD = 0, BODY = 1, LEGS = 2, BOOTS = 3;
 	
-	public static final Item enderShard = new ItemMod().setTextureName("enderShards").setUnlocalizedName("endershards").setCreativeTab(DivineRPGTabs.items);
-	public static final Item enderStone = new ItemMod().setTextureName("enderStone").setUnlocalizedName("enderstone").setCreativeTab(DivineRPGTabs.items);
-	public static final Item watchingEye = new ItemMod().setTextureName("watchingeye").setUnlocalizedName("watchingeye").setCreativeTab(DivineRPGTabs.items);
-	public static final Item callWatcher = new ItemCallOfTheWatcher().setTextureName("callofthewatcher").setUnlocalizedName("callOfTheWatcher").setCreativeTab(DivineRPGTabs.spawner);
+	public static final Item enderShard = new ItemMod().setTextureName("enderShards").setUnlocalizedName("enderShards");
+	public static final Item enderStone = new ItemMod().setTextureName("enderStone").setUnlocalizedName("enderStone");
+	public static final Item watchingEye = new ItemMod().setTextureName("watchingEye").setUnlocalizedName("watchingEye");
+	public static final Item callWatcher = new ItemCallOfTheWatcher().setTextureName("callOfTheWatcher").setUnlocalizedName("callOfTheWatcher");
 
-	public static final Item enderSword = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("endersword").setUnlocalizedName("enderSword").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item enderSwordBlue = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderswordblue").setUnlocalizedName("enderSwordBlue").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item enderSwordDark = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderswordblack").setUnlocalizedName("enderSwordDark").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item enderSwordGreen = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderswordgreen").setUnlocalizedName("enderSwordGreen").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item enderSwordRed = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderswordred").setUnlocalizedName("enderSwordRed").setCreativeTab(DivineRPGTabs.swords);
-	public static final Item enderSwordYellow = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderswordyellow").setUnlocalizedName("enderSwordYellow").setCreativeTab(DivineRPGTabs.swords);
+	public static final Item enderSword = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderSword").setUnlocalizedName("enderSword");
+	public static final Item enderSwordBlue = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderSwordBlue").setUnlocalizedName("enderSwordBlue");
+	public static final Item enderSwordDark = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderSwordBlack").setUnlocalizedName("enderSwordDark");
+	public static final Item enderSwordGreen = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderSwordGreen").setUnlocalizedName("enderSwordGreen");
+	public static final Item enderSwordRed = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderSwordRed").setUnlocalizedName("enderSwordRed");
+	public static final Item enderSwordYellow = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("enderSwordYellow").setUnlocalizedName("enderSwordYellow");
 	
 	public static void init(){
 		DivineAPI.addItem(enderStone , "Ender Stone");

@@ -1,28 +1,3 @@
-//Blocks
-tile.RupeeOre.name=Rupee Ore
-tile.ArlemiteOre.name=Arlemite Ore
-tile.RealmiteOre.name=Realmite Ore
-tile.BloodOre.name=Bloodgem Ore
-tile.NetheriteOre.name=Netherite Ore
-tile.RupeeBlock.name=Rupee Block
-tile.ArlemiteBlock.name=Arlemite Block
-tile.RealmiteBlock.name=Realmite Block
-tile.BloodBlock.name=Bloodgem Block
-tile.NetheriteBlock.name=Netherite Block
-tile.SpiderPumpkin.name=Spider Pumpkin
-tile.CreeperPumpkin.name=Creeper Pumpkin
-tile.EnderPumpkin.name=Enderman Pumpkin
-tile.SkeletonPumpkin.name=Skeleton Pumpkin
-tile.BlazePumpkin.name=Blaze Pumpkin
-tile.ZombiePumpkin.name=Zombie Pumpkin
-tile.FrostPumpkin.name=Frost Pumpkin
-tile.CyclopsPumpkin.name=Cyclops Pumpkin
-tile.GhastPumpkin.name=Ghast Pumpkin
-tile.GlaconPumpkin.name=Glacon Pumpkin
-tile.EnderWatcherPumpkin.name=Ender Watcher Pumpkin
-tile.JungleSpiderPumpkin.name=Jungle Spider Pumpkin
-tile.HellSpiderPumpkin.name=Hellspider Pumpkin
-
 //Creative Tabs
 itemGroup.Swords=DivineRPG: Melee Weapons
 itemGroup.Blocks=DivineRPG: Blocks
