@@ -125,9 +125,6 @@ public class OverworldBlock extends Block
 			if(this == OverworldBlocks.bloodGemOre){
 				j1 = MathHelper.getRandomIntegerInRange(rand, 0, 4);
 			}
-			if(this == OverworldBlocks.netheriteOre){
-				j1 = MathHelper.getRandomIntegerInRange(rand, 0, 4);
-			}
 			return j1;
 		}
 		return 0;

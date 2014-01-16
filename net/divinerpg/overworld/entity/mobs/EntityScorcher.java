@@ -152,33 +152,26 @@ public class EntityScorcher extends EntityMob
             double var5 = var1.boundingBox.minY + (double)(var1.height / 2.0F) - (this.posY + (double)(this.height / 2.0F));
             double var7 = var1.posZ - this.posZ;
 
-            if (this.attackTime == 0)
-            {
+            if (this.attackTime == 0) {
                 ++this.field_40152_d;
 
-                if (this.field_40152_d == 1)
-                {
+                if (this.field_40152_d == 1) {
                     this.attackTime = 0;
                     this.func_40150_a(true);
                 }
-                else if (this.field_40152_d <= 4)
-                {
+                else if (this.field_40152_d <= 4) {
                     this.attackTime = 6;
-                }
-                else
-                {
+                } else {
                     this.attackTime = 0;
                     this.field_40152_d = 0;
                     this.func_40150_a(false);
                 }
 
-                if (this.field_40152_d > 1)
-                {
+                if (this.field_40152_d > 1) {
                     float var9 = MathHelper.sqrt_float(var2) * 0.5F;
                     this.worldObj.playAuxSFXAtEntity((EntityPlayer)null, 1009, (int)this.posX, (int)this.posY, (int)this.posZ, 0);
 
-                    for (int var10 = 0; var10 < 1; ++var10)
-                    {
+                    for (int var10 = 0; var10 < 1; ++var10) {
                         //TODO EntityPurpleFireball var11 = new EntityPurpleFireball(this.worldObj, this, var3 + this.rand.nextGaussian() * (double)var9, var5, var7 + this.rand.nextGaussian() * (double)var9);
                     	EntitySmallFireball var11 = new EntitySmallFireball(this.worldObj, this, var3 + this.rand.nextGaussian() * (double)var9, var5, var7 + this.rand.nextGaussian() * (double)var9);
                     	var11.posY = this.posY + (double)(this.height / 2.0F) + 1.5D;

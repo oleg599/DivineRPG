@@ -18,6 +18,22 @@ public class OverworldMobRegistry {
 		DivineRPGMobRegistry.registerDivineRPGMob(EntityHellSpider.class, "Hell Spider");		
 		DivineRPGMobRegistry.registerDivineRPGMob(EntityScorcher.class, "Scorhcer");		
 		DivineRPGMobRegistry.registerDivineRPGMob(EntityEnderSpider.class, "Ender Spider");		
-
+		DivineRPGMobRegistry.registerDivineRPGMob(EntityEnderTriplets.class, "Ender Triplets");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityAridWarrior.class, "Arid Warrior");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityAyeracoBlue.class, "Ayeraco Blue");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityAyeracoGreen.class, "Ayeraco Green");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityAyeracoPurple.class, "Ayeraco Purple");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityAyeracoRed.class, "Ayeraco Red");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityAyeracoYellow.class, "Ayeraco Yellow");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityCaveDramcryx.class, "Cave Dramcryx");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityTheEye.class, "The Eye");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityFrost.class, "Frost");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityIceMan.class, "Ice Man");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityKingOfScorchers.class, "King Of Scorchers");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityRainbour.class, "Rainbour");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityRotatick.class, "Rotatick");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityShark.class, "Shark");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityTheWatcher.class, "The Watcher");
+		//DivineRPGMobRegistry.registerDivineRPGMob(EntityWildFire.class, "Wild Fire");
 	}
 }

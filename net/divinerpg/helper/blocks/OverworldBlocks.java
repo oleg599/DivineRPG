@@ -33,12 +33,12 @@ public class OverworldBlocks {
     public static final Block BlazePumpkin = new MobPumpkin().func_149658_d(Reference.prefix + "blaze").func_149663_c("BlazePumpkin");
     public static final Block ZombiePumpkin = new MobPumpkin().func_149658_d(Reference.prefix + "zombie").func_149663_c("ZombiePumpkin");
     public static final Block FrostPumpkin = new MobPumpkin().func_149658_d(Reference.prefix + "iceman").func_149663_c("FrostPumpkin");
-    public static final Block CyclopsPumpkin = new MobPumpkin().func_149658_d("cyclops").func_149663_c("CyclopsPumpkin");
-    public static final Block GhastPumpkin = new MobPumpkin().func_149658_d("ghast").func_149663_c("GhastPumpkin");
-    public static final Block GlaconPumpkin = new MobPumpkin().func_149658_d("frost").func_149663_c("GlaconPumpkin");
-    public static final Block EnderWatcherPumpkin = new MobPumpkin().func_149658_d("enderwatcher").func_149663_c("EnderWatcherPumpkin");
-    public static final Block JungleSpiderPumpkin = new MobPumpkin().func_149658_d("junglespider").func_149663_c("JungleSpiderPumpkin");
-    public static final Block HellSpiderPumpkin = new MobPumpkin().func_149658_d("hellspider").func_149663_c("HellSpiderPumpkin");
+    public static final Block CyclopsPumpkin = new MobPumpkin().func_149658_d(Reference.prefix + "cyclops").func_149663_c("CyclopsPumpkin");
+    public static final Block GhastPumpkin = new MobPumpkin().func_149658_d(Reference.prefix + "ghast").func_149663_c("GhastPumpkin");
+    public static final Block GlaconPumpkin = new MobPumpkin().func_149658_d(Reference.prefix + "frost").func_149663_c("GlaconPumpkin");
+    public static final Block EnderWatcherPumpkin = new MobPumpkin().func_149658_d(Reference.prefix + "enderwatcher").func_149663_c("EnderWatcherPumpkin");
+    public static final Block JungleSpiderPumpkin = new MobPumpkin().func_149658_d(Reference.prefix + "junglespider").func_149663_c("JungleSpiderPumpkin");
+    public static final Block HellSpiderPumpkin = new MobPumpkin().func_149658_d(Reference.prefix + "hellspider").func_149663_c("HellSpiderPumpkin");
 	
     public static final Block checker = new OverworldBlock(wool).setTextureName("checker").func_149663_c("checker").func_149711_c(0.5F);
     public static final Block rainbowWool = new OverworldBlock(wool).setTextureName("rainbowwool").func_149663_c("rainbowwool").func_149711_c(0.5F);
