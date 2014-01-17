@@ -1,10 +1,10 @@
 package net.divinerpg.helper.blocks;
 
-import net.divinerpg.twilight.BlockModDirt;
-import net.divinerpg.twilight.TwilightBlock;
 import net.divinerpg.twilight.blocks.BlockBlueFire;
 import net.divinerpg.twilight.blocks.BlockEdenPortal;
+import net.divinerpg.twilight.blocks.BlockModDirt;
 import net.divinerpg.twilight.blocks.BlockModGrass;
+import net.divinerpg.twilight.blocks.TwilightBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

@@ -5,7 +5,7 @@ import java.util.Random;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.items.NetherItems;
+import net.divinerpg.helper.items.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -37,7 +37,7 @@ public class VanillaBlock extends Block
 	
 	public Item func_149650_a(int par1, Random par2, int par3) {
 		if(this == VanillaBlocks.bloodgemOre){
-			return NetherItems.bloodgem;
+			return VanillaItems.bloodgem;
 		}
 		return getBlock(this);
 	}

@@ -1,6 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
-import net.divinerpg.helper.items.NetherItems;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
@@ -210,7 +210,7 @@ public class EntityScorcher extends EntityMob
      * Returns the item ID for the item the mob drops on death.
      */
     protected Item func_146068_u() {
-        return NetherItems.purpleBlaze;
+        return VanillaItems.purpleBlaze;
     }
 
     /**
@@ -232,7 +232,7 @@ public class EntityScorcher extends EntityMob
 
             for (int var4 = 0; var4 < var3; ++var4)
             {
-                this.func_145779_a(NetherItems.purpleBlaze, 1);
+                this.func_145779_a(VanillaItems.purpleBlaze, 1);
             }
         }
     }

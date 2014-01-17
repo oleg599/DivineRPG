@@ -1,6 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
-import net.divinerpg.helper.items.OverworldItems;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -65,13 +65,13 @@ public class EntityAncientEntity extends EntityMob implements IBossDisplayData{
     }
 
     protected Item func_146068_u() {
-        return OverworldItems.divineShards;
+        return VanillaItems.divineShards;
     }
     
     protected void dropFewItems(boolean par1, int par2) {
     	
     	Item i = func_146068_u();
-    	Item i2 = OverworldItems.sandslash;
+    	Item i2 = VanillaItems.sandslash;
 
         int var3, var4;
         

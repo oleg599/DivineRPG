@@ -2,7 +2,7 @@ package net.divinerpg.overworld.entity.mobs;
 
 import java.util.List;
 
-import net.divinerpg.helper.items.OverworldItems;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -85,7 +85,7 @@ public class EntityWhale extends EntityMob {
 
         for (int var4 = 0; var4 < var3; ++var4)
         {
-            this.entityDropItem(new ItemStack(OverworldItems.whaleFin), 0.0F);
+            this.entityDropItem(new ItemStack(VanillaItems.whaleFin), 0.0F);
         }
     }
 

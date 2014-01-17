@@ -8,11 +8,13 @@ import net.divinerpg.api.items.ItemModPickaxe;
 import net.divinerpg.api.items.ItemModShovel;
 import net.divinerpg.api.items.ItemModSword;
 import net.divinerpg.helper.material.ToolMaterialMod;
+import net.divinerpg.nether.items.ItemCallOfTheWatcher;
+import net.divinerpg.overworld.items.ItemInfernoSword;
 import net.divinerpg.overworld.items.ItemMysteriousClock;
 import net.divinerpg.overworld.items.ItemShickaxe;
 import net.minecraft.item.Item;
 
-public class OverworldItems {
+public class VanillaItems {
     public static int        HEAD               = 0, BODY = 1, LEGS = 2, BOOTS = 3;
 
     public static final Item myseriousClock     = new ItemMysteriousClock();
@@ -21,16 +23,23 @@ public class OverworldItems {
     public static final Item arlemiteIngot      = new ItemMod().setName("arlemiteIngot");
     public static final Item realmiteIngot      = new ItemMod().setName("realmiteIngot");
     public static final Item shadowBar          = new ItemMod().setName("shadowBar");
+    public static final Item hellstoneIngot	    = new ItemMod().setName("hellstoneIngot");
+    public static final Item netheriteIngot 	= new ItemMod().setName("netheriteIngot");
+    public static final Item bloodgem       	= new ItemMod().setName("bloodgem");
 
     public static final Item jungleShards       = new ItemMod().setName("jungleShards");
     public static final Item iceShards          = new ItemMod().setName("iceShards");
     public static final Item divineShards       = new ItemMod().setName("divineShards");
     public static final Item corruptedShards    = new ItemMod().setName("corruptedShards");
+    public static final Item moltenShards  	    = new ItemMod().setName("moltenShards");
+    public static final Item enderShard         = new ItemMod().setName("enderShards");
 
     public static final Item jungleStone        = new ItemMod().setName("jungleStone");
     public static final Item iceStone           = new ItemMod().setName("iceStone");
-    public static final Item corruptedStone     = new ItemMod().setName("corruptedStone");
     public static final Item divineStone        = new ItemMod().setName("divineStone");
+    public static final Item corruptedStone     = new ItemMod().setName("corruptedStone");
+    public static final Item moltenStone    	= new ItemMod().setName("moltenStone");
+    public static final Item enderStone         = new ItemMod().setName("enderStone");
     public static final Item healingStone       = new ItemMod().setName("healingStone");
     public static final Item shadowStone        = new ItemMod().setName("shadowStone");
 
@@ -42,8 +51,12 @@ public class OverworldItems {
     public static final Item legendaryEnderEye  = new ItemMod().setName("legendaryEnderEye");
     public static final Item sharkFin           = new ItemMod().setName("sharkFin");
     public static final Item whaleFin           = new ItemMod().setName("whaleFin");
-    public static final Item noImage            = new ItemMod().setName("noImage");
-
+    public static final Item noImage            = new ItemMod().setName("noImage").setCreativeTab(null);
+    public static final Item netheriteChunk 	= new ItemMod().setName("netheriteChunk");
+    public static final Item blueFireStone  	= new ItemMod().setName("bluefireStone");
+    public static final Item purpleBlaze   	 	= new ItemMod().setName("purpleBlaze");
+    public static final Item furyFire       	= new ItemMod().setName("furyFire");
+    
     public static final Item slimeSword         = new ItemModSword(ToolMaterialMod.SlimeSword).setName("slimeSword");
     public static final Item oceanKnife         = new ItemModSword(ToolMaterialMod.OceanKnife).setName("oceanKnife");
     public static final Item aquaticMaul        = new ItemModSword(ToolMaterialMod.AquaMaul).setName("aquaMaul");
@@ -73,7 +86,18 @@ public class OverworldItems {
     public static final Item furyMaul           = new ItemModSword(ToolMaterialMod.FuryMaul).setName("furyMaul");
     public static final Item corruptedMaul      = new ItemModSword(ToolMaterialMod.CorruptedMaul).setName("corruptedMaul");
     public static final Item frostSword         = new ItemModSword(ToolMaterialMod.FrostSword).setName("frostSword");
-
+    public static final Item infernoSword   	= new ItemInfernoSword(ToolMaterialMod.Inferno).setName("infernoSword");
+    public static final Item bloodgemSword  	= new ItemModSword(ToolMaterialMod.BloodgemTool).setName("bloodgemSword");
+    public static final Item moltenSword    	= new ItemModSword(ToolMaterialMod.MoltenSword).setName("moltenSword");
+    public static final Item scorchingSword 	= new ItemModSword(ToolMaterialMod.ScorchingSword).setName("scorchingSword");
+    public static final Item bluefireSword  	= new ItemModSword(ToolMaterialMod.BluefireSword).setName("bluefireSword");
+    public static final Item enderSword       	= new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSword");
+    public static final Item enderSwordBlue   	= new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordBlue");
+    public static final Item enderSwordDark   	= new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordBlack");
+    public static final Item enderSwordGreen  	= new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordGreen");
+    public static final Item enderSwordRed    	= new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordRed");
+    public static final Item enderSwordYellow 	= new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordYellow");
+    
     public static final Item rupeeShickaxe      = new ItemShickaxe(ToolMaterialMod.RupeeShick).setName("rupeeShickaxe");
     public static final Item rupeePickaxe       = new ItemModPickaxe(ToolMaterialMod.Rupee).setName("rupeePickaxe");
     public static final Item rupeeAxe           = new ItemModAxe(ToolMaterialMod.Rupee).setName("rupeeAxe");
@@ -110,6 +134,9 @@ public class OverworldItems {
     public static final Item whiteMushroom      = new ItemModFood(1, 0.1F, false).setName("whiteMushroom");
     public static final Item advMushroomStew    = new ItemModFood(10, 10.0F, false).setName("advancedMushroomStew");
     public static final Item chickenDinner      = new ItemModFood(20, 20.0F, false).setName("chickenDinner");
+
+    public static final Item watchingEye     	= new ItemMod().setName("watchingEye");
+    public static final Item callWatcher     	= new ItemCallOfTheWatcher().setName("callOfTheWatcher");
 
 
 }

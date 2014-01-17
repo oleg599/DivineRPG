@@ -2,7 +2,7 @@ package net.divinerpg.overworld.entity.mobs;
 
 import java.util.List;
 
-import net.divinerpg.helper.items.OverworldItems;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
@@ -106,18 +106,18 @@ public class EntityCyclops extends EntityMob {
 		int var3 = this.rand.nextInt(2 + var2);
 
 		for (int var4 = 0; var4 < var3; ++var4) {
-			this.func_145779_a(OverworldItems.cyclopsEye, 1);
+			this.func_145779_a(VanillaItems.cyclopsEye, 1);
 		}
 	}
 
 	protected void dropRareDrop(int var1) {
-		this.func_145779_a(OverworldItems.healingStone, 1);
+		this.func_145779_a(VanillaItems.healingStone, 1);
 	}
 
 	/**
 	 * Returns the item ID for the item the mob drops on death.
 	 */
 	protected Item func_146068_u() {
-		return OverworldItems.cyclopsEye;
+		return VanillaItems.cyclopsEye;
 	}
 }

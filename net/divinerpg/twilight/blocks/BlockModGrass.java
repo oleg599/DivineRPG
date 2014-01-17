@@ -22,16 +22,16 @@ public class BlockModGrass extends Block {
 	IIcon bottom;
 	IIcon side;
     private String name;
-    Block This;
-    Block TakeOver;
+    Block grass;
+    Block dirt;
 	
-    public BlockModGrass(Block T, Block TO, String name) {
+    public BlockModGrass(Block Grass, Block Dirt, String name) {
         super(Material.field_151577_b);
         func_149647_a(DivineRPGTabs.blocks);
         setName(name);
         this.func_149675_a(true);
-        This = T;
-        TakeOver = TO;
+        grass = Grass;
+        dirt = Dirt;
     }
     
     @SideOnly(Side.CLIENT)
@@ -53,7 +53,7 @@ public class BlockModGrass extends Block {
         {
             if (par1World.getBlockLightValue(par2, par3 + 1, par4) < 4 && par1World.getBlockLightOpacity(par2, par3 + 1, par4) > 2)
             {
-                par1World.func_147449_b(par2, par3, par4, TakeOver);
+                par1World.func_147449_b(par2, par3, par4, dirt);
             }
             else if (par1World.getBlockLightValue(par2, par3 + 1, par4) >= 9)
             {
@@ -64,9 +64,9 @@ public class BlockModGrass extends Block {
                     int k1 = par4 + par5Random.nextInt(3) - 1;
 //                    Block l1 = par1World.func_147439_a(i1, j1 + 1, k1);
 
-                    if (par1World.func_147439_a(i1, j1, k1) == TakeOver && par1World.getBlockLightValue(i1, j1 + 1, k1) >= 4 && par1World.getBlockLightOpacity(i1, j1 + 1, k1) <= 2)
+                    if (par1World.func_147439_a(i1, j1, k1) == dirt && par1World.getBlockLightValue(i1, j1 + 1, k1) >= 4 && par1World.getBlockLightOpacity(i1, j1 + 1, k1) <= 2)
                     {
-                        par1World.func_147449_b(i1, j1, k1, This);
+                        par1World.func_147449_b(i1, j1, k1, grass);
                     }
                 }
             }
@@ -78,7 +78,7 @@ public class BlockModGrass extends Block {
      */
     @Override
     public Item func_149650_a(int par1, Random par2Random, int par3) {
-        return Item.func_150898_a(TakeOver);
+        return Item.func_150898_a(dirt);
     }
     
     public boolean func_149851_a(World world, int par1, int par2, int par3, boolean par4)

@@ -2,7 +2,7 @@ package net.divinerpg.overworld.entity.mobs;
 
 import java.util.List;
 
-import net.divinerpg.helper.items.OverworldItems;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
@@ -107,7 +107,7 @@ public class EntityCrab extends EntityMob {
 	}
 
 	protected Item func_146068_u() {
-		return OverworldItems.crabClaw;
+		return VanillaItems.crabClaw;
 	}
 	
 	protected void dropFewItems(boolean var1, int var2) {

@@ -1,8 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
-import net.divinerpg.helper.items.NetherItems;
-import net.divinerpg.helper.items.OverworldItems;
-import net.minecraft.block.Block;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -16,6 +14,7 @@ import net.minecraft.potion.Potion;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+
 
 public class EntityHellSpider extends EntityMob
 {
@@ -235,7 +234,7 @@ public class EntityHellSpider extends EntityMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(NetherItems.moltenShards, 1);
+            this.func_145779_a(VanillaItems.moltenShards, 1);
         }
     }
 

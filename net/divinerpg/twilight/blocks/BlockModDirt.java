@@ -1,4 +1,4 @@
-package net.divinerpg.twilight;
+package net.divinerpg.twilight.blocks;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;

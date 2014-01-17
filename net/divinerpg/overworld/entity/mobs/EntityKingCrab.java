@@ -2,7 +2,7 @@ package net.divinerpg.overworld.entity.mobs;
 
 import java.util.List;
 
-import net.divinerpg.helper.items.OverworldItems;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
@@ -119,17 +119,17 @@ public class EntityKingCrab extends EntityMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(OverworldItems.crabClaw, 1);
+            this.func_145779_a(VanillaItems.crabClaw, 1);
         }
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(OverworldItems.aquaticPellets, 3);
+            this.func_145779_a(VanillaItems.aquaticPellets, 3);
         }
     }
 
     protected Item func_146068_u()
     {
-        return OverworldItems.crabClaw;
+        return VanillaItems.crabClaw;
     }
 }

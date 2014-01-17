@@ -1,6 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
-import net.divinerpg.helper.items.OverworldItems;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
@@ -33,7 +33,7 @@ public class EntityJungleDramcryx extends EntityMob {
 	}
 
 	protected Item func_146068_u() {
-		return OverworldItems.jungleShards;
+		return VanillaItems.jungleShards;
 	}
 
 	@Override

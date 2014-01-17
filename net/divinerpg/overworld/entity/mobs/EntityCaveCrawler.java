@@ -1,6 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
-import net.divinerpg.helper.items.OverworldItems;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.init.Items;
@@ -39,7 +39,7 @@ public class EntityCaveCrawler extends EntityMob
 	}
 
     protected Item func_146068_u() {
-        return OverworldItems.realmiteIngot;
+        return VanillaItems.realmiteIngot;
     }
 
     protected void dropRareDrop(int par1)

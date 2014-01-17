@@ -1,7 +1,8 @@
 Official 1.7.2 Repo for the Minecraft Mod DivineRPG
+=======
 
 Team Members:
--Coders: The_Slayer, BossLetsPlays, SoccerStud, TLHPoE, Mazetar
+-Coders: The_Slayer, BossLetsPlays, SoccerStud, TLHPoE(fgt), Mazetar
 -Modelers: Declan (UKdeccy)
 
 This Mod contains: Absolutely nothing about RPG features, but lots of divine like stuffs

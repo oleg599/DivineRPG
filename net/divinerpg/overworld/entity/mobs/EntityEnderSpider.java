@@ -1,6 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
-import net.divinerpg.helper.items.EndItems;
+import net.divinerpg.helper.items.*;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.item.Item;
@@ -36,7 +36,7 @@ public class EntityEnderSpider extends EntityEnderman
      */
     protected Item func_146068_u()
     {
-        return EndItems.enderShard;
+        return VanillaItems.enderShard;
     }
 
     /**
@@ -44,6 +44,6 @@ public class EntityEnderSpider extends EntityEnderman
      */
     protected void dropFewItems(boolean var1, int var2)
     {   
-    	this.func_145779_a(EndItems.enderShard, 1);
+    	this.func_145779_a(VanillaItems.enderShard, 1);
     }
 }
