@@ -1,6 +1,6 @@
 DivineRPG
 =========
-Official 1.7.2 Repo for DivineRPG
+Official 1.7.2 Repo for the Minecraft Mod DivineRPG
 
 Team Members:
 -Coders: The_Slayer, BossLetsPlays, SoccerStud, TLHPoE, Mazetar
