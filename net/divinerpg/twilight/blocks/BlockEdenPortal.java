@@ -20,6 +20,8 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -34,6 +36,7 @@ public class BlockEdenPortal extends BlockBreakable
         this.func_149675_a(true);
         func_149647_a(DivineRPGTabs.blocks);
         setName("edenPortal");
+        register();
         //this.setHardness(-1.0F);
         //this.setStepSound(soundGlassFootstep);
         //this.setLightValue(0.75F);
@@ -328,5 +331,34 @@ public class BlockEdenPortal extends BlockBreakable
     
     public String getTextureName(){
         return Reference.PREFIX + name;
+    }
+    
+    public Block register(){
+        int numChars = 0;
+        char firstLetter = name.charAt(0);
+        if(Character.isLowerCase(firstLetter))
+            firstLetter = Character.toUpperCase(firstLetter);
+        String inGame = name.substring(1);
+        for(int k = 0; k < name.length(); k++){
+            char c = name.charAt(k);
+            int code = (int) c;
+            
+            if(k != 0){
+                for(int p = 65; p < 90; p++){
+                    if(code == p){
+                        numChars++;
+                        if(numChars == 1)
+                            inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
+                        else
+                            inGame = new StringBuffer(inGame).insert(k, " ").toString();
+                    }
+                }
+            }
+        }
+        
+        String finalName = firstLetter + inGame;
+        GameRegistry.registerBlock(this, name);
+        LanguageRegistry.addName(this, finalName);
+        return this;
     }
 }
