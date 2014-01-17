@@ -13,6 +13,9 @@ public class OverworldRecipeHelper {
 	public static void init(){
 		DivineAPI.addRecipe(IS.slimeSword, "SDS", "SDS", "SDS", 'D', Items.diamond_sword, 'S', Items.slime_ball);
 		DivineAPI.addRecipe(IS.enderSword, " L ", " L ", " S ", 'L', VanillaItems.legendaryEnderEye, 'S', VanillaItems.shadowBar);
+		DivineAPI.addRecipe(IS.arlemiteSword, " I ", " I ", " S ", 'I', VanillaItems.arlemiteIngot, 'S', Items.stick);
+		DivineAPI.addRecipe(IS.rupeeSword, " I ", " I ", " S ", 'I', VanillaItems.rupeeSword, 'S', Items.stick);
+		DivineAPI.addRecipe(IS.realmiteSword, " I ", " I ", " S ", 'I', VanillaItems.realmiteIngot, 'S', Items.stick);
 
 		DivineAPI.addRecipe(IS.netherChuck, " I ", "III", " I ", 'I', VanillaItems.netheriteIngot);
 

@@ -9,9 +9,9 @@ import net.divinerpg.api.items.ItemModShovel;
 import net.divinerpg.api.items.ItemModSword;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.nether.items.ItemCallOfTheWatcher;
-import net.divinerpg.overworld.items.ItemInfernoSword;
-import net.divinerpg.overworld.items.ItemMysteriousClock;
-import net.divinerpg.overworld.items.ItemShickaxe;
+import net.divinerpg.vanilla.items.ItemInfernoSword;
+import net.divinerpg.vanilla.items.ItemMysteriousClock;
+import net.divinerpg.vanilla.items.ItemShickaxe;
 import net.minecraft.item.Item;
 
 public class VanillaItems {

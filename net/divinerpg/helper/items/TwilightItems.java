@@ -2,12 +2,10 @@ package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.*;
 import net.divinerpg.helper.material.ToolMaterialMod;
-import net.divinerpg.overworld.items.ItemShickaxe;
+import net.divinerpg.vanilla.items.ItemShickaxe;
 import net.minecraft.item.Item;
 
 public class TwilightItems {
-	//Keep them named with the old dimension names. It gives a cool twist.
-	//No it doesnt
     public static final Item edenSoul 	           = new ItemMod().setName("edenSoul");
     public static final Item wildWoodSoul 	       = new ItemMod().setName("wildWoodSoul");
     public static final Item apalachiaSoul  	   = new ItemMod().setName("apalachiaSoul");

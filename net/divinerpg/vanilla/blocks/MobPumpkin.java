@@ -1,4 +1,4 @@
-package net.divinerpg.overworld.blocks;
+package net.divinerpg.vanilla.blocks;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;

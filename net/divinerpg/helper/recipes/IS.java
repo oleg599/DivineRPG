@@ -19,6 +19,9 @@ public class IS {
 		//Weapons
 		public static ItemStack enderSword = new ItemStack(VanillaItems.enderSword);
 		public static ItemStack slimeSword = new ItemStack(VanillaItems.slimeSword);
+		public static ItemStack arlemiteSword = new ItemStack(VanillaItems.arlemiteSword);
+		public static ItemStack rupeeSword = new ItemStack(VanillaItems.rupeeSword);
+		public static ItemStack realmiteSword = new ItemStack(VanillaItems.realmiteSword);
 		
 		//Materials
 		public static ItemStack shadow = new ItemStack(VanillaItems.shadowBar);

@@ -1,4 +1,4 @@
-package net.divinerpg.overworld.items;
+package net.divinerpg.vanilla.items;
 
 import java.util.List;
 import java.util.Set;

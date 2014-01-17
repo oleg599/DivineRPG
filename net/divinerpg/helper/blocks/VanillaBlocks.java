@@ -1,7 +1,7 @@
 package net.divinerpg.helper.blocks;
 
-import net.divinerpg.overworld.blocks.MobPumpkin;
-import net.divinerpg.overworld.blocks.VanillaBlock;
+import net.divinerpg.vanilla.blocks.MobPumpkin;
+import net.divinerpg.vanilla.blocks.VanillaBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

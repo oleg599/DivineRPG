@@ -1,4 +1,4 @@
-package net.divinerpg.overworld.items;
+package net.divinerpg.vanilla.items;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;

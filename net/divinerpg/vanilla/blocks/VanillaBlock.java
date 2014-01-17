@@ -1,4 +1,4 @@
-package net.divinerpg.overworld.blocks;
+package net.divinerpg.vanilla.blocks;
 
 import java.util.Random;
 
@@ -43,10 +43,8 @@ public class VanillaBlock extends Block
 	
 	
 	public Item func_149650_a(int par1, Random par2, int par3) {
-		if(this == VanillaBlocks.bloodgemOre){
-			return VanillaItems.bloodgem;
-		}
-		return getBlock(this);
+		return (this == VanillaBlocks.bloodgemOre) ? VanillaItems.bloodgem
+		: getBlock(this);
 	}
 
 	public int func_149679_a(int par1, Random par2)

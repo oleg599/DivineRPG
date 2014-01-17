@@ -6,12 +6,12 @@ import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
+import net.divinerpg.helper.items.TwilightItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -28,10 +28,14 @@ public class TwilightBlock extends Block
 	public static Item getBlock(Block b){
 		return Item.func_150898_a(b);
 	}
-	
-	//I know this isn't needed, but we may need it in the future.
+
 	public Item func_149650_a(int par1, Random par2, int par3) {
-		return getBlock(this);
+		return (this == TwilightBlocks.edenOre) ? TwilightItems.edenFragments 
+				: (this == TwilightBlocks.wildWoodOre) ? TwilightItems.wildWoodFragments 
+				: (this == TwilightBlocks.apalachiaOre) ? TwilightItems.apalachiaFragments
+				: (this == TwilightBlocks.skythernOre) ? TwilightItems.skythernFragments
+				: (this == TwilightBlocks.mortumOre) ? TwilightItems.mortumFragments
+				: getBlock(this);
 	}
 
 	public int func_149679_a(int par1, Random par2)
