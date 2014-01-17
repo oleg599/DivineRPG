@@ -18,14 +18,18 @@ import net.minecraftforge.event.entity.player.UseHoeEvent;
 import com.google.common.collect.Sets;
 
 import cpw.mods.fml.common.eventhandler.Event.Result;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemShickaxe extends ItemTool
 {
-	private static final Set blocksEffectiveAgainst = Sets.newHashSet(new Block[] {Blocks.cactus, Blocks.stained_hardened_clay, Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin, Blocks.cobblestone, Blocks.double_stone_slab, Blocks.stone_slab, Blocks.stone, Blocks.sandstone, Blocks.mossy_cobblestone, Blocks.iron_ore, Blocks.iron_block, Blocks.coal_ore, Blocks.gold_block, Blocks.gold_ore, Blocks.diamond_ore, Blocks.diamond_block, Blocks.ice, Blocks.netherrack, Blocks.lapis_ore, Blocks.lapis_block, Blocks.redstone_ore, Blocks.lit_redstone_ore, Blocks.rail, Blocks.detector_rail, Blocks.golden_rail, Blocks.activator_rail, Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel, Blocks.snow_layer, Blocks.snow, Blocks.clay, Blocks.farmland, Blocks.soul_sand, Blocks.mycelium});
+	private static final Set<Block> blocksEffectiveAgainst = Sets.newHashSet(new Block[] {Blocks.cactus, Blocks.stained_hardened_clay, Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin, Blocks.cobblestone, Blocks.double_stone_slab, Blocks.stone_slab, Blocks.stone, Blocks.sandstone, Blocks.mossy_cobblestone, Blocks.iron_ore, Blocks.iron_block, Blocks.coal_ore, Blocks.gold_block, Blocks.gold_ore, Blocks.diamond_ore, Blocks.diamond_block, Blocks.ice, Blocks.netherrack, Blocks.lapis_ore, Blocks.lapis_block, Blocks.redstone_ore, Blocks.lit_redstone_ore, Blocks.rail, Blocks.detector_rail, Blocks.golden_rail, Blocks.activator_rail, Blocks.grass, Blocks.dirt, Blocks.sand, Blocks.gravel, Blocks.snow_layer, Blocks.snow, Blocks.clay, Blocks.farmland, Blocks.soul_sand, Blocks.mycelium});
 
 	protected ToolMaterial theToolMaterial;
+
+    private String name;
 
 	public ItemShickaxe(ToolMaterial par2EnumToolMaterial)
 	{
@@ -110,4 +114,39 @@ public class ItemShickaxe extends ItemTool
         this.iconString = (Reference.PREFIX + par1Str);
         return this;
     }
+	
+	   public Item setName(String name){
+	        this.name = name;
+	        setTextureName(name);
+	        setUnlocalizedName(name);
+	        register();
+	        return this;
+	    }
+	    
+	    public void register(){
+	        int numChars = 0;
+	        char firstLetter = name.charAt(0);
+	        if(Character.isLowerCase(firstLetter))
+	            firstLetter = Character.toUpperCase(firstLetter);
+	        String inGame = name.substring(1);
+	        for(int k = 0; k < name.length(); k++){
+	            char c = name.charAt(k);
+	            int code = (int) c;
+	            
+	            if(k != 0){
+	                for(int p = 65; p < 90; p++){
+	                    if(code == p){
+	                        numChars++;
+	                        if(numChars == 1)
+	                            inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
+	                        else
+	                            inGame = new StringBuffer(inGame).insert(k, " ").toString();
+	                    }
+	                }
+	            }
+	        }
+	        String finalName = firstLetter + inGame;
+	        GameRegistry.registerItem(this, name);
+	        LanguageRegistry.addName(this, finalName);
+	    }
 }

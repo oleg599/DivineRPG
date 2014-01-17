@@ -4,9 +4,6 @@ import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.event.EventHelper;
-import net.divinerpg.helper.items.EndItems;
-import net.divinerpg.helper.items.NetherItems;
-import net.divinerpg.helper.items.OverworldItems;
 import net.divinerpg.helper.mobs.OverworldMobRegistry;
 import net.divinerpg.helper.recipes.OverworldRecipeHelper;
 import net.divinerpg.overworld.worldgen.WorldGenOverworld;
@@ -25,10 +22,6 @@ public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent event){
 		ConfigurationHelper.init(event);
 		MinecraftForge.EVENT_BUS.register(new EventHelper());
-//		VanillaBlocks.init();
-		OverworldItems.init();
-		NetherItems.init();
-		EndItems.init();
 		OverworldMobRegistry.init();
 		OverworldRecipeHelper.init();
 		TwilightBlocks.init();

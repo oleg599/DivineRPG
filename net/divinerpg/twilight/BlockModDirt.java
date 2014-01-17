@@ -59,7 +59,6 @@ public class BlockModDirt extends Block {
             }
         }
         String finalName = firstLetter + inGame;
-        System.err.println(finalName);
         GameRegistry.registerBlock(this, name);
         LanguageRegistry.addName(this, finalName);
     }

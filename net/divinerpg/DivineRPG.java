@@ -1,9 +1,5 @@
 package net.divinerpg;
 
-import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.items.OverworldItems;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;

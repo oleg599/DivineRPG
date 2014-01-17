@@ -51,45 +51,5 @@ public class VanillaBlocks {
 
     public static final Block divineRock          = new VanillaBlock(rock).setName("divineRock").func_149711_c(1.5F);
 
-//    public static void init() {
-//        DivineAPI.addBlock(rupeeOre, "Rupee Ore");
-//        DivineAPI.addBlock(arlemiteOre, "Arlemite Ore");
-//        DivineAPI.addBlock(realmiteOre, "Realmite Ore");
-//        DivineAPI.addBlock(bloodgemOre, "BloodGem Ore");
-//        DivineAPI.addBlock(netheriteOre, "Netherite Ore");
-//
-//        DivineAPI.addBlock(rupeeBlock, "Rupee Block");
-//        DivineAPI.addBlock(arlemiteBlock, "Arlemite Block");
-//        DivineAPI.addBlock(realmiteBlock, "Realmite Block");
-//        DivineAPI.addBlock(bloodgemBlock, "BloodGem Block");
-//        DivineAPI.addBlock(netheriteBlock, "Netherite Block");
-//
-//        DivineAPI.addBlock(spiderPumpkin, "Spider Pumpkin");
-//        DivineAPI.addBlock(creeperPumpkin, "Creeper Pumpkin");
-//        DivineAPI.addBlock(enderPumpkin, "Enderman Pumpkin");
-//        DivineAPI.addBlock(skeletonPumpkin, "Skeleton Pumpkin");
-//        DivineAPI.addBlock(blazePumpkin, "Blaze Pumpkin");
-//        DivineAPI.addBlock(zombiePumpkin, "Zombie Pumpkin");
-//        DivineAPI.addBlock(frostPumpkin, "Frost Pumpkin");
-//        DivineAPI.addBlock(cyclopsPumpkin, "Cyclops Pumpkin");
-//        DivineAPI.addBlock(ghastPumpkin, "Ghast Pumpkin");
-//        DivineAPI.addBlock(glaconPumpkin, "Glacon Pumpkin");
-//        DivineAPI.addBlock(enderWatcherPumpkin, "EnderWatcher Pumpkin");
-//        DivineAPI.addBlock(jungleSpiderPumpkin, "Jungle Spider Pumpkin");
-//        DivineAPI.addBlock(hellSpiderPumpkin, "Hell Spider Pumpkin");
-//
-//        DivineAPI.addBlock(checker, "Checker Block");
-//        DivineAPI.addBlock(rainbowWool, "Rainbow Wool");
-//        DivineAPI.addBlock(crate, "Crate");
-//        DivineAPI.addBlock(blueStone, "Blue Stone");
-//        DivineAPI.addBlock(purpleStone, "Purple Stone");
-//        DivineAPI.addBlock(blueVane, "Blue Vane");
-//        DivineAPI.addBlock(cyanVane, "Cyan Vane");
-//        DivineAPI.addBlock(purpleVane, "Purple Vane");
-//        DivineAPI.addBlock(redVane, "Red Vane");
-//        DivineAPI.addBlock(yellowVane, "Yellow Vane");
-//
-//        DivineAPI.addBlock(divineRock, "Divine Rock");
-//    }
 
 }

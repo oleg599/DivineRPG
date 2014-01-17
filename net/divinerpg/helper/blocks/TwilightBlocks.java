@@ -45,32 +45,5 @@ public class TwilightBlocks {
         apalachiaGrass = new BlockModGrass(apalachiaGrass, apalachiaDirt, "apalachia");
         skythernGrass = new BlockModGrass(skythernGrass, skythernDirt, "skythern");
         mortumGrass = new BlockModGrass(mortumGrass, mortumDirt, "mortum");
-//		DivineAPI.addBlock(edenGrass, "Eden Grass");
-//		DivineAPI.addBlock(wildWoodGrass, "Wild Wood Grass");
-//		DivineAPI.addBlock(apalachiaGrass, "Apalachia Grass");
-//		DivineAPI.addBlock(skythernGrass, "Skythern Grass");
-//		DivineAPI.addBlock(mortumGrass, "Mortum Grass");
-//		
-//		DivineAPI.addBlock(edenDirt, "Eden Dirt");
-//		DivineAPI.addBlock(wildWoodDirt, "Wild Wood Dirt");
-//		DivineAPI.addBlock(apalachiaDirt, "Apalachia Dirt");
-//		DivineAPI.addBlock(skythernDirt, "Skythern Dirt");
-//		DivineAPI.addBlock(mortumDirt, "Mortum Dirt");
-//		
-//		DivineAPI.addBlock(edenOre, "Eden Ore");
-//		DivineAPI.addBlock(wildWoodOre, "Wild Wood Ore");
-//		DivineAPI.addBlock(apalachiaOre, "Apalachia Ore");
-//		DivineAPI.addBlock(skythernOre, "Skythern Ore");
-//		DivineAPI.addBlock(mortumOre, "Mortum Ore");
-//		
-//		DivineAPI.addBlock(edenBlock, "Eden Block");
-//		DivineAPI.addBlock(wildWoodBlock, "Wild Wood Block");
-//		DivineAPI.addBlock(apalachiaBlock, "Apalachia Block");
-//		DivineAPI.addBlock(skythernBlock, "Skythern Block");
-//		DivineAPI.addBlock(mortumBlock, "Mortum Block");
-//		
-//		DivineAPI.addBlock(twilightStone, "Twilight Stone");
-//		DivineAPI.addBlock(edenPortal, "Eden Portal");
-//		DivineAPI.addBlock(blueFire, "Blue Fire");
 	}
 }
