@@ -15,9 +15,9 @@ public class EndItems {
 	public static Reference x;
 	public static int HEAD = 0, BODY = 1, LEGS = 2, BOOTS = 3;
 	
-	public static final Item enderShard = new ItemMod().setTextureName("enderShards").setUnlocalizedName("enderShards").setCreativeTab(DivineRPGTabs.items);
-	public static final Item enderStone = new ItemMod().setTextureName("enderStone").setUnlocalizedName("enderStone").setCreativeTab(DivineRPGTabs.items);
-	public static final Item watchingEye = new ItemMod().setTextureName("watchingeye").setUnlocalizedName("watchingEye").setCreativeTab(DivineRPGTabs.items);
+	public static final Item enderShard = new ItemMod().setTextureName("enderShards").setUnlocalizedName("endershards").setCreativeTab(DivineRPGTabs.items);
+	public static final Item enderStone = new ItemMod().setTextureName("enderStone").setUnlocalizedName("enderstone").setCreativeTab(DivineRPGTabs.items);
+	public static final Item watchingEye = new ItemMod().setTextureName("watchingeye").setUnlocalizedName("watchingeye").setCreativeTab(DivineRPGTabs.items);
 	public static final Item callWatcher = new ItemCallOfTheWatcher().setTextureName("callofthewatcher").setUnlocalizedName("callOfTheWatcher").setCreativeTab(DivineRPGTabs.spawner);
 
 	public static final Item enderSword = new ItemModSword(ToolMaterialMod.EnderSword).setTextureName("endersword").setUnlocalizedName("enderSword").setCreativeTab(DivineRPGTabs.swords);

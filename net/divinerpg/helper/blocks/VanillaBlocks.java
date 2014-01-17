@@ -15,31 +15,31 @@ public class VanillaBlocks {
 	static Material rock = Material.field_151576_e;
 	static Material wool = Material.field_151580_n;
 	
-	public static final Block rupeeOre = new VanillaBlock(rock).setTextureName("rupeeOre").func_149663_c("rupeeOre").func_149711_c(3.0F);
-	public static final Block arlemiteOre = new VanillaBlock(rock).setTextureName("arlemiteOre").func_149663_c("arlemiteOre").func_149711_c(3.0F);
-	public static final Block realmiteOre = new VanillaBlock(rock).setTextureName("realmiteOre").func_149663_c("realmiteOre").func_149711_c(3.0F);
-	public static final Block bloodGemOre = new VanillaBlock(rock).setTextureName("bloodOre").func_149663_c("bloodOre").func_149711_c(3.0F);
-	public static final Block netheriteOre = new VanillaBlock(rock).setTextureName("netheriteOre").func_149663_c("netheriteOre").func_149711_c(3.0F);
+	public static final Block rupeeOre = new VanillaBlock(rock).setTextureName("rupeeore").func_149663_c("rupeeOre").func_149711_c(3.0F);
+	public static final Block arlemiteOre = new VanillaBlock(rock).setTextureName("arlemiteore").func_149663_c("arlemiteOre").func_149711_c(3.0F);
+	public static final Block realmiteOre = new VanillaBlock(rock).setTextureName("realmiteore").func_149663_c("realmiteOre").func_149711_c(3.0F);
+	public static final Block bloodGemOre = new VanillaBlock(rock).setTextureName("bloodore").func_149663_c("bloodOre").func_149711_c(3.0F);
+	public static final Block netheriteOre = new VanillaBlock(rock).setTextureName("netheriteore").func_149663_c("netheriteOre").func_149711_c(3.0F);
 
-	public static final Block rupeeBlock = new VanillaBlock(rock).setTextureName("rupeeBlock").func_149663_c("rupeeBlock").func_149711_c(3.0F);
-	public static final Block arlemiteBlock = new VanillaBlock(rock).setTextureName("arlemiteBlock").func_149663_c("arlemiteBlock").func_149711_c(3.0F);
-	public static final Block realmiteBlock = new VanillaBlock(rock).setTextureName("realmiteBlock").func_149663_c("realmiteBlock").func_149711_c(3.0F);
-	public static final Block bloodgemBlock = new VanillaBlock(rock).setTextureName("bloodgemBlock").func_149663_c("bloodgemBlock").func_149711_c(3.0F);
-	public static final Block netheriteBlock = new VanillaBlock(rock).setTextureName("netheriteBlock").func_149663_c("netheriteBlock").func_149711_c(3.0F);
+	public static final Block rupeeBlock = new VanillaBlock(rock).setTextureName("rupeeblock").func_149663_c("rupeeBlock").func_149711_c(3.0F);
+	public static final Block arlemiteBlock = new VanillaBlock(rock).setTextureName("arlemiteblock").func_149663_c("arlemiteBlock").func_149711_c(3.0F);
+	public static final Block realmiteBlock = new VanillaBlock(rock).setTextureName("realmiteblock").func_149663_c("realmiteBlock").func_149711_c(3.0F);
+	public static final Block bloodgemBlock = new VanillaBlock(rock).setTextureName("bloodgemblock").func_149663_c("bloodgemBlock").func_149711_c(3.0F);
+	public static final Block netheriteBlock = new VanillaBlock(rock).setTextureName("netheriteblock").func_149663_c("netheriteBlock").func_149711_c(3.0F);
 	
-	public static final Block SpiderPumpkin = new MobPumpkin().setTextureName("spiderPumpkin").func_149663_c("spiderPumpkin");
-    public static final Block EnderPumpkin = new MobPumpkin().setTextureName("enderPumpkin").func_149663_c("enderPumpkin");
-    public static final Block CreeperPumpkin = new MobPumpkin().setTextureName("creeperPumpkin").func_149663_c("creeperPumpkin");
-    public static final Block SkeletonPumpkin = new MobPumpkin().setTextureName("skeletonPumpkin").func_149663_c("skeletonPumpkin");
-    public static final Block BlazePumpkin = new MobPumpkin().setTextureName("blazePumpkin").func_149663_c("blazePumpkin");
-    public static final Block ZombiePumpkin = new MobPumpkin().setTextureName("zombiePumpkin").func_149663_c("zombiePumpkin");
-    public static final Block FrostPumpkin = new MobPumpkin().setTextureName("frostPumpkin").func_149663_c("frostPumpkin");
-    public static final Block CyclopsPumpkin = new MobPumpkin().setTextureName("cyclopsPumpkin").func_149663_c("cyclopsPumpkin");
-    public static final Block GhastPumpkin = new MobPumpkin().setTextureName("ghastPumpkin").func_149663_c("ghastPumpkin");
-    public static final Block GlaconPumpkin = new MobPumpkin().setTextureName("glaconPumpkin").func_149663_c("glaconPumpkin");
-    public static final Block EnderWatcherPumpkin = new MobPumpkin().setTextureName("enderWatcherPumpkin").func_149663_c("enderWatcherPumpkin");
-    public static final Block JungleSpiderPumpkin = new MobPumpkin().setTextureName("jungleSpiderPumpkin").func_149663_c("jungleSpiderPumpkin");
-    public static final Block HellSpiderPumpkin = new MobPumpkin().setTextureName("hellSpiderPumpkin").func_149663_c("hellSpiderPumpkin");
+	public static final Block SpiderPumpkin = new MobPumpkin().setTextureName("spiderpumpkin").func_149663_c("spiderPumpkin");
+    public static final Block EnderPumpkin = new MobPumpkin().setTextureName("enderpumpkin").func_149663_c("enderPumpkin");
+    public static final Block CreeperPumpkin = new MobPumpkin().setTextureName("creeperpumpkin").func_149663_c("creeperPumpkin");
+    public static final Block SkeletonPumpkin = new MobPumpkin().setTextureName("skeletonpumpkin").func_149663_c("skeletonPumpkin");
+    public static final Block BlazePumpkin = new MobPumpkin().setTextureName("blazepumpkin").func_149663_c("blazePumpkin");
+    public static final Block ZombiePumpkin = new MobPumpkin().setTextureName("zombiepumpkin").func_149663_c("zombiePumpkin");
+    public static final Block FrostPumpkin = new MobPumpkin().setTextureName("frostpumpkin").func_149663_c("frostPumpkin");
+    public static final Block CyclopsPumpkin = new MobPumpkin().setTextureName("cyclopspumpkin").func_149663_c("cyclopsPumpkin");
+    public static final Block GhastPumpkin = new MobPumpkin().setTextureName("ghastpumpkin").func_149663_c("ghastPumpkin");
+    public static final Block GlaconPumpkin = new MobPumpkin().setTextureName("glaconpumpkin").func_149663_c("glaconPumpkin");
+    public static final Block EnderWatcherPumpkin = new MobPumpkin().setTextureName("enderWatcherpumpkin").func_149663_c("enderWatcherPumpkin");
+    public static final Block JungleSpiderPumpkin = new MobPumpkin().setTextureName("jungleSpiderpumpkin").func_149663_c("jungleSpiderPumpkin");
+    public static final Block HellSpiderPumpkin = new MobPumpkin().setTextureName("hellSpiderpumpkin").func_149663_c("hellSpiderPumpkin");
 	
     public static final Block checker = new VanillaBlock(wool).setTextureName("checker").func_149663_c("checker").func_149711_c(0.5F);
     public static final Block rainbowWool = new VanillaBlock(wool).setTextureName("rainbowWool").func_149663_c("rainbowWool").func_149711_c(0.5F);
