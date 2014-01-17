@@ -6,16 +6,17 @@ import net.divinerpg.twilight.*;
 import net.divinerpg.twilight.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.*;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.*;
 
 public class TwilightBlocks {
 	static Material rock = Material.field_151576_e;
 	
-	public static final Block edenGrass = new BlockEdenGrass();//Dravite
-	public static final Block wildWoodGrass = new BlockWildWoodGrass();//Azurite
-	public static final Block apalachiaGrass = new BlockApalachiaGrass();//Uvite
-	public static final Block skythernGrass = new BlockSkythernGrass();//Mythril
-	public static final Block mortumGrass = new BlockMortumGrass();//Augite
+	public static Block edenGrass;//Dravite
+	public static Block wildWoodGrass;//Azurite
+	public static Block apalachiaGrass;//Uvite
+	public static Block skythernGrass;//Mythril
+	public static Block mortumGrass;//Augite
 
 	public static final Block edenDirt = new BlockModDirt().setTextureName("edenDirt").func_149663_c("edenDirt");
 	public static final Block wildWoodDirt = new BlockModDirt().setTextureName("wildWoodDirt").func_149663_c("wildWoodDirt");
@@ -35,12 +36,17 @@ public class TwilightBlocks {
 	public static final Block skythernBlock = new TwilightBlock(rock).setTextureName("skythernBlock").func_149663_c("skythernBlock");
 	public static final Block mortumBlock = new TwilightBlock(rock).setTextureName("mortumBlock").func_149663_c("mortumBlock");
 	
-	
 	public static final Block twilightStone = new TwilightBlock(rock).setTextureName("twilightStone").func_149663_c("twilightStone");
 	public static final Block blueFire = new BlockBlueFire().setTextureName("fire").func_149663_c("blueFire");
 	public static final Block edenPortal = new BlockEdenPortal();
 	
 	public static void init(){
+		edenGrass = new BlockModGrass(edenGrass, edenDirt, "eden");
+		wildWoodGrass = new BlockModGrass(wildWoodGrass, wildWoodDirt, "wildwood");
+		apalachiaGrass = new BlockModGrass(apalachiaGrass, apalachiaDirt, "apalachia");
+		skythernGrass = new BlockModGrass(skythernGrass, skythernDirt, "skythern");
+		mortumGrass = new BlockModGrass(mortumGrass, mortumDirt, "mortum");
+		
 		DivineAPI.addBlock(edenGrass, "Eden Grass");
 		DivineAPI.addBlock(wildWoodGrass, "Wild Wood Grass");
 		DivineAPI.addBlock(apalachiaGrass, "Apalachia Grass");
