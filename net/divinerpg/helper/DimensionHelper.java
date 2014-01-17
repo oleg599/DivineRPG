@@ -8,9 +8,8 @@ import net.minecraftforge.common.*;
 
 public class DimensionHelper {
 
-	static ConfigurationHelper x;
 
-	public static BiomeGenBase Eden = new BiomeGenEden(x.EdenBiome);
+	public static BiomeGenBase Eden = new BiomeGenEden(ConfigurationHelper.EdenBiome);
 
 	/** The dimension renames:
 	 * Dravite = Eden
@@ -24,7 +23,7 @@ public class DimensionHelper {
 	 **/
 
 	public static void init(){
-		addDimension(x.Eden, WorldProviderEden.class, x.keepLoadingEden);
+		addDimension(ConfigurationHelper.Eden, WorldProviderEden.class, ConfigurationHelper.keepLoadingEden);
 
 		/*addDimension(x.WildWoods, WorldProviderWildWood.class, x.keepLoadingWildWoods);
 		addDimension(x.Apalachia, WorldProviderApalachia.class, x.keepLoadingApalachia);

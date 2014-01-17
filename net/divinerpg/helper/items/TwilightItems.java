@@ -1,6 +1,6 @@
 package net.divinerpg.helper.items;
 
-import net.divinerpg.helper.items.base.ItemMod;
+import net.divinerpg.api.items.ItemMod;
 import net.minecraft.item.Item;
 
 public class TwilightItems {

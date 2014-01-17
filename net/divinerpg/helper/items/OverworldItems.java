@@ -1,12 +1,12 @@
 package net.divinerpg.helper.items;
 
-import net.divinerpg.helper.items.base.ItemMod;
-import net.divinerpg.helper.items.base.ItemModAxe;
-import net.divinerpg.helper.items.base.ItemModFood;
-import net.divinerpg.helper.items.base.ItemModHoe;
-import net.divinerpg.helper.items.base.ItemModPickaxe;
-import net.divinerpg.helper.items.base.ItemModShovel;
-import net.divinerpg.helper.items.base.ItemModSword;
+import net.divinerpg.api.items.ItemMod;
+import net.divinerpg.api.items.ItemModAxe;
+import net.divinerpg.api.items.ItemModFood;
+import net.divinerpg.api.items.ItemModHoe;
+import net.divinerpg.api.items.ItemModPickaxe;
+import net.divinerpg.api.items.ItemModShovel;
+import net.divinerpg.api.items.ItemModSword;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.overworld.items.ItemMysteriousClock;
 import net.divinerpg.overworld.items.ItemShickaxe;

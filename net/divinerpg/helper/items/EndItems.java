@@ -1,7 +1,7 @@
 package net.divinerpg.helper.items;
 
-import net.divinerpg.helper.items.base.ItemMod;
-import net.divinerpg.helper.items.base.ItemModSword;
+import net.divinerpg.api.items.ItemMod;
+import net.divinerpg.api.items.ItemModSword;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.nether.items.ItemCallOfTheWatcher;
 import net.minecraft.item.Item;

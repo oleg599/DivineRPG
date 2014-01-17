@@ -6,9 +6,7 @@ import net.divinerpg.helper.items.NetherItems;
 import net.divinerpg.helper.items.OverworldItems;
 import net.divinerpg.helper.items.TwilightItems;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
 
 public class IS {
 		//IS stands for ItemStack

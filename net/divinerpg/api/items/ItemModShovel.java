@@ -1,4 +1,4 @@
-package net.divinerpg.helper.items.base;
+package net.divinerpg.api.items;
 
 import java.util.List;
 
@@ -6,22 +6,27 @@ import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemHoe;
+import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item.ToolMaterial;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-public class ItemModHoe extends ItemHoe{
+public class ItemModShovel extends ItemSpade{
 
-	public ItemModHoe(ToolMaterial p_i45343_1_) {
-		super(p_i45343_1_);
+	ToolMaterial t;
+	
+	public ItemModShovel(ToolMaterial tool) {
+		super(tool);
+		t = tool;
 		setCreativeTab(DivineRPGTabs.tools);
 	}
 	
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List infoList, boolean par4) {
         infoList.add(item.getMaxDamage() - item.getItemDamage() + " Uses Remaining");
+        infoList.add("Efficiency: " + this.t.getEfficiencyOnProperMaterial());
     }
     public Item setTextureName(String par1Str)
     {
@@ -64,4 +69,5 @@ public class ItemModHoe extends ItemHoe{
         GameRegistry.registerItem(this, name);
         LanguageRegistry.addName(this, finalName);
     }
+
 }
