@@ -1,5 +1,3 @@
-DivineRPG
-=========
 Official 1.7.2 Repo for the Minecraft Mod DivineRPG
 
 Team Members:
