@@ -33,69 +33,13 @@ public class VanillaBlock extends Block
 	public static Item getBlock(Block b){
 		return Item.func_150898_a(b);
 	}
-
+	
+	
 	public Item func_149650_a(int par1, Random par2, int par3) {
-		if(this == VanillaBlocks.rupeeOre){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.arlemiteOre){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.realmiteOre){
-			return getBlock(this);
-		}
 		if(this == VanillaBlocks.bloodgemOre){
 			return NetherItems.bloodgem;
 		}
-		if(this == VanillaBlocks.netheriteOre){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.rupeeBlock){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.arlemiteBlock){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.realmiteBlock){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.bloodgemBlock){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.netheriteBlock){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.checker){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.rainbowWool){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.crate){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.blueStone){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.purpleStone){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.blueVane){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.cyanVane){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.purpleVane){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.redVane){
-			return getBlock(this);
-		}
-		if(this == VanillaBlocks.yellowVane){
-			return getBlock(this);
-		}
-		return null;
+		return getBlock(this);
 	}
 
 	public int func_149679_a(int par1, Random par2)

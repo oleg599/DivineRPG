@@ -28,40 +28,10 @@ public class TwilightBlock extends Block
 	public static Item getBlock(Block b){
 		return Item.func_150898_a(b);
 	}
-
+	
+	//I know this isn't needed, but we may need it in the future.
 	public Item func_149650_a(int par1, Random par2, int par3) {
-
-		if(this == TwilightBlocks.edenOre){
-			return getBlock(this);
-		}
-		if(this == TwilightBlocks.wildWoodOre){
-			return getBlock(this);
-		}
-		if(this == TwilightBlocks.apalachiaOre){
-			return getBlock(this);
-		}
-		if(this == TwilightBlocks.skythernOre){
-			return getBlock(this);
-		}
-		if(this == TwilightBlocks.mortumOre){
-			return getBlock(this);
-		}
-		if(this == TwilightBlocks.edenBlock){
-			return getBlock(this);
-		}
-		if(this == TwilightBlocks.wildWoodBlock){
-			return getBlock(this);
-		}
-		if(this == TwilightBlocks.apalachiaBlock){
-			return getBlock(this);
-		}
-		if(this == TwilightBlocks.skythernBlock){
-			return getBlock(this);
-		}
-		if(this == TwilightBlocks.mortumBlock){
-			return getBlock(this);
-		}
-		return null;
+		return getBlock(this);
 	}
 
 	public int func_149679_a(int par1, Random par2)

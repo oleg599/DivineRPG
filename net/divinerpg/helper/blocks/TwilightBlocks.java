@@ -11,11 +11,11 @@ import net.minecraft.block.material.Material;
 public class TwilightBlocks {
     static Material           rock           = Material.field_151576_e;
 
-    public static Block edenGrass;//Dravite
-    public static Block wildWoodGrass;//Azurite
-    public static Block apalachiaGrass;//Uvite
-    public static Block skythernGrass;//Mythril
-    public static Block mortumGrass;//Augite
+    public static 		Block edenGrass;//Dravite
+    public static 		Block wildWoodGrass;//Azurite
+    public static 		Block apalachiaGrass;//Uvite
+    public static 		Block skythernGrass;//Mythril
+    public static 		Block mortumGrass;//Augite
 
     public static final Block edenDirt       = new BlockModDirt().setName("edenDirt");
     public static final Block wildWoodDirt   = new BlockModDirt().setName("wildWoodDirt");
