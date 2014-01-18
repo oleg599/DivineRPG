@@ -24,9 +24,16 @@ public class VanillaBlock extends Block
 	{
 		super(m);
 		this.func_149647_a(DivineRPGTabs.blocks);
-		func_149672_a(Block.field_149780_i);
-		if(this == VanillaBlocks.purpleStone || this == VanillaBlocks.purpleStone){
+		func_149672_a(field_149780_i);
+		if(this == VanillaBlocks.purpleStone || this == VanillaBlocks.blueStone){
 			func_149715_a(1.0F);
+			func_149672_a(field_149779_h);
+		}
+		if(this == VanillaBlocks.checker || this == VanillaBlocks.rainbowWool){
+			func_149672_a(field_149775_l);
+		}
+		if(this == VanillaBlocks.crate){
+			func_149672_a(field_149766_f);
 		}
 	}
 	

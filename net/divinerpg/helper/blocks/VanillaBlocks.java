@@ -8,7 +8,7 @@ import net.minecraft.block.material.Material;
 public class VanillaBlocks {
 
 
-    static Material           rock                = Material.field_151576_e;
+	static Material           rock                = Material.field_151576_e;
     static Material           wool                = Material.field_151580_n;
 
     public static final Block rupeeOre            = new VanillaBlock(rock).setName("rupeeOre").func_149711_c(3.0F);

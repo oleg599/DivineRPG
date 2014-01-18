@@ -13,23 +13,23 @@ public class TwilightRecipeHelper {
 
 	public static void init(){
 		
-		DivineAPI.addShapelessRecipe(IS.draviteFragments, TwilightItems.draviteSoul);
-		DivineAPI.addShapelessRecipe(IS.azuriteFragments, TwilightItems.azuriteSoul);
-		DivineAPI.addShapelessRecipe(IS.uviteFragments, TwilightItems.uviteSoul);
-		DivineAPI.addShapelessRecipe(IS.mythrilFragments, TwilightItems.mythrilSoul);
-		DivineAPI.addShapelessRecipe(IS.augiteFragments, TwilightItems.augiteSoul);
+		DivineAPI.addShapelessRecipe(IS.edenFragments, TwilightItems.edenSoul);
+		DivineAPI.addShapelessRecipe(IS.wildWoodFragments, TwilightItems.wildWoodSoul);
+		DivineAPI.addShapelessRecipe(IS.apalachiaFragments, TwilightItems.apalachiaSoul);
+		DivineAPI.addShapelessRecipe(IS.skythernFragments, TwilightItems.skythernSoul);
+		DivineAPI.addShapelessRecipe(IS.mortumFragments, TwilightItems.mortumSoul);
 		
-		DivineAPI.addRecipe(IS.draviteGem, "GGG", 'G', TwilightItems.draviteFragments);
-		DivineAPI.addRecipe(IS.azuriteGem, "GGG", 'G', TwilightItems.azuriteFragments);
-		DivineAPI.addRecipe(IS.uviteGem, "GGG", 'G', TwilightItems.uviteFragments);
-		DivineAPI.addRecipe(IS.mythrilGem, "GGG", 'G', TwilightItems.mythrilFragments);
-		DivineAPI.addRecipe(IS.augiteGem, "GGG", 'G', TwilightItems.augiteFragments);
+		DivineAPI.addRecipe(IS.edenGem, "GGG", 'G', TwilightItems.edenFragments);
+		DivineAPI.addRecipe(IS.wildWoodGem, "GGG", 'G', TwilightItems.wildWoodFragments);
+		DivineAPI.addRecipe(IS.apalachiaGem, "GGG", 'G', TwilightItems.apalachiaFragments);
+		DivineAPI.addRecipe(IS.skythernGem, "GGG", 'G', TwilightItems.skythernFragments);
+		DivineAPI.addRecipe(IS.mortumGem, "GGG", 'G', TwilightItems.mortumFragments);
 		
-		DivineAPI.addRecipe(IS.draviteChunk, "GGG", "G G", "G G", 'G', TwilightItems.draviteGem);
-		DivineAPI.addRecipe(IS.azuriteChunk, "GGG", "G G", "G G", 'G', TwilightItems.azuriteGem);
-		DivineAPI.addRecipe(IS.uviteChunk, "GGG", "G G", "G G", 'G', TwilightItems.uviteGem);
-		DivineAPI.addRecipe(IS.mythrilChunk, "GGG", "G G", "G G", 'G', TwilightItems.mythrilGem);
-		DivineAPI.addRecipe(IS.augiteChunk, "GGG", "G G", "G G", 'G', TwilightItems.augiteGem);
+		DivineAPI.addRecipe(IS.edenChunk, "GGG", "G G", "G G", 'G', TwilightItems.edenGem);
+		DivineAPI.addRecipe(IS.wildWoodChunk, "GGG", "G G", "G G", 'G', TwilightItems.wildWoodGem);
+		DivineAPI.addRecipe(IS.apalachiaChunk, "GGG", "G G", "G G", 'G', TwilightItems.apalachiaGem);
+		DivineAPI.addRecipe(IS.skythernChunk, "GGG", "G G", "G G", 'G', TwilightItems.skythernGem);
+		DivineAPI.addRecipe(IS.mortumChunk, "GGG", "G G", "G G", 'G', TwilightItems.mortumGem);
 
 	}
 }

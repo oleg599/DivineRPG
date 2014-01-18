@@ -31,6 +31,7 @@ public class MobPumpkin extends BlockDirectional
 		this.func_149675_a(true);
 		func_149711_c(1.0F);
 		this.func_149647_a(DivineRPGTabs.blocks);
+		this.func_149672_a(field_149766_f);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -69,6 +70,7 @@ public class MobPumpkin extends BlockDirectional
 		this.name = name;
 		setTextureName(name);
 		setUnlocalizedName(name);
+		register();
 		return this;
 	}
 

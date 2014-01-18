@@ -34,21 +34,21 @@ public class IS {
 		public static ItemStack moltenStone = new ItemStack(VanillaItems.moltenStone);
 		public static ItemStack divineStone = new ItemStack(VanillaItems.divineStone);
 		public static ItemStack enderStone = new ItemStack(VanillaItems.enderStone);
-		public static ItemStack draviteFragments = new ItemStack(TwilightItems.draviteFragments);
-		public static ItemStack azuriteFragments = new ItemStack(TwilightItems.azuriteFragments);
-		public static ItemStack uviteFragments = new ItemStack(TwilightItems.uviteFragments);
-		public static ItemStack mythrilFragments = new ItemStack(TwilightItems.mythrilFragments);
-		public static ItemStack augiteFragments = new ItemStack(TwilightItems.augiteFragments);
-		public static ItemStack draviteGem = new ItemStack(TwilightItems.draviteGem);
-		public static ItemStack azuriteGem = new ItemStack(TwilightItems.azuriteGem);
-		public static ItemStack uviteGem = new ItemStack(TwilightItems.uviteGem);
-		public static ItemStack mythrilGem = new ItemStack(TwilightItems.mythrilGem);
-		public static ItemStack augiteGem = new ItemStack(TwilightItems.augiteGem);
-		public static ItemStack draviteChunk = new ItemStack(TwilightItems.draviteChunk);
-		public static ItemStack azuriteChunk = new ItemStack(TwilightItems.azuriteChunk);
-		public static ItemStack uviteChunk = new ItemStack(TwilightItems.uviteChunk);
-		public static ItemStack mythrilChunk = new ItemStack(TwilightItems.mythrilChunk);
-		public static ItemStack augiteChunk = new ItemStack(TwilightItems.augiteChunk);
+		public static ItemStack edenFragments = new ItemStack(TwilightItems.edenFragments);
+		public static ItemStack wildWoodFragments = new ItemStack(TwilightItems.wildWoodFragments);
+		public static ItemStack apalachiaFragments = new ItemStack(TwilightItems.apalachiaFragments);
+		public static ItemStack skythernFragments = new ItemStack(TwilightItems.skythernFragments);
+		public static ItemStack mortumFragments = new ItemStack(TwilightItems.mortumFragments);
+		public static ItemStack edenGem = new ItemStack(TwilightItems.edenGem);
+		public static ItemStack wildWoodGem = new ItemStack(TwilightItems.wildWoodGem);
+		public static ItemStack apalachiaGem = new ItemStack(TwilightItems.apalachiaGem);
+		public static ItemStack skythernGem = new ItemStack(TwilightItems.skythernGem);
+		public static ItemStack mortumGem = new ItemStack(TwilightItems.mortumGem);
+		public static ItemStack edenChunk = new ItemStack(TwilightItems.edenChunk);
+		public static ItemStack wildWoodChunk = new ItemStack(TwilightItems.wildWoodChunk);
+		public static ItemStack apalachiaChunk = new ItemStack(TwilightItems.apalachiaChunk);
+		public static ItemStack skythernChunk = new ItemStack(TwilightItems.skythernChunk);
+		public static ItemStack mortumChunk = new ItemStack(TwilightItems.mortumChunk);
 		public static ItemStack legEnderEye = new ItemStack(VanillaItems.legendaryEnderEye);
 
 		//Blocks

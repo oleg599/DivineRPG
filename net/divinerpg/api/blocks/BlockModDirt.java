@@ -1,4 +1,4 @@
-package net.divinerpg.twilight.blocks;
+package net.divinerpg.api.blocks;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
@@ -15,6 +15,7 @@ public class BlockModDirt extends Block {
     public BlockModDirt() {
         super(dirt);
         func_149647_a(DivineRPGTabs.blocks);
+        this.func_149672_a(field_149767_g);
     }
     
     public Block setUnlocalizedName(String name){

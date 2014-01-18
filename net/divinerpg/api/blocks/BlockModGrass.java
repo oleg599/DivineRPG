@@ -1,4 +1,4 @@
-package net.divinerpg.twilight.blocks;
+package net.divinerpg.api.blocks;
 
 import java.util.Random;
 
@@ -32,6 +32,7 @@ public class BlockModGrass extends Block {
         this.func_149675_a(true);
         grass = Grass;
         dirt = Dirt;
+        this.func_149672_a(field_149779_h);
     }
     
     @SideOnly(Side.CLIENT)

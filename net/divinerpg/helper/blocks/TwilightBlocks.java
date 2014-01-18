@@ -1,10 +1,7 @@
 package net.divinerpg.helper.blocks;
 
-import net.divinerpg.twilight.blocks.BlockBlueFire;
-import net.divinerpg.twilight.blocks.BlockEdenPortal;
-import net.divinerpg.twilight.blocks.BlockModDirt;
-import net.divinerpg.twilight.blocks.BlockModGrass;
-import net.divinerpg.twilight.blocks.TwilightBlock;
+import net.divinerpg.api.blocks.*;
+import net.divinerpg.twilight.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -35,6 +32,18 @@ public class TwilightBlocks {
     public static final Block skythernBlock  = new TwilightBlock(rock).setName("skythernBlock");
     public static final Block mortumBlock    = new TwilightBlock(rock).setName("mortumBlock");
 
+    public static final Block edenLeaves      = new BlockModLeaves().setName("edenLeaves");
+    public static final Block wildWoodLeaves  = new BlockModLeaves().setName("wildWoodLeaves");
+    public static final Block apalachiaLeaves = new BlockModLeaves().setName("apalachiaLeaves");
+    public static final Block skythernLeaves  = new BlockModLeaves().setName("skythernLeaves");
+    public static final Block mortumLeaves    = new BlockModLeaves().setName("mortumLeaves");
+    
+    public static final Block edenLogs       = new BlockModLog().setName("edenLog");
+    public static final Block wildWoodLogs   = new BlockModLog().setName("wildWoodLog");
+    public static final Block apalachiaLogs  = new BlockModLog().setName("apalachiaLog");
+    public static final Block skythernLogs   = new BlockModLog().setName("skythernLog");
+    public static final Block mortumLogs     = new BlockModLog().setName("mortumLog");
+    
     public static final Block twilightStone  = new TwilightBlock(rock).setName("twilightStone");
     public static final Block blueFire       = new BlockBlueFire().setName("blueFire");
     public static final Block edenPortal     = new BlockEdenPortal();
