@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 
 public class TwilightItems {
 	//Keep them named with the old dimension names. It gives a cool twist.
+	//No it doesnt
     public static final Item draviteSoul 	   = new ItemMod().setName("draviteSoul");
     public static final Item azuriteSoul 	   = new ItemMod().setName("azuriteSoul");
     public static final Item uviteSoul  	   = new ItemMod().setName("uviteSoul");
