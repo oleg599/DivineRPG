@@ -81,7 +81,7 @@ public class TwilightItems {
     public static final Item apalachiaBlitz     = new ItemTwilightBlitz(22, "Apalachia Dust").setName("apalachiaBlitz");
     public static final Item skythernBlitz      = new ItemTwilightBlitz(27, "Skythern Dust").setName("skythernBlitz");
     public static final Item mortumBlitz        = new ItemTwilightBlitz(31, "Mortum Dust").setName("mortumBlitz");
-    public static final Item haliteBlitz        = new ItemTwilightBlitz(33, "Mortum Dust").setName("mortumBlitz");
+    public static final Item haliteBlitz        = new ItemTwilightBlitz(33, "Mortum Dust").setName("haliteBlitz");
 
     public static final Item edenPhaser         = new ItemTwilightPhaser(24, 0).setName("edenPhaser");
     public static final Item wildWoodPhaser     = new ItemTwilightPhaser(31, 0).setName("wildWoodPhaser");

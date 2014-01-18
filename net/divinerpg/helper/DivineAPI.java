@@ -10,18 +10,18 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class DivineAPI {
 	
-	static int mobID = 80, projectileID = 350;
+	static int mobID = 90, projectileID = 350;
 
 	
-	public static void addRecipe(ItemStack i, Object ... o){
+	public static void addRecipe(ItemStack i, Object ... o) {
 		GameRegistry.addRecipe(i, o);
 	}
 	
-	public static void addShapelessRecipe(ItemStack i, Object ... o){
+	public static void addShapelessRecipe(ItemStack i, Object ... o) {
 		GameRegistry.addShapelessRecipe(i, o);
 	}
 	
-	public static void addSmelting(ItemStack input, ItemStack output, float XP){
+	public static void addSmelting(ItemStack input, ItemStack output, float XP) {
 		GameRegistry.addSmelting(input, output, XP);
 	}
 	
@@ -34,8 +34,7 @@ public class DivineAPI {
 		EntityList.entityEggs.put(ID, new EntityEggInfo(ID, 0x000000, 0xFFFFFF));
 	}
 	
-	public static void registerProjectile(Class entityClass, String entityName)
-	{
+	public static void registerProjectile(Class entityClass, String entityName) {
 		int ID = getProjectileID(); 
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, ID);
 		EntityRegistry.registerModEntity(entityClass, entityName, ID, DivineRPG.instance, 250, 5, true);

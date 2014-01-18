@@ -1,5 +1,7 @@
 package net.divinerpg.api.items;
 
+import java.util.List;
+
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -180,7 +182,7 @@ public class ItemModBow extends ItemBow {
         return true;
     }
 
-    /*@Override
+    @Override
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
         par3List.add(damage + " Ranged Damage");
         double speed = (double) DEFAULT_MAX_USE_DURACTION / (double) getMaxItemUseDuration(par1ItemStack);
@@ -189,7 +191,7 @@ public class ItemModBow extends ItemBow {
         if(speed < 1)
         	par3List.add((1 / speed) + " Times Slower");
         par3List.add(!unbreakable ? (par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage() + " Uses Remaining") : "Unlimited Uses");
-    }*/
+    }
 
     /**
      * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
