@@ -1,17 +1,23 @@
 package net.divinerpg.helper.mobs;
 
-import net.divinerpg.helper.*;
-import net.divinerpg.twilight.entity.projectile.*;
+import net.divinerpg.api.entity.EntitySlicer;
+import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.twilight.entity.projectile.EntityPhaserApalachia;
+import net.divinerpg.twilight.entity.projectile.EntityPhaserEden;
+import net.divinerpg.twilight.entity.projectile.EntityPhaserHalite;
+import net.divinerpg.twilight.entity.projectile.EntityPhaserMortum;
+import net.divinerpg.twilight.entity.projectile.EntityPhaserSkythern;
+import net.divinerpg.twilight.entity.projectile.EntityPhaserWildWood;
 
 public class TwilightMobRegistry {
 
 	public static void init(){
-	    DivineAPI.registerProjectile(EntitySlicerEden.class, "edenSlicer");
-	    DivineAPI.registerProjectile(EntitySlicerWildWood.class, "wildSlicer");
-        DivineAPI.registerProjectile(EntitySlicerAlapachia.class, "apalachiaSlicer");
-        DivineAPI.registerProjectile(EntitySlicerSkythern.class, "skythernSlicer");
-        DivineAPI.registerProjectile(EntitySlicerMortum.class, "mortumSlicer");
-        DivineAPI.registerProjectile(EntitySlicerHalite.class, "haliteSlicer");
+	    DivineAPI.registerProjectile(EntitySlicer.class, "edenSlicer");
+	    DivineAPI.registerProjectile(EntitySlicer.class, "wildSlicer");
+        DivineAPI.registerProjectile(EntitySlicer.class, "apalachiaSlicer");
+        DivineAPI.registerProjectile(EntitySlicer.class, "skythernSlicer");
+        DivineAPI.registerProjectile(EntitySlicer.class, "mortumSlicer");
+        DivineAPI.registerProjectile(EntitySlicer.class, "haliteSlicer");
         DivineAPI.registerProjectile(EntityPhaserEden.class, "edenPhaser");
         DivineAPI.registerProjectile(EntityPhaserWildWood.class, "wildPhaser");
         DivineAPI.registerProjectile(EntityPhaserApalachia.class, "apalachiaPhaser");

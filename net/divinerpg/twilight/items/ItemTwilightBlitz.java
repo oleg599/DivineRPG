@@ -2,31 +2,38 @@ package net.divinerpg.twilight.items;
 
 import java.util.List;
 
-import net.divinerpg.DivineRPG;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.items.TwilightItems;
-import net.divinerpg.twilight.entity.projectile.*;
-import net.minecraft.entity.Entity;
+import net.divinerpg.twilight.entity.projectile.EntityBlitzAlapachia;
+import net.divinerpg.twilight.entity.projectile.EntityBlitzEden;
+import net.divinerpg.twilight.entity.projectile.EntityBlitzHalite;
+import net.divinerpg.twilight.entity.projectile.EntityBlitzMortum;
+import net.divinerpg.twilight.entity.projectile.EntityBlitzSkythern;
+import net.divinerpg.twilight.entity.projectile.EntityBlitzWildWood;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTwilightBlitz extends Item {
-	String sound, name;
-
-	public ItemTwilightBlitz()
+	private String sound, name;
+	private int damage;
+	private String ammoType;
+	public ItemTwilightBlitz(int damage, String ammoType)
 	{
 		super();
 		this.maxStackSize = 1;
 		sound = "";
 		this.setMaxDamage(-1);
 		this.setCreativeTab(DivineRPGTabs.ranged);
+		this.damage = damage;
+		this.ammoType = ammoType;
 	}
 
 	/**
@@ -152,36 +159,8 @@ public class ItemTwilightBlitz extends Item {
 	 */
 	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
 	{
-		if(var1.getItem() == TwilightItems.haliteBlitz)
-		{
-			par3List.add("33 Ranged Damage");
-			par3List.add("Ammo: Mortum Dust");
-		}
-		if(var1.getItem() == TwilightItems.skythernBlitz)
-		{
-			par3List.add("27 Ranged Damage");
-			par3List.add("Ammo: Skythern Dust");
-		}
-		if(var1.getItem() == TwilightItems.apalachiaBlitz)
-		{
-			par3List.add("22 Ranged Damage");
-			par3List.add("Ammo: Apalachia Dust");
-		}
-		if(var1.getItem() == TwilightItems.mortumBlitz)
-		{
-			par3List.add("31 Ranged Damage");
-			par3List.add("Ammo: Mortum Dust");
-		}
-		if(var1.getItem() == TwilightItems.edenBlitz)
-		{
-			par3List.add("14 Ranged Damage");
-			par3List.add("Ammo: Eden Dust");
-		}
-		if(var1.getItem() == TwilightItems.wildWoodBlitz)
-		{
-			par3List.add("19 Ranged Damage");
-			par3List.add("Ammo: WildWood Dust");
-		}
+	    par3List.add(damage + " Ranged Damage");
+	    par3List.add("Ammo: " + ammoType);
 		par3List.add(var1.getMaxDamage() - var1.getItemDamage() + " Uses");
 	}
 	
