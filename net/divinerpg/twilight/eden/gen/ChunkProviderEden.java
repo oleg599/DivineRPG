@@ -39,14 +39,11 @@ public class ChunkProviderEden implements IChunkProvider{
     private double[] noiseArray;
     private double[] stoneNoise = new double[256];
     private MapGenBase caveGenerator = new MapGenCaves();
-    private BiomeGenBase[] biomesForGeneration;
     double[] noise3;
     double[] noise1;
     double[] noise2;
     double[] noise5;
     double[] noise6;
-    int[][] field_914_i = new int[32][32];
-    private double[] generatedTemperatures;
 	
     public ChunkProviderEden(World var1, long var2){
     	 this.worldObj = var1;
@@ -138,27 +135,34 @@ public class ChunkProviderEden implements IChunkProvider{
 	public Chunk provideChunk(int i, int j) {
 		 this.rand.setSeed(i * 341873128712L + j * 132897987541L);
 	        Block[] var3 = new Block[32768];
-	        this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, i * 16, j * 16, 16, 16);
 	        this.generateTerrain(i, j, var3);
 	        this.replaceBlocksForBiome(i, j, var3);
 	        //this.caveGenerator.func_151539_a(this, this.worldObj, i, j, var3);
 	        Chunk var4 = new Chunk(this.worldObj, i, j);
-	        byte[] var5 = var4.getBiomeArray();
+	        BiomeGenBase[] abiomegenbase = this.worldObj.getWorldChunkManager().loadBlockGeneratorData((BiomeGenBase[])null, i * 16, j * 16, 16, 16);
+	        byte[] abyte = var4.getBiomeArray();
 
-	        for (int var6 = 0; var6 < var5.length; ++var6)
+	        for (int k = 0; k < abyte.length; ++k)
 	        {
-	            var5[var6] = (byte)this.biomesForGeneration[var6].biomeID;
+	            abyte[k] = (byte)abiomegenbase[k].biomeID;
 	        }
 
-	        var4.generateSkylightMap();
+	        var4.resetRelightChecks();
 	        return var4;
 	}
+	
+	@Override
+    public Chunk loadChunk(int par1, int par2)
+    {
+        return this.provideChunk(par1, par2);
+    }
 	
     public void replaceBlocksForBiome(int var1, int var2, Block[] var3)
     {
     	ChunkProviderEvent.ReplaceBiomeBlocks event = new ChunkProviderEvent.ReplaceBiomeBlocks(this, var1, var2, var3, null);
         MinecraftForge.EVENT_BUS.post(event);
-        if (event.getResult() == Result.DENY) return;
+        if (event.getResult() == Result.DENY) 
+        	return;
         
         byte var5 = 63;
         double var6 = 0.03125D;
@@ -242,11 +246,6 @@ public class ChunkProviderEden implements IChunkProvider{
             }
         }
     }
-
-	@Override
-	public Chunk loadChunk(int i, int j) {
-		 return this.provideChunk(i, j);
-	}
 
 	private double[] initializeNoiseField(double[] var1, int var2, int var3, int var4, int var5, int var6, int var7)
     {

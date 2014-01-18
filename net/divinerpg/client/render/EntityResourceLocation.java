@@ -4,9 +4,10 @@ import net.divinerpg.Reference;
 import net.minecraft.util.ResourceLocation;
 
 public class EntityResourceLocation {
-	
+
 	public static String Prefix = Reference.PREFIX + "textures/mobs/";
-	
+	public static String PrefixProjectile = Reference.PREFIX + "textures/projectiles/";
+
 	public static ResourceLocation EnderWatcher = new ResourceLocation(Prefix + "EnderWatcher.png");
 	public static ResourceLocation Crab = new ResourceLocation(Prefix + "Crab.png");
 	public static ResourceLocation CaveCrawler = new ResourceLocation(Prefix + "CaveCrawler.png");
@@ -36,5 +37,20 @@ public class EntityResourceLocation {
 	public static ResourceLocation Shark = new ResourceLocation(Prefix + "Shark.png");
 	public static ResourceLocation NetherWatcher = new ResourceLocation(Prefix + "NetherWatcher.png");
 	public static ResourceLocation WildFire = new ResourceLocation(Prefix + "WildFire.png");
+
+	public static ResourceLocation PhaserHalite = new ResourceLocation(PrefixProjectile + "halitePhaserProjectile.png");
+	public static ResourceLocation PhaserWild = new ResourceLocation(PrefixProjectile + "wildPhaserProjectile.png");
+	public static ResourceLocation PhaserSkythern = new ResourceLocation(PrefixProjectile + "skythernPhaserProjectile.png");
+	public static ResourceLocation PhaserEden = new ResourceLocation(PrefixProjectile + "edenPhaserProjectile.png");
+	public static ResourceLocation PhaserMortum = new ResourceLocation(PrefixProjectile + "mortumPhaserProjectile.png");
+	public static ResourceLocation PhaserApalachia = new ResourceLocation(PrefixProjectile + "apalachiaPhaserProjectile.png");
+	
+	public static ResourceLocation BlitzHalite = new ResourceLocation(PrefixProjectile + "haliteBlitzProjectile.png");
+	public static ResourceLocation BlitzWild = new ResourceLocation(PrefixProjectile + "wildBlitzProjectile.png");
+	public static ResourceLocation BlitzSkythern = new ResourceLocation(PrefixProjectile + "skythernBlitzProjectile.png");
+	public static ResourceLocation BlitzEden = new ResourceLocation(PrefixProjectile + "edenBlitzProjectile.png");
+	public static ResourceLocation BlitzMortum = new ResourceLocation(PrefixProjectile + "mortumBlitzProjectile.png");
+	public static ResourceLocation BlitzApalachia = new ResourceLocation(PrefixProjectile + "apalachiaBlitzProjectile.png");
+
 
 }

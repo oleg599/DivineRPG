@@ -1,8 +1,9 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.*;
-import net.divinerpg.helper.material.ToolMaterialMod;
-import net.divinerpg.vanilla.items.ItemShickaxe;
+import net.divinerpg.helper.material.*;
+import net.divinerpg.twilight.items.*;
+import net.divinerpg.vanilla.items.*;
 import net.minecraft.item.Item;
 
 public class TwilightItems {
@@ -29,13 +30,20 @@ public class TwilightItems {
     public static final Item apalachiaChunk        = new ItemMod().setName("apalachiaChunk");
     public static final Item skythernChunk 	       = new ItemMod().setName("skythernChunk");
     public static final Item mortumChunk  	       = new ItemMod().setName("mortumChunk");
+    
+    public static final Item edenDust 	   	       = new ItemMod().setName("edenDust");
+    public static final Item wildWoodDust 	       = new ItemMod().setName("wildWoodDust");
+    public static final Item apalachiaDust         = new ItemMod().setName("apalachiaDust");
+    public static final Item skythernDust 	       = new ItemMod().setName("skythernDust");
+    public static final Item mortumDust  	       = new ItemMod().setName("mortumDust");
 
     public static final Item edenBlade 	   	       = new ItemModSword(ToolMaterialMod.edenSword).setName("edenBlade");
     public static final Item wildWoodBlade 	       = new ItemModSword(ToolMaterialMod.wildWoodSword).setName("wildWoodBlade");
     public static final Item apalachiaBlade        = new ItemModSword(ToolMaterialMod.apalachiaSword).setName("apalachiaBlade");
     public static final Item skythernBlade 	       = new ItemModSword(ToolMaterialMod.skythernSword).setName("skythernBlade");
     public static final Item mortumBlade  	       = new ItemModSword(ToolMaterialMod.mortumSword).setName("mortumBlade");
-    
+    public static final Item haliteBlade  	       = new ItemModSword(ToolMaterialMod.halite).setName("haliteBlade");
+
     public static final Item edenShickaxe 	   	   = new ItemShickaxe(ToolMaterialMod.edenTools).setName("edenShickaxe");
     public static final Item wildWoodShickaxe 	   = new ItemShickaxe(ToolMaterialMod.wildWoodTools).setName("wildWoodShickaxe");
     public static final Item apalachiaShickaxe     = new ItemShickaxe(ToolMaterialMod.apalachiaTools).setName("apalachiaShickaxe");
@@ -59,4 +67,37 @@ public class TwilightItems {
     public static final Item apalachiaShovel       = new ItemModShovel(ToolMaterialMod.apalachiaTools).setName("apalachiaShovel");
     public static final Item skythernShovel 	   = new ItemModShovel(ToolMaterialMod.skythernTools).setName("skythernShovel");
     public static final Item mortumShovel  	       = new ItemModShovel(ToolMaterialMod.mortumTools).setName("mortumShovel");
+    
+    public static final Item edenSlicer 	   	   = new ItemTwilightSlicer().setName("edenSlicer");
+    public static final Item wildWoodSlicer 	   = new ItemTwilightSlicer().setName("wildWoodSlicer");
+    public static final Item apalachiaSlicer       = new ItemTwilightSlicer().setName("apalachiaSlicer");
+    public static final Item skythernSlicer 	   = new ItemTwilightSlicer().setName("skythernSlicer");
+    public static final Item mortumSlicer  	       = new ItemTwilightSlicer().setName("mortumSlicer");
+    public static final Item haliteSlicer  	       = new ItemTwilightSlicer().setName("haliteSlicer");
+
+    public static final Item edenBlitz 	   	       = new ItemTwilightBlitz().setName("edenBlitz");
+    public static final Item wildWoodBlitz 	       = new ItemTwilightBlitz().setName("wildWoodBlitz");
+    public static final Item apalachiaBlitz        = new ItemTwilightBlitz().setName("apalachiaBlitz");
+    public static final Item skythernBlitz 	       = new ItemTwilightBlitz().setName("skythernBlitz");
+    public static final Item mortumBlitz  	       = new ItemTwilightBlitz().setName("mortumBlitz");
+    public static final Item haliteBlitz  	       = new ItemTwilightBlitz().setName("mortumBlitz");
+
+    public static final Item edenPhaser 	   	   = new ItemTwilightPhaser(24, 0).setName("edenPhaser");
+    public static final Item wildWoodPhaser 	   = new ItemTwilightPhaser(31, 0).setName("wildWoodPhaser");
+    public static final Item apalachiaPhaser       = new ItemTwilightPhaser(35, 0).setName("apalachiaPhaser");
+    public static final Item skythernPhaser 	   = new ItemTwilightPhaser(41, 0).setName("skythernPhaser");
+    public static final Item mortumPhaser  	       = new ItemTwilightPhaser(46, 0).setName("mortumPhaser");
+    public static final Item halitePhaser  	       = new ItemTwilightPhaser(51, 0).setName("halitePhaser");
+
+    public static final Item edenArrow 	   	       = new ItemMod().setName("edenArrow").setCreativeTab(null);
+    public static final Item wildWoodArrow 	       = new ItemMod().setName("wildWoodArrow").setCreativeTab(null);
+    public static final Item apalachiaArrow        = new ItemMod().setName("apalachiaArrow").setCreativeTab(null);
+    public static final Item skythernArrow 	       = new ItemMod().setName("skythernArrow").setCreativeTab(null);
+    public static final Item mortumArrow  	       = new ItemMod().setName("mortumArrow").setCreativeTab(null);
+    
+    public static final Item edenBow 	   	       = new ItemModBow(-1, 31, true, edenArrow).setName("edenBow");
+    public static final Item wildWoodBow 	       = new ItemModBow(-1, 31, true, wildWoodArrow).setName("wildWoodBow");
+    public static final Item apalachiaBow          = new ItemModBow(-1, 31, true, apalachiaArrow).setName("apalachiaBow");
+    public static final Item skythernBow 	   	   = new ItemModBow(-1, 31, true, skythernArrow).setName("skythernBow");
+    public static final Item mortumBow  	       = new ItemModBow(-1, 31, true, mortumArrow).setName("mortumBow");
 }
