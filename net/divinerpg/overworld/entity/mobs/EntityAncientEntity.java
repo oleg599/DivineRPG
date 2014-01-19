@@ -1,5 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -11,7 +12,9 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 public class EntityAncientEntity extends EntityMob implements IBossDisplayData{
@@ -88,10 +91,6 @@ public class EntityAncientEntity extends EntityMob implements IBossDisplayData{
     
     public void onDeath(DamageSource d) {
     	EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-    	
-    	//TODO get chat message to say "The Ancient Entity Has Fallen"
-    	
-        super.onDeath(d);
+    	p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The Ancient Entity Has Fallen."));
     }
-	
 }

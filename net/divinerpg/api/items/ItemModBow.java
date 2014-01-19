@@ -54,12 +54,12 @@ public class ItemModBow extends ItemBow {
     public void registerIcons(IIconRegister icon)
     {
         String prefix = Reference.MOD_ID + ":" + this.name;
-        this.itemIcon = icon.registerIcon(prefix + "Bow_0");
+        this.itemIcon = icon.registerIcon(prefix + "_0");
         this.IIconArray = new IIcon[3];
 
-        this.IIconArray[0] = icon.registerIcon(prefix + "Bow_1");
-        this.IIconArray[1] = icon.registerIcon(prefix + "Bow_2");
-        this.IIconArray[2] = icon.registerIcon(prefix + "Bow_3");
+        this.IIconArray[0] = icon.registerIcon(prefix + "_1");
+        this.IIconArray[1] = icon.registerIcon(prefix + "_2");
+        this.IIconArray[2] = icon.registerIcon(prefix + "_3");
     }
 
     public Item setTextureName(String par1Str)

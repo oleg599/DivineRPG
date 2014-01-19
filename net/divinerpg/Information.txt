@@ -1,0 +1,15 @@
+This is the information file, update this for things you need done ect or just for information
+
+TO DO
+Add the rest of the overworld mobs
+Start on the twilight mobs
+The Config isnt working, find out why (it doesnt write to the file)
+
+CHAT MESSAGES!!!! http://prntscr.com/2kkht3
+If the mob is a boss, make it like this:
+p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The BOSS'S NAME Has Fallen."));
+
+else:
+p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A MOBS NAME."));
+
+The Config has a option for it to show the chat messages or not.

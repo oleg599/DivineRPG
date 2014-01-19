@@ -18,11 +18,13 @@ public class ConfigurationHelper {
 
 		cfg.load();
 		dimensionInit();
+		miscInit();
 		cfg.save();
 	}
 
 	public static boolean keepLoadingEden, keepLoadingWildWoods, keepLoadingApalachia, keepLoadingSkythern, keepLoadingMortum,
 	keepLoadingVethea, keepLoadingArcana, keepLoadingIceika;
+	public static boolean canShowDeathChat;
 
 	public static int Eden, WildWoods, Apalachia, Skythern, Mortum, Vethea, Arcana, Iceika;
 	public static int EdenBiome, WildWoodsBiome, ApalachiaBiome, SkythernBiome, MortumBiome, VetheaBiome, ArcanaBiome, IceikaBiome;
@@ -46,15 +48,20 @@ public class ConfigurationHelper {
 		Arcana = cfg.get("Dimension", "Arcana ID", 16).getInt();
 		Iceika = cfg.get("Dimension", "Iceika ID", 17).getInt();
 
-		keepLoadingEden = cfg.get("Dimension", "Keep Loading Eden", true).getBoolean(keepLoadingEden);
-		keepLoadingWildWoods = cfg.get("Dimension", "Keep Loading The Wild Woods", true).getBoolean(keepLoadingWildWoods);
-		keepLoadingApalachia = cfg.get("Dimension", "Keep Loading Apalachia", true).getBoolean(keepLoadingApalachia);
-		keepLoadingSkythern = cfg.get("Dimension", "Keep Loading Skythern", true).getBoolean(keepLoadingSkythern);
-		keepLoadingMortum = cfg.get("Dimension", "Keep Loading Mortum", true).getBoolean(keepLoadingMortum);
-		keepLoadingVethea = cfg.get("Dimension", "Keep Loading Vethea", true).getBoolean(keepLoadingVethea);
-		keepLoadingArcana = cfg.get("Dimension", "Keep Loading Arcana", true).getBoolean(keepLoadingArcana);
-		keepLoadingIceika = cfg.get("Dimension", "Keep Loading Iceika", true).getBoolean(keepLoadingIceika);
+		keepLoadingEden = cfg.get("Dimension", "Keep Loading Eden", true).getBoolean(true);
+		keepLoadingWildWoods = cfg.get("Dimension", "Keep Loading The Wild Woods", true).getBoolean(true);
+		keepLoadingApalachia = cfg.get("Dimension", "Keep Loading Apalachia", true).getBoolean(true);
+		keepLoadingSkythern = cfg.get("Dimension", "Keep Loading Skythern", true).getBoolean(true);
+		keepLoadingMortum = cfg.get("Dimension", "Keep Loading Mortum", true).getBoolean(true);
+		keepLoadingVethea = cfg.get("Dimension", "Keep Loading Vethea", true).getBoolean(true);
+		keepLoadingArcana = cfg.get("Dimension", "Keep Loading Arcana", true).getBoolean(true);
+		keepLoadingIceika = cfg.get("Dimension", "Keep Loading Iceika", true).getBoolean(true);
+		
 	}	
+	
+	public static void miscInit(){
+		canShowDeathChat = cfg.get("Chat", "Can Show Death Chat For DivineRPG Mobs", false).getBoolean(true);
+	}
 
 	public static void addConfig(String cat, String name, int value) {
 		cfg.get(cat, name, value);

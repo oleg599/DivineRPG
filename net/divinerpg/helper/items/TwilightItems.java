@@ -96,9 +96,9 @@ public class TwilightItems {
     public static final Item skythernArrow      = new ItemMod().setName("skythernArrow").setCreativeTab(null);
     public static final Item mortumArrow        = new ItemMod().setName("mortumArrow").setCreativeTab(null);
 
-    public static final Item edenBow            = new ItemModBow(-1, 31, true, edenArrow).setName("eden");
-    public static final Item wildWoodBow        = new ItemModBow(-1, 31, true, wildWoodArrow).setName("wildWood");
-    public static final Item apalachiaBow       = new ItemModBow(-1, 31, true, apalachiaArrow).setName("apalachia");
-    public static final Item skythernBow        = new ItemModBow(-1, 31, true, skythernArrow).setName("skythern");
-    public static final Item mortumBow          = new ItemModBow(-1, 31, true, mortumArrow).setName("mortum");
+    public static final Item edenBow            = new ItemModBow(-1, 31, true, edenArrow).setName("edenBow");
+    public static final Item wildWoodBow        = new ItemModBow(-1, 31, true, wildWoodArrow).setName("wildWoodBow");
+    public static final Item apalachiaBow       = new ItemModBow(-1, 31, true, apalachiaArrow).setName("apalachiaBow");
+    public static final Item skythernBow        = new ItemModBow(-1, 31, true, skythernArrow).setName("skythernBow");
+    public static final Item mortumBow          = new ItemModBow(-1, 31, true, mortumArrow).setName("mortumBow");
 }
