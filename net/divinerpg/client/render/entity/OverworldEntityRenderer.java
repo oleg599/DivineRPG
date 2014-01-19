@@ -22,21 +22,21 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityHellSpider.class, new RenderSizeable(new ModelSpider(), 0.0F, 1.2F ,EntityResourceLocation.hellSpider));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEnderSpider.class, new RenderSizeable(new ModelSpider(), 0.0F, 0.5F, EntityResourceLocation.enderSpider));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEnderTriplets.class, new RenderDivineMob(new ModelEnderTriplets(), 0.0F, EntityResourceLocation.enderTriplets));	
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAridWarrior.class, new RenderAridWarrior(new ModelAridWarrior(), 0.0F, x.AridWarrior));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoBlue.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, x.Ayeraco_Blue));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoGreen.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, x.Ayeraco_Green));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoPurple.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, x.Ayeraco_Purple));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoRed.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, x.Ayeraco_Red));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoYellow.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, x.Ayeraco_Yellow));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityCaveDramcryx.class, new RenderDivineMob(new ModelDramcryx(), 0.0F, x.CaveDramcryx));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityTheEye.class, new RenderDivineMob(new ModelEye(), 0.0F, x.TheEye));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityFrost.class, new RenderDivineMob(new ModelFrost(), 0.0F, x.Frost));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityIceMan.class, new RenderDivineMob(new ModelBiped(), 0.0F, x.IceMan));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityKingOfScorchers.class, new RenderKingOfScorchers(new ModelKingOfScorchers(), 0.0F, x.KingOfScorchers));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityRainbour.class, new RenderDivineMob(new ModelRainbour(), 0.0F, x.Rainbour));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityRotatick.class, new RenderDivineMob(new ModelRotatick(), 0.0F, x.Rotatick));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityShark.class, new RenderDivineMob(new ModelShark(), 0.0F, x.Shark));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityTheWatcher.class, new RenderWatcher(new ModelWatcher(), 0.0F, x.NetherWatcher));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityWildFire.class, new RenderWildFire(new ModelWildFire(), 0.0F, x.WildFire));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityAridWarrior.class, new RenderAridWarrior(new ModelAridWarrior(), 0.0F, EntityResourceLocation.AridWarrior));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoBlue.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, EntityResourceLocation.Ayeraco_Blue));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoGreen.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, EntityResourceLocation.Ayeraco_Green));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoPurple.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, EntityResourceLocation.Ayeraco_Purple));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoRed.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, EntityResourceLocation.Ayeraco_Red));
+		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoYellow.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, EntityResourceLocation.Ayeraco_Yellow));
+		RenderingRegistry.registerEntityRenderingHandler(EntityCorruptedDramcryx.class, new RenderDivineMob(new ModelDramcryx(), 0.0F, EntityResourceLocation.caveDramcryx));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTheEye.class, new RenderDivineMob(new ModelEye(), 0.0F, EntityResourceLocation.theEye));
+		RenderingRegistry.registerEntityRenderingHandler(EntityFrost.class, new RenderDivineMob(new ModelFrost(), 0.0F, EntityResourceLocation.frost));
+		RenderingRegistry.registerEntityRenderingHandler(EntityIceMan.class, new RenderDivineMob(new ModelBiped(), 0.0F, EntityResourceLocation.iceMan));
+		RenderingRegistry.registerEntityRenderingHandler(EntityKingOfScorchers.class, new RenderDivineMob(new ModelKingScorcher(), 0.0F, EntityResourceLocation.kingOfScorchers));
+		RenderingRegistry.registerEntityRenderingHandler(EntityRainbour.class, new RenderDivineMob(new ModelRainbour(), 0.0F, EntityResourceLocation.rainbour));
+		RenderingRegistry.registerEntityRenderingHandler(EntityRotatick.class, new RenderDivineMob(new ModelRotatick(), 0.0F, EntityResourceLocation.rotatick));
+		RenderingRegistry.registerEntityRenderingHandler(EntityShark.class, new RenderDivineMob(new ModelShark(), 0.0F, EntityResourceLocation.shark));
+		RenderingRegistry.registerEntityRenderingHandler(EntityNetherWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.netherWatcher));
+		RenderingRegistry.registerEntityRenderingHandler(EntityWildFire.class, new RenderDivineMob(new ModelWildFire(), 0.0F, EntityResourceLocation.wildFire));
 	}
 }
