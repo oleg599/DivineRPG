@@ -7,7 +7,9 @@ import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
@@ -16,28 +18,38 @@ public class VanillaBlock extends BlockMod
 {
     
     private String name;
+    
+	private static SoundType stone = Block.field_149779_h;
+	private static SoundType grass = Block.field_149779_h;
+	private static SoundType cloth = Block.field_149779_h;
+	private static SoundType wood = Block.field_149779_h;
 
 	public VanillaBlock(Material m)
 	{
 		super(m);
-		this.func_149647_a(DivineRPGTabs.blocks);
-		func_149672_a(field_149780_i);
+		setCreativeTab(DivineRPGTabs.blocks);
+		setSoundType(stone);
 		if(this == VanillaBlocks.purpleStone || this == VanillaBlocks.blueStone){
 			func_149715_a(1.0F);
-			func_149672_a(field_149779_h);
+			setSoundType(grass);
 		}
 		if(this == VanillaBlocks.checker || this == VanillaBlocks.rainbowWool){
-			func_149672_a(field_149775_l);
+			setSoundType(cloth);
 		}
 		if(this == VanillaBlocks.crate){
-			func_149672_a(field_149766_f);
+			setSoundType(wood);
 		}
 	}
 	
 	public static Item getBlock(Block b){
 		return Item.func_150898_a(b);
 	}
-	
+	public Block setCreativeTab(CreativeTabs name) {
+        return func_149647_a(name);
+    }
+	public Block setSoundType(Block.SoundType name) {
+    	return func_149672_a(name);
+    }
 	
 	public Item func_149650_a(int par1, Random par2, int par3) {
 		return (this == VanillaBlocks.bloodgemOre) ? VanillaItems.bloodgem

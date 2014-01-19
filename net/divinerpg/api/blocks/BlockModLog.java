@@ -6,12 +6,13 @@ import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRotatedPillar;
+import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -24,11 +25,21 @@ public class BlockModLog extends BlockRotatedPillar{
 	String name;
     protected IIcon[] sideChange;
     protected IIcon[] topChange;
+    
+	private static SoundType woodSound = Block.field_149766_f;
+    private static Material wood = Material.field_151575_d;
 
     public BlockModLog() {
-        super(Material.field_151575_d);
-        func_149647_a(DivineRPGTabs.blocks);
-        this.func_149672_a(field_149766_f);
+        super(wood);
+        setCreativeTab(DivineRPGTabs.blocks);
+        setSoundType(woodSound);
+    }
+    
+    public Block setCreativeTab(CreativeTabs name) {
+        return func_149647_a(name);
+    }
+	public Block setSoundType(Block.SoundType name) {
+    	return func_149672_a(name);
     }
     
     @SideOnly(Side.CLIENT)

@@ -128,7 +128,8 @@ public class VanillaItems {
     public static final Item divineAxe          = new ItemModAxe(ToolMaterialMod.Divine).setName("divineAxe");
     public static final Item divineShovel       = new ItemModShovel(ToolMaterialMod.Divine).setName("divineShovel");
 
-    public static final Item bacon              = new ItemModFood(5, 3.0F, false).setName("bacon");
+    public static final Item bacon              = new ItemModFood(1, 3.0F, false).setName("bacon");
+    public static final Item baconCooked        = new ItemModFood(10, 10.0F, false).setName("baconCooked");
     public static final Item boiledEgg          = new ItemModFood(4, 0.5F, false).setName("boiledEgg");
     public static final Item cheese             = new ItemModFood(2, 0.2F, false).setName("cheese");
     public static final Item whiteMushroom      = new ItemModFood(1, 0.1F, false).setName("whiteMushroom");

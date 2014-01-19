@@ -8,7 +8,9 @@ import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.items.TwilightItems;
 import net.minecraft.block.Block;
+import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
@@ -17,17 +19,24 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class TwilightBlock extends Block
 {
-
+	
 	public TwilightBlock(Material m)
 	{
 		super(m);
-		this.func_149647_a(DivineRPGTabs.blocks);
-		func_149672_a(Block.field_149780_i);
+		setCreativeTab(DivineRPGTabs.blocks);
+		setSoundType(Block.field_149780_i);
 	}
 	
 	public static Item getBlock(Block b){
 		return Item.func_150898_a(b);
 	}
+	
+	public Block setCreativeTab(CreativeTabs name) {
+        return func_149647_a(name);
+    }
+	public Block setSoundType(Block.SoundType name) {
+    	return func_149672_a(name);
+    }
 
 	public Item func_149650_a(int par1, Random par2, int par3) {
 		return (this == TwilightBlocks.edenOre) ? TwilightItems.edenFragments 

@@ -6,10 +6,11 @@ import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;
+import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -17,13 +18,31 @@ public class BlockModLeaves extends BlockLeavesBase
 {
 	int[] adjacentTreeBlocks;
 	String name;
+	private static SoundType grass = Block.field_149779_h;
+    private static Material leaf = Material.field_151584_j;
+
 	public BlockModLeaves()
 	{
-		super(Material.field_151584_j, false);
-		this.func_149675_a(true);
-		this.func_149647_a(DivineRPGTabs.blocks);
-		this.func_149672_a(field_149779_h);
+		super(leaf, false);
+		suckTit(true);
+		setCreativeTab(DivineRPGTabs.blocks);
+		setSoundType(grass);
 	}
+	
+	public Block setCreativeTab(CreativeTabs name) {
+        return func_149647_a(name);
+    }
+	public Block setSoundType(Block.SoundType name) {
+    	return func_149672_a(name);
+    }
+	/**
+	 * Checks if the block can tick. False by default.
+	 * @param please
+	 * @return
+	 */
+	public Block suckTit(boolean hard) {
+		return func_149675_a(hard);
+    }
 
     public void func_149749_a(World world, int par2, int par3, int par4, Block par5, int par6)
     {

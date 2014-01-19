@@ -6,12 +6,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -25,14 +25,32 @@ public class MobPumpkin extends BlockDirectional
 	private IIcon top;
 	@SideOnly(Side.CLIENT)
 	private IIcon front;
+    private static SoundType wood = Block.field_149766_f;
+    private static Material pumpkin = Material.field_151572_C;
 
 	public MobPumpkin() {
-		super(Material.field_151572_C);
-		this.func_149675_a(true);
+		super(pumpkin);
+		suckTit(true);
 		func_149711_c(1.0F);
-		this.func_149647_a(DivineRPGTabs.blocks);
-		this.func_149672_a(field_149766_f);
+		setCreativeTab(DivineRPGTabs.blocks);
+		setSoundType(wood);
 	}
+	
+	public Block setCreativeTab(CreativeTabs name) {
+        return func_149647_a(name);
+    }
+	public Block setSoundType(Block.SoundType name) {
+    	return func_149672_a(name);
+    }
+	/**
+	 * Checks if the block can tick. False by default.
+	 * @param please
+	 * @return
+	 */
+	public Block suckTit(boolean hard)
+    {
+		return func_149675_a(hard);
+    }
 
 	@SideOnly(Side.CLIENT)
 	public IIcon func_149691_a(int par1, int par2)
