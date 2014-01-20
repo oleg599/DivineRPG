@@ -69,12 +69,12 @@ public class TwilightItems {
     public static final Item skythernShovel     = new ItemModShovel(ToolMaterialMod.skythernTools).setName("skythernShovel");
     public static final Item mortumShovel       = new ItemModShovel(ToolMaterialMod.mortumTools).setName("mortumShovel");
 
-    public static final Item edenSlicer         = new ItemTwilightSlicer(12).setName("edenSlicer").setCreativeTab(DivineRPGTabs.ranged);
-    public static final Item wildWoodSlicer     = new ItemTwilightSlicer(18).setName("wildWoodSlicer").setCreativeTab(DivineRPGTabs.ranged);
-    public static final Item apalachiaSlicer    = new ItemTwilightSlicer(22).setName("apalachiaSlicer").setCreativeTab(DivineRPGTabs.ranged);
-    public static final Item skythernSlicer     = new ItemTwilightSlicer(28).setName("skythernSlicer").setCreativeTab(DivineRPGTabs.ranged);
-    public static final Item mortumSlicer       = new ItemTwilightSlicer(36).setName("mortumSlicer").setCreativeTab(DivineRPGTabs.ranged);
-    public static final Item haliteSlicer       = new ItemTwilightSlicer(42).setName("haliteSlicer").setCreativeTab(DivineRPGTabs.ranged);
+    public static final Item edenSlicer         = new ItemTwilightSlicer(12).setName("edenSlicer");
+    public static final Item wildWoodSlicer     = new ItemTwilightSlicer(18).setName("wildWoodSlicer");
+    public static final Item apalachiaSlicer    = new ItemTwilightSlicer(22).setName("apalachiaSlicer");
+    public static final Item skythernSlicer     = new ItemTwilightSlicer(28).setName("skythernSlicer");
+    public static final Item mortumSlicer       = new ItemTwilightSlicer(36).setName("mortumSlicer");
+    public static final Item haliteSlicer       = new ItemTwilightSlicer(42).setName("haliteSlicer");
 
     public static final Item edenBlitz          = new ItemTwilightBlitz(14, "Eden Dust").setName("edenBlitz");
     public static final Item wildWoodBlitz      = new ItemTwilightBlitz(19, "WildWood Dust").setName("wildWoodBlitz");

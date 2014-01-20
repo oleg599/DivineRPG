@@ -7,8 +7,11 @@ import net.divinerpg.api.items.ItemModHoe;
 import net.divinerpg.api.items.ItemModPickaxe;
 import net.divinerpg.api.items.ItemModShovel;
 import net.divinerpg.api.items.ItemModSword;
+import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.nether.items.ItemCallOfTheWatcher;
+import net.divinerpg.overworld.items.VileStorm;
+import net.divinerpg.twilight.items.ItemTwilightSlicer;
 import net.divinerpg.vanilla.items.ItemInfernoSword;
 import net.divinerpg.vanilla.items.ItemMysteriousClock;
 import net.divinerpg.vanilla.items.ItemShickaxe;
@@ -97,7 +100,10 @@ public class VanillaItems {
     public static final Item enderSwordGreen    = new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordGreen");
     public static final Item enderSwordRed      = new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordRed");
     public static final Item enderSwordYellow   = new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordYellow");
-
+    
+    public static final Item shuriken       	= new ItemTwilightSlicer(4).setName("shuriken");
+    public static final Item vileStorm       	= new VileStorm(4).setName("vileStorm");
+    
     public static final Item rupeeShickaxe      = new ItemShickaxe(ToolMaterialMod.RupeeShick).setName("rupeeShickaxe");
     public static final Item rupeePickaxe       = new ItemModPickaxe(ToolMaterialMod.Rupee).setName("rupeePickaxe");
     public static final Item rupeeAxe           = new ItemModAxe(ToolMaterialMod.Rupee).setName("rupeeAxe");

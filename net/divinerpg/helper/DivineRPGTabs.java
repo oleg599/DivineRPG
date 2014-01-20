@@ -12,7 +12,7 @@ public class DivineRPGTabs {
 	public static CreativeTabs swords = new CreativeTabs("Swords")
 		{public Item getTabIconItem() {return VanillaItems.aquaton;}};
 	public static CreativeTabs ranged = new CreativeTabs("Ranged")
-		{public Item getTabIconItem() {return VanillaItems.noImage;}};
+		{public Item getTabIconItem() {return VanillaItems.vileStorm;}};
 	public static CreativeTabs tools = new CreativeTabs("Tools")
 		{public Item getTabIconItem() {return VanillaItems.rupeeShickaxe;}};
 	public static CreativeTabs items = new CreativeTabs("Materials")

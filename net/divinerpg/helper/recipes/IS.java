@@ -22,7 +22,9 @@ public class IS {
 		public static ItemStack arlemiteSword = new ItemStack(VanillaItems.arlemiteSword);
 		public static ItemStack rupeeSword = new ItemStack(VanillaItems.rupeeSword);
 		public static ItemStack realmiteSword = new ItemStack(VanillaItems.realmiteSword);
-		
+		public static ItemStack shuriken = new ItemStack(VanillaItems.shuriken);
+		public static ItemStack vile = new ItemStack(VanillaItems.vileStorm);
+
 		//Materials
 		public static ItemStack shadow = new ItemStack(VanillaItems.shadowBar);
 		public static ItemStack netherChuck = new ItemStack(VanillaItems.netheriteChunk);
