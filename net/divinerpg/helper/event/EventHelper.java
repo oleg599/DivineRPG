@@ -14,17 +14,23 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class EventHelper {
+	
+	
 
 	@SubscribeEvent
 	public void playerJoinWorld(EntityJoinWorldEvent e) {
+		
 		if(e.entity instanceof EntityPlayer) {
 			EntityPlayer p = (EntityPlayer) e.entity;
 			if(p.worldObj.isRemote) {
 				try {
 					if (UpdateChecker.isUpdateAvailable()) {
+						BufferedReader versionFile = new BufferedReader(new InputStreamReader(new URL("https://dl.dropboxusercontent.com/s/xddtt5g4g8xz1ut/DivineRPG1.7Update.txt").openStream()));
+					    String curVersion = versionFile.readLine();
 						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "Thank you for downloading and playing DivineRPG!"));
-						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "[New Version: " + Reference.MOD_VERSION + "]"));
+						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "[Version: " + Reference.MOD_VERSION + "]"));
 						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "A DivineRPG update is avaliable."));
+						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "[New Version: " + curVersion + "]"));
 					}
 					if ((!UpdateChecker.isUpdateAvailable())) {
 						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "Thank you for downloading and playing DivineRPG!"));
