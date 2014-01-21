@@ -42,6 +42,7 @@ public class EntitySlicer extends EntityThrowable {
     public EntitySlicer(World par1World, double par2, double par3, double par4){
         super(par1World, par2, par3, par4);
     }
+    
 
     /**
      * Called when this EntityThrowable hits a block or entity.
