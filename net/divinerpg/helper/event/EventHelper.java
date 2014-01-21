@@ -21,21 +21,20 @@ public class EventHelper {
 			EntityPlayer p = (EntityPlayer) e.entity;
 			if(p.worldObj.isRemote) {
 				try {
-					if (UpdateChecker.isUpdateAvailable())
-					{
-						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.RED, "A new update is avalible for DivineRPG!"));
+					if (UpdateChecker.isUpdateAvailable()) {
+						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "Thank you for downloading and playing DivineRPG!"));
 						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "[New Version: " + Reference.MOD_VERSION + "]"));
+						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "A DivineRPG update is avaliable."));
 					}
-					if ((!UpdateChecker.isUpdateAvailable()))
-					{
+					if ((!UpdateChecker.isUpdateAvailable())) {
 						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "Thank you for downloading and playing DivineRPG!"));
 						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "[Version: " + Reference.MOD_VERSION + "]"));
+						p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "DivineRPG is up to date."));
 					}
 				} catch (MalformedURLException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
+					
 				} catch (IOException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 			

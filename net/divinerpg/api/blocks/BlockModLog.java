@@ -13,6 +13,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -41,12 +42,7 @@ public class BlockModLog extends BlockRotatedPillar{
 	public Block setSoundType(Block.SoundType name) {
     	return func_149672_a(name);
     }
-    
-    @SideOnly(Side.CLIENT)
-    public IIcon func_149691_a(int par1, int par2) {
-        return par1 == 1 ? top : (par1 == 0 ? top : side);
-    }
-    
+
     @SideOnly(Side.CLIENT)
     public void func_149651_a(IIconRegister icon) {
         side = icon.registerIcon(getTextureName() + "_side");
@@ -136,5 +132,34 @@ public class BlockModLog extends BlockRotatedPillar{
     protected IIcon func_150161_d(int var1)
     {
         return this.topChange[var1 % this.topChange.length];
+    }
+	
+    public int func_149660_a(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9)
+    {
+        int var10 = par9 & 3;
+        byte var11 = 0;
+
+        switch (par5)
+        {
+            case 0:
+            case 1:
+                var11 = 0;
+                break;
+            case 2:
+            case 3:
+                var11 = 8;
+                break;
+            case 4:
+            case 5:
+                var11 = 4;
+        }
+
+        return var10 | var11;
+    }
+    
+    public IIcon func_149691_a(int par1, int par2)
+    {
+        int var3 = par2 & 12;
+        return var3 == 0 && (par1 == 1 || par1 == 0) ? this.top : (var3 == 4 && (par1 == 5 || par1 == 4) ? this.top  : (var3 == 8 && (par1 == 2 || par1 == 3) ? top  : this.side ));
     }
 }
