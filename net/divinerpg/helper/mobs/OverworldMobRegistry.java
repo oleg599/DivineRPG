@@ -1,7 +1,30 @@
 package net.divinerpg.helper.mobs;
 
 import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.overworld.entity.mobs.*;
+import net.divinerpg.vanilla.entity.mobs.EntityAncientEntity;
+import net.divinerpg.vanilla.entity.mobs.EntityAridWarrior;
+import net.divinerpg.vanilla.entity.mobs.EntityCaveCrawler;
+import net.divinerpg.vanilla.entity.mobs.EntityCorruptedDramcryx;
+import net.divinerpg.vanilla.entity.mobs.EntityCrab;
+import net.divinerpg.vanilla.entity.mobs.EntityCyclops;
+import net.divinerpg.vanilla.entity.mobs.EntityDesertCrawler;
+import net.divinerpg.vanilla.entity.mobs.EntityEnderSpider;
+import net.divinerpg.vanilla.entity.mobs.EntityEnderTriplets;
+import net.divinerpg.vanilla.entity.mobs.EntityEnderWatcher;
+import net.divinerpg.vanilla.entity.mobs.EntityFrost;
+import net.divinerpg.vanilla.entity.mobs.EntityHellSpider;
+import net.divinerpg.vanilla.entity.mobs.EntityIceMan;
+import net.divinerpg.vanilla.entity.mobs.EntityJungleDramcryx;
+import net.divinerpg.vanilla.entity.mobs.EntityKingCrab;
+import net.divinerpg.vanilla.entity.mobs.EntityKingOfScorchers;
+import net.divinerpg.vanilla.entity.mobs.EntityNetherWatcher;
+import net.divinerpg.vanilla.entity.mobs.EntityRainbour;
+import net.divinerpg.vanilla.entity.mobs.EntityRotatick;
+import net.divinerpg.vanilla.entity.mobs.EntityScorcher;
+import net.divinerpg.vanilla.entity.mobs.EntityShark;
+import net.divinerpg.vanilla.entity.mobs.EntityTheEye;
+import net.divinerpg.vanilla.entity.mobs.EntityWhale;
+import net.divinerpg.vanilla.entity.mobs.EntityWildFire;
 
 public class OverworldMobRegistry {
 

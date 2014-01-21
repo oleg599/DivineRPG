@@ -10,38 +10,37 @@ import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-public class ItemMysteriousClock extends Item
+public class ItemCallOfTheWatcher extends Item
 {
 	private World worldObj;
     private String name;
 
-	public ItemMysteriousClock()
+	public ItemCallOfTheWatcher()
 	{
 		super();
 		setMaxStackSize(1);
 		setCreativeTab(DivineRPGTabs.spawner);
-		setName("myseriousClock");
 	}
-
 	/**
 	 * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return
 	 * True if something happen and false if it don't. This is for ITEMS, not BLOCKS
 	 */
-	@Override
+	//Un-comment after adding EntityTheWatcher
+	/*@Override
 	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer player, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
 		int var4 = 0;
 		if(!par3World.isRemote){
 			if(player.capabilities.isCreativeMode){
 				while(var4 < 1)//1 gets the amount of mobs to spawn at once
 				{
-					EntityAncientEntity var5 = new EntityAncientEntity(par3World);
+					EntityTheWatcher var5 = new EntityTheWatcher(par3World);
 					var5.setPosition(par4, par5 +1, par6);
 					par3World.spawnEntityInWorld(var5);
 					var4++;
 				}
 			}else{
 				while(var4 < 1) {
-					EntityAncientEntity var5 = new EntityAncientEntity(par3World);
+					EntityTheWatcher var5 = new EntityTheWatcher(par3World);
 					var5.setPosition(par4, par5 + 1, par6);
 					par3World.spawnEntityInWorld(var5);
 					var4++;
@@ -50,7 +49,7 @@ public class ItemMysteriousClock extends Item
 			}
 		}
 		return true;
-	}
+	}*/
 	public Item setTextureName(String par1Str)
     {
         this.iconString = (Reference.PREFIX + par1Str);

@@ -8,7 +8,7 @@ import net.divinerpg.helper.mobs.OverworldMobRegistry;
 import net.divinerpg.helper.mobs.TwilightMobRegistry;
 import net.divinerpg.helper.recipes.OverworldRecipeHelper;
 import net.divinerpg.helper.recipes.TwilightRecipeHelper;
-import net.divinerpg.overworld.worldgen.WorldGenOverworld;
+import net.divinerpg.vanilla.worldgen.WorldGenOverworld;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
