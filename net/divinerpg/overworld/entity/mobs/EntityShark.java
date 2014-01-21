@@ -2,17 +2,15 @@ package net.divinerpg.overworld.entity.mobs;
 
 import java.util.List;
 
+import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.VanillaItems;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
@@ -20,30 +18,15 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class EntityShark extends EntityMob
+public class EntityShark extends EntityDivineRPGMob
 {
     private int angerLevel = 0;
     private int randomSoundDelay = 5;
-    public float field_70861_d = 0.0F;
-    public float field_70862_e = 0.0F;
-    public float field_70859_f = 0.0F;
-    public float field_70860_g = 0.0F;
-    public float field_70867_h = 0.0F;
-    public float field_70868_i = 0.0F;
-    public float tentacleAngle = 0.0F;
-    public float lastTentacleAngle = 0.0F;
-    private float randomMotionSpeed = 0.0F;
-    private float field_70864_bA = 0.0F;
-    private float field_70871_bB = 0.0F;
-    private float randomMotionVecX = 0.0F;
-    private float randomMotionVecY = 0.0F;
-    private float randomMotionVecZ = 0.0F;
 
     public EntityShark(World var1)
     {
         super(var1);
         this.setSize(0.95F, 0.95F);
-        this.field_70864_bA = 1.0F / (this.rand.nextFloat() + 1.0F) * 0.2F;
     }
 
     protected void applyEntityAttributes() {
@@ -207,10 +190,7 @@ public class EntityShark extends EntityMob
     }
     
     public void onDeath(DamageSource d) {
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Shark."));
-		}
+		super.onDeath(d);
 		if (!this.worldObj.isRemote)
         {
         	
@@ -221,5 +201,10 @@ public class EntityShark extends EntityMob
             	//((EntityPlayer) var3).addStat(AchievementPageDivineRPG.feedingOnTheFish, 1); //TODO when achivements
             }
         }
+	}
+
+	@Override
+	public String mobName() {
+		return "Shark";
 	}
 }

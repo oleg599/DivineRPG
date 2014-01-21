@@ -2,14 +2,13 @@ package net.divinerpg.overworld.entity.mobs;
 
 import java.util.Calendar;
 
+import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.overworld.entity.projectiles.EntitySparklerFX;
 import net.minecraft.client.Minecraft;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityCreature;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
@@ -19,7 +18,6 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.potion.Potion;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
@@ -29,9 +27,10 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class EntityRainbour extends EntityCreature
+public class EntityRainbour extends EntityDivineRPGMob
 {
 	private ChunkCoordinates currentFlightTarget;
+
 	public EntityRainbour(World par1World)
 	{
 		super(par1World);
@@ -40,12 +39,12 @@ public class EntityRainbour extends EntityCreature
 		float moveSpeed = 0.3F;
 		this.getNavigator().setAvoidsWater(true);
 		this.tasks.addTask(1, new EntityAISwimming(this));
-		this.tasks.addTask(3, new EntityAIWander(this, moveSpeed));
-		//this.tasks.addTask(4, new EntityAIAvoidEntity(this, EntityPlayer.class, 16.0F, 0.23F, 0.4F));
-		this.tasks.addTask(5, new EntityAIAttackOnCollide(this, moveSpeed, true));
-		this.tasks.addTask(9, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
-		this.tasks.addTask(9, new EntityAILookIdle(this));
-		this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true));
+		this.tasks.addTask(2, new EntityAIWander(this, moveSpeed));
+		//this.tasks.addTask(3, new EntityAIAvoidEntity(this, EntityPlayer.class, 16.0F, 0.23F, 0.4F));
+		this.tasks.addTask(4, new EntityAIAttackOnCollide(this, moveSpeed, true));
+		this.tasks.addTask(5, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+		this.tasks.addTask(6, new EntityAILookIdle(this));
+		this.targetTasks.addTask(7, new EntityAIHurtByTarget(this, true));
 	}
 
 	public boolean isAIEnabled()
@@ -60,56 +59,14 @@ public class EntityRainbour extends EntityCreature
 		this.dataWatcher.addObject(16, new Byte((byte)0));
 	}
 
-	/*public boolean attackEntityAsMob(Entity par1Entity)
-	{
-		int var2 = this.getAttackStrength(par1Entity);
-
-		if (this.isPotionActive(Potion.damageBoost))
-		{
-			var2 += 3 << this.getActivePotionEffect(Potion.damageBoost).getAmplifier();
-		}
-
-		if (this.isPotionActive(Potion.weakness))
-		{
-			var2 -= 2 << this.getActivePotionEffect(Potion.weakness).getAmplifier();
-		}
-
-		int var3 = 0;
-
-		if (par1Entity instanceof EntityLiving)
-		{
-			var2 += EnchantmentHelper.getEnchantmentModifierLiving(this, (EntityLiving)par1Entity);
-			var3 += EnchantmentHelper.getKnockbackModifier(this, (EntityLiving)par1Entity);
-		}
-
-		boolean var4 = par1Entity.attackEntityFrom(DamageSource.causeMobDamage(this), var2);
-
-		if (var4)
-		{
-			if (var3 > 0)
-			{
-				par1Entity.addVelocity((double)(-MathHelper.sin(this.rotationYaw * (float)Math.PI / 180.0F) * (float)var3 * 0.5F), 0.1D, (double)(MathHelper.cos(this.rotationYaw * (float)Math.PI / 180.0F) * (float)var3 * 0.5F));
-				this.motionX *= 0.6D;
-				this.motionZ *= 0.6D;
-			}
-
-			int var5 = EnchantmentHelper.getFireAspectModifier(this);
-
-			if (var5 > 0)
-			{
-				par1Entity.setFire(var5 * 4);
-			}
-		}
-
-		return var4;
-	}*/
-
+	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(300.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(33.0D);
 	}
+
 	/**
 	 * Returns the current armor value as determined by a call to InventoryPlayer.getTotalArmorValue
 	 */
@@ -262,13 +219,7 @@ public class EntityRainbour extends EntityCreature
 
 	}
 
-
-	/**
-	 * Drop 0-2 items of this living's type
-	 */
-	protected void dropFewItems(boolean var1, int var2)
-	{
-
+	protected void dropFewItems(boolean var1, int var2) {
 		this.func_145779_a(VanillaItems.healingStone, 1);
 	}
 
@@ -356,25 +307,20 @@ public class EntityRainbour extends EntityCreature
 	public void initCreature() {}
 
 	@SideOnly(Side.CLIENT)
-	public void onLivingUpdate()
-	{
+	public void onLivingUpdate() {
 		super.onLivingUpdate();
-		for (int var3 = 0; var3 < 8; ++var3)
-		{
-			//EntitySparklerFX var20 = new EntitySparklerFX(this.worldObj, this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width, this.posY + this.rand.nextDouble() * (double)this.height - 0.25D, this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width, (this.rand.nextDouble() - 0.5D) * 2.0D, -this.rand.nextDouble(), (this.rand.nextDouble() - 0.5D) * 2.0D);
-			//FMLClientHandler.instance().getClient().effectRenderer.addEffect(var20);
+		for (int var3 = 0; var3 < 8; ++var3) {
+			EntitySparklerFX var20 = new EntitySparklerFX(this.worldObj, this.posX + (this.rand.nextDouble() - 0.5D) * (double)this.width, this.posY + this.rand.nextDouble() * (double)this.height - 0.25D, this.posZ + (this.rand.nextDouble() - 0.5D) * (double)this.width, (this.rand.nextDouble() - 0.5D) * 2.0D, -this.rand.nextDouble(), (this.rand.nextDouble() - 0.5D) * 2.0D);
+			FMLClientHandler.instance().getClient().effectRenderer.addEffect(var20);
 		}
 	}
 
-	protected boolean isValidLightLevel()
-	{    
+	protected boolean isValidLightLevel() {    
 		return true;
 	}
 
-	public void onDeath(DamageSource d) {
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Rainbour."));
-		}
+	@Override
+	public String mobName() {
+		return "Rainbour";
 	}
 }

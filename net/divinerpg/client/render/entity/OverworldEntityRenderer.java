@@ -1,15 +1,20 @@
 package net.divinerpg.client.render.entity;
 
 import net.divinerpg.client.render.*;
+import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.VanillaItems;
 import net.divinerpg.overworld.entity.mobs.*;
 import net.divinerpg.overworld.entity.mobs.models.*;
+import net.divinerpg.overworld.entity.projectiles.*;
 import net.minecraft.client.model.*;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class OverworldEntityRenderer {
 
 	public static void init(){
-		RenderingRegistry.registerEntityRenderingHandler(EntityEnderWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.enderWatcher));
+        RenderingRegistry.registerEntityRenderingHandler(EntityShuriken.class, new RenderIconProjectile(VanillaItems.shuriken));
+        RenderingRegistry.registerEntityRenderingHandler(EntityVileStorm.class, new RenderIconProjectile(VanillaItems.vileStorm));
+        RenderingRegistry.registerEntityRenderingHandler(EntityEnderWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.enderWatcher));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCrab.class, new RenderDivineMob(new ModelCrab(), 0.0F, EntityResourceLocation.crab));
 		RenderingRegistry.registerEntityRenderingHandler(EntityKingCrab.class, new RenderSizeable(new ModelCrab(), 0.0F, 1.8F, EntityResourceLocation.crab));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCaveCrawler.class, new RenderDivineMob(new ModelCrawler(), 0.0F, EntityResourceLocation.caveCrawler));
@@ -23,11 +28,11 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityEnderSpider.class, new RenderSizeable(new ModelSpider(), 0.0F, 0.5F, EntityResourceLocation.enderSpider));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEnderTriplets.class, new RenderDivineMob(new ModelEnderTriplets(), 0.0F, EntityResourceLocation.enderTriplets));	
 		RenderingRegistry.registerEntityRenderingHandler(EntityAridWarrior.class, new RenderDivineMob(new ModelAridWarrior(), 0.0F, EntityResourceLocation.aridWarrior));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoBlue.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, EntityResourceLocation.Ayeraco_Blue));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoGreen.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, EntityResourceLocation.Ayeraco_Green));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoPurple.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, EntityResourceLocation.Ayeraco_Purple));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoRed.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, EntityResourceLocation.Ayeraco_Red));
-		//RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoYellow.class, new RenderAyeraco(new ModelAyeraco(), 0.0F, EntityResourceLocation.Ayeraco_Yellow));
+		RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoBlue.class, new RenderDivineMob(new ModelAyeraco(), 0.0F, EntityResourceLocation.ayeraco_Blue));
+		RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoGreen.class, new RenderDivineMob(new ModelAyeraco(), 0.0F, EntityResourceLocation.ayeraco_Green));
+		RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoPurple.class, new RenderDivineMob(new ModelAyeraco(), 0.0F, EntityResourceLocation.ayeraco_Purple));
+		RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoRed.class, new RenderDivineMob(new ModelAyeraco(), 0.0F, EntityResourceLocation.ayeraco_Red));
+		RenderingRegistry.registerEntityRenderingHandler(EntityAyeracoYellow.class, new RenderDivineMob(new ModelAyeraco(), 0.0F, EntityResourceLocation.ayeraco_Yellow));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCorruptedDramcryx.class, new RenderDivineMob(new ModelDramcryx(), 0.0F, EntityResourceLocation.caveDramcryx));
 		RenderingRegistry.registerEntityRenderingHandler(EntityTheEye.class, new RenderDivineMob(new ModelEye(), 0.0F, EntityResourceLocation.theEye));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFrost.class, new RenderDivineMob(new ModelFrost(), 0.0F, EntityResourceLocation.frost));

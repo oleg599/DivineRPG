@@ -1,5 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
+import net.divinerpg.api.entity.EntityDivineRPGBoss;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.client.Minecraft;
@@ -7,17 +8,15 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.IBossDisplayData;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
-public class EntityAncientEntity extends EntityMob implements IBossDisplayData{
+public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDisplayData{
 	
 	public EntityAncientEntity(World par1World) {
 		super(par1World);
@@ -67,9 +66,6 @@ public class EntityAncientEntity extends EntityMob implements IBossDisplayData{
         return "mob.irongolem.death";
     }
 
-    protected Item func_146068_u() {
-        return VanillaItems.divineShards;
-    }
     
     protected void dropFewItems(boolean par1, int par2) {
     	
@@ -88,9 +84,13 @@ public class EntityAncientEntity extends EntityMob implements IBossDisplayData{
             this.func_145779_a(i2, 1);
         }
     }
-    
-    public void onDeath(DamageSource d) {
-    	EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-    	p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The Ancient Entity Has Fallen."));
+
+    protected Item func_146068_u() {
+        return VanillaItems.divineShards;
     }
+
+	@Override
+	public String mobName() {
+		return "Ancient Entity";
+	}
 }

@@ -2,6 +2,7 @@ package net.divinerpg.overworld.entity.mobs;
 
 import java.util.List;
 
+import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.VanillaItems;
@@ -9,8 +10,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.passive.EntityWaterMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -18,7 +17,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
-public class EntityWhale extends EntityMob {
+public class EntityWhale extends EntityDivineRPGMob {
 
 	private int angerLevel = 0;
 	private int randomSoundDelay = 5;
@@ -177,15 +176,8 @@ public class EntityWhale extends EntityMob {
 		this.randomSoundDelay = this.rand.nextInt(40);
 	}
 
-	public void onCollideWithPlayer(EntityPlayer par1EntityPlayer)
-	{
-		//par1EntityPlayer.attackEntityFrom(DamageSource.causeMobDamage(par1EntityPlayer), (float)this.getEntityAttribute(SharedMonsterAttributes.attackDamage).getAttributeValue());
-	}
-
-	public void onDeath(DamageSource d) {
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Whale."));
-		}
+	@Override
+	public String mobName() {
+		return "Whale";
 	}
 }

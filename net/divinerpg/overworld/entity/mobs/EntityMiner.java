@@ -1,13 +1,11 @@
 package net.divinerpg.overworld.entity.mobs;
 
+import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -17,10 +15,8 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
-public class EntityMiner extends EntityZombie
+public class EntityMiner extends EntityDivineRPGMob
 {
     private static final ItemStack defaultHeldItem = new ItemStack(Items.diamond_pickaxe, 1);
 
@@ -98,11 +94,10 @@ public class EntityMiner extends EntityZombie
                 this.func_145779_a(Item.func_150898_a(Blocks.torch), 64);
         }
     }
-    
-    public void onDeath(DamageSource d) {
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Undead Miner."));
-		}
+
+	@Override
+	public String mobName() {
+		// TODO Auto-generated method stub
+		return "Undead Miner";
 	}
 }

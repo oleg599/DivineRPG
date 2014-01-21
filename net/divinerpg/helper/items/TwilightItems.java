@@ -3,6 +3,7 @@ package net.divinerpg.helper.items;
 import net.divinerpg.api.items.*;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.material.*;
+import net.divinerpg.overworld.items.ItemThrowable;
 import net.divinerpg.twilight.items.*;
 import net.divinerpg.vanilla.items.*;
 import net.minecraft.item.Item;
@@ -69,12 +70,12 @@ public class TwilightItems {
     public static final Item skythernShovel     = new ItemModShovel(ToolMaterialMod.skythernTools).setName("skythernShovel");
     public static final Item mortumShovel       = new ItemModShovel(ToolMaterialMod.mortumTools).setName("mortumShovel");
 
-    public static final Item edenSlicer         = new ItemTwilightSlicer(12).setName("edenSlicer");
-    public static final Item wildWoodSlicer     = new ItemTwilightSlicer(18).setName("wildWoodSlicer");
-    public static final Item apalachiaSlicer    = new ItemTwilightSlicer(22).setName("apalachiaSlicer");
-    public static final Item skythernSlicer     = new ItemTwilightSlicer(28).setName("skythernSlicer");
-    public static final Item mortumSlicer       = new ItemTwilightSlicer(36).setName("mortumSlicer");
-    public static final Item haliteSlicer       = new ItemTwilightSlicer(42).setName("haliteSlicer");
+    public static final Item edenSlicer         = new ItemThrowable(12).setName("edenSlicer");
+    public static final Item wildWoodSlicer     = new ItemThrowable(18).setName("wildWoodSlicer");
+    public static final Item apalachiaSlicer    = new ItemThrowable(22).setName("apalachiaSlicer");
+    public static final Item skythernSlicer     = new ItemThrowable(28).setName("skythernSlicer");
+    public static final Item mortumSlicer       = new ItemThrowable(36).setName("mortumSlicer");
+    public static final Item haliteSlicer       = new ItemThrowable(42).setName("haliteSlicer");
 
     public static final Item edenBlitz          = new ItemTwilightBlitz(14, "Eden Dust").setName("edenBlitz");
     public static final Item wildWoodBlitz      = new ItemTwilightBlitz(19, "WildWood Dust").setName("wildWoodBlitz");

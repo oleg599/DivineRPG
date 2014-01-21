@@ -1,5 +1,6 @@
 package net.divinerpg.overworld.entity.mobs;
 
+import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.VanillaItems;
@@ -16,7 +17,6 @@ import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -24,7 +24,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
-public class EntityIceMan extends EntityMob
+public class EntityIceMan extends EntityDivineRPGMob
 {
     public EntityIceMan(World var1)
     {
@@ -139,11 +139,9 @@ public class EntityIceMan extends EntityMob
             this.func_145779_a(VanillaItems.iceShards, 3);
         }
     }
-    
-    public void onDeath(DamageSource d) {
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Ice Man."));
-		}
+
+	@Override
+	public String mobName() {
+		return "Ice Man";
 	}
 }

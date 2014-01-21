@@ -1,12 +1,10 @@
 package net.divinerpg.overworld.entity.mobs;
 
+import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -14,7 +12,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
-public class EntityDesertCrawler extends EntityMob
+public class EntityDesertCrawler extends EntityDivineRPGMob
 {
     public EntityDesertCrawler(World par1World)
     {
@@ -73,11 +71,9 @@ public class EntityDesertCrawler extends EntityMob
     {
         return true;
     }
-    
-    public void onDeath(DamageSource d) {
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Desert Crawler."));
-		}
+
+	@Override
+	public String mobName() {
+		return "Desert Crawler";
 	}
 }

@@ -35,7 +35,7 @@ public class EntityResourceLocation {
     public static ResourceLocation rainbour          = new ResourceLocation(PREFIX + "Rainbour.png");
     public static ResourceLocation rotatick          = new ResourceLocation(PREFIX + "Rotatick.png");
     public static ResourceLocation shark             = new ResourceLocation(PREFIX + "Shark.png");
-    public static ResourceLocation netherWatcher     = new ResourceLocation(PREFIX + "NetherWatcher.png");
+    public static ResourceLocation netherWatcher     = new ResourceLocation(PREFIX + "Watcher.png");
     public static ResourceLocation wildFire          = new ResourceLocation(PREFIX + "WildFire.png");
 
     public static ResourceLocation phaserHalite      = new ResourceLocation(PREFIX_PROJECTILE + "halitePhaserProjectile.png");

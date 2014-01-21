@@ -6,7 +6,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 public class IS {
-		//IS stands for ItemStack
+
 		//Food
 		public static ItemStack boiledEgg = new ItemStack(VanillaItems.boiledEgg);
 		public static ItemStack egg = new ItemStack(Items.egg);
@@ -22,7 +22,7 @@ public class IS {
 		public static ItemStack arlemiteSword = new ItemStack(VanillaItems.arlemiteSword);
 		public static ItemStack rupeeSword = new ItemStack(VanillaItems.rupeeSword);
 		public static ItemStack realmiteSword = new ItemStack(VanillaItems.realmiteSword);
-		public static ItemStack shuriken = new ItemStack(VanillaItems.shuriken);
+		public static ItemStack shuriken = new ItemStack(VanillaItems.shuriken, 20);
 		public static ItemStack vile = new ItemStack(VanillaItems.vileStorm);
 
 		//Materials

@@ -1,7 +1,9 @@
 package net.divinerpg.overworld.entity.mobs;
 
+import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.Enchantment;
@@ -31,7 +33,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
-public class EntityAridWarrior extends EntityMob implements IRangedAttackMob
+public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAttackMob
 {
     private static final ItemStack defaultHeldItem = new ItemStack(Items.bow, 1);
 
@@ -98,13 +100,6 @@ public class EntityAridWarrior extends EntityMob implements IRangedAttackMob
     }
 
     /**
-     * Returns the item ID for the item the mob drops on death.
-     */
-    protected Item func_146068_u() {
-    	return Item.func_150898_a(Blocks.sandstone);
-    }
-
-    /**
      * Drop 0-2 items of this living's type
      */
     protected void dropFewItems(boolean par1, int par2)
@@ -151,11 +146,13 @@ public class EntityAridWarrior extends EntityMob implements IRangedAttackMob
         this.playSound("random.bow", 1.0F, 1.0F / (this.getRNG().nextFloat() * 0.4F + 0.8F));
         this.worldObj.spawnEntityInWorld(var2);
     }
-    
-    public void onDeath(DamageSource d) {
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Arid Warrior."));
-		}
+
+	protected Item func_146068_u() {
+        return Item.func_150898_a(Blocks.sandstone);
+    }
+
+	@Override
+	public String mobName() {
+		return "Arid Warrior";
 	}
 }
