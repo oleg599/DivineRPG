@@ -25,6 +25,7 @@ public class TwilightBlock extends Block
 		super(m);
 		setCreativeTab(DivineRPGTabs.blocks);
 		setSoundType(Block.field_149780_i);
+		func_149711_c(6.0F);
 	}
 	
 	public static Item getBlock(Block b){

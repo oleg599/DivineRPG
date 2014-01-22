@@ -14,15 +14,12 @@ import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 
-public class VanillaBlock extends BlockMod
-{
-    
-    private String name;
-    
-	private static SoundType stone = Block.field_149779_h;
+public class VanillaBlock extends BlockMod {
+        
+	private static SoundType stone = Block.field_149769_e;
 	private static SoundType grass = Block.field_149779_h;
-	private static SoundType cloth = Block.field_149779_h;
-	private static SoundType wood = Block.field_149779_h;
+	private static SoundType cloth = Block.field_149775_l;
+	private static SoundType wood = Block.field_149766_f;
 
 	public VanillaBlock(Material m)
 	{
@@ -52,8 +49,7 @@ public class VanillaBlock extends BlockMod
     }
 	
 	public Item func_149650_a(int par1, Random par2, int par3) {
-		return (this == VanillaBlocks.bloodgemOre) ? VanillaItems.bloodgem
-		: getBlock(this);
+		return (this == VanillaBlocks.bloodgemOre) ? VanillaItems.bloodgem : getBlock(this);
 	}
 
 	public int func_149679_a(int par1, Random par2)

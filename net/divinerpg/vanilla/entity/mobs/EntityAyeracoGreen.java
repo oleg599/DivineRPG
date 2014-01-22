@@ -41,7 +41,7 @@ public class EntityAyeracoGreen extends EntityAyeraco
     public void onDeath(DamageSource par1DamageSource)
     {
     	super.onDeath(par1DamageSource);
-    	worldObj.func_147449_b(beamX, beamY, beamZ, null);
+    	//worldObj.func_147449_b(beamX, beamY, beamZ, null);
     }
 
 	

@@ -12,7 +12,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class DivineAPI {
 
-	static int mobID = 90, projectileID = 350;
+	static int mobID = 121, projectileID = 350;
 
 
 	public static void addRecipe(ItemStack i, Object ... o) {

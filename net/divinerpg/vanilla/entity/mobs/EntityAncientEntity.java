@@ -26,7 +26,7 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(4000.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.4D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(16.0D);
 	}
 

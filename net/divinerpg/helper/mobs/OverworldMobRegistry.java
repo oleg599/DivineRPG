@@ -3,6 +3,11 @@ package net.divinerpg.helper.mobs;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.vanilla.entity.mobs.EntityAncientEntity;
 import net.divinerpg.vanilla.entity.mobs.EntityAridWarrior;
+import net.divinerpg.vanilla.entity.mobs.EntityAyeracoBlue;
+import net.divinerpg.vanilla.entity.mobs.EntityAyeracoGreen;
+import net.divinerpg.vanilla.entity.mobs.EntityAyeracoPurple;
+import net.divinerpg.vanilla.entity.mobs.EntityAyeracoRed;
+import net.divinerpg.vanilla.entity.mobs.EntityAyeracoYellow;
 import net.divinerpg.vanilla.entity.mobs.EntityCaveCrawler;
 import net.divinerpg.vanilla.entity.mobs.EntityCorruptedDramcryx;
 import net.divinerpg.vanilla.entity.mobs.EntityCrab;
@@ -12,6 +17,7 @@ import net.divinerpg.vanilla.entity.mobs.EntityEnderSpider;
 import net.divinerpg.vanilla.entity.mobs.EntityEnderTriplets;
 import net.divinerpg.vanilla.entity.mobs.EntityEnderWatcher;
 import net.divinerpg.vanilla.entity.mobs.EntityFrost;
+import net.divinerpg.vanilla.entity.mobs.EntityGlacon;
 import net.divinerpg.vanilla.entity.mobs.EntityHellSpider;
 import net.divinerpg.vanilla.entity.mobs.EntityIceMan;
 import net.divinerpg.vanilla.entity.mobs.EntityJungleDramcryx;
@@ -43,11 +49,11 @@ public class OverworldMobRegistry {
 		DivineAPI.registerDivineRPGMob(EntityEnderSpider.class, "Ender Spider");		
 		DivineAPI.registerDivineRPGMob(EntityEnderTriplets.class, "Ender Triplets");
 		DivineAPI.registerDivineRPGMob(EntityAridWarrior.class, "Arid Warrior");
-		//DivineAPI.registerDivineRPGMob(EntityAyeracoBlue.class, "Ayeraco Blue");
-		//DivineAPI.registerDivineRPGMob(EntityAyeracoGreen.class, "Ayeraco Green");
-		//DivineAPI.registerDivineRPGMob(EntityAyeracoPurple.class, "Ayeraco Purple");
-		//DivineAPI.registerDivineRPGMob(EntityAyeracoRed.class, "Ayeraco Red");
-		//DivineAPI.registerDivineRPGMob(EntityAyeracoYellow.class, "Ayeraco Yellow");
+		DivineAPI.registerDivineRPGMob(EntityAyeracoBlue.class, "Ayeraco Blue");
+		DivineAPI.registerDivineRPGMob(EntityAyeracoGreen.class, "Ayeraco Green");
+		DivineAPI.registerDivineRPGMob(EntityAyeracoPurple.class, "Ayeraco Purple");
+		DivineAPI.registerDivineRPGMob(EntityAyeracoRed.class, "Ayeraco Red");
+		DivineAPI.registerDivineRPGMob(EntityAyeracoYellow.class, "Ayeraco Yellow");
 		DivineAPI.registerDivineRPGMob(EntityCorruptedDramcryx.class, "Cave Dramcryx");
 		DivineAPI.registerDivineRPGMob(EntityTheEye.class, "The Eye");
 		DivineAPI.registerDivineRPGMob(EntityFrost.class, "Frost");
@@ -58,5 +64,6 @@ public class OverworldMobRegistry {
 		DivineAPI.registerDivineRPGMob(EntityShark.class, "Shark");
 		DivineAPI.registerDivineRPGMob(EntityNetherWatcher.class, "The Watcher");
 		DivineAPI.registerDivineRPGMob(EntityWildFire.class, "Wild Fire");
+		DivineAPI.registerDivineRPGMob(EntityGlacon.class, "Glacon");
 	}
 }

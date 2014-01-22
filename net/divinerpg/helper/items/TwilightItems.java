@@ -101,4 +101,6 @@ public class TwilightItems {
     public static final Item apalachiaBow       = new ItemModBow(-1, 31, true, apalachiaArrow).setName("apalachiaBow");
     public static final Item skythernBow        = new ItemModBow(-1, 31, true, skythernArrow).setName("skythernBow");
     public static final Item mortumBow          = new ItemModBow(-1, 31, true, mortumArrow).setName("mortumBow");
+    
+    public static final Item corruptedBullet    = new ItemMod().setName("corruptedBullet");
 }

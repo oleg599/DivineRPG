@@ -25,6 +25,7 @@ public class BlockModLeaves extends BlockLeavesBase
 	{
 		super(leaf, false);
 		suckTit(true);
+		func_149711_c(2.0F);
 		setCreativeTab(DivineRPGTabs.blocks);
 		setSoundType(grass);
 	}

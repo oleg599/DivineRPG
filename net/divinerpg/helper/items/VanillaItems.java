@@ -144,5 +144,4 @@ public class VanillaItems {
 
     public static final Item watchingEye        = new ItemMod().setName("watchingEye");
     public static final Item callWatcher        = new ItemCallOfTheWatcher().setName("callOfTheWatcher");
-
 }

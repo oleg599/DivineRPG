@@ -141,16 +141,6 @@ public class ItemTwilightBlitz extends Item {
 		return var1;
 	}
 
-	@SideOnly(Side.CLIENT)
-
-	/**
-	 * Returns True is the item is renderer in full 3D when hold.
-	 */
-	public boolean isFull3D()
-	{
-		return true;
-	}
-
 	@Override
 	@SideOnly(Side.CLIENT)
 
@@ -161,7 +151,7 @@ public class ItemTwilightBlitz extends Item {
 	{
 	    par3List.add(damage + " Ranged Damage");
 	    par3List.add("Ammo: " + ammoType);
-		par3List.add(var1.getMaxDamage() - var1.getItemDamage() + " Uses");
+		par3List.add("Infinite Uses");
 	}
 	
 	public Item setTextureName(String par1Str)

@@ -32,6 +32,7 @@ public class BlockModLog extends BlockRotatedPillar{
 
     public BlockModLog() {
         super(wood);
+        func_149711_c(3.0F);
         setCreativeTab(DivineRPGTabs.blocks);
         setSoundType(woodSound);
     }

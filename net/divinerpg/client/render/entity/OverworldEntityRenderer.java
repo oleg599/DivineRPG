@@ -21,6 +21,7 @@ import net.divinerpg.vanilla.entity.mobs.EntityEnderSpider;
 import net.divinerpg.vanilla.entity.mobs.EntityEnderTriplets;
 import net.divinerpg.vanilla.entity.mobs.EntityEnderWatcher;
 import net.divinerpg.vanilla.entity.mobs.EntityFrost;
+import net.divinerpg.vanilla.entity.mobs.EntityGlacon;
 import net.divinerpg.vanilla.entity.mobs.EntityHellSpider;
 import net.divinerpg.vanilla.entity.mobs.EntityIceMan;
 import net.divinerpg.vanilla.entity.mobs.EntityJungleDramcryx;
@@ -43,6 +44,7 @@ import net.divinerpg.vanilla.entity.mobs.models.ModelDramcryx;
 import net.divinerpg.vanilla.entity.mobs.models.ModelEnderTriplets;
 import net.divinerpg.vanilla.entity.mobs.models.ModelEye;
 import net.divinerpg.vanilla.entity.mobs.models.ModelFrost;
+import net.divinerpg.vanilla.entity.mobs.models.ModelGlacon;
 import net.divinerpg.vanilla.entity.mobs.models.ModelKingScorcher;
 import net.divinerpg.vanilla.entity.mobs.models.ModelRainbour;
 import net.divinerpg.vanilla.entity.mobs.models.ModelRotatick;
@@ -91,5 +93,6 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityShark.class, new RenderDivineMob(new ModelShark(), 0.0F, EntityResourceLocation.shark));
 		RenderingRegistry.registerEntityRenderingHandler(EntityNetherWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.netherWatcher));
 		RenderingRegistry.registerEntityRenderingHandler(EntityWildFire.class, new RenderDivineMob(new ModelWildFire(), 0.0F, EntityResourceLocation.wildFire));
+		RenderingRegistry.registerEntityRenderingHandler(EntityGlacon.class, new RenderDivineMob(new ModelGlacon(), 0.0F, EntityResourceLocation.glacon));
 	}
 }
