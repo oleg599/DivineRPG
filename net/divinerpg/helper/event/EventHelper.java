@@ -33,8 +33,9 @@ public class EventHelper {
                 try {
                     if(!isOnline()){
                         p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "Thank you for downloading and playing DivineRPG!"));
-                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.RED, "[Version: " + Reference.MOD_VERSION + "]"));
-                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.LIGHT_PURPLE, "Unable to check for internet connection, you might want to check your connection!"));
+                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "[Version: " + Reference.MOD_VERSION + "]"));
+                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.LIGHT_PURPLE, "Unable to check for latest version!"));
+                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.LIGHT_PURPLE, "You may want to check your internet connection!"));
                     }
                     if (UpdateChecker.isUpdateAvailable() && isOnline()) {
                         BufferedReader versionFile = new BufferedReader(new InputStreamReader(new URL("https://dl.dropboxusercontent.com/s/xddtt5g4g8xz1ut/DivineRPG1.7Update.txt").openStream()));
@@ -46,7 +47,7 @@ public class EventHelper {
                     }
                     if ((!UpdateChecker.isUpdateAvailable()) && isOnline()) {
                         p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "Thank you for downloading and playing DivineRPG!"));
-                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.RED, "[Version: " + Reference.MOD_VERSION + "]"));
+                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "[Version: " + Reference.MOD_VERSION + "]"));
                         p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "DivineRPG is up to date."));
                     }
                 } catch (MalformedURLException e1) {
