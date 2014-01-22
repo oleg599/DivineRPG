@@ -2,26 +2,38 @@ package net.divinerpg.api.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockGlass;
-import net.minecraft.block.BlockStainedGlass;
+import net.minecraft.block.BlockBookshelf;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.util.IIcon;
 
-public class BlockModGlass extends BlockGlass {
-	
+public class BlockModBook extends BlockBookshelf {
+    static Material wood = Material.field_151575_d;
+    
 	String name;
 	
-	public BlockModGlass(Material m)
+	public BlockModBook()
 	{
-		super(m, true);
+		super();
 		setCreativeTab(DivineRPGTabs.blocks);
 	}
-	
 	public Block setCreativeTab(CreativeTabs name) {
         return func_149647_a(name);
+    }
+	
+	@SideOnly(Side.CLIENT)
+    public IIcon func_149691_a(int p_149691_1_, int p_149691_2_)
+    {
+        return p_149691_1_ != 1 && p_149691_1_ != 0 ? super.func_149691_a(p_149691_1_, p_149691_2_) : IceikaBlocks.coalstone.func_149733_h(p_149691_1_);
     }
 	
 	public Block setTextureName(String name){
@@ -74,5 +86,4 @@ public class BlockModGlass extends BlockGlass {
         GameRegistry.registerBlock(this, name);
         LanguageRegistry.addName(this, finalName);
     }
-
 }

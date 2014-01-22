@@ -1,5 +1,6 @@
 package net.divinerpg.helper.blocks;
 
+import net.divinerpg.api.blocks.BlockModBook;
 import net.divinerpg.api.blocks.BlockModDirt;
 import net.divinerpg.api.blocks.BlockModGlass;
 import net.divinerpg.api.blocks.BlockModGrass;
@@ -11,11 +12,10 @@ import net.minecraft.block.BlockGlass;
 import net.minecraft.block.material.Material;
 
 public class IceikaBlocks {
-    static Material           rock                = Material.field_151576_e;
-    static Material           grass               = Material.field_151576_e;
-    static Material           snow /*Maybe*/      = Material.field_151574_g;
-    static Material           glass /*Maybe*/     = Material.field_151574_g;
-
+    static Material rock                = Material.field_151576_e;
+    static Material grass /*Maybe*/     = Material.field_151576_e;
+    static Material snow /*Maybe*/      = Material.field_151574_g;
+    static Material glass /*Maybe*/     = Material.field_151574_g;
 
     public static		Block frozenGrass;
     
@@ -30,9 +30,11 @@ public class IceikaBlocks {
 	public static final Block snowBricks       	= new IceikaBlock(snow).setName("snowBricks").func_149711_c(1.5F); //What the walls of workshops are made of.
 	public static final Block coalstone       	= new IceikaBlock(rock).setName("coalstone").func_149711_c(2.0F); //The area around the furnace in the workshops.
 	public static final Block workshopCarpet    = new IceikaBlock(grass).setName("workshopCarpet").func_149711_c(0.1F); //The floor of the workshops.
-	public static final Block frostedGlass      = new BlockModGlass(grass, false).setName("frostedGlass").func_149711_c(0.1F); //Windows for the workshops.
+	public static final Block frostedGlass      = new BlockModGlass(glass).setName("frostedGlass").func_149711_c(0.1F); //Windows for the workshops. //It has the normal glass texture for some reason
+	public static final Block workshopBookcase  = new BlockModBook().setName("workshopBookcase").func_149711_c(1.5F); //Bookcase for workshops.
+
 
 	public static void init() {
-		frozenGrass = new BlockModGrass(frozenGrass, frozenDirt, "frozen");
+		frozenGrass = new BlockModGrass(frozenGrass, frozenDirt, "frozen").func_149711_c(2.5F);
 	}
 }
