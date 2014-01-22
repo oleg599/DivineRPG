@@ -1,4 +1,4 @@
-package net.divinerpg.vethea.entity;
+package net.divinerpg.vethea.entity.projectile;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityThrowable;
@@ -10,7 +10,7 @@ public class EntityBouncingProjectile extends EntityThrowable
 {
     public int damage;
     public EntityLivingBase thrower;
-    private int bounces;
+    protected int bounces;
     
     public EntityBouncingProjectile(World par1) {
         super(par1);

@@ -1,4 +1,4 @@
-package net.divinerpg.vethea.entity;
+package net.divinerpg.vethea.entity.projectile;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.world.World;

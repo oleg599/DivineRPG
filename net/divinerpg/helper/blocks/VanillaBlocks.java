@@ -1,5 +1,6 @@
 package net.divinerpg.helper.blocks;
 
+import net.divinerpg.vanilla.blocks.BlockDivineTable;
 import net.divinerpg.vanilla.blocks.MobPumpkin;
 import net.divinerpg.vanilla.blocks.VanillaBlock;
 import net.minecraft.block.Block;
@@ -49,5 +50,5 @@ public class VanillaBlocks {
     public static final Block yellowVane          = new VanillaBlock(rock).setName("yellowVane").func_149711_c(2.0F);
 
     public static final Block divineRock          = new VanillaBlock(rock).setName("divineRock").func_149711_c(1.5F);
-
+    public static final Block divineCraftingTable = new BlockDivineTable().setName("divineTable").func_149711_c(3.0F);
 }

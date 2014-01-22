@@ -6,7 +6,7 @@ import net.divinerpg.DivineRPG;
 import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.helper.DivineRPGTabs;
-import net.divinerpg.vethea.entity.EntityBouncingProjectile;
+import net.divinerpg.vethea.entity.projectile.EntityBouncingProjectile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;

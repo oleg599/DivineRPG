@@ -6,7 +6,7 @@ import net.divinerpg.DivineRPG;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.items.VetheanItems;
-import net.divinerpg.vethea.entity.EntityVetheanCannonShot;
+import net.divinerpg.vethea.entity.projectile.EntityVetheanCannonShot;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

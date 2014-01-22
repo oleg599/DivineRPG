@@ -3,6 +3,20 @@ package net.divinerpg.client.render.entity;
 import net.divinerpg.client.render.*;
 import net.divinerpg.helper.items.*;
 import net.divinerpg.vethea.entity.*;
+import net.divinerpg.vethea.entity.projectile.EntityAmthirmisDisk;
+import net.divinerpg.vethea.entity.projectile.EntityArksianeDisk;
+import net.divinerpg.vethea.entity.projectile.EntityBouncingProjectile;
+import net.divinerpg.vethea.entity.projectile.EntityCermileDisk;
+import net.divinerpg.vethea.entity.projectile.EntityDarvenDisk;
+import net.divinerpg.vethea.entity.projectile.EntityEvernightProjectile;
+import net.divinerpg.vethea.entity.projectile.EntityEversightProjectile;
+import net.divinerpg.vethea.entity.projectile.EntityHeliosisDisk;
+import net.divinerpg.vethea.entity.projectile.EntityKarosDisk;
+import net.divinerpg.vethea.entity.projectile.EntityPardimalDisk;
+import net.divinerpg.vethea.entity.projectile.EntityQuadroticDisk;
+import net.divinerpg.vethea.entity.projectile.EntityTeakerDisk;
+import net.divinerpg.vethea.entity.projectile.EntityVetheanCannonEversight;
+import net.divinerpg.vethea.entity.projectile.EntityVetheanCannonShot;
 import cpw.mods.fml.client.registry.*;
 
 public class VetheaEntityRenderer {

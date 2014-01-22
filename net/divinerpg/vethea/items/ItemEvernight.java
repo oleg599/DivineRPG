@@ -2,7 +2,7 @@ package net.divinerpg.vethea.items;
 
 import java.util.List;
 
-import net.divinerpg.vethea.entity.EntityEvernightProjectile;
+import net.divinerpg.vethea.entity.projectile.EntityEvernightProjectile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EntityDamageSourceIndirect;
@@ -24,7 +24,6 @@ public class ItemEvernight extends ItemStaff
         par3List.add("Deals " + this.damage + " Arcana Damage");
         par3List.add("Bouncing Projectile");
         par3List.add("Consumes " + this.cost + " Arcana");
-        par3List.add("Deals 16 Arcana Damage to Player");
         par3List.add("\u00a72Vethean");
     }
 

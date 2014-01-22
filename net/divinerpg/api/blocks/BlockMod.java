@@ -16,8 +16,9 @@ package net.divinerpg.api.blocks;
 
 import net.divinerpg.Reference;
 import net.minecraft.block.Block;
+import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
-
+import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -30,7 +31,15 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  *
  */
 public class BlockMod extends Block {
-
+	
+	protected static SoundType stone = Block.field_149769_e;
+	protected static SoundType grass = Block.field_149779_h;
+	protected static SoundType cloth = Block.field_149775_l;
+	protected static SoundType wood = Block.field_149766_f;
+	
+    public static Material rock = Material.field_151576_e;
+    public static Material wool = Material.field_151580_n;
+    
     protected String name;
     
     public BlockMod(Material mat) {
@@ -84,11 +93,15 @@ public class BlockMod extends Block {
                 }
             }
         }
-        
         String finalName = firstLetter + inGame;
         GameRegistry.registerBlock(this, name);
         LanguageRegistry.addName(this, finalName);
     }
     
-
+	public Block setCreativeTab(CreativeTabs name) {
+        return func_149647_a(name);
+    }
+	public Block setSoundType(Block.SoundType name) {
+    	return func_149672_a(name);
+    }
 }

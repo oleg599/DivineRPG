@@ -1,0 +1,12 @@
+package net.divinerpg.client.render;
+
+import net.divinerpg.Reference;
+import net.minecraft.util.ResourceLocation;
+
+public class GuiResourceLocation {
+	
+	public static final String     PREFIX            = Reference.PREFIX + "textures/gui/";
+	
+	public static final ResourceLocation divineTable = new ResourceLocation(PREFIX + "divineTable.png");
+	
+}

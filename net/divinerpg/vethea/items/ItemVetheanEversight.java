@@ -1,7 +1,7 @@
 package net.divinerpg.vethea.items;
 
 import net.divinerpg.helper.items.VetheanItems;
-import net.divinerpg.vethea.entity.EntityEversightProjectile;
+import net.divinerpg.vethea.entity.projectile.EntityEversightProjectile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
