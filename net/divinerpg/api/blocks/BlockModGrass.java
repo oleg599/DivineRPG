@@ -31,6 +31,10 @@ public class BlockModGrass extends BlockMod {
         this.func_149672_a(field_149779_h);
     }
     
+    public static Item getBlock(Block b){
+		return Item.func_150898_a(b);
+	}
+    
     @SideOnly(Side.CLIENT)
     public IIcon func_149691_a(int par1, int par2) {
         return par1 == 1 ? top : (par1 == 0 ? bottom : side);

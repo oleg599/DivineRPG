@@ -22,5 +22,17 @@ public class BlockModDirt extends BlockMod {
     public Block setSoundType(Block.SoundType name){
     	return func_149672_a(name);
     }
+    public Block setHardness(float p_149711_1_){
+        this.field_149782_v = p_149711_1_;
+
+        if (this.field_149781_w < p_149711_1_ * 5.0F)
+        {
+            this.field_149781_w = p_149711_1_ * 5.0F;
+        }
+
+        return this;
+    }
+    
+    
     
 }

@@ -38,7 +38,10 @@ public class TwilightBlock extends Block
 	public Block setSoundType(Block.SoundType name) {
     	return func_149672_a(name);
     }
-
+	
+	/**
+	 * Sets the item that will be dropped when the block is broken.
+	 */
 	public Item func_149650_a(int par1, Random par2, int par3) {
 		return (this == TwilightBlocks.edenOre) ? TwilightItems.edenFragments 
 				: (this == TwilightBlocks.wildWoodOre) ? TwilightItems.wildWoodFragments 
