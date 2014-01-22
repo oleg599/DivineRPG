@@ -26,8 +26,8 @@ public class GuiDivineTable extends GuiContainer {
 	protected void func_146976_a(float var1, int var2, int var3) {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.field_146297_k.getTextureManager().bindTexture(GuiResourceLocation.divineTable);
-		this.field_146999_f = 231;
-		this.field_147000_g = 176;
+		this.field_146999_f = 176;
+		this.field_147000_g = 231;
 		int k = (this.field_146294_l - this.field_146999_f) / 2;
 		int l = (this.field_146295_m - this.field_147000_g) / 2;
 		this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f, this.field_147000_g);

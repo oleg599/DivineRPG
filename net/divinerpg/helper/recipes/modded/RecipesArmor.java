@@ -10,7 +10,6 @@ public class RecipesArmor
 {
     private String[][] recipePatterns = new String[][] {{"XXX", "X X"}, {"X X", "XXX", "XXX"}, {"XXX", "X X", "X X"}, {"X X", "X X"}};
     private Object[][] recipeItems;
-    private static final String __OBFID = "CL_00000080";
 
     public RecipesArmor()
     {
@@ -22,14 +21,14 @@ public class RecipesArmor
      */
     public void addRecipes(CraftingDivineTableManager par1CraftingManager)
     {
-        for (int i = 0; i < this.recipeItems[0].length; ++i)
+        for (int i = 0; i < recipeItems[0].length; ++i)
         {
-            Object object = this.recipeItems[0][i];
+            Object object = recipeItems[0][i];
 
-            for (int j = 0; j < this.recipeItems.length - 1; ++j)
+            for (int j = 0; j < recipeItems.length - 1; ++j)
             {
-                Item item = (Item)this.recipeItems[j + 1][i];
-                par1CraftingManager.addRecipe(new ItemStack(item), new Object[] {this.recipePatterns[j], 'X', object});
+                Item item = (Item)recipeItems[j + 1][i];
+                par1CraftingManager.addRecipe(new ItemStack(item), new Object[] {recipePatterns[j], 'X', object});
             }
         }
     }

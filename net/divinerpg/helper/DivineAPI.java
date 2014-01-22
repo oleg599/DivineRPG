@@ -1,6 +1,7 @@
 package net.divinerpg.helper;
 
 import net.divinerpg.DivineRPG;
+import net.divinerpg.helper.recipes.CraftingDivineTableManager;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
 import net.minecraft.item.ItemStack;
@@ -18,9 +19,17 @@ public class DivineAPI {
 	public static void addRecipe(ItemStack i, Object ... o) {
 		GameRegistry.addRecipe(i, o);
 	}
+	
+	public static void addBigRecipe(ItemStack i, Object ... o) {
+		CraftingDivineTableManager.getInstance().addRecipe(i, o);
+	}
 
 	public static void addShapelessRecipe(ItemStack i, Object ... o) {
 		GameRegistry.addShapelessRecipe(i, o);
+	}
+	
+	public static void addBigShapelessRecipe(ItemStack i, Object ... o) {
+		CraftingDivineTableManager.getInstance().addShapelessRecipe(i, o);
 	}
 
 	public static void addSmelting(ItemStack input, ItemStack output, float XP) {

@@ -21,7 +21,6 @@ public class ContainerDivineTable extends Container {
     private int posX;
     private int posY;
     private int posZ;
-    private static final String __OBFID = "CL_00001744";
 
     public ContainerDivineTable(InventoryPlayer par1InventoryPlayer, World par2World, int par3, int par4, int par5)
     {

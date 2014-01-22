@@ -38,11 +38,10 @@ public class CraftingDivineTableManager {
 
     private CraftingDivineTableManager()
     {
-        (new RecipesTools()).addRecipes(this);
+        /*(new RecipesTools()).addRecipes(this);
         (new RecipesWeapons()).addRecipes(this);
         (new RecipesIngots()).addRecipes(this);
         (new RecipesFood()).addRecipes(this);
-        (new RecipesCrafting()).addRecipes(this);
         (new RecipesArmor()).addRecipes(this);
         (new RecipesDyes()).addRecipes(this);
         this.recipes.add(new RecipesArmorDyes());
@@ -164,6 +163,23 @@ public class CraftingDivineTableManager {
         this.addShapelessRecipe(new ItemStack(Items.fire_charge, 3), new Object[] {Items.gunpowder, Items.blaze_powder, new ItemStack(Items.coal, 1, 1)});
         this.addRecipe(new ItemStack(Blocks.daylight_detector), new Object[] {"GGG", "QQQ", "WWW", 'G', Blocks.glass, 'Q', Items.quartz, 'W', Blocks.wooden_slab});
         this.addRecipe(new ItemStack(Blocks.hopper), new Object[] {"I I", "ICI", " I ", 'I', Items.iron_ingot, 'C', Blocks.chest});
+        this.addRecipe(new ItemStack(Blocks.chest), new Object[] {"###", "# #", "###", '#', Blocks.planks});
+        this.addRecipe(new ItemStack(Blocks.trapped_chest), new Object[] {"#-", '#', Blocks.chest, '-', Blocks.tripwire_hook});
+        this.addRecipe(new ItemStack(Blocks.ender_chest), new Object[] {"###", "#E#", "###", '#', Blocks.obsidian, 'E', Items.ender_eye});
+        this.addRecipe(new ItemStack(Blocks.furnace), new Object[] {"###", "# #", "###", '#', Blocks.cobblestone});
+        this.addRecipe(new ItemStack(Blocks.crafting_table), new Object[] {"##", "##", '#', Blocks.planks});
+        this.addRecipe(new ItemStack(Blocks.sandstone), new Object[] {"##", "##", '#', new ItemStack(Blocks.sand, 1, 0)});
+        this.addRecipe(new ItemStack(Blocks.sandstone, 4, 2), new Object[] {"##", "##", '#', Blocks.sandstone});
+        this.addRecipe(new ItemStack(Blocks.sandstone, 1, 1), new Object[] {"#", "#", '#', new ItemStack(Blocks.stone_slab, 1, 1)});
+        this.addRecipe(new ItemStack(Blocks.quartz_block, 1, 1), new Object[] {"#", "#", '#', new ItemStack(Blocks.stone_slab, 1, 7)});
+        this.addRecipe(new ItemStack(Blocks.quartz_block, 2, 2), new Object[] {"#", "#", '#', new ItemStack(Blocks.quartz_block, 1, 0)});
+        this.addRecipe(new ItemStack(Blocks.stonebrick, 4), new Object[] {"##", "##", '#', Blocks.stone});
+        //this.addRecipe(new ItemStack(Blocks.iron_bars, 16), new Object[] {"###", "###", '#', Items.iron_ingot});
+       // this.addRecipe(new ItemStack(Blocks.glass_pane, 16), new Object[] {"###", "###", '#', Blocks.glass});
+        //this.addRecipe(new ItemStack(Blocks.redstone_lamp, 1), new Object[] {" R ", "RGR", " R ", 'R', Items.redstone, 'G', Blocks.glowstone});
+        //this.addRecipe(new ItemStack(Blocks.beacon, 1), new Object[] {"GGG", "GSG", "OOO", 'G', Blocks.glass, 'S', Items.nether_star, 'O', Blocks.obsidian});
+        //this.addRecipe(new ItemStack(Blocks.nether_brick, 1), new Object[] {"NN", "NN", 'N', Items.netherbrick});*/
+        
         Collections.sort(this.recipes, new Comparator()
         {
             public int compare(IRecipe par1IRecipe, IRecipe par2IRecipe)
