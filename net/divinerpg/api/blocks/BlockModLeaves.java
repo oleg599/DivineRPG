@@ -239,7 +239,7 @@ public class BlockModLeaves extends BlockLeavesBase
         return Reference.PREFIX + name;
     }
     
-    public void register(){
+    public Block register(){
         int numChars = 0;
         char firstLetter = name.charAt(0);
         if(Character.isLowerCase(firstLetter))
@@ -265,5 +265,6 @@ public class BlockModLeaves extends BlockLeavesBase
         System.err.println(finalName);
         GameRegistry.registerBlock(this, name);
         LanguageRegistry.addName(this, finalName);
+        return this;
     }
 }

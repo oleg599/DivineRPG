@@ -18,8 +18,7 @@ import net.divinerpg.Reference;
 
 public class UpdateChecker {
 	
-	public static boolean isUpdateAvailable() throws IOException, MalformedURLException 
-    {
+	public static boolean isUpdateAvailable() throws IOException, MalformedURLException {
             BufferedReader versionFile = new BufferedReader(new InputStreamReader(new URL("https://dl.dropboxusercontent.com/s/xddtt5g4g8xz1ut/DivineRPG1.7Update.txt").openStream()));
             String curVersion = versionFile.readLine();
 

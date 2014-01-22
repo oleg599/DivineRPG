@@ -36,10 +36,6 @@ public class IceikaBlock extends BlockMod {
 	public Block setSoundType(Block.SoundType name) {
     	return func_149672_a(name);
     }
-	
-	public Item func_149650_a(int par1, Random par2, int par3) {
-		return getBlock(this);
-	}
     
     public Block setHardness(float p_149711_1_)
     {

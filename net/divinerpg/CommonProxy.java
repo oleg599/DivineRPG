@@ -35,7 +35,7 @@ public class CommonProxy {
 		TwilightRecipeHelper.init();
 		TwilightBlocks.init();
 		IceikaBlocks.init();
-		VetheaBlocks.init();
+		//VetheaBlocks.init();
 		DimensionHelper.init();
 	}
 	
