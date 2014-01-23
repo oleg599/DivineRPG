@@ -62,6 +62,11 @@ public class BlockMod extends Block {
         return this;
     }
     
+    public Block setHarvestLevel(int i){
+    	setHarvestLevel("pickaxe", i);
+    	return this;
+    }
+    
     public String getName(){
         return name;
     }
