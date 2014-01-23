@@ -51,4 +51,5 @@ public class VanillaBlocks {
 
     public static final Block divineRock          = new VanillaBlock(rock).setName("divineRock").func_149711_c(1.5F);
     public static final Block divineCraftingTable = new BlockDivineTable().setName("divineTable").func_149711_c(3.0F);
+    //public static final Block 
 }

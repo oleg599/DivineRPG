@@ -3,6 +3,7 @@ package net.divinerpg;
 import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
+import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.event.EventHelper;
 import net.divinerpg.helper.mobs.IceikaMobRegistry;
@@ -34,8 +35,8 @@ public class CommonProxy {
 		TwilightRecipeHelper.init();
 		TwilightBlocks.init();
 		IceikaBlocks.init();
+		VetheaBlocks.init();
 		DimensionHelper.init();
-
 	}
 	
 	public void init(FMLInitializationEvent event){

@@ -1,5 +1,6 @@
 package net.divinerpg.twilight.entity.mob;
 
+import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLivingBase;
@@ -18,21 +19,16 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntitySheep;
-import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.pathfinding.PathEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class EntityMoonWolf extends EntityTameable
+public class EntityMoonWolf extends EntityDivineRPGMob
 {
     private float field_70926_e;
     private float field_70924_f;
@@ -50,18 +46,18 @@ public class EntityMoonWolf extends EntityTameable
         this.setSize(0.6F, 0.8F);
         this.getNavigator().setAvoidsWater(true);
         this.tasks.addTask(1, new EntityAISwimming(this));
-        this.tasks.addTask(2, this.aiSit);
+        //this.tasks.addTask(2, this.aiSit);
         this.tasks.addTask(3, new EntityAILeapAtTarget(this, 0.4F));
         this.tasks.addTask(4, new EntityAIAttackOnCollide(this, moveSpeed, true));
-        this.tasks.addTask(5, new EntityAIFollowOwner(this, moveSpeed, 10.0F, 2.0F));
-        this.tasks.addTask(6, new EntityAIMate(this, moveSpeed));
+        //this.tasks.addTask(5, new EntityAIFollowOwner(this, moveSpeed, 10.0F, 2.0F));
+        //this.tasks.addTask(6, new EntityAIMate(this, moveSpeed));
         this.tasks.addTask(7, new EntityAIWander(this, moveSpeed));
         this.tasks.addTask(9, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(9, new EntityAILookIdle(this));
-        this.targetTasks.addTask(1, new EntityAIOwnerHurtByTarget(this));
-        this.targetTasks.addTask(2, new EntityAIOwnerHurtTarget(this));
+        //this.targetTasks.addTask(1, new EntityAIOwnerHurtByTarget(this));
+        //this.targetTasks.addTask(2, new EntityAIOwnerHurtTarget(this));
         this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true));
-        this.targetTasks.addTask(4, new EntityAITargetNonTamed(this, EntitySheep.class, 200, false));
+        //this.targetTasks.addTask(4, new EntityAITargetNonTamed(this, EntitySheep.class, 200, false));
     }
 
 	    @Override
@@ -144,11 +140,11 @@ public class EntityMoonWolf extends EntityTameable
     /**
      * Returns the sound this mob makes while it's alive.
      */
-    @Override
+    /*@Override
     protected String getLivingSound()
     {
         return this.isAngry() ? "mob.wolf.growl" : (this.rand.nextInt(3) == 0 ? (this.isTamed() && this.dataWatcher.getWatchableObjectInt(18) < 10 ? "mob.wolf.whine" : "mob.wolf.panting") : "mob.wolf.bark");
-    }
+    }*/
 
     /**
      * Returns the sound this mob makes when it is hurt.
@@ -197,7 +193,7 @@ public class EntityMoonWolf extends EntityTameable
 
     /**
      * Called to update the entity's position/logic.
-     */
+     
     @Override
     public void onUpdate()
     {
@@ -302,7 +298,7 @@ public class EntityMoonWolf extends EntityTameable
     /**
      * The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently
      * use in wolves.
-     */
+     *
     @Override
     public int getVerticalFaceSpeed()
     {
@@ -311,7 +307,7 @@ public class EntityMoonWolf extends EntityTameable
 
     /**
      * Called when the entity is attacked.
-     */
+     *
     public boolean attackEntityFrom(DamageSource var1, int var2)
     {
         Entity var3 = var1.getEntity();
@@ -382,9 +378,14 @@ public class EntityMoonWolf extends EntityTameable
         }
     }
 
+	@Override
+	public String mobName() {
+		return "Wild Wood Wolf";
+	}
+
     /**
      * This function is used when two same-species animals in 'love mode' breed to generate the new baby animal.
-     */
+     *
     public EntityAnimal spawnBabyAnimal(EntityAnimal var1)
     {
         EntityMoonWolf var2 = new EntityMoonWolf(this.worldObj);
@@ -409,7 +410,7 @@ public class EntityMoonWolf extends EntityTameable
 
     /**
      * Returns true if the mob is currently able to mate with the specified mob.
-     */
+     *
     @Override
     public boolean canMateWith(EntityAnimal var1)
     {
@@ -435,5 +436,5 @@ public class EntityMoonWolf extends EntityTameable
     public EntityAgeable createChild(EntityAgeable var1)
     {
         return null;
-    }
+    }*/
 }

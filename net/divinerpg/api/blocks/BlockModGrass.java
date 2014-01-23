@@ -63,7 +63,6 @@ public class BlockModGrass extends BlockMod {
                     int i1 = par2 + par5Random.nextInt(3) - 1;
                     int j1 = par3 + par5Random.nextInt(5) - 3;
                     int k1 = par4 + par5Random.nextInt(3) - 1;
-//                    Block l1 = par1World.func_147439_a(i1, j1 + 1, k1);
 
                     if (par1World.func_147439_a(i1, j1, k1) == dirt && par1World.getBlockLightValue(i1, j1 + 1, k1) >= 4 && par1World.getBlockLightOpacity(i1, j1 + 1, k1) <= 2)
                     {
@@ -99,7 +98,4 @@ public class BlockModGrass extends BlockMod {
         register();
         return this;
     }
-    
-    
-    
 }

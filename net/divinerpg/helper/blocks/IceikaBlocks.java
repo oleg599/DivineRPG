@@ -21,18 +21,18 @@ public class IceikaBlocks {
     
 	public static final Block frozenDirt        = new BlockModDirt().setName("frozenDirt").func_149711_c(2.5F);
 	public static final Block frozenStone       = new IceikaBlock(rock).setName("frozenStone").func_149711_c(5.0F);
-	public static final Block frozenWood        = new BlockModLog().setName("frozenWood").func_149711_c(5.0F);
+	public static final Block frozenWood        = new BlockModLog().setName("frozenLog").func_149711_c(5.0F);
 	public static final Block brittleLeaves     = new BlockModLeaves().setName("brittleLeaves").func_149711_c(0.1F);
 
 	public static final Block icyStone       	= new IceikaBlock(rock).setName("icyStone").func_149711_c(6.0F); //TODO: Make destructible Only by explosion
 	public static final Block icyBricks       	= new IceikaBlock(rock).setName("icyBricks").func_149711_c(6.0F); //TODO: Make destructible Only by explosion
 	
-	public static final Block snowBricks       	= new IceikaBlock(snow).setName("icyBricks").func_149711_c(1.5F); //What the walls of workshops are made of.
+	public static final Block snowBricks       	= new IceikaBlock(snow).setName("snowBricks").func_149711_c(1.5F); //What the walls of workshops are made of.
 	public static final Block coalstone       	= new IceikaBlock(rock).setName("coalstone").func_149711_c(2.0F); //The area around the furnace in the workshops.
 	public static final Block workshopCarpet    = new IceikaBlock(grass).setName("workshopCarpet").func_149711_c(0.1F); //The floor of the workshops.
 	public static final Block frostedGlass      = new BlockModGlass(grass, false).setName("frostedGlass").func_149711_c(0.1F); //Windows for the workshops.
 
 	public static void init() {
-		frozenGrass = new BlockModGrass(frozenGrass, frozenDirt, "iceika");
+		frozenGrass = new BlockModGrass(frozenGrass, frozenDirt, "frozen");
 	}
 }

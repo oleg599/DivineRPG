@@ -18,6 +18,7 @@ public class OverworldRecipeHelper {
 		DivineAPI.addRecipe(IS.realmiteSword, " I ", " I ", " S ", 'I', VanillaItems.realmiteIngot, 'S', Items.stick);
 		DivineAPI.addRecipe(IS.shuriken, " I ", "III", " I ", 'I', Items.iron_ingot);
 		DivineAPI.addShapelessRecipe(IS.vile, VanillaItems.jungleShards, VanillaItems.vileStorm);
+		DivineAPI.addBigRecipe(IS.slimeSword, "SDS", "SDS", "SDS", 'D', Items.diamond_sword, 'S', Items.slime_ball);
 
 		DivineAPI.addRecipe(IS.netherChuck, " I ", "III", " I ", 'I', VanillaItems.netheriteIngot);
 

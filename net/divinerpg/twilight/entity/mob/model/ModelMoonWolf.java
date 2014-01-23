@@ -151,7 +151,7 @@ public class ModelMoonWolf extends ModelBase
     public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
     {
         super.render(entity, f, f1, f2, f3, f4, f5);
-        setRotationAngles(f, f1, f2, f3, f4, f5);
+        //setRotationAngles(f, f1, f2, f3, f4, f5);
         WolfHead.render(f5);
         Body.render(f5);
         Mane.render(f5);
@@ -187,7 +187,7 @@ public class ModelMoonWolf extends ModelBase
     {
         EntityMoonWolf var5 = (EntityMoonWolf)var1;
 
-        if (var5.isSitting())
+        /*if (var5.isSitting())
         {
             this.Mane.setRotationPoint(-1.0F, 16.0F, -3.0F);
             this.Mane.rotateAngleX = ((float)Math.PI * 2F / 5F);
@@ -255,5 +255,6 @@ public class ModelMoonWolf extends ModelBase
         this.Ear3.rotateAngleY = var4 / (180F / (float)Math.PI);
         this.Ear4.rotateAngleX = var5 / (180F / (float)Math.PI);
         this.Ear4.rotateAngleY = var4 / (180F / (float)Math.PI);
+    }*/
     }
 }

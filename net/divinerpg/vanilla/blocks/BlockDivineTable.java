@@ -33,10 +33,10 @@ public class BlockDivineTable extends BlockMod{
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void func_149651_a(IIconRegister par1IconRegister) {
-		this.side = par1IconRegister.registerIcon(Reference.PREFIX + "divineTableSide");
-		this.top = par1IconRegister.registerIcon(Reference.PREFIX + "divineTableTop");
-		this.front = par1IconRegister.registerIcon(Reference.PREFIX + "divineTableFront");
-		this.bottom = par1IconRegister.registerIcon(Reference.PREFIX + "divineWoodPlank");
+		this.side = par1IconRegister.registerIcon(Reference.PREFIX + "divineTable_side");
+		this.top = par1IconRegister.registerIcon(Reference.PREFIX + "divineTable_top");
+		this.front = par1IconRegister.registerIcon(Reference.PREFIX + "divineTable_front");
+		this.bottom = par1IconRegister.registerIcon(Reference.PREFIX + "divinePlank");
 	}
 
 	@Override
