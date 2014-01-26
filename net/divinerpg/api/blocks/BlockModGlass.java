@@ -2,8 +2,10 @@ package net.divinerpg.api.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockGlass;
 import net.minecraft.block.BlockStainedGlass;
@@ -18,6 +20,7 @@ public class BlockModGlass extends BlockGlass {
 	{
 		super(m, true);
 		setCreativeTab(DivineRPGTabs.blocks);
+		LangRegistry.addBlock(this);
 	}
 	
 	public Block setCreativeTab(CreativeTabs name) {

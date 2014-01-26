@@ -2,6 +2,7 @@ package net.divinerpg.api.items;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
@@ -15,6 +16,7 @@ public class ItemModFood extends ItemFood {
 	public ItemModFood(int food, float sat, boolean wolf){
 		super(food, sat, wolf);
 		setCreativeTab(DivineRPGTabs.food);
+		LangRegistry.addItem(this);
 	}
 	
 	public Item setTextureName(String par1Str)

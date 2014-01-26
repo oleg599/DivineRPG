@@ -2,11 +2,13 @@ package net.divinerpg.vanilla.items;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.vanilla.entity.mobs.EntityAncientEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -21,6 +23,7 @@ public class ItemMysteriousClock extends Item
 		setMaxStackSize(1);
 		setCreativeTab(DivineRPGTabs.spawner);
 		setName("myseriousClock");
+		LangRegistry.addItem(this);
 	}
 
 	/**

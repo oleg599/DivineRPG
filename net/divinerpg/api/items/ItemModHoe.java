@@ -5,10 +5,12 @@ import java.util.List;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -17,6 +19,7 @@ public class ItemModHoe extends ItemHoe{
 	public ItemModHoe(ToolMaterial p_i45343_1_) {
 		super(p_i45343_1_);
 		setCreativeTab(DivineRPGTabs.tools);
+		LangRegistry.addItem(this);
 	}
 	
     @Override

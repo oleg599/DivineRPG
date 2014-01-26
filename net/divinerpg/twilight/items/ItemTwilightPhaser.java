@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.projectile.EntityPhaserApalachia;
 import net.divinerpg.twilight.entity.projectile.EntityPhaserEden;
 import net.divinerpg.twilight.entity.projectile.EntityPhaserHalite;
@@ -14,6 +15,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -40,6 +42,7 @@ public class ItemTwilightPhaser extends Item
         this.reloadsound = "";
         this.setMaxStackSize(1);
         this.setMaxDamage(3000);
+        LangRegistry.addItem(this);
 	}
 
 	/**

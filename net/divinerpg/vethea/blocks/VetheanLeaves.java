@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;
 import net.minecraft.block.Block.SoundType;
@@ -11,6 +12,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -28,6 +30,7 @@ public class VetheanLeaves extends BlockLeavesBase
 		func_149711_c(2.0F);
 		setCreativeTab(DivineRPGTabs.vethea);
 		setSoundType(grass);
+		LangRegistry.addBlock(this);
 	}
 	
 	public Block setCreativeTab(CreativeTabs name) {

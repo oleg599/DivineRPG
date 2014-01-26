@@ -12,8 +12,10 @@ import net.divinerpg.helper.mobs.TwilightMobRegistry;
 import net.divinerpg.helper.mobs.VetheaMobRegistry;
 import net.divinerpg.helper.recipes.OverworldRecipeHelper;
 import net.divinerpg.helper.recipes.TwilightRecipeHelper;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.vanilla.worldgen.WorldGenOverworld;
 import net.minecraftforge.common.MinecraftForge;
+
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -36,6 +38,12 @@ public class CommonProxy {
 		TwilightBlocks.init();
 		IceikaBlocks.init();
 		VetheaBlocks.init();
+		LangRegistry.init();
+		if(Reference.DEBUG){
+		    LangRegistry.addBlockNames();
+		    LangRegistry.addItemNames();
+		}
+		LangRegistry.closeFile();
 		DimensionHelper.init();
 	}
 	

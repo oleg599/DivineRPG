@@ -2,6 +2,7 @@ package net.divinerpg.api.items;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.item.Item;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -13,6 +14,7 @@ public class ItemMod extends Item {
 	public ItemMod(){
 		super();
 		setCreativeTab(DivineRPGTabs.items);
+		LangRegistry.addItem(this);
 	}
 
 	public Item setTextureName(String par1Str)

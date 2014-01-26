@@ -4,9 +4,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.blocks.IceikaBlocks;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBookshelf;
 import net.minecraft.block.material.Material;
@@ -25,6 +27,7 @@ public class BlockModBook extends BlockBookshelf {
 	{
 		super();
 		setCreativeTab(DivineRPGTabs.blocks);
+		LangRegistry.addBlock(this);
 	}
 	public Block setCreativeTab(CreativeTabs name) {
         return func_149647_a(name);

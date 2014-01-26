@@ -5,6 +5,7 @@ import java.util.List;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.projectile.EntityBlitzAlapachia;
 import net.divinerpg.twilight.entity.projectile.EntityBlitzEden;
 import net.divinerpg.twilight.entity.projectile.EntityBlitzHalite;
@@ -34,6 +35,7 @@ public class ItemTwilightBlitz extends Item {
 		this.setCreativeTab(DivineRPGTabs.ranged);
 		this.damage = damage;
 		this.ammoType = ammoType;
+		LangRegistry.addItem(this);
 	}
 
 	/**

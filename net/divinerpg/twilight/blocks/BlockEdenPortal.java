@@ -7,6 +7,7 @@ import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.eden.gen.TeleporterEden;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
@@ -37,6 +38,7 @@ public class BlockEdenPortal extends BlockBreakable
         func_149647_a(DivineRPGTabs.blocks);
         setName("edenPortal");
         register();
+        LangRegistry.addBlock(this);
         //this.setHardness(-1.0F);
         //this.setStepSound(soundGlassFootstep);
         //this.setLightValue(0.75F);

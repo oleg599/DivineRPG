@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -17,6 +18,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -49,6 +51,7 @@ public class ItemModBow extends ItemBow {
 		this.unbreakable = unbreakable;
 		this.maxStackSize = 1;
 		this.setCreativeTab(DivineRPGTabs.ranged);
+		LangRegistry.addItem(this);
 	}
 	
     @SideOnly(Side.CLIENT)

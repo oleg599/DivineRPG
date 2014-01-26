@@ -13,6 +13,7 @@ import java.util.Random;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
 import net.minecraft.block.material.MapColor;
@@ -47,6 +48,7 @@ public class BlockBlueFire extends BlockFire
         setName("blueFire");
         func_149647_a(DivineRPGTabs.blocks);
         register();
+        LangRegistry.addBlock(this);
     }
 
     @Deprecated // Use setFireInfo

@@ -6,6 +6,7 @@ import java.util.Set;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -39,6 +40,7 @@ public class ItemShickaxe extends ItemTool
 		super(0, par2EnumToolMaterial, blocksEffectiveAgainst);
 		this.theToolMaterial = par2EnumToolMaterial;
 		setCreativeTab(DivineRPGTabs.tools);
+		LangRegistry.addItem(this);
 	}
 
 	@Override

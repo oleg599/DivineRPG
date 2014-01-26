@@ -4,6 +4,7 @@ import net.divinerpg.DivineRPG;
 import net.divinerpg.Reference;
 import net.divinerpg.client.GuiHandler;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;
@@ -15,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -37,6 +39,7 @@ public class MobPumpkin extends BlockDirectional
 		func_149711_c(1.0F);
 		setCreativeTab(DivineRPGTabs.blocks);
 		setSoundType(wood);
+        LangRegistry.addBlock(this);
 	}
 	
 	public Block setCreativeTab(CreativeTabs name) {

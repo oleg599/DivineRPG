@@ -7,6 +7,7 @@ import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
@@ -14,6 +15,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -31,6 +33,7 @@ public class TwilightBlock extends Block
 		}else{
 			func_149711_c(6.0F);
 		}
+        LangRegistry.addBlock(this);
 	}
 
 	public static Item getBlock(Block b){

@@ -1,0 +1,9 @@
+================== Important information for devs =================================
+
+Currently the way the system works is this, the lang file is auto generated, but will be saved to your Minecraft/Forge project.
+
+So when ever new items/blocks (all that have been added as of 1/25/2014 9:05 PM US Central), all you need to do is go get this file, and replace the real lang file inside: assets/divinerpg/lang/
+
+If you are confused, please talk to me
+
+            -BossLetsPlays
