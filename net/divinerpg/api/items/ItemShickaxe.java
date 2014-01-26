@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -63,14 +64,10 @@ public class ItemShickaxe extends ItemTool
 	}
 
 	@Override
-	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
-	{
-		if (!par2EntityPlayer.canPlayerEdit(par4, par5, par6, par7, par1ItemStack))
-		{
+	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
+		if (!par2EntityPlayer.canPlayerEdit(par4, par5, par6, par7, par1ItemStack)) {
 			return false;
-		}
-		else
-		{
+		} else {
 			UseHoeEvent event = new UseHoeEvent(par2EntityPlayer, par1ItemStack, par3World, par4, par5, par6);
 			if (MinecraftForge.EVENT_BUS.post(event))
 			{
@@ -111,11 +108,11 @@ public class ItemShickaxe extends ItemTool
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-		par3List.add("Efficiency: " + this.theToolMaterial.getEfficiencyOnProperMaterial());
+		par3List.add(DivineAPI.BLUE + "Efficiency: " + this.theToolMaterial.getEfficiencyOnProperMaterial());
 		if (par1ItemStack.getMaxDamage() != -1) {
 			par3List.add(par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage() + " Uses");
 		} else {
-			par3List.add("Infinite Uses");
+			par3List.add(DivineAPI.GREEN + "Infinite Uses");
 		}
 	}
 	public Item setTextureName(String par1Str)
