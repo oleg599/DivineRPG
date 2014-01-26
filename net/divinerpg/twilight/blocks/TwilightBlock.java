@@ -19,36 +19,49 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class TwilightBlock extends Block
 {
-	
+
 	public TwilightBlock(Material m)
 	{
 		super(m);
 		setCreativeTab(DivineRPGTabs.blocks);
 		setSoundType(Block.field_149780_i);
-		func_149711_c(6.0F);
+		
+		if(isOre()){
+			func_149711_c(9.0F);
+		}else{
+			func_149711_c(6.0F);
+		}
 	}
-	
+
 	public static Item getBlock(Block b){
 		return Item.func_150898_a(b);
 	}
-	
+
 	public Block setCreativeTab(CreativeTabs name) {
-        return func_149647_a(name);
-    }
+		return func_149647_a(name);
+	}
 	public Block setSoundType(Block.SoundType name) {
-    	return func_149672_a(name);
-    }
-	
+		return func_149672_a(name);
+	}
+
+	boolean isOre(){
+		if(this == TwilightBlocks.edenOre|| this == TwilightBlocks.wildWoodOre || this == TwilightBlocks.apalachiaOre ||
+				this == TwilightBlocks.skythernOre || this == TwilightBlocks.mortumOre){
+			return true;
+		}
+		return false;
+	}
+
 	/**
 	 * Sets the item that will be dropped when the block is broken.
 	 */
 	public Item func_149650_a(int par1, Random par2, int par3) {
 		return (this == TwilightBlocks.edenOre) ? TwilightItems.edenFragments 
 				: (this == TwilightBlocks.wildWoodOre) ? TwilightItems.wildWoodFragments 
-				: (this == TwilightBlocks.apalachiaOre) ? TwilightItems.apalachiaFragments
-				: (this == TwilightBlocks.skythernOre) ? TwilightItems.skythernFragments
-				: (this == TwilightBlocks.mortumOre) ? TwilightItems.mortumFragments
-				: getBlock(this);
+						: (this == TwilightBlocks.apalachiaOre) ? TwilightItems.apalachiaFragments
+								: (this == TwilightBlocks.skythernOre) ? TwilightItems.skythernFragments
+										: (this == TwilightBlocks.mortumOre) ? TwilightItems.mortumFragments
+												: getBlock(this);
 	}
 
 	public int func_149679_a(int par1, Random par2)
@@ -71,7 +84,7 @@ public class TwilightBlock extends Block
 	}
 
 	private Random rand = new Random();
-    private String name;
+	private String name;
 	@Override
 	public int getExpDrop(IBlockAccess block, int par5, int par7)
 	{
@@ -86,52 +99,52 @@ public class TwilightBlock extends Block
 		}
 		return 0;
 	}
-	
-    public Block setUnlocalizedName(String name){
-        return func_149663_c(name);
-    }
-    
-    public Block setTextureName(String name){
-        return func_149658_d(Reference.PREFIX + name);
-    }
-    
-    public Block setName(String name){
-        this.name = name;
-        setTextureName(name);
-        setUnlocalizedName(name);
-        register();
-        return this;
-    }
-    
-    public String getName(){
-        return name;
-    }
-    public Block register(){
-        int numChars = 0;
-        char firstLetter = name.charAt(0);
-        if(Character.isLowerCase(firstLetter))
-            firstLetter = Character.toUpperCase(firstLetter);
-        String inGame = name.substring(1);
-        for(int k = 0; k < name.length(); k++){
-            char c = name.charAt(k);
-            int code = (int) c;
-            
-            if(k != 0){
-                for(int p = 65; p < 90; p++){
-                    if(code == p){
-                        numChars++;
-                        if(numChars == 1)
-                            inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-                        else
-                            inGame = new StringBuffer(inGame).insert(k, " ").toString();
-                    }
-                }
-            }
-        }
-        
-        String finalName = firstLetter + inGame;
-        GameRegistry.registerBlock(this, name);
-        LanguageRegistry.addName(this, finalName);
-        return this;
-    }
+
+	public Block setUnlocalizedName(String name){
+		return func_149663_c(name);
+	}
+
+	public Block setTextureName(String name){
+		return func_149658_d(Reference.PREFIX + name);
+	}
+
+	public Block setName(String name){
+		this.name = name;
+		setTextureName(name);
+		setUnlocalizedName(name);
+		register();
+		return this;
+	}
+
+	public String getName(){
+		return name;
+	}
+	public Block register(){
+		int numChars = 0;
+		char firstLetter = name.charAt(0);
+		if(Character.isLowerCase(firstLetter))
+			firstLetter = Character.toUpperCase(firstLetter);
+		String inGame = name.substring(1);
+		for(int k = 0; k < name.length(); k++){
+			char c = name.charAt(k);
+			int code = (int) c;
+
+			if(k != 0){
+				for(int p = 65; p < 90; p++){
+					if(code == p){
+						numChars++;
+						if(numChars == 1)
+							inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
+						else
+							inGame = new StringBuffer(inGame).insert(k, " ").toString();
+					}
+				}
+			}
+		}
+
+		String finalName = firstLetter + inGame;
+		GameRegistry.registerBlock(this, name);
+		LanguageRegistry.addName(this, finalName);
+		return this;
+	}
 }

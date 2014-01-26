@@ -62,7 +62,7 @@ public class VetheanItems {
 	public static final Item finishedTemplate 	= new ItemMod().setName("finishedTemplate").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Item glisteningTemplate = new ItemMod().setName("glisteningTemplate").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Item demonizedTemplate 	= new ItemMod().setName("demonizedTemplate").setCreativeTab(DivineRPGTabs.vethea);
-	public static final Item tormentedTemplate 	= new ItemMod().setName("degradedTemplate").setCreativeTab(DivineRPGTabs.vethea);
+	public static final Item tormentedTemplate 	= new ItemMod().setName("tormentedTemplate").setCreativeTab(DivineRPGTabs.vethea);
 	
 	public static final Item teakerCannon		 = new ItemVetheanCannon(3).setName("teakerCannon");
 	public static final Item amthrimisCannon 	 = new ItemVetheanCannon(5).setName("amthirmisCannon");
@@ -102,7 +102,7 @@ public class VetheanItems {
 	public static final Item quadroticClaw		 = new ItemVetheanClaw(14).setName("quadroticClaw");
 	public static final Item karosClaw			 = new ItemVetheanClaw(19).setName("karosClaw");
 	public static final Item heliosisClaw		 = new ItemVetheanClaw(26).setName("heliosisClaw");
-	public static final Item arksianeClaw		 = new ItemVetheanClaw(35).setName("amthirmisClaw");
+	public static final Item arksianeClaw		 = new ItemVetheanClaw(35).setName("arksianeClaw");
 
 	public static final Item eversight			 = new ItemVetheanEversight(42).setName("eversight");
 	public static final Item everlight			 = new ItemVetheanHammerSword(44).setName("everlight");

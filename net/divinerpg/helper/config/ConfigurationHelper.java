@@ -58,7 +58,7 @@ public class ConfigurationHelper {
 	}	
 	
 	public static void miscInit(){
-		canShowDeathChat = cfg.get("Chat", "Can Show Death Chat For DivineRPG Mobs", false).getBoolean(true);
+		canShowDeathChat = cfg.get("Chat", "Can Show Death Chat For DivineRPG Mobs", true).getBoolean(true);
 	}
 
 	public static void addConfig(String cat, String name, int value) {

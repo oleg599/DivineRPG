@@ -13,13 +13,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class DivineAPI {
 
-	static int mobID = 121, projectileID = 350;
+	static int mobID = 121, projectileID = 230;
 
 
 	public static void addRecipe(ItemStack i, Object ... o) {
 		GameRegistry.addRecipe(i, o);
 	}
-	
+
 	public static void addBigRecipe(ItemStack i, Object ... o) {
 		CraftingDivineTableManager.getInstance().addRecipe(i, o);
 	}
@@ -27,7 +27,7 @@ public class DivineAPI {
 	public static void addShapelessRecipe(ItemStack i, Object ... o) {
 		GameRegistry.addShapelessRecipe(i, o);
 	}
-	
+
 	public static void addBigShapelessRecipe(ItemStack i, Object ... o) {
 		CraftingDivineTableManager.getInstance().addShapelessRecipe(i, o);
 	}
@@ -66,7 +66,7 @@ public class DivineAPI {
 		ret.func_150256_b().func_150238_a(color);
 		return ret;
 	}
-	
+
 	public static String BLACK = "\u00a70", DARK_BLUE = "\u00a71", DARK_GREEN = "\u00a72", DARK_AQUA = "\u00a73", DARK_RED = "\u00a74";
 	public static String DARK_PURPLE = "\u00a75", GOLD = "\u00a76", GRAY = "\u00a77", DARK_GRAY = "\u00a78", BLUE = "\u00a79";
 	public static String GREEN = "\u00a7a", AQUA = "\u00a7b", RED = "\u00a7c", LIGHT_PURPLE = "\u00a7d", YELLOW = "\u00a7e";

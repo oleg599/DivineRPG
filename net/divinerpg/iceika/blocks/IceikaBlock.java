@@ -20,11 +20,11 @@ public class IceikaBlock extends BlockMod {
 
     private static SoundType gravel = Block.field_149767_g;
 
-	public IceikaBlock(Material m)
-	{
+	public IceikaBlock(Material m){
 		super(m);
 		setCreativeTab(DivineRPGTabs.blocks);
-		setSoundType(gravel);
+		//setSoundType(gravel);
+		setSoundType(Block.field_149780_i);
 	}
 	
 	public static Item getBlock(Block b){
