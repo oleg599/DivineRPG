@@ -26,7 +26,7 @@ public class CommonProxy {
 	//ClientProxy
 	public void preInit(FMLPreInitializationEvent event){
 		MinecraftForge.EVENT_BUS.register(new EventHelper());
-		ConfigurationHelper.init(event);
+		ConfigurationHelper.init();
 		OverworldMobRegistry.init();
 		TwilightMobRegistry.init();
 		IceikaMobRegistry.init();

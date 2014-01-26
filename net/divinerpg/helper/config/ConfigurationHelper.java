@@ -8,13 +8,11 @@ import net.minecraftforge.common.config.Configuration;
 
 public class ConfigurationHelper {
 	
-	static FMLPreInitializationEvent event;
 	public static Configuration cfg;
 	private static HashMap<String, Integer> configMap = new HashMap<String, Integer>();
 
-	public static void init(FMLPreInitializationEvent e) {
-		event = e;
-		cfg = new Configuration(new File(event.getModConfigurationDirectory() + "DivineRPG.cfg"));
+	public static void init() {
+		cfg = new Configuration(new File("./DivineRPG/DivineRPG.cfg"));
 
 		cfg.load();
 		dimensionInit();

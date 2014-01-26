@@ -1,6 +1,8 @@
 package net.divinerpg.vanilla.blocks;
 
+import net.divinerpg.DivineRPG;
 import net.divinerpg.Reference;
+import net.divinerpg.client.GuiHandler;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
@@ -8,6 +10,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
@@ -67,6 +70,16 @@ public class MobPumpkin extends BlockDirectional
 	{
 		int l = MathHelper.floor_double((double)(player.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
 		world.setBlockMetadataWithNotify(x, y, z, l, 2);
+	}
+	
+	@Override
+	public boolean func_149727_a(World var1, int var2, int var3, int var4, EntityPlayer player, int var6, float var7, float var8, float var9) {
+		if (!player.isSneaking()) {
+			//TODO Get certain mob sounds to play on right click
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@SideOnly(Side.CLIENT)
