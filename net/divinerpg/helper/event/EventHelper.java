@@ -9,6 +9,7 @@ import java.net.URL;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.items.VanillaItems;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,6 +18,8 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
+import cpw.mods.fml.relauncher.Side;
 
 public class EventHelper {
 
@@ -57,10 +60,10 @@ public class EventHelper {
     }
     static VanillaItems v;
     
-    /*@SubscribeEvent
-    public void onLivingHurtEvent(LivingHurtEvent ev) {
+    @SubscribeEvent
+    public void onTickEvent(TickEvent ev) {
 		
-		EntityPlayer player = (EntityPlayer)ev.entityLiving;
+		EntityPlayer player = Minecraft.getMinecraft().thePlayer;
 		ItemStack boot = player.inventory.armorInventory[0];
 		ItemStack leg = player.inventory.armorInventory[1];
 		ItemStack chestplate = player.inventory.armorInventory[2];
@@ -83,11 +86,10 @@ public class EventHelper {
 		if (head != null) {
 			helmet = head.getItem();
 		}
-		DamageSource d = ev.source;
-		
+
 		if(boots == v.angelicBoots && chest == v.angelicBody && legs == v.angelicLegs && helmet == v.angelicHelmet){
 			player.capabilities.isFlying = true;
 			player.fallDistance = 0.0F;
-		}
-    }   */
+		}//TODO Figure out why it isnt working.
+    }   
 }
