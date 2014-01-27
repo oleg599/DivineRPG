@@ -1,22 +1,38 @@
 package net.divinerpg.api.items;
 
+import java.util.List;
+
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ItemModFood extends ItemFood {
 	
-	public ItemModFood(int food, float sat, boolean wolf){
-		super(food, sat, wolf);
+	int food;
+	float sat;
+	boolean wolf;
+	
+	public ItemModFood(int food, float sat, boolean wolfFood){
+		super(food, sat, wolfFood);
 		setCreativeTab(DivineRPGTabs.food);
+		this.food = food;
+		this.sat = sat;
+		wolf = wolfFood;
 		LangRegistry.addItem(this);
+	}
+	
+	@Override
+	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
+		par3List.add("Replenishes " + food + " Hunger");
+		par3List.add(sat + " Saturation");
+		par3List.add(!wolf ? "Pet Food: false" : "Pet Food: true");
 	}
 	
 	public Item setTextureName(String par1Str)

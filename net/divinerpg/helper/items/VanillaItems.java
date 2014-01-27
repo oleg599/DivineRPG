@@ -140,4 +140,10 @@ public class VanillaItems {
     public static final Item angelicLegs 		= new ItemDivineArmor(ArmorMaterialMod.Angelic, LEGS, 2, 0.125D, true).setName("angelicLegs");
     public static final Item angelicBoots 		= new ItemDivineArmor(ArmorMaterialMod.Angelic, BOOTS, 3, 0.125D, true).setName("angelicBoots");
 
+    public static final Item greenDiamondChunk  = new ItemMod().setName("greenDiamondChunk");
+    public static final Item grayDiamondChunk   = new ItemMod().setName("greyDiamondChunk");
+    public static final Item blueDiamondChunk   = new ItemMod().setName("blueDiamondChunk");
+    public static final Item redDiamondChunk  	= new ItemMod().setName("redDiamondChunk");
+    public static final Item yellowDiamondChunk = new ItemMod().setName("yellowDiamondChunk");
+    
 }

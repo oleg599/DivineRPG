@@ -109,4 +109,8 @@ public class VetheanItems {
 	public static final Item everbright			 = new ItemVetheanClaw(42).setName("everbright");
 	//public static final Item everfight		 = new ItemVetheanBow(4.6D, everArrow, "everfight", false, 25, 25);
 	public static final Item evernight			 = new ItemEvernight(115, 200).setName("evernight");
+	
+	public static final Item dreamFlint 		 = new ItemMod().setName("dreamFlint");
+	public static final Item moonClock 			 = new ItemMod().setName("moonClock");
+	public static final Item dreamPowder 		 = new ItemMod().setName("dreamPowder");
 }

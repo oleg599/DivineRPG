@@ -28,20 +28,20 @@ public class EventHelper {
             if (p.worldObj.isRemote) {
                 try {
                     if(!UpdateChecker.isOnline()){
-                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "Thank you for downloading and playing" + EnumChatFormatting.GREEN + " DivineRPG!"));
+                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "Thank you for downloading and playing" + DivineAPI.GREEN + " DivineRPG!"));
                         p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "[Version: " + Reference.MOD_VERSION + "]"));
                         p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.LIGHT_PURPLE, "Unable to check for latest version, you may want to check your internet connection!"));
                     }
                     if (UpdateChecker.isUpdateAvailable() && UpdateChecker.isOnline()) {
                         BufferedReader versionFile = new BufferedReader(new InputStreamReader(new URL("https://dl.dropboxusercontent.com/s/xddtt5g4g8xz1ut/DivineRPG1.7Update.txt").openStream()));
                         String curVersion = versionFile.readLine();
-                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "Thank you for downloading and playing" + EnumChatFormatting.GREEN + " DivineRPG!"));
+                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "Thank you for downloading and playing" + DivineAPI.GREEN + " DivineRPG!"));
                         p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.RED, "[Version: " + Reference.MOD_VERSION + "]"));
                         p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "A DivineRPG update is avaliable."));
                         p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "[New Version: " + curVersion + "]"));
                     }
                     if ((!UpdateChecker.isUpdateAvailable()) && UpdateChecker.isOnline()) {
-                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "Thank you for downloading and playing" + EnumChatFormatting.GREEN + " DivineRPG!"));
+                        p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "Thank you for downloading and playing" + DivineAPI.GREEN + " DivineRPG!"));
                         p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "[Version: " + Reference.MOD_VERSION + "]"));
                         p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "DivineRPG is up to date."));
                     }
@@ -57,7 +57,7 @@ public class EventHelper {
     }
     static VanillaItems v;
     
-    @SubscribeEvent
+    /*@SubscribeEvent
     public void onLivingHurtEvent(LivingHurtEvent ev) {
 		
 		EntityPlayer player = (EntityPlayer)ev.entityLiving;
@@ -89,5 +89,5 @@ public class EventHelper {
 			player.capabilities.isFlying = true;
 			player.fallDistance = 0.0F;
 		}
-    }   
+    }   */
 }

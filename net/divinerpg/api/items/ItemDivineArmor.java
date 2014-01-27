@@ -6,6 +6,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.TwilightItems;
 import net.divinerpg.helper.items.VanillaItems;
 import net.divinerpg.helper.utils.LangRegistry;
@@ -24,8 +25,15 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	double damageReduction;
 	String name;
 	boolean unbreakable;
-	static VanillaItems v; static TwilightItems t;
+	static VanillaItems v; static TwilightItems t; static IceikaItems i;
 	String PREFIX = Reference.MOD_ID + "textures/armor/";
+	
+	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, boolean unbreakable){
+		this(armor, par1, par2, 0.0D, unbreakable);	
+		this.unbreakable = unbreakable;
+		LangRegistry.addItem(this);
+		setCreativeTab(DivineRPGTabs.armor);
+	}
 	
 	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, double damReduct, boolean unbreakable) {
 		super(armor, par1, par2);
@@ -71,10 +79,17 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	@Override
 	public void addInformation(ItemStack item, EntityPlayer par2EntityPlayer, List list, boolean par4) {
 		list.add((damageReduction * 100) + "% Damage Reduction");
-		/*if(item.getItem() == v.angelicBody || item.getItem() == v.angelicBoots || item.getItem() == v.angelicHelmet || item.getItem() == v.angelicLegs){
+		if(item.getItem() == v.angelicBody || item.getItem() == v.angelicBoots || item.getItem() == v.angelicHelmet || item.getItem() == v.angelicLegs){
 			list.add("Full Set: No fall damage");
 			list.add("Full Set: Allows flight");
-		}*/
+		}
+		if(item.getItem() == i.santaBody || item.getItem() == i.santaBoots || item.getItem() == i.santaHead || item.getItem() == i.santaLegs){
+			list.add("Massive buff in Iceika");
+			list.add("Iceika: Speeds up player");
+			list.add("Iceika: Adds 6x melee damage");
+			list.add("Iceika: Refills hunger");
+			list.add("Iceika: 80% Damage reduction");
+		}
         list.add(!unbreakable ? (item.getMaxDamage() - item.getItemDamage() + " Uses Remaining") : "Unlimited Uses");
 	}
 
