@@ -103,4 +103,12 @@ public class TwilightItems {
     public static final Item mortumBow          = new ItemModBow(-1, 31, true, mortumArrow).setName("mortumBow");
     
     public static final Item corruptedBullet    = new ItemMod().setName("corruptedBullet");
+    
+    public static final Item spawnerBase 		= new ItemMod().setName("spawnerBase");
+    public static final Item spawnDensos 		= new ItemTwilightSpawner().setName("spawnDensos");
+    public static final Item spawnKarot 		= new ItemTwilightSpawner().setName("spawnKarot");
+    public static final Item spawnReyvor 		= new ItemTwilightSpawner().setName("spawnReyvor");
+    public static final Item spawnSoulFiend		= new ItemTwilightSpawner().setName("spawnSoulFiend");
+    public static final Item spawnTwilight 		= new ItemTwilightSpawner().setName("spawnTwilightDemon");
+    public static final Item spawnVamacheron	= new ItemTwilightSpawner().setName("spawnVamacheron");
 }

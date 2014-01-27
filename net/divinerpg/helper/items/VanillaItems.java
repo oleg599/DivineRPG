@@ -1,20 +1,9 @@
 package net.divinerpg.helper.items;
 
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.api.items.ItemModAxe;
-import net.divinerpg.api.items.ItemModFood;
-import net.divinerpg.api.items.ItemModHoe;
-import net.divinerpg.api.items.ItemModPickaxe;
-import net.divinerpg.api.items.ItemModShovel;
-import net.divinerpg.api.items.ItemModSword;
-import net.divinerpg.api.items.ItemShickaxe;
+import net.divinerpg.api.items.*;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.material.ToolMaterialMod;
-import net.divinerpg.vanilla.items.ItemCallOfTheWatcher;
-import net.divinerpg.vanilla.items.ItemInfernoSword;
-import net.divinerpg.vanilla.items.ItemMysteriousClock;
-import net.divinerpg.vanilla.items.ItemThrowable;
-import net.divinerpg.vanilla.items.VileStorm;
+import net.divinerpg.vanilla.items.*;
 import net.minecraft.item.Item;
 
 public class VanillaItems {
@@ -127,7 +116,7 @@ public class VanillaItems {
 
     public static final Item corruptedPickaxe   = new ItemModPickaxe(ToolMaterialMod.Corrupted).setName("corruptedPickaxe");
     public static final Item corruptedAxe       = new ItemModAxe(ToolMaterialMod.Corrupted).setName("corruptedAxe");
-    public static final Item corruptedShovel    = new ItemModShovel(ToolMaterialMod.Corrupted).setName("corruptedshovel");
+    public static final Item corruptedShovel    = new ItemModShovel(ToolMaterialMod.Corrupted).setName("corruptedShovel");
 
     public static final Item divineShickaxe     = new ItemShickaxe(ToolMaterialMod.Divine).setName("divineShickaxe");
     public static final Item divinePickaxe      = new ItemModPickaxe(ToolMaterialMod.Divine).setName("divinePickaxe");

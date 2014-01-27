@@ -72,8 +72,6 @@ public class ItemThrowable extends ItemMod {
 		return var1;
 	}
 	
-	
-
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
