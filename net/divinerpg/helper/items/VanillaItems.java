@@ -8,7 +8,7 @@ import net.divinerpg.vanilla.items.*;
 import net.minecraft.item.Item;
 
 public class VanillaItems {
-    public static int        HEAD               = 0, BODY = 1, LEGS = 2, BOOTS = 3;
+    public static final int  HEAD               = 0, BODY = 1, LEGS = 2, BOOTS = 3;
 
     public static final Item myseriousClock     = new ItemMysteriousClock();
 

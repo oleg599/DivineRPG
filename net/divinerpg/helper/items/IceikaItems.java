@@ -11,7 +11,7 @@ public class IceikaItems {
 	
 	public static int        HEAD               = 0, BODY = 1, LEGS = 2, BOOTS = 3;
 	
-	public static final Item snowFlake = new ItemMod().setName("snowFlake");
+	/*public static final Item snowFlake = new ItemMod().setName("snowFlake");
 	public static final Item icicleBane = new ItemMod().setName("icicleBane").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item soundOfCarols = new ItemMod().setName("soundOfCarols");
 	public static final Item icineSword = new ItemMod().setName("icineSword").setCreativeTab(DivineRPGTabs.swords);
@@ -22,7 +22,7 @@ public class IceikaItems {
 	public static final Item frostKingSword = new ItemMod().setName("frostkingSword").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item frozenMaul = new ItemMod().setName("frozenMaul").setCreativeTab(DivineRPGTabs.swords);
 	public static final Item frossivence = new ItemMod().setName("frossivence").setCreativeTab(DivineRPGTabs.swords);
-
+	//TODO Add the corresponding items files to the right items
 	public static final Item frostClawCannon = new ItemMod().setName("frostclawCannon").setCreativeTab(DivineRPGTabs.ranged);
 	public static final Item fractiteCannon = new ItemMod().setName("fractiteCannon").setCreativeTab(DivineRPGTabs.ranged);
 	public static final Item snowFlakeShuriken = new ItemMod().setName("snowFlakeShuriken").setCreativeTab(DivineRPGTabs.ranged);
@@ -33,7 +33,7 @@ public class IceikaItems {
 	public static final Item fruitCake = new ItemModFood(16, 2.0F, false).setName("fruitCake");
 	
 	//public static final Item icicleBow = new ItemIceBow().setName("icicleBow");
-	//public static final Item snowStormBow = new ItemSnowStormBow().setName("snowStormBow");
+	//public static final Item snowStormBow = new ItemSnowStormBow().setName("snowStormBow");*/
 	
 	public static final Item santaHead = new ItemDivineArmor(ArmorMaterialMod.Santa, HEAD, 0, false).setName("santaHelmet");
 	public static final Item santaBody = new ItemDivineArmor(ArmorMaterialMod.Santa, BODY, 1, false).setName("santaBody");
