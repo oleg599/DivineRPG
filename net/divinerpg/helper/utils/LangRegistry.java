@@ -30,7 +30,7 @@ public class LangRegistry {
 
     public static void init() {
         if(Reference.DEBUG){
-            File f = new File("./en_US.lang");
+            File f = new File("./DivineRPG/en_US.lang");
             if (!f.exists()) {
                 try {
                     f.createNewFile();
@@ -50,7 +50,7 @@ public class LangRegistry {
                     e.printStackTrace();
                 }
             }else{
-                if(!readFile("./en_US.lang").isEmpty()){
+                if(!readFile("./DivineRPG/en_US.lang").isEmpty()){
                     f.delete();
                     try {
                         f.createNewFile();
