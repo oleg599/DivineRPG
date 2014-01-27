@@ -4,6 +4,7 @@ import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.mob.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -15,6 +16,7 @@ public class ItemTwilightSpawner extends ItemMod{
 
 	public ItemTwilightSpawner() {
 		this.setCreativeTab(DivineRPGTabs.spawner);
+		LangRegistry.addItem(this);
 	}
 	
 	@Override

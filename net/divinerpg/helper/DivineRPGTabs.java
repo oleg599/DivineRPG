@@ -2,6 +2,7 @@ package net.divinerpg.helper;
 
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VetheanItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -18,7 +19,7 @@ public class DivineRPGTabs {
 	public static CreativeTabs items = new CreativeTabs("Materials")
 		{public Item getTabIconItem() {return VanillaItems.rupeeIngot;}};
 	public static CreativeTabs armor = new CreativeTabs("Armor")
-		{public Item getTabIconItem() {return VanillaItems.noImage;}};
+		{public Item getTabIconItem() {return VanillaItems.angelicBody;}};
 	public static CreativeTabs spawner = new CreativeTabs("Spawner")
 		{public Item getTabIconItem() {return VanillaItems.callWatcher;}};
 	public static CreativeTabs utility = new CreativeTabs("Utility")
@@ -26,6 +27,6 @@ public class DivineRPGTabs {
 	public static CreativeTabs food = new CreativeTabs("Herbalism")
 		{public Item getTabIconItem() {return VanillaItems.bacon;}};
 	public static CreativeTabs vethea = new CreativeTabs("Vethea")
-		{public Item getTabIconItem() {return Items.bed;}};
+		{public Item getTabIconItem() {return VetheanItems.karosStaff;}};
 }
 	

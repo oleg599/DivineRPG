@@ -2,6 +2,7 @@ package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.*;
 import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.material.ArmorMaterialMod;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.vanilla.items.*;
 import net.minecraft.item.Item;
@@ -133,4 +134,10 @@ public class VanillaItems {
 
     public static final Item watchingEye        = new ItemMod().setName("watchingEye");
     public static final Item callWatcher        = new ItemCallOfTheWatcher().setName("callOfTheWatcher");
+    
+    public static final Item angelicHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Angelic, HEAD, 0, 0.125D, true).setName("angelicHelmet");
+    public static final Item angelicBody 		= new ItemDivineArmor(ArmorMaterialMod.Angelic, BODY, 1, 0.125D, true).setName("angelicBody");
+    public static final Item angelicLegs 		= new ItemDivineArmor(ArmorMaterialMod.Angelic, LEGS, 2, 0.125D, true).setName("angelicLegs");
+    public static final Item angelicBoots 		= new ItemDivineArmor(ArmorMaterialMod.Angelic, BOOTS, 3, 0.125D, true).setName("angelicBoots");
+
 }

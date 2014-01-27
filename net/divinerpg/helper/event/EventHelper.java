@@ -8,10 +8,14 @@ import java.net.URL;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.items.VanillaItems;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
-
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class EventHelper {
@@ -51,6 +55,39 @@ public class EventHelper {
             }
         }
     }
-
+    static VanillaItems v;
     
+    @SubscribeEvent
+    public void onLivingHurtEvent(LivingHurtEvent ev) {
+		
+		EntityPlayer player = (EntityPlayer)ev.entityLiving;
+		ItemStack boot = player.inventory.armorInventory[0];
+		ItemStack leg = player.inventory.armorInventory[1];
+		ItemStack chestplate = player.inventory.armorInventory[2];
+		ItemStack head = player.inventory.armorInventory[3];
+		
+		Item boots = null;
+		Item chest = null;
+		Item legs = null;
+		Item helmet = null;
+		
+		if (boot != null) {
+			boots = boot.getItem();
+		}
+		if (chestplate != null) {
+			chest = chestplate.getItem();
+		}
+		if (leg != null) {
+			legs = leg.getItem();
+		}
+		if (head != null) {
+			helmet = head.getItem();
+		}
+		DamageSource d = ev.source;
+		
+		if(boots == v.angelicBoots && chest == v.angelicBody && legs == v.angelicLegs && helmet == v.angelicHelmet){
+			player.capabilities.isFlying = true;
+			player.fallDistance = 0.0F;
+		}
+    }   
 }

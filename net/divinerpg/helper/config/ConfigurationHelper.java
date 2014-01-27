@@ -54,16 +54,10 @@ public class ConfigurationHelper {
 		keepLoadingVethea = cfg.get("Dimension", "Keep Loading Vethea", true).getBoolean(true);
 		keepLoadingArcana = cfg.get("Dimension", "Keep Loading Arcana", true).getBoolean(true);
 		keepLoadingIceika = cfg.get("Dimension", "Keep Loading Iceika", true).getBoolean(true);
-		
 	}	
 	
 	public static void miscInit(){
 		canShowDeathChat = true;//cfg.get("Chat", "Can Show Death Chat For DivineRPG Mobs", true).getBoolean(true);
-	}
-
-	public static void addConfig(String cat, String name, int value) {
-		cfg.get(cat, name, value);
-		configMap.put(name, cfg.get(cat, name, value).getInt());
 	}
 
 	public static int getConfig(String name) {
