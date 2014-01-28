@@ -43,7 +43,6 @@ public class ArmorMaterialMod {
 	public static String[] rupeeDesc = {"13.75% Damage reduction", "Full Set: 80% Melee damage protection"};
 	public static String[] aquaticDesc = {"13.75% Damage reduction", "Full Set: Breathe underwater", "Full Set: Swim faster"};
 	public static String[] shadowDesc = {"15% Damage reduction", "Full Set: Move faster"};
-	public static String[] santaDesc = {"Massive buff in Iceika", "Iceika: Speeds up player", "Iceika: Adds 6x melee damage", "Iceika: Refills hunger", "Iceika: 80% Damage reduction"};
 	public static String[] netheriteDesc = {"1.25% Damage reduction", "Fire protection"};
 	public static String[] infernoDesc = {"15% Damage reduction", "Fire protection", "Lava protection"};
 	public static String[] bedrockDesc = {"18.25% Damage reduction", "Explosion protection", "Fire protection", "Lava protection"};
