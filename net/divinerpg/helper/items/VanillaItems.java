@@ -219,10 +219,10 @@ public class VanillaItems {
     public static final Item witherReaperLegs 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, true).setName("witherReaperLegs");
     public static final Item witherReaperBoots 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, true).setName("witherReaperBoots");
     
-    public static final Item enderHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Ender, HEAD, 0, 16.25D, false).setName("enderHelmet");
-    public static final Item enderBody	 		= new ItemDivineArmor(ArmorMaterialMod.Ender, BODY, 1, 16.25D, false).setName("enderBody");
-    public static final Item enderLegs	 		= new ItemDivineArmor(ArmorMaterialMod.Ender, LEGS, 2, 16.25D, false).setName("enderLegs");
-    public static final Item enderBoots 		= new ItemDivineArmor(ArmorMaterialMod.Ender, BOOTS, 3, 16.25D, false).setName("enderBoots");
+    public static final Item enderHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Ender, HEAD, 0, 16.25D, true).setName("enderHelmet");
+    public static final Item enderBody	 		= new ItemDivineArmor(ArmorMaterialMod.Ender, BODY, 1, 16.25D, true).setName("enderBody");
+    public static final Item enderLegs	 		= new ItemDivineArmor(ArmorMaterialMod.Ender, LEGS, 2, 16.25D, true).setName("enderLegs");
+    public static final Item enderBoots 		= new ItemDivineArmor(ArmorMaterialMod.Ender, BOOTS, 3, 16.25D, true).setName("enderBoots");
     
     public static final Item ironHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Iron, HEAD, 0, 6.5D, false).setName("ironHelmet");
     public static final Item ironBody	 		= new ItemDivineArmor(ArmorMaterialMod.Iron, BODY, 1, 6.5D, false).setName("ironBody");
