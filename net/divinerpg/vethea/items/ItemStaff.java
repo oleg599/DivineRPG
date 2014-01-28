@@ -5,7 +5,7 @@ import java.util.List;
 import net.divinerpg.DivineRPG;
 import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.vethea.entity.projectile.EntityBouncingProjectile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

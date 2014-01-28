@@ -50,4 +50,6 @@ import net.minecraftforge.common.util.EnumHelper;
 			public static ToolMaterial apalachiaTools 	= EnumHelper.addToolMaterial("apalachia", 100, 6000, 40.0F, 0, 22);
 			public static ToolMaterial mortumTools 		= EnumHelper.addToolMaterial("mortum", 100, 6000, 55.0F, 0, 22);
 			public static ToolMaterial divineTools 		= EnumHelper.addToolMaterial("divine", 8, 35000, 20.0F, 0, 10);
+			public static ToolMaterial Longsword 		= EnumHelper.addToolMaterial("longsword", 0, 750, 0.0F, 10, 15);
+
 }

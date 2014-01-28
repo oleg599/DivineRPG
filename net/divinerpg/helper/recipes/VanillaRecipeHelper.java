@@ -8,7 +8,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class OverworldRecipeHelper {
+public class VanillaRecipeHelper {
 
 	public static void init(){
 		DivineAPI.addRecipe(IS.slimeSword, "SDS", "SDS", "SDS", 'D', Items.diamond_sword, 'S', Items.slime_ball);
@@ -19,6 +19,7 @@ public class OverworldRecipeHelper {
 		DivineAPI.addRecipe(IS.shuriken, " I ", "III", " I ", 'I', Items.iron_ingot);
 		DivineAPI.addShapelessRecipe(IS.vile, VanillaItems.jungleShards, VanillaItems.vileStorm);
 		DivineAPI.addBigRecipe(IS.slimeSword, "SDS", "SDS", "SDS", 'D', Items.diamond_sword, 'S', Items.slime_ball);
+		DivineAPI.addBigRecipe(IS.longsword, " I ", " I ", " I ", "III", " S ", 'I', Items.iron_ingot, 'S', Items.stick);
 
 		DivineAPI.addRecipe(IS.netherChuck, " I ", "III", " I ", 'I', VanillaItems.netheriteIngot);
 

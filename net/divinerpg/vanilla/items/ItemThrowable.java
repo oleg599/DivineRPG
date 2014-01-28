@@ -4,9 +4,9 @@ import java.util.List;
 
 import net.divinerpg.Reference;
 import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.items.TwilightItems;
 import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.twilight.entity.projectile.*;
 import net.divinerpg.vanilla.entity.projectiles.*;
 import net.minecraft.entity.player.EntityPlayer;

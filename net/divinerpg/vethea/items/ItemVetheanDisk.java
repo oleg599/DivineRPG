@@ -4,7 +4,7 @@ import java.util.List;
 
 import net.divinerpg.DivineRPG;
 import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;

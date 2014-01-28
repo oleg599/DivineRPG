@@ -3,8 +3,8 @@ package net.divinerpg.twilight.items;
 import java.util.List;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.projectile.EntityBlitzAlapachia;
 import net.divinerpg.twilight.entity.projectile.EntityBlitzEden;
@@ -16,7 +16,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;

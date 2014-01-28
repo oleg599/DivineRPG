@@ -12,7 +12,7 @@ import java.util.Map.Entry;
 import java.util.Random;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;

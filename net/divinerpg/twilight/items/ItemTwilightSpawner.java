@@ -1,9 +1,9 @@
 package net.divinerpg.twilight.items;
 
 import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.mob.*;
 import net.minecraft.entity.player.EntityPlayer;

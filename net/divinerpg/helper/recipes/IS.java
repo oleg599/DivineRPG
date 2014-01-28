@@ -24,6 +24,7 @@ public class IS {
 		public static ItemStack realmiteSword = new ItemStack(VanillaItems.realmiteSword);
 		public static ItemStack shuriken = new ItemStack(VanillaItems.shuriken, 20);
 		public static ItemStack vile = new ItemStack(VanillaItems.vileStorm);
+		public static ItemStack longsword = new ItemStack(VanillaItems.longsword);
 
 		//Materials
 		public static ItemStack shadow = new ItemStack(VanillaItems.shadowBar);

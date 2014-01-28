@@ -3,7 +3,7 @@ package net.divinerpg.vanilla.blocks;
 import net.divinerpg.DivineRPG;
 import net.divinerpg.Reference;
 import net.divinerpg.client.GuiHandler;
-import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
@@ -16,7 +16,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;

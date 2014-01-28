@@ -3,7 +3,7 @@ package net.divinerpg.api.items;
 import java.util.List;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;

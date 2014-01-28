@@ -1,9 +1,9 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.*;
-import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.material.ArmorMaterialMod;
 import net.divinerpg.helper.material.ToolMaterialMod;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.vanilla.items.*;
 import net.minecraft.item.Item;
 
@@ -90,6 +90,8 @@ public class VanillaItems {
     public static final Item enderSwordGreen    = new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordGreen");
     public static final Item enderSwordRed      = new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordRed");
     public static final Item enderSwordYellow   = new ItemModSword(ToolMaterialMod.EnderSword).setName("enderSwordYellow");
+    public static final Item longsword   		= new ItemModSword(ToolMaterialMod.Longsword).setName("longsword").setFull3D();
+
     
     public static final Item shuriken       	= new ItemThrowable(4).setName("shuriken");
     public static final Item vileStorm       	= new ItemThrowable(4).setName("vileStorm");

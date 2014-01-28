@@ -3,10 +3,10 @@ package net.divinerpg.twilight.blocks;
 import java.util.Random;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.eden.gen.TeleporterEden;
 import net.minecraft.block.Block;
@@ -20,7 +20,6 @@ import net.minecraft.item.ItemMonsterPlacer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;

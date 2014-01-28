@@ -10,7 +10,7 @@ import net.divinerpg.helper.mobs.IceikaMobRegistry;
 import net.divinerpg.helper.mobs.OverworldMobRegistry;
 import net.divinerpg.helper.mobs.TwilightMobRegistry;
 import net.divinerpg.helper.mobs.VetheaMobRegistry;
-import net.divinerpg.helper.recipes.OverworldRecipeHelper;
+import net.divinerpg.helper.recipes.VanillaRecipeHelper;
 import net.divinerpg.helper.recipes.TwilightRecipeHelper;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.vanilla.worldgen.WorldGenOverworld;
@@ -33,7 +33,7 @@ public class CommonProxy {
 		TwilightMobRegistry.init();
 		IceikaMobRegistry.init();
 		VetheaMobRegistry.init();
-		OverworldRecipeHelper.init();
+		VanillaRecipeHelper.init();
 		TwilightRecipeHelper.init();
 		TwilightBlocks.init();
 		IceikaBlocks.init();

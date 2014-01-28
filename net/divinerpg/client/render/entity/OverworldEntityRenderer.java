@@ -57,6 +57,7 @@ import net.divinerpg.vanilla.entity.projectiles.EntityShuriken;
 import net.divinerpg.vanilla.entity.projectiles.EntityVileStorm;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelSpider;
+import net.minecraftforge.client.MinecraftForgeClient;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class OverworldEntityRenderer {
@@ -94,5 +95,7 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityNetherWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.netherWatcher));
 		RenderingRegistry.registerEntityRenderingHandler(EntityWildFire.class, new RenderDivineMob(new ModelWildFire(), 0.0F, EntityResourceLocation.wildFire));
 		RenderingRegistry.registerEntityRenderingHandler(EntityGlacon.class, new RenderDivineMob(new ModelGlacon(), 0.0F, EntityResourceLocation.glacon));
+		
+		//RenderingRegistry.getItemRenderer(item, type)
 	}
 }

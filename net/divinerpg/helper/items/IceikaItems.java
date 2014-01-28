@@ -3,8 +3,8 @@ package net.divinerpg.helper.items;
 import net.divinerpg.api.items.ItemDivineArmor;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.api.items.ItemModFood;
-import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.material.ArmorMaterialMod;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.item.Item;
 
 public class IceikaItems {

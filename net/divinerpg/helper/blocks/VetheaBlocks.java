@@ -1,7 +1,7 @@
 package net.divinerpg.helper.blocks;
 
 import net.divinerpg.api.blocks.*;
-import net.divinerpg.helper.DivineRPGTabs;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.vethea.blocks.VetheanBlock;
 import net.divinerpg.vethea.blocks.VetheanDirt;
 import net.divinerpg.vethea.blocks.VetheanGrass;

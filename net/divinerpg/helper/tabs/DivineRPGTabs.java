@@ -1,4 +1,4 @@
-package net.divinerpg.helper;
+package net.divinerpg.helper.tabs;
 
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.items.VanillaItems;
@@ -8,9 +8,9 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
 public class DivineRPGTabs {
-	public static CreativeTabs blocks = new CreativeTabs("Blocks")
+	public static CreativeTabs blocks = new CreativeTabs("Blocks") 
 		{public Item getTabIconItem() {return Item.func_150898_a(TwilightBlocks.edenOre);}};
-	public static CreativeTabs swords = new CreativeTabs("Swords")
+	public static CreativeTabs swords = new CreativeTabs("Swords") 
 		{public Item getTabIconItem() {return VanillaItems.aquaton;}};
 	public static CreativeTabs ranged = new CreativeTabs("Ranged")
 		{public Item getTabIconItem() {return VanillaItems.vileStorm;}};
@@ -29,4 +29,3 @@ public class DivineRPGTabs {
 	public static CreativeTabs vethea = new CreativeTabs("Vethea")
 		{public Item getTabIconItem() {return VetheanItems.karosStaff;}};
 }
-	

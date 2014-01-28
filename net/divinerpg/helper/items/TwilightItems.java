@@ -1,8 +1,8 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.*;
-import net.divinerpg.helper.DivineRPGTabs;
 import net.divinerpg.helper.material.*;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.twilight.items.*;
 import net.divinerpg.vanilla.items.*;
 import net.minecraft.item.Item;
