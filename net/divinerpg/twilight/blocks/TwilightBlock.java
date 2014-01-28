@@ -60,10 +60,10 @@ public class TwilightBlock extends Block
 	public Item func_149650_a(int par1, Random par2, int par3) {
 		return (this == TwilightBlocks.edenOre) ? TwilightItems.edenFragments 
 				: (this == TwilightBlocks.wildWoodOre) ? TwilightItems.wildWoodFragments 
-						: (this == TwilightBlocks.apalachiaOre) ? TwilightItems.apalachiaFragments
-								: (this == TwilightBlocks.skythernOre) ? TwilightItems.skythernFragments
-										: (this == TwilightBlocks.mortumOre) ? TwilightItems.mortumFragments
-												: getBlock(this);
+				: (this == TwilightBlocks.apalachiaOre) ? TwilightItems.apalachiaFragments
+				: (this == TwilightBlocks.skythernOre) ? TwilightItems.skythernFragments
+				: (this == TwilightBlocks.mortumOre) ? TwilightItems.mortumFragments
+				: getBlock(this);
 	}
 
 	public int func_149679_a(int par1, Random par2)

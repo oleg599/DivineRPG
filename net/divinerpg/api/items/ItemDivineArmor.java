@@ -5,6 +5,7 @@ import java.util.List;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.TwilightItems;
 import net.divinerpg.helper.items.VanillaItems;
@@ -17,6 +18,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
 
@@ -25,18 +27,25 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	double damageReduction;
 	String name;
 	boolean unbreakable;
+	int durability;
 	static VanillaItems v; static TwilightItems t; static IceikaItems i;
 	String PREFIX = Reference.MOD_ID + "textures/armor/";
 
+	/**
+	 * Normal constructor
+	 */
 	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, double damReduct, boolean unbreakable) {
 		super(armor, par1, par2);
-		damageReduction = damReduct;
+		damageReduction = damReduct/100;
 		this.unbreakable = unbreakable;
 		LangRegistry.addItem(this);
 		setCreativeTab(DivineRPGTabs.armor);
 	}
-
-	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, boolean unbreakable){//No damage reduction
+	
+	/**
+	 * Constructor to use if no damage reduction
+	 */
+	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, boolean unbreakable){
 		this(armor, par1, par2, 0.0D, unbreakable);	
 		this.unbreakable = unbreakable;
 		LangRegistry.addItem(this);
@@ -51,7 +60,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		if (itemstack.getItem() == v.diamondHelmet || itemstack.getItem() == v.diamondBody || itemstack.getItem() == v.diamondBoots){
 			return addArmorTexture("diamond_1.png");
 		}        
-		if (itemstack.getItem() == v.witherHelmet || itemstack.getItem() == v.witherBody || itemstack.getItem() == v.witherBoots){
+		if (itemstack.getItem() == v.witherReaperHelmet || itemstack.getItem() == v.witherReaperBody || itemstack.getItem() == v.witherReaperBoots){
 			return addArmorTexture("wither_1.png");
 		}       
 		if (itemstack.getItem() == v.jackOManHelmet || itemstack.getItem() == v.jackOManBody || itemstack.getItem() == v.jackOManBoots){
@@ -75,7 +84,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		if (itemstack.getItem() == v.angelicHelmet || itemstack.getItem() == v.angelicBody || itemstack.getItem() == v.angelicBoots){
 			return addArmorTexture("angelic_1.png");
 		}
-		if (itemstack.getItem() == v.aquaticHelmet || itemstack.getItem() == v.aquaticBody || itemstack.getItem() == v.aquaticBoots){
+		if (itemstack.getItem() == v.aquastriveHelmet || itemstack.getItem() == v.aquastriveBody || itemstack.getItem() == v.aquastriveBoots){
 			return addArmorTexture("aquatic_1.png");
 		}
 		if (itemstack.getItem() == v.shadowHelmet || itemstack.getItem() == v.shadowBody || itemstack.getItem() == v.shadowBoots){
@@ -119,7 +128,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		}
 		if (itemstack.getItem() == v.ironLegs){ return addArmorTexture("iron_2.png"); }       
 		if (itemstack.getItem() == v.diamondLegs){ return addArmorTexture("diamond_2.png"); }        
-		if (itemstack.getItem() == v.skeletonLegs){ return addArmorTexture("skeleton_2.png"); }        
+		if (itemstack.getItem() == v.skelemanLegs){ return addArmorTexture("skeleton_2.png"); }        
 		if (itemstack.getItem() == v.jackOManLegs){ return addArmorTexture("jackOMan_2.png"); }   
 		if (itemstack.getItem() == v.eliteRealmiteLegs){ return addArmorTexture("eliteRealmite_2.png"); }
 		if (itemstack.getItem() == v.krakenLegs){ return addArmorTexture("kraken_2.png"); }
@@ -127,7 +136,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		if (itemstack.getItem() == v.arlemiteLegs){ return addArmorTexture("arlemite_2.png"); }
 		if (itemstack.getItem() == v.realmiteLegs){ return addArmorTexture("realmite_2.png"); }
 		if (itemstack.getItem() == v.angelicLegs){ return addArmorTexture("angelic_2.png"); }
-		if (itemstack.getItem() == v.aquaticLegs){ return addArmorTexture("aquatic_2.png"); }
+		if (itemstack.getItem() == v.aquastriveLegs){ return addArmorTexture("aquatic_2.png"); }
 		if (itemstack.getItem() == v.shadowLegs){ return addArmorTexture("shadow_2.png"); }
 		if (itemstack.getItem() == i.santaLegs){ return addArmorTexture("santa_2.png"); }
 		if (itemstack.getItem() == t.haliteLegs){ return addArmorTexture("halite_2.png"); }
@@ -161,8 +170,9 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	}
 
 	@Override
-	public int getArmorDisplay(EntityPlayer par1, ItemStack par2, int par3) {
-		return par3 != 0 && par3 != 2 ? (par3 == 1 ? 4 : 2) : 3;
+	public int getArmorDisplay(EntityPlayer par1, ItemStack par2, int bars) {
+		int damRe = (int) Math.round((damageReduction*100)/4); 
+		return bars = damRe;
 	}
 
 	@Override
@@ -223,7 +233,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		if(item.getItem() == v.infernoBody || item.getItem() == v.infernoBoots || item.getItem() == v.infernoHelmet || item.getItem() == v.infernoLegs){
 			list.add("Full Set: Fire protection"); list.add("Full Set: Lava protection");
 		}
-		if(item.getItem() == v.aquaticBody || item.getItem() == v.aquaticBoots || item.getItem() == v.aquaticHelmet || item.getItem() == v.aquaticLegs){
+		if(item.getItem() == v.aquastriveBody || item.getItem() == v.aquastriveBoots || item.getItem() == v.aquastriveHelmet || item.getItem() == v.aquastriveLegs){
 			list.add("Full Set: Breath under water"); list.add("Full Set: Swim faster");
 		}
 		if(item.getItem() == v.shadowBody || item.getItem() == v.shadowBoots || item.getItem() == v.shadowHelmet || item.getItem() == v.shadowLegs){
@@ -232,10 +242,10 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		if(item.getItem() == v.netheriteBody || item.getItem() == v.netheriteBoots || item.getItem() == v.netheriteHelmet || item.getItem() == v.netheriteLegs){
 			list.add("Full Set: Fire protection");
 		}
-		if(item.getItem() == v.skeletonBody || item.getItem() == v.skeletonBoots || item.getItem() == v.skeletonHelmet || item.getItem() == v.skeletonLegs){
+		if(item.getItem() == v.skelemanBody || item.getItem() == v.skelemanBoots || item.getItem() == v.skelemanHelmet || item.getItem() == v.skelemanLegs){
 			list.add("Full Set: Replenishes hunger");
 		}
-		if(item.getItem() == v.witherBody || item.getItem() == v.witherBoots || item.getItem() == v.witherHelmet || item.getItem() == v.witherLegs){
+		if(item.getItem() == v.witherReaperBody || item.getItem() == v.witherReaperBoots || item.getItem() == v.witherReaperHelmet || item.getItem() == v.witherReaperLegs){
 			list.add("Full Set: Wither protection");
 		}
 		if(item.getItem() == v.enderBody || item.getItem() == v.enderBoots || item.getItem() == v.enderHelmet || item.getItem() == v.enderLegs){
@@ -285,6 +295,5 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		}
 		String finalName = firstLetter + inGame;
 		GameRegistry.registerItem(this, name);
-		LanguageRegistry.addName(this, finalName);
 	}
 }
