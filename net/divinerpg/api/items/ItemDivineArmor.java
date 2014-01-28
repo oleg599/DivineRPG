@@ -78,18 +78,34 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	
 	@Override
 	public void addInformation(ItemStack item, EntityPlayer par2EntityPlayer, List list, boolean par4) {
-		list.add((damageReduction * 100) + "% Damage Reduction");
 		if(item.getItem() == v.angelicBody || item.getItem() == v.angelicBoots || item.getItem() == v.angelicHelmet || item.getItem() == v.angelicLegs){
-			list.add("Full Set: No fall damage");
-			list.add("Full Set: Allows flight");
+			list.add("Full Set: No fall damage"); list.add("Full Set: Allows flight");
 		}
 		if(item.getItem() == i.santaBody || item.getItem() == i.santaBoots || item.getItem() == i.santaHead || item.getItem() == i.santaLegs){
-			list.add("Massive buff in Iceika");
-			list.add("Iceika: Speeds up player");
-			list.add("Iceika: Adds 6x melee damage");
-			list.add("Iceika: Refills hunger");
-			list.add("Iceika: 80% Damage reduction");
+			list.add("Full Set: Massive buff in Iceika"); list.add("Iceika: Speeds up player"); list.add("Iceika: Adds 6x melee damage"); list.add("Iceika: Refills hunger"); list.add("Iceika: 80% Damage reduction");
 		}
+		if(item.getItem() == v.divineBody || item.getItem() == v.divineBoots || item.getItem() == v.divineHelmet || item.getItem() == v.divineLegs){
+			list.add("Full Set: 6x Melee damage"); list.add("Full Set: 2x Jump height"); list.add("Full Set: No fall damage");
+		}
+		if(item.getItem() == t.edenBody || item.getItem() == t.edenBoots || item.getItem() == t.edenHelmet || item.getItem() == t.edenLegs){
+			list.add("Full Set: 3+ Twilight ore drops");
+		}
+		if(item.getItem() == t.wildBody || item.getItem() == t.wildBoots || item.getItem() == t.wildHelmet || item.getItem() == t.wildLegs){
+			list.add("Full Set: Fast health regen under water");
+		}
+		if(item.getItem() == t.apalachiaBody || item.getItem() == t.apalachiaBoots || item.getItem() == t.apalachiaHelmet || item.getItem() == t.apalachiaLegs){
+			list.add("Full Set: Block damage protection");
+		}
+		if(item.getItem() == t.skythernBody || item.getItem() == t.skythernBoots || item.getItem() == t.skythernHelmet || item.getItem() == t.skythernLegs){
+			list.add("Full Set: 5x Jump height"); list.add("Full Set: No fall damage");
+		}
+		if(item.getItem() == t.mortumBody || item.getItem() == t.mortumBoots || item.getItem() == t.mortumHelmet || item.getItem() == t.mortumLegs){
+			list.add("Full Set: Night vision");
+		}
+		if(item.getItem() == t.haliteBody || item.getItem() == t.haliteBoots || item.getItem() == t.haliteHelmet || item.getItem() == t.haliteLegs){
+			list.add("Full Set: 24+ Melee damage");
+		}
+		list.add((damageReduction * 100) + "% Damage Reduction");
         list.add(!unbreakable ? (item.getMaxDamage() - item.getItemDamage() + " Uses Remaining") : "Unlimited Uses");
 	}
 

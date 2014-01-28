@@ -146,4 +146,9 @@ public class VanillaItems {
     public static final Item redDiamondChunk  	= new ItemMod().setName("redDiamondChunk");
     public static final Item yellowDiamondChunk = new ItemMod().setName("yellowDiamondChunk");
     
+    public static final Item divineHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Divine, HEAD, 0, 0.1875D, false).setName("divineHelmet");
+    public static final Item divineBody 		= new ItemDivineArmor(ArmorMaterialMod.Divine, BODY, 1, 0.1875D, false).setName("divineBody");
+    public static final Item divineLegs 		= new ItemDivineArmor(ArmorMaterialMod.Divine, LEGS, 2, 0.1875D, false).setName("divineLegs");
+    public static final Item divineBoots 		= new ItemDivineArmor(ArmorMaterialMod.Divine, BOOTS, 3, 0.1875D, false).setName("divineBoots");
+    
 }
