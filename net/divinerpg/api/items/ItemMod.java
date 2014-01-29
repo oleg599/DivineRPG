@@ -1,9 +1,13 @@
 package net.divinerpg.api.items;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.items.VanillaItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -20,6 +24,17 @@ public class ItemMod extends Item {
 	{
 		this.iconString = (Reference.PREFIX + par1Str);
 		return this;
+	}
+
+	@Override
+	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
+		if(par1ItemStack.getItem() == VanillaItems.healingStone){
+			if (par3EntityPlayer.getHealth() < par3EntityPlayer.getMaxHealth()) {
+				par3EntityPlayer.heal(10);
+	        }
+			par3EntityPlayer.inventory.func_146026_a(this);
+		}
+		return par1ItemStack;
 	}
 
 	public Item setName(String name){

@@ -54,6 +54,14 @@ public class EventHelper {
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
+                
+                if(p.getDisplayName().contains("deathman12e3") || p.getDisplayName().contains("The_SlayerMC") || p.getDisplayName().contains("Mazetar")
+                		|| p.getDisplayName().contains("itzakillshot") || p.getDisplayName().contains("SoccerStud") || p.getDisplayName().contains("Instanity414all")){
+                	p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Oh hey! A DivineRPG Developer!"));
+                }
+                if(p.getDisplayName().contains("sheenrox28")){
+                	p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Oh hey! A fgt"));
+                }
 
             }
         }

@@ -5,6 +5,7 @@ import java.util.List;
 import net.divinerpg.DivineRPG;
 import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.vethea.entity.projectile.EntityBouncingProjectile;
 import net.minecraft.entity.player.EntityPlayer;
@@ -35,7 +36,7 @@ public class ItemStaff extends ItemMod
         par3List.add("Deals " + this.damage + " Arcana Damage");
         par3List.add("Bouncing Projectile");
         par3List.add("Consumes " + this.cost + " Arcana");
-        par3List.add("\u00a72Vethean");
+        par3List.add(DivineAPI.GREEN + "Vethean");
     }
 
     @Override

@@ -106,7 +106,8 @@ public class TwilightItems {
     public static final Item mortumBow          = new ItemModBow(-1, 31, true, mortumArrow).setName("mortumBow");
     
     public static final Item corruptedBullet    = new ItemMod().setName("corruptedBullet");
-    
+    public static final Item edenSparkles	    = new ItemMod().setName("edenSparkles");
+
     public static final Item spawnerBase 		= new ItemMod().setName("spawnerBase");
     public static final Item spawnDensos 		= new ItemTwilightSpawner().setName("spawnDensos");
     public static final Item spawnKarot 		= new ItemTwilightSpawner().setName("spawnKarot");
@@ -120,10 +121,10 @@ public class TwilightItems {
     public static final Item edenLegs 			= new ItemDivineArmor(ArmorMaterialMod.Eden, LEGS, 2, 0.15D, false).setName("edenLegs");
     public static final Item edenBoots 			= new ItemDivineArmor(ArmorMaterialMod.Eden, BOOTS, 3, 0.15D, false).setName("edenBoots");
     
-    public static final Item wildHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Wild, HEAD, 0, 0.1625D, false).setName("wildHelmet");
-    public static final Item wildBody 			= new ItemDivineArmor(ArmorMaterialMod.Wild, BODY, 1, 0.1625D, false).setName("wildBody");
-    public static final Item wildLegs 			= new ItemDivineArmor(ArmorMaterialMod.Wild, LEGS, 2, 0.1625D, false).setName("wildLegs");
-    public static final Item wildBoots 			= new ItemDivineArmor(ArmorMaterialMod.Wild, BOOTS, 3, 0.1625D, false).setName("wildBoots");
+    public static final Item wildHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Wild, HEAD, 0, 0.1625D, false).setName("wildWoodsHelmet");
+    public static final Item wildBody 			= new ItemDivineArmor(ArmorMaterialMod.Wild, BODY, 1, 0.1625D, false).setName("wildWoodsBody");
+    public static final Item wildLegs 			= new ItemDivineArmor(ArmorMaterialMod.Wild, LEGS, 2, 0.1625D, false).setName("wildWoodsLegs");
+    public static final Item wildBoots 			= new ItemDivineArmor(ArmorMaterialMod.Wild, BOOTS, 3, 0.1625D, false).setName("wildWoodsBoots");
     
     public static final Item apalachiaHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Apalachia, HEAD, 0, 0.18D, false).setName("apalachiaHelmet");
     public static final Item apalachiaBody 		= new ItemDivineArmor(ArmorMaterialMod.Apalachia, BODY, 1, 0.18D, false).setName("apalachiaBody");

@@ -31,25 +31,7 @@ public class ArmorMaterialMod {
 	public static ArmorMaterial Bedrock 			= EnumHelper.addArmorMaterial("Bedrock", 200, new int[] { 9, 9, 9, 8 }, 10);
 	public static ArmorMaterial Korma 				= EnumHelper.addArmorMaterial("korma", 200, new int[] {9, 9, 9, 9}, 22);
 	
-	
-	//THIS IS ALL THE ARMOR DESCRIPTIONS THAT HAVENT BEEN DONE
-	//THE DAMAGE REDUCTION INFORMATION IS AUTO DONE IN THE 4th PARAMETER IN THE ARMOR ITEM
-	//For example, angelic armor reduction is 12.5% so the damage reduction is set as: 0.125D
-	//Another example, divine armor reduction is 18.75% so its set as: 0.1875D
-	public static String[] realmiteDesc = {"8.25% Damage reduction"};
-	public static String[] eliteRealmiteDesc = {"12.5% Damage reduction", "Full Set: No fall damage"};
-	public static String[] arlemiteDesc = {"12.5% Damage reduction", "Full Set: 80% Ranged damage protection"};
-	public static String[] krakenDesc = {"7.5% Damage reduction", "Full Set: Breathe underwater"};
-	public static String[] rupeeDesc = {"13.75% Damage reduction", "Full Set: 80% Melee damage protection"};
-	public static String[] aquaticDesc = {"13.75% Damage reduction", "Full Set: Breathe underwater", "Full Set: Swim faster"};
-	public static String[] shadowDesc = {"15% Damage reduction", "Full Set: Move faster"};
-	public static String[] netheriteDesc = {"1.25% Damage reduction", "Fire protection"};
-	public static String[] infernoDesc = {"15% Damage reduction", "Fire protection", "Lava protection"};
-	public static String[] bedrockDesc = {"18.25% Damage reduction", "Explosion protection", "Fire protection", "Lava protection"};
 	public static String[] donatorDesc = {"Unbreakable"};
-	public static String[] jackDesc = {"4x Scythe damage"};
-	public static String[] skeletonDesc = {"Replenishes hunger"};
-	public static String[] witherDesc = {"Wither protection"};
 	public static String[] vemosDesc = {"11% Damage reduction", "Health regen"};
 	public static String[] kormaDesc = {"11% Damage reduction", "Arcana regen"};
 }

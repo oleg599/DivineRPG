@@ -15,6 +15,7 @@ public class ItemTwilightSpawner extends ItemMod{
 	static ConfigurationHelper x;
 
 	public ItemTwilightSpawner() {
+		setMaxStackSize(1);
 		this.setCreativeTab(DivineRPGTabs.spawner);
 		LangRegistry.addItem(this);
 	}

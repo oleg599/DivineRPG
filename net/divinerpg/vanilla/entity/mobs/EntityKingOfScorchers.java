@@ -23,7 +23,7 @@ public class EntityKingOfScorchers extends EntityDivineRPGBoss implements IBossD
 {
     private int special;
 
-	public EntityKingOfScorchers(World var1, EntityLivingBase par2EntityPlayer)
+	public EntityKingOfScorchers(World var1)
     {
         super(var1);
         double moveSpeed = 0.56D;
