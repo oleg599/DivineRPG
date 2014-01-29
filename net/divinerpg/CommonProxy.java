@@ -13,9 +13,9 @@ import net.divinerpg.helper.mobs.VetheaMobRegistry;
 import net.divinerpg.helper.recipes.VanillaRecipeHelper;
 import net.divinerpg.helper.recipes.TwilightRecipeHelper;
 import net.divinerpg.helper.utils.LangRegistry;
+import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
 import net.divinerpg.vanilla.worldgen.WorldGenOverworld;
 import net.minecraftforge.common.MinecraftForge;
-
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -28,6 +28,7 @@ public class CommonProxy {
 	//ClientProxy
 	public void preInit(FMLPreInitializationEvent event){
 		MinecraftForge.EVENT_BUS.register(new EventHelper());
+		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		ConfigurationHelper.init();
 		OverworldMobRegistry.init();
 		TwilightMobRegistry.init();

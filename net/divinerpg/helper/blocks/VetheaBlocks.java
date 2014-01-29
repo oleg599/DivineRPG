@@ -18,7 +18,7 @@ public class VetheaBlocks {
     public static final Block dreamDirt    = new BlockModDirt().setName("dreamDirt").func_149647_a(DivineRPGTabs.vethea);
     public static final Block dreamWoodLog = new BlockModLog().setName("dreamWoodLog").func_149647_a(DivineRPGTabs.vethea);
     public static final Block fireCrystal  = new VetheanBlock(rock).setName("fireCrystal");
-    public static final Block hyreWoodLog  = new BlockModLog().setName("hyreWoodLog").func_149647_a(DivineRPGTabs.vethea);
+    //public static final Block hyreWoodLog  = new BlockModLog().setName("hyreWoodLog").func_149647_a(DivineRPGTabs.vethea);
 
     //public static final Block dreamBricks     = new VetheanBlock(rock).setName("dreamBricks_1");
     //public static final Block dreamBricks2 	  = new VetheanBlock(rock).setName("dreamBricks_2");

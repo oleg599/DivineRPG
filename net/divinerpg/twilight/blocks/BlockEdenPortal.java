@@ -145,8 +145,8 @@ public class BlockEdenPortal extends BlockBreakable
                             if (j1 != VanillaBlocks.divineRock)
                                 return false;
                         }
-                        else if (j1 != null && j1 != TwilightBlocks.blueFire)
-                            return false;
+                        /*else if (j1 != null && j1 != TwilightBlocks.blueFire)//TODO ADD THIS BACK IN AFTER BLOCK CAP IS REMOVED
+                            return false;*/
                     }
                 }
             }

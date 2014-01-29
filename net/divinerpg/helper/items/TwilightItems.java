@@ -1,10 +1,20 @@
 package net.divinerpg.helper.items;
 
-import net.divinerpg.api.items.*;
-import net.divinerpg.helper.material.*;
+import net.divinerpg.api.items.ItemDivineArmor;
+import net.divinerpg.api.items.ItemMod;
+import net.divinerpg.api.items.ItemModAxe;
+import net.divinerpg.api.items.ItemModBow;
+import net.divinerpg.api.items.ItemModPickaxe;
+import net.divinerpg.api.items.ItemModShovel;
+import net.divinerpg.api.items.ItemModSword;
+import net.divinerpg.api.items.ItemShickaxe;
+import net.divinerpg.helper.material.ArmorMaterialMod;
+import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.twilight.items.*;
-import net.divinerpg.vanilla.items.*;
+import net.divinerpg.twilight.items.ItemTwilightBlitz;
+import net.divinerpg.twilight.items.ItemTwilightPhaser;
+import net.divinerpg.twilight.items.ItemTwilightSpawner;
+import net.divinerpg.vanilla.items.ItemThrowable;
 import net.minecraft.item.Item;
 
 public class TwilightItems {
@@ -93,11 +103,13 @@ public class TwilightItems {
     public static final Item mortumPhaser       = new ItemTwilightPhaser(46, 0).setName("mortumPhaser");
     public static final Item halitePhaser       = new ItemTwilightPhaser(51, 0).setName("halitePhaser");
 
-    public static final Item edenArrow          = new ItemMod().setName("edenArrow").setCreativeTab(null);
-    public static final Item wildWoodArrow      = new ItemMod().setName("wildWoodArrow").setCreativeTab(null);
-    public static final Item apalachiaArrow     = new ItemMod().setName("apalachiaArrow").setCreativeTab(null);
-    public static final Item skythernArrow      = new ItemMod().setName("skythernArrow").setCreativeTab(null);
-    public static final Item mortumArrow        = new ItemMod().setName("mortumArrow").setCreativeTab(null);
+    public static final Item twilightClock 		= new ItemMod().setName("twilightClock");
+    
+    public static final Item edenArrow          = new ItemMod().setName("edenArrow").setCreativeTab(DivineRPGTabs.ranged);
+    public static final Item wildWoodArrow      = new ItemMod().setName("wildWoodArrow").setCreativeTab(DivineRPGTabs.ranged);
+    public static final Item apalachiaArrow     = new ItemMod().setName("apalachiaArrow").setCreativeTab(DivineRPGTabs.ranged);
+    public static final Item skythernArrow      = new ItemMod().setName("skythernArrow").setCreativeTab(DivineRPGTabs.ranged);
+    public static final Item mortumArrow        = new ItemMod().setName("mortumArrow").setCreativeTab(DivineRPGTabs.ranged);
 
     public static final Item edenBow            = new ItemModBow(-1, 31, true, edenArrow).setName("edenBow");
     public static final Item wildWoodBow        = new ItemModBow(-1, 31, true, wildWoodArrow).setName("wildWoodBow");
