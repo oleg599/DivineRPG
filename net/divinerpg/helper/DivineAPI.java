@@ -1,11 +1,17 @@
 package net.divinerpg.helper;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
 import net.divinerpg.DivineRPG;
 import net.divinerpg.helper.recipes.CraftingDivineTableManager;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.ChatComponentTranslation;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IChatComponent;
 import cpw.mods.fml.common.registry.EntityRegistry;
@@ -15,7 +21,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class DivineAPI {
 
 	static int mobID = 121, projectileID = 230;
-
+	
+	private static Object reflectionFactory = null;
+    private static Method newConstructorAccessor = null;
+    private static Method newInstance = null;
+    private static Method newFieldAccessor = null;
+    private static Method fieldAccessorSet = null;
+	private static boolean isSetup = false;
 
 	public static void addRecipe(ItemStack i, Object ... o) {
 		GameRegistry.addRecipe(i, o);
@@ -60,7 +72,12 @@ public class DivineAPI {
 	private static int getProjectileID() {
 		return projectileID++;
 	}
-
+	
+	public static ArmorMaterial addArmorMaterial(String name, int durability, int[] oldArmor, int enchantability) {
+		int duraNew = (int) Math.round(durability/13.75);
+        return EnumHelper.addEnum(ArmorMaterial.class, name, duraNew, oldArmor, enchantability);
+    }
+	
 	public static ChatComponentTranslation addChatMessage(EnumChatFormatting color, String str, Object... args)
 	{
 		ChatComponentTranslation ret = new ChatComponentTranslation(str, args);

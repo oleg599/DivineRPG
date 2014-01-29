@@ -2,10 +2,7 @@ package net.divinerpg.api.items;
 
 import java.util.List;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.divinerpg.Reference;
-import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.TwilightItems;
 import net.divinerpg.helper.items.VanillaItems;
@@ -18,9 +15,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 
@@ -28,13 +24,14 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	String name;
 	boolean unbreakable;
 	int durability;
+	private String texturePath = "divinerpg:";
 	static VanillaItems v; static TwilightItems t; static IceikaItems i;
 	String PREFIX = Reference.MOD_ID + "textures/armor/";
 
 	/**
 	 * Normal constructor
 	 */
-	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, double damReduct, boolean unbreakable) {
+	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, double damReduct, boolean unbreakable, String type) {
 		super(armor, par1, par2);
 		damageReduction = damReduct/100;
 		this.unbreakable = unbreakable;
@@ -45,116 +42,29 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	/**
 	 * Constructor to use if no damage reduction
 	 */
-	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, boolean unbreakable){
-		this(armor, par1, par2, 0.0D, unbreakable);	
+	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, boolean unbreakable, String type){
+		this(armor, par1, par2, 0.0D, unbreakable, type);	
 		this.unbreakable = unbreakable;
 		LangRegistry.addItem(this);
 		setCreativeTab(DivineRPGTabs.armor);
 	}
-
-	@Override
-	public String getArmorTexture(ItemStack itemstack, Entity entity, int slot, String type) {
-		if (itemstack.getItem() == v.ironHelmet || itemstack.getItem() == v.ironBody || itemstack.getItem() == v.ironBoots){
-			return addArmorTexture("iron_1.png");        
+	
+	public String addArmorTexture (ItemStack stack, Entity entity, int slot, int layer, String type, int par2) {
+		switch(par2) {
+		case 0:
+			PREFIX += type + "_1.png";
+			return PREFIX;
+		case 1:
+			PREFIX += type + "_1.png";
+			return PREFIX;
+		case 2:
+			PREFIX += type + "_2.png";
+			return PREFIX;
+		case 3:
+			PREFIX += type + "_1.png";
+			return PREFIX;
 		}
-		if (itemstack.getItem() == v.diamondHelmet || itemstack.getItem() == v.diamondBody || itemstack.getItem() == v.diamondBoots){
-			return addArmorTexture("diamond_1.png");
-		}        
-		if (itemstack.getItem() == v.witherReaperHelmet || itemstack.getItem() == v.witherReaperBody || itemstack.getItem() == v.witherReaperBoots){
-			return addArmorTexture("wither_1.png");
-		}       
-		if (itemstack.getItem() == v.jackOManHelmet || itemstack.getItem() == v.jackOManBody || itemstack.getItem() == v.jackOManBoots){
-			return addArmorTexture("jackOMan_1.png");
-		}
-		if (itemstack.getItem() == v.eliteRealmiteHelmet || itemstack.getItem() == v.eliteRealmiteBody || itemstack.getItem() == v.eliteRealmiteBoots){
-			return addArmorTexture("eliteRealmite_1.png");
-		}
-		if (itemstack.getItem() == v.krakenHelmet || itemstack.getItem() == v.krakenBody || itemstack.getItem() == v.krakenBoots){
-			return addArmorTexture("kraken_1.png");
-		}
-		if (itemstack.getItem() == v.rupeeHelmet || itemstack.getItem() == v.rupeeBody || itemstack.getItem() == v.rupeeBoots){
-			return addArmorTexture("rupee_1.png");
-		}
-		if (itemstack.getItem() == v.arlemiteHelmet || itemstack.getItem() == v.arlemiteBody || itemstack.getItem() == v.arlemiteBoots){
-			return addArmorTexture("arlemite_1.png");
-		}
-		if (itemstack.getItem() == v.realmiteHelmet || itemstack.getItem() == v.realmiteBody || itemstack.getItem() == v.realmiteBoots){
-			return addArmorTexture("realmite_1.png");
-		}
-		if (itemstack.getItem() == v.angelicHelmet || itemstack.getItem() == v.angelicBody || itemstack.getItem() == v.angelicBoots){
-			return addArmorTexture("angelic_1.png");
-		}
-		if (itemstack.getItem() == v.aquastriveHelmet || itemstack.getItem() == v.aquastriveBody || itemstack.getItem() == v.aquastriveBoots){
-			return addArmorTexture("aquatic_1.png");
-		}
-		if (itemstack.getItem() == v.shadowHelmet || itemstack.getItem() == v.shadowBody || itemstack.getItem() == v.shadowBoots){
-			return addArmorTexture("shadow_1.png");
-		}
-		if (itemstack.getItem() == i.santaHead || itemstack.getItem() == i.santaBody || itemstack.getItem() == i.santaBoots){
-			return addArmorTexture("santa_1.png");
-		}
-		if (itemstack.getItem() == t.haliteHelmet || itemstack.getItem() == t.haliteBody || itemstack.getItem() == t.haliteBoots){
-			return addArmorTexture("halite_1.png");
-		}
-		if (itemstack.getItem() == t.apalachiaHelmet || itemstack.getItem() == t.apalachiaBody || itemstack.getItem() == t.apalachiaBoots){
-			return addArmorTexture("apalachia_1.png");
-		}
-		if (itemstack.getItem() == t.mortumHelmet || itemstack.getItem() == t.mortumBody || itemstack.getItem() == t.mortumBoots){
-			return addArmorTexture("mortum_1.png");
-		}
-		if (itemstack.getItem() == t.wildHelmet || itemstack.getItem() == t.wildBody || itemstack.getItem() == t.wildBoots){
-			return addArmorTexture("wildWood_1.png");
-		}
-		if (itemstack.getItem() == t.edenHelmet || itemstack.getItem() == t.edenBody || itemstack.getItem() == t.edenBoots){
-			return addArmorTexture("eden_1.png");
-		}
-		if (itemstack.getItem() == t.skythernHelmet || itemstack.getItem() == t.skythernBody || itemstack.getItem() == t.skythernBoots){
-			return addArmorTexture("skythern_1.png");
-		}
-		if (itemstack.getItem() == v.netheriteHelmet || itemstack.getItem() == v.netheriteBody || itemstack.getItem() == v.netheriteBoots){
-			return addArmorTexture("netherite_1.png");
-		}
-		if (itemstack.getItem() == v.infernoHelmet || itemstack.getItem() == v.infernoBody || itemstack.getItem() == v.infernoBoots){
-			return addArmorTexture("inferno_1.png");
-		}
-		if (itemstack.getItem() == v.enderHelmet || itemstack.getItem() == v.enderBody || itemstack.getItem() == v.enderBoots){
-			return addArmorTexture("ender_1.png");
-		}
-		if (itemstack.getItem() == v.bedrockHelmet || itemstack.getItem() == v.bedrockBody || itemstack.getItem() == v.bedrockBoots){
-			return addArmorTexture("bedrock_1.png");
-		}
-		if (itemstack.getItem() == v.divineHelmet || itemstack.getItem() == v.divineBody || itemstack.getItem() == v.divineBoots){
-			return addArmorTexture("divine_1.png");
-		}
-		if (itemstack.getItem() == v.ironLegs){ return addArmorTexture("iron_2.png"); }       
-		if (itemstack.getItem() == v.diamondLegs){ return addArmorTexture("diamond_2.png"); }        
-		if (itemstack.getItem() == v.skelemanLegs){ return addArmorTexture("skeleton_2.png"); }        
-		if (itemstack.getItem() == v.jackOManLegs){ return addArmorTexture("jackOMan_2.png"); }   
-		if (itemstack.getItem() == v.eliteRealmiteLegs){ return addArmorTexture("eliteRealmite_2.png"); }
-		if (itemstack.getItem() == v.krakenLegs){ return addArmorTexture("kraken_2.png"); }
-		if (itemstack.getItem() == v.rupeeLegs){ return addArmorTexture("rupee_2.png"); }
-		if (itemstack.getItem() == v.arlemiteLegs){ return addArmorTexture("arlemite_2.png"); }
-		if (itemstack.getItem() == v.realmiteLegs){ return addArmorTexture("realmite_2.png"); }
-		if (itemstack.getItem() == v.angelicLegs){ return addArmorTexture("angelic_2.png"); }
-		if (itemstack.getItem() == v.aquastriveLegs){ return addArmorTexture("aquatic_2.png"); }
-		if (itemstack.getItem() == v.shadowLegs){ return addArmorTexture("shadow_2.png"); }
-		if (itemstack.getItem() == i.santaLegs){ return addArmorTexture("santa_2.png"); }
-		if (itemstack.getItem() == t.haliteLegs){ return addArmorTexture("halite_2.png"); }
-		if (itemstack.getItem() == t.mortumLegs){ return addArmorTexture("mortum_2.png"); }
-		if (itemstack.getItem() == t.apalachiaLegs){ return addArmorTexture("apalachia_2.png"); }
-		if (itemstack.getItem() == t.wildLegs){ return addArmorTexture("wildWood_2.png"); }
-		if (itemstack.getItem() == t.edenLegs){ return addArmorTexture("eden_2.png"); }
-		if (itemstack.getItem() == t.skythernLegs){ return addArmorTexture("skythern_2.png"); }
-		if (itemstack.getItem() == v.netheriteLegs){ return addArmorTexture("Netherite_2.png"); }
-		if (itemstack.getItem() == v.infernoLegs){ return addArmorTexture("Inferno_2.png"); }
-		if (itemstack.getItem() == v.enderLegs){ return addArmorTexture("ender_2.png"); }
-		if (itemstack.getItem() == v.bedrockLegs){ return addArmorTexture("bedrock_2.png"); }
-		if (itemstack.getItem() == v.divineLegs){ return addArmorTexture("divine_2.png"); }
-		return getArmorTexture(itemstack, entity, slot, "");
-	}
-
-	public String addArmorTexture(String tex){
-		return PREFIX + tex;
+		return null;
 	}
 
 	@Override

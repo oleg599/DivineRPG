@@ -16,6 +16,7 @@ import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
 import net.divinerpg.vanilla.worldgen.WorldGenOverworld;
 import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -51,6 +52,7 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent event){
 		int wut = 10;//What the hell does the int even do?
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
+		RenderingRegistry.addNewArmourRendererPrefix("eliteRealmite");
 	}
 	
 	public void postInit(FMLPostInitializationEvent event){

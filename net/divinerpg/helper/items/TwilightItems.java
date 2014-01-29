@@ -128,33 +128,33 @@ public class TwilightItems {
     public static final Item spawnTwilight 		= new ItemTwilightSpawner().setName("spawnTwilightDemon");
     public static final Item spawnVamacheron	= new ItemTwilightSpawner().setName("spawnVamacheron");
     
-    public static final Item edenHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Eden, HEAD, 0, 0.15D, false).setName("edenHelmet");
-    public static final Item edenBody 			= new ItemDivineArmor(ArmorMaterialMod.Eden, BODY, 1, 0.15D, false).setName("edenBody");
-    public static final Item edenLegs 			= new ItemDivineArmor(ArmorMaterialMod.Eden, LEGS, 2, 0.15D, false).setName("edenLegs");
-    public static final Item edenBoots 			= new ItemDivineArmor(ArmorMaterialMod.Eden, BOOTS, 3, 0.15D, false).setName("edenBoots");
+    public static final Item edenHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Eden, HEAD, 0, 0.15D, false, "idklol").setName("edenHelmet");
+    public static final Item edenBody 			= new ItemDivineArmor(ArmorMaterialMod.Eden, BODY, 1, 0.15D, false, "idklol").setName("edenBody");
+    public static final Item edenLegs 			= new ItemDivineArmor(ArmorMaterialMod.Eden, LEGS, 2, 0.15D, false, "idklol").setName("edenLegs");
+    public static final Item edenBoots 			= new ItemDivineArmor(ArmorMaterialMod.Eden, BOOTS, 3, 0.15D, false, "idklol").setName("edenBoots");
     
-    public static final Item wildHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Wild, HEAD, 0, 0.1625D, false).setName("wildWoodsHelmet");
-    public static final Item wildBody 			= new ItemDivineArmor(ArmorMaterialMod.Wild, BODY, 1, 0.1625D, false).setName("wildWoodsBody");
-    public static final Item wildLegs 			= new ItemDivineArmor(ArmorMaterialMod.Wild, LEGS, 2, 0.1625D, false).setName("wildWoodsLegs");
-    public static final Item wildBoots 			= new ItemDivineArmor(ArmorMaterialMod.Wild, BOOTS, 3, 0.1625D, false).setName("wildWoodsBoots");
+    public static final Item wildHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Wild, HEAD, 0, 0.1625D, false, "idklol").setName("wildWoodsHelmet");
+    public static final Item wildBody 			= new ItemDivineArmor(ArmorMaterialMod.Wild, BODY, 1, 0.1625D, false, "idklol").setName("wildWoodsBody");
+    public static final Item wildLegs 			= new ItemDivineArmor(ArmorMaterialMod.Wild, LEGS, 2, 0.1625D, false, "idklol").setName("wildWoodsLegs");
+    public static final Item wildBoots 			= new ItemDivineArmor(ArmorMaterialMod.Wild, BOOTS, 3, 0.1625D, false, "idklol").setName("wildWoodsBoots");
     
-    public static final Item apalachiaHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Apalachia, HEAD, 0, 0.18D, false).setName("apalachiaHelmet");
-    public static final Item apalachiaBody 		= new ItemDivineArmor(ArmorMaterialMod.Apalachia, BODY, 1, 0.18D, false).setName("apalachiaBody");
-    public static final Item apalachiaLegs 		= new ItemDivineArmor(ArmorMaterialMod.Apalachia, LEGS, 2, 0.18D, false).setName("apalachiaLegs");
-    public static final Item apalachiaBoots 	= new ItemDivineArmor(ArmorMaterialMod.Apalachia, BOOTS, 3, 0.18D, false).setName("apalachiaBoots");
+    public static final Item apalachiaHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Apalachia, HEAD, 0, 0.18D, false, "idklol").setName("apalachiaHelmet");
+    public static final Item apalachiaBody 		= new ItemDivineArmor(ArmorMaterialMod.Apalachia, BODY, 1, 0.18D, false, "idklol").setName("apalachiaBody");
+    public static final Item apalachiaLegs 		= new ItemDivineArmor(ArmorMaterialMod.Apalachia, LEGS, 2, 0.18D, false, "idklol").setName("apalachiaLegs");
+    public static final Item apalachiaBoots 	= new ItemDivineArmor(ArmorMaterialMod.Apalachia, BOOTS, 3, 0.18D, false, "idklol").setName("apalachiaBoots");
     
-    public static final Item skythernHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Skythern, HEAD, 0, 0.1875D, false).setName("skythernHelmet");
-    public static final Item skythernBody 		= new ItemDivineArmor(ArmorMaterialMod.Skythern, BODY, 1, 0.1875D, false).setName("skythernBody");
-    public static final Item skythernLegs 		= new ItemDivineArmor(ArmorMaterialMod.Skythern, LEGS, 2, 0.1875D, false).setName("skythernLegs");
-    public static final Item skythernBoots 		= new ItemDivineArmor(ArmorMaterialMod.Skythern, BOOTS, 3, 0.1875D, false).setName("skythernBoots");
+    public static final Item skythernHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Skythern, HEAD, 0, 0.1875D, false, "idklol").setName("skythernHelmet");
+    public static final Item skythernBody 		= new ItemDivineArmor(ArmorMaterialMod.Skythern, BODY, 1, 0.1875D, false, "idklol").setName("skythernBody");
+    public static final Item skythernLegs 		= new ItemDivineArmor(ArmorMaterialMod.Skythern, LEGS, 2, 0.1875D, false, "idklol").setName("skythernLegs");
+    public static final Item skythernBoots 		= new ItemDivineArmor(ArmorMaterialMod.Skythern, BOOTS, 3, 0.1875D, false, "idklol").setName("skythernBoots");
     
-    public static final Item mortumHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Mortum, HEAD, 0, 0.20D, false).setName("mortumHelmet");
-    public static final Item mortumBody 		= new ItemDivineArmor(ArmorMaterialMod.Mortum, BODY, 1, 0.20D, false).setName("mortumBody");
-    public static final Item mortumLegs 		= new ItemDivineArmor(ArmorMaterialMod.Mortum, LEGS, 2, 0.20D, false).setName("mortumLegs");
-    public static final Item mortumBoots 		= new ItemDivineArmor(ArmorMaterialMod.Mortum, BOOTS, 3, 0.20D, false).setName("mortumBoots");
+    public static final Item mortumHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Mortum, HEAD, 0, 0.20D, false, "idklol").setName("mortumHelmet");
+    public static final Item mortumBody 		= new ItemDivineArmor(ArmorMaterialMod.Mortum, BODY, 1, 0.20D, false, "idklol").setName("mortumBody");
+    public static final Item mortumLegs 		= new ItemDivineArmor(ArmorMaterialMod.Mortum, LEGS, 2, 0.20D, false, "idklol").setName("mortumLegs");
+    public static final Item mortumBoots 		= new ItemDivineArmor(ArmorMaterialMod.Mortum, BOOTS, 3, 0.20D, false, "idklol").setName("mortumBoots");
     
-    public static final Item haliteHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Halite, HEAD, 0, 0.2075D, true).setName("haliteHelmet");
-    public static final Item haliteBody 		= new ItemDivineArmor(ArmorMaterialMod.Halite, BODY, 1, 0.2075D, true).setName("haliteBody");
-    public static final Item haliteLegs 		= new ItemDivineArmor(ArmorMaterialMod.Halite, LEGS, 2, 0.2075D, true).setName("haliteLegs");
-    public static final Item haliteBoots 		= new ItemDivineArmor(ArmorMaterialMod.Halite, BOOTS, 3, 0.2075D, true).setName("haliteBoots");
+    public static final Item haliteHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Halite, HEAD, 0, 0.2075D, true, "idklol").setName("haliteHelmet");
+    public static final Item haliteBody 		= new ItemDivineArmor(ArmorMaterialMod.Halite, BODY, 1, 0.2075D, true, "idklol").setName("haliteBody");
+    public static final Item haliteLegs 		= new ItemDivineArmor(ArmorMaterialMod.Halite, LEGS, 2, 0.2075D, true, "idklol").setName("haliteLegs");
+    public static final Item haliteBoots 		= new ItemDivineArmor(ArmorMaterialMod.Halite, BOOTS, 3, 0.2075D, true, "idklol").setName("haliteBoots");
 }
