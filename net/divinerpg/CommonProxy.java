@@ -52,7 +52,6 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent event){
 		int wut = 10;//What the hell does the int even do?
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
-		RenderingRegistry.addNewArmourRendererPrefix("eliteRealmite");
 	}
 	
 	public void postInit(FMLPostInitializationEvent event){

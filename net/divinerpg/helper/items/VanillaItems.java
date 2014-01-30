@@ -149,15 +149,15 @@ public class VanillaItems {
     public static final Item angelicLegs 		= new ItemDivineArmor(ArmorMaterialMod.Angelic, LEGS, 2, 12.5D, true, "angelic").setName("angelicLegs");
     public static final Item angelicBoots 		= new ItemDivineArmor(ArmorMaterialMod.Angelic, BOOTS, 3, 12.5D, true, "angelic").setName("angelicBoots");
     
-    public static final Item divineHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Divine, HEAD, 0, 18.75D, true, "addNameOfArmorHere").setName("divineHelmet");
-    public static final Item divineBody 		= new ItemDivineArmor(ArmorMaterialMod.Divine, BODY, 1, 18.75D, true, "addNameOfArmorHere").setName("divineBody");
-    public static final Item divineLegs 		= new ItemDivineArmor(ArmorMaterialMod.Divine, LEGS, 2, 18.75D, true, "addNameOfArmorHere").setName("divineLegs");
-    public static final Item divineBoots 		= new ItemDivineArmor(ArmorMaterialMod.Divine, BOOTS, 3, 18.75D, true, "addNameOfArmorHere").setName("divineBoots");
+    public static final Item divineHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Divine, HEAD, 0, 18.75D, true, "divine").setName("divineHelmet");
+    public static final Item divineBody 		= new ItemDivineArmor(ArmorMaterialMod.Divine, BODY, 1, 18.75D, true, "divine").setName("divineBody");
+    public static final Item divineLegs 		= new ItemDivineArmor(ArmorMaterialMod.Divine, LEGS, 2, 18.75D, true, "divine").setName("divineLegs");
+    public static final Item divineBoots 		= new ItemDivineArmor(ArmorMaterialMod.Divine, BOOTS, 3, 18.75D, true, "divine").setName("divineBoots");
     
-    public static final Item bedrockHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Bedrock, HEAD, 0, 18.25D, true, "addNameOfArmorHere").setName("bedrockHelmet");
-    public static final Item bedrockBody 		= new ItemDivineArmor(ArmorMaterialMod.Bedrock, BODY, 1, 18.25D, true, "addNameOfArmorHere").setName("bedrockBody");
-    public static final Item bedrockLegs 		= new ItemDivineArmor(ArmorMaterialMod.Bedrock, LEGS, 2, 18.25D, true, "addNameOfArmorHere").setName("bedrockLegs");
-    public static final Item bedrockBoots 		= new ItemDivineArmor(ArmorMaterialMod.Bedrock, BOOTS, 3, 18.25D, true, "addNameOfArmorHere").setName("bedrockBoots");
+    public static final Item bedrockHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Bedrock, HEAD, 0, 18.25D, true, "bedrock").setName("bedrockHelmet");
+    public static final Item bedrockBody 		= new ItemDivineArmor(ArmorMaterialMod.Bedrock, BODY, 1, 18.25D, true, "bedrock").setName("bedrockBody");
+    public static final Item bedrockLegs 		= new ItemDivineArmor(ArmorMaterialMod.Bedrock, LEGS, 2, 18.25D, true, "bedrock").setName("bedrockLegs");
+    public static final Item bedrockBoots 		= new ItemDivineArmor(ArmorMaterialMod.Bedrock, BOOTS, 3, 18.25D, true, "bedrock").setName("bedrockBoots");
     
     public static final Item realmiteHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Realmite, HEAD, 0, 8.25D, false, "addNameOfArmorHere").setName("realmiteHelmet");
     public static final Item realmiteBody 		= new ItemDivineArmor(ArmorMaterialMod.Realmite, BODY, 1, 8.25D, false, "addNameOfArmorHere").setName("realmiteBody");

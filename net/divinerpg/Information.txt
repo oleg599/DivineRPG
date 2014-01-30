@@ -1,11 +1,10 @@
-This is the information file, update this for things you need done ect or just for information
+This is the information file, put things that need to be done here.
 
 TO DO
-Add the rest of the overworld mobs
-Start on the twilight mobs
-The Config isnt working, find out why (it doesnt write to the file)
+Add the rest of the Overworld mobs.
+Start on the twilight mobs.
 
-CHAT MESSAGES!!!! http://prntscr.com/2kkht3
+CHAT MESSAGES http://prntscr.com/2kkht3
 The normal mobs will extend "EntityDivineRPGMob" and the boss's will extends "EntityDivineRPGBoss"
 
 Inside both classes, there is a abstract method, its to name the mob, so the death chat for the mob will say what the mobs name is.
