@@ -15,9 +15,9 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ItemModFood extends ItemFood {
 	
-	int food;
-	float sat;
-	boolean wolf;
+	private int food;
+	private float sat;
+	private boolean wolf;
 	
 	public ItemModFood(int food, float sat, boolean wolfFood){
 		super(food, sat, wolfFood);
@@ -30,7 +30,7 @@ public class ItemModFood extends ItemFood {
 	
 	@Override
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-		par3List.add("Replenishes " + food + " Hunger");
+		par3List.add("Fills " + (double) food/2 + " Hunger Bars");
 		par3List.add(sat + " Saturation");
 		par3List.add(!wolf ? "Pet Food: false" : "Pet Food: true");
 	}
@@ -74,7 +74,6 @@ public class ItemModFood extends ItemFood {
         }
         String finalName = firstLetter + inGame;
         GameRegistry.registerItem(this, name);
-        LanguageRegistry.addName(this, finalName);
     }
 	
 }
