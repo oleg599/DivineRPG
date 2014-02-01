@@ -3,8 +3,10 @@ package net.divinerpg.api.items;
 import java.util.List;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.items.TwilightItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
+import net.divinerpg.twilight.entity.projectile.*;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -34,36 +36,36 @@ public class ItemModBow extends ItemBow {
 	boolean unbreakable;
 
 	Item arrow;
-	
-	public static final String[] texture = {Reference.PREFIX + "_1", Reference.PREFIX + "_2", Reference.PREFIX + "_3"};
 
-	public ItemModBow(int uses, int damage, boolean unbreakable, Item arrow) {
-		this(uses, damage, DEFAULT_MAX_USE_DURACTION, unbreakable, arrow);
+	public static final String[] texture = {"_1", "_2", "_3"};
+
+	public ItemModBow(int uses, int damage, Item arrow) {
+		this(uses, damage, DEFAULT_MAX_USE_DURACTION, arrow);
 	}
 
-	public ItemModBow(int uses, int damage, int maxUseDuraction, boolean unbreakable, Item arrow) {
+	public ItemModBow(int uses, int damage, int maxUseDuraction, Item arrow) {
 		super();
 		setMaxDamage(uses);
 		this.arrow = arrow;
 		this.damage = damage;
 		this.maxUseDuraction = maxUseDuraction;
-		this.unbreakable = unbreakable;
+		unbreakable = true;
 		this.maxStackSize = 1;
 		this.setCreativeTab(DivineRPGTabs.ranged);
 		LangRegistry.addItem(this);
 	}
-	
-    @SideOnly(Side.CLIENT)
-    public void registerIcons(IIconRegister icon) {
-    	String prefix = Reference.MOD_ID + ":" + this.name;
-		this.itemIcon = icon.registerIcon(prefix + "_0");
-        this.IIconArray = new IIcon[texture.length];
 
-        for (int i = 0; i < this.IIconArray.length; ++i)
-        {
-            this.IIconArray[i] = icon.registerIcon(prefix + texture[i]);
-        }
-    }
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IIconRegister icon) {
+		String prefix = Reference.MOD_ID + ":" + this.name;
+		this.itemIcon = icon.registerIcon(prefix + "_0");
+		this.IIconArray = new IIcon[texture.length];
+
+		for (int i = 0; i < this.IIconArray.length; ++i)
+		{
+			this.IIconArray[i] = icon.registerIcon(prefix + texture[i]);
+		}
+	}
 
 	public Item setTextureName(String par1Str) {
 		this.iconString = (Reference.PREFIX + par1Str);
@@ -92,18 +94,15 @@ public class ItemModBow extends ItemBow {
 					if (code == p) {
 						numChars++;
 						if (numChars == 1)
-							inGame = new StringBuffer(inGame)
-									.insert(k - 1, " ").toString();
+							inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
 						else
-							inGame = new StringBuffer(inGame).insert(k, " ")
-									.toString();
+							inGame = new StringBuffer(inGame).insert(k, " ").toString();
 					}
 				}
 			}
 		}
 		String finalName = firstLetter + inGame;
 		GameRegistry.registerItem(this, name);
-		LanguageRegistry.addName(this, finalName);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -113,16 +112,16 @@ public class ItemModBow extends ItemBow {
 	}
 
 	@Override
-	public void onPlayerStoppedUsing(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer, int par4) {
-		int j = getMaxItemUseDuration(par1ItemStack) - par4;
+	public void onPlayerStoppedUsing(ItemStack item, World par2World, EntityPlayer par3EntityPlayer, int par4) {
+		int j = getMaxItemUseDuration(item) - par4;
 
-		ArrowLooseEvent event = new ArrowLooseEvent(par3EntityPlayer, par1ItemStack, j);
+		ArrowLooseEvent event = new ArrowLooseEvent(par3EntityPlayer, item, j);
 		MinecraftForge.EVENT_BUS.post(event);
 		if (event.isCanceled())
 			return;
 		j = event.charge;
 
-		boolean flag = par3EntityPlayer.capabilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantment.infinity.effectId, par1ItemStack) > 0;
+		boolean flag = par3EntityPlayer.capabilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantment.infinity.effectId, item) > 0;
 
 		if (flag || par3EntityPlayer.inventory.func_146028_b(arrow)) {
 			float f = (float) j / 20.0F;
@@ -134,30 +133,47 @@ public class ItemModBow extends ItemBow {
 			if (f > 1.0F)
 				f = 1.0F;
 
-			EntityArrow entityarrow = spawnArrow(par1ItemStack, par2World, par3EntityPlayer, f * 2F);
+			EntityArrow entityarrow = null;
+
+			if(item.getItem() == TwilightItems.edenBow){
+				entityarrow = new EntityEdenArrow(par2World, par3EntityPlayer, f * 2.0F);
+			}
+			else if(item.getItem() == TwilightItems.wildWoodBow){
+				entityarrow = new EntityWildArrow(par2World, par3EntityPlayer, f * 2.0F);
+			}
+			else if(item.getItem() == TwilightItems.apalachiaBow){
+				entityarrow = new EntityApalachiaArrow(par2World, par3EntityPlayer, f * 2.0F);
+			}
+			else if(item.getItem() == TwilightItems.skythernBow){
+				entityarrow = new EntitySkythernArrow(par2World, par3EntityPlayer, f * 2.0F);
+			}
+			else if(item.getItem() == TwilightItems.mortumBow){
+				entityarrow = new EntityMortumArrow(par2World, par3EntityPlayer, f * 2.0F);
+			}
+			else if(item.getItem() == TwilightItems.haliteBow){
+				entityarrow = new EntityHaliteArrow(par2World, par3EntityPlayer, f * 2.0F);
+			}
 
 			if (f == 1.0F)
 				entityarrow.setIsCritical(true);
 
-			int k = EnchantmentHelper.getEnchantmentLevel(Enchantment.power.effectId, par1ItemStack);
+			int k = EnchantmentHelper.getEnchantmentLevel(Enchantment.power.effectId, item);
 
 			if (k > 0)
-				entityarrow.setDamage(entityarrow.getDamage() + (double) k
-						* 0.5D + 0.5D);
+				entityarrow.setDamage(entityarrow.getDamage() + (double) k * 0.5D + 0.5D);
 
-			int l = EnchantmentHelper.getEnchantmentLevel(Enchantment.punch.effectId, par1ItemStack);
+			int l = EnchantmentHelper.getEnchantmentLevel(Enchantment.punch.effectId, item);
 
 			if (l > 0)
 				entityarrow.setKnockbackStrength(l);
 
-			if (EnchantmentHelper.getEnchantmentLevel(
-					Enchantment.flame.effectId, par1ItemStack) > 0)
+			if (EnchantmentHelper.getEnchantmentLevel(Enchantment.flame.effectId, item) > 0)
 				entityarrow.setFire(100);
 
 			if (!unbreakable)
-				par1ItemStack.damageItem(1, par3EntityPlayer);
-			if (sound(par1ItemStack, par2World, par3EntityPlayer) != null)
-				par2World.playSoundAtEntity(par3EntityPlayer, sound(par1ItemStack, par2World, par3EntityPlayer), 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
+				item.damageItem(1, par3EntityPlayer);
+			if (sound(item, par2World, par3EntityPlayer) != null)
+				par2World.playSoundAtEntity(par3EntityPlayer, sound(item, par2World, par3EntityPlayer), 1.0F, 1.0F / (itemRand.nextFloat() * 0.4F + 1.2F) + f * 0.5F);
 
 			if (flag)
 				entityarrow.canBePickedUp = 2;
@@ -178,24 +194,24 @@ public class ItemModBow extends ItemBow {
 	}
 
 	@Override
-	public int getMaxItemUseDuration(ItemStack par1ItemStack) {
+	public int getMaxItemUseDuration(ItemStack item) {
 		return maxUseDuraction;
 	}
 
 	@Override
-	public boolean isItemTool(ItemStack par1ItemStack) {
+	public boolean isItemTool(ItemStack item) {
 		return true;
 	}
 
 	@Override
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
+	public void addInformation(ItemStack item, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 		par3List.add(damage + " Ranged Damage");
-		double speed = (double) DEFAULT_MAX_USE_DURACTION / (double) getMaxItemUseDuration(par1ItemStack);
+		double speed = (double) DEFAULT_MAX_USE_DURACTION / (double) getMaxItemUseDuration(item);
 		if (speed > 1)
 			par3List.add(speed + " Times Faster");
 		if (speed < 1)
 			par3List.add((1 / speed) + " Times Slower");
-		par3List.add(!unbreakable ? (par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage() + " Uses Remaining") : "Unlimited Uses");
+		par3List.add(!unbreakable ? (item.getMaxDamage() - item.getItemDamage() + " Uses Remaining") : "Unlimited Uses");
 	}
 
 	/**

@@ -51,5 +51,12 @@ public class TwilightMobRegistry {
         DivineAPI.registerDivineRPGMob(EntitySoulFiend.class, "Soul Fiend");
         DivineAPI.registerDivineRPGMob(EntityVamacheron.class, "Vamacheron");
         DivineAPI.registerDivineRPGMob(EntityKarot.class, "Karot");
+        
+        DivineAPI.registerProjectile(EntityEdenArrow.class, "Eden Arrow");
+        DivineAPI.registerProjectile(EntityWildArrow.class, "Wild Arrow");
+        DivineAPI.registerProjectile(EntityApalachiaArrow.class, "Apalachia Arrow");
+        DivineAPI.registerProjectile(EntitySkythernArrow.class, "Skythern Arrow");
+        DivineAPI.registerProjectile(EntityMortumArrow.class, "Mortum Arrow");
+        DivineAPI.registerProjectile(EntityHaliteArrow.class, "Halite Arrow");
 	}
 }

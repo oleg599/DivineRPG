@@ -62,5 +62,12 @@ public class TwilightEntityRenderer {
         RenderingRegistry.registerEntityRenderingHandler(EntitySoulFiend.class, new RenderSizeable(new ModelSoulFiend(), 0.0F, 1.0F, EntityResourceLocation.soulFiend));
         RenderingRegistry.registerEntityRenderingHandler(EntityVamacheron.class, new RenderSizeable(new ModelVamacheron(), 0.0F, 3.0F, EntityResourceLocation.vamacheron));
         RenderingRegistry.registerEntityRenderingHandler(EntityKarot.class, new RenderSizeable(new ModelKarot(), 0.0F, 5.0F, EntityResourceLocation.karot));
+	
+        RenderingRegistry.registerEntityRenderingHandler(EntityEdenArrow.class, new RenderDivineArrow(EntityResourceLocation.edenArrow));
+        RenderingRegistry.registerEntityRenderingHandler(EntityWildArrow.class, new RenderDivineArrow(EntityResourceLocation.wildArrow));
+        RenderingRegistry.registerEntityRenderingHandler(EntityApalachiaArrow.class, new RenderDivineArrow(EntityResourceLocation.apalachiaArrow));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySkythernArrow.class, new RenderDivineArrow(EntityResourceLocation.skythernArrow));
+        RenderingRegistry.registerEntityRenderingHandler(EntityMortumArrow.class, new RenderDivineArrow(EntityResourceLocation.mortumArrow));
+        RenderingRegistry.registerEntityRenderingHandler(EntityHaliteArrow.class, new RenderDivineArrow(EntityResourceLocation.haliteArrow));
 	}	
 }

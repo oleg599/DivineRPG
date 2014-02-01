@@ -110,13 +110,15 @@ public class TwilightItems {
     public static final Item apalachiaArrow     = new ItemMod().setName("apalachiaArrow").setCreativeTab(DivineRPGTabs.ranged);
     public static final Item skythernArrow      = new ItemMod().setName("skythernArrow").setCreativeTab(DivineRPGTabs.ranged);
     public static final Item mortumArrow        = new ItemMod().setName("mortumArrow").setCreativeTab(DivineRPGTabs.ranged);
+    public static final Item haliteArrow        = new ItemMod().setName("haliteArrow").setCreativeTab(DivineRPGTabs.ranged);
 
-    public static final Item edenBow            = new ItemModBow(-1, 31, true, edenArrow).setName("edenBow");
-    public static final Item wildWoodBow        = new ItemModBow(-1, 31, true, wildWoodArrow).setName("wildWoodBow");
-    public static final Item apalachiaBow       = new ItemModBow(-1, 31, true, apalachiaArrow).setName("apalachiaBow");
-    public static final Item skythernBow        = new ItemModBow(-1, 31, true, skythernArrow).setName("skythernBow");
-    public static final Item mortumBow          = new ItemModBow(-1, 31, true, mortumArrow).setName("mortumBow");
-    
+    public static final Item edenBow            = new ItemModBow(-1, 31, edenArrow).setName("edenBow");
+    public static final Item wildWoodBow        = new ItemModBow(-1, 31, wildWoodArrow).setName("wildWoodBow");
+    public static final Item apalachiaBow       = new ItemModBow(-1, 41, apalachiaArrow).setName("apalachiaBow");
+    public static final Item skythernBow        = new ItemModBow(-1, 41, skythernArrow).setName("skythernBow");
+    public static final Item mortumBow          = new ItemModBow(-1, 61, mortumArrow).setName("mortumBow");
+    public static final Item haliteBow          = new ItemModBow(-1, 61, haliteArrow).setName("haliteBow");
+
     public static final Item corruptedBullet    = new ItemMod().setName("corruptedBullet");
     public static final Item edenSparkles	    = new ItemMod().setName("edenSparkles");
 
