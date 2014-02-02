@@ -31,12 +31,12 @@ public class EventHelper {
             if (p.worldObj.isRemote) {
                 try {
                     if(!UpdateChecker.isOnline()){
-                    	if (p.getDisplayName().contains("sheenrox28")) {
+                    	if (p.getDisplayName().equals("sheenrox82")) {
                     		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Wait, your acctually playing DivineRPG?!"));
                             p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.LIGHT_PURPLE, "Turn your internets on noob."));
                     	}
-                    	else if (p.getDisplayName().contains("deathman12e3") || p.getDisplayName().contains("The_SlayerMC") || p.getDisplayName().contains("Mazetar")
-                        		|| p.getDisplayName().contains("itzakillshot") || p.getDisplayName().contains("geekclb") || p.getDisplayName().contains("Instanity414all")) {
+                    	else if (p.getDisplayName().equals("deathman12e3") || p.getDisplayName().equals("The_SlayerMC") || p.getDisplayName().equals("Mazetar")
+                        		|| p.getDisplayName().equals("itzakillshot") || p.getDisplayName().equals("geekclb") || p.getDisplayName().equals("Instanity414all")) {
                     		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Oh hey! A DivineRPG Developer!"));
                     		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.LIGHT_PURPLE, "Your internet crashed from how awesome you are."));
                     	}
@@ -47,12 +47,12 @@ public class EventHelper {
                     	}
                     }
                     if (UpdateChecker.isUpdateAvailable() && UpdateChecker.isOnline()) {
-                    	if (p.getDisplayName().contains("sheenrox28")) {
+                    	if (p.getDisplayName().equals("sheenrox82")) {
                     		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Wait, your acctually playing DivineRPG?!"));
                         	p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "By the way your using a outdated version."));
                     	}
-                    	else if (p.getDisplayName().contains("deathman12e3") || p.getDisplayName().contains("The_SlayerMC") || p.getDisplayName().contains("Mazetar")
-                        		|| p.getDisplayName().contains("itzakillshot") || p.getDisplayName().contains("geekclb") || p.getDisplayName().contains("Instanity414all")) {
+                    	else if (p.getDisplayName().equals("deathman12e3") || p.getDisplayName().equals("The_SlayerMC") || p.getDisplayName().equals("Mazetar")
+                        		|| p.getDisplayName().equals("itzakillshot") || p.getDisplayName().equals("geekclb") || p.getDisplayName().equals("Instanity414all")) {
                     		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Oh hey! A DivineRPG Developer!"));
                     		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "Wow, you don't even have the new version of your own mod."));
                     	}
@@ -66,11 +66,11 @@ public class EventHelper {
                         }
                     }
                     if ((!UpdateChecker.isUpdateAvailable()) && UpdateChecker.isOnline()) {
-                    	if (p.getDisplayName().contains("sheenrox28")) {
+                    	if (p.getDisplayName().contains("sheenrox82")) {
                     		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Wait, your acctually playing DivineRPG?!"));
                     	}
-                    	else if (p.getDisplayName().contains("deathman12e3") || p.getDisplayName().contains("The_SlayerMC") || p.getDisplayName().contains("Mazetar")
-                        		|| p.getDisplayName().contains("itzakillshot") || p.getDisplayName().contains("geekclb") || p.getDisplayName().contains("Instanity414all")) {
+                    	else if (p.getDisplayName().equals("deathman12e3") || p.getDisplayName().equals("The_SlayerMC") || p.getDisplayName().equals("Mazetar")
+                        		|| p.getDisplayName().equals("itzakillshot") || p.getDisplayName().equals("geekclb") || p.getDisplayName().equals("Instanity414all")) {
                     		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Oh hey! A DivineRPG Developer!"));
                     	}
                     	else {
