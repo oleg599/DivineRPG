@@ -5,6 +5,7 @@ import java.util.Random;
 import net.divinerpg.api.blocks.BlockMod;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.blocks.VanillaBlocks;
+import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.divinerpg.helper.items.VanillaItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
@@ -47,6 +48,5 @@ public class VetheanBlock extends BlockMod {
         }
 
         return this;
-    }
-    
+    }   
 }

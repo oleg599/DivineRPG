@@ -30,8 +30,6 @@ public class BlockModLeaves extends BlockMod
 
 	/**
 	 * Checks if the block can tick. False by default.
-	 * @param please
-	 * @return
 	 */
 	public Block suckTit(boolean hard) {
 		return func_149675_a(hard);

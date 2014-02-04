@@ -116,7 +116,6 @@ public class BlockModLog extends BlockRotatedPillar{
         String finalName = firstLetter + inGame;
         System.err.println(finalName);
         GameRegistry.registerBlock(this, name);
-        LanguageRegistry.addName(this, finalName);
     }
 
     public int func_149745_a(Random par1)

@@ -26,77 +26,60 @@ public class EventHelper {
 	
 	@SideOnly(Side.CLIENT)
     @SubscribeEvent
-    public void clientLoggedIn(EntityJoinWorldEvent e) {
+    public void onPlayerLogin(EntityJoinWorldEvent e) {
 
         if (e.entity instanceof EntityPlayer) {
             EntityPlayer p = (EntityPlayer) e.entity;
             if (p.worldObj.isRemote) {
+            	if(!hasSeen) {
                 try {
                     if(!UpdateChecker.isOnline()){
                     	if (p.getDisplayName().equals("sheenrox82")) {
-                    		if(!hasSeen) {
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Wait, your actually playing DivineRPG?!"));
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.LIGHT_PURPLE, "Turn your internets on noob."));
-                    			hasSeen = true;}
                     	}
                     	else if (p.getDisplayName().equals("deathman12e3") || p.getDisplayName().equals("The_SlayerMC") || p.getDisplayName().equals("Mazetar")
                         		|| p.getDisplayName().equals("itzakillshot") || p.getDisplayName().equals("geekclb") || p.getDisplayName().equals("Instanity414all")) {
-                    		if(!hasSeen) {
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Oh hey! A DivineRPG Developer!"));
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.LIGHT_PURPLE, "Your internet crashed from how awesome you are."));
-                    			hasSeen = true;}
                     	}
                     	else {
-                    		if(!hasSeen) {
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "Thank you " + p.getDisplayName() + ", for downloading and playing" + DivineAPI.GREEN + " DivineRPG!"));
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "[Version: " + Reference.MOD_VERSION + "]"));
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.LIGHT_PURPLE, "Unable to check for latest version, you may want to check your internet connection!"));
-                    			hasSeen = true;}
                     	}
                     }
                     if (UpdateChecker.isUpdateAvailable() && UpdateChecker.isOnline()) {
                     	if (p.getDisplayName().equals("sheenrox82")) {
-                    		if(!hasSeen) {
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Wait, your actually playing DivineRPG?!"));
                         		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "By the way your using a outdated version."));
-                        		hasSeen = true;}
                     	}
                     	else if (p.getDisplayName().equals("deathman12e3") || p.getDisplayName().equals("The_SlayerMC") || p.getDisplayName().equals("Mazetar")
                         		|| p.getDisplayName().equals("itzakillshot") || p.getDisplayName().equals("geekclb") || p.getDisplayName().equals("Instanity414all")) {
-                    		if(!hasSeen) {
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Oh hey! A DivineRPG Developer!"));
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "Wow, you don't even have the newest version of your own mod."));
-                    			hasSeen = true;}
                     	}
                     	else {
                     		BufferedReader versionFile = new BufferedReader(new InputStreamReader(new URL("https://raw.github.com/TheSlayerMC/DivineRPG/master/Version.txt").openStream()));
                     		String curVersion = versionFile.readLine();
-                    		if(!hasSeen) {
-                    			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "Thank you " + p.getDisplayName() + ", for downloading and playing" + DivineAPI.GREEN + " DivineRPG!"));
-                    			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.RED, "[Version: " + Reference.MOD_VERSION + "]"));
-                    			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "A DivineRPG update is avaliable."));
-                    			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "[New Version: " + curVersion + "]")); 
-                    			hasSeen = true;}
+                    		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "Thank you " + p.getDisplayName() + ", for downloading and playing" + DivineAPI.GREEN + " DivineRPG!"));
+                    		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.RED, "[Version: " + Reference.MOD_VERSION + "]"));
+                    		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "A DivineRPG update is avaliable."));
+                    		p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "[New Version: " + curVersion + "]")); 
                         }
                     }
                     if ((!UpdateChecker.isUpdateAvailable()) && UpdateChecker.isOnline()) {
                     	if (p.getDisplayName().contains("sheenrox82")) {
-                    		if(!hasSeen) {
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Wait, your actually playing DivineRPG?!"));
-                    			hasSeen = true;}
                     	}
                     	else if (p.getDisplayName().equals("deathman12e3") || p.getDisplayName().equals("The_SlayerMC") || p.getDisplayName().equals("Mazetar")
                         		|| p.getDisplayName().equals("itzakillshot") || p.getDisplayName().equals("geekclb") || p.getDisplayName().equals("Instanity414all")) {
-                    		if(!hasSeen) {
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "Oh hey! A DivineRPG Developer!"));
-                    			hasSeen = true;}
                     	}
                     	else {
-                    		if(!hasSeen) {
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "Thank you "  + p.getDisplayName() + ", for downloading and playing" + DivineAPI.GREEN + " DivineRPG!"));
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "[Version: " + Reference.MOD_VERSION + "]"));
                     			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "DivineRPG is up to date."));
-                    			hasSeen = true;}
                     	}
                     }
                 } catch (MalformedURLException e1) {
@@ -105,6 +88,8 @@ public class EventHelper {
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
+            }
+                hasSeen = true;
             }
         }
     }

@@ -84,6 +84,12 @@ public class DivineAPI {
 		ret.func_150256_b().func_150238_a(color);
 		return ret;
 	}
+	
+	public static ChatComponentTranslation addChatMessage(String str, Object... args)
+	{
+		ChatComponentTranslation ret = new ChatComponentTranslation(str, args);
+		return ret;
+	}
 
 	public static String BLACK = "\u00a70", DARK_BLUE = "\u00a71", DARK_GREEN = "\u00a72", DARK_AQUA = "\u00a73", DARK_RED = "\u00a74";
 	public static String DARK_PURPLE = "\u00a75", GOLD = "\u00a76", GRAY = "\u00a77", DARK_GRAY = "\u00a78", BLUE = "\u00a79";
