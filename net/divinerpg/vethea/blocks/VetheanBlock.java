@@ -8,6 +8,7 @@ import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.divinerpg.helper.items.VanillaItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
@@ -21,9 +22,9 @@ public class VetheanBlock extends BlockMod {
 
     private static SoundType rock = Block.field_149780_i;
 
-	public VetheanBlock(Material m)
-	{
+	public VetheanBlock(Material m) {
 		super(m);
+		LangRegistry.addBlock(this);
 		setCreativeTab(DivineRPGTabs.vethea);
 		setSoundType(rock);
 	}
