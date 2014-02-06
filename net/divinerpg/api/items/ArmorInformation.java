@@ -84,8 +84,5 @@ public class ArmorInformation {
 		if(item.getItem() == v.enderBody || item.getItem() == v.enderBoots || item.getItem() == v.enderHelmet || item.getItem() == v.enderLegs){
 			list.add("Full Set: Explosion protection");
 		}
-		if(ItemDivineArmor.damageReduction != 0.0D){
-			list.add((ItemDivineArmor.damageReduction * 100) + "% Damage Reduction");	
-		}
 	}
 }

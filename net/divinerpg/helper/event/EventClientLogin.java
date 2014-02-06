@@ -20,7 +20,7 @@ import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class EventHelper {
+public class EventClientLogin {
 
 	public boolean hasSeen;
 	
@@ -92,40 +92,5 @@ public class EventHelper {
                 hasSeen = true;
             }
         }
-    }
-    
-    private VanillaItems v;
-    
-    @SubscribeEvent
-    public void onTickEvent(TickEvent ev) {
-		
-		EntityPlayer player = Minecraft.getMinecraft().thePlayer;
-		ItemStack boot = player.inventory.armorInventory[0];
-		ItemStack leg = player.inventory.armorInventory[1];
-		ItemStack chestplate = player.inventory.armorInventory[2];
-		ItemStack head = player.inventory.armorInventory[3];
-		
-		Item boots = null;
-		Item chest = null;
-		Item legs = null;
-		Item helmet = null;
-		
-		if (boot != null) {
-			boots = boot.getItem();
-		}
-		if (chestplate != null) {
-			chest = chestplate.getItem();
-		}
-		if (leg != null) {
-			legs = leg.getItem();
-		}
-		if (head != null) {
-			helmet = head.getItem();
-		}
-
-		if(boots == v.angelicBoots && chest == v.angelicBody && legs == v.angelicLegs && helmet == v.angelicHelmet){
-			player.capabilities.isFlying = true;
-			player.fallDistance = 0.0F;
-		}//TODO Figure out why it isn't working.
-    }   
+    } 
 }

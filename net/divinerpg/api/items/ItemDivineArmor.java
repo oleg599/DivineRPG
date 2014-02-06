@@ -20,23 +20,38 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 
-	public static double damageReduction;
+	private double damageReduction;
 	String name;
 	public static boolean unbreakable;
 	int durability;
 	private static String PREFIX = Reference.PREFIX + "textures/armor/";
+	private int type;
+	private int damRe;
 
 	/**
 	 * Normal constructor
 	 */
 	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, double damReduct, boolean unbreakable, String type) {
 		super(armor, par1, par2);
-		damageReduction = damReduct/100;
+		if (par1 == 0) {
+			damageReduction = (((damReduct*4)/24)*5)/100;
+		}
+		else if (par1 == 1) {
+			damageReduction = (((damReduct*4)/24)*8)/100;
+		}
+		else if (par1 == 2) {
+			damageReduction = (((damReduct*4)/24)*7)/100;
+		}
+		else if (par1 == 3) {
+			damageReduction = (((damReduct*4)/24)*4)/100;
+		}
+		
 		this.unbreakable = unbreakable;
 		LangRegistry.addItem(this);
 		setCreativeTab(DivineRPGTabs.armor);
 		setMaxStackSize(1);
 		this.setArmorType(type, par2);
+		this.type = par1;
 	}
 	
 	/**
@@ -68,15 +83,17 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		}
 	}
 	
-	public String getArmorTexture (ItemStack stack, Entity entity, int slot, int layer)
-	{
+	public String getArmorTexture (ItemStack stack, Entity entity, int slot, int layer) {
 		return this.PREFIX;
 	}
 	
 	@Override
 	public void addInformation(ItemStack item, EntityPlayer par2EntityPlayer, List list, boolean par4) {
-		ArmorInformation.addInfo(item, par2EntityPlayer, list, par4);
+		double roundPH = Math.round(damageReduction*1000);
+		double roundedDamage = roundPH/10;
+		list.add(damageReduction == 0.0 ? ("No Protection") : "Damage Reduction: " + roundedDamage + "%");
 		list.add(!unbreakable ? (item.getMaxDamage() - item.getItemDamage() + " Uses Remaining") : "Unlimited Uses");
+		ArmorInformation.addInfo(item, par2EntityPlayer, list, par4);
 	}
 	
 	@Override

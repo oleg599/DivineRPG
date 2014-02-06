@@ -5,7 +5,7 @@ import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.event.EventHelper;
+import net.divinerpg.helper.event.EventClientLogin;
 import net.divinerpg.helper.mobs.IceikaMobRegistry;
 import net.divinerpg.helper.mobs.OverworldMobRegistry;
 import net.divinerpg.helper.mobs.TwilightMobRegistry;
@@ -28,7 +28,7 @@ public class CommonProxy {
 	
 	//ClientProxy
 	public void preInit(FMLPreInitializationEvent event){
-		MinecraftForge.EVENT_BUS.register(new EventHelper());
+		MinecraftForge.EVENT_BUS.register(new EventClientLogin());
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		ConfigurationHelper.init();
 		OverworldMobRegistry.init();
