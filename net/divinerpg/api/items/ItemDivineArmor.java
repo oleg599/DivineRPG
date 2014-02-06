@@ -31,7 +31,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	/**
 	 * Normal constructor
 	 */
-	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, double damReduct, boolean unbreakable, String type) {
+	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, double damReduct, boolean undamageable, String type) {
 		super(armor, par1, par2);
 		if (par1 == 0) {
 			damageReduction = (((damReduct*4)/24)*5)/100;
@@ -46,7 +46,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 			damageReduction = (((damReduct*4)/24)*4)/100;
 		}
 		
-		this.unbreakable = unbreakable;
+		unbreakable = undamageable; //This is not working because it registers the boolean while the game is starting so it just takes the last one given. TODO: find solution.
 		LangRegistry.addItem(this);
 		setCreativeTab(DivineRPGTabs.armor);
 		setMaxStackSize(1);
@@ -57,9 +57,9 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	/**
 	 * Constructor to use if no damage reduction
 	 */
-	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, boolean unbreakable, String type){
+	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, boolean undamageable, String type){
 		this(armor, par1, par2, 0.0D, unbreakable, type);	
-		this.unbreakable = unbreakable;
+		this.unbreakable = undamageable; //This is not working because it registers the boolean while the game is starting so it just takes the last one given. TODO: find solution.
 		LangRegistry.addItem(this);
 		setCreativeTab(DivineRPGTabs.armor);
 		setMaxStackSize(1);
@@ -103,7 +103,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	
 	@Override
 	public void damageArmor(EntityLivingBase var1, ItemStack var2, DamageSource var3, int var4, int var5) {
-		if(isDamageable()){
+		if(!unbreakable){
 			var2.damageItem(1, var1);
 		}
 	}

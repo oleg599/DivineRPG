@@ -163,89 +163,89 @@ public class VanillaItems {
     public static final Item bedrockLegs 		= new ItemDivineArmor(ArmorMaterialMod.Bedrock, LEGS, 2, 18.25D, true, "bedrock").setName("bedrockLegs");
     public static final Item bedrockBoots 		= new ItemDivineArmor(ArmorMaterialMod.Bedrock, BOOTS, 3, 18.25D, true, "bedrock").setName("bedrockBoots");
     
-    public static final Item realmiteHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Realmite, HEAD, 0, 8.25D, false, "addNameOfArmorHere").setName("realmiteHelmet");
-    public static final Item realmiteBody 		= new ItemDivineArmor(ArmorMaterialMod.Realmite, BODY, 1, 8.25D, false, "addNameOfArmorHere").setName("realmiteBody");
-    public static final Item realmiteLegs 		= new ItemDivineArmor(ArmorMaterialMod.Realmite, LEGS, 2, 8.25D, false, "addNameOfArmorHere").setName("realmiteLegs");
-    public static final Item realmiteBoots 		= new ItemDivineArmor(ArmorMaterialMod.Realmite, BOOTS, 3, 8.25D, false, "addNameOfArmorHere").setName("realmiteBoots");
+    public static final Item realmiteHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Realmite, HEAD, 0, 8.25D, false, "realmite").setName("realmiteHelmet");
+    public static final Item realmiteBody 		= new ItemDivineArmor(ArmorMaterialMod.Realmite, BODY, 1, 8.25D, false, "realmite").setName("realmiteBody");
+    public static final Item realmiteLegs 		= new ItemDivineArmor(ArmorMaterialMod.Realmite, LEGS, 2, 8.25D, false, "realmite").setName("realmiteLegs");
+    public static final Item realmiteBoots 		= new ItemDivineArmor(ArmorMaterialMod.Realmite, BOOTS, 3, 8.25D, false, "realmite").setName("realmiteBoots");
     
-    public static final Item eliteRealmiteHelmet= new ItemDivineArmor(ArmorMaterialMod.EliteRealmite, HEAD, 0, 12.5D, true, "addNameOfArmorHere").setName("eliteRealmiteHelmet");
-    public static final Item eliteRealmiteBody 	= new ItemDivineArmor(ArmorMaterialMod.EliteRealmite, BODY, 1, 12.5D, true, "addNameOfArmorHere").setName("eliteRealmiteBody");
-    public static final Item eliteRealmiteLegs 	= new ItemDivineArmor(ArmorMaterialMod.EliteRealmite, LEGS, 2, 12.5D, true, "addNameOfArmorHere").setName("eliteRealmiteLegs");
-    public static final Item eliteRealmiteBoots = new ItemDivineArmor(ArmorMaterialMod.EliteRealmite, BOOTS, 3, 12.5D, true, "addNameOfArmorHere").setName("eliteRealmiteBoots");
+    public static final Item eliteRealmiteHelmet= new ItemDivineArmor(ArmorMaterialMod.EliteRealmite, HEAD, 0, 12.5D, true, "eliteRealmite").setName("eliteRealmiteHelmet");
+    public static final Item eliteRealmiteBody 	= new ItemDivineArmor(ArmorMaterialMod.EliteRealmite, BODY, 1, 12.5D, true, "eliteRealmite").setName("eliteRealmiteBody");
+    public static final Item eliteRealmiteLegs 	= new ItemDivineArmor(ArmorMaterialMod.EliteRealmite, LEGS, 2, 12.5D, true, "eliteRealmite").setName("eliteRealmiteLegs");
+    public static final Item eliteRealmiteBoots = new ItemDivineArmor(ArmorMaterialMod.EliteRealmite, BOOTS, 3, 12.5D, true, "eliteRealmite").setName("eliteRealmiteBoots");
     
-    public static final Item arlemiteHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Arlemite, HEAD, 0, 12.5D, true, "addNameOfArmorHere").setName("arlemiteHelmet");
-    public static final Item arlemiteBody 		= new ItemDivineArmor(ArmorMaterialMod.Arlemite, BODY, 1, 12.5D, true, "addNameOfArmorHere").setName("arlemiteBody");
-    public static final Item arlemiteLegs 		= new ItemDivineArmor(ArmorMaterialMod.Arlemite, LEGS, 2, 12.5D, true, "addNameOfArmorHere").setName("arlemiteLegs");
-    public static final Item arlemiteBoots 		= new ItemDivineArmor(ArmorMaterialMod.Arlemite, BOOTS, 3, 12.5D, true, "addNameOfArmorHere").setName("arlemiteBoots");
+    public static final Item arlemiteHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Arlemite, HEAD, 0, 12.5D, true, "arlemite").setName("arlemiteHelmet");
+    public static final Item arlemiteBody 		= new ItemDivineArmor(ArmorMaterialMod.Arlemite, BODY, 1, 12.5D, true, "arlemite").setName("arlemiteBody");
+    public static final Item arlemiteLegs 		= new ItemDivineArmor(ArmorMaterialMod.Arlemite, LEGS, 2, 12.5D, true, "arlemite").setName("arlemiteLegs");
+    public static final Item arlemiteBoots 		= new ItemDivineArmor(ArmorMaterialMod.Arlemite, BOOTS, 3, 12.5D, true, "arlemite").setName("arlemiteBoots");
     
-    public static final Item rupeeHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Rupee, HEAD, 0, 12.5D, true, "addNameOfArmorHere").setName("rupeeHelmet");
-    public static final Item rupeeBody 			= new ItemDivineArmor(ArmorMaterialMod.Rupee, BODY, 1, 12.5D, true, "addNameOfArmorHere").setName("rupeeBody");
-    public static final Item rupeeLegs 			= new ItemDivineArmor(ArmorMaterialMod.Rupee, LEGS, 2, 12.5D, true, "addNameOfArmorHere").setName("rupeeLegs");
-    public static final Item rupeeBoots 		= new ItemDivineArmor(ArmorMaterialMod.Rupee, BOOTS, 3, 12.5D, true, "addNameOfArmorHere").setName("rupeeBoots");
+    public static final Item rupeeHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Rupee, HEAD, 0, 12.5D, true, "rupee").setName("rupeeHelmet");
+    public static final Item rupeeBody 			= new ItemDivineArmor(ArmorMaterialMod.Rupee, BODY, 1, 12.5D, true, "rupee").setName("rupeeBody");
+    public static final Item rupeeLegs 			= new ItemDivineArmor(ArmorMaterialMod.Rupee, LEGS, 2, 12.5D, true, "rupee").setName("rupeeLegs");
+    public static final Item rupeeBoots 		= new ItemDivineArmor(ArmorMaterialMod.Rupee, BOOTS, 3, 12.5D, true, "rupee").setName("rupeeBoots");
     
-    public static final Item krakenHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Kraken, HEAD, 0, 7.5D, false, "addNameOfArmorHere").setName("krakenHelmet");
-    public static final Item krakenBody 		= new ItemDivineArmor(ArmorMaterialMod.Kraken, BODY, 1, 7.5D, false, "addNameOfArmorHere").setName("krakenBody");
-    public static final Item krakenLegs 		= new ItemDivineArmor(ArmorMaterialMod.Kraken, LEGS, 2, 7.5D, false, "addNameOfArmorHere").setName("krakenLegs");
-    public static final Item krakenBoots 		= new ItemDivineArmor(ArmorMaterialMod.Kraken, BOOTS, 3, 7.5D, false, "addNameOfArmorHere").setName("krakenBoots");
+    public static final Item krakenHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Kraken, HEAD, 0, 7.5D, false, "kraken").setName("krakenHelmet");
+    public static final Item krakenBody 		= new ItemDivineArmor(ArmorMaterialMod.Kraken, BODY, 1, 7.5D, false, "kraken").setName("krakenBody");
+    public static final Item krakenLegs 		= new ItemDivineArmor(ArmorMaterialMod.Kraken, LEGS, 2, 7.5D, false, "kraken").setName("krakenLegs");
+    public static final Item krakenBoots 		= new ItemDivineArmor(ArmorMaterialMod.Kraken, BOOTS, 3, 7.5D, false, "kraken").setName("krakenBoots");
     
-    public static final Item jackOManHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, true, "addNameOfArmorHere").setName("jackOManHelmet");
-    public static final Item jackOManBody 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, true, "addNameOfArmorHere").setName("jackOManBody");
-    public static final Item jackOManLegs 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, true, "addNameOfArmorHere").setName("jackOManLegs");
-    public static final Item jackOManBoots 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, true, "addNameOfArmorHere").setName("jackOManBoots");
+    public static final Item jackOManHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, true, "jackOMan").setName("jackOManHelmet");
+    public static final Item jackOManBody 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, true, "jackOMan").setName("jackOManBody");
+    public static final Item jackOManLegs 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, true, "jackOMan").setName("jackOManLegs");
+    public static final Item jackOManBoots 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, true, "jackOMan").setName("jackOManBoots");
     
-    public static final Item infernoHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Inferno, HEAD, 0, 15D, true, "addNameOfArmorHere").setName("infernoHelmet");
-    public static final Item infernoBody 		= new ItemDivineArmor(ArmorMaterialMod.Inferno, BODY, 1, 15D, true, "addNameOfArmorHere").setName("infernoBody");
-    public static final Item infernoLegs 		= new ItemDivineArmor(ArmorMaterialMod.Inferno, LEGS, 2, 15D, true, "addNameOfArmorHere").setName("infernoLegs");
-    public static final Item infernoBoots 		= new ItemDivineArmor(ArmorMaterialMod.Inferno, BOOTS, 3, 15D, true, "addNameOfArmorHere").setName("infernoBoots");
+    public static final Item infernoHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Inferno, HEAD, 0, 15D, true, "inferno").setName("infernoHelmet");
+    public static final Item infernoBody 		= new ItemDivineArmor(ArmorMaterialMod.Inferno, BODY, 1, 15D, true, "inferno").setName("infernoBody");
+    public static final Item infernoLegs 		= new ItemDivineArmor(ArmorMaterialMod.Inferno, LEGS, 2, 15D, true, "inferno").setName("infernoLegs");
+    public static final Item infernoBoots 		= new ItemDivineArmor(ArmorMaterialMod.Inferno, BOOTS, 3, 15D, true, "inferno").setName("infernoBoots");
     
-    public static final Item aquastriveHelmet   = new ItemDivineArmor(ArmorMaterialMod.Aquatic, HEAD, 0, 13.75D, true, "addNameOfArmorHere").setName("aquastriveHelmet");
-    public static final Item aquastriveBody 	= new ItemDivineArmor(ArmorMaterialMod.Aquatic, BODY, 1, 13.75D, true, "addNameOfArmorHere").setName("aquastriveBody");
-    public static final Item aquastriveLegs 	= new ItemDivineArmor(ArmorMaterialMod.Aquatic, LEGS, 2, 13.75D, true, "addNameOfArmorHere").setName("aquastriveLegs");
-    public static final Item aquastriveBoots 	= new ItemDivineArmor(ArmorMaterialMod.Aquatic, BOOTS, 3, 13.75D, true, "addNameOfArmorHere").setName("aquastriveBoots");
+    public static final Item aquastriveHelmet   = new ItemDivineArmor(ArmorMaterialMod.Aquatic, HEAD, 0, 13.75D, true, "aquastrive").setName("aquastriveHelmet");
+    public static final Item aquastriveBody 	= new ItemDivineArmor(ArmorMaterialMod.Aquatic, BODY, 1, 13.75D, true, "aquastrive").setName("aquastriveBody");
+    public static final Item aquastriveLegs 	= new ItemDivineArmor(ArmorMaterialMod.Aquatic, LEGS, 2, 13.75D, true, "aquastrive").setName("aquastriveLegs");
+    public static final Item aquastriveBoots 	= new ItemDivineArmor(ArmorMaterialMod.Aquatic, BOOTS, 3, 13.75D, true, "aquastrive").setName("aquastriveBoots");
     
-    public static final Item shadowHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Shadow, HEAD, 0, 15D, true, "addNameOfArmorHere").setName("shadowHelmet");
-    public static final Item shadowBody 		= new ItemDivineArmor(ArmorMaterialMod.Shadow, BODY, 1, 15D, true, "addNameOfArmorHere").setName("shadowBody");
-    public static final Item shadowLegs 		= new ItemDivineArmor(ArmorMaterialMod.Shadow, LEGS, 2, 15D, true, "addNameOfArmorHere").setName("shadowLegs");
-    public static final Item shadowBoots 		= new ItemDivineArmor(ArmorMaterialMod.Shadow, BOOTS, 3, 15D, true, "addNameOfArmorHere").setName("shadowBoots");
+    public static final Item shadowHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Shadow, HEAD, 0, 15D, true, "shadow").setName("shadowHelmet");
+    public static final Item shadowBody 		= new ItemDivineArmor(ArmorMaterialMod.Shadow, BODY, 1, 15D, true, "shadow").setName("shadowBody");
+    public static final Item shadowLegs 		= new ItemDivineArmor(ArmorMaterialMod.Shadow, LEGS, 2, 15D, true, "shadow").setName("shadowLegs");
+    public static final Item shadowBoots 		= new ItemDivineArmor(ArmorMaterialMod.Shadow, BOOTS, 3, 15D, true, "shadow").setName("shadowBoots");
     
-    public static final Item netheriteHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Netherite, HEAD, 0, 12.5D, true, "addNameOfArmorHere").setName("netheriteHelmet");
-    public static final Item netheriteBody 		= new ItemDivineArmor(ArmorMaterialMod.Netherite, BODY, 1, 12.5D, true, "addNameOfArmorHere").setName("netheriteBody");
-    public static final Item netheriteLegs 		= new ItemDivineArmor(ArmorMaterialMod.Netherite, LEGS, 2, 12.5D, true, "addNameOfArmorHere").setName("netheriteLegs");
-    public static final Item netheriteBoots 	= new ItemDivineArmor(ArmorMaterialMod.Netherite, BOOTS, 3, 12.5D, true, "addNameOfArmorHere").setName("netheriteBoots");
+    public static final Item netheriteHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Netherite, HEAD, 0, 12.5D, true, "netherite").setName("netheriteHelmet");
+    public static final Item netheriteBody 		= new ItemDivineArmor(ArmorMaterialMod.Netherite, BODY, 1, 12.5D, true, "netherite").setName("netheriteBody");
+    public static final Item netheriteLegs 		= new ItemDivineArmor(ArmorMaterialMod.Netherite, LEGS, 2, 12.5D, true, "netherite").setName("netheriteLegs");
+    public static final Item netheriteBoots 	= new ItemDivineArmor(ArmorMaterialMod.Netherite, BOOTS, 3, 12.5D, true, "netherite").setName("netheriteBoots");
     
-    public static final Item skelemanHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, true, "addNameOfArmorHere").setName("skelemanHelmet");
-    public static final Item skelemanBody 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, true, "addNameOfArmorHere").setName("skelemanBody");//Costumes have no damage protection
-    public static final Item skelemanLegs 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, true, "addNameOfArmorHere").setName("skelemanLegs");
-    public static final Item skelemanBoots 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, true, "addNameOfArmorHere").setName("skelemanBoots");
+    public static final Item skelemanHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, true, "skeleman").setName("skelemanHelmet");
+    public static final Item skelemanBody 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, true, "skeleman").setName("skelemanBody");//Costumes have no damage protection
+    public static final Item skelemanLegs 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, true, "skeleman").setName("skelemanLegs");
+    public static final Item skelemanBoots 		= new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, true, "skeleman").setName("skelemanBoots");
     
-    public static final Item witherReaperHelmet = new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, true, "addNameOfArmorHere").setName("witherReaperHelmet");
-    public static final Item witherReaperBody 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, true, "addNameOfArmorHere").setName("witherReaperBody");
-    public static final Item witherReaperLegs 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, true, "addNameOfArmorHere").setName("witherReaperLegs");
-    public static final Item witherReaperBoots 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, true, "addNameOfArmorHere").setName("witherReaperBoots");
+    public static final Item witherReaperHelmet = new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, true, "witherReaper").setName("witherReaperHelmet");
+    public static final Item witherReaperBody 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, true, "witherReaper").setName("witherReaperBody");
+    public static final Item witherReaperLegs 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, true, "witherReaper").setName("witherReaperLegs");
+    public static final Item witherReaperBoots 	= new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, true, "witherReaper").setName("witherReaperBoots");
     
-    public static final Item enderHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Ender, HEAD, 0, 16.25D, true, "addNameOfArmorHere").setName("enderHelmet");
-    public static final Item enderBody	 		= new ItemDivineArmor(ArmorMaterialMod.Ender, BODY, 1, 16.25D, true, "addNameOfArmorHere").setName("enderBody");
-    public static final Item enderLegs	 		= new ItemDivineArmor(ArmorMaterialMod.Ender, LEGS, 2, 16.25D, true, "addNameOfArmorHere").setName("enderLegs");
-    public static final Item enderBoots 		= new ItemDivineArmor(ArmorMaterialMod.Ender, BOOTS, 3, 16.25D, true, "addNameOfArmorHere").setName("enderBoots");
+    public static final Item enderHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Ender, HEAD, 0, 16.25D, true, "ender").setName("enderHelmet");
+    public static final Item enderBody	 		= new ItemDivineArmor(ArmorMaterialMod.Ender, BODY, 1, 16.25D, true, "ender").setName("enderBody");
+    public static final Item enderLegs	 		= new ItemDivineArmor(ArmorMaterialMod.Ender, LEGS, 2, 16.25D, true, "ender").setName("enderLegs");
+    public static final Item enderBoots 		= new ItemDivineArmor(ArmorMaterialMod.Ender, BOOTS, 3, 16.25D, true, "ender").setName("enderBoots");
     
-    public static final Item ironHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Iron, HEAD, 0, 6.5D, false, "addNameOfArmorHere").setName("ironHelmet");
-    public static final Item ironBody	 		= new ItemDivineArmor(ArmorMaterialMod.Iron, BODY, 1, 6.5D, false, "addNameOfArmorHere").setName("ironBody");
-    public static final Item ironLegs	 		= new ItemDivineArmor(ArmorMaterialMod.Iron, LEGS, 2, 6.5D, false, "addNameOfArmorHere").setName("ironLegs");
-    public static final Item ironBoots 			= new ItemDivineArmor(ArmorMaterialMod.Iron, BOOTS, 3, 6.5D, false, "addNameOfArmorHere").setName("ironBoots");
+    public static final Item ironHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Iron, HEAD, 0, 6.5D, false, "iron").setName("ironHelmet");
+    public static final Item ironBody	 		= new ItemDivineArmor(ArmorMaterialMod.Iron, BODY, 1, 6.5D, false, "iron").setName("ironBody");
+    public static final Item ironLegs	 		= new ItemDivineArmor(ArmorMaterialMod.Iron, LEGS, 2, 6.5D, false, "iron").setName("ironLegs");
+    public static final Item ironBoots 			= new ItemDivineArmor(ArmorMaterialMod.Iron, BOOTS, 3, 6.5D, false, "iron").setName("ironBoots");
     
-    public static final Item diamondHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Diamond, HEAD, 0, 10D, false, "addNameOfArmorHere").setName("diamondHelmet");
-    public static final Item diamondBody 		= new ItemDivineArmor(ArmorMaterialMod.Diamond, BODY, 1, 10D, false, "addNameOfArmorHere").setName("diamondBody");
-    public static final Item diamondLegs 		= new ItemDivineArmor(ArmorMaterialMod.Diamond, LEGS, 2, 10D, false, "addNameOfArmorHere").setName("diamondLegs");
-    public static final Item diamondBoots 		= new ItemDivineArmor(ArmorMaterialMod.Diamond, BOOTS, 3, 10D, false, "addNameOfArmorHere").setName("diamondBoots");
+    public static final Item diamondHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Diamond, HEAD, 0, 10D, false, "diamond").setName("diamondHelmet");
+    public static final Item diamondBody 		= new ItemDivineArmor(ArmorMaterialMod.Diamond, BODY, 1, 10D, false, "diamond").setName("diamondBody");
+    public static final Item diamondLegs 		= new ItemDivineArmor(ArmorMaterialMod.Diamond, LEGS, 2, 10D, false, "diamond").setName("diamondLegs");
+    public static final Item diamondBoots 		= new ItemDivineArmor(ArmorMaterialMod.Diamond, BOOTS, 3, 10D, false, "diamond").setName("diamondBoots");
     
-    public static final Item goldHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Gold, HEAD, 0, 5D, false, "addNameOfArmorHere").setName("goldHelmet");
-    public static final Item goldBody 			= new ItemDivineArmor(ArmorMaterialMod.Gold, BODY, 1, 5D, false, "addNameOfArmorHere").setName("goldBody");
-    public static final Item goldLegs 			= new ItemDivineArmor(ArmorMaterialMod.Gold, LEGS, 2, 5D, false, "addNameOfArmorHere").setName("goldLegs");
-    public static final Item goldBoots 			= new ItemDivineArmor(ArmorMaterialMod.Gold, BOOTS, 3, 5D, false, "addNameOfArmorHere").setName("goldBoots");
+    public static final Item goldHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Gold, HEAD, 0, 5D, false, "gold").setName("goldHelmet");
+    public static final Item goldBody 			= new ItemDivineArmor(ArmorMaterialMod.Gold, BODY, 1, 5D, false, "gold").setName("goldBody");
+    public static final Item goldLegs 			= new ItemDivineArmor(ArmorMaterialMod.Gold, LEGS, 2, 5D, false, "gold").setName("goldLegs");
+    public static final Item goldBoots 			= new ItemDivineArmor(ArmorMaterialMod.Gold, BOOTS, 3, 5D, false, "gold").setName("goldBoots");
     
-    public static final Item leatherHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Leather, HEAD, 0, 2.5D, false, "addNameOfArmorHere").setName("leatherHelmet");
-    public static final Item leatherBody 		= new ItemDivineArmor(ArmorMaterialMod.Leather, BODY, 1, 2.5D, false, "addNameOfArmorHere").setName("leatherBody");
-    public static final Item leatherLegs 		= new ItemDivineArmor(ArmorMaterialMod.Leather, LEGS, 2, 2.5D, false, "addNameOfArmorHere").setName("leatherLegs");
-    public static final Item leatherBoots 		= new ItemDivineArmor(ArmorMaterialMod.Leather, BOOTS, 3, 2.5D, false, "addNameOfArmorHere").setName("leatherBoots");
+    public static final Item leatherHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Leather, HEAD, 0, 2.5D, false, "leather").setName("leatherHelmet");
+    public static final Item leatherBody 		= new ItemDivineArmor(ArmorMaterialMod.Leather, BODY, 1, 2.5D, false, "leather").setName("leatherBody");
+    public static final Item leatherLegs 		= new ItemDivineArmor(ArmorMaterialMod.Leather, LEGS, 2, 2.5D, false, "leather").setName("leatherLegs");
+    public static final Item leatherBoots 		= new ItemDivineArmor(ArmorMaterialMod.Leather, BOOTS, 3, 2.5D, false, "leather").setName("leatherBoots");
     
 }
