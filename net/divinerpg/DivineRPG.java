@@ -38,8 +38,8 @@ public class DivineRPG {
 	/**REMINDERS OF THE UN-NAMED FUNC_^&!!)&_!**/
 	//func_149672_a(); >> setMaterial();
 	//func_149647_a(); >> setCreativeTab();
-	//func_149663_c("") >> setUnlocalizedName();
+	//setBlockName("") >> setUnlocalizedName();
 	//IIconRegister >> IconRegister
 	//IIcon >> Icon
-	//func_149658_d("") >> setTexture("");
+	//setBlockTexture("") >> setTexture("");
 }

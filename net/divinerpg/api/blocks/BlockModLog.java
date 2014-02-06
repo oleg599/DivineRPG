@@ -32,16 +32,14 @@ public class BlockModLog extends BlockRotatedPillar{
     private static Material wood = Material.wood;
 
     public BlockModLog() {
-        super(wood);BlockLog
+        super(wood);
         setHardness(3.0F);
         setCreativeTab(DivineRPGTabs.blocks);
         setSoundType(woodSound);
         LangRegistry.addBlock(this);
     }
     
-    public Block setCreativeTab(CreativeTabs name) {
-        return func_149647_a(name);
-    }
+    
 	public Block setSoundType(Block.SoundType name) {
     	return func_149672_a(name);
     }
@@ -67,18 +65,10 @@ public class BlockModLog extends BlockRotatedPillar{
     	return true;
     }
     
-    public Block setTextureName(String name){
-        return func_149658_d(Reference.PREFIX + name);
-    }
-    
-    public Block setUnlocalizedName(String name){
-        return func_149663_c(name);
-    }
-    
     public Block setName(String name){
         this.name = name;
-        setTextureName(name);
-        setUnlocalizedName(name);
+        setBlockTextureName(name);
+        setBlockName(name);
         register();
         return this;
     }
