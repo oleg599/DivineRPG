@@ -5,6 +5,7 @@ import java.util.Random;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.world.IBlockAccess;
@@ -16,26 +17,19 @@ public class BlockModLeaves extends BlockMod
 {
 	int[] adjacentTreeBlocks;
 	String name;
-	private static SoundType grass = Block.field_149779_h;
-    private static Material leaf = Material.field_151584_j;
+	private static SoundType grass = Block.soundTypeGrass;
+    private static Material leaf = Material.leaves;
 
-	public BlockModLeaves()
-	{
+	public BlockModLeaves() {
 		super(leaf);
-		suckTit(true);
-		func_149711_c(2.0F);
+        this.setHardness(0.2F);
+        this.setLightOpacity(1);
+        this.setTickRandomly(true);
 		setCreativeTab(DivineRPGTabs.blocks);
-		setSoundType(grass);
+		setStepSound(grass);
 	}
 
-	/**
-	 * Checks if the block can tick. False by default.
-	 */
-	public Block suckTit(boolean hard) {
-		return func_149675_a(hard);
-    }
-
-    public void func_149749_a(World world, int par2, int par3, int par4, Block par5, int par6)
+    public void breakBlock(World world, int par2, int par3, int par4, Block par5, int par6)
     {
         byte b0 = 1;
         int i1 = b0 + 1;
@@ -48,7 +42,7 @@ public class BlockModLeaves extends BlockMod
                 {
                     for (int l1 = -b0; l1 <= b0; ++l1)
                     {
-                        Block block = world.func_147439_a(par2 + j1, par3 + k1, par4 + l1);
+                        Block block = world.getBlock(par2 + j1, par3 + k1, par4 + l1);
                         if (block.isLeaves(world, par2 + j1, par3 + k1, par4 + l1))
                         {
                             block.beginLeavesDecay(world, par2 + j1, par3 + k1, par4 + l1);
@@ -59,7 +53,7 @@ public class BlockModLeaves extends BlockMod
         }
     }
 
-    public void func_149674_a(World world, int par2, int par3, int par4, Random par5)
+    public void updateTick(World world, int par2, int par3, int par4, Random par5)
     {
         if (!world.isRemote)
         {
@@ -91,7 +85,7 @@ public class BlockModLeaves extends BlockMod
                         {
                             for (j2 = -b0; j2 <= b0; ++j2)
                             {
-                                Block block = world.func_147439_a(par2 + l1, par3 + i2, par4 + j2);
+                                Block block = world.getBlock(par2 + l1, par3 + i2, par4 + j2);
 
                                 if (!block.canSustainLeaves(world, par2 + l1, par3 + i2, par4 + j2))
                                 {
@@ -174,8 +168,8 @@ public class BlockModLeaves extends BlockMod
     
 	private void removeLeaves(World par1World, int par2, int par3, int par4)
 	{
-		this.func_149697_b(par1World, par2, par3, par4, par1World.getBlockMetadata(par2, par3, par4), 0);
-		par1World.func_147468_f(par2, par3, par4);
+		this.dropBlockAsItem(par1World, par2, par3, par4, par1World.getBlockMetadata(par2, par3, par4), 0);
+		par1World.setBlockToAir(par2, par3, par4);
 	}
 
 	@Override
@@ -191,17 +185,17 @@ public class BlockModLeaves extends BlockMod
 	}
 
 	@Override
-	public boolean func_149662_c() {
+	public boolean isOpaqueCube() {
+		return false;
+	}
+
+	@Override
+	public boolean renderAsNormalBlock() {
 		return false;
 	}
 	
 	@Override
-	public int func_149701_w() {
-		return 1;
-	}
-	
-	/*@Override
 	public int getRenderType() {
 		return 0;
-	}*/
+	}
 }

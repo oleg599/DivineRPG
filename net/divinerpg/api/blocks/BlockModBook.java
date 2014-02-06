@@ -18,7 +18,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 
 public class BlockModBook extends BlockBookshelf {
-    static Material wood = Material.field_151575_d;
+    static Material wood = Material.wood;
     
 	String name;
 	
@@ -28,28 +28,23 @@ public class BlockModBook extends BlockBookshelf {
 		setCreativeTab(DivineRPGTabs.blocks);
 		LangRegistry.addBlock(this);
 	}
-	public Block setCreativeTab(CreativeTabs name) {
-        return func_149647_a(name);
-    }
 	
 	@SideOnly(Side.CLIENT)
-    public IIcon func_149691_a(int p_149691_1_, int p_149691_2_)
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
     {
-        return p_149691_1_ != 1 && p_149691_1_ != 0 ? super.func_149691_a(p_149691_1_, p_149691_2_) : IceikaBlocks.coalstone.func_149733_h(p_149691_1_);
+        return p_149691_1_ != 1 && p_149691_1_ != 0 ? super.getIcon(p_149691_1_, p_149691_2_) : IceikaBlocks.coalstone.getBlockTextureFromSide(p_149691_1_);
     }
 	
+	
+	
 	public Block setTextureName(String name){
-        return func_149658_d(Reference.PREFIX + name);
+        return setBlockTextureName(Reference.PREFIX + name);
     }
-    
-    public Block setUnlocalizedName(String name){
-        return func_149663_c(name);
-    }
-    
+	
 	public Block setName(String name){
         this.name = name;
         setTextureName(name);
-        setUnlocalizedName(name);
+        setBlockName(name);
         register();
         return this;
     }
@@ -84,8 +79,6 @@ public class BlockModBook extends BlockBookshelf {
             }
         }
         String finalName = firstLetter + inGame;
-        System.err.println(finalName);
         GameRegistry.registerBlock(this, name);
-        LanguageRegistry.addName(this, finalName);
     }
 }

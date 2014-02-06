@@ -21,23 +21,15 @@ public class BlockModGlass extends BlockGlass {
 		setCreativeTab(DivineRPGTabs.blocks);
 		LangRegistry.addBlock(this);
 	}
-	
-	public Block setCreativeTab(CreativeTabs name) {
-        return func_149647_a(name);
-    }
-	
+
 	public Block setTextureName(String name){
-        return func_149658_d(Reference.PREFIX + name);
-    }
-    
-    public Block setUnlocalizedName(String name){
-        return func_149663_c(name);
+        return setBlockTextureName(Reference.PREFIX + name);
     }
     
 	public Block setName(String name){
         this.name = name;
         setTextureName(name);
-        setUnlocalizedName(name);
+        setBlockName(name);
         register();
         return this;
     }

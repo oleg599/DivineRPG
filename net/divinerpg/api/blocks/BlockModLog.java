@@ -28,12 +28,12 @@ public class BlockModLog extends BlockRotatedPillar{
     protected IIcon[] sideChange;
     protected IIcon[] topChange;
     
-	private static SoundType woodSound = Block.field_149766_f;
-    private static Material wood = Material.field_151575_d;
+	private static SoundType woodSound = Block.soundTypeWood;
+    private static Material wood = Material.wood;
 
     public BlockModLog() {
-        super(wood);
-        func_149711_c(3.0F);
+        super(wood);BlockLog
+        setHardness(3.0F);
         setCreativeTab(DivineRPGTabs.blocks);
         setSoundType(woodSound);
         LangRegistry.addBlock(this);
@@ -159,9 +159,15 @@ public class BlockModLog extends BlockRotatedPillar{
         return var10 | var11;
     }
     
-    public IIcon func_149691_a(int par1, int par2)
+    public IIcon getSideIcon(int par1, int par2)
     {
         int var3 = par2 & 12;
         return var3 == 0 && (par1 == 1 || par1 == 0) ? this.top : (var3 == 4 && (par1 == 5 || par1 == 4) ? this.top  : (var3 == 8 && (par1 == 2 || par1 == 3) ? top  : this.side ));
     }
+
+	@Override
+	protected IIcon getSideIcon(int var1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

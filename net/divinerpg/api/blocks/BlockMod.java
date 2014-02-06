@@ -34,13 +34,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  */
 public class BlockMod extends Block {
 
-    protected static SoundType stone = Block.field_149769_e;
-    protected static SoundType grass = Block.field_149779_h;
-    protected static SoundType cloth = Block.field_149775_l;
-    protected static SoundType wood  = Block.field_149766_f;
+    protected static SoundType stone = Block.soundTypeStone;
+    protected static SoundType grass = Block.soundTypeGrass;
+    protected static SoundType cloth = Block.soundTypeCloth;
+    protected static SoundType wood  = Block.soundTypeWood;
 
-    public static Material     rock  = Material.field_151576_e;
-    public static Material     wool  = Material.field_151580_n;
+    public static Material     rock  = Material.rock;
+    public static Material     wool  = Material.cloth;
 
     protected String           name;
 
@@ -49,18 +49,14 @@ public class BlockMod extends Block {
         LangRegistry.addBlock(this);
     }
 
-    public Block setUnlocalizedName(String name) {
-        return func_149663_c(name);
-    }
-
     public Block setTextureName(String name) {
-        return func_149658_d(Reference.PREFIX + name);
+        return setBlockTextureName(Reference.PREFIX + name);
     }
 
     public Block setName(String name) {
         this.name = name;
         setTextureName(name);
-        setUnlocalizedName(name);
+        setBlockName(name);
         register();
         return this;
     }
@@ -101,13 +97,5 @@ public class BlockMod extends Block {
         String finalName = firstLetter + inGame;
         GameRegistry.registerBlock(this, name);
         LanguageRegistry.addName(this, finalName);
-    }
-
-    public Block setCreativeTab(CreativeTabs name) {
-        return func_149647_a(name);
-    }
-
-    public Block setSoundType(Block.SoundType name) {
-        return func_149672_a(name);
     }
 }

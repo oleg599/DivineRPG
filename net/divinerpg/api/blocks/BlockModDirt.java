@@ -7,32 +7,12 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockModDirt extends BlockMod {
 
-    private static Material dirt = Material.field_151578_c;
-    private static SoundType gravel = Block.field_149767_g;
+    private static Material dirt = Material.ground;
+    private static SoundType gravel = Block.soundTypeGravel;
 
     public BlockModDirt() {
         super(dirt);
         setCreativeTab(DivineRPGTabs.blocks);
-        setSoundType(gravel);
+        setStepSound(gravel);
     }
-    
-    public Block setCreativeTab(CreativeTabs name){
-        return func_149647_a(name);
-    }
-    public Block setSoundType(Block.SoundType name){
-    	return func_149672_a(name);
-    }
-    public Block setHardness(float p_149711_1_){
-        this.field_149782_v = p_149711_1_;
-
-        if (this.field_149781_w < p_149711_1_ * 5.0F)
-        {
-            this.field_149781_w = p_149711_1_ * 5.0F;
-        }
-
-        return this;
-    }
-    
-    
-    
 }
