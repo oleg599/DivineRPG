@@ -44,9 +44,9 @@ public class BlockBlueFire extends BlockFire
 
     public BlockBlueFire() {
         super();
-        this.func_149675_a(true);
+        setTickRandomly(true);
         setName("blueFire");
-        func_149647_a(DivineRPGTabs.blocks);
+        setCreativeTab(DivineRPGTabs.blocks);
         register();
         LangRegistry.addBlock(this);
     }

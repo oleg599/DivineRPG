@@ -25,25 +25,19 @@ public class TwilightBlock extends Block
 	{
 		super(m);
 		setCreativeTab(DivineRPGTabs.blocks);
-		setSoundType(Block.field_149780_i);
+		setStepSound(Block.soundTypeStone);
+		//setBreakSound(Block.soundTypeStone);
 		
 		if(isOre()){
-			func_149711_c(9.0F);
+			setHardness(9.0F);
 		}else{
-			func_149711_c(6.0F);
+			setHardness(6.0F);
 		}
         LangRegistry.addBlock(this);
 	}
 
 	public static Item getBlock(Block b){
 		return Item.func_150898_a(b);
-	}
-
-	public Block setCreativeTab(CreativeTabs name) {
-		return func_149647_a(name);
-	}
-	public Block setSoundType(Block.SoundType name) {
-		return func_149672_a(name);
 	}
 
 	boolean isOre(){

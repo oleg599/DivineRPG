@@ -35,13 +35,8 @@ public class BlockModLog extends BlockRotatedPillar{
         super(wood);
         setHardness(3.0F);
         setCreativeTab(DivineRPGTabs.blocks);
-        setSoundType(woodSound);
+        setStepSound(woodSound);
         LangRegistry.addBlock(this);
-    }
-    
-    
-	public Block setSoundType(Block.SoundType name) {
-    	return func_149672_a(name);
     }
 
     @SideOnly(Side.CLIENT)
@@ -49,12 +44,7 @@ public class BlockModLog extends BlockRotatedPillar{
         side = icon.registerIcon(getTextureName() + "_side");
         top = icon.registerIcon(getTextureName() + "_top");
     }
-    
-    @Override
-    public Item func_149650_a(int par1, Random par2Random, int par3) {
-        return Item.func_150898_a(this);
-    }
-    
+
     @Override
     public boolean isWood(IBlockAccess world, int x, int y, int z) {
     	return true;
@@ -113,14 +103,12 @@ public class BlockModLog extends BlockRotatedPillar{
         return 1;
     }
 
-	@Override
 	@SideOnly(Side.CLIENT)
 	protected IIcon func_150163_b(int var1) {
 		return this.sideChange[var1 % this.sideChange.length];
 	}
 	
-	@Override
-    @SideOnly(Side.CLIENT)
+	@SideOnly(Side.CLIENT)
     protected IIcon func_150161_d(int var1)
     {
         return this.topChange[var1 % this.topChange.length];

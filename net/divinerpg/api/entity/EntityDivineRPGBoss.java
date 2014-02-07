@@ -18,17 +18,17 @@ public abstract class EntityDivineRPGBoss extends EntityMob implements IBossDisp
 		super(par1World);
 	}
 	
-	public void setMaxHP(double d){getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(100.0D);}
+	public void setMaxHP(double d){getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);}
 
-	public void setMoveSpeed(double d){getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);}
+	public void setMoveSpeed(double d){getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);}
 
-	public void setAttackDamage(double d){getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(13.0D);}
+	public void setAttackDamage(double d){getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(13.0D);}
 
-	public void setFollowRange(double d){getEntityAttribute(SharedMonsterAttributes.followRange).setAttribute(100.0D);}
+	public void setFollowRange(double d){getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(100.0D);}
 
-	public void setKnockbackResistance(double d){getEntityAttribute(SharedMonsterAttributes.knockbackResistance).setAttribute(100.0D);}
+	public void setKnockbackResistance(double d){getEntityAttribute(SharedMonsterAttributes.knockbackResistance).setBaseValue(100.0D);}
 
-	public void getHP(){getEntityAttribute(SharedMonsterAttributes.maxHealth).getAttributeValue();}
+	public void getHP(){getEntityAttribute(SharedMonsterAttributes.maxHealth).getAttributeValue();} 
 
 	public void getMoveSpeed(){getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue();}
 
