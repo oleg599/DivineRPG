@@ -4,10 +4,12 @@ import java.util.Random;
 
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.blocks.VanillaBlocks;
+import net.divinerpg.helper.config.ConfigurationHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemMonsterPlacer;
@@ -57,6 +59,28 @@ public class BlockEdenPortal extends BlockBreakable
 		}
 	}
 
+	@Override
+    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
+    {
+        if ((par5Entity.ridingEntity == null) && (par5Entity.riddenByEntity == null) && ((par5Entity instanceof EntityPlayerMP)))
+        {
+            EntityPlayerMP thePlayer = (EntityPlayerMP)par5Entity;
+            if (thePlayer.timeUntilPortal > 0)
+            {
+                thePlayer.timeUntilPortal = 10;
+            }
+            else if (thePlayer.dimension != ConfigurationHelper.Eden)
+            {
+                thePlayer.timeUntilPortal = 10;
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigurationHelper.Eden);
+            }
+            else {
+                thePlayer.timeUntilPortal = 10;
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0);
+            }
+        }
+    }
+	
 	/**
 	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
 	 * cleared to be reused)
@@ -203,17 +227,6 @@ public class BlockEdenPortal extends BlockBreakable
 	public int quantityDropped(Random p_149745_1_)
 	{
 		return 0;
-	}
-
-	/**
-	 * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
-	 */
-	public void onEntityCollidedWithBlock(World p_149670_1_, int p_149670_2_, int p_149670_3_, int p_149670_4_, Entity p_149670_5_)
-	{
-		if (p_149670_5_.ridingEntity == null && p_149670_5_.riddenByEntity == null)
-		{
-			p_149670_5_.setInPortal();
-		}
 	}
 
 	/**
