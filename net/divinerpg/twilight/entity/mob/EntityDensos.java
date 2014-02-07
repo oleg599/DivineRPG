@@ -22,9 +22,9 @@ public class EntityDensos extends EntityDivineRPGMob implements IBossDisplayData
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(5000.0D);
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(40D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(5000.0D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(40D);
         this.setFollowRange(128.0D);
     }
     
@@ -94,10 +94,10 @@ public class EntityDensos extends EntityDivineRPGMob implements IBossDisplayData
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            //this.func_145779_a(TwilightItems.haliteHelmet, 1);
-            //this.func_145779_a(TwilightItems.haliteBody, 1);
-            //this.func_145779_a(TwilightItems.haliteLegs, 1);
-            //this.func_145779_a(TwilightItems.haliteBoots, 1);
+            //this.dropItem(TwilightItems.haliteHelmet, 1);
+            //this.dropItem(TwilightItems.haliteBody, 1);
+            //this.dropItem(TwilightItems.haliteLegs, 1);
+            //this.dropItem(TwilightItems.haliteBoots, 1);
         }
     }
 

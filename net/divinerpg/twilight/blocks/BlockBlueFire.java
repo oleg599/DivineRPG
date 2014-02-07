@@ -12,12 +12,10 @@ import java.util.Map.Entry;
 import java.util.Random;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
+import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
 import net.minecraft.block.material.MapColor;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
@@ -33,74 +31,97 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockBlueFire extends BlockFire
-{
+public class BlockBlueFire extends BlockFire {
+	
     @Deprecated
     private int[] field_149849_a = new int[4096];
     @Deprecated
     private int[] field_149848_b = new int[4096];
     @SideOnly(Side.CLIENT)
     private IIcon[] field_149850_M;
-
+    String name;
+    
     public BlockBlueFire() {
-        super();
-        setTickRandomly(true);
-        setName("blueFire");
-        setCreativeTab(DivineRPGTabs.blocks);
-        register();
-        LangRegistry.addBlock(this);
+        this.setTickRandomly(true);
+    }
+
+    public static void func_149843_e() {
+
     }
 
     @Deprecated // Use setFireInfo
     public void func_149842_a(int p_149842_1_, int p_149842_2_, int p_149842_3_)
     {
-        this.setFireInfo((Block)Block.field_149771_c.func_148754_a(p_149842_1_), p_149842_2_, p_149842_3_);
+        this.setFireInfo((Block)Block.blockRegistry.getObjectById(p_149842_1_), p_149842_2_, p_149842_3_);
     }
 
-    public AxisAlignedBB func_149668_a(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
+    /**
+     * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
+     * cleared to be reused)
+     */
+    public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
     {
         return null;
     }
 
-    public boolean func_149662_c()
+    /**
+     * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two
+     * adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+     */
+    public boolean isOpaqueCube()
     {
         return false;
     }
 
-    public boolean func_149686_d()
+    /**
+     * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+     */
+    public boolean renderAsNormalBlock()
     {
         return false;
     }
 
-    public int func_149645_b()
+    /**
+     * The type of render function that is called for this block
+     */
+    public int getRenderType()
     {
         return 3;
     }
 
-    public int func_149745_a(Random p_149745_1_)
+    /**
+     * Returns the quantity of items to drop on block destruction.
+     */
+    public int quantityDropped(Random p_149745_1_)
     {
         return 0;
     }
 
-    public int func_149738_a(World p_149738_1_)
+    /**
+     * How many world ticks before ticking
+     */
+    public int tickRate(World p_149738_1_)
     {
         return 30;
     }
 
-    public void func_149674_a(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+    /**
+     * Ticks the block if it's been scheduled
+     */
+    public void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
     {
         if (p_149674_1_.getGameRules().getGameRuleBooleanValue("doFireTick"))
         {
-            boolean flag = p_149674_1_.func_147439_a(p_149674_2_, p_149674_3_ - 1, p_149674_4_).isFireSource(p_149674_1_, p_149674_2_, p_149674_3_ - 1, p_149674_4_, UP);
+            boolean flag = p_149674_1_.getBlock(p_149674_2_, p_149674_3_ - 1, p_149674_4_).isFireSource(p_149674_1_, p_149674_2_, p_149674_3_ - 1, p_149674_4_, UP);
 
-            if (!this.func_149742_c(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_))
+            if (!this.canPlaceBlockAt(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_))
             {
-                p_149674_1_.func_147468_f(p_149674_2_, p_149674_3_, p_149674_4_);
+                p_149674_1_.setBlockToAir(p_149674_2_, p_149674_3_, p_149674_4_);
             }
 
             if (!flag && p_149674_1_.isRaining() && (p_149674_1_.canLightningStrikeAt(p_149674_2_, p_149674_3_, p_149674_4_) || p_149674_1_.canLightningStrikeAt(p_149674_2_ - 1, p_149674_3_, p_149674_4_) || p_149674_1_.canLightningStrikeAt(p_149674_2_ + 1, p_149674_3_, p_149674_4_) || p_149674_1_.canLightningStrikeAt(p_149674_2_, p_149674_3_, p_149674_4_ - 1) || p_149674_1_.canLightningStrikeAt(p_149674_2_, p_149674_3_, p_149674_4_ + 1)))
             {
-                p_149674_1_.func_147468_f(p_149674_2_, p_149674_3_, p_149674_4_);
+                p_149674_1_.setBlockToAir(p_149674_2_, p_149674_3_, p_149674_4_);
             }
             else
             {
@@ -111,18 +132,18 @@ public class BlockBlueFire extends BlockFire
                     p_149674_1_.setBlockMetadataWithNotify(p_149674_2_, p_149674_3_, p_149674_4_, l + p_149674_5_.nextInt(3) / 2, 4);
                 }
 
-                p_149674_1_.func_147464_a(p_149674_2_, p_149674_3_, p_149674_4_, this, this.func_149738_a(p_149674_1_) + p_149674_5_.nextInt(10));
+                p_149674_1_.scheduleBlockUpdate(p_149674_2_, p_149674_3_, p_149674_4_, this, this.tickRate(p_149674_1_) + p_149674_5_.nextInt(10));
 
-                if (!flag && !this.func_149847_e(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_))
+                if (!flag && !this.canNeighborBurn(p_149674_1_, p_149674_2_, p_149674_3_, p_149674_4_))
                 {
-                    if (!World.func_147466_a(p_149674_1_, p_149674_2_, p_149674_3_ - 1, p_149674_4_) || l > 3)
+                    if (!World.doesBlockHaveSolidTopSurface(p_149674_1_, p_149674_2_, p_149674_3_ - 1, p_149674_4_) || l > 3)
                     {
-                        p_149674_1_.func_147468_f(p_149674_2_, p_149674_3_, p_149674_4_);
+                        p_149674_1_.setBlockToAir(p_149674_2_, p_149674_3_, p_149674_4_);
                     }
                 }
                 else if (!flag && !this.canCatchFire(p_149674_1_, p_149674_2_, p_149674_3_ - 1, p_149674_4_, UP) && l == 15 && p_149674_5_.nextInt(4) == 0)
                 {
-                    p_149674_1_.func_147468_f(p_149674_2_, p_149674_3_, p_149674_4_);
+                    p_149674_1_.setBlockToAir(p_149674_2_, p_149674_3_, p_149674_4_);
                 }
                 else
                 {
@@ -156,11 +177,11 @@ public class BlockBlueFire extends BlockFire
                                         l1 += (k1 - (p_149674_3_ + 1)) * 100;
                                     }
 
-                                    int i2 = this.func_149845_m(p_149674_1_, i1, k1, j1);
+                                    int i2 = this.getChanceOfNeighborsEncouragingFire(p_149674_1_, i1, k1, j1);
 
                                     if (i2 > 0)
                                     {
-                                        int j2 = (i2 + 40 + p_149674_1_.difficultySetting.func_151525_a() * 7) / (l + 30);
+                                        int j2 = (i2 + 40 + p_149674_1_.difficultySetting.getDifficultyId() * 7) / (l + 30);
 
                                         if (flag1)
                                         {
@@ -176,7 +197,7 @@ public class BlockBlueFire extends BlockFire
                                                 k2 = 15;
                                             }
 
-                                            p_149674_1_.func_147465_d(i1, k1, j1, this, k2, 3);
+                                            p_149674_1_.setBlock(i1, k1, j1, this, k2, 3);
                                         }
                                     }
                                 }
@@ -193,19 +214,22 @@ public class BlockBlueFire extends BlockFire
         return false;
     }
 
+    /**
+     * Tries to set block on fire. Deprecated in favour of side-sensitive version.
+     */
     @Deprecated
-    private void func_149841_a(World p_149841_1_, int p_149841_2_, int p_149841_3_, int p_149841_4_, int p_149841_5_, Random p_149841_6_, int p_149841_7_)
+    private void tryCatchFire(World p_149841_1_, int p_149841_2_, int p_149841_3_, int p_149841_4_, int p_149841_5_, Random p_149841_6_, int p_149841_7_)
     {
         this.tryCatchFire(p_149841_1_, p_149841_2_, p_149841_3_, p_149841_4_, p_149841_5_, p_149841_6_, p_149841_7_, UP);
     }
 
     private void tryCatchFire(World p_149841_1_, int p_149841_2_, int p_149841_3_, int p_149841_4_, int p_149841_5_, Random p_149841_6_, int p_149841_7_, ForgeDirection face)
     {
-        int j1 = p_149841_1_.func_147439_a(p_149841_2_, p_149841_3_, p_149841_4_).getFlammability(p_149841_1_, p_149841_2_, p_149841_3_, p_149841_4_, face);
+        int j1 = p_149841_1_.getBlock(p_149841_2_, p_149841_3_, p_149841_4_).getFlammability(p_149841_1_, p_149841_2_, p_149841_3_, p_149841_4_, face);
 
         if (p_149841_6_.nextInt(p_149841_5_) < j1)
         {
-            boolean flag = p_149841_1_.func_147439_a(p_149841_2_, p_149841_3_, p_149841_4_) == Blocks.tnt;
+            boolean flag = p_149841_1_.getBlock(p_149841_2_, p_149841_3_, p_149841_4_) == Blocks.tnt;
 
             if (p_149841_6_.nextInt(p_149841_7_ + 10) < 5 && !p_149841_1_.canLightningStrikeAt(p_149841_2_, p_149841_3_, p_149841_4_))
             {
@@ -216,21 +240,24 @@ public class BlockBlueFire extends BlockFire
                     k1 = 15;
                 }
 
-                p_149841_1_.func_147465_d(p_149841_2_, p_149841_3_, p_149841_4_, this, k1, 3);
+                p_149841_1_.setBlock(p_149841_2_, p_149841_3_, p_149841_4_, this, k1, 3);
             }
             else
             {
-                p_149841_1_.func_147468_f(p_149841_2_, p_149841_3_, p_149841_4_);
+                p_149841_1_.setBlockToAir(p_149841_2_, p_149841_3_, p_149841_4_);
             }
 
             if (flag)
             {
-                Blocks.tnt.func_149664_b(p_149841_1_, p_149841_2_, p_149841_3_, p_149841_4_, 1);
+                Blocks.tnt.onBlockDestroyedByPlayer(p_149841_1_, p_149841_2_, p_149841_3_, p_149841_4_, 1);
             }
         }
     }
 
-    private boolean func_149847_e(World p_149847_1_, int p_149847_2_, int p_149847_3_, int p_149847_4_)
+    /**
+     * Returns true if at least one block next to this one can burn.
+     */
+    private boolean canNeighborBurn(World p_149847_1_, int p_149847_2_, int p_149847_3_, int p_149847_4_)
     {
         return this.canCatchFire(p_149847_1_, p_149847_2_ + 1, p_149847_3_, p_149847_4_, WEST ) ||
                this.canCatchFire(p_149847_1_, p_149847_2_ - 1, p_149847_3_, p_149847_4_, EAST ) ||
@@ -240,11 +267,14 @@ public class BlockBlueFire extends BlockFire
                this.canCatchFire(p_149847_1_, p_149847_2_, p_149847_3_, p_149847_4_ + 1, NORTH);
     }
 
-    private int func_149845_m(World p_149845_1_, int p_149845_2_, int p_149845_3_, int p_149845_4_)
+    /**
+     * Gets the highest chance of a neighbor block encouraging this block to catch fire
+     */
+    private int getChanceOfNeighborsEncouragingFire(World p_149845_1_, int p_149845_2_, int p_149845_3_, int p_149845_4_)
     {
         byte b0 = 0;
 
-        if (!p_149845_1_.func_147437_c(p_149845_2_, p_149845_3_, p_149845_4_))
+        if (!p_149845_1_.isAirBlock(p_149845_2_, p_149845_3_, p_149845_4_))
         {
             return 0;
         }
@@ -261,13 +291,19 @@ public class BlockBlueFire extends BlockFire
         }
     }
 
-    public boolean func_149703_v()
+    /**
+     * Returns if this block is collidable (only used by Fire). Args: x, y, z
+     */
+    public boolean isCollidable()
     {
         return false;
     }
 
+    /**
+     * Checks the specified block coordinate to see if it can catch fire.  Args: blockAccess, x, y, z
+     */
     @Deprecated
-    public boolean func_149844_e(IBlockAccess p_149844_1_, int p_149844_2_, int p_149844_3_, int p_149844_4_)
+    public boolean canBlockCatchFire(IBlockAccess p_149844_1_, int p_149844_2_, int p_149844_3_, int p_149844_4_)
     {
         return canCatchFire(p_149844_1_, p_149844_2_, p_149844_3_, p_149844_4_, UP);
     }
@@ -278,36 +314,49 @@ public class BlockBlueFire extends BlockFire
         return getChanceToEncourageFire(p_149846_1_, p_149846_2_, p_149846_3_, p_149846_4_, p_149846_5_, UP);
     }
 
-    public boolean func_149742_c(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
+    /**
+     * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+     */
+    public boolean canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
     {
-        return World.func_147466_a(p_149742_1_, p_149742_2_, p_149742_3_ - 1, p_149742_4_) || this.func_149847_e(p_149742_1_, p_149742_2_, p_149742_3_, p_149742_4_);
+        return World.doesBlockHaveSolidTopSurface(p_149742_1_, p_149742_2_, p_149742_3_ - 1, p_149742_4_) || this.canNeighborBurn(p_149742_1_, p_149742_2_, p_149742_3_, p_149742_4_);
     }
 
-    public void func_149695_a(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
+    /**
+     * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
+     * their own) Args: x, y, z, neighbor Block
+     */
+    public void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
     {
-        if (!World.func_147466_a(p_149695_1_, p_149695_2_, p_149695_3_ - 1, p_149695_4_) && !this.func_149847_e(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_))
+        if (!World.doesBlockHaveSolidTopSurface(p_149695_1_, p_149695_2_, p_149695_3_ - 1, p_149695_4_) && !this.canNeighborBurn(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_))
         {
-            p_149695_1_.func_147468_f(p_149695_2_, p_149695_3_, p_149695_4_);
+            p_149695_1_.setBlockToAir(p_149695_2_, p_149695_3_, p_149695_4_);
         }
     }
 
-    public void func_149726_b(World world, int x, int y, int z)
+    /**
+     * Called whenever the block is added into the world. Args: world, x, y, z
+     */
+    public void onBlockAdded(World world, int p_149726_2_, int p_149726_3_, int p_149726_4_)
     {
-        if (world.provider.dimensionId > 0 || !Blocks.portal.func_150000_e(world, x, y, z))
+        if (world.provider.dimensionId > 0 || !TwilightBlocks.edenPortal.func_150000_e(world, p_149726_2_, p_149726_3_, p_149726_4_))
         {
-            if (!World.func_147466_a(world, x, y - 1, z) && !this.func_149847_e(world, x, y, z))
+            if (!World.doesBlockHaveSolidTopSurface(world, p_149726_2_, p_149726_3_ - 1, p_149726_4_) && !this.canNeighborBurn(world, p_149726_2_, p_149726_3_, p_149726_4_))
             {
-                world.func_147468_f(x, y, z);
+                world.setBlockToAir(p_149726_2_, p_149726_3_, p_149726_4_);
             }
             else
             {
-                world.func_147464_a(x, y, z, this, this.func_149738_a(world) + world.rand.nextInt(10));
+                world.scheduleBlockUpdate(p_149726_2_, p_149726_3_, p_149726_4_, this, this.tickRate(world) + world.rand.nextInt(10));
             }
         }
     }
 
+    /**
+     * A randomly called display update to be able to add particles or other items for display
+     */
     @SideOnly(Side.CLIENT)
-    public void func_149734_b(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
+    public void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
     {
         if (p_149734_5_.nextInt(24) == 0)
         {
@@ -319,7 +368,7 @@ public class BlockBlueFire extends BlockFire
         float f1;
         float f2;
 
-        if (!World.func_147466_a(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && !Blocks.fire.canCatchFire(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_, UP))
+        if (!World.doesBlockHaveSolidTopSurface(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_) && !Blocks.fire.canCatchFire(p_149734_1_, p_149734_2_, p_149734_3_ - 1, p_149734_4_, UP))
         {
             if (Blocks.fire.canCatchFire(p_149734_1_, p_149734_2_ - 1, p_149734_3_, p_149734_4_, EAST))
             {
@@ -389,40 +438,43 @@ public class BlockBlueFire extends BlockFire
     }
 
     @SideOnly(Side.CLIENT)
-    public void func_149651_a(IIconRegister p_149651_1_)
+    public void registerBlockIcons(IIconRegister p_149651_1_)
     {
-        this.field_149850_M = new IIcon[] {p_149651_1_.registerIcon(this.func_149641_N() + "_layer_0"), p_149651_1_.registerIcon(this.func_149641_N() + "_layer_1")};
+        this.field_149850_M = new IIcon[] {p_149651_1_.registerIcon("fire_layer_0"), p_149651_1_.registerIcon("fire_layer_1")};
     }
 
     @SideOnly(Side.CLIENT)
-    public IIcon func_149840_c(int p_149840_1_)
+    public IIcon getFireIcon(int p_149840_1_)
     {
         return this.field_149850_M[p_149840_1_];
     }
 
+    /**
+     * Gets the block's texture. Args: side, meta
+     */
     @SideOnly(Side.CLIENT)
-    public IIcon func_149691_a(int p_149691_1_, int p_149691_2_)
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
     {
         return this.field_149850_M[0];
     }
 
-    public MapColor func_149728_f(int p_149728_1_)
+    public MapColor getMapColor(int p_149728_1_)
     {
-        return MapColor.field_151656_f;
+        return MapColor.tntColor;
     }
 
+    /*================================= Forge Start ======================================*/
     private static class FireInfo
     {
         private int encouragement = 0;
         private int flammibility = 0;
     }
     private IdentityHashMap<Block, FireInfo> blockInfo = Maps.newIdentityHashMap();
-    private String name;
 
     public void setFireInfo(Block block, int encouragement, int flammibility)
     {
         if (block == Blocks.air) throw new IllegalArgumentException("Tried to set air on fire... This is bad.");
-        int id = Block.func_149682_b(block);
+        int id = Block.getIdFromBlock(block);
         this.field_149849_a[id] = encouragement;
         this.field_149848_b[id] = flammibility;
 
@@ -454,7 +506,7 @@ public class BlockBlueFire extends BlockFire
 
         for (Entry<Block, FireInfo> e : blockInfo.entrySet())
         {
-            int id = Block.func_149682_b(e.getKey());
+            int id = Block.getIdFromBlock(e.getKey());
             if (id >= 0 && id < 4096)
             {
                 field_149849_a[id] = e.getValue().encouragement;
@@ -462,73 +514,90 @@ public class BlockBlueFire extends BlockFire
             }
         }
     }
+    
+    public Block setName(String name) {
+        this.name = name;
+        setBlockTextureName(name);
+        setBlockName(name);
+        register();
+        return this;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTextureName() {
+        return Reference.PREFIX + name;
+    }
+
+    public void register() {
+        int numChars = 0;
+        char firstLetter = name.charAt(0);
+        if (Character.isLowerCase(firstLetter))
+            firstLetter = Character.toUpperCase(firstLetter);
+        String inGame = name.substring(1);
+        for (int k = 0; k < name.length(); k++) {
+            char c = name.charAt(k);
+            int code = (int) c;
+
+            if (k != 0) {
+                for (int p = 65; p < 90; p++) {
+                    if (code == p) {
+                        numChars++;
+                        if (numChars == 1) inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
+                        else inGame = new StringBuffer(inGame).insert(k, " ").toString();
+                    }
+                }
+            }
+        }
+        String finalName = firstLetter + inGame;
+        GameRegistry.registerBlock(this, name);
+        LanguageRegistry.addName(this, finalName);
+    }
 
     public int getFlammability(Block block)
     {
-        int id = Block.func_149682_b(block);
+        int id = Block.getIdFromBlock(block);
         return id >= 0 && id < 4096 ? field_149848_b[id] : 0;
     }
 
     public int getEncouragement(Block block)
     {
-        int id = Block.func_149682_b(block);
+        int id = Block.getIdFromBlock(block);
         return id >= 0 && id < 4096 ? field_149849_a[id] : 0;
     }
 
+    /**
+     * Side sensitive version that calls the block function.
+     * 
+     * @param world The current world
+     * @param x X Position
+     * @param y Y Position
+     * @param z Z Position
+     * @param face The side the fire is coming from
+     * @return True if the face can catch fire.
+     */
     public boolean canCatchFire(IBlockAccess world, int x, int y, int z, ForgeDirection face)
     {
-        return world.func_147439_a(x, y, z).isFlammable(world, x, y, z, face);
+        return world.getBlock(x, y, z).isFlammable(world, x, y, z, face);
     }
 
+    /**
+     * Side sensitive version that calls the block function.
+     * 
+     * @param world The current world
+     * @param x X Position
+     * @param y Y Position
+     * @param z Z Position
+     * @param oldChance The previous maximum chance.
+     * @param face The side the fire is coming from
+     * @return The chance of the block catching fire, or oldChance if it is higher
+     */
     public int getChanceToEncourageFire(IBlockAccess world, int x, int y, int z, int oldChance, ForgeDirection face)
     {
-        int newChance = world.func_147439_a(x, y, z).getFireSpreadSpeed(world, x, y, z, face);
+        int newChance = world.getBlock(x, y, z).getFireSpreadSpeed(world, x, y, z, face);
         return (newChance > oldChance ? newChance : oldChance);
     }
-    public Block setTextureName(String name){
-        return func_149658_d(name);
-    }
-    
-    public Block setUnlocalizedName(String name){
-        return func_149663_c(name);
-    }
-    
-    public Block setName(String name){
-        this.name = name;
-        setTextureName("fire");
-        return setUnlocalizedName(name);
-    }
-    
-    public String getName(){
-        return name;
-    }
-    
-    public Block register(){
-        int numChars = 0;
-        char firstLetter = name.charAt(0);
-        if(Character.isLowerCase(firstLetter))
-            firstLetter = Character.toUpperCase(firstLetter);
-        String inGame = name.substring(1);
-        for(int k = 0; k < name.length(); k++){
-            char c = name.charAt(k);
-            int code = (int) c;
-            
-            if(k != 0){
-                for(int p = 65; p < 90; p++){
-                    if(code == p){
-                        numChars++;
-                        if(numChars == 1)
-                            inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-                        else
-                            inGame = new StringBuffer(inGame).insert(k, " ").toString();
-                    }
-                }
-            }
-        }
-        
-        String finalName = firstLetter + inGame;
-        GameRegistry.registerBlock(this, name);
-        LanguageRegistry.addName(this, finalName);
-        return this;
-    }
+    /*================================= Forge Start ======================================*/
 }

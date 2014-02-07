@@ -28,9 +28,9 @@ public class EntityApalachiaArcher extends EntityDivineRPGMob implements IRanged
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(430D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(30D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(430D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(30D);
     }
 
     @Override
@@ -109,7 +109,7 @@ public class EntityApalachiaArcher extends EntityDivineRPGMob implements IRanged
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.apalachiaSoul;
     }

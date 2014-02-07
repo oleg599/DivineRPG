@@ -21,17 +21,17 @@ public class EntityEnderWatcher extends EntityEnderman{
 	
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(50.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(50.0D);
     }
 
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return VanillaItems.enderShard;
     }
     
     protected void dropFewItems(boolean par1, int par2)
     {
-        Item item = this.func_146068_u();
+        Item item = this.getDropItem();
         Item item2 = VanillaItems.watchingEye;
 
         if (item != null)
@@ -40,8 +40,8 @@ public class EntityEnderWatcher extends EntityEnderman{
 
             for (int k = 0; k < j; ++k)
             {
-                this.func_145779_a(item, 2);
-                this.func_145779_a(item2, 1);
+                this.dropItem(item, 2);
+                this.dropItem(item2, 1);
             }
         }
     }
@@ -49,7 +49,7 @@ public class EntityEnderWatcher extends EntityEnderman{
     public void onDeath(DamageSource d) {
 		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Ender Watcher."));
+			p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Ender Watcher."));
 		}
 	}
 }

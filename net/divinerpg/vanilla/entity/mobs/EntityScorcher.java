@@ -31,9 +31,9 @@ public class EntityScorcher extends EntityDivineRPGMob
     
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(300.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.2D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(10.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(300.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.2D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
 	}
 
     protected void entityInit()
@@ -205,7 +205,7 @@ public class EntityScorcher extends EntityDivineRPGMob
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u() {
+    protected Item getDropItem() {
         return VanillaItems.purpleBlaze;
     }
 
@@ -228,7 +228,7 @@ public class EntityScorcher extends EntityDivineRPGMob
 
             for (int var4 = 0; var4 < var3; ++var4)
             {
-                this.func_145779_a(VanillaItems.purpleBlaze, 1);
+                this.dropItem(VanillaItems.purpleBlaze, 1);
             }
         }
     }

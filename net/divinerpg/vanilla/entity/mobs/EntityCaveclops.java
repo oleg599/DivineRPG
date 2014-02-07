@@ -36,9 +36,9 @@ public class EntityCaveclops extends EntityDivineRPGMob implements IRangedAttack
     
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(80.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(12.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(80.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(12.0D);
 	}
 
     /**
@@ -84,14 +84,14 @@ public class EntityCaveclops extends EntityDivineRPGMob implements IRangedAttack
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.realmiteIngot, 3);
+            this.dropItem(VanillaItems.realmiteIngot, 3);
         }
 
         var3 = this.rand.nextInt(3 + par2);
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(Items.golden_pickaxe, 1);
+            this.dropItem(Items.golden_pickaxe, 1);
         }
     }
 

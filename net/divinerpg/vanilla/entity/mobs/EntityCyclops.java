@@ -28,9 +28,9 @@ public class EntityCyclops extends EntityDivineRPGMob {
 
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(400.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(16.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(400.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(16.0D);
 	}
 
 	protected boolean isAIEnabled() {
@@ -110,18 +110,18 @@ public class EntityCyclops extends EntityDivineRPGMob {
 		int var3 = this.rand.nextInt(2 + var2);
 
 		for (int var4 = 0; var4 < var3; ++var4) {
-			this.func_145779_a(VanillaItems.cyclopsEye, 1);
+			this.dropItem(VanillaItems.cyclopsEye, 1);
 		}
 	}
 
 	protected void dropRareDrop(int var1) {
-		this.func_145779_a(VanillaItems.healingStone, 1);
+		this.dropItem(VanillaItems.healingStone, 1);
 	}
 
 	/**
 	 * Returns the item ID for the item the mob drops on death.
 	 */
-	protected Item func_146068_u() {
+	protected Item getDropItem() {
 		return VanillaItems.cyclopsEye;
 	}
 

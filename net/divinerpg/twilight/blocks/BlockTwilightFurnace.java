@@ -42,18 +42,18 @@ public class BlockTwilightFurnace extends BlockContainer {
 	private String name;
 	
 	public BlockTwilightFurnace(boolean active) {
-		super(Material.field_151576_e);
+		super(Material.rock);
 		isActive = active;
 		LangRegistry.addBlock(this);
 		if(!active){
-			func_149647_a(DivineRPGTabs.blocks);
+			setCreativeTab(DivineRPGTabs.blocks);
 		}else if(active){
-			func_149647_a(null);
+			setCreativeTab(null);
 		}
 	}
 	
 	@Override
-	public boolean func_149727_a(World var1, int var2, int var3, int var4, EntityPlayer player, int var6, float var7, float var8, float var9) {
+	public boolean onBlockActivated(World var1, int var2, int var3, int var4, EntityPlayer player, int var6, float var7, float var8, float var9) {
 		if (!player.isSneaking()) {
 			player.openGui(DivineRPG.instance, GuiHandler.divineTable, var1, var2, var3, var4);
 			return true;
@@ -62,19 +62,14 @@ public class BlockTwilightFurnace extends BlockContainer {
 		}
 	}
 
-	@Override
-	public TileEntity func_149915_a(World arg0, int arg1) {
-		return new TileEntityTwilightFurnace();
-	}
-
 	public Item func_149650_a(int par1, Random par2Random, int par3)
 	{
-		return Item.func_150898_a(TwilightBlocks.twilightFurnace);
+		return Item.getItemFromBlock(TwilightBlocks.twilightFurnace);
 	}
 
-	public void func_149726_b(World par1World, int par2, int par3, int par4)
+	public void onBlockAdded(World par1World, int par2, int par3, int par4)
 	{
-		super.func_149726_b(par1World, par2, par3, par4);
+		super.onBlockAdded(par1World, par2, par3, par4);
 		this.setDefaultDirection(par1World, par2, par3, par4);
 	}
 
@@ -82,10 +77,10 @@ public class BlockTwilightFurnace extends BlockContainer {
 	{
 		if (!par1World.isRemote)
 		{
-			Block l = par1World.func_147439_a(par2, par3, par4 - 1);
-			Block i1 = par1World.func_147439_a(par2, par3, par4 + 1);
-			Block j1 = par1World.func_147439_a(par2 - 1, par3, par4);
-			Block k1 = par1World.func_147439_a(par2 + 1, par3, par4);
+			Block l = par1World.getBlock(par2, par3, par4 - 1);
+			Block i1 = par1World.getBlock(par2, par3, par4 + 1);
+			Block j1 = par1World.getBlock(par2 - 1, par3, par4);
+			Block k1 = par1World.getBlock(par2 + 1, par3, par4);
 			byte b0 = 3;
 
 			if (l.func_149730_j() && !i1.func_149730_j())
@@ -112,32 +107,33 @@ public class BlockTwilightFurnace extends BlockContainer {
 		}
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
-	public IIcon func_149691_a(int par1, int par2)
+	public IIcon getIcon(int par1, int par2)
 	{
-		return par1 == 1 ? this.FurnaceIIconTop : (par1 == 0 ? this.FurnaceIIconTop : (par1 != par2 ? this.field_149761_L : this.FurnaceIIconFront));
+		return par1 == 1 ? this.FurnaceIIconTop : (par1 == 0 ? this.FurnaceIIconTop : (par1 != par2 ? this.blockIcon : this.FurnaceIIconFront));
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
-	public void func_149651_a(IIconRegister par1IIconRegister) {
-		this.field_149761_L = par1IIconRegister.registerIcon(Reference.PREFIX + "divineRock");
+	public void registerBlockIcons(IIconRegister par1IIconRegister) {
+		this.blockIcon = par1IIconRegister.registerIcon(Reference.PREFIX + "divineRock");
 		this.FurnaceIIconFront = par1IIconRegister.registerIcon(this.isActive ? Reference.PREFIX + "DivineFurnace_front_On" : Reference.PREFIX + "DivineFurnace_front_Off");
 		this.FurnaceIIconTop = par1IIconRegister.registerIcon(Reference.PREFIX + "divineRock");
 	}
 
-	public static void updateFurnaceBlockState(boolean par0, World par1World, int par2, int par3, int par4)
-	{
+	public static void updateFurnaceBlockState(boolean par0, World par1World, int par2, int par3, int par4) {
 		int l = par1World.getBlockMetadata(par2, par3, par4);
-		TileEntity tileentity = par1World.func_147438_o(par2, par3, par4);
+		TileEntity tileentity = par1World.getTileEntity(par2, par3, par4);
 		keepFurnaceInventory = true;
 
 		if (par0)
 		{
-			par1World.func_147449_b(par2, par3, par4, TwilightBlocks.twilightFurnaceOn);
+			par1World.setBlock(par2, par3, par4, TwilightBlocks.twilightFurnaceOn);
 		}
 		else
 		{
-			par1World.func_147449_b(par2, par3, par4, TwilightBlocks.twilightFurnace);
+			par1World.setBlock(par2, par3, par4, TwilightBlocks.twilightFurnace);
 		}
 
 		keepFurnaceInventory = false;
@@ -145,12 +141,13 @@ public class BlockTwilightFurnace extends BlockContainer {
 
 		if (tileentity != null)
 		{
-			tileentity.func_145829_t();
-			par1World.func_147455_a(par2, par3, par4, tileentity);
+			tileentity.validate();
+			par1World.setTileEntity(par2, par3, par4, tileentity);
 		}
 	}
 
-	public void func_149689_a(World world, int x, int y, int z, EntityLivingBase living, ItemStack item)
+	@Override
+	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase living, ItemStack item)
     {
         int l = MathHelper.floor_double((double)(living.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
 
@@ -176,13 +173,13 @@ public class BlockTwilightFurnace extends BlockContainer {
 
         if (item.hasDisplayName())
         {
-            ((TileEntityTwilightFurnace)world.func_147438_o(x, y, z)).setGuiDisplayName(item.getDisplayName());
+            ((TileEntityTwilightFurnace)world.getTileEntity(x, y, z)).func_145951_a(item.getDisplayName());
         }
     }
 	
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void func_149734_b(World par1World, int par2, int par3, int par4, Random par5Random)
+	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
 	{
 		if (this.isActive)
 		{
@@ -216,11 +213,12 @@ public class BlockTwilightFurnace extends BlockContainer {
 		}
 	}
 
-	public void func_149749_a(World par1World, int par2, int par3, int par4, Block par5, int par6)
+	@Override
+	public void breakBlock(World par1World, int par2, int par3, int par4, Block par5, int par6)
 	{
 		if (!keepFurnaceInventory)
 		{
-			TileEntityTwilightFurnace tileentityFurnace = (TileEntityTwilightFurnace)par1World.func_147438_o(par2, par3, par4);
+			TileEntityTwilightFurnace tileentityFurnace = (TileEntityTwilightFurnace)par1World.getTileEntity(par2, par3, par4);
 
 			if (tileentityFurnace != null)
 			{
@@ -264,31 +262,26 @@ public class BlockTwilightFurnace extends BlockContainer {
 			}
 		}
 
-		super.func_149749_a(par1World, par2, par3, par4, par5, par6);
+		super.breakBlock(par1World, par2, par3, par4, par5, par6);
 	}
-
-	public boolean func_149740_M()
-	{
+	
+	@Override
+	public boolean hasComparatorInputOverride() {
 		return true;
 	}
 
-	public int getComparatorInputOverride(World par1World, int par2, int par3, int par4, int par5)
-	{
-		return Container.calcRedstoneFromInventory((IInventory)par1World.func_147438_o(par2, par3, par4));
+	public int getComparatorInputOverride(World par1World, int par2, int par3, int par4, int par5) {
+		return Container.calcRedstoneFromInventory((IInventory)par1World.getTileEntity(par2, par3, par4));
 	}
 
 	@SideOnly(Side.CLIENT)
 	public Item func_149694_d(World par1World, int par2, int par3, int par4) {
-		return Item.func_150898_a(TwilightBlocks.twilightFurnace);
+		return Item.getItemFromBlock(TwilightBlocks.twilightFurnace);
 	}
-    
-    public Block setUnlocalizedName(String name){
-        return func_149663_c(name);
-    }
     
     public Block setName(String name){
         this.name = name;
-        setUnlocalizedName(name);
+        setBlockName(name);
         register();
         return this;
     }
@@ -324,5 +317,10 @@ public class BlockTwilightFurnace extends BlockContainer {
         GameRegistry.registerBlock(this, name);
         LanguageRegistry.addName(this, finalName);
     }
+
+	@Override
+	public TileEntity createNewTileEntity(World var1, int var2) {
+		return new TileEntityTwilightFurnace();
+	}
 
 }

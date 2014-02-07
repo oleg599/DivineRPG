@@ -35,9 +35,9 @@ public class EntitySkythernGolem extends EntityDivineRPGMob
 	protected void applyEntityAttributes()
 	{
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.23); // speed
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(35); // Attack
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(1400); // MaxHP
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.23); // speed
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(35); // Attack
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1400); // MaxHP
 	}
 
 	/**
@@ -100,7 +100,7 @@ public class EntitySkythernGolem extends EntityDivineRPGMob
 	 * Returns the item ID for the item the mob drops on death.
 	 */
 	@Override
-	protected Item func_146068_u()
+	protected Item getDropItem()
 	{
 		return TwilightItems.skythernSoul;
 	}

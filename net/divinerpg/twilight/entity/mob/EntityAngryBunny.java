@@ -19,9 +19,9 @@ public class EntityAngryBunny extends EntityDivineRPGMob
 	protected void applyEntityAttributes()
 	{
 		super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(60.0D);
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(18D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(60.0D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(18D);
 	}
 
 

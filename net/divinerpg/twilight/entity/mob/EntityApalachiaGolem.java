@@ -22,9 +22,9 @@ public class EntityApalachiaGolem extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.4D);
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(1400D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(35D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.4D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1400D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(35D);
     }
     
     /**
@@ -87,7 +87,7 @@ public class EntityApalachiaGolem extends EntityDivineRPGMob
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.apalachiaSoul;
     }
@@ -101,7 +101,7 @@ public class EntityApalachiaGolem extends EntityDivineRPGMob
         int var3 = this.rand.nextInt(2 + var2);
         int var4;
 
-        //this.func_145779_a(TwilightItems.rawEmpoweredMeat, 1);
+        //this.dropItem(TwilightItems.rawEmpoweredMeat, 1);
 
     }
 

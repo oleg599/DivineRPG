@@ -95,6 +95,6 @@ public class EntityAyeracoRed extends EntityAyeraco
     @Override
     protected void dropRareDrop(int par1) 
     {
-        this.func_145779_a(VanillaItems.enderSwordRed, 1);
+        this.dropItem(VanillaItems.enderSwordRed, 1);
     }
 }

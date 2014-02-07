@@ -120,7 +120,7 @@ public class LangRegistry {
     public static void addBlockNames(){
         for(int k = 0; k < blocks.size(); k++){
             Block block = blocks.get(k);
-            String name = block.func_149739_a().substring(5);
+            String name = block.getUnlocalizedName().substring(5);
             System.err.println(name);
             int numChars = 0;
             char firstLetter = name.charAt(0);

@@ -25,9 +25,9 @@ public class EntityNesro extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.23); // speed
-        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(20); // Attack
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(800); // MaxHP
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.23); // speed
+        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(20); // Attack
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(800); // MaxHP
     }
 
     /**
@@ -130,7 +130,7 @@ public class EntityNesro extends EntityDivineRPGMob
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.edenSoul;
     }

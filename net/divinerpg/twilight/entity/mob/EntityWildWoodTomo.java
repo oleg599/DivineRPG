@@ -32,9 +32,9 @@ public class EntityWildWoodTomo extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(300.0D);
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(35D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(300.0D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(35D);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class EntityWildWoodTomo extends EntityDivineRPGMob
     @Override
     public void onUpdate()
     {
-        this.getEntityAttribute(SharedMonsterAttributes.followRange).setAttribute(this.entityToAttack != null ? 0.95F : 0.5F);
+        this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(this.entityToAttack != null ? 0.95F : 0.5F);
 
         if (this.randomSoundDelay > 0 && --this.randomSoundDelay == 0)
         {
@@ -176,7 +176,7 @@ public class EntityWildWoodTomo extends EntityDivineRPGMob
     protected void dropFewItems(boolean var1, int var2)
     {
         super.dropFewItems(var1, var2);
-        //this.func_145779_a(TwilightItems.rawEmpoweredMeat, 1);
+        //this.dropItem(TwilightItems.rawEmpoweredMeat, 1);
     }
 
     @Override
@@ -186,7 +186,7 @@ public class EntityWildWoodTomo extends EntityDivineRPGMob
 
         if (var2 == 0)
         {
-            this.func_145779_a(TwilightItems.wildWoodSoul, 1);
+            this.dropItem(TwilightItems.wildWoodSoul, 1);
         }
     }
 
@@ -194,7 +194,7 @@ public class EntityWildWoodTomo extends EntityDivineRPGMob
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.wildWoodSoul;
     }

@@ -30,9 +30,9 @@ public class EntityKingCrab extends EntityDivineRPGMob
     
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(500.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(29.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(500.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(29.0D);
 	}
 
     protected boolean isAIEnabled()
@@ -123,16 +123,16 @@ public class EntityKingCrab extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.crabClaw, 1);
+            this.dropItem(VanillaItems.crabClaw, 1);
         }
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.aquaticPellets, 3);
+            this.dropItem(VanillaItems.aquaticPellets, 3);
         }
     }
 
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return VanillaItems.crabClaw;
     }

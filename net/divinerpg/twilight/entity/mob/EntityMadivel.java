@@ -18,9 +18,9 @@ public class EntityMadivel extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(300D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(40D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(300D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(40D);
     }
 
     /**
@@ -78,7 +78,7 @@ public class EntityMadivel extends EntityDivineRPGMob
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.edenSoul;
     }
@@ -90,7 +90,7 @@ public class EntityMadivel extends EntityDivineRPGMob
     protected void dropFewItems(boolean var1, int var2)
     {
         super.dropFewItems(var1, var2);
-        //this.func_145779_a(TwilightItems.rawEmpoweredMeat, 1);
+        //this.dropItem(TwilightItems.rawEmpoweredMeat, 1);
     }
 
     /**

@@ -25,9 +25,9 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
 	
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(4000.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(16.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(4000.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(16.0D);
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
     
     protected void dropFewItems(boolean par1, int par2) {
     	
-    	Item i = func_146068_u();
+    	Item i = getDropItem();
     	Item i2 = VanillaItems.sandslash;
 
         int var3, var4;
@@ -77,15 +77,15 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
         var3 = this.rand.nextInt(3 + par2);
 
         for (var4 = 0; var4 < 11; var4++) {
-            this.func_145779_a(i, 5);
+            this.dropItem(i, 5);
         }
 
         for (var4 = 0; var4 < 1; var4++) {
-            this.func_145779_a(i2, 1);
+            this.dropItem(i2, 1);
         }
     }
 
-    protected Item func_146068_u() {
+    protected Item getDropItem() {
         return VanillaItems.divineShards;
     }
 

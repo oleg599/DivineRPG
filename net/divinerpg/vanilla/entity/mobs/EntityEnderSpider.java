@@ -23,9 +23,9 @@ public class EntityEnderSpider extends EntityEnderman
     
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(45.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(16.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(45.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(16.0D);
 	}
     
     /**
@@ -40,7 +40,7 @@ public class EntityEnderSpider extends EntityEnderman
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return VanillaItems.enderShard;
     }
@@ -50,13 +50,13 @@ public class EntityEnderSpider extends EntityEnderman
      */
     protected void dropFewItems(boolean var1, int var2)
     {   
-    	this.func_145779_a(VanillaItems.enderShard, 1);
+    	this.dropItem(VanillaItems.enderShard, 1);
     }
     
     public void onDeath(DamageSource d) {
 		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Ender Spider."));
+			p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Ender Spider."));
 		}
 	}
 }

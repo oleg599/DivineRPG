@@ -3,6 +3,7 @@ package net.divinerpg.twilight.blocks;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.ContainerFurnace;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
@@ -122,7 +123,7 @@ public class ContainerTwilightFurnace extends Container
             }
             else if (par2 != 1 && par2 != 0)
             {
-                if (FurnaceRecipes.smelting().func_151395_a(itemstack1) != null)
+                if (FurnaceRecipes.smelting().getSmeltingResult(itemstack1) != null)
                 {
                     if (!this.mergeItemStack(itemstack1, 0, 1, false))
                     {

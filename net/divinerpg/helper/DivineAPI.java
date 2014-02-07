@@ -8,6 +8,7 @@ import net.divinerpg.DivineRPG;
 import net.divinerpg.helper.recipes.CraftingDivineTableManager;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.ChatComponentTranslation;
@@ -81,7 +82,7 @@ public class DivineAPI {
 	public static ChatComponentTranslation addChatMessage(EnumChatFormatting color, String str, Object... args)
 	{
 		ChatComponentTranslation ret = new ChatComponentTranslation(str, args);
-		ret.func_150256_b().func_150238_a(color);
+		ret.getChatStyle().setColor(color);
 		return ret;
 	}
 	

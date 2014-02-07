@@ -18,35 +18,11 @@ import net.minecraft.world.IBlockAccess;
 
 public class IceikaBlock extends BlockMod {
 
-    private static SoundType gravel = Block.field_149767_g;
+    private static SoundType gravel = Block.soundTypeGravel;
 
 	public IceikaBlock(Material m){
 		super(m);
 		setCreativeTab(DivineRPGTabs.blocks);
-		//setSoundType(gravel);
-		setSoundType(Block.field_149780_i);
+		setStepSound(gravel);
 	}
-	
-	public static Item getBlock(Block b){
-		return Item.func_150898_a(b);
-	}
-	public Block setCreativeTab(CreativeTabs name) {
-        return func_149647_a(name);
-    }
-	public Block setSoundType(Block.SoundType name) {
-    	return func_149672_a(name);
-    }
-    
-    public Block setHardness(float p_149711_1_)
-    {
-        this.field_149782_v = p_149711_1_;
-
-        if (this.field_149781_w < p_149711_1_ * 5.0F)
-        {
-            this.field_149781_w = p_149711_1_ * 5.0F;
-        }
-
-        return this;
-    }
-    
 }

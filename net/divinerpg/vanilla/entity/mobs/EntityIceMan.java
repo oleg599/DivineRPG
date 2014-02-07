@@ -46,9 +46,9 @@ public class EntityIceMan extends EntityDivineRPGMob
     
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(100.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(20.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(20.0D);
 	}
 
     /**
@@ -108,7 +108,7 @@ public class EntityIceMan extends EntityDivineRPGMob
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return VanillaItems.iceShards;
     }
@@ -131,12 +131,12 @@ public class EntityIceMan extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.whiteMushroom, 1);
+            this.dropItem(VanillaItems.whiteMushroom, 1);
         }
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.iceShards, 3);
+            this.dropItem(VanillaItems.iceShards, 3);
         }
     }
 

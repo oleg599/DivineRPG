@@ -44,9 +44,9 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
     
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(250.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(24.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(250.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(24.0D);
 	}
 
     /**
@@ -60,14 +60,14 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.corruptedShards, 1);
+            this.dropItem(VanillaItems.corruptedShards, 1);
         }
 
         var3 = this.rand.nextInt(3 + par2);
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.corruptedShards, 2);
+            this.dropItem(VanillaItems.corruptedShards, 2);
         }
     }
 
@@ -76,7 +76,7 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
         switch (this.rand.nextInt(1))
         {
             case 0:
-                this.func_145779_a(VanillaItems.arlemiteIngot, 5);
+                this.dropItem(VanillaItems.arlemiteIngot, 5);
                 break;
         }
     }

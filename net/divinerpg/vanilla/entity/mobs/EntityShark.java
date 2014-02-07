@@ -31,9 +31,9 @@ public class EntityShark extends EntityDivineRPGMob
 
     protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(800.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(25.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(800.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(25.0D);
 	}
 
     public boolean canBreatheUnderwater()
@@ -92,15 +92,6 @@ public class EntityShark extends EntityDivineRPGMob
         {
             this.entityDropItem(new ItemStack(VanillaItems.sharkFin), 0.0F);
         }
-    }
-
-    /**
-     * Checks if this entity is inside water (if inWater field is true as a result of handleWaterMovement() returning
-     * true)
-     */
-    public boolean isInWater()
-    {
-        return this.worldObj.handleMaterialAcceleration(this.boundingBox.expand(0.0D, -0.6000000238418579D, 0.0D), Material.field_151586_h, this);
     }
 
     /**
@@ -186,7 +177,7 @@ public class EntityShark extends EntityDivineRPGMob
         int var1 = MathHelper.floor_double(this.posX);
         int var2 = MathHelper.floor_double(this.boundingBox.minY);
         int var3 = MathHelper.floor_double(this.posZ);
-        return this.worldObj.handleMaterialAcceleration(this.boundingBox.expand(0.0D, -0.6000000238418579D, 0.0D), Material.field_151586_h, this);
+        return this.worldObj.handleMaterialAcceleration(this.boundingBox.expand(0.0D, -0.6000000238418579D, 0.0D), Material.water, this);
     }
     
     public void onDeath(DamageSource d) {

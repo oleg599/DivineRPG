@@ -39,12 +39,12 @@ public class EntityCaveCrawler extends EntityDivineRPGMob
 
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(30.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(12.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(30.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(12.0D);
 	}
 
-    protected Item func_146068_u() {
+    protected Item getDropItem() {
         return VanillaItems.realmiteIngot;
     }
 

@@ -19,9 +19,9 @@ public class EntityVerek extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(100D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(19D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(19D);
     }
     
     public int getAttackStrength(Entity var1)
@@ -93,7 +93,7 @@ public class EntityVerek extends EntityDivineRPGMob
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.wildWoodSoul;
     }
@@ -117,7 +117,7 @@ public class EntityVerek extends EntityDivineRPGMob
 
         for (int var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(TwilightItems.wildWoodSoul, 2);
+            this.dropItem(TwilightItems.wildWoodSoul, 2);
         }
     }
 

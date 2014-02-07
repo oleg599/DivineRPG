@@ -54,9 +54,9 @@ public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAtta
     
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(100.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(13.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(13.0D);
 	}
 
     /**
@@ -110,7 +110,7 @@ public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAtta
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(Item.func_150898_a(Blocks.sandstone), 30);
+            this.dropItem(Item.getItemFromBlock(Blocks.sandstone), 30);
         }
 
         var3 = this.rand.nextInt(3 + par2);
@@ -147,8 +147,8 @@ public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAtta
         this.worldObj.spawnEntityInWorld(var2);
     }
 
-	protected Item func_146068_u() {
-        return Item.func_150898_a(Blocks.sandstone);
+	protected Item getDropItem() {
+        return Item.getItemFromBlock(Blocks.sandstone);
     }
 
 	@Override

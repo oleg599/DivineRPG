@@ -30,9 +30,9 @@ public class EntityApalachiaWarrior extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.4D);
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(430D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(30D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.4D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(430D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(30D);
     }
 
     /**
@@ -111,17 +111,17 @@ public class EntityApalachiaWarrior extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(func_146068_u(), 1);
+            this.dropItem(getDropItem(), 1);
         }
 
-        this.func_145779_a(func_146068_u(), 1);
+        this.dropItem(getDropItem(), 1);
     }
 
     /**
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.apalachiaSoul;
     }

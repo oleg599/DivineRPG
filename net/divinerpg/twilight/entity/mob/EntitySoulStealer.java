@@ -45,9 +45,9 @@ public class EntitySoulStealer extends EntityDivineRPGMob
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.23D); // speed
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(30D); // Attack
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(900D); // MaxHP
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.23D); // speed
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(30D); // Attack
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(900D); // MaxHP
 	}
 
 	@Override
@@ -115,7 +115,7 @@ public class EntitySoulStealer extends EntityDivineRPGMob
 	 * Returns the item ID for the item the mob drops on death.
 	 */
 	@Override
-	protected Item func_146068_u()
+	protected Item getDropItem()
 	{
 		return TwilightItems.mortumSoul;
 	}

@@ -30,9 +30,9 @@ public class EntityFrost extends EntityDivineRPGMob
     
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(80.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(10.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(80.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
 	}
 
     protected void entityInit()
@@ -178,21 +178,21 @@ public class EntityFrost extends EntityDivineRPGMob
 
         //for (var4 = 0; var4 < var3; ++var4)
         //{
-        //    this.func_145779_a(VanillaItems.tomato, 2);
+        //    this.dropItem(VanillaItems.tomato, 2);
         //}
 
         var3 = this.rand.nextInt(2 + var2);
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.iceShards, 5);
+            this.dropItem(VanillaItems.iceShards, 5);
         }
 
         var3 = this.rand.nextInt(2 + var2);
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.iceStone, 1);
+            this.dropItem(VanillaItems.iceStone, 1);
         }
     }
 

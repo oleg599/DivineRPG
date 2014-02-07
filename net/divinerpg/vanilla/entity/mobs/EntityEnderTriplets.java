@@ -10,6 +10,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityLargeFireball;
 import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
@@ -39,72 +40,6 @@ public class EntityEnderTriplets extends EntityDivineRPGMob implements IMob {
         this.setSize(4.0F, 4.0F);
         this.isImmuneToFire = true;
         this.experienceValue = 5;
-    }
-
-    @SideOnly(Side.CLIENT)
-    public boolean func_110182_bF()
-    {
-        return this.dataWatcher.getWatchableObjectByte(16) != 0;
-    }
-
-    protected void fall(float par1) {}
-
-    protected void updateFallState(double par1, boolean par3) {}
-
-    public void moveEntityWithHeading(float par1, float par2)
-    {
-        if (this.isInWater())
-        {
-            this.moveFlying(par1, par2, 0.02F);
-            this.moveEntity(this.motionX, this.motionY, this.motionZ);
-            this.motionX *= 0.800000011920929D;
-            this.motionY *= 0.800000011920929D;
-            this.motionZ *= 0.800000011920929D;
-        }
-        else if (this.handleLavaMovement())
-        {
-            this.moveFlying(par1, par2, 0.02F);
-            this.moveEntity(this.motionX, this.motionY, this.motionZ);
-            this.motionX *= 0.5D;
-            this.motionY *= 0.5D;
-            this.motionZ *= 0.5D;
-        }
-        else
-        {
-            float f2 = 0.91F;
-
-            if (this.onGround)
-            {
-                f2 = this.worldObj.func_147439_a(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.boundingBox.minY) - 1, MathHelper.floor_double(this.posZ)).field_149765_K * 0.91F;
-            }
-
-            float f3 = 0.16277136F / (f2 * f2 * f2);
-            this.moveFlying(par1, par2, this.onGround ? 0.1F * f3 : 0.02F);
-            f2 = 0.91F;
-
-            if (this.onGround)
-            {
-                f2 = this.worldObj.func_147439_a(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.boundingBox.minY) - 1, MathHelper.floor_double(this.posZ)).field_149765_K * 0.91F;
-            }
-
-            this.moveEntity(this.motionX, this.motionY, this.motionZ);
-            this.motionX *= (double)f2;
-            this.motionY *= (double)f2;
-            this.motionZ *= (double)f2;
-        }
-
-        this.prevLimbSwingAmount = this.limbSwingAmount;
-        double d1 = this.posX - this.prevPosX;
-        double d0 = this.posZ - this.prevPosZ;
-        float f4 = MathHelper.sqrt_double(d1 * d1 + d0 * d0) * 4.0F;
-
-        if (f4 > 1.0F)
-        {
-            f4 = 1.0F;
-        }
-
-        this.limbSwingAmount += (f4 - this.limbSwingAmount) * 0.4F;
-        this.limbSwing += this.limbSwingAmount;
     }
 
     public boolean isOnLadder()
@@ -138,7 +73,7 @@ public class EntityEnderTriplets extends EntityDivineRPGMob implements IMob {
 
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(10.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(10.0D);
     }
 
     protected void updateEntityActionState()
@@ -293,7 +228,7 @@ public class EntityEnderTriplets extends EntityDivineRPGMob implements IMob {
         return "mob.ghast.death";
     }
 
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return VanillaItems.enderShard;
     }
@@ -308,7 +243,7 @@ public class EntityEnderTriplets extends EntityDivineRPGMob implements IMob {
         j = this.rand.nextInt(3) + this.rand.nextInt(1 + par2);
 
         for (k = 0; k < j; ++k) {
-            this.func_145779_a(VanillaItems.enderShard, 3);
+            this.dropItem(VanillaItems.enderShard, 3);
         }
     }
 

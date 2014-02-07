@@ -21,9 +21,9 @@ public class EntityWildWoodGolem extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(900.0D);
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(35D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(900.0D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(35D);
     }
 
     @Override
@@ -83,7 +83,7 @@ public class EntityWildWoodGolem extends EntityDivineRPGMob
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.wildWoodSoul;
     }

@@ -31,9 +31,9 @@ public class EntityCadillion extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(160.0D);
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(25D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(160.0D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(25D);
     }
 
     @Override
@@ -58,7 +58,7 @@ public class EntityCadillion extends EntityDivineRPGMob
     @Override
     public void onUpdate()
     {
-        this.getEntityAttribute(SharedMonsterAttributes.followRange).setAttribute(this.entityToAttack != null ? 0.95F : 0.5F);
+        this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(this.entityToAttack != null ? 0.95F : 0.5F);
         super.onUpdate();
     }
 
@@ -172,7 +172,7 @@ public class EntityCadillion extends EntityDivineRPGMob
 
         for (int var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(TwilightItems.edenSoul, 1);
+            this.dropItem(TwilightItems.edenSoul, 1);
         }
     }
 
@@ -183,7 +183,7 @@ public class EntityCadillion extends EntityDivineRPGMob
 
         if (var2 == 0)
         {
-            this.func_145779_a(TwilightItems.edenSoul, 1);
+            this.dropItem(TwilightItems.edenSoul, 1);
         }
     }
 
@@ -191,7 +191,7 @@ public class EntityCadillion extends EntityDivineRPGMob
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.edenSoul;
     }

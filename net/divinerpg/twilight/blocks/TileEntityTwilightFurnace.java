@@ -1,6 +1,7 @@
 package net.divinerpg.twilight.blocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -20,14 +21,12 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileEntityTwilightFurnace extends TileEntity implements ISidedInventory
-{
-    private static final int[] slots_top = new int[] {0};
-    private static final int[] slots_bottom = new int[] {2, 1};
-    private static final int[] slots_sides = new int[] {1};
-
+public class TileEntityTwilightFurnace extends TileEntity implements ISidedInventory {
+	
+    private static final int[] slotsTop = new int[] {0};
+    private static final int[] slotsBottom = new int[] {2, 1};
+    private static final int[] slotsSides = new int[] {1};
     private ItemStack[] furnaceItemStacks = new ItemStack[3];
-
     public int furnaceBurnTime;
     public int currentItemBurnTime;
     public int furnaceCookTime;
@@ -97,32 +96,30 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
         }
     }
 
-    public String getInvName()
+    public String getInventoryName()
     {
-        return this.isInvNameLocalized() ? this.field_145958_o : "container.furnace";
+        return this.hasCustomInventoryName() ? this.field_145958_o : "Twilight Furnace";
     }
 
-    public boolean isInvNameLocalized()
+    public boolean hasCustomInventoryName()
     {
         return this.field_145958_o != null && this.field_145958_o.length() > 0;
     }
 
-    /**
-     * Sets the custom display name to use when opening a GUI linked to this tile entity.
-     */
-    public void setGuiDisplayName(String par1Str)
+    public void func_145951_a(String p_145951_1_)
     {
-        this.field_145958_o = par1Str;
+        this.field_145958_o = p_145951_1_;
     }
 
-    public void func_145839_a(NBTTagCompound par1NBTTagCompound) {
-        super.func_145839_a(par1NBTTagCompound);
-        NBTTagList nbttaglist = par1NBTTagCompound.func_150295_c("Items", 10);
+    public void readFromNBT(NBTTagCompound p_145839_1_)
+    {
+        super.readFromNBT(p_145839_1_);
+        NBTTagList nbttaglist = p_145839_1_.getTagList("Items", 10);
         this.furnaceItemStacks = new ItemStack[this.getSizeInventory()];
 
         for (int i = 0; i < nbttaglist.tagCount(); ++i)
         {
-            NBTTagCompound nbttagcompound1 = (NBTTagCompound)nbttaglist.func_150305_b(i);
+            NBTTagCompound nbttagcompound1 = nbttaglist.getCompoundTagAt(i);
             byte b0 = nbttagcompound1.getByte("Slot");
 
             if (b0 >= 0 && b0 < this.furnaceItemStacks.length)
@@ -131,20 +128,21 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
             }
         }
 
-        this.furnaceBurnTime = par1NBTTagCompound.getShort("BurnTime");
-        this.furnaceCookTime = par1NBTTagCompound.getShort("CookTime");
+        this.furnaceBurnTime = p_145839_1_.getShort("BurnTime");
+        this.furnaceCookTime = p_145839_1_.getShort("CookTime");
         this.currentItemBurnTime = getItemBurnTime(this.furnaceItemStacks[1]);
 
-        if (par1NBTTagCompound.hasKey("CustomName"))
+        if (p_145839_1_.hasKey("CustomName", 8))
         {
-            this.field_145958_o = par1NBTTagCompound.getString("CustomName");
+            this.field_145958_o = p_145839_1_.getString("CustomName");
         }
     }
 
-    public void func_145841_b(NBTTagCompound par1NBTTagCompound) {
-        super.func_145841_b(par1NBTTagCompound);
-        par1NBTTagCompound.setShort("BurnTime", (short)this.furnaceBurnTime);
-        par1NBTTagCompound.setShort("CookTime", (short)this.furnaceCookTime);
+    public void writeToNBT(NBTTagCompound p_145841_1_)
+    {
+        super.writeToNBT(p_145841_1_);
+        p_145841_1_.setShort("BurnTime", (short)this.furnaceBurnTime);
+        p_145841_1_.setShort("CookTime", (short)this.furnaceCookTime);
         NBTTagList nbttaglist = new NBTTagList();
 
         for (int i = 0; i < this.furnaceItemStacks.length; ++i)
@@ -158,11 +156,11 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
             }
         }
 
-        par1NBTTagCompound.setTag("Items", nbttaglist);
+        p_145841_1_.setTag("Items", nbttaglist);
 
-        if (this.isInvNameLocalized())
+        if (this.hasCustomInventoryName())
         {
-            par1NBTTagCompound.setString("CustomName", this.field_145958_o);
+            p_145841_1_.setString("CustomName", this.field_145958_o);
         }
     }
 
@@ -172,20 +170,20 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
     }
 
     @SideOnly(Side.CLIENT)
-    public int getCookProgressScaled(int par1)
+    public int getCookProgressScaled(int p_145953_1_)
     {
-        return this.furnaceCookTime * par1 / 25;
+        return this.furnaceCookTime * p_145953_1_ / 200;
     }
 
     @SideOnly(Side.CLIENT)
-    public int getBurnTimeRemainingScaled(int par1)
+    public int getBurnTimeRemainingScaled(int p_145955_1_)
     {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = 200;
+            this.currentItemBurnTime = 100;
         }
 
-        return this.furnaceBurnTime * par1 / this.currentItemBurnTime;
+        return this.furnaceBurnTime * p_145955_1_ / this.currentItemBurnTime;
     }
 
     public boolean isBurning()
@@ -193,7 +191,7 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
         return this.furnaceBurnTime > 0;
     }
 
-    public void func_145845_h()
+    public void updateEntity()
     {
         boolean flag = this.furnaceBurnTime > 0;
         boolean flag1 = false;
@@ -202,6 +200,9 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
         {
             --this.furnaceBurnTime;
         }
+
+        if (!this.worldObj.isRemote)
+        {
             if (this.furnaceBurnTime == 0 && this.canSmelt())
             {
                 this.currentItemBurnTime = this.furnaceBurnTime = getItemBurnTime(this.furnaceItemStacks[1]);
@@ -216,7 +217,7 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
 
                         if (this.furnaceItemStacks[1].stackSize == 0)
                         {
-                            this.furnaceItemStacks[1] = this.furnaceItemStacks[1].getItem().getContainerItem(furnaceItemStacks[1]);
+                            this.furnaceItemStacks[1] = furnaceItemStacks[1].getItem().getContainerItem(furnaceItemStacks[1]);
                         }
                     }
                 }
@@ -226,7 +227,7 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
             {
                 ++this.furnaceCookTime;
 
-                if (this.furnaceCookTime == 25)
+                if (this.furnaceCookTime == 100)
                 {
                     this.furnaceCookTime = 0;
                     this.smeltItem();
@@ -241,12 +242,13 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
             if (flag != this.furnaceBurnTime > 0)
             {
                 flag1 = true;
-                BlockTwilightFurnace.updateFurnaceBlockState(this.furnaceBurnTime > 0, this.field_145850_b, this.field_145851_c, this.field_145848_d, this.field_145849_e);
+                BlockFurnace.updateFurnaceBlockState(this.furnaceBurnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
             }
+        }
 
         if (flag1)
         {
-            this.onInventoryChanged();
+            this.markDirty();
         }
     }
 
@@ -258,26 +260,28 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
         }
         else
         {
-            ItemStack itemstack = FurnaceRecipes.smelting().func_151395_a(this.furnaceItemStacks[0]);
+            ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
             if (itemstack == null) return false;
             if (this.furnaceItemStacks[2] == null) return true;
             if (!this.furnaceItemStacks[2].isItemEqual(itemstack)) return false;
             int result = furnaceItemStacks[2].stackSize + itemstack.stackSize;
-            return (result <= getInventoryStackLimit() && result <= itemstack.getMaxStackSize());
+            return result <= getInventoryStackLimit() && result <= this.furnaceItemStacks[2].getMaxStackSize(); //Forge BugFix: Make it respect stack sizes properly.
         }
     }
 
-    public void smeltItem() {
-        if (this.canSmelt()) {
-            ItemStack itemstack = FurnaceRecipes.smelting().func_151395_a(this.furnaceItemStacks[0]);
+    public void smeltItem()
+    {
+        if (this.canSmelt())
+        {
+            ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.furnaceItemStacks[0]);
 
             if (this.furnaceItemStacks[2] == null)
             {
                 this.furnaceItemStacks[2] = itemstack.copy();
             }
-            else if (this.furnaceItemStacks[2].isItemEqual(itemstack))
+            else if (this.furnaceItemStacks[2].getItem() == itemstack.getItem())
             {
-                furnaceItemStacks[2].stackSize += itemstack.stackSize;
+                this.furnaceItemStacks[2].stackSize += itemstack.stackSize;
             }
 
             --this.furnaceItemStacks[0].stackSize;
@@ -289,62 +293,60 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
         }
     }
 
-    public static int getItemBurnTime(ItemStack par0ItemStack)
+    public static int getItemBurnTime(ItemStack p_145952_0_)
     {
-        if (par0ItemStack == null)
+        if (p_145952_0_ == null)
         {
             return 0;
         }
         else
         {
-            Item i = par0ItemStack.getItem();
-            Item item = par0ItemStack.getItem();
+            Item item = p_145952_0_.getItem();
 
-            if (par0ItemStack.getItem() instanceof ItemBlock && Block.func_149634_a(item) != null)
+            if (item instanceof ItemBlock && Block.getBlockFromItem(item) != Blocks.air)
             {
-                Block block = Block.func_149634_a(item);
+                Block block = Block.getBlockFromItem(item);
 
                 if (block == Blocks.wooden_slab)
                 {
                     return 150;
                 }
 
-                if (block.func_149688_o() == Material.field_151575_d)
+                if (block.getMaterial() == Material.wood)
                 {
-                    return 500;
+                    return 300;
                 }
 
                 if (block == Blocks.coal_block)
                 {
-                    return 18000;
+                    return 16000;
                 }
             }
 
-            if (item instanceof ItemTool && ((ItemTool) item).getToolMaterialName().equals("WOOD")) return 300;
-            if (item instanceof ItemSword && ((ItemSword) item).func_150932_j().equals("WOOD")) return 300;
-            if (item instanceof ItemHoe && ((ItemHoe) item).getMaterialName().equals("WOOD")) return 300;
-            if (i == Items.stick) return 150;
-            if (i == Items.coal) return 2600;
-            if (i == Items.lava_bucket) return 30000;
-            if (i ==  Item.func_150898_a(Blocks.sapling)) return 200;
-            if (i == Items.blaze_rod) return 3400;
-            return GameRegistry.getFuelValue(par0ItemStack);
+            if (item instanceof ItemTool && ((ItemTool)item).getToolMaterialName().equals("WOOD")) return 200;
+            if (item instanceof ItemSword && ((ItemSword)item).getToolMaterialName().equals("WOOD")) return 200;
+            if (item instanceof ItemHoe && ((ItemHoe)item).getToolMaterialName().equals("WOOD")) return 200;
+            if (item == Items.stick) return 100;
+            if (item == Items.coal) return 1600;
+            if (item == Items.lava_bucket) return 20000;
+            if (item == Item.getItemFromBlock(Blocks.sapling)) return 100;
+            if (item == Items.blaze_rod) return 2400;
+            return GameRegistry.getFuelValue(p_145952_0_);
         }
     }
 
-    public static boolean isItemFuel(ItemStack par0ItemStack)
-    {
-        return getItemBurnTime(par0ItemStack) > 0;
+    public static boolean isItemFuel(ItemStack p_145954_0_) {
+        return getItemBurnTime(p_145954_0_) > 0;
     }
 
     public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer)
     {
-        return this.field_145850_b.func_147438_o(this.field_145851_c, this.field_145848_d, this.field_145849_e) != this ? false : par1EntityPlayer.getDistanceSq((double)this.field_145851_c + 0.5D, (double)this.field_145848_d + 0.5D, (double)this.field_145849_e + 0.5D) <= 64.0D;
+        return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : par1EntityPlayer.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
     }
 
-    public void openChest() {}
+    public void openInventory() {}
 
-    public void closeChest() {}
+    public void closeInventory() {}
 
     public boolean isItemValidForSlot(int par1, ItemStack par2ItemStack)
     {
@@ -353,7 +355,7 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
 
     public int[] getAccessibleSlotsFromSide(int par1)
     {
-        return par1 == 0 ? slots_bottom : (par1 == 1 ? slots_top : slots_sides);
+        return par1 == 0 ? slotsBottom : (par1 == 1 ? slotsTop : slotsSides);
     }
 
     public boolean canInsertItem(int par1, ItemStack par2ItemStack, int par3)
@@ -364,20 +366,5 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
     public boolean canExtractItem(int par1, ItemStack par2ItemStack, int par3)
     {
         return par3 != 0 || par1 != 1 || par2ItemStack.getItem() == Items.bucket;
-    }
-
-    public String func_145825_b()
-    {
-        return this.func_145818_k_() ? this.field_145958_o : "Divine Furnace";
-    }
-
-    public boolean func_145818_k_()
-    {
-        return this.field_145958_o != null && this.field_145958_o.length() > 0;
-    }
-
-    public void func_145951_a(String p_145951_1_)
-    {
-        this.field_145958_o = p_145951_1_;
     }
 }

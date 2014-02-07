@@ -1,31 +1,30 @@
 package net.divinerpg.helper.blocks;
 
-import net.divinerpg.api.blocks.*;
+import net.divinerpg.api.blocks.BlockModDirt;
+import net.divinerpg.api.blocks.BlockModGrass;
+import net.divinerpg.api.blocks.BlockModLeaves;
+import net.divinerpg.api.blocks.BlockModLog;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.vethea.blocks.VetheanBlock;
-import net.divinerpg.vethea.blocks.VetheanDirt;
-import net.divinerpg.vethea.blocks.VetheanGrass;
-import net.divinerpg.vethea.blocks.VetheanLeaves;
-import net.divinerpg.vethea.blocks.VetheanLog;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 public class VetheaBlocks {
 
-    static Material           rock         = Material.field_151576_e;
+    static Material           rock         = Material.rock;
 
     public static Block       dreamGrass;
-    public static final Block dreamDirt       = new BlockModDirt().setName("dreamDirt").func_149647_a(DivineRPGTabs.vethea);
+    public static final Block dreamDirt       = new BlockModDirt().setName("dreamDirt").setCreativeTab(DivineRPGTabs.vethea);
     public static final Block fireCrystal     = new VetheanBlock(rock).setName("fireCrystal");
 
     public static final Block dreamBricks     = new VetheanBlock(rock).setName("dreamBricks1");
     public static final Block dreamBricks2 	  = new VetheanBlock(rock).setName("dreamBricks2");
-    public static final Block dreamWoodLeaves = new BlockModLeaves().setName("dreamWoodLeaves").func_149647_a(DivineRPGTabs.vethea);
-    public static final Block dreamWoodLog    = new BlockModLog().setName("dreamWoodLog").func_149647_a(DivineRPGTabs.vethea);
-    public static final Block hyreWoodLog  	  = new BlockModLog().setName("hyreWoodLog").func_149647_a(DivineRPGTabs.vethea);
-    public static final Block hyreWoodLeaves  = new BlockModLeaves().setName("hyreWoodLeaves").func_149647_a(DivineRPGTabs.vethea);
-    public static final Block mintWoodLog 	  = new BlockModLog().setName("mintWoodLog").func_149647_a(DivineRPGTabs.vethea);
-    public static final Block mintWoodLeaves  = new BlockModLeaves().setName("mintWoodLeaves").func_149647_a(DivineRPGTabs.vethea);
+    public static final Block dreamWoodLeaves = new BlockModLeaves().setName("dreamWoodLeaves").setCreativeTab(DivineRPGTabs.vethea);
+    public static final Block dreamWoodLog    = new BlockModLog().setName("dreamWoodLog").setCreativeTab(DivineRPGTabs.vethea);
+    public static final Block hyreWoodLog  	  = new BlockModLog().setName("hyreWoodLog").setCreativeTab(DivineRPGTabs.vethea);
+    public static final Block hyreWoodLeaves  = new BlockModLeaves().setName("hyreWoodLeaves").setCreativeTab(DivineRPGTabs.vethea);
+    public static final Block mintWoodLog 	  = new BlockModLog().setName("mintWoodLog").setCreativeTab(DivineRPGTabs.vethea);
+    public static final Block mintWoodLeaves  = new BlockModLeaves().setName("mintWoodLeaves").setCreativeTab(DivineRPGTabs.vethea);
     
     public static final Block dreamLampOn 	  = new VetheanBlock(rock).setName("dreamLampOn");
     public static final Block dreamLampOff 	  = new VetheanBlock(rock).setName("dreamLampOff");
@@ -47,7 +46,7 @@ public class VetheaBlocks {
     public static final Block hungerStone2    = new VetheanBlock(rock).setName("hungerStone2");
 
     public static void init() {
-        dreamGrass = new BlockModGrass(dreamGrass, dreamDirt, "dream").func_149647_a(DivineRPGTabs.vethea);
+        dreamGrass = new BlockModGrass(dreamGrass, dreamDirt, "dream").setCreativeTab(DivineRPGTabs.vethea);
     }
 
 }

@@ -90,7 +90,7 @@ public class EntityGlacon extends EntityDivineRPGMob
     }
 
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return VanillaItems.iceShards;
     }
@@ -109,7 +109,7 @@ public class EntityGlacon extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.iceShards, 3);
+            this.dropItem(VanillaItems.iceShards, 3);
         }
     }
 

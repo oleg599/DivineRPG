@@ -58,9 +58,9 @@ public class EntityVamacheron extends EntityDivineRPGBoss implements IBossDispla
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(5000D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(39D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(5000D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(39D);
     }
     
     @Override
@@ -127,7 +127,7 @@ public class EntityVamacheron extends EntityDivineRPGBoss implements IBossDispla
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.haliteBlade;
     }
@@ -135,7 +135,7 @@ public class EntityVamacheron extends EntityDivineRPGBoss implements IBossDispla
     @Override
     public void dropFewItems(boolean par1, int par2)
     {
-        this.func_145779_a(this.func_146068_u(), 1);
+        this.dropItem(this.getDropItem(), 1);
     }
 
     /**

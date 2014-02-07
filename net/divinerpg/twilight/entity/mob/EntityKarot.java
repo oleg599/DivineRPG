@@ -34,9 +34,9 @@ public class EntityKarot extends EntityDivineRPGBoss implements IBossDisplayData
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.4); // speed
-        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(55); // Attack
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(4000); // MaxHP
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.4); // speed
+        this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(55); // Attack
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(4000); // MaxHP
     }
     
     @Override
@@ -125,7 +125,7 @@ public class EntityKarot extends EntityDivineRPGBoss implements IBossDisplayData
     }
 
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.halitePhaser;
     }
@@ -134,7 +134,7 @@ public class EntityKarot extends EntityDivineRPGBoss implements IBossDisplayData
     public void dropFewItems(boolean par1, int par2)
     {
         int var1 = this.rand.nextInt(4);
-        this.func_145779_a(this.func_146068_u(),1);
+        this.dropItem(this.getDropItem(),1);
     }
 
 	@Override

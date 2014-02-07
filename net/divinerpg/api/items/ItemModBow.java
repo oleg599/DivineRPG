@@ -123,7 +123,7 @@ public class ItemModBow extends ItemBow {
 
 		boolean flag = par3EntityPlayer.capabilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantment.infinity.effectId, item) > 0;
 
-		if (flag || par3EntityPlayer.inventory.func_146028_b(arrow)) {
+		if (flag || par3EntityPlayer.inventory.hasItem(arrow)) {
 			float f = (float) j / 20.0F;
 			f = (f * f + f * 2.0F) / 3.0F;
 
@@ -178,7 +178,7 @@ public class ItemModBow extends ItemBow {
 			if (flag)
 				entityarrow.canBePickedUp = 2;
 			else
-				par3EntityPlayer.inventory.func_146026_a(arrow);
+				par3EntityPlayer.inventory.consumeInventoryItem(arrow);
 
 			if (!par2World.isRemote)
 				par2World.spawnEntityInWorld(entityarrow);
@@ -225,7 +225,7 @@ public class ItemModBow extends ItemBow {
 		if (var4.isCanceled()) {
 			return var4.result;
 		} else {
-			if (var3.capabilities.isCreativeMode || var3.inventory.func_146028_b(getItem())) {
+			if (var3.capabilities.isCreativeMode || var3.inventory.hasItem(getItem())) {
 				var3.setItemInUse(var1, this.getMaxItemUseDuration(var1));
 			}
 

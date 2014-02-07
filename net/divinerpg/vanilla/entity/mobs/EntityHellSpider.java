@@ -32,9 +32,9 @@ public class EntityHellSpider extends EntityDivineRPGMob
     
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(120.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(16.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(120.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(16.0D);
 	}
 
     protected void entityInit()
@@ -218,8 +218,8 @@ public class EntityHellSpider extends EntityDivineRPGMob
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u() {
-        return Item.func_150898_a(Blocks.netherrack);
+    protected Item getDropItem() {
+        return Item.getItemFromBlock(Blocks.netherrack);
     }
 
     /**
@@ -232,14 +232,14 @@ public class EntityHellSpider extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(Item.func_150898_a(Blocks.netherrack), 10);
+            this.dropItem(Item.getItemFromBlock(Blocks.netherrack), 10);
         }
 
         var3 = this.rand.nextInt(2 + var2);
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.moltenShards, 1);
+            this.dropItem(VanillaItems.moltenShards, 1);
         }
     }
 

@@ -34,8 +34,8 @@ public class EntitySeimer extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.46D); // speed
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(150); // MaxHP
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.46D); // speed
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(150); // MaxHP
     }
 
     @Override

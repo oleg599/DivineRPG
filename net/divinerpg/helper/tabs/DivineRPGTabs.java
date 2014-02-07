@@ -9,7 +9,7 @@ import net.minecraft.item.Item;
 
 public class DivineRPGTabs {
 	public static CreativeTabs blocks = new CreativeTabs("Blocks") 
-		{public Item getTabIconItem() {return Item.func_150898_a(TwilightBlocks.edenOre);}};
+		{public Item getTabIconItem() {return Item.getItemFromBlock(TwilightBlocks.edenOre);}};
 	public static CreativeTabs swords = new CreativeTabs("Swords") 
 		{public Item getTabIconItem() {return VanillaItems.aquaton;}};
 	public static CreativeTabs ranged = new CreativeTabs("Ranged")

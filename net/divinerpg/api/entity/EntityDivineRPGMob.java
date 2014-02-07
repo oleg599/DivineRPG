@@ -43,7 +43,7 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 	public void onDeath(DamageSource d) {
 		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A " + mobName() + "."));
+			p.addChatComponentMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A " + mobName() + "."));
 		}
 	}
 }

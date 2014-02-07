@@ -42,9 +42,9 @@ public class EntitySamek extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.4D);
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(300D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(35D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.4D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(300D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(35D);
     }
     
     /**
@@ -72,7 +72,7 @@ public class EntitySamek extends EntityDivineRPGMob
     @Override
     public void onUpdate()
     {
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(this.entityToAttack != null ? 0.95F : 0.5F);
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(this.entityToAttack != null ? 0.95F : 0.5F);
 
         if (this.randomSoundDelay > 0 && --this.randomSoundDelay == 0)
         {
@@ -186,7 +186,7 @@ public class EntitySamek extends EntityDivineRPGMob
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.skythernSoul;
     }

@@ -35,9 +35,9 @@ public class EntityJungleBat extends EntityDivineRPGMob
     
     protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(120.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(20.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(120.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(20.0D);
     }
     
     /**
@@ -153,7 +153,7 @@ public class EntityJungleBat extends EntityDivineRPGMob
 
         if (this.getIsBatHanging())
         {
-            if (!this.worldObj.func_147439_a(MathHelper.floor_double(this.posX), (int)this.posY + 1, MathHelper.floor_double(this.posZ)).func_149721_r())
+            if (!this.worldObj.getBlock(MathHelper.floor_double(this.posX), (int)this.posY + 1, MathHelper.floor_double(this.posZ)).isNormalCube())
             {
                 this.setIsBatHanging(false);
                 this.worldObj.playAuxSFXAtEntity((EntityPlayer)null, 1015, (int)this.posX, (int)this.posY, (int)this.posZ, 0);
@@ -174,7 +174,7 @@ public class EntityJungleBat extends EntityDivineRPGMob
         }
         else
         {
-            if (this.currentFlightTarget != null && (!this.worldObj.func_147437_c(this.currentFlightTarget.posX, this.currentFlightTarget.posY, this.currentFlightTarget.posZ) || this.currentFlightTarget.posY < 1))
+            if (this.currentFlightTarget != null && (!this.worldObj.isAirBlock(this.currentFlightTarget.posX, this.currentFlightTarget.posY, this.currentFlightTarget.posZ) || this.currentFlightTarget.posY < 1))
             {
                 this.currentFlightTarget = null;
             }
@@ -195,7 +195,7 @@ public class EntityJungleBat extends EntityDivineRPGMob
             this.moveForward = 0.5F;
             this.rotationYaw += f1;
 
-            if (this.rand.nextInt(100) == 0 && this.worldObj.func_147439_a(MathHelper.floor_double(this.posX), (int)this.posY + 1, MathHelper.floor_double(this.posZ)).func_149721_r())
+            if (this.rand.nextInt(100) == 0 && this.worldObj.getBlock(MathHelper.floor_double(this.posX), (int)this.posY + 1, MathHelper.floor_double(this.posZ)).isNormalCube())
             {
                 this.setIsBatHanging(true);
             }
@@ -280,7 +280,7 @@ public class EntityJungleBat extends EntityDivineRPGMob
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return VanillaItems.jungleShards;
     }

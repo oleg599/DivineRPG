@@ -3,6 +3,7 @@ package net.divinerpg.twilight.items;
 import java.util.List;
 
 import net.divinerpg.Reference;
+import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.helper.items.TwilightItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
@@ -21,8 +22,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemTwilightBlitz extends Item {
-	private String sound, name;
+public class ItemTwilightBlitz extends ItemMod {
+	private String sound;
 	private int damage;
 	private String ammoType;
 	public ItemTwilightBlitz(int damage, String ammoType)
@@ -37,14 +38,11 @@ public class ItemTwilightBlitz extends Item {
 		LangRegistry.addItem(this);
 	}
 
-	/**
-	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
-	 */
 	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3)
 	{
 		boolean var4 = var3.capabilities.isCreativeMode;
 
-		if (!var4 && !var3.inventory.func_146028_b(TwilightItems.wildWoodDust))
+		if (!var4 && !var3.inventory.hasItem(TwilightItems.wildWoodDust))
 		{
 			return var1;
 		}
@@ -57,11 +55,11 @@ public class ItemTwilightBlitz extends Item {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzWildWood(var2, var3));
 				}
-				var3.inventory.func_146026_a(TwilightItems.wildWoodDust);
+				var3.inventory.consumeInventoryItem(TwilightItems.wildWoodDust);
 			}
 		}
 
-		if (!var4 && !var3.inventory.func_146028_b(TwilightItems.mortumDust))
+		if (!var4 && !var3.inventory.hasItem(TwilightItems.mortumDust))
 		{
 			return var1;
 		}
@@ -74,7 +72,7 @@ public class ItemTwilightBlitz extends Item {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzHalite(var2, var3));
 				}
-				var3.inventory.func_146026_a(TwilightItems.mortumDust);
+				var3.inventory.consumeInventoryItem(TwilightItems.mortumDust);
 			}
 
 			if(var1.getItem() == TwilightItems.mortumBlitz)
@@ -84,11 +82,11 @@ public class ItemTwilightBlitz extends Item {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzMortum(var2, var3));
 				}
-				var3.inventory.func_146026_a(TwilightItems.mortumDust);
+				var3.inventory.consumeInventoryItem(TwilightItems.mortumDust);
 			}
 		}
 
-		if (!var4 && !var3.inventory.func_146028_b(TwilightItems.apalachiaDust))
+		if (!var4 && !var3.inventory.hasItem(TwilightItems.apalachiaDust))
 		{
 			return var1;
 		}
@@ -101,11 +99,11 @@ public class ItemTwilightBlitz extends Item {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzAlapachia(var2, var3));
 				}
-				var3.inventory.func_146026_a(TwilightItems.apalachiaDust);
+				var3.inventory.consumeInventoryItem(TwilightItems.apalachiaDust);
 			}
 		}
 
-		if (!var4 && !var3.inventory.func_146028_b(TwilightItems.skythernDust))
+		if (!var4 && !var3.inventory.hasItem(TwilightItems.skythernDust))
 		{
 			return var1;
 		}
@@ -118,11 +116,11 @@ public class ItemTwilightBlitz extends Item {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzSkythern(var2, var3));
 				}
-				var3.inventory.func_146026_a(TwilightItems.skythernDust);
+				var3.inventory.consumeInventoryItem(TwilightItems.skythernDust);
 			}
 		}
 
-		if (!var4 && !var3.inventory.func_146028_b(TwilightItems.edenDust))
+		if (!var4 && !var3.inventory.hasItem(TwilightItems.edenDust))
 		{
 			return var1;
 		}
@@ -135,7 +133,7 @@ public class ItemTwilightBlitz extends Item {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzEden(var2, var3));
 				}
-				var3.inventory.func_146026_a(TwilightItems.edenDust);
+				var3.inventory.consumeInventoryItem(TwilightItems.edenDust);
 			}
 		}
 		var1.damageItem(1, var3);
@@ -144,55 +142,10 @@ public class ItemTwilightBlitz extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-
-	/**
-	 * allows items to add custom lines of information to the mouseover description
-	 */
 	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
 	{
 	    par3List.add(damage + " Ranged Damage");
 	    par3List.add("Ammo: " + ammoType);
 		par3List.add("Infinite Uses");
 	}
-	
-	public Item setTextureName(String par1Str)
-    {
-        this.iconString = (Reference.PREFIX + par1Str);
-        return this;
-    }
-	
-	public Item setName(String name){
-	    this.name = name;
-	    setTextureName(name);
-	    setUnlocalizedName(name);
-	    register();
-	    return this;
-	}
-	
-    public void register(){
-        int numChars = 0;
-        char firstLetter = name.charAt(0);
-        if(Character.isLowerCase(firstLetter))
-            firstLetter = Character.toUpperCase(firstLetter);
-        String inGame = name.substring(1);
-        for(int k = 0; k < name.length(); k++){
-            char c = name.charAt(k);
-            int code = (int) c;
-            
-            if(k != 0){
-                for(int p = 65; p < 90; p++){
-                    if(code == p){
-                        numChars++;
-                        if(numChars == 1)
-                            inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-                        else
-                            inGame = new StringBuffer(inGame).insert(k, " ").toString();
-                    }
-                }
-            }
-        }
-        String finalName = firstLetter + inGame;
-        GameRegistry.registerItem(this, name);
-        LanguageRegistry.addName(this, finalName);
-    }
 }

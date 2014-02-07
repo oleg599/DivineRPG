@@ -70,8 +70,8 @@ public class EntityBunny extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.40D);
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(10); // MaxHP
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.40D);
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(10); // MaxHP
     }
 	
     /**

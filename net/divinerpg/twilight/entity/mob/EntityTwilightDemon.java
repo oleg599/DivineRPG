@@ -42,9 +42,9 @@ public class EntityTwilightDemon extends EntityDivineRPGBoss implements IBossDis
 	protected void applyEntityAttributes()
 	{
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.46D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(45); // Attack
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(6800); // MaxHP
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.46D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(45); // Attack
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(6800); // MaxHP
 	}
 
 	@Override
@@ -126,7 +126,7 @@ public class EntityTwilightDemon extends EntityDivineRPGBoss implements IBossDis
 	  * Returns the item ID for the item the mob drops on death.
 	  */
 	 @Override
-	 protected Item func_146068_u()
+	 protected Item getDropItem()
 	 {
 		 return TwilightItems.apalachiaArrow;//TwilightItems.haliteBow;
 	 }
@@ -134,7 +134,7 @@ public class EntityTwilightDemon extends EntityDivineRPGBoss implements IBossDis
 	 @Override
 	 public void dropFewItems(boolean par1, int par2)
 	 {
-		 this.func_145779_a(this.func_146068_u(), 1);
+		 this.dropItem(this.getDropItem(), 1);
 	 }
 
 	 @Override

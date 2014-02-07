@@ -71,9 +71,9 @@ public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackM
 
     protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(100.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(13.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(13.0D);
 	}
 
     /**
@@ -95,7 +95,7 @@ public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackM
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return VanillaItems.moltenShards;
     }
@@ -105,18 +105,18 @@ public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackM
      */
     protected void dropFewItems(boolean par1, int par2)
     {
-    	this.func_145779_a(VanillaItems.moltenShards, 4);
+    	this.dropItem(VanillaItems.moltenShards, 4);
     }
 
     protected void dropRareDrop(int var1)
     {
         if (this.rand.nextInt(5) == 0)
         {
-            this.func_145779_a(VanillaItems.hellstoneIngot, 1);
+            this.dropItem(VanillaItems.hellstoneIngot, 1);
         }
         else
         {
-        	this.func_145779_a(VanillaItems.netheriteIngot, 40);
+        	this.dropItem(VanillaItems.netheriteIngot, 40);
         }
     }
 

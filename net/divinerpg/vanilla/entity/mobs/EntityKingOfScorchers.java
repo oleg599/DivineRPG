@@ -35,9 +35,9 @@ public class EntityKingOfScorchers extends EntityDivineRPGBoss implements IBossD
     @Override
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(6000.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(30.0D);
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(6000.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(30.0D);
     }
 	
 	@Override
@@ -128,7 +128,7 @@ public class EntityKingOfScorchers extends EntityDivineRPGBoss implements IBossD
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return VanillaItems.furyFire;
     }
@@ -136,8 +136,8 @@ public class EntityKingOfScorchers extends EntityDivineRPGBoss implements IBossD
     public void dropFewItems(boolean par1, int par2)
     {
         int var1 = this.rand.nextInt(4);
-        this.func_145779_a(func_146068_u(), 1);
-        this.func_145779_a(VanillaItems.blueFireStone, 7);
+        this.dropItem(getDropItem(), 1);
+        this.dropItem(VanillaItems.blueFireStone, 7);
 		
 		if (this.rand.nextInt(3) == 0)
 		{

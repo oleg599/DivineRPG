@@ -12,33 +12,31 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class GuiTwilightFurnace extends GuiContainer
-{
+public class GuiTwilightFurnace extends GuiContainer {
+	
     private TileEntityTwilightFurnace furnaceInventory;
 
-    public GuiTwilightFurnace(InventoryPlayer par1InventoryPlayer, TileEntityTwilightFurnace par2TileEntityFurnace)
-    {
+    public GuiTwilightFurnace(InventoryPlayer par1InventoryPlayer, TileEntityTwilightFurnace par2TileEntityFurnace) {
         super(new ContainerTwilightFurnace(par1InventoryPlayer, par2TileEntityFurnace));
         this.furnaceInventory = par2TileEntityFurnace;
     }
     
-    protected void func_146979_b(int arg1, int arg2) {
+    @Override
+    protected void drawGuiContainerForegroundLayer(int arg1, int arg2) {
         String s = "Divine Furnace";
-        this.field_146289_q.drawString(s, 10, 6, 4210752);
-        this.field_146289_q.drawString("Inventory", 8, this.field_147000_g - 96 + 2, 4210752);
+        this.fontRendererObj.drawString(s, 10, 6, 4210752);
+        this.fontRendererObj.drawString("Inventory", 8, this.ySize - 96 + 2, 4210752);
     }
 
-    protected void func_146976_a(float par1, int par2, int par3)
-    {
+    protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.field_146297_k.getTextureManager().bindTexture(GuiResourceLocation.twilightFurnace);
-        int k = (this.field_146294_l - this.field_146999_f) / 2;
-        int l = (this.field_146295_m - this.field_147000_g) / 2;
-        this.drawTexturedModalRect(k, l, 0, 0, this.field_146999_f, this.field_147000_g);
+        this.mc.getTextureManager().bindTexture(GuiResourceLocation.twilightFurnace);
+        int k = (this.width - this.xSize) / 2;
+        int l = (this.height - this.ySize) / 2;
+        this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
         int i1;
 
-        if (this.furnaceInventory.isBurning())
-        {
+        if (this.furnaceInventory.isBurning()) {
             i1 = this.furnaceInventory.getBurnTimeRemainingScaled(12);
             this.drawTexturedModalRect(k + 140, l + 60 + 12 - i1, 176, 12 - i1, 14, i1 + 2);
         }

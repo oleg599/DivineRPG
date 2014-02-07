@@ -32,12 +32,12 @@ public class EntityJungleDramcryx extends EntityDivineRPGMob {
 
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(100.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(19.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(19.0D);
 	}
 
-	protected Item func_146068_u() {
+	protected Item getDropItem() {
 		return VanillaItems.jungleShards;
 	}
 

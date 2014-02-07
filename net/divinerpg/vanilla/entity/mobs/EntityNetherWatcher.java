@@ -55,8 +55,8 @@ public class EntityNetherWatcher extends EntityFlying implements IMob, IBossDisp
 
     protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(3400.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(3400.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
 	}
 
     /**
@@ -204,7 +204,7 @@ public class EntityNetherWatcher extends EntityFlying implements IMob, IBossDisp
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return VanillaItems.netheriteIngot;
     }
@@ -214,18 +214,18 @@ public class EntityNetherWatcher extends EntityFlying implements IMob, IBossDisp
      */
     protected void dropFewItems(boolean var1, int var2)
     {
-        this.func_145779_a(VanillaItems.netheriteIngot, 100);
+        this.dropItem(VanillaItems.netheriteIngot, 100);
         int var3 = this.rand.nextInt(4);
-        this.func_145779_a(VanillaItems.blueFireStone, 1);
+        this.dropItem(VanillaItems.blueFireStone, 1);
 
         for (int var4 = 0; var4 < 3 + var3; ++var4)
         {
-            this.func_145779_a(VanillaItems.divineShards, 1);
+            this.dropItem(VanillaItems.divineShards, 1);
         }
 		
 		if (this.rand.nextInt(3) == 0)
 		{
-			//this.func_145779_a(VanillaBlocks.watcherStatue, 1);
+			//this.dropItem(VanillaBlocks.watcherStatue, 1);
 		}
     }
 
@@ -240,7 +240,7 @@ public class EntityNetherWatcher extends EntityFlying implements IMob, IBossDisp
     public void onDeath(DamageSource d) {
 		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The Nether Watcher Has Fallen."));
+			p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The Nether Watcher Has Fallen."));
 		}
 	}
 }

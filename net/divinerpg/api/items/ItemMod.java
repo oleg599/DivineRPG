@@ -32,7 +32,7 @@ public class ItemMod extends Item {
 			if (par3EntityPlayer.getHealth() < par3EntityPlayer.getMaxHealth()) {
 				par3EntityPlayer.heal(10);
 	        }
-			par3EntityPlayer.inventory.func_146026_a(this);
+			par3EntityPlayer.inventory.consumeInventoryItem(this);
 		}
 		return par1ItemStack;
 	}

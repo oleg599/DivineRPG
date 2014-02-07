@@ -27,9 +27,9 @@ public class EntityMiner extends EntityDivineRPGMob
     
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(40.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(4.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(40.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(4.0D);
 	}
 
     public int getTotalArmorValue()
@@ -57,7 +57,7 @@ public class EntityMiner extends EntityDivineRPGMob
         return defaultHeldItem;
     }
 
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return Items.rotten_flesh;
     }
@@ -75,29 +75,28 @@ public class EntityMiner extends EntityDivineRPGMob
         switch (this.rand.nextInt(5))
         {
             case 0:
-                this.func_145779_a(Items.diamond_pickaxe, 1);
+                this.dropItem(Items.diamond_pickaxe, 1);
                 break;
 
             case 1:
-                this.func_145779_a(Items.gold_ingot, 1);
+                this.dropItem(Items.gold_ingot, 1);
                 break;
 
             case 2:
-                this.func_145779_a(Items.iron_ingot, 1);
+                this.dropItem(Items.iron_ingot, 1);
                 break;
 
             case 3:
-                this.func_145779_a(Items.diamond, 1);
+                this.dropItem(Items.diamond, 1);
                 break;
 
             case 4:
-                this.func_145779_a(Item.func_150898_a(Blocks.torch), 64);
+                this.dropItem(Item.getItemFromBlock(Blocks.torch), 64);
         }
     }
 
 	@Override
 	public String mobName() {
-		// TODO Auto-generated method stub
 		return "Undead Miner";
 	}
 }

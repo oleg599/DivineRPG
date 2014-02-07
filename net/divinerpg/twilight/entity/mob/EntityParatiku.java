@@ -43,8 +43,8 @@ public class EntityParatiku extends EntityDivineRPGMob
 	protected void applyEntityAttributes()
 	{
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.3); // speed
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(60); // MaxHP
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.3); // speed
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(60); // MaxHP
 	}
 
 	@Override

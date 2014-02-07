@@ -31,9 +31,9 @@ public class EntitySoulFiend extends EntityDivineRPGBoss implements IBossDisplay
 	protected void applyEntityAttributes()
 	{
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.5); // speed
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(50); // Attack
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(5800); // MaxHP
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.5); // speed
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(50); // Attack
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(5800); // MaxHP
 	}
 
 	@Override
@@ -112,7 +112,7 @@ public class EntitySoulFiend extends EntityDivineRPGBoss implements IBossDisplay
 	 * Returns the item ID for the item the mob drops on death.
 	 */
 	@Override
-	protected Item func_146068_u()
+	protected Item getDropItem()
 	{
 		return TwilightItems.haliteBlade;
 	}
@@ -120,7 +120,7 @@ public class EntitySoulFiend extends EntityDivineRPGBoss implements IBossDisplay
 	@Override
 	public void dropFewItems(boolean par1, int par2)
 	{
-		this.func_145779_a(this.func_146068_u(), 1);
+		this.dropItem(this.getDropItem(), 1);
 	}
 
 	/**

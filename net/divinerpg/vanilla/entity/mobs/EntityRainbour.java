@@ -62,9 +62,9 @@ public class EntityRainbour extends EntityDivineRPGMob
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(300.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(33.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(300.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(33.0D);
 	}
 
 	/**
@@ -220,7 +220,7 @@ public class EntityRainbour extends EntityDivineRPGMob
 	}
 
 	protected void dropFewItems(boolean var1, int var2) {
-		this.func_145779_a(VanillaItems.healingStone, 1);
+		this.dropItem(VanillaItems.healingStone, 1);
 	}
 
 	/**

@@ -45,15 +45,15 @@ public class EntityRotatick extends EntityDivineRPGMob
 
     protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(55.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(18.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(55.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(18.0D);
 	}
 
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected int getfunc_145779_aId()
+    protected int getdropItemId()
     {
         return 0;
     }
@@ -69,14 +69,14 @@ public class EntityRotatick extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(Items.diamond, 0);
+            this.dropItem(Items.diamond, 0);
         }
 
         var3 = this.rand.nextInt(3 + par2);
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(Items.diamond, 1);
+            this.dropItem(Items.diamond, 1);
         }
     }
 

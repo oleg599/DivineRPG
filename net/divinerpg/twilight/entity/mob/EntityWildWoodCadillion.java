@@ -30,9 +30,9 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(300.0D);
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(25D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(300.0D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(25D);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
     @Override
     public void onUpdate()
     {
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(this.entityToAttack != null ? 0.95F : 0.5F);
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(this.entityToAttack != null ? 0.95F : 0.5F);
         super.onUpdate();
     }
 
@@ -171,7 +171,7 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
 
         for (int var4 = 0; var4 < var3; ++var4)
         {
-            this.func_145779_a(TwilightItems.wildWoodSoul, 1);
+            this.dropItem(TwilightItems.wildWoodSoul, 1);
         }
     }
 
@@ -182,7 +182,7 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
 
         if (var2 == 0)
         {
-            this.func_145779_a(TwilightItems.wildWoodSoul, 2);
+            this.dropItem(TwilightItems.wildWoodSoul, 2);
         }
     }
 
@@ -190,7 +190,7 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
      * Returns the item ID for the item the mob drops on death.
      */
     @Override
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
         return TwilightItems.wildWoodSoul;
     }

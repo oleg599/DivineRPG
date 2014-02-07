@@ -57,9 +57,9 @@ public class EntityTheEye extends EntityDivineRPGMob
 
     protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(40.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(17.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(40.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(17.0D);
 	}
 
     /**
@@ -134,9 +134,9 @@ public class EntityTheEye extends EntityDivineRPGMob
     /**
      * Returns the item ID for the item the mob drops on death.
      */
-    protected Item func_146068_u()
+    protected Item getDropItem()
     {
-        return Item.func_150898_a(Blocks.torch);
+        return Item.getItemFromBlock(Blocks.torch);
     }
 
     /**
@@ -148,9 +148,9 @@ public class EntityTheEye extends EntityDivineRPGMob
         int var4;
         var3 = this.rand.nextInt(2 + par2) + 1;
 
-        this.func_145779_a(VanillaItems.rupeeIngot, 1);
+        this.dropItem(VanillaItems.rupeeIngot, 1);
         
-        this.func_145779_a(Item.func_150898_a(Blocks.torch), 16 * var3);
+        this.dropItem(Item.getItemFromBlock(Blocks.torch), 16 * var3);
     }
     /**
      * Checks to make sure the light is not too bright where the mob is spawning

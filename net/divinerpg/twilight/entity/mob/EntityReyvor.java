@@ -29,9 +29,9 @@ public class EntityReyvor extends EntityDivineRPGBoss implements IBossDisplayDat
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-        getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(5000D);
-        getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(30D);
+        getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+        getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(5000D);
+        getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(30D);
     }
 
     @Override
@@ -112,7 +112,7 @@ public class EntityReyvor extends EntityDivineRPGBoss implements IBossDisplayDat
     @Override
     public void dropFewItems(boolean par1, int par2)
     {
-        //this.func_145779_a(TwilightItems.haliteLegs, 1);
+        //this.dropItem(TwilightItems.haliteLegs, 1);
     }
 
     /**

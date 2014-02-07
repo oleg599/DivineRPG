@@ -43,7 +43,7 @@ public abstract class EntityDivineRPGBoss extends EntityMob implements IBossDisp
 	public void onDeath(DamageSource d) {
 		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 		if(ConfigurationHelper.canShowDeathChat){
-			p.func_145747_a(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The " + mobName() + " Has Fallen."));
+			p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The " + mobName() + " Has Fallen."));
 		}
 	}
 }

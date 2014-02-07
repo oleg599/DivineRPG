@@ -64,8 +64,8 @@ public class EntityMoonWolf extends EntityDivineRPGMob
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.56F); // speed
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(200); // MaxHP
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.56F); // speed
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(200); // MaxHP
     }
 	
     /**

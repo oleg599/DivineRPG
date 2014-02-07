@@ -37,10 +37,10 @@ public class TwilightBlock extends Block
 	}
 
 	public static Item getBlock(Block b){
-		return Item.func_150898_a(b);
+		return Item.getItemFromBlock(b);
 	}
 
-	boolean isOre(){
+	public boolean isOre(){
 		if(this == TwilightBlocks.edenOre|| this == TwilightBlocks.wildWoodOre || this == TwilightBlocks.apalachiaOre ||
 				this == TwilightBlocks.skythernOre || this == TwilightBlocks.mortumOre){
 			return true;
@@ -51,7 +51,7 @@ public class TwilightBlock extends Block
 	/**
 	 * Sets the item that will be dropped when the block is broken.
 	 */
-	public Item func_149650_a(int par1, Random par2, int par3) {
+	public Item getItemDropped(int par1, Random par2, int par3) {
 		return (this == TwilightBlocks.edenOre) ? TwilightItems.edenFragments 
 				: (this == TwilightBlocks.wildWoodOre) ? TwilightItems.wildWoodFragments 
 				: (this == TwilightBlocks.apalachiaOre) ? TwilightItems.apalachiaFragments
@@ -62,7 +62,7 @@ public class TwilightBlock extends Block
 
 	public int func_149679_a(int par1, Random par2)
 	{
-		if (par1 > 0 && getBlock(this) != this.func_149650_a(0, par2, par1))
+		if (par1 > 0 && getBlock(this) != this.getItemDropped(0, par2, par1))
 		{
 			int j = par2.nextInt(par1 + 2) - 1;
 
@@ -71,11 +71,11 @@ public class TwilightBlock extends Block
 				j = 0;
 			}
 
-			return this.func_149745_a(par2) * (j + 1);
+			return this.quantityDropped(par2) * (j + 1);
 		}
 		else
 		{
-			return this.func_149745_a(par2);
+			return this.quantityDropped(par2);
 		}
 	}
 
@@ -84,7 +84,7 @@ public class TwilightBlock extends Block
 	@Override
 	public int getExpDrop(IBlockAccess block, int par5, int par7)
 	{
-		if (this.func_149650_a(par5, rand, par7) != getBlock(this))
+		if (this.getItemDropped(par5, rand, par7) != getBlock(this))
 		{
 			int j1 = 0;
 
@@ -95,19 +95,15 @@ public class TwilightBlock extends Block
 		}
 		return 0;
 	}
-
-	public Block setUnlocalizedName(String name){
-		return func_149663_c(name);
-	}
-
+	
 	public Block setTextureName(String name){
-		return func_149658_d(Reference.PREFIX + name);
+		return setBlockTextureName(name);
 	}
 
 	public Block setName(String name){
 		this.name = name;
 		setTextureName(name);
-		setUnlocalizedName(name);
+		setBlockName(name);
 		register();
 		return this;
 	}

@@ -6,7 +6,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 public class TwilightBlocks {
-    static Material           rock            = Material.field_151576_e;
+	
+    static Material           rock            = Material.rock;
 
     public static Block       edenGrass;                                                           //Dravite
     public static Block       wildWoodGrass;                                                       //Azurite
@@ -45,8 +46,8 @@ public class TwilightBlocks {
     public static final Block mortumLogs      		= new BlockModLog().setName("mortumLog");
 
     public static final Block twilightStone   		= new TwilightBlock(rock).setName("twilightStone");
-    //public static final Block blueFire        		= new BlockBlueFire().setName("blueFire");
-    public static final Block edenPortal      		= new BlockEdenPortal();
+    public static final Block blueFire        		= new BlockBlueFire().setName("blueFire");
+    public static final BlockEdenPortal edenPortal  = (BlockEdenPortal)new BlockEdenPortal();
     public static final Block twilightFurnace 		= new BlockTwilightFurnace(false).setName("twilightFurnace");
     public static final Block twilightFurnaceOn 	= new BlockTwilightFurnace(true).setName("twilightFurnaceOn");
     

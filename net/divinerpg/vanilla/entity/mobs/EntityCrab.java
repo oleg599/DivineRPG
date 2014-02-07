@@ -29,9 +29,9 @@ public class EntityCrab extends EntityDivineRPGMob {
 
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setAttribute(160.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setAttribute(0.7D);
-		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setAttribute(25.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(160.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(25.0D);
 	}
 
 	protected boolean isAIEnabled() {
@@ -110,18 +110,18 @@ public class EntityCrab extends EntityDivineRPGMob {
 		return "";
 	}
 
-	protected Item func_146068_u() {
+	protected Item getDropItem() {
 		return VanillaItems.crabClaw;
 	}
 	
 	protected void dropFewItems(boolean var1, int var2) {
-		Item i = func_146068_u();
+		Item i = getDropItem();
 		
 		int var3 = this.rand.nextInt(2 + var2);
 
 		for (int var4 = 0; var4 < var3; ++var4)
 		{
-			this.func_145779_a(i, 1);
+			this.dropItem(i, 1);
 		}
 	}
 

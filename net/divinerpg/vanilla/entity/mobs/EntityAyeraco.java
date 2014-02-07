@@ -231,7 +231,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     @Override
     protected void dropFewItems(boolean var1, int var2)
     {
-        this.func_145779_a(VanillaItems.divineShards, 2 + this.rand.nextInt(2));
+        this.dropItem(VanillaItems.divineShards, 2 + this.rand.nextInt(2));
         if (this.rand.nextInt(100) < 2)
         {
             /*switch (this.rand.nextInt(2))
@@ -294,7 +294,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
 		return null;
 	}
 
-	protected Item func_146068_u() {
+	protected Item getDropItem() {
 		return VanillaItems.divineShards;
     }
 	
