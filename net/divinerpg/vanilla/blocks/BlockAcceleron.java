@@ -2,7 +2,9 @@ package net.divinerpg.vanilla.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.divinerpg.Reference;
 import net.divinerpg.api.blocks.BlockMod;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -16,13 +18,14 @@ public class BlockAcceleron extends BlockMod{
 	public BlockAcceleron() {
 		super(Material.rock);
 		LangRegistry.addBlock(this);
-		slipperiness = 7.0F;
+		setCreativeTab(DivineRPGTabs.blocks);
+		slipperiness = 4.0F;
 	}
 	
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister icon) {
-        side = icon.registerIcon("acceleron" + "_side");
-        top = icon.registerIcon("acceleron" + "_top");
+        side = icon.registerIcon(Reference.PREFIX + "acceleron" + "_side");
+        top = icon.registerIcon(Reference.PREFIX + "acceleron" + "_top");
     }
 	
     @Override

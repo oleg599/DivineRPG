@@ -40,7 +40,7 @@ public class BlockModLog extends BlockRotatedPillar{
     }
 
     @SideOnly(Side.CLIENT)
-    public void func_149651_a(IIconRegister icon) {
+    public void registerBlockIcons(IIconRegister icon) {
         side = icon.registerIcon(getTextureName() + "_side");
         top = icon.registerIcon(getTextureName() + "_top");
     }
@@ -57,7 +57,7 @@ public class BlockModLog extends BlockRotatedPillar{
     
     public Block setName(String name){
         this.name = name;
-        setBlockTextureName(name);
+        setBlockTextureName(Reference.PREFIX + name);
         setBlockName(name);
         register();
         return this;
@@ -104,17 +104,17 @@ public class BlockModLog extends BlockRotatedPillar{
     }
 
 	@SideOnly(Side.CLIENT)
-	protected IIcon func_150163_b(int var1) {
+	protected IIcon getTopIcon(int var1) {
 		return this.sideChange[var1 % this.sideChange.length];
 	}
 	
 	@SideOnly(Side.CLIENT)
-    protected IIcon func_150161_d(int var1)
+    protected IIcon getSideIcon(int var1)
     {
         return this.topChange[var1 % this.topChange.length];
     }
 	
-    public int func_149660_a(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9)
+    public int onBlockPlaced(World par1World, int par2, int par3, int par4, int par5, float par6, float par7, float par8, int par9)
     {
         int var10 = par9 & 3;
         byte var11 = 0;
@@ -137,15 +137,9 @@ public class BlockModLog extends BlockRotatedPillar{
         return var10 | var11;
     }
     
-    public IIcon getSideIcon(int par1, int par2)
+    public IIcon getIcon(int par1, int par2)
     {
         int var3 = par2 & 12;
         return var3 == 0 && (par1 == 1 || par1 == 0) ? this.top : (var3 == 4 && (par1 == 5 || par1 == 4) ? this.top  : (var3 == 8 && (par1 == 2 || par1 == 3) ? top  : this.side ));
     }
-
-	@Override
-	protected IIcon getSideIcon(int var1) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

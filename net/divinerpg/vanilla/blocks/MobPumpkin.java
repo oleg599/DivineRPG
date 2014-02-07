@@ -30,8 +30,8 @@ public class MobPumpkin extends BlockDirectional
 	private IIcon top;
 	@SideOnly(Side.CLIENT)
 	private IIcon front;
-    private static SoundType wood = Block.soundTypeWood;
-    private static Material pumpkin = Material.gourd;
+	private static SoundType wood = Block.soundTypeWood;
+	private static Material pumpkin = Material.gourd;
 
 	public MobPumpkin() {
 		super(pumpkin);
@@ -39,12 +39,12 @@ public class MobPumpkin extends BlockDirectional
 		setHardness(1.0F);
 		setCreativeTab(DivineRPGTabs.blocks);
 		setSoundType(wood);
-        LangRegistry.addBlock(this);
+		LangRegistry.addBlock(this);
 	}
 
 	public Block setSoundType(Block.SoundType name) {
-    	return setStepSound(name);
-    }
+		return setStepSound(name);
+	}
 
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int par1, int par2) {
@@ -61,7 +61,7 @@ public class MobPumpkin extends BlockDirectional
 		int l = MathHelper.floor_double((double)(player.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
 		world.setBlockMetadataWithNotify(x, y, z, l, 2);
 	}
-	
+
 	@Override
 	public boolean onBlockActivated(World var1, int var2, int var3, int var4, EntityPlayer player, int var6, float var7, float var8, float var9) {
 		if (!player.isSneaking()) {
@@ -72,8 +72,16 @@ public class MobPumpkin extends BlockDirectional
 		}
 	}
 
+	public Block setName(String name){
+		this.name = name;
+		setBlockName(name);
+		setTextureName(name);
+		register();
+		return this;
+	}
+
 	@SideOnly(Side.CLIENT)
-	public void func_149651_a(IIconRegister icon) {
+	public void registerBlockIcons(IIconRegister icon) {
 		this.front = icon.registerIcon(this.getTextureName() + "_front");
 		this.top = icon.registerIcon(this.getTextureName() + "_top");
 		this.blockIcon = icon.registerIcon(this.getTextureName() + "_side");
@@ -81,14 +89,6 @@ public class MobPumpkin extends BlockDirectional
 
 	public Block setTextureName(String name){
 		return setBlockTextureName(Reference.PREFIX + name);
-	}
-
-	public Block setName(String name){
-		this.name = name;
-		setTextureName(name);
-		setBlockName(name);
-		register();
-		return this;
 	}
 
 	public String getName(){
@@ -117,10 +117,8 @@ public class MobPumpkin extends BlockDirectional
 				}
 			}
 		}
-
 		String finalName = firstLetter + inGame;
 		GameRegistry.registerBlock(this, name);
-		LanguageRegistry.addName(this, finalName);
 		return this;
 	}
 }

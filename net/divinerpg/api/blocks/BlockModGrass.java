@@ -39,12 +39,12 @@ public class BlockModGrass extends BlockMod {
     }
     
     @SideOnly(Side.CLIENT)
-    public void getIcon(IIconRegister icon) {
+    public void registerBlockIcons(IIconRegister icon) {
         side = icon.registerIcon(getTextureName() + "Grass_side");
         top = icon.registerIcon(getTextureName() + "Grass_top");
         bottom = icon.registerIcon(getTextureName() + "Dirt");
     }
-
+    
     @Override
     public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
     {

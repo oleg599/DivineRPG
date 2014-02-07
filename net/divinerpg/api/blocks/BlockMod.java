@@ -48,6 +48,11 @@ public class BlockMod extends Block {
         super(mat);
         LangRegistry.addBlock(this);
     }
+    
+    public Block setHarvestLevel(int i) {
+        setHarvestLevel("pickaxe", i);
+        return this;
+    }
 
     public Block setTextureName(String name) {
         return setBlockTextureName(Reference.PREFIX + name);
@@ -58,11 +63,6 @@ public class BlockMod extends Block {
         setTextureName(name);
         setBlockName(name);
         register();
-        return this;
-    }
-
-    public Block setHarvestLevel(int i) {
-        setHarvestLevel("pickaxe", i);
         return this;
     }
 
@@ -94,8 +94,6 @@ public class BlockMod extends Block {
                 }
             }
         }
-        String finalName = firstLetter + inGame;
         GameRegistry.registerBlock(this, name);
-        LanguageRegistry.addName(this, finalName);
     }
 }

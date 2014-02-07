@@ -97,7 +97,7 @@ public class TwilightBlock extends Block
 	}
 	
 	public Block setTextureName(String name){
-		return setBlockTextureName(name);
+		return setBlockTextureName(Reference.PREFIX + name);
 	}
 
 	public Block setName(String name){
