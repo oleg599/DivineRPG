@@ -12,8 +12,8 @@ public class SoundLoader {
 			for(String sound : Sounds.files){
 				//e.manager. TODO FIND OUT HOW TO ADD A SOUND FILE
 			}
-		}catch(Exception ex){
-			
+		} catch(Exception ex) {
+			ex.printStackTrace();
 		}
 	}
 }

@@ -20,8 +20,7 @@ public class ItemMod extends Item {
 		LangRegistry.addItem(this);
 	}
 
-	public Item setTextureName(String par1Str)
-	{
+	public Item setTextureName(String par1Str) {
 		this.iconString = (Reference.PREFIX + par1Str);
 		return this;
 	}
