@@ -37,6 +37,7 @@ public class IceikaItems {
 	public static final Item chocolateLog	   = new ItemModFood(4, 1.0F, false).setName("chocolateLog");
 	public static final Item snowCones 		   = new ItemModFood(2, 0.3F, false).setName("snowCones");
 	public static final Item fruitCake 		   = new ItemModFood(16, 2.0F, false).setName("fruitCake"); //eww
+	public static final Item winterberry	   = new ItemModFood(4, 1.0F, false).setName("winterberry"); 
 	
 	//public static final Item icicleBow = new ItemIceBow().setName("icicleBow");
 	//public static final Item snowStormBow = new ItemSnowStormBow().setName("snowStormBow");
