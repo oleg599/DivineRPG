@@ -3,6 +3,7 @@ package net.divinerpg.api.entity;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
@@ -16,6 +17,7 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 
 	public EntityDivineRPGMob(World par1World) {
 		super(par1World);
+		LangRegistry.addMob();
 	}
 
 	public void setMaxHP(double d){getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);}

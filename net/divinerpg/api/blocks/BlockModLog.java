@@ -94,7 +94,6 @@ public class BlockModLog extends BlockRotatedPillar{
             }
         }
         String finalName = firstLetter + inGame;
-        System.err.println(finalName);
         GameRegistry.registerBlock(this, name);
     }
 

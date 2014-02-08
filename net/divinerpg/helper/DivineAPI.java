@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
 
 import net.divinerpg.DivineRPG;
 import net.divinerpg.helper.recipes.CraftingDivineTableManager;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -29,6 +30,7 @@ public class DivineAPI {
     private static Method newFieldAccessor = null;
     private static Method fieldAccessorSet = null;
 	private static boolean isSetup = false;
+	public static String mobName;
 
 	public static void addRecipe(ItemStack i, Object ... o) {
 		GameRegistry.addRecipe(i, o);
@@ -51,6 +53,7 @@ public class DivineAPI {
 	}
 
 	public static void registerDivineRPGMob(Class entityClass, String entityName) {
+		mobName = entityName;
 		int entityID = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, entityID);
 		LanguageRegistry.instance().addStringLocalization("entity." + entityName + ".name", entityName);
@@ -63,7 +66,6 @@ public class DivineAPI {
 		int ID = getProjectileID(); 
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, ID);
 		EntityRegistry.registerModEntity(entityClass, entityName, ID, DivineRPG.instance, 250, 5, true);
-		LanguageRegistry.instance().addStringLocalization("entity." + entityName + ".name", entityName);
 	}
 
 	private static int getUniqueID() {
@@ -79,15 +81,13 @@ public class DivineAPI {
         return EnumHelper.addEnum(ArmorMaterial.class, name, duraNew, oldArmor, enchantability);
     }
 	
-	public static ChatComponentTranslation addChatMessage(EnumChatFormatting color, String str, Object... args)
-	{
+	public static ChatComponentTranslation addChatMessage(EnumChatFormatting color, String str, Object... args) {
 		ChatComponentTranslation ret = new ChatComponentTranslation(str, args);
 		ret.getChatStyle().setColor(color);
 		return ret;
 	}
 	
-	public static ChatComponentTranslation addChatMessage(String str, Object... args)
-	{
+	public static ChatComponentTranslation addChatMessage(String str, Object... args) {
 		ChatComponentTranslation ret = new ChatComponentTranslation(str, args);
 		return ret;
 	}

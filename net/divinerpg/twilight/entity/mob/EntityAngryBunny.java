@@ -1,6 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.world.World;
 
@@ -9,7 +10,7 @@ public class EntityAngryBunny extends EntityDivineRPGMob
 	public EntityAngryBunny(World var1)
 	{
 		super(var1);
-		
+		LangRegistry.addMob();
 		this.setSize(1F, 1.5F);
 		this.experienceValue = 40;
 		this.getNavigator().setAvoidsWater(true);
