@@ -78,7 +78,6 @@ public class BlockModBook extends BlockBookshelf {
                 }
             }
         }
-        String finalName = firstLetter + inGame;
         GameRegistry.registerBlock(this, name);
     }
 }

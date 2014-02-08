@@ -13,10 +13,10 @@ import net.minecraft.block.material.Material;
 
 public class IceikaBlocks {
 	
-    static Material rock                = Material.rock;
-    static Material grass     			= Material.grass;
-    static Material snow       		    = Material.snow;
-    static Material glass		        = Material.glass;
+    public static Material rock                 = Material.rock;
+    public static Material grass     			= Material.grass;
+    public static Material snow       		    = Material.snow;
+    public static Material glass		        = Material.glass;
 
     public static		Block frozenGrass;
     
@@ -34,10 +34,10 @@ public class IceikaBlocks {
 	public static final Block snowBricks          = new IceikaBlock(snow).setName("snowBricks").setHardness(1.5F); //What the walls of workshops are made of.
 	public static final Block coalstone           = new IceikaBlock(rock).setName("coalstone").setHardness(2.0F); //The area around the furnace in the workshops.
 	public static final Block workshopCarpet      = new IceikaBlock(grass).setName("workshopCarpet").setHardness(0.1F); //The floor of the workshops.
-	public static final Block frostedGlass        = new BlockModGlass(glass).setName("frostedGlass").setHardness(0.1F); //Windows for the workshops. //It has the normal glass texture for some reason
+	public static final Block frostedGlass        = new BlockModGlass(glass).setName("frostedGlass").setHardness(0.1F); //Windows for the workshops.
 	public static final Block workshopBookcase    = new BlockModBook().setName("workshopBookcase").setHardness(1.5F); //Bookcase for workshops.
 	public static final Block workshopLamp        = new IceikaBlock(glass).setName("workshopLamp").setHardness(0.3F); //Lamps for workshops.
-	public static final Block steelDoor           = new IceikaBlock(glass).setName("workshopLamp").setHardness(0.3F); //Doors for workshops.
+	public static final Block steelDoor           = new IceikaBlock(glass).setName("steelDoor").setHardness(0.3F); //Doors for workshops.
 	public static final Block coalstoneFurnace    = new IceikaBlock(rock).setName("coalstoneFurnace").setHardness(3.5F); //One in each workshop. Never runs out of fuel
 	
 

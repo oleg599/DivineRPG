@@ -67,7 +67,6 @@ public class ItemMod extends Item {
 				}
 			}
 		}
-		String finalName = firstLetter + inGame;
 		GameRegistry.registerItem(this, name);
 	}
 }
