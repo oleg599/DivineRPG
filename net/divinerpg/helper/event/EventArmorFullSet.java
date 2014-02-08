@@ -13,6 +13,7 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 public class EventArmorFullSet {
+	
 	EntityPlayer player = Minecraft.getMinecraft().thePlayer;
 	
 	private Item boots = null;
@@ -26,7 +27,9 @@ public class EventArmorFullSet {
 	ItemStack head = player.inventory.armorInventory[3];
 
     private VanillaItems v;
+    
     //TODO Figure out why it isn't working.
+    
 	@SubscribeEvent
     public void onLivingHurtEvent(LivingHurtEvent e) {
 		if (!(e.entityLiving instanceof EntityPlayer)){
@@ -54,6 +57,7 @@ public class EventArmorFullSet {
 			}
 		}
 	}
+	
 	@SubscribeEvent
 	public void onTickEvent(TickEvent ev) {
 			

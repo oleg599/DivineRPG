@@ -248,4 +248,6 @@ public class VanillaItems {
     public static final Item leatherLegs 		= new ItemDivineArmor(ArmorMaterialMod.Leather, LEGS, 2, 2.5D, false, "leather").setName("leatherLegs");
     public static final Item leatherBoots 		= new ItemDivineArmor(ArmorMaterialMod.Leather, BOOTS, 3, 2.5D, false, "leather").setName("leatherBoots");
     
+    //public static final Item bucketTar 			= new ItemBucketTar().setName("bucketOfTar");
+    
 }
