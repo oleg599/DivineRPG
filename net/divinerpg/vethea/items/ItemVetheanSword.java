@@ -3,6 +3,7 @@ package net.divinerpg.vethea.items;
 import java.util.List;
 
 import net.divinerpg.api.items.ItemModSword;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -21,18 +22,15 @@ public class ItemVetheanSword extends ItemModSword {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
-    {
-        par3List.add(tool.getDamageVsEntity() + " Melee Damage");
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
         if (par1ItemStack.getMaxDamage() != -1) {
             par3List.add(par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage() + " Uses");
         } else {
             par3List.add("Infinite Uses");
         }
-        
         if (this instanceof ItemVetheanClaw) {
             par3List.add("Can not Block");
         }
-        par3List.add("\u00a72Vethean");
+        par3List.add(DivineAPI.GREEN + "Vethean");
     }
 }

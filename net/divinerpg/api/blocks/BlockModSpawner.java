@@ -1,4 +1,4 @@
-package net.divinerpg.iceika.blocks;
+package net.divinerpg.api.blocks;
 
 import java.util.Random;
 
@@ -13,11 +13,11 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.world.World;
 
-public class IceikaSpawner extends BlockContainer {
+public class BlockModSpawner extends BlockContainer {
 
     public String mobName, name;
 
-    public IceikaSpawner(String mobName) {
+    public BlockModSpawner(String mobName) {
         super(Material.rock);
         this.mobName = mobName;
         this.setBlockName(mobName);

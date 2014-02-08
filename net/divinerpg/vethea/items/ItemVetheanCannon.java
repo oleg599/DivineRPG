@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.divinerpg.DivineRPG;
 import net.divinerpg.api.items.ItemMod;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.items.VetheanItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.vethea.entity.projectile.EntityVetheanCannonShot;
@@ -42,6 +43,6 @@ public class ItemVetheanCannon extends ItemMod
     {
         par3List.add(damage + " Ranged Damage");
         par3List.add("Ammo: Acidfire");
-        par3List.add("\u00a72Vethean");
+        par3List.add(DivineAPI.GREEN + "Vethean");
     }
 }

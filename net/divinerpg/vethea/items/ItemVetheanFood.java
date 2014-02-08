@@ -6,7 +6,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.divinerpg.DivineRPG;
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
@@ -20,6 +22,7 @@ public class ItemVetheanFood extends ItemFood {
 		super(par2, par3, false);
 		food = par2;
 		saturation = par3;
+		LangRegistry.addItem(this);
 		this.setCreativeTab(DivineRPGTabs.vethea);
 	}
 
@@ -27,8 +30,8 @@ public class ItemVetheanFood extends ItemFood {
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 		par3List.add("Replenishes " + food + " Hunger");
 		par3List.add(saturation + " Saturation");
-		par3List.add("Pet Food: false");
-		par3List.add("\u00a72Vethean");
+		par3List.add("Pet Food: False");
+		par3List.add(DivineAPI.GREEN + "Vethean");
 	}
 
 	public Item setTextureName(String par1Str) {
