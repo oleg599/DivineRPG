@@ -13,8 +13,8 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockModGlass extends BlockMod {
 		
-	public BlockModGlass(Material m) {
-		super(m);
+	public BlockModGlass() {
+		super(Material.glass);
 		setCreativeTab(DivineRPGTabs.blocks);
 		LangRegistry.addBlock(this);
 	}

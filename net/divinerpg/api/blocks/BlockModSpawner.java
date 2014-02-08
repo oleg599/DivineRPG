@@ -17,11 +17,14 @@ public class BlockModSpawner extends BlockContainer {
 
     public String mobName, name;
 
-    public BlockModSpawner(String mobName) {
+    public BlockModSpawner(String mobName, boolean isVethean) {
         super(Material.rock);
         this.mobName = mobName;
         this.setBlockName(mobName);
         setCreativeTab(DivineRPGTabs.blocks);
+        if(isVethean){
+        	this.setTextureName("fireCrystal");
+        }
     }
 
     @Override
