@@ -30,4 +30,9 @@ public class BlockModGlass extends BlockMod {
     public boolean renderAsNormalBlock() {
         return false;
     }
+    
+    @Override
+    public boolean isOpaqueCube() {
+    	return false;
+    }
 }
