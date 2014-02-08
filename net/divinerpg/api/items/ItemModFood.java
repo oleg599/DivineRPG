@@ -35,16 +35,15 @@ public class ItemModFood extends ItemFood {
 		par3List.add(!wolf ? "Pet Food: false" : "Pet Food: true");
 	}
 	
-	public Item setTextureName(String par1Str)
+	public Item setImageName(String par1Str)
     {
-        this.iconString = (Reference.PREFIX + par1Str);
-        return this;
+        return setTextureName(Reference.PREFIX + par1Str);
     }
 	
     private String name;
     public Item setName(String name){
         this.name = name;
-        setTextureName(name);
+        setImageName(name);
         setUnlocalizedName(name);
         register();
         return this;

@@ -24,7 +24,7 @@ public class IceikaBlocks {
 	public static final Block frozenStone         = new IceikaBlock(rock).setName("frozenStone").setHardness(5.0F);
 	public static final Block frozenWood          = new BlockModLog().setName("frozenLog").setHardness(5.0F);
 	public static final Block brittleLeaves       = new BlockModLeaves().setName("brittleLeaves").setHardness(0.1F);
-	public static final Block berryBush           = new BlockModLeaves().setName("berryBush").setHardness(0.1F);//Spawns on ground, drops winterBerries
+	public static final Block winterberryBush     = new BlockModLeaves().setName("winterberryBush").setHardness(0.1F);//Spawns on ground, drops winterberries
 
 	public static final Block icyStone       	  = new IceikaBlock(rock).setName("icyStone").setHardness(6.0F); //TODO: Make destructible only by explosion
 	public static final Block icyBricks       	  = new IceikaBlock(rock).setName("icyBricks").setHardness(6.0F); //TODO: Make destructible only by explosion
