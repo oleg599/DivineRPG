@@ -47,7 +47,7 @@ public class TwilightBlocks {
 
     public static final Block twilightStone   		= new TwilightBlock(rock).setName("twilightStone");
     public static final Block blueFire        		= new BlockBlueFire().setName("blueFire");
-    public static final BlockEdenPortal edenPortal  = (BlockEdenPortal)new BlockEdenPortal();
+    public static final BlockEdenPortal edenPortal  = (BlockEdenPortal)new BlockEdenPortal().setName("edenPortal");
     public static final Block twilightFurnace 		= new BlockTwilightFurnace(false).setName("twilightFurnace");
     public static final Block twilightFurnaceOn 	= new BlockTwilightFurnace(true).setName("twilightFurnaceOn");
     

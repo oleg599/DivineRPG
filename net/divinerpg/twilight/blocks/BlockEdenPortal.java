@@ -31,7 +31,7 @@ public class BlockEdenPortal extends BlockBreakable
 
 	public String name;
 	public BlockEdenPortal() {
-		super("portal", Material.portal, false);
+		super(Reference.PREFIX + "edenPortal", Material.portal, false);
 		this.setTickRandomly(true);
 		LangRegistry.addBlock(this);
 		setCreativeTab(DivineRPGTabs.blocks);
