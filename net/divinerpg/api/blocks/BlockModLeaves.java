@@ -18,10 +18,9 @@ public class BlockModLeaves extends BlockMod
 	int[] adjacentTreeBlocks;
 	String name;
 	private static SoundType grass = Block.soundTypeGrass;
-    private static Material leaf = Material.leaves;
 
 	public BlockModLeaves() {
-		super(leaf);
+		super(Material.leaves);
         this.setHardness(0.2F);
         this.setLightOpacity(1);
         this.setTickRandomly(true);
