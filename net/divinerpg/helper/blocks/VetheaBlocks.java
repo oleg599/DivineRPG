@@ -14,6 +14,7 @@ import net.divinerpg.api.blocks.BlockModSpawner;
 import net.divinerpg.api.blocks.BlockModVine;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.twilight.blocks.BlockBlueFire;
+import net.divinerpg.vethea.blocks.BlockAcid;
 import net.divinerpg.vethea.blocks.BlockKarosHeatTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -62,7 +63,7 @@ public class VetheaBlocks {
     public static final Block             karosHeatTileRed       = new BlockKarosHeatTile(true).setName("KarosHeatTileRed").setBlockUnbreakable().setCreativeTab(DivineRPGTabs.vethea);
     public static final Block             firewood               = new BlockModLog().setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
     public static final Block             bacterialAcid          = new BlockBacterialAcid().setName("VetheaPortal").setUnlocalizedName("bacterialAcid").setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
-    public static final Block             blockAcid              = new BlockAcid().setName("VetheaPortal").setUnlocalizedName("blockAcid").setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
+    public static final Block             blockAcid              = new BlockAcid().setName("VetheaPortal").setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
     public static final Block             everstone              = new BlockMod(Material.rock).setName("GreenEverstone").setBlockUnbreakable().setCreativeTab(DivineRPGTabs.vethea);
     public static final Block             lunicAcid              = new BlockLunicAcid(141).setName("VetheaPortal").setUnlocalizedName("lunicAcid").setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
     public static final Block             firewoodLeaves         = new BlockModLeaves().setName("firewoodLeaves").setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
