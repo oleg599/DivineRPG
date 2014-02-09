@@ -22,7 +22,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class DivineAPI {
 
-	static int mobID = 121, projectileID = 230;
+	static int mobID = 110, projectileID = 230;
 	
 	private static Object reflectionFactory = null;
     private static Method newConstructorAccessor = null;
@@ -54,12 +54,11 @@ public class DivineAPI {
 
 	public static void registerDivineRPGMob(Class entityClass, String entityName) {
 		mobName = entityName;
-		int entityID = EntityRegistry.findGlobalUniqueEntityId();
+		int entityID = getUniqueID();
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, entityID);
 		LanguageRegistry.instance().addStringLocalization("entity." + entityName + ".name", entityName);
-		int ID = getUniqueID(); 
-		EntityList.IDtoClassMapping.put(ID, entityClass);
-		EntityList.entityEggs.put(ID, new EntityEggInfo(ID, 0x000000, 0xFFFFFF));
+		EntityList.IDtoClassMapping.put(entityID, entityClass);
+		EntityList.entityEggs.put(entityID, new EntityEggInfo(entityID, 0x000000, 0xFFFFFF));
 	}
 
 	public static void registerProjectile(Class entityClass, String entityName) {
@@ -69,11 +68,11 @@ public class DivineAPI {
 	}
 
 	private static int getUniqueID() {
-		return mobID++;
+		return EntityRegistry.findGlobalUniqueEntityId();
 	}
 
 	private static int getProjectileID() {
-		return projectileID++;
+		return EntityRegistry.findGlobalUniqueEntityId();
 	}
 	
 	public static ArmorMaterial addArmorMaterial(String name, int durability, int[] oldArmor, int enchantability) {

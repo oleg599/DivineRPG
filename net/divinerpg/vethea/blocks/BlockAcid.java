@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.IBlockAccess;
@@ -68,11 +69,10 @@ public class BlockAcid extends BlockMod
      * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
      */
     @Override
-    public boolean canPlaceBlockAt(World par1World, int par2, int par3, int par4)
+    public boolean canPlaceBlockAt(World world, int par2, int par3, int par4)
     {
-        Block var5 = par1World.getBlock(par2, par3 - 1, par4);
-        Block block = Block.blocksList[var5];
-        return block != null && (block.isLeaves(par1World, par2, par3 - 1, par4) || Block.blocksList[var5].isOpaqueCube()) ? par1World.getBlockMaterial(par2, par3 - 1, par4).blocksMovement() : false;
+        Block block = world.getBlock(par2, par3 - 1, par4);
+        return block != Blocks.ice && block != Blocks.packed_ice ? (block.isLeaves(world, par2, par3 - 1, par4) ? true : (block == this && (world.getBlockMetadata(par2, par2 - 1, par3) & 7) == 7 ? true : block.isOpaqueCube() && block.getMaterial().blocksMovement())) : false;
     }
 
     /**
@@ -80,7 +80,7 @@ public class BlockAcid extends BlockMod
      * their own) Args: x, y, z, neighbor blockID
      */
     @Override
-    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
+    public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, Block par5)
     {
         this.canSnowStay(par1World, par2, par3, par4);
     }

@@ -2,9 +2,12 @@ package net.divinerpg.twilight.blocks;
 
 import java.util.Random;
 
+import net.divinerpg.Reference;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
@@ -18,6 +21,7 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.Direction;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -25,10 +29,12 @@ public class BlockEdenPortal extends BlockBreakable
 {
 	public static final int[][] field_150001_a = new int[][] {new int[0], {3, 1}, {2, 0}};
 
-	public BlockEdenPortal()
-	{
+	public String name;
+	public BlockEdenPortal() {
 		super("portal", Material.portal, false);
 		this.setTickRandomly(true);
+		LangRegistry.addBlock(this);
+		setCreativeTab(DivineRPGTabs.blocks);
 	}
 
 	/**
@@ -463,4 +469,47 @@ public class BlockEdenPortal extends BlockBreakable
 			}
 		}
 	}
+	
+    public Block setTextureName(String name) {
+        return setBlockTextureName(Reference.PREFIX + name);
+    }
+
+    public Block setName(String name) {
+        this.name = name;
+        setTextureName(name);
+        setBlockName(name);
+        register();
+        return this;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTextureName() {
+        return Reference.PREFIX + name;
+    }
+
+    public void register() {
+        int numChars = 0;
+        char firstLetter = name.charAt(0);
+        if (Character.isLowerCase(firstLetter))
+            firstLetter = Character.toUpperCase(firstLetter);
+        String inGame = name.substring(1);
+        for (int k = 0; k < name.length(); k++) {
+            char c = name.charAt(k);
+            int code = (int) c;
+
+            if (k != 0) {
+                for (int p = 65; p < 90; p++) {
+                    if (code == p) {
+                        numChars++;
+                        if (numChars == 1) inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
+                        else inGame = new StringBuffer(inGame).insert(k, " ").toString();
+                    }
+                }
+            }
+        }
+        GameRegistry.registerBlock(this, name);
+    }
 }
