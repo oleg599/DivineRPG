@@ -21,7 +21,7 @@ public class BlockModSpawner extends BlockContainer {
         super(Material.rock);
         this.mobName = mobName;
         this.setBlockName(mobName);
-        setCreativeTab(DivineRPGTabs.blocks);
+        this.setCreativeTab(DivineRPGTabs.spawner);
         if(isVethean){
         	this.setTextureName("fireCrystal");
         }
