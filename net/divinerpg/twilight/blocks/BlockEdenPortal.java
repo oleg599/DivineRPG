@@ -8,6 +8,8 @@ import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
+import net.divinerpg.twilight.entity.fx.EntityEdenPortalFX;
+import net.divinerpg.twilight.entity.fx.EntityMortumPortalFX;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
@@ -21,6 +23,7 @@ import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.Direction;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -250,11 +253,6 @@ public class BlockEdenPortal extends BlockBreakable
 	@SideOnly(Side.CLIENT)
 	public void randomDisplayTick(World p_149734_1_, int p_149734_2_, int p_149734_3_, int p_149734_4_, Random p_149734_5_)
 	{
-		if (p_149734_5_.nextInt(100) == 0)
-		{
-			p_149734_1_.playSound((double)p_149734_2_ + 0.5D, (double)p_149734_3_ + 0.5D, (double)p_149734_4_ + 0.5D, "portal.portal", 0.5F, p_149734_5_.nextFloat() * 0.4F + 0.8F, false);
-		}
-
 		for (int l = 0; l < 4; ++l)
 		{
 			double d0 = (double)((float)p_149734_2_ + p_149734_5_.nextFloat());
@@ -279,7 +277,8 @@ public class BlockEdenPortal extends BlockBreakable
 				d5 = (double)(p_149734_5_.nextFloat() * 2.0F * (float)i1);
 			}
 
-			p_149734_1_.spawnParticle("portal", d0, d1, d2, d3, d4, d5);
+			EntityEdenPortalFX var20 = new EntityEdenPortalFX(p_149734_1_, d0, d1, d2, d3, d4, d5);
+            FMLClientHandler.instance().getClient().effectRenderer.addEffect(var20);
 		}
 	}
 
