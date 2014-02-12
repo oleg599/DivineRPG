@@ -21,11 +21,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 
 	private double damageReduction;
-	String name;
+	private String name;
 	public static boolean unbreakable;
-	int durability;
+	private int durability;
 	private static String PREFIX = Reference.PREFIX + "textures/armor/";
-	private int type;
 	private int damRe;
 
 	/**
@@ -45,15 +44,13 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		else if (par1 == 3) {
 			damageReduction = (((damReduct*4)/24)*4)/100;
 		}
-		
+
 		unbreakable = undamageable; //This is not working because it registers the boolean while the game is starting so it just takes the last one given. TODO: find solution.
 		LangRegistry.addItem(this);
 		setCreativeTab(DivineRPGTabs.armor);
-		setMaxStackSize(1);
-		this.setArmorType(type, par2);
-		this.type = par1;
+		setArmorType(type, par2);
 	}
-	
+
 	/**
 	 * Constructor to use if no damage reduction
 	 */
@@ -62,31 +59,22 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		this.unbreakable = undamageable; //This is not working because it registers the boolean while the game is starting so it just takes the last one given. TODO: find solution.
 		LangRegistry.addItem(this);
 		setCreativeTab(DivineRPGTabs.armor);
-		setMaxStackSize(1);
 		setArmorType(type, par2);
 	}
 
 	private void setArmorType(String type, int par2) {
-		switch(par2) {
-		case 0:
+		if(armorType == 0 || armorType == 1 || armorType == 3)
 			this.PREFIX += type + "_1.png";
-			break;
-		case 1:
-			this.PREFIX += type + "_1.png";
-			break;
-		case 2:
+
+		else
 			this.PREFIX += type + "_2.png";
-			break;
-		case 3:
-			this.PREFIX += type + "_1.png";
-			break;
-		}
 	}
-	
-	public String getArmorTexture (ItemStack stack, Entity entity, int slot, int layer) {
-		return this.PREFIX;
+
+	@Override
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
+		return PREFIX;
 	}
-	
+
 	@Override
 	public void addInformation(ItemStack item, EntityPlayer par2EntityPlayer, List list, boolean par4) {
 		double roundPH = Math.round(damageReduction*1000);
@@ -95,12 +83,12 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		list.add(!unbreakable ? (item.getMaxDamage() - item.getItemDamage() + " Uses Remaining") : "Unlimited Uses");
 		ArmorInformation.addInfo(item, par2EntityPlayer, list, par4);
 	}
-	
+
 	@Override
 	public boolean isDamageable() {
 		return !unbreakable;
 	}
-	
+
 	@Override
 	public void damageArmor(EntityLivingBase var1, ItemStack var2, DamageSource var3, int var4, int var5) {
 		if(!unbreakable){
@@ -119,8 +107,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		return new ISpecialArmor.ArmorProperties(0, damageReduction, 50000);
 	}
 
-	public Item setTextureName(String par1Str)
-	{
+	public Item setTextureName(String par1Str) {
 		this.iconString = (Reference.PREFIX + par1Str);
 		return this;
 	}
