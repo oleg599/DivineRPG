@@ -22,12 +22,12 @@ public class ConfigurationHelper {
 
 	public static boolean keepLoadingEden, keepLoadingWildWoods, keepLoadingApalachia, keepLoadingSkythern, keepLoadingMortum,
 	keepLoadingVethea, keepLoadingArcana, keepLoadingIceika;
-	public static boolean canShowDeathChat;
+	public static boolean canShowDeathChat, canShowIngameVersion;
 
 	public static int Eden, WildWoods, Apalachia, Skythern, Mortum, Vethea, Arcana, Iceika;
 	public static int EdenBiome, WildWoodsBiome, ApalachiaBiome, SkythernBiome, MortumBiome, VetheaBiome, ArcanaBiome, IceikaBiome;
 
-	static void dimensionInit(){
+	public static void dimensionInit(){
 		EdenBiome = cfg.get("Dimension", "Eden Biome ID", 40).getInt();
 		WildWoodsBiome = cfg.get("Dimension", "The Wild Woods Biome ID", 41).getInt();
 		ApalachiaBiome = cfg.get("Dimension", "Apalcha Biome ID", 42).getInt();
@@ -57,7 +57,8 @@ public class ConfigurationHelper {
 	}	
 	
 	public static void miscInit(){
-		canShowDeathChat = true;//cfg.get("Chat", "Can Show Death Chat For DivineRPG Mobs", true).getBoolean(true);
+		canShowDeathChat = cfg.get("GUI", "Can Show Death Chat For DivineRPG Mobs", true).getBoolean(true);
+		canShowIngameVersion = cfg.get("GUI", "Can Show in-game version text in top left corner", true).getBoolean(true);
 	}
 
 	public static int getConfig(String name) {
