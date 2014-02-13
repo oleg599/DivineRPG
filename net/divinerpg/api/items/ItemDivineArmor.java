@@ -8,6 +8,7 @@ import net.divinerpg.helper.items.TwilightItems;
 import net.divinerpg.helper.items.VanillaItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -63,11 +64,12 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	}
 
 	private void setArmorType(String type, int par2) {
-		if(armorType == 0 || armorType == 1 || armorType == 3)
-			this.PREFIX += type + "_1.png";
-
-		else
-			this.PREFIX += type + "_2.png";
+		if(par2 == 0 || par2 == 1 || par2 == 3) {
+			PREFIX += type + "_1.png";
+		}
+		else {
+			PREFIX += type + "_2.png";
+		}
 	}
 
 	@Override
