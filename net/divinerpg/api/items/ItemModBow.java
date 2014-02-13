@@ -67,44 +67,6 @@ public class ItemModBow extends ItemBow {
 		}
 	}
 
-	public Item setTextureName(String par1Str) {
-		this.iconString = (Reference.PREFIX + par1Str);
-		return this;
-	}
-
-	public Item setName(String name) {
-		this.name = name;
-		setUnlocalizedName(name);
-		register();
-		return this;
-	}
-
-	public void register() {
-		int numChars = 0;
-		char firstLetter = name.charAt(0);
-		if (Character.isLowerCase(firstLetter))
-			firstLetter = Character.toUpperCase(firstLetter);
-		String inGame = name.substring(1);
-		for (int k = 0; k < name.length(); k++) {
-			char c = name.charAt(k);
-			int code = (int) c;
-
-			if (k != 0) {
-				for (int p = 65; p < 90; p++) {
-					if (code == p) {
-						numChars++;
-						if (numChars == 1)
-							inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-						else
-							inGame = new StringBuffer(inGame).insert(k, " ").toString();
-					}
-				}
-			}
-		}
-		String finalName = firstLetter + inGame;
-		GameRegistry.registerItem(this, name);
-	}
-
 	@SideOnly(Side.CLIENT)
 	@Override
 	public IIcon getItemIconForUseDuration(int par1) {
@@ -205,7 +167,7 @@ public class ItemModBow extends ItemBow {
 
 	@Override
 	public void addInformation(ItemStack item, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-		par3List.add(damage + " Ranged Damage");
+		par3List.add(damage + " Max Ranged Damage");
 		double speed = (double) DEFAULT_MAX_USE_DURACTION / (double) getMaxItemUseDuration(item);
 		if (speed > 1)
 			par3List.add(speed + " Times Faster");
@@ -236,4 +198,42 @@ public class ItemModBow extends ItemBow {
 	public Item getItem() {
 		return arrow;
 	}
+	
+	public Item setTextureName(String par1Str) {
+        this.iconString = (Reference.PREFIX + par1Str);
+        return this;
+    }
+
+    public Item setName(String name) {
+        this.name = name;
+        setUnlocalizedName(name);
+        register();
+        return this;
+    }
+
+    public void register() {
+        int numChars = 0;
+        char firstLetter = name.charAt(0);
+        if (Character.isLowerCase(firstLetter))
+            firstLetter = Character.toUpperCase(firstLetter);
+        String inGame = name.substring(1);
+        for (int k = 0; k < name.length(); k++) {
+            char c = name.charAt(k);
+            int code = (int) c;
+
+            if (k != 0) {
+                for (int p = 65; p < 90; p++) {
+                    if (code == p) {
+                        numChars++;
+                        if (numChars == 1)
+                            inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
+                        else
+                            inGame = new StringBuffer(inGame).insert(k, " ").toString();
+                    }
+                }
+            }
+        }
+        String finalName = firstLetter + inGame;
+        GameRegistry.registerItem(this, name);
+    }
 }
