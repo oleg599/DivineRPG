@@ -96,7 +96,7 @@ public class EntityDisk extends EntityThrowable
 
                 this.bounces++;
 
-                if (this.bounces == 6)
+                if (this.bounces == 20)
                 {
 
                     if (!this.worldObj.isRemote)
