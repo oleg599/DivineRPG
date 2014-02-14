@@ -37,7 +37,7 @@ public class ItemModBow extends ItemBow {
 
 	Item arrow;
 
-	public static final String[] texture = {"_1", "_2", "_3"};
+	public static final String[] texture = {"_0", "_1", "_2", "_3"};
 
 	public ItemModBow(int uses, int damage, Item arrow) {
 		this(uses, damage, DEFAULT_MAX_USE_DURACTION, arrow);
@@ -54,16 +54,15 @@ public class ItemModBow extends ItemBow {
 		this.setCreativeTab(DivineRPGTabs.ranged);
 		LangRegistry.addItem(this);
 	}
-
-	@SideOnly(Side.CLIENT)
+	
 	public void registerIcons(IIconRegister icon) {
 		String prefix = Reference.MOD_ID + ":" + this.name;
 		this.itemIcon = icon.registerIcon(prefix + "_0");
 		this.IIconArray = new IIcon[texture.length];
-
-		for (int i = 0; i < this.IIconArray.length; ++i)
+		for (int N = 0; N < 4; N++)
 		{
-			this.IIconArray[i] = icon.registerIcon(prefix + texture[i]);
+			this.IIconArray[N] = icon.registerIcon(prefix + texture[N]);
+
 		}
 	}
 
@@ -71,6 +70,30 @@ public class ItemModBow extends ItemBow {
 	@Override
 	public IIcon getItemIconForUseDuration(int par1) {
 		return this.IIconArray[par1];
+	}
+	
+	public IIcon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining)
+	{
+		if(player.getItemInUse() == null) return this.itemIcon;
+
+		int Pulling = stack.getMaxItemUseDuration() - useRemaining;
+
+		if (Pulling >= 18)
+		{
+			return IIconArray[3];
+		}
+
+		else if (Pulling > 13)
+		{
+			return IIconArray[2];
+		}
+
+		else if (Pulling > 0)
+		{
+			return IIconArray[1];
+		}	   
+
+		return IIconArray[0];
 	}
 
 	@Override
