@@ -9,6 +9,7 @@ import net.divinerpg.helper.event.EventArmorFullSet;
 import net.divinerpg.helper.event.EventBucketFill;
 import net.divinerpg.helper.event.EventClientLogin;
 import net.divinerpg.helper.event.EventOverlay;
+import net.divinerpg.helper.items.VanillaItems;
 import net.divinerpg.helper.mobs.IceikaMobRegistry;
 import net.divinerpg.helper.mobs.OverworldMobRegistry;
 import net.divinerpg.helper.mobs.TwilightMobRegistry;
@@ -18,7 +19,12 @@ import net.divinerpg.helper.recipes.VanillaRecipeHelper;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
 import net.divinerpg.vanilla.worldgen.WorldGenOverworld;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fluids.FluidContainerRegistry;
+import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
+import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -60,7 +66,7 @@ public class CommonProxy {
 	}
 	
 	public void postInit(FMLPostInitializationEvent event){
-		
+		FluidContainerRegistry.registerFluidContainer(new FluidContainerData(FluidRegistry.getFluidStack(DivineRPG.Mod.getName(), FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(VanillaItems.tarBucket), new ItemStack(Items.bucket)));
 	}
 	
 }

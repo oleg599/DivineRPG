@@ -1,9 +1,11 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.*;
+import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.material.ArmorMaterialMod;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
+import net.divinerpg.vanilla.blocks.VanillaBlock;
 import net.divinerpg.vanilla.items.*;
 import net.minecraft.item.Item;
 
@@ -248,6 +250,6 @@ public class VanillaItems {
     public static final Item leatherLegs 		= new ItemDivineArmor(ArmorMaterialMod.Leather, LEGS, 2, 2.5D, false, "leather").setName("leatherLegs");
     public static final Item leatherBoots 		= new ItemDivineArmor(ArmorMaterialMod.Leather, BOOTS, 3, 2.5D, false, "leather").setName("leatherBoots");
     
-    //public static final Item bucketTar 			= new ItemBucketTar().setName("bucketOfTar");
+    public static final Item tarBucket 			= new ItemTarBucket(VanillaBlocks.tar).setName("bucketOfTar");
     
 }

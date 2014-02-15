@@ -23,7 +23,7 @@ public class DivineRPGTabs {
 	public static CreativeTabs spawner = new CreativeTabs("Spawner")
 		{public Item getTabIconItem() {return VanillaItems.callWatcher;}};
 	public static CreativeTabs utility = new CreativeTabs("Utility")
-		{public Item getTabIconItem() {return VanillaItems.noImage;}};
+		{public Item getTabIconItem() {return VanillaItems.tarBucket;}};
 	public static CreativeTabs food = new CreativeTabs("Herbalism")
 		{public Item getTabIconItem() {return VanillaItems.bacon;}};
 	public static CreativeTabs vethea = new CreativeTabs("Vethea")

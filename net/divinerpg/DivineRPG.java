@@ -1,5 +1,7 @@
 package net.divinerpg;
 
+import net.divinerpg.api.blocks.ModFluid;
+import net.minecraftforge.fluids.Fluid;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -19,6 +21,8 @@ public class DivineRPG {
 	
 	//Awesome seed: 1414274842007233730
 	
+	public static Fluid Mod = new ModFluid("Fluid");
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		proxy.renderThings();
@@ -34,12 +38,4 @@ public class DivineRPG {
 	public void postInit(FMLPostInitializationEvent event){
 		proxy.postInit(event);
 	}
-	
-	/**REMINDERS OF THE UN-NAMED FUNC_^&!!)&_!**/
-	//func_149672_a(); >> setMaterial();
-	//func_149647_a(); >> setCreativeTab();
-	//setBlockName("") >> setUnlocalizedName();
-	//IIconRegister >> IconRegister
-	//IIcon >> Icon
-	//setBlockTexture("") >> setTexture("");
 }

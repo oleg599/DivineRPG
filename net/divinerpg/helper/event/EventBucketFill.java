@@ -31,9 +31,9 @@ public class EventBucketFill {
 
 	public ItemStack getLiquid(World w, MovingObjectPosition m){
 		Block block = w.getBlock(m.blockX, m.blockY, m.blockZ);
-		/*if(block == VanillaBlocks.tar){
+		if(block == VanillaBlocks.tar){
 			return new ItemStack(VanillaItems.tarBucket);
-		}*/
+		}
 
 		return null;
 	}
