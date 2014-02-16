@@ -12,6 +12,7 @@ import net.divinerpg.helper.material.ArmorMaterialMod;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.twilight.items.ItemTwilightBlitz;
+import net.divinerpg.twilight.items.ItemTwilightClock;
 import net.divinerpg.twilight.items.ItemTwilightPhaser;
 import net.divinerpg.twilight.items.ItemTwilightSpawner;
 import net.divinerpg.vanilla.items.ItemThrowable;
@@ -103,7 +104,7 @@ public class TwilightItems {
     public static final Item mortumPhaser       = new ItemTwilightPhaser(46, 0).setName("mortumPhaser");
     public static final Item halitePhaser       = new ItemTwilightPhaser(51, 0).setName("halitePhaser");
 
-    public static final Item twilightClock 		= new ItemMod().setName("twilightClock");
+    public static final Item twilightClock 		= new ItemTwilightClock().setName("twilightClock");
     
     public static final Item edenArrow          = new ItemMod().setName("edenArrow").setCreativeTab(DivineRPGTabs.ranged);
     public static final Item wildWoodArrow      = new ItemMod().setName("wildWoodArrow").setCreativeTab(DivineRPGTabs.ranged);
