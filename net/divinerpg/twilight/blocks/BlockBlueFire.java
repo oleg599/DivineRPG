@@ -442,7 +442,7 @@ public class BlockBlueFire extends BlockFire {
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister p_149651_1_)
     {
-        this.field_149850_M = new IIcon[] {p_149651_1_.registerIcon("fire_layer_0"), p_149651_1_.registerIcon("fire_layer_1")};
+        this.field_149850_M = new IIcon[] {p_149651_1_.registerIcon(Reference.PREFIX + "blueFire_0"), p_149651_1_.registerIcon(Reference.PREFIX + "blueFire_1")};
     }
 
     @SideOnly(Side.CLIENT)
