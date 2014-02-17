@@ -64,7 +64,7 @@ public class ItemTwilightClock extends ItemMod {
                 par3World.setBlock(par4, par5, par6, TwilightBlocks.blueFire);
                 
             }
-            return bFull3D;
+            return true;
         }
     }
 }
