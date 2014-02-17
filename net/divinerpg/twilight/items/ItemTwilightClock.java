@@ -11,60 +11,30 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class ItemTwilightClock extends ItemMod {
+
 	public ItemTwilightClock(){
 		super();
 		setCreativeTab(DivineRPGTabs.spawner);
 		LangRegistry.addItem(this);
 	}
-	
+
 	@Override
-	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
-    {
-        if (par7 == 0)
-        {
-            --par5;
-        }
+	public boolean onItemUse(ItemStack var1, EntityPlayer var2, World var3, int var4, int var5, int var6, int var7, float var8, float var9, float var10) {
+		if (var7 != 1)
+			return false;
+		
+		else if (var2.canPlayerEdit(var4, var5, var6, var7, var1) && var2.canPlayerEdit(var4, var5 + 1, var6, var7, var1)) {
+			Block var11 = var3.getBlock(var4, var5, var6);
 
-        if (par7 == 1)
-        {
-            ++par5;
-        }
-
-        if (par7 == 2)
-        {
-            --par6;
-        }
-
-        if (par7 == 3)
-        {
-            ++par6;
-        }
-
-        if (par7 == 4)
-        {
-            --par4;
-        }
-
-        if (par7 == 5)
-        {
-            ++par4;
-        }
-
-        if (!par2EntityPlayer.canPlayerEdit(par4, par5, par6, par7, par1ItemStack))
-        {
-            return false;
-        }
-        else
-        {
-        	Block par11 = par3World.getBlock(par4, par5, par6);
-        	
-            if (par11 == VanillaBlocks.divineRock && par3World.isAirBlock(par4, par5, par6))
-            {
-                par3World.playSoundEffect((double)par4 + 0.5D, (double)par5 + 0.5D, (double)par6 + 0.5D, "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
-                par3World.setBlock(par4, par5, par6, TwilightBlocks.blueFire);
-                
-            }
-            return true;
-        }
-    }
+			if (var11 == VanillaBlocks.divineRock && var3.isAirBlock(var4, var5 + 1, var6)) {
+				var3.playSoundEffect((double)var4 + 0.5D, (double)var5 + 0.5D, (double)var6 + 0.5D, "fire.ignite", 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
+				var3.setBlock(var4, var5 + 1, var6, TwilightBlocks.blueFire);
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
+	}
 }
