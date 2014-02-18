@@ -6,15 +6,19 @@ import net.divinerpg.Reference;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.VanillaItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -136,7 +140,11 @@ public class TwilightBlock extends Block
 
 		String finalName = firstLetter + inGame;
 		GameRegistry.registerBlock(this, name);
-		LanguageRegistry.addName(this, finalName);
 		return this;
 	}
+	
+    @Override
+    public Item getItem(World par1World, int par2, int par3, int par4) {
+        return Item.getItemFromBlock(this);
+    }
 }

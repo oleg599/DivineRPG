@@ -32,14 +32,19 @@ public class BlockWildwoodPortal extends BlockBreakable
 {
 	public static final int[][] field_150001_a = new int[][] {new int[0], {3, 1}, {2, 0}};
 
-	public String name;
+	public static String name;
 	public BlockWildwoodPortal() {
-		super(Reference.PREFIX + "wildwoodPortal", Material.portal, false);
+		super(Reference.PREFIX + "wildWoodPortal", Material.portal, false);
 		this.setTickRandomly(true);
 		LangRegistry.addBlock(this);
 		setCreativeTab(DivineRPGTabs.blocks);
 	}
 
+    @Override
+    public Item getItem(World par1World, int par2, int par3, int par4) {
+        return Item.getItemFromBlock(this);
+    }
+	
 	/**
 	 * Ticks the block if it's been scheduled
 	 */
@@ -286,16 +291,7 @@ public class BlockWildwoodPortal extends BlockBreakable
 	{
 		return p_149999_0_ & 3;
 	}
-
-	/**
-	 * Gets an item for the block being called on. Args: world, x, y, z
-	 */
-	@SideOnly(Side.CLIENT)
-	public Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
-	{
-		return Item.getItemById(0);
-	}
-
+	
 	public static class Size
 	{
 		private final World field_150867_a;

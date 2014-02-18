@@ -14,7 +14,7 @@ public class ItemTwilightClock extends ItemMod {
 
 	public ItemTwilightClock(){
 		super();
-		setCreativeTab(DivineRPGTabs.spawner);
+		setCreativeTab(DivineRPGTabs.utility);
 		LangRegistry.addItem(this);
 	}
 

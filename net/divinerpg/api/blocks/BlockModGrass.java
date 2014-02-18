@@ -4,21 +4,25 @@ import java.util.Random;
 
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
+import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.common.util.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockModGrass extends BlockMod {
+public class BlockModGrass extends BlockMod implements IGrowable{
 
-	IIcon top;
-	IIcon bottom;
-	IIcon side;
-    Block grass;
-    Block dirt;
+	private IIcon top;
+	private IIcon bottom;
+	private IIcon side;
+	private Block grass;
+	private Block dirt;
 	
     public BlockModGrass(Block Grass, Block Dirt, String name) {
         super(Material.grass);
@@ -71,23 +75,28 @@ public class BlockModGrass extends BlockMod {
         }
     }
 
-    /**
-     * Returns the ID of the items to drop on destruction.
-     */
     @Override
     public Item getItemDropped(int par1, Random par2Random, int par3) {
         return getBlock(dirt);
     }
     
-    public boolean func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, boolean p_149851_5_)
-    {
+    @Override
+    public boolean canSustainPlant(IBlockAccess world, int x, int y, int z, ForgeDirection direction, IPlantable plantable) {
+    	return true;
+    }
+    
+    public boolean func_149851_a(World p_149851_1_, int p_149851_2_, int p_149851_3_, int p_149851_4_, boolean p_149851_5_) {
         return true;
     }
 
-    public boolean func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_)
-    {
+    public boolean func_149852_a(World p_149852_1_, Random p_149852_2_, int p_149852_3_, int p_149852_4_, int p_149852_5_) {
         return true;
     }
+
+	@Override
+	public void func_149853_b(World var1, Random var2, int var3, int var4, int var5) {
+		
+	}
     
     public Block setName(String name){
         this.name = name;

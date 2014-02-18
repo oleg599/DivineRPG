@@ -22,9 +22,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockModLog extends BlockRotatedPillar{
 	
-	IIcon top;
-	IIcon side;
-	String name;
+	private IIcon top;
+	private IIcon side;
+	private String name;
     protected IIcon[] sideChange;
     protected IIcon[] topChange;
     

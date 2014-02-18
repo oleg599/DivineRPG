@@ -40,6 +40,11 @@ public class BlockEdenPortal extends BlockBreakable
 		setCreativeTab(DivineRPGTabs.blocks);
 	}
 
+    @Override
+    public Item getItem(World par1World, int par2, int par3, int par4) {
+        return Item.getItemFromBlock(this);
+    }
+	
 	/**
 	 * Ticks the block if it's been scheduled
 	 */
@@ -285,15 +290,6 @@ public class BlockEdenPortal extends BlockBreakable
 	public static int func_149999_b(int p_149999_0_)
 	{
 		return p_149999_0_ & 3;
-	}
-
-	/**
-	 * Gets an item for the block being called on. Args: world, x, y, z
-	 */
-	@SideOnly(Side.CLIENT)
-	public Item getItem(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
-	{
-		return Item.getItemById(0);
 	}
 
 	public static class Size

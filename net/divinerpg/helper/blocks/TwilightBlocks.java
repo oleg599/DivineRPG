@@ -48,10 +48,10 @@ public class TwilightBlocks {
     public static final Block twilightStone   			 = new TwilightBlock(rock).setName("twilightStone");
     public static final Block blueFire        			 = new BlockBlueFire().setName("blueFire");
     public static final BlockEdenPortal edenPortal  	 = (BlockEdenPortal)new BlockEdenPortal().setName("edenPortal");
-    public static final BlockWildwoodPortal wildwoodPortal   = (BlockWildwoodPortal)new BlockWildwoodPortal().setName("wildwoodPortal");
-    public static final BlockEdenPortal apalachiaPortal  = (BlockEdenPortal)new BlockEdenPortal().setName("apalachiaPortal");
-    public static final BlockEdenPortal skythernPortal   = (BlockEdenPortal)new BlockEdenPortal().setName("skythernPortal");
-    public static final BlockEdenPortal mortumPortal     = (BlockEdenPortal)new BlockEdenPortal().setName("mortumPortal");
+    public static final BlockWildwoodPortal wildwoodPortal= (BlockWildwoodPortal)new BlockWildwoodPortal().setName("wildwoodPortal");
+    public static final Block apalachiaPortal  			 = new TwilightBlock(rock).setName("apalachiaPortal");
+    public static final Block skythernPortal   			 = new TwilightBlock(rock).setName("skythernPortal");
+    public static final Block mortumPortal     			 = new TwilightBlock(rock).setName("mortumPortal");
     public static final Block twilightFurnace 			 = new BlockTwilightFurnace(false).setName("twilightFurnace");
     public static final Block twilightFurnaceOn 		 = new BlockTwilightFurnace(true).setName("twilightFurnaceOn");
     

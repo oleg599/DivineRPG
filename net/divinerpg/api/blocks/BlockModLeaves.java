@@ -8,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -178,8 +179,7 @@ public class BlockModLeaves extends BlockMod
 	}
 
 	@Override
-	public boolean isLeaves(IBlockAccess world, int x, int y, int z)
-	{
+	public boolean isLeaves(IBlockAccess world, int x, int y, int z) {
 		return true;
 	}
 
@@ -196,5 +196,10 @@ public class BlockModLeaves extends BlockMod
 	@Override
 	public int getRenderType() {
 		return 0;
+	}
+	
+	@Override
+	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
+		return Item.getItemById(0);
 	}
 }
