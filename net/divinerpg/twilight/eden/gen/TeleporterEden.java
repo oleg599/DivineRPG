@@ -7,7 +7,7 @@ import java.util.Random;
 
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.minecraft.block.Block;
+import net.divinerpg.helper.config.ConfigurationHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ChunkCoordinates;
@@ -31,7 +31,7 @@ public class TeleporterEden {
 
     public void placeInPortal(Entity par1Entity, double par2, double par4, double par6, float par8)
     {
-        if (this.worldServerInstance.provider.dimensionId != 1)
+        if (this.worldServerInstance.provider.dimensionId != ConfigurationHelper.Eden)
         {
             if (!this.placeInExistingPortal(par1Entity, par2, par4, par6, par8))
             {
@@ -455,7 +455,7 @@ public class TeleporterEden {
                     i4 = j2 + k3;
                     j4 = k2 + (j3 - 1) * l2;
                     flag = j3 == 0 || j3 == 3 || k3 == -1 || k3 == 3;
-                    this.worldServerInstance.setBlock(l3, i4, j4, (Block)(flag ? VanillaBlocks.divineRock : TwilightBlocks.edenPortal), 0, 2);
+                    this.worldServerInstance.setBlock(l3, i4, j4, (flag ? VanillaBlocks.divineRock : TwilightBlocks.edenPortal), 0, 2);
                 }
             }
 
@@ -497,7 +497,6 @@ public class TeleporterEden {
 
     public class PortalPosition extends ChunkCoordinates {
         public long lastUpdateTime;
-        private static final String __OBFID = "CL_00000154";
 
         public PortalPosition(int par2, int par3, int par4, long par5)
         {

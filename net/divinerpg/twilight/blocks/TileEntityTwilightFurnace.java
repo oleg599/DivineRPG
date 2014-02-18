@@ -171,7 +171,7 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
     @SideOnly(Side.CLIENT)
     public int getCookProgressScaled(int p_145953_1_)
     {
-        return this.furnaceCookTime * p_145953_1_ / 200;
+        return this.furnaceCookTime * p_145953_1_ / 20;
     }
 
     @SideOnly(Side.CLIENT)
@@ -179,7 +179,7 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
     {
         if (this.currentItemBurnTime == 0)
         {
-            this.currentItemBurnTime = 100;
+            this.currentItemBurnTime = 20;
         }
 
         return this.furnaceBurnTime * p_145955_1_ / this.currentItemBurnTime;
@@ -226,7 +226,7 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
             {
                 ++this.furnaceCookTime;
 
-                if (this.furnaceCookTime == 100)
+                if (this.furnaceCookTime == 20)
                 {
                     this.furnaceCookTime = 0;
                     this.smeltItem();
@@ -264,7 +264,7 @@ public class TileEntityTwilightFurnace extends TileEntity implements ISidedInven
             if (this.furnaceItemStacks[2] == null) return true;
             if (!this.furnaceItemStacks[2].isItemEqual(itemstack)) return false;
             int result = furnaceItemStacks[2].stackSize + itemstack.stackSize;
-            return result <= getInventoryStackLimit() && result <= this.furnaceItemStacks[2].getMaxStackSize(); //Forge BugFix: Make it respect stack sizes properly.
+            return result <= getInventoryStackLimit() && result <= this.furnaceItemStacks[2].getMaxStackSize();
         }
     }
 

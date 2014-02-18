@@ -11,6 +11,7 @@ import net.divinerpg.helper.event.EventClientLogin;
 import net.divinerpg.helper.event.EventOverlay;
 import net.divinerpg.helper.items.VanillaItems;
 import net.divinerpg.helper.mobs.IceikaMobRegistry;
+import net.divinerpg.helper.mobs.MobSpawning;
 import net.divinerpg.helper.mobs.OverworldMobRegistry;
 import net.divinerpg.helper.mobs.TwilightMobRegistry;
 import net.divinerpg.helper.mobs.VetheaMobRegistry;
@@ -58,6 +59,7 @@ public class CommonProxy {
 		}
 		LangRegistry.closeFile();
 		DimensionHelper.init();
+		MobSpawning.addSpawns();
 	}
 	
 	public void init(FMLInitializationEvent event){

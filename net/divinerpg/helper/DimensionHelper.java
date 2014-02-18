@@ -8,19 +8,14 @@ import net.minecraftforge.common.*;
 
 public class DimensionHelper {
 
-
-	public static BiomeGenBase Eden = new BiomeGenEden(ConfigurationHelper.EdenBiome);
-
-	/** The dimension renames:
-	 * Dravite = Eden
-	 * Azurite = The Wild Wood
-	 * Uvite = Apalachia
-	 * Mythril = Skythern
-	 * Augite = Mortum
-	 * Vethea = Vethea
-	 * Iceika = Iceika
-	 * Arcana = Dungen Of Arcana
-	 **/
+	public static BiomeGenBase Eden 		= new BiomeGenEden(ConfigurationHelper.EdenBiome);
+	public static BiomeGenBase WildWoods 	= new BiomeGenEden(ConfigurationHelper.WildWoodsBiome);
+	public static BiomeGenBase Apalachia 	= new BiomeGenEden(ConfigurationHelper.ApalachiaBiome);
+	public static BiomeGenBase Skythern 	= new BiomeGenEden(ConfigurationHelper.SkythernBiome);
+	public static BiomeGenBase Mortum 		= new BiomeGenEden(ConfigurationHelper.MortumBiome);
+	public static BiomeGenBase Iceika 		= new BiomeGenEden(ConfigurationHelper.IceikaBiome);
+	public static BiomeGenBase Vethea 		= new BiomeGenEden(ConfigurationHelper.VetheaBiome);
+	public static BiomeGenBase Arcana 		= new BiomeGenEden(ConfigurationHelper.ArcanaBiome);
 
 	public static void init(){
 		addDimension(ConfigurationHelper.Eden, WorldProviderEden.class, ConfigurationHelper.keepLoadingEden);
