@@ -120,12 +120,12 @@ public class LangRegistry {
 		items.add(item);
 	}
 
-	public static void addMob(){
+	/*public static void addMob(){
 		String name = DivineAPI.mobName;
 		for(int k = 0; k < name.length(); k++){
 			addToFile("entity." + name + ".name=" + name);
 		}
-	}
+	}*/
 
 	public static void addBlockNames(){
 		for(int k = 0; k < blocks.size(); k++){

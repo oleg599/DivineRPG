@@ -17,7 +17,6 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 
 	public EntityDivineRPGMob(World par1World) {
 		super(par1World);
-		LangRegistry.addMob();
 	}
 
 	public void setMaxHP(double d){getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);}

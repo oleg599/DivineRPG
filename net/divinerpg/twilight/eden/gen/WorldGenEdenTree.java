@@ -20,7 +20,7 @@ public class WorldGenEdenTree extends WorldGenAbstractTree
 
     public WorldGenEdenTree(boolean var1)
     {
-        this(var1, 6, 0, 0, false);
+        this(var1, 5, 0, 0, false);
     }
 
     public WorldGenEdenTree(boolean var1, int var2, int var3, int var4, boolean var5) {

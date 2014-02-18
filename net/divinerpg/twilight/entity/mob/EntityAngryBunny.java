@@ -10,7 +10,6 @@ public class EntityAngryBunny extends EntityDivineRPGMob
 	public EntityAngryBunny(World var1)
 	{
 		super(var1);
-		LangRegistry.addMob();
 		this.setSize(1F, 1.5F);
 		this.experienceValue = 40;
 		this.getNavigator().setAvoidsWater(true);
