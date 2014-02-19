@@ -130,7 +130,7 @@ public class EntityMoonWolf extends EntityDivineRPGMob
 
     /**
      * Determines if an entity can be despawned, used on idle far away entities
-     */
+     *
     @Override
     protected boolean canDespawn()
     {

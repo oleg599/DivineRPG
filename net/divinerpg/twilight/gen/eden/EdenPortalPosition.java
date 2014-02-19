@@ -1,4 +1,4 @@
-package net.divinerpg.twilight.eden.gen;
+package net.divinerpg.twilight.gen.eden;
 
 import net.minecraft.util.ChunkCoordinates;
 

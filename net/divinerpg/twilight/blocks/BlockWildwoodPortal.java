@@ -4,12 +4,10 @@ import java.util.Random;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
-import net.divinerpg.twilight.entity.fx.EntityEdenPortalFX;
-import net.divinerpg.twilight.entity.fx.EntityMortumPortalFX;
+import net.divinerpg.twilight.entity.fx.EntityWildWoodPortalFX;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
@@ -83,10 +81,10 @@ public class BlockWildwoodPortal extends BlockBreakable
             {
                 thePlayer.timeUntilPortal = 10;
             }
-            else if (thePlayer.dimension != ConfigurationHelper.Eden)
+            else if (thePlayer.dimension != ConfigurationHelper.WildWoods)
             {
                 thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigurationHelper.Eden);
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigurationHelper.WildWoods);
             }
             else {
                 thePlayer.timeUntilPortal = 10;
@@ -282,7 +280,7 @@ public class BlockWildwoodPortal extends BlockBreakable
 				d5 = (double)(p_149734_5_.nextFloat() * 2.0F * (float)i1);
 			}
 
-			EntityEdenPortalFX var20 = new EntityEdenPortalFX(p_149734_1_, d0, d1, d2, d3, d4, d5);
+			EntityWildWoodPortalFX var20 = new EntityWildWoodPortalFX(p_149734_1_, d0, d1, d2, d3, d4, d5);
             FMLClientHandler.instance().getClient().effectRenderer.addEffect(var20);
 		}
 	}
@@ -387,7 +385,7 @@ public class BlockWildwoodPortal extends BlockBreakable
 							break label56;
 						}
 
-						if (block == TwilightBlocks.wildwoodPortal)
+						if (block == TwilightBlocks.wildWoodPortal)
 						{
 							++this.field_150864_e;
 						}
@@ -441,7 +439,7 @@ public class BlockWildwoodPortal extends BlockBreakable
 
 		protected boolean func_150857_a(Block block)
 		{
-			return block.getMaterial() == Material.air || block == TwilightBlocks.blueFire || block == TwilightBlocks.wildwoodPortal;
+			return block.getMaterial() == Material.air || block == TwilightBlocks.blueFire || block == TwilightBlocks.wildWoodPortal;
 		}
 
 		public boolean func_150860_b()
@@ -459,7 +457,7 @@ public class BlockWildwoodPortal extends BlockBreakable
 				for (int l = 0; l < this.field_150862_g; ++l)
 				{
 					int i1 = this.field_150861_f.posY + l;
-					this.field_150867_a.setBlock(j, i1, k, TwilightBlocks.wildwoodPortal, this.field_150865_b, 2);
+					this.field_150867_a.setBlock(j, i1, k, TwilightBlocks.wildWoodPortal, this.field_150865_b, 2);
 				}
 			}
 		}

@@ -1,7 +1,8 @@
 package net.divinerpg.helper;
 
 import net.divinerpg.helper.config.*;
-import net.divinerpg.twilight.eden.gen.*;
+import net.divinerpg.twilight.gen.eden.*;
+import net.divinerpg.twilight.gen.wildwoods.*;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.*;
 import net.minecraftforge.common.*;
@@ -9,7 +10,7 @@ import net.minecraftforge.common.*;
 public class DimensionHelper {
 
 	public static BiomeGenBase Eden 		= new BiomeGenEden(ConfigurationHelper.EdenBiome);
-	public static BiomeGenBase WildWoods 	= new BiomeGenEden(ConfigurationHelper.WildWoodsBiome);
+	public static BiomeGenBase WildWoods 	= new BiomeGenWildWoods(ConfigurationHelper.WildWoodsBiome);
 	public static BiomeGenBase Apalachia 	= new BiomeGenEden(ConfigurationHelper.ApalachiaBiome);
 	public static BiomeGenBase Skythern 	= new BiomeGenEden(ConfigurationHelper.SkythernBiome);
 	public static BiomeGenBase Mortum 		= new BiomeGenEden(ConfigurationHelper.MortumBiome);
@@ -20,13 +21,13 @@ public class DimensionHelper {
 	public static void init(){
 		addDimension(ConfigurationHelper.Eden, WorldProviderEden.class, ConfigurationHelper.keepLoadingEden);
 
-		/*addDimension(x.WildWoods, WorldProviderWildWood.class, x.keepLoadingWildWoods);
-		addDimension(x.Apalachia, WorldProviderApalachia.class, x.keepLoadingApalachia);
-		addDimension(x.Skythern, WorldProviderSkythern.class, x.keepLoadingSkythern);
-		addDimension(x.Mortum, WorldProviderMortum.class, x.keepLoadingMortum);
-		addDimension(x.Vethea, WorldProviderVethea.class, x.keepLoadingVethea);
-		addDimension(x.Iceika, WorldProviderIceika.class, x.keepLoadingIceika);
-		addDimension(x.Arcana, WorldProviderArcana.class, x.keepLoadingArcana);*/
+		addDimension(ConfigurationHelper.WildWoods, WorldProviderWildWoods.class, ConfigurationHelper.keepLoadingWildWoods);
+		/*addDimension(ConfigurationHelper.Apalachia, WorldProviderApalachia.class, ConfigurationHelper.keepLoadingApalachia);
+		addDimension(ConfigurationHelper.Skythern, WorldProviderSkythern.class, ConfigurationHelper.keepLoadingSkythern);
+		addDimension(ConfigurationHelper.Mortum, WorldProviderMortum.class, ConfigurationHelper.keepLoadingMortum);
+		addDimension(ConfigurationHelper.Vethea, WorldProviderVethea.class, ConfigurationHelper.keepLoadingVethea);
+		addDimension(ConfigurationHelper.Iceika, WorldProviderIceika.class, ConfigurationHelper.keepLoadingIceika);
+		addDimension(ConfigurationHelper.Arcana, WorldProviderArcana.class, ConfigurationHelper.keepLoadingArcana);*/
 
 
 	}

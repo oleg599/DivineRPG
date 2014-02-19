@@ -1,4 +1,4 @@
-package net.divinerpg.twilight.eden.gen;
+package net.divinerpg.twilight.gen.wildwoods;
 
 import java.util.List;
 import java.util.Random;
@@ -26,7 +26,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 
-public class ChunkProviderEden implements IChunkProvider{
+public class ChunkProviderWildWoods implements IChunkProvider{
 
 	private Random rand;
 	private NoiseGeneratorOctaves noiseGen1;
@@ -50,7 +50,7 @@ public class ChunkProviderEden implements IChunkProvider{
 	int[][] field_914_i = new int[32][32];
 	private double[] generatedTemperatures;
 
-	public ChunkProviderEden(World var1, long var2){
+	public ChunkProviderWildWoods(World var1, long var2){
 		this.worldObj = var1;
 		this.rand = new Random(var2);
 		this.noiseGen1 = new NoiseGeneratorOctaves(this.rand, 16);
@@ -174,7 +174,7 @@ public class ChunkProviderEden implements IChunkProvider{
 				int var12 = (int)(this.stoneNoise[var8 + var9 * 16] / 3.0D + 3.0D + this.rand.nextDouble() * 0.25D);
 				int var13 = -1;
 				Block var14 = var10.topBlock;
-				Block var15 = TwilightBlocks.edenGrass;
+				Block var15 = TwilightBlocks.wildWoodGrass;
 
 				for (int var16 = 127; var16 >= 0; --var16)
 				{
@@ -198,12 +198,12 @@ public class ChunkProviderEden implements IChunkProvider{
 							{
 								if (var12 <= 0)
 								{
-									var14 = TwilightBlocks.edenGrass;
-									var15 = TwilightBlocks.edenGrass;
+									var14 = TwilightBlocks.wildWoodGrass;
+									var15 = TwilightBlocks.wildWoodGrass;
 								}
 								else if (var16 >= var5 - 4 && var16 <= var5 + 1)
 								{
-									var14 = TwilightBlocks.edenGrass;
+									var14 = TwilightBlocks.wildWoodGrass;
 									var15 = TwilightBlocks.twilightStone;
 								}
 
@@ -221,10 +221,10 @@ public class ChunkProviderEden implements IChunkProvider{
 								--var13;
 								var3[var17] = var15;
 
-								if (var13 == 0 && var15 == TwilightBlocks.edenGrass)
+								if (var13 == 0 && var15 == TwilightBlocks.wildWoodGrass)
 								{
 									var13 = -1;
-									var15 = TwilightBlocks.edenGrass;
+									var15 = TwilightBlocks.wildWoodGrass;
 								}
 							}
 						}
@@ -388,10 +388,10 @@ public class ChunkProviderEden implements IChunkProvider{
 			var14 = var4 + this.rand.nextInt(16);
 			var15 = this.rand.nextInt(200);
 			var16 = var5 + this.rand.nextInt(16);
-			(new WorldGenMinable(TwilightBlocks.edenOre, 11, TwilightBlocks.twilightStone)).generate(this.worldObj, this.rand, var14, var15, var16);
+			(new WorldGenMinable(TwilightBlocks.wildWoodOre, 11, TwilightBlocks.twilightStone)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
 
-		WorldGenEdenTree var17 = new WorldGenEdenTree(true);
+		WorldGenWildWoodTree var17 = new WorldGenWildWoodTree(true);
 		int var19;
 		int var18;
 		int var21;
@@ -436,7 +436,7 @@ public class ChunkProviderEden implements IChunkProvider{
 
 	@Override
 	public String makeString() {
-		return "Eden";
+		return "Wild Wood";
 	}
 
 	@Override

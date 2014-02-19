@@ -1,4 +1,4 @@
-package net.divinerpg.twilight.eden.gen;
+package net.divinerpg.twilight.gen.eden;
 
 import java.util.ArrayList;
 import java.util.Iterator;
