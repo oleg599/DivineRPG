@@ -57,7 +57,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	 */
 	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, boolean undamageable, String type){
 		this(armor, par1, par2, 0.0D, undamageable, type);	
-		this.unbreakable = undamageable; //This is not working because it registers the boolean while the game is starting so it just takes the last one given. TODO: find solution.
+		this.unbreakable = undamageable; 
 		LangRegistry.addItem(this);
 		setCreativeTab(DivineRPGTabs.armor);
 		setArmorType(type, par2);
