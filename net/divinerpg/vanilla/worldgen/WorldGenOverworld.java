@@ -20,7 +20,7 @@ public class WorldGenOverworld implements IWorldGenerator{
 		case 0:
 			generateOverworld(world, rand, chunkX * 16, chunkZ * 16);
 		case 1:
-			generateNether(world, rand, chunkX * 16, chunkZ * 16);
+			generateEnd(world, rand, chunkX * 16, chunkZ * 16);
 		}
 	}
 
