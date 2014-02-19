@@ -34,36 +34,24 @@ public class BlockKarosCannon extends BlockContainer {
     public static final IRegistry dispenseBehaviorRegistry = new RegistryDefaulted(new BehaviorDefaultDispenseItem());
     private Random random = new Random();
 
-    public BlockKarosCannon(Material par3)
-    {
+    public BlockKarosCannon(Material par3) {
         super(par3);
     }
 
-    /**
-     * How many world ticks before ticking
-     */
-    public int tickRate()
-    {
+    public int tickRate(World w) {
         return 4;
     }
 
-    /**
-     * Returns the ID of the items to drop on destruction.
-     */
     public Item dropItem(int par1, Random par2Random, int par3) {
-        return Item.getItemFromBlock(VetheaBlocks.karosCannon);
+        return Item.getItemFromBlock(this);
     }
-    
-    
 
-    public void onBlockAdded(World par1World, int par2, int par3, int par4)
-    {
+    public void onBlockAdded(World par1World, int par2, int par3, int par4) {
         super.onBlockAdded(par1World, par2, par3, par4);
         this.setDispenserDefaultDirection(par1World, par2, par3, par4);
     }
 
-    private void setDispenserDefaultDirection(World par1World, int par2, int par3, int par4)
-    {
+    private void setDispenserDefaultDirection(World par1World, int par2, int par3, int par4) {
         if (!par1World.isRemote)
         {
             Block block = par1World.getBlock(par2, par3, par4 - 1);
@@ -96,14 +84,12 @@ public class BlockKarosCannon extends BlockContainer {
         }
     }
     
-    public void dispense(World par1World, int par2, int par3, int par4)
-    {
+    public void dispense(World par1World, int par2, int par3, int par4) {
     	this.setDispenserDefaultDirection(par1World, par2, par3, par4);
     	this.func_82486_a(par1World, 0, EnumFacing.getFront(par1World.getBlockMetadata(par2, par3, par4)), par2, par3, par4);
     }
 
-    public void func_82486_a(World par0World, int par2, EnumFacing par3EnumFacing, int par3, int par4, int par5)
-    {
+    public void func_82486_a(World par0World, int par2, EnumFacing par3EnumFacing, int par3, int par4, int par5) {
         double var5 = par3;
         double var7 = par4;
         double var9 = par5;
