@@ -30,25 +30,12 @@ public class WorldGenOverworld implements IWorldGenerator{
 		addOreSpawn(VanillaBlocks.arlemiteOre, world, random, x, z, 16, 16, 2, 3, 1, 15);
 	}
 
-	private void generateNether(World world, Random rand, int chunkX, int chunkZ) {
-		int i, posX, posZ, posY;
-
-		for(i = 0; i < 7; i++){
-			posX = chunkX + rand.nextInt(16);
-			posY = rand.nextInt(128);
-			posZ = chunkZ + rand.nextInt(16);
-			new WorldGenMinable(VanillaBlocks.netheriteOre, 3, Blocks.netherrack).generate(world, rand, posX, posY, posZ);
-		}
-		
-		for(i = 0; i < 7; i++){
-			posX = chunkX + rand.nextInt(16);
-			posY = rand.nextInt(128);
-			posZ = chunkZ + rand.nextInt(16);
-			new WorldGenMinable(VanillaBlocks.bloodgemOre, 3, Blocks.netherrack).generate(world, rand, posX, posY, posZ);
-		}
+	private void generateNether(World world, Random random, int x, int z) {
+		addNetherOreSpawn(VanillaBlocks.netheriteOre, world, random, x, z, 16, 16, 9, 4, 1, 128);
+		addNetherOreSpawn(VanillaBlocks.bloodgemOre, world, random, x, z, 16, 16, 10, 5, 1, 128);
 	}
 	
-	private void generateEnd(World world, Random rand, int chunkX, int chunkZ) { }
+	private void generateEnd(World world, Random random, int x, int z) { }
 	
 	/**
      * Adds an Ore Spawn to Minecraft. Simply register all Ores to spawn with this method in your Generation method in your IWorldGeneration extending Class
@@ -80,6 +67,42 @@ public class WorldGenOverworld implements IWorldGenerator{
             int posY = minY + random.nextInt(diffBtwnMinMaxY);
             int posZ = blockZPos + random.nextInt(maxZ);
             (new WorldGenMinable(block, maxVeinSize)).generate(world, random, posX, posY, posZ);
+        }
+    }
+    
+    public void addNetherOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int chancesToSpawn, int maxVeinSize, int minY, int maxY)
+    {
+        assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
+        assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
+        assert minY > 0 : "addOreSpawn: The Minimum Y must be greater than 0";
+        assert maxY < 256 && maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
+        assert maxZ > 0 && maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
+ 
+        int diffBtwnMinMaxY = maxY - minY;
+        for (int x = 0; x < chancesToSpawn; x++)
+        {
+            int posX = blockXPos + random.nextInt(maxX);
+            int posY = minY + random.nextInt(diffBtwnMinMaxY);
+            int posZ = blockZPos + random.nextInt(maxZ);
+            (new WorldGenMinable(block, maxVeinSize, Blocks.netherrack)).generate(world, random, posX, posY, posZ);
+        }
+    }
+    
+    public void addEndOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int chancesToSpawn, int maxVeinSize, int minY, int maxY)
+    {
+        assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
+        assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
+        assert minY > 0 : "addOreSpawn: The Minimum Y must be greater than 0";
+        assert maxY < 256 && maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
+        assert maxZ > 0 && maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
+ 
+        int diffBtwnMinMaxY = maxY - minY;
+        for (int x = 0; x < chancesToSpawn; x++)
+        {
+            int posX = blockXPos + random.nextInt(maxX);
+            int posY = minY + random.nextInt(diffBtwnMinMaxY);
+            int posZ = blockZPos + random.nextInt(maxZ);
+            (new WorldGenMinable(block, maxVeinSize, Blocks.end_stone)).generate(world, random, posX, posY, posZ);
         }
     }
 }
