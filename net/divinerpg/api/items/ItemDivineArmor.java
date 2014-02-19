@@ -23,9 +23,9 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 
 	private double damageReduction;
 	private String name;
-	public static boolean unbreakable;
+	public boolean unbreakable;
 	private int durability;
-	private static String PREFIX = Reference.PREFIX + "textures/armor/";
+	private String prefix = "divinerpg:textures/armor/";
 	private int damRe;
 
 	/**
@@ -56,7 +56,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	 * Constructor to use if no damage reduction
 	 */
 	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, boolean undamageable, String type){
-		this(armor, par1, par2, 0.0D, unbreakable, type);	
+		this(armor, par1, par2, 0.0D, undamageable, type);	
 		this.unbreakable = undamageable; //This is not working because it registers the boolean while the game is starting so it just takes the last one given. TODO: find solution.
 		LangRegistry.addItem(this);
 		setCreativeTab(DivineRPGTabs.armor);
@@ -65,16 +65,16 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 
 	private void setArmorType(String type, int par2) {
 		if(par2 == 0 || par2 == 1 || par2 == 3) {
-			PREFIX += type + "_1.png";
+			prefix = prefix + type + "_1.png";
 		}
 		else {
-			PREFIX += type + "_2.png";
+			prefix = prefix + type + "_2.png";
 		}
 	}
 
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-		return PREFIX;
+		return prefix;
 	}
 
 	@Override
