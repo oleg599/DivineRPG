@@ -1,8 +1,11 @@
 package net.divinerpg.client;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.divinerpg.Reference;
 import net.divinerpg.Sounds;
+import net.minecraft.entity.Entity;
+import net.minecraft.world.World;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class SoundLoader {
 
@@ -10,7 +13,7 @@ public class SoundLoader {
 	public void load(SoundLoadEvent e){
 		try{
 			for(String sound : Sounds.files){
-				//e.manager. TODO FIND OUT HOW TO ADD A SOUND FILE
+				
 			}
 		} catch(Exception ex) {
 			ex.printStackTrace();

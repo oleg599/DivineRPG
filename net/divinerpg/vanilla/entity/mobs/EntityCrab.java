@@ -2,6 +2,7 @@ package net.divinerpg.vanilla.entity.mobs;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
@@ -98,16 +99,16 @@ public class EntityCrab extends EntityDivineRPGMob {
 		this.randomSoundDelay = this.rand.nextInt(40);
 	}
 
-	protected String getLivingSound() {
-		return "";
+	protected String getLivingSound() {//TODO LEFT THE ERROR HERE SO IT CAN GET CHANGED SO IT CAN FIX.
+		return Sounds.playSound(Sounds.Crab, worldObj, this, 1, 1);;
 	}
 
 	protected String getHurtSound() {
-		return "";
+		return Sounds.CrabHurt;
 	}
 
 	protected String getDeathSound() {
-		return "";
+		return Sounds.CrabHurt;
 	}
 
 	protected Item getDropItem() {
