@@ -1,7 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -128,7 +128,7 @@ public class EntityTwilightDemon extends EntityDivineRPGBoss implements IBossDis
 	 @Override
 	 protected Item getDropItem()
 	 {
-		 return TwilightItems.apalachiaArrow;//TwilightItems.haliteBow;
+		 return TwilightItemsWeapons.apalachiaArrow;//TwilightItems.haliteBow;
 	 }
 
 	 @Override

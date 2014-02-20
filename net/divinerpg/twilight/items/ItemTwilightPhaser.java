@@ -3,7 +3,8 @@ package net.divinerpg.twilight.items;
 import java.util.List;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.projectile.EntityPhaserApalachia;
 import net.divinerpg.twilight.entity.projectile.EntityPhaserEden;
@@ -15,7 +16,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -55,42 +55,42 @@ public class ItemTwilightPhaser extends Item
 		{
 			if (this.firetick == this.firemax && this.firemax != 0)
 			{
-				if(var1.getItem() == TwilightItems.skythernPhaser)
+				if(var1.getItem() == TwilightItemsWeapons.skythernPhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserSkythern(var2, var3));
 					var1.damageItem(1, var3);
 				}
 
-				if(var1.getItem() == TwilightItems.halitePhaser)
+				if(var1.getItem() == TwilightItemsWeapons.halitePhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserHalite(var2, var3));
 					var1.damageItem(1, var3);
 				}
 
-				if(var1.getItem() == TwilightItems.wildWoodPhaser)
+				if(var1.getItem() == TwilightItemsWeapons.wildWoodPhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserWildWood(var2, var3));
 					var1.damageItem(1, var3);
 				}
 
-				if(var1.getItem() == TwilightItems.edenPhaser)
+				if(var1.getItem() == TwilightItemsWeapons.edenPhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserEden(var2, var3));
 					var1.damageItem(1, var3);
 				}
 
-				if(var1.getItem() == TwilightItems.mortumPhaser)
+				if(var1.getItem() == TwilightItemsWeapons.mortumPhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserMortum(var2, var3));
 					var1.damageItem(1, var3);
 				}
 
-				if(var1.getItem() == TwilightItems.apalachiaPhaser)
+				if(var1.getItem() == TwilightItemsWeapons.apalachiaPhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserApalachia(var2, var3));
@@ -105,42 +105,42 @@ public class ItemTwilightPhaser extends Item
 
 			if (this.firemax == 0)
 			{
-				if(var1.getItem() == TwilightItems.skythernPhaser)
+				if(var1.getItem() == TwilightItemsWeapons.skythernPhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserSkythern(var2, var3));
 					var1.damageItem(1, var3);
 				}
 
-				if(var1.getItem() == TwilightItems.halitePhaser)
+				if(var1.getItem() == TwilightItemsWeapons.halitePhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserHalite(var2, var3));
 					var1.damageItem(1, var3);
 				}
 
-				if(var1.getItem() == TwilightItems.wildWoodPhaser)
+				if(var1.getItem() == TwilightItemsWeapons.wildWoodPhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserWildWood(var2, var3));
 					var1.damageItem(1, var3);
 				}
 
-				if(var1.getItem() == TwilightItems.edenPhaser)
+				if(var1.getItem() == TwilightItemsWeapons.edenPhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserEden(var2, var3));
 					var1.damageItem(1, var3);
 				}
 
-				if(var1.getItem() == TwilightItems.mortumPhaser)
+				if(var1.getItem() == TwilightItemsWeapons.mortumPhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserMortum(var2, var3));
 					var1.damageItem(1, var3);
 				}
 
-				if(var1.getItem() == TwilightItems.apalachiaPhaser)
+				if(var1.getItem() == TwilightItemsWeapons.apalachiaPhaser)
 				{
 					var2.playSoundAtEntity(var3, this.firesound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityPhaserApalachia(var2, var3));
@@ -176,37 +176,37 @@ public class ItemTwilightPhaser extends Item
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack item, EntityPlayer player, List list, boolean par4)
 	{
-		if(item.getItem() == TwilightItems.halitePhaser)
+		if(item.getItem() == TwilightItemsWeapons.halitePhaser)
 		{
 			list.add("51 Ranged Damage");
 			list.add(item.getMaxDamage() - item.getItemDamage() + " Uses");
 		}
 
-		if(item.getItem() == TwilightItems.wildWoodPhaser)
+		if(item.getItem() == TwilightItemsWeapons.wildWoodPhaser)
 		{
 			list.add("30 Ranged Damage");
 			list.add(item.getMaxDamage() - item.getItemDamage() + " Uses");
 		}
 
-		if(item.getItem() == TwilightItems.skythernPhaser)
+		if(item.getItem() == TwilightItemsWeapons.skythernPhaser)
 		{
 			list.add("41 Ranged Damage");
 			list.add(item.getMaxDamage() - item.getItemDamage() + " Uses");
 		}
 
-		if(item.getItem() == TwilightItems.edenPhaser)
+		if(item.getItem() == TwilightItemsWeapons.edenPhaser)
 		{
 			list.add("24 Ranged Damage");
 			list.add(item.getMaxDamage() - item.getItemDamage() + " Uses");
 		}
 
-		if(item.getItem() == TwilightItems.mortumPhaser)
+		if(item.getItem() == TwilightItemsWeapons.mortumPhaser)
 		{
 			list.add("46 Ranged Damage");
 			list.add(item.getMaxDamage() - item.getItemDamage() + " Uses");
 		}
 
-		if(item.getItem() == TwilightItems.apalachiaPhaser)
+		if(item.getItem() == TwilightItemsWeapons.apalachiaPhaser)
 		{
 			list.add("35 Ranged Damage");
 			list.add(item.getMaxDamage() - item.getItemDamage() + " Uses");

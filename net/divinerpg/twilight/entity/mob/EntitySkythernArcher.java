@@ -1,6 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
@@ -17,7 +18,7 @@ import net.minecraft.world.World;
 
 public class EntitySkythernArcher extends EntityApalachiaArcher
 {
-    private static final ItemStack defaultHeldItem = new ItemStack(TwilightItems.skythernBow, 1);
+    private static final ItemStack defaultHeldItem = new ItemStack(TwilightItemsWeapons.skythernBow, 1);
 
     public EntitySkythernArcher(World var1)
     {
@@ -113,7 +114,7 @@ public class EntitySkythernArcher extends EntityApalachiaArcher
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.skythernSoul;
+        return TwilightItemsOther.skythernSoul;
     }
 
     /**

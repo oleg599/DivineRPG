@@ -4,7 +4,8 @@ import net.divinerpg.client.render.EntityResourceLocation;
 import net.divinerpg.client.render.RenderDivineMob;
 import net.divinerpg.client.render.RenderIconProjectile;
 import net.divinerpg.client.render.RenderSizeable;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
+import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.divinerpg.vanilla.entity.mobs.EntityAncientEntity;
 import net.divinerpg.vanilla.entity.mobs.EntityAridWarrior;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoBlue;
@@ -57,14 +58,13 @@ import net.divinerpg.vanilla.entity.projectiles.EntityShuriken;
 import net.divinerpg.vanilla.entity.projectiles.EntityVileStorm;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelSpider;
-import net.minecraftforge.client.MinecraftForgeClient;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class OverworldEntityRenderer {
 
 	public static void init(){
-        RenderingRegistry.registerEntityRenderingHandler(EntityShuriken.class, new RenderIconProjectile(VanillaItems.shuriken));
-        RenderingRegistry.registerEntityRenderingHandler(EntityVileStorm.class, new RenderIconProjectile(VanillaItems.vileStorm));
+        RenderingRegistry.registerEntityRenderingHandler(EntityShuriken.class, new RenderIconProjectile(VanillaItemsWeapons.shuriken));
+        RenderingRegistry.registerEntityRenderingHandler(EntityVileStorm.class, new RenderIconProjectile(VanillaItemsWeapons.vileStorm));
         RenderingRegistry.registerEntityRenderingHandler(EntityEnderWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.enderWatcher));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCrab.class, new RenderDivineMob(new ModelCrab(), 0.0F, EntityResourceLocation.crab));
 		RenderingRegistry.registerEntityRenderingHandler(EntityKingCrab.class, new RenderSizeable(new ModelCrab(), 0.0F, 1.8F, EntityResourceLocation.crab));

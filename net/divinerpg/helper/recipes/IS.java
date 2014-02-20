@@ -1,61 +1,64 @@
 package net.divinerpg.helper.recipes;
 
 import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.items.*;
+import net.divinerpg.helper.items.ItemsFood;
+import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.VanillaItemsOther;
+import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 public class IS {
 
 		//Food
-		public static ItemStack boiledEgg = new ItemStack(VanillaItems.boiledEgg);
+		public static ItemStack boiledEgg = new ItemStack(ItemsFood.boiledEgg);
 		public static ItemStack egg = new ItemStack(Items.egg);
-		public static ItemStack bacon = new ItemStack(VanillaItems.bacon, 6);
+		public static ItemStack bacon = new ItemStack(ItemsFood.bacon, 6);
 		public static ItemStack rawPork = new ItemStack(Items.porkchop);
-		public static ItemStack cheese = new ItemStack(VanillaItems.cheese, 3);
-		public static ItemStack advStew = new ItemStack(VanillaItems.advMushroomStew);
-		public static ItemStack chickDinner = new ItemStack(VanillaItems.chickenDinner);
+		public static ItemStack cheese = new ItemStack(ItemsFood.cheese, 3);
+		public static ItemStack advStew = new ItemStack(ItemsFood.advMushroomStew);
+		public static ItemStack chickDinner = new ItemStack(ItemsFood.chickenDinner);
 		
 		//Weapons
-		public static ItemStack enderSword = new ItemStack(VanillaItems.enderSword);
-		public static ItemStack slimeSword = new ItemStack(VanillaItems.slimeSword);
-		public static ItemStack arlemiteSword = new ItemStack(VanillaItems.arlemiteSword);
-		public static ItemStack rupeeSword = new ItemStack(VanillaItems.rupeeSword);
-		public static ItemStack realmiteSword = new ItemStack(VanillaItems.realmiteSword);
-		public static ItemStack shuriken = new ItemStack(VanillaItems.shuriken, 20);
-		public static ItemStack vile = new ItemStack(VanillaItems.vileStorm);
-		public static ItemStack longsword = new ItemStack(VanillaItems.longsword);
+		public static ItemStack enderSword = new ItemStack(VanillaItemsWeapons.enderSword);
+		public static ItemStack slimeSword = new ItemStack(VanillaItemsWeapons.slimeSword);
+		public static ItemStack arlemiteSword = new ItemStack(VanillaItemsWeapons.arlemiteSword);
+		public static ItemStack rupeeSword = new ItemStack(VanillaItemsWeapons.rupeeSword);
+		public static ItemStack realmiteSword = new ItemStack(VanillaItemsWeapons.realmiteSword);
+		public static ItemStack shuriken = new ItemStack(VanillaItemsWeapons.shuriken, 20);
+		public static ItemStack vile = new ItemStack(VanillaItemsWeapons.vileStorm);
+		public static ItemStack longsword = new ItemStack(VanillaItemsWeapons.longsword);
 
 		//Materials
-		public static ItemStack shadow = new ItemStack(VanillaItems.shadowBar);
-		public static ItemStack netherChuck = new ItemStack(VanillaItems.netheriteChunk);
-		public static ItemStack arlemiteIngot = new ItemStack(VanillaItems.arlemiteIngot, 9);
-		public static ItemStack rupeeIngot = new ItemStack(VanillaItems.rupeeIngot, 9);
-		public static ItemStack realIngot = new ItemStack(VanillaItems.realmiteIngot, 9);
-		public static ItemStack netherIngot = new ItemStack(VanillaItems.netheriteIngot, 9);
-		public static ItemStack bloodgem = new ItemStack(VanillaItems.bloodgem, 9);
-		public static ItemStack corruptStone = new ItemStack(VanillaItems.corruptedStone);
-		public static ItemStack jungleStone = new ItemStack(VanillaItems.jungleStone);
-		public static ItemStack iceStone = new ItemStack(VanillaItems.iceStone);
-		public static ItemStack moltenStone = new ItemStack(VanillaItems.moltenStone);
-		public static ItemStack divineStone = new ItemStack(VanillaItems.divineStone);
-		public static ItemStack enderStone = new ItemStack(VanillaItems.enderStone);
-		public static ItemStack edenFragments = new ItemStack(TwilightItems.edenFragments);
-		public static ItemStack wildWoodFragments = new ItemStack(TwilightItems.wildWoodFragments);
-		public static ItemStack apalachiaFragments = new ItemStack(TwilightItems.apalachiaFragments);
-		public static ItemStack skythernFragments = new ItemStack(TwilightItems.skythernFragments);
-		public static ItemStack mortumFragments = new ItemStack(TwilightItems.mortumFragments);
-		public static ItemStack edenGem = new ItemStack(TwilightItems.edenGem);
-		public static ItemStack wildWoodGem = new ItemStack(TwilightItems.wildWoodGem);
-		public static ItemStack apalachiaGem = new ItemStack(TwilightItems.apalachiaGem);
-		public static ItemStack skythernGem = new ItemStack(TwilightItems.skythernGem);
-		public static ItemStack mortumGem = new ItemStack(TwilightItems.mortumGem);
-		public static ItemStack edenChunk = new ItemStack(TwilightItems.edenChunk);
-		public static ItemStack wildWoodChunk = new ItemStack(TwilightItems.wildWoodChunk);
-		public static ItemStack apalachiaChunk = new ItemStack(TwilightItems.apalachiaChunk);
-		public static ItemStack skythernChunk = new ItemStack(TwilightItems.skythernChunk);
-		public static ItemStack mortumChunk = new ItemStack(TwilightItems.mortumChunk);
-		public static ItemStack legEnderEye = new ItemStack(VanillaItems.legendaryEnderEye);
+		public static ItemStack shadow = new ItemStack(VanillaItemsOther.shadowBar);
+		public static ItemStack netherChuck = new ItemStack(VanillaItemsOther.netheriteChunk);
+		public static ItemStack arlemiteIngot = new ItemStack(VanillaItemsOther.arlemiteIngot, 9);
+		public static ItemStack rupeeIngot = new ItemStack(VanillaItemsOther.rupeeIngot, 9);
+		public static ItemStack realIngot = new ItemStack(VanillaItemsOther.realmiteIngot, 9);
+		public static ItemStack netherIngot = new ItemStack(VanillaItemsOther.netheriteIngot, 9);
+		public static ItemStack bloodgem = new ItemStack(VanillaItemsOther.bloodgem, 9);
+		public static ItemStack corruptStone = new ItemStack(VanillaItemsOther.corruptedStone);
+		public static ItemStack jungleStone = new ItemStack(VanillaItemsOther.jungleStone);
+		public static ItemStack iceStone = new ItemStack(VanillaItemsOther.iceStone);
+		public static ItemStack moltenStone = new ItemStack(VanillaItemsOther.moltenStone);
+		public static ItemStack divineStone = new ItemStack(VanillaItemsOther.divineStone);
+		public static ItemStack enderStone = new ItemStack(VanillaItemsOther.enderStone);
+		public static ItemStack edenFragments = new ItemStack(TwilightItemsOther.edenFragments);
+		public static ItemStack wildWoodFragments = new ItemStack(TwilightItemsOther.wildWoodFragments);
+		public static ItemStack apalachiaFragments = new ItemStack(TwilightItemsOther.apalachiaFragments);
+		public static ItemStack skythernFragments = new ItemStack(TwilightItemsOther.skythernFragments);
+		public static ItemStack mortumFragments = new ItemStack(TwilightItemsOther.mortumFragments);
+		public static ItemStack edenGem = new ItemStack(TwilightItemsOther.edenGem);
+		public static ItemStack wildWoodGem = new ItemStack(TwilightItemsOther.wildWoodGem);
+		public static ItemStack apalachiaGem = new ItemStack(TwilightItemsOther.apalachiaGem);
+		public static ItemStack skythernGem = new ItemStack(TwilightItemsOther.skythernGem);
+		public static ItemStack mortumGem = new ItemStack(TwilightItemsOther.mortumGem);
+		public static ItemStack edenChunk = new ItemStack(TwilightItemsOther.edenChunk);
+		public static ItemStack wildWoodChunk = new ItemStack(TwilightItemsOther.wildWoodChunk);
+		public static ItemStack apalachiaChunk = new ItemStack(TwilightItemsOther.apalachiaChunk);
+		public static ItemStack skythernChunk = new ItemStack(TwilightItemsOther.skythernChunk);
+		public static ItemStack mortumChunk = new ItemStack(TwilightItemsOther.mortumChunk);
+		public static ItemStack legEnderEye = new ItemStack(VanillaItemsOther.legendaryEnderEye);
 
 		//Blocks
 		public static ItemStack arlemiteBlock = new ItemStack(VanillaBlocks.arlemiteBlock);

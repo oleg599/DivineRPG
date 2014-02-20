@@ -3,7 +3,7 @@ package net.divinerpg.vanilla.entity.mobs;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityFlying;
@@ -206,7 +206,7 @@ public class EntityNetherWatcher extends EntityFlying implements IMob, IBossDisp
      */
     protected Item getDropItem()
     {
-        return VanillaItems.netheriteIngot;
+        return VanillaItemsOther.netheriteIngot;
     }
 
     /**
@@ -214,13 +214,13 @@ public class EntityNetherWatcher extends EntityFlying implements IMob, IBossDisp
      */
     protected void dropFewItems(boolean var1, int var2)
     {
-        this.dropItem(VanillaItems.netheriteIngot, 100);
+        this.dropItem(VanillaItemsOther.netheriteIngot, 100);
         int var3 = this.rand.nextInt(4);
-        this.dropItem(VanillaItems.blueFireStone, 1);
+        this.dropItem(VanillaItemsOther.blueFireStone, 1);
 
         for (int var4 = 0; var4 < 3 + var3; ++var4)
         {
-            this.dropItem(VanillaItems.divineShards, 1);
+            this.dropItem(VanillaItemsOther.divineShards, 1);
         }
 		
 		if (this.rand.nextInt(3) == 0)

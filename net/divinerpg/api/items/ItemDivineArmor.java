@@ -4,8 +4,8 @@ import java.util.List;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.items.IceikaItems;
-import net.divinerpg.helper.items.TwilightItems;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.client.Minecraft;
@@ -34,16 +34,16 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, double damReduct, boolean undamageable, String type) {
 		super(armor, par1, par2);
 		if (par1 == 0) {
-			damageReduction = (((damReduct*4)/24)*5)/100;
+			damageReduction = (((damReduct)/24)*5)/100;
 		}
 		else if (par1 == 1) {
-			damageReduction = (((damReduct*4)/24)*8)/100;
+			damageReduction = (((damReduct)/24)*8)/100;
 		}
 		else if (par1 == 2) {
-			damageReduction = (((damReduct*4)/24)*7)/100;
+			damageReduction = (((damReduct)/24)*7)/100;
 		}
 		else if (par1 == 3) {
-			damageReduction = (((damReduct*4)/24)*4)/100;
+			damageReduction = (((damReduct)/24)*4)/100;
 		}
 
 		unbreakable = undamageable; //This is not working because it registers the boolean while the game is starting so it just takes the last one given. TODO: find solution.

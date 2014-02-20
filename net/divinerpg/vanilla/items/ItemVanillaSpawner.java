@@ -1,7 +1,7 @@
 package net.divinerpg.vanilla.items;
 
 import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.vanilla.entity.mobs.EntityKingOfScorchers;
@@ -26,7 +26,7 @@ public class ItemVanillaSpawner extends ItemMod{
 		if(!par3World.isRemote){
 			if(par3World.provider.dimensionId == -1){
 				
-				if(par1ItemStack.getItem() == VanillaItems.callWatcher){
+				if(par1ItemStack.getItem() == VanillaItemsOther.callWatcher){
 					while(var4 < 1)//1 gets the amount of mobs to spawn at once
 					{
 						EntityNetherWatcher var5 = new EntityNetherWatcher(par3World);
@@ -36,7 +36,7 @@ public class ItemVanillaSpawner extends ItemMod{
 						var4++;
 					}
 				} 
-				if(par1ItemStack.getItem() == VanillaItems.infernalFlame){
+				if(par1ItemStack.getItem() == VanillaItemsOther.infernalFlame){
 					while(var4 < 1) {
 						EntityKingOfScorchers var5 = new EntityKingOfScorchers(par3World);
 						var5.setPosition(par4, par5 + 1, par6);

@@ -1,17 +1,10 @@
 package net.divinerpg.twilight.entity.mob;
 
-import net.divinerpg.helper.items.TwilightItems;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
+import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAIAttackOnCollide;
-import net.minecraft.entity.ai.EntityAIHurtByTarget;
-import net.minecraft.entity.ai.EntityAILookIdle;
-import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
-import net.minecraft.entity.ai.EntityAISwimming;
-import net.minecraft.entity.ai.EntityAIWander;
-import net.minecraft.entity.monster.EntityZombie;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
@@ -19,7 +12,7 @@ import net.minecraft.world.World;
 
 public class EntityApalachiaWarrior extends EntityDivineRPGMob
 {
-    private static final ItemStack defaultHeldItem = new ItemStack(TwilightItems.apalachiaBlade, 1);
+    private static final ItemStack defaultHeldItem = new ItemStack(TwilightItemsWeapons.apalachiaBlade, 1);
 
     public EntityApalachiaWarrior(World var1)
     {
@@ -123,7 +116,7 @@ public class EntityApalachiaWarrior extends EntityDivineRPGMob
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.apalachiaSoul;
+        return TwilightItemsOther.apalachiaSoul;
     }
 
     /**

@@ -1,7 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -95,7 +95,7 @@ public class EntityVerek extends EntityDivineRPGMob
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.wildWoodSoul;
+        return TwilightItemsOther.wildWoodSoul;
     }
 
     /**
@@ -117,7 +117,7 @@ public class EntityVerek extends EntityDivineRPGMob
 
         for (int var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(TwilightItems.wildWoodSoul, 2);
+            this.dropItem(TwilightItemsOther.wildWoodSoul, 2);
         }
     }
 

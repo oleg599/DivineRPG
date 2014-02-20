@@ -2,7 +2,7 @@ package net.divinerpg.twilight.items;
 
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.mob.*;
@@ -29,42 +29,42 @@ public class ItemTwilightSpawner extends ItemMod{
 			if (!par3World.isRemote) {
 				while (var4 < 1) {//1 = amount of mobs spawning
 					
-					if(item.getItem() == TwilightItems.spawnKarot){
+					if(item.getItem() == TwilightItemsOther.spawnKarot){
 						EntityKarot var5 = new EntityKarot(par3World);
 						var5.setPosition(par4, par5+1, par6);
 						par3World.spawnEntityInWorld(var5);
 						--item.stackSize;
 						return true;
 					}
-					if(item.getItem() == TwilightItems.spawnDensos){
+					if(item.getItem() == TwilightItemsOther.spawnDensos){
 						EntityDensos var5 = new EntityDensos(par3World);
 						var5.setPosition(par4, par5+1, par6);
 						par3World.spawnEntityInWorld(var5);
 						--item.stackSize;
 						return true;
 					}
-					if(item.getItem() == TwilightItems.spawnReyvor){
+					if(item.getItem() == TwilightItemsOther.spawnReyvor){
 						EntityReyvor var5 = new EntityReyvor(par3World);
 						var5.setPosition(par4, par5+1, par6);
 						par3World.spawnEntityInWorld(var5);
 						--item.stackSize;
 						return true;
 					}
-					if(item.getItem() == TwilightItems.spawnSoulFiend){
+					if(item.getItem() == TwilightItemsOther.spawnSoulFiend){
 						EntitySoulFiend var5 = new EntitySoulFiend(par3World);
 						var5.setPosition(par4, par5+1, par6);
 						par3World.spawnEntityInWorld(var5);
 						--item.stackSize;
 						return true;
 					}
-					if(item.getItem() == TwilightItems.spawnTwilight){
+					if(item.getItem() == TwilightItemsOther.spawnTwilight){
 						EntityTwilightDemon var5 = new EntityTwilightDemon(par3World);
 						var5.setPosition(par4, par5+1, par6);
 						par3World.spawnEntityInWorld(var5);
 						--item.stackSize;
 						return true;
 					}
-					if(item.getItem() == TwilightItems.spawnVamacheron){
+					if(item.getItem() == TwilightItemsOther.spawnVamacheron){
 						EntityVamacheron var5 = new EntityVamacheron(par3World);
 						var5.setPosition(par4, par5+1, par6);
 						par3World.spawnEntityInWorld(var5);

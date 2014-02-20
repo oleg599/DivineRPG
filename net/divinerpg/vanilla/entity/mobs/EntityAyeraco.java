@@ -2,7 +2,7 @@ package net.divinerpg.vanilla.entity.mobs;
 
 import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.vanilla.entity.projectiles.EntityTripletProjectile;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.boss.IBossDisplayData;
@@ -231,7 +231,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     @Override
     protected void dropFewItems(boolean var1, int var2)
     {
-        this.dropItem(VanillaItems.divineShards, 2 + this.rand.nextInt(2));
+        this.dropItem(VanillaItemsOther.divineShards, 2 + this.rand.nextInt(2));
         if (this.rand.nextInt(100) < 2)
         {
             /*switch (this.rand.nextInt(2))
@@ -295,7 +295,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
 	}
 
 	protected Item getDropItem() {
-		return VanillaItems.divineShards;
+		return VanillaItemsOther.divineShards;
     }
 	
 	@Override

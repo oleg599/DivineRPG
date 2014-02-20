@@ -1,7 +1,8 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.IRangedAttackMob;
@@ -17,7 +18,7 @@ import net.minecraft.world.World;
 
 public class EntityMortumArcher extends EntityDivineRPGMob implements IRangedAttackMob
 {
-    private static final ItemStack defaultHeldItem = new ItemStack(TwilightItems.mortumBow, 1);
+    private static final ItemStack defaultHeldItem = new ItemStack(TwilightItemsWeapons.mortumBow, 1);
 
     public EntityMortumArcher(World var1)
     {
@@ -114,7 +115,7 @@ public class EntityMortumArcher extends EntityDivineRPGMob implements IRangedAtt
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.mortumSoul;
+        return TwilightItemsOther.mortumSoul;
     }
 
     /**

@@ -1,7 +1,7 @@
 package net.divinerpg.api.items;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,7 +27,7 @@ public class ItemMod extends Item {
 
 	@Override
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
-		if(par1ItemStack.getItem() == VanillaItems.healingStone){
+		if(par1ItemStack.getItem() == VanillaItemsOther.healingStone){
 			if (par3EntityPlayer.getHealth() < par3EntityPlayer.getMaxHealth()) {
 				par3EntityPlayer.heal(10);
 	        }

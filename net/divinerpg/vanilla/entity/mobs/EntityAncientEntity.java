@@ -1,19 +1,15 @@
 package net.divinerpg.vanilla.entity.mobs;
 
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.items.VanillaItems;
-import net.minecraft.client.Minecraft;
+import net.divinerpg.helper.items.VanillaItemsOther;
+import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.IBossDisplayData;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDisplayData{
@@ -70,7 +66,7 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
     protected void dropFewItems(boolean par1, int par2) {
     	
     	Item i = getDropItem();
-    	Item i2 = VanillaItems.sandslash;
+    	Item i2 = VanillaItemsWeapons.sandslash;
 
         int var3, var4;
         
@@ -86,7 +82,7 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
     }
 
     protected Item getDropItem() {
-        return VanillaItems.divineShards;
+        return VanillaItemsOther.divineShards;
     }
 
 	@Override

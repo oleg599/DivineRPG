@@ -1,10 +1,8 @@
 package net.divinerpg.vanilla.entity.mobs;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
-import net.minecraft.client.Minecraft;
+import net.divinerpg.helper.items.ItemsFood;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
@@ -20,8 +18,6 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 public class EntityIceMan extends EntityDivineRPGMob
@@ -110,7 +106,7 @@ public class EntityIceMan extends EntityDivineRPGMob
      */
     protected Item getDropItem()
     {
-        return VanillaItems.iceShards;
+        return VanillaItemsOther.iceShards;
     }
 
     /**
@@ -131,12 +127,12 @@ public class EntityIceMan extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(VanillaItems.whiteMushroom, 1);
+            this.dropItem(ItemsFood.whiteMushroom, 1);
         }
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(VanillaItems.iceShards, 3);
+            this.dropItem(VanillaItemsOther.iceShards, 3);
         }
     }
 

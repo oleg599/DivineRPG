@@ -1,7 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -114,7 +114,7 @@ public class EntitySoulFiend extends EntityDivineRPGBoss implements IBossDisplay
 	@Override
 	protected Item getDropItem()
 	{
-		return TwilightItems.haliteBlade;
+		return TwilightItemsWeapons.haliteBlade;
 	}
 
 	@Override

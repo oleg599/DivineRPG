@@ -1,6 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
@@ -95,6 +95,6 @@ public class EntityAyeracoRed extends EntityAyeraco
     @Override
     protected void dropRareDrop(int par1) 
     {
-        this.dropItem(VanillaItems.enderSwordRed, 1);
+        this.dropItem(VanillaItemsWeapons.enderSwordRed, 1);
     }
 }

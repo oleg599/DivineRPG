@@ -3,7 +3,7 @@ package net.divinerpg.vanilla.entity.mobs;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -239,7 +239,7 @@ public class EntityHellSpider extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(VanillaItems.moltenShards, 1);
+            this.dropItem(VanillaItemsOther.moltenShards, 1);
         }
     }
 

@@ -8,7 +8,7 @@ import java.net.URL;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;

@@ -5,7 +5,7 @@ import java.util.Calendar;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.vanilla.entity.projectiles.EntitySparklerFX;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -220,7 +220,7 @@ public class EntityRainbour extends EntityDivineRPGMob
 	}
 
 	protected void dropFewItems(boolean var1, int var2) {
-		this.dropItem(VanillaItems.healingStone, 1);
+		this.dropItem(VanillaItemsOther.healingStone, 1);
 	}
 
 	/**

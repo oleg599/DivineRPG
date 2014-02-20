@@ -5,7 +5,7 @@ import java.util.List;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -111,7 +111,7 @@ public class EntityCrab extends EntityDivineRPGMob {
 	}
 
 	protected Item getDropItem() {
-		return VanillaItems.crabClaw;
+		return VanillaItemsOther.crabClaw;
 	}
 	
 	protected void dropFewItems(boolean var1, int var2) {

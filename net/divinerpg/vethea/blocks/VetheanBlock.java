@@ -6,7 +6,7 @@ import net.divinerpg.api.blocks.BlockMod;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.blocks.VetheaBlocks;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;

@@ -1,7 +1,7 @@
 package net.divinerpg.vanilla.entity.mobs;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
@@ -92,7 +92,7 @@ public class EntityGlacon extends EntityDivineRPGMob
     @Override
     protected Item getDropItem()
     {
-        return VanillaItems.iceShards;
+        return VanillaItemsOther.iceShards;
     }
 
     @Override
@@ -109,7 +109,7 @@ public class EntityGlacon extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(VanillaItems.iceShards, 3);
+            this.dropItem(VanillaItemsOther.iceShards, 3);
         }
     }
 

@@ -1,7 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
@@ -129,7 +129,7 @@ public class EntityVamacheron extends EntityDivineRPGBoss implements IBossDispla
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.haliteBlade;
+        return TwilightItemsWeapons.haliteBlade;
     }
 
     @Override

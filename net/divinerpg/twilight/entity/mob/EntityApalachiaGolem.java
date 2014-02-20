@@ -1,7 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.Item;
@@ -89,7 +89,7 @@ public class EntityApalachiaGolem extends EntityDivineRPGMob
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.apalachiaSoul;
+        return TwilightItemsOther.apalachiaSoul;
     }
 
     /**

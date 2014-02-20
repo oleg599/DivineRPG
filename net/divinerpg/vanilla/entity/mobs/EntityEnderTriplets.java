@@ -3,7 +3,7 @@ package net.divinerpg.vanilla.entity.mobs;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.vanilla.entity.projectiles.EntityTripletProjectile;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -230,7 +230,7 @@ public class EntityEnderTriplets extends EntityDivineRPGMob implements IMob {
 
     protected Item getDropItem()
     {
-        return VanillaItems.enderShard;
+        return VanillaItemsOther.enderShard;
     }
 
     /**
@@ -243,7 +243,7 @@ public class EntityEnderTriplets extends EntityDivineRPGMob implements IMob {
         j = this.rand.nextInt(3) + this.rand.nextInt(1 + par2);
 
         for (k = 0; k < j; ++k) {
-            this.dropItem(VanillaItems.enderShard, 3);
+            this.dropItem(VanillaItemsOther.enderShard, 3);
         }
     }
 

@@ -1,7 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -117,7 +117,7 @@ public class EntitySoulStealer extends EntityDivineRPGMob
 	@Override
 	protected Item getDropItem()
 	{
-		return TwilightItems.mortumSoul;
+		return TwilightItemsOther.mortumSoul;
 	}
 
 	/**

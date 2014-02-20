@@ -3,7 +3,7 @@ package net.divinerpg.vanilla.entity.mobs;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IRangedAttackMob;
@@ -84,7 +84,7 @@ public class EntityCaveclops extends EntityDivineRPGMob implements IRangedAttack
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(VanillaItems.realmiteIngot, 3);
+            this.dropItem(VanillaItemsOther.realmiteIngot, 3);
         }
 
         var3 = this.rand.nextInt(3 + par2);

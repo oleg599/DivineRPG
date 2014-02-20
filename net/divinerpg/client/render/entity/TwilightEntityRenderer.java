@@ -12,12 +12,12 @@ public class TwilightEntityRenderer {
 	
 
 	public static void init(){
-        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerEden.class, new RenderIconProjectile(TwilightItems.edenSlicer));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerWildWoods.class, new RenderIconProjectile(TwilightItems.wildWoodSlicer));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerApalachia.class, new RenderIconProjectile(TwilightItems.apalachiaSlicer));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerSkythern.class, new RenderIconProjectile(TwilightItems.skythernSlicer));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerMortum.class, new RenderIconProjectile(TwilightItems.mortumSlicer));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerHalite.class, new RenderIconProjectile(TwilightItems.haliteSlicer));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerEden.class, new RenderIconProjectile(TwilightItemsWeapons.edenSlicer));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerWildWoods.class, new RenderIconProjectile(TwilightItemsWeapons.wildWoodSlicer));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerApalachia.class, new RenderIconProjectile(TwilightItemsWeapons.apalachiaSlicer));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerSkythern.class, new RenderIconProjectile(TwilightItemsWeapons.skythernSlicer));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerMortum.class, new RenderIconProjectile(TwilightItemsWeapons.mortumSlicer));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySlicerHalite.class, new RenderIconProjectile(TwilightItemsWeapons.haliteSlicer));
         RenderingRegistry.registerEntityRenderingHandler(EntityBlitzEden.class, new RenderProjectile(EntityResourceLocation.blitzEden));
         RenderingRegistry.registerEntityRenderingHandler(EntityBlitzWildWood.class, new RenderProjectile(EntityResourceLocation.blitzWild));
         RenderingRegistry.registerEntityRenderingHandler(EntityBlitzAlapachia.class, new RenderProjectile(EntityResourceLocation.blitzApalachia));

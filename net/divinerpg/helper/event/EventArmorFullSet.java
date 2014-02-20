@@ -1,16 +1,14 @@
 package net.divinerpg.helper.event;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
 
 public class EventArmorFullSet {
 	
@@ -26,7 +24,7 @@ public class EventArmorFullSet {
 	ItemStack chestplate = player.inventory.armorInventory[2];
 	ItemStack head = player.inventory.armorInventory[3];
 
-    private VanillaItems v;
+    private VanillaItemsArmor v;
     
     //TODO Figure out why it isn't working.
     
@@ -51,7 +49,7 @@ public class EventArmorFullSet {
 		
 		DamageSource s = e.source;
 
-		if (boots == VanillaItems.netheriteBoots && legs == VanillaItems.netheriteLegs && body == VanillaItems.netheriteBody && helmet == VanillaItems.netheriteHelmet) {
+		if (boots == VanillaItemsArmor.netheriteBoots && legs == VanillaItemsArmor.netheriteLegs && body == VanillaItemsArmor.netheriteBody && helmet == VanillaItemsArmor.netheriteHelmet) {
 			if (s.equals(DamageSource.inFire) || s.equals(DamageSource.onFire) || s.equals(DamageSource.lava)) {
 				e.setCanceled(true);
 			}

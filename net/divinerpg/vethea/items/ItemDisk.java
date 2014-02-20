@@ -5,7 +5,7 @@ import java.util.List;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.items.VetheanItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.vethea.entity.*;

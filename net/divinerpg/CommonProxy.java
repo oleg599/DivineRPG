@@ -9,7 +9,7 @@ import net.divinerpg.helper.event.EventArmorFullSet;
 import net.divinerpg.helper.event.EventBucketFill;
 import net.divinerpg.helper.event.EventClientLogin;
 import net.divinerpg.helper.event.EventOverlay;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.mobs.IceikaMobRegistry;
 import net.divinerpg.helper.mobs.MobSpawning;
 import net.divinerpg.helper.mobs.OverworldMobRegistry;
@@ -68,7 +68,7 @@ public class CommonProxy {
 	}
 	
 	public void postInit(FMLPostInitializationEvent event){
-		FluidContainerRegistry.registerFluidContainer(new FluidContainerData(FluidRegistry.getFluidStack(DivineRPG.Mod.getName(), FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(VanillaItems.tarBucket), new ItemStack(Items.bucket)));
+		FluidContainerRegistry.registerFluidContainer(new FluidContainerData(FluidRegistry.getFluidStack(DivineRPG.Mod.getName(), FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(VanillaItemsOther.tarBucket), new ItemStack(Items.bucket)));
 	}
 	
 }

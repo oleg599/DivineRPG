@@ -5,7 +5,7 @@ import java.util.List;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
@@ -90,7 +90,7 @@ public class EntityShark extends EntityDivineRPGMob
 
         for (int var4 = 0; var4 < var3; ++var4)
         {
-            this.entityDropItem(new ItemStack(VanillaItems.sharkFin), 0.0F);
+            this.entityDropItem(new ItemStack(VanillaItemsOther.sharkFin), 0.0F);
         }
     }
 

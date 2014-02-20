@@ -5,7 +5,7 @@ import java.util.List;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -110,19 +110,19 @@ public class EntityCyclops extends EntityDivineRPGMob {
 		int var3 = this.rand.nextInt(2 + var2);
 
 		for (int var4 = 0; var4 < var3; ++var4) {
-			this.dropItem(VanillaItems.cyclopsEye, 1);
+			this.dropItem(VanillaItemsOther.cyclopsEye, 1);
 		}
 	}
 
 	protected void dropRareDrop(int var1) {
-		this.dropItem(VanillaItems.healingStone, 1);
+		this.dropItem(VanillaItemsOther.healingStone, 1);
 	}
 
 	/**
 	 * Returns the item ID for the item the mob drops on death.
 	 */
 	protected Item getDropItem() {
-		return VanillaItems.cyclopsEye;
+		return VanillaItemsOther.cyclopsEye;
 	}
 
 	@Override

@@ -3,7 +3,7 @@ package net.divinerpg.vanilla.entity.mobs;
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -130,14 +130,14 @@ public class EntityKingOfScorchers extends EntityDivineRPGBoss implements IBossD
      */
     protected Item getDropItem()
     {
-        return VanillaItems.furyFire;
+        return VanillaItemsOther.furyFire;
     }
 
     public void dropFewItems(boolean par1, int par2)
     {
         int var1 = this.rand.nextInt(4);
         this.dropItem(getDropItem(), 1);
-        this.dropItem(VanillaItems.blueFireStone, 7);
+        this.dropItem(VanillaItemsOther.blueFireStone, 7);
 		
 		if (this.rand.nextInt(3) == 0)
 		{

@@ -4,7 +4,7 @@ import java.util.Random;
 
 import net.divinerpg.api.blocks.BlockMod;
 import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.Block.SoundType;
@@ -42,7 +42,7 @@ public class VanillaBlock extends BlockMod {
 	}
 	
 	public Item getItemDropped(int par1, Random par2, int par3) {
-		return (this == VanillaBlocks.bloodgemOre) ? VanillaItems.bloodgem : getBlock(this);
+		return (this == VanillaBlocks.bloodgemOre) ? VanillaItemsOther.bloodgem : getBlock(this);
 	}
 
 	public int func_149679_a(int par1, Random par2)

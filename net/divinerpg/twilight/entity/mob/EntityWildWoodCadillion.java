@@ -3,7 +3,7 @@ package net.divinerpg.twilight.entity.mob;
 import java.util.List;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityPigZombie;
@@ -171,7 +171,7 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
 
         for (int var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(TwilightItems.wildWoodSoul, 1);
+            this.dropItem(TwilightItemsOther.wildWoodSoul, 1);
         }
     }
 
@@ -182,7 +182,7 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
 
         if (var2 == 0)
         {
-            this.dropItem(TwilightItems.wildWoodSoul, 2);
+            this.dropItem(TwilightItemsOther.wildWoodSoul, 2);
         }
     }
 
@@ -192,7 +192,7 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.wildWoodSoul;
+        return TwilightItemsOther.wildWoodSoul;
     }
 
     /**

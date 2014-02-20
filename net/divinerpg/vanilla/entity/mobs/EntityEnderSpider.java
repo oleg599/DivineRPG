@@ -42,7 +42,7 @@ public class EntityEnderSpider extends EntityEnderman
      */
     protected Item getDropItem()
     {
-        return VanillaItems.enderShard;
+        return VanillaItemsOther.enderShard;
     }
 
     /**
@@ -50,7 +50,7 @@ public class EntityEnderSpider extends EntityEnderman
      */
     protected void dropFewItems(boolean var1, int var2)
     {   
-    	this.dropItem(VanillaItems.enderShard, 1);
+    	this.dropItem(VanillaItemsOther.enderShard, 1);
     }
     
     public void onDeath(DamageSource d) {

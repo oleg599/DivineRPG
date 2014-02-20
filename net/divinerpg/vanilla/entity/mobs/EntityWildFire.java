@@ -1,10 +1,8 @@
 package net.divinerpg.vanilla.entity.mobs;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
-import net.minecraft.client.Minecraft;
+import net.divinerpg.helper.items.VanillaItemsOther;
+import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -21,13 +19,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackMob
 {
-    private static final ItemStack defaultHeldItem = new ItemStack(VanillaItems.infernoSword, 1);
+    private static final ItemStack defaultHeldItem = new ItemStack(VanillaItemsWeapons.infernoSword, 1);
 
     public EntityWildFire(World par1World)
     {
@@ -97,7 +93,7 @@ public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackM
      */
     protected Item getDropItem()
     {
-        return VanillaItems.moltenShards;
+        return VanillaItemsOther.moltenShards;
     }
 
     /**
@@ -105,18 +101,18 @@ public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackM
      */
     protected void dropFewItems(boolean par1, int par2)
     {
-    	this.dropItem(VanillaItems.moltenShards, 4);
+    	this.dropItem(VanillaItemsOther.moltenShards, 4);
     }
 
     protected void dropRareDrop(int var1)
     {
         if (this.rand.nextInt(5) == 0)
         {
-            this.dropItem(VanillaItems.hellstoneIngot, 1);
+            this.dropItem(VanillaItemsOther.hellstoneIngot, 1);
         }
         else
         {
-        	this.dropItem(VanillaItems.netheriteIngot, 40);
+        	this.dropItem(VanillaItemsOther.netheriteIngot, 40);
         }
     }
 

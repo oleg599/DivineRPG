@@ -1,7 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.boss.IBossDisplayData;
@@ -127,7 +127,7 @@ public class EntityKarot extends EntityDivineRPGBoss implements IBossDisplayData
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.halitePhaser;
+        return TwilightItemsWeapons.halitePhaser;
     }
 
     @Override

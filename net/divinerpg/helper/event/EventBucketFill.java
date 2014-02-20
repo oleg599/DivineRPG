@@ -1,7 +1,7 @@
 package net.divinerpg.helper.event;
 
 import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -32,7 +32,7 @@ public class EventBucketFill {
 	public ItemStack getLiquid(World w, MovingObjectPosition m){
 		Block block = w.getBlock(m.blockX, m.blockY, m.blockZ);
 		if(block == VanillaBlocks.tar){
-			return new ItemStack(VanillaItems.tarBucket);
+			return new ItemStack(VanillaItemsOther.tarBucket);
 		}
 
 		return null;

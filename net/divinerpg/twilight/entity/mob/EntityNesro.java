@@ -1,7 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
@@ -132,7 +132,7 @@ public class EntityNesro extends EntityDivineRPGMob
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.edenSoul;
+        return TwilightItemsOther.edenSoul;
     }
 
     /**

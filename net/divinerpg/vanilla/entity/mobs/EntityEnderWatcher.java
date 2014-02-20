@@ -2,7 +2,7 @@ package net.divinerpg.vanilla.entity.mobs;
 
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityEnderman;
@@ -26,13 +26,13 @@ public class EntityEnderWatcher extends EntityEnderman{
 
     protected Item getDropItem()
     {
-        return VanillaItems.enderShard;
+        return VanillaItemsOther.enderShard;
     }
     
     protected void dropFewItems(boolean par1, int par2)
     {
         Item item = this.getDropItem();
-        Item item2 = VanillaItems.watchingEye;
+        Item item2 = VanillaItemsOther.watchingEye;
 
         if (item != null)
         {

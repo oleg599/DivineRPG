@@ -3,15 +3,15 @@ package net.divinerpg.api.items;
 import java.util.List;
 
 import net.divinerpg.helper.items.IceikaItems;
-import net.divinerpg.helper.items.TwilightItems;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.TwilightItemsArmor;
+import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
 public class ArmorInformation {
 	
-	public static VanillaItems v;
-	public static TwilightItems t;
+	public static VanillaItemsArmor v;
+	public static TwilightItemsArmor t;
 	public static IceikaItems i;
 	
 	public static void addInfo(ItemStack item, EntityPlayer par2EntityPlayer, List list, boolean par4) {

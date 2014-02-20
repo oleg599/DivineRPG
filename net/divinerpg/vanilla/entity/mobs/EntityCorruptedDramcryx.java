@@ -3,7 +3,7 @@ package net.divinerpg.vanilla.entity.mobs;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
@@ -60,14 +60,14 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(VanillaItems.corruptedShards, 1);
+            this.dropItem(VanillaItemsOther.corruptedShards, 1);
         }
 
         var3 = this.rand.nextInt(3 + par2);
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(VanillaItems.corruptedShards, 2);
+            this.dropItem(VanillaItemsOther.corruptedShards, 2);
         }
     }
 
@@ -76,7 +76,7 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
         switch (this.rand.nextInt(1))
         {
             case 0:
-                this.dropItem(VanillaItems.arlemiteIngot, 5);
+                this.dropItem(VanillaItemsOther.arlemiteIngot, 5);
                 break;
         }
     }

@@ -3,7 +3,7 @@ package net.divinerpg.vanilla.entity.mobs;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -282,7 +282,7 @@ public class EntityJungleBat extends EntityDivineRPGMob
      */
     protected Item getDropItem()
     {
-        return VanillaItems.jungleShards;
+        return VanillaItemsOther.jungleShards;
     }
 
 	@Override

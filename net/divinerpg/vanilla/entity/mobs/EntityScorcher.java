@@ -3,7 +3,7 @@ package net.divinerpg.vanilla.entity.mobs;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -206,7 +206,7 @@ public class EntityScorcher extends EntityDivineRPGMob
      * Returns the item ID for the item the mob drops on death.
      */
     protected Item getDropItem() {
-        return VanillaItems.purpleBlaze;
+        return VanillaItemsOther.purpleBlaze;
     }
 
     /**
@@ -228,7 +228,7 @@ public class EntityScorcher extends EntityDivineRPGMob
 
             for (int var4 = 0; var4 < var3; ++var4)
             {
-                this.dropItem(VanillaItems.purpleBlaze, 1);
+                this.dropItem(VanillaItemsOther.purpleBlaze, 1);
             }
         }
     }

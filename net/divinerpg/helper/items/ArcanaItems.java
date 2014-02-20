@@ -18,14 +18,14 @@ public class ArcanaItems {
 	public static final Item collector 			= new ItemMod().setName("collector");
 	public static final Item chargedCollector 	= new ItemMod().setName("chargedCollector");
 	
-	public static final Item kormaHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Korma, HEAD, 0, 11.25D, true, "korma").setName("kormaHelmet");
-	public static final Item kormaBody 			= new ItemDivineArmor(ArmorMaterialMod.Korma, BODY, 1, 11.25D, true, "korma").setName("kormaBody");
-	public static final Item kormaLegs 			= new ItemDivineArmor(ArmorMaterialMod.Korma, LEGS, 2, 11.25D, true, "korma").setName("kormaLegs");
-	public static final Item kormaBoots			= new ItemDivineArmor(ArmorMaterialMod.Korma, BOOTS, 3, 11.25D, true, "korma").setName("kormaBoots");
+	public static final Item kormaHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Korma, HEAD, 0, 45D, true, "korma").setName("kormaHelmet");
+	public static final Item kormaBody 			= new ItemDivineArmor(ArmorMaterialMod.Korma, BODY, 1, 45D, true, "korma").setName("kormaBody");
+	public static final Item kormaLegs 			= new ItemDivineArmor(ArmorMaterialMod.Korma, LEGS, 2, 45D, true, "korma").setName("kormaLegs");
+	public static final Item kormaBoots			= new ItemDivineArmor(ArmorMaterialMod.Korma, BOOTS, 3, 45D, true, "korma").setName("kormaBoots");
 	
-	public static final Item vemosHelmet		= new ItemDivineArmor(ArmorMaterialMod.Korma, HEAD, 0, 11.25D, true, "vemos").setName("vemosHelmet");
-	public static final Item vemosBody			= new ItemDivineArmor(ArmorMaterialMod.Korma, BODY, 1, 11.25D, true, "vemos").setName("vemosBody");
-	public static final Item vemosLegs			= new ItemDivineArmor(ArmorMaterialMod.Korma, LEGS, 2, 11.25D, true, "vemos").setName("vemosLegs");
-	public static final Item vemosBoots			= new ItemDivineArmor(ArmorMaterialMod.Korma, BOOTS, 3, 11.25D, true, "vemos").setName("vemosBoots");
+	public static final Item vemosHelmet		= new ItemDivineArmor(ArmorMaterialMod.Korma, HEAD, 0, 45D, true, "vemos").setName("vemosHelmet");
+	public static final Item vemosBody			= new ItemDivineArmor(ArmorMaterialMod.Korma, BODY, 1, 45D, true, "vemos").setName("vemosBody");
+	public static final Item vemosLegs			= new ItemDivineArmor(ArmorMaterialMod.Korma, LEGS, 2, 45D, true, "vemos").setName("vemosLegs");
+	public static final Item vemosBoots			= new ItemDivineArmor(ArmorMaterialMod.Korma, BOOTS, 3, 45D, true, "vemos").setName("vemosBoots");
 
 }

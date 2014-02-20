@@ -5,8 +5,8 @@ import java.util.Random;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.items.TwilightItems;
-import net.divinerpg.helper.items.VanillaItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
@@ -56,11 +56,11 @@ public class TwilightBlock extends Block
 	 * Sets the item that will be dropped when the block is broken.
 	 */
 	public Item getItemDropped(int par1, Random par2, int par3) {
-		return (this == TwilightBlocks.edenOre) ? TwilightItems.edenFragments 
-				: (this == TwilightBlocks.wildWoodOre) ? TwilightItems.wildWoodFragments 
-				: (this == TwilightBlocks.apalachiaOre) ? TwilightItems.apalachiaFragments
-				: (this == TwilightBlocks.skythernOre) ? TwilightItems.skythernFragments
-				: (this == TwilightBlocks.mortumOre) ? TwilightItems.mortumFragments
+		return (this == TwilightBlocks.edenOre) ? TwilightItemsOther.edenFragments 
+				: (this == TwilightBlocks.wildWoodOre) ? TwilightItemsOther.wildWoodFragments 
+				: (this == TwilightBlocks.apalachiaOre) ? TwilightItemsOther.apalachiaFragments
+				: (this == TwilightBlocks.skythernOre) ? TwilightItemsOther.skythernFragments
+				: (this == TwilightBlocks.mortumOre) ? TwilightItemsOther.mortumFragments
 				: getBlock(this);
 	}
 

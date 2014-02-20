@@ -3,10 +3,16 @@ package net.divinerpg.api.items;
 import java.util.List;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
-import net.divinerpg.twilight.entity.projectile.*;
+import net.divinerpg.twilight.entity.projectile.EntityApalachiaArrow;
+import net.divinerpg.twilight.entity.projectile.EntityEdenArrow;
+import net.divinerpg.twilight.entity.projectile.EntityHaliteArrow;
+import net.divinerpg.twilight.entity.projectile.EntityMortumArrow;
+import net.divinerpg.twilight.entity.projectile.EntitySkythernArrow;
+import net.divinerpg.twilight.entity.projectile.EntityWildArrow;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -21,7 +27,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -120,22 +125,22 @@ public class ItemModBow extends ItemBow {
 
 			EntityArrow entityarrow = null;
 
-			if(item.getItem() == TwilightItems.edenBow){
+			if(item.getItem() == TwilightItemsWeapons.edenBow){
 				entityarrow = new EntityEdenArrow(par2World, par3EntityPlayer, f * 2.0F);
 			}
-			else if(item.getItem() == TwilightItems.wildWoodBow){
+			else if(item.getItem() == TwilightItemsWeapons.wildWoodBow){
 				entityarrow = new EntityWildArrow(par2World, par3EntityPlayer, f * 2.0F);
 			}
-			else if(item.getItem() == TwilightItems.apalachiaBow){
+			else if(item.getItem() == TwilightItemsWeapons.apalachiaBow){
 				entityarrow = new EntityApalachiaArrow(par2World, par3EntityPlayer, f * 2.0F);
 			}
-			else if(item.getItem() == TwilightItems.skythernBow){
+			else if(item.getItem() == TwilightItemsWeapons.skythernBow){
 				entityarrow = new EntitySkythernArrow(par2World, par3EntityPlayer, f * 2.0F);
 			}
-			else if(item.getItem() == TwilightItems.mortumBow){
+			else if(item.getItem() == TwilightItemsWeapons.mortumBow){
 				entityarrow = new EntityMortumArrow(par2World, par3EntityPlayer, f * 2.0F);
 			}
-			else if(item.getItem() == TwilightItems.haliteBow){
+			else if(item.getItem() == TwilightItemsWeapons.haliteBow){
 				entityarrow = new EntityHaliteArrow(par2World, par3EntityPlayer, f * 2.0F);
 			}
 

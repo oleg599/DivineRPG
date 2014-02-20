@@ -1,7 +1,8 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.IRangedAttackMob;
@@ -15,7 +16,7 @@ import net.minecraft.world.World;
 
 public class EntityApalachiaArcher extends EntityDivineRPGMob implements IRangedAttackMob
 {
-    private static final ItemStack defaultHeldItem = new ItemStack(TwilightItems.apalachiaBow, 1);
+    private static final ItemStack defaultHeldItem = new ItemStack(TwilightItemsWeapons.apalachiaBow, 1);
 
     public EntityApalachiaArcher(World var1)
     {
@@ -111,7 +112,7 @@ public class EntityApalachiaArcher extends EntityDivineRPGMob implements IRanged
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.apalachiaSoul;
+        return TwilightItemsOther.apalachiaSoul;
     }
 
     /**

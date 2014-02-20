@@ -1,7 +1,7 @@
 package net.divinerpg.twilight.entity.mob;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -295,7 +295,7 @@ public class EntityCori extends EntityDivineRPGMob
     @Override
     protected Item getDropItem()
     {
-        return TwilightItems.edenSoul;
+        return TwilightItemsOther.edenSoul;
     }
 
     /**

@@ -2,9 +2,9 @@ package net.divinerpg.twilight.items;
 
 import java.util.List;
 
-import net.divinerpg.Reference;
 import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.items.TwilightItems;
+import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.projectile.EntityBlitzAlapachia;
@@ -14,11 +14,8 @@ import net.divinerpg.twilight.entity.projectile.EntityBlitzMortum;
 import net.divinerpg.twilight.entity.projectile.EntityBlitzSkythern;
 import net.divinerpg.twilight.entity.projectile.EntityBlitzWildWood;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -42,98 +39,98 @@ public class ItemTwilightBlitz extends ItemMod {
 	{
 		boolean var4 = var3.capabilities.isCreativeMode;
 
-		if (!var4 && !var3.inventory.hasItem(TwilightItems.wildWoodDust))
+		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.wildWoodDust))
 		{
 			return var1;
 		}
 		else
 		{
-			if(var1.getItem() == TwilightItems.wildWoodBlitz)
+			if(var1.getItem() == TwilightItemsWeapons.wildWoodBlitz)
 			{
 				if(!var2.isRemote)
 				{
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzWildWood(var2, var3));
 				}
-				var3.inventory.consumeInventoryItem(TwilightItems.wildWoodDust);
+				var3.inventory.consumeInventoryItem(TwilightItemsOther.wildWoodDust);
 			}
 		}
 
-		if (!var4 && !var3.inventory.hasItem(TwilightItems.mortumDust))
+		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.mortumDust))
 		{
 			return var1;
 		}
 		else
 		{
-			if(var1.getItem() == TwilightItems.haliteBlitz)
+			if(var1.getItem() == TwilightItemsWeapons.haliteBlitz)
 			{
 				if(!var2.isRemote)
 				{
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzHalite(var2, var3));
 				}
-				var3.inventory.consumeInventoryItem(TwilightItems.mortumDust);
+				var3.inventory.consumeInventoryItem(TwilightItemsOther.mortumDust);
 			}
 
-			if(var1.getItem() == TwilightItems.mortumBlitz)
+			if(var1.getItem() == TwilightItemsWeapons.mortumBlitz)
 			{
 				if(!var2.isRemote)
 				{
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzMortum(var2, var3));
 				}
-				var3.inventory.consumeInventoryItem(TwilightItems.mortumDust);
+				var3.inventory.consumeInventoryItem(TwilightItemsOther.mortumDust);
 			}
 		}
 
-		if (!var4 && !var3.inventory.hasItem(TwilightItems.apalachiaDust))
+		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.apalachiaDust))
 		{
 			return var1;
 		}
 		else
 		{
-			if(var1.getItem() == TwilightItems.apalachiaBlitz)
+			if(var1.getItem() == TwilightItemsWeapons.apalachiaBlitz)
 			{
 				if(!var2.isRemote)
 				{
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzAlapachia(var2, var3));
 				}
-				var3.inventory.consumeInventoryItem(TwilightItems.apalachiaDust);
+				var3.inventory.consumeInventoryItem(TwilightItemsOther.apalachiaDust);
 			}
 		}
 
-		if (!var4 && !var3.inventory.hasItem(TwilightItems.skythernDust))
+		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.skythernDust))
 		{
 			return var1;
 		}
 		else
 		{
-			if(var1.getItem() == TwilightItems.skythernBlitz)
+			if(var1.getItem() == TwilightItemsWeapons.skythernBlitz)
 			{
 				if(!var2.isRemote)
 				{
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzSkythern(var2, var3));
 				}
-				var3.inventory.consumeInventoryItem(TwilightItems.skythernDust);
+				var3.inventory.consumeInventoryItem(TwilightItemsOther.skythernDust);
 			}
 		}
 
-		if (!var4 && !var3.inventory.hasItem(TwilightItems.edenDust))
+		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.edenDust))
 		{
 			return var1;
 		}
 		else
 		{
-			if(var1.getItem() == TwilightItems.edenBlitz)
+			if(var1.getItem() == TwilightItemsWeapons.edenBlitz)
 			{
 				if(!var2.isRemote)
 				{
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzEden(var2, var3));
 				}
-				var3.inventory.consumeInventoryItem(TwilightItems.edenDust);
+				var3.inventory.consumeInventoryItem(TwilightItemsOther.edenDust);
 			}
 		}
 		var1.damageItem(1, var3);
