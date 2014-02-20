@@ -9,6 +9,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
 public class DivineRPG {
@@ -37,5 +38,10 @@ public class DivineRPG {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event){
 		proxy.postInit(event);
+	}
+	
+	@EventHandler
+	public void serverStarting(FMLServerStartingEvent event){
+		proxy.serverStarting(event);
 	}
 }

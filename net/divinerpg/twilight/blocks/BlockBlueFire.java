@@ -44,6 +44,7 @@ public class BlockBlueFire extends BlockFire {
     
     public BlockBlueFire() {
         this.setTickRandomly(true);
+        setLightLevel(1.0F);
         setCreativeTab(DivineRPGTabs.blocks);//For bug testing
     }
 
@@ -339,17 +340,19 @@ public class BlockBlueFire extends BlockFire {
     /**
      * Called whenever the block is added into the world. Args: world, x, y, z
      */
-    public void onBlockAdded(World world, int p_149726_2_, int p_149726_3_, int p_149726_4_)
-    {
-        if (world.provider.dimensionId > 0 || !TwilightBlocks.edenPortal.func_150000_e(world, p_149726_2_, p_149726_3_, p_149726_4_))
-        {
-            if (!World.doesBlockHaveSolidTopSurface(world, p_149726_2_, p_149726_3_ - 1, p_149726_4_) && !this.canNeighborBurn(world, p_149726_2_, p_149726_3_, p_149726_4_))
-            {
-                world.setBlockToAir(p_149726_2_, p_149726_3_, p_149726_4_);
+    public void onBlockAdded(World world, int x, int y, int z) {
+        if (world.provider.dimensionId > 0 || !TwilightBlocks.edenPortal.func_150000_e(world, x, y, z)) {
+            if (!World.doesBlockHaveSolidTopSurface(world, x, y - 1, z) && !this.canNeighborBurn(world, x, y, z)) {
+                world.setBlockToAir(x, y, z);
+            } else {
+                world.scheduleBlockUpdate(x, y, z, this, this.tickRate(world) + world.rand.nextInt(10));
             }
-            else
-            {
-                world.scheduleBlockUpdate(p_149726_2_, p_149726_3_, p_149726_4_, this, this.tickRate(world) + world.rand.nextInt(10));
+        }
+        if (world.provider.dimensionId > 0 || !TwilightBlocks.wildWoodPortal.func_150000_e(world, x, y, z)) {
+            if (!World.doesBlockHaveSolidTopSurface(world, x, y - 1, z) && !this.canNeighborBurn(world, x, y, z)) {
+                world.setBlockToAir(x, y, z);
+            } else {
+                world.scheduleBlockUpdate(x, y, z, this, this.tickRate(world) + world.rand.nextInt(10));
             }
         }
     }

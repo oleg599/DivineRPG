@@ -1,0 +1,4 @@
+{
+    "crab":{"category": "master","sounds": [{"name": "crab","stream": false}]},
+    "crabHurt":{"category": "master","sounds": [{"name": "crabHurt","stream": false}]}
+}

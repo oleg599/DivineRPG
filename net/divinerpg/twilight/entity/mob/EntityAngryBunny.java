@@ -1,7 +1,9 @@
 package net.divinerpg.twilight.entity.mob;
 
+import paulscode.sound.SoundBuffer;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.utils.LangRegistry;
+import net.minecraft.client.audio.SoundHandler;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.world.World;
 
@@ -26,20 +28,17 @@ public class EntityAngryBunny extends EntityDivineRPGMob
 
 
 	@Override
-	protected boolean isAIEnabled()
-	{
+	protected boolean isAIEnabled() {
 		return true;
 	}
 
 	@Override
-	public void onUpdate()
-	{
+	public void onUpdate() {
 		super.onUpdate();
 	}
 
 	@Override
-	protected String getLivingSound()
-	{
+	protected String getLivingSound() {
 		return "";//Sound.Hiss;
 	}
 
