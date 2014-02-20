@@ -136,10 +136,10 @@ public class TwilightItems {
     public static final Item edenLegs 			= new ItemDivineArmor(ArmorMaterialMod.Eden, LEGS, 2, 15D, true, "eden").setName("edenLegs");
     public static final Item edenBoots 			= new ItemDivineArmor(ArmorMaterialMod.Eden, BOOTS, 3, 15D, true, "eden").setName("edenBoots");
     
-    public static final Item wildHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Wild, HEAD, 0, 16.25D, true, "idklol").setName("wildWoodsHelmet");
-    public static final Item wildBody 			= new ItemDivineArmor(ArmorMaterialMod.Wild, BODY, 1, 16.25D, true, "idklol").setName("wildWoodsBody");
-    public static final Item wildLegs 			= new ItemDivineArmor(ArmorMaterialMod.Wild, LEGS, 2, 16.25D, true, "idklol").setName("wildWoodsLegs");
-    public static final Item wildBoots 			= new ItemDivineArmor(ArmorMaterialMod.Wild, BOOTS, 3, 16.25D, true, "idklol").setName("wildWoodsBoots");
+    public static final Item wildwoodHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Wild, HEAD, 0, 16.25D, true, "wildwood").setName("wildwoodHelmet");
+    public static final Item wildwoodBody 		= new ItemDivineArmor(ArmorMaterialMod.Wild, BODY, 1, 16.25D, true, "wildwood").setName("wildwoodBody");
+    public static final Item wildwoodLegs 		= new ItemDivineArmor(ArmorMaterialMod.Wild, LEGS, 2, 16.25D, true, "wildwood").setName("wildwoodLegs");
+    public static final Item wildwoodBoots 		= new ItemDivineArmor(ArmorMaterialMod.Wild, BOOTS, 3, 16.25D, true, "wildwood").setName("wildwoodBoots");
     
     public static final Item apalachiaHelmet 	= new ItemDivineArmor(ArmorMaterialMod.Apalachia, HEAD, 0, 18D, true, "apalachia").setName("apalachiaHelmet");
     public static final Item apalachiaBody 		= new ItemDivineArmor(ArmorMaterialMod.Apalachia, BODY, 1, 18D, true, "apalachia").setName("apalachiaBody");

@@ -27,7 +27,7 @@ public class ArmorInformation {
 		if(item.getItem() == t.edenBody || item.getItem() == t.edenBoots || item.getItem() == t.edenHelmet || item.getItem() == t.edenLegs){
 			list.add("Full Set: 3+ Twilight ore drops");
 		}
-		if(item.getItem() == t.wildBody || item.getItem() == t.wildBoots || item.getItem() == t.wildHelmet || item.getItem() == t.wildLegs){
+		if(item.getItem() == t.wildwoodBody || item.getItem() == t.wildwoodBoots || item.getItem() == t.wildwoodHelmet || item.getItem() == t.wildwoodLegs){
 			list.add("Full Set: Fast health regen under water");
 		}
 		if(item.getItem() == t.apalachiaBody || item.getItem() == t.apalachiaBoots || item.getItem() == t.apalachiaHelmet || item.getItem() == t.apalachiaLegs){
