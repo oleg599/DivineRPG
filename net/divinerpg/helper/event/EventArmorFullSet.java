@@ -1,6 +1,7 @@
 package net.divinerpg.helper.event;
 
 import net.divinerpg.helper.items.VanillaItemsArmor;
+import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -24,7 +25,7 @@ public class EventArmorFullSet {
 	ItemStack chestplate = player.inventory.armorInventory[2];
 	ItemStack head = player.inventory.armorInventory[3];
 
-    private VanillaItemsArmor v;
+    private VanillaItemsOther v;
     
     //TODO Figure out why it isn't working.
     
@@ -49,7 +50,7 @@ public class EventArmorFullSet {
 		
 		DamageSource s = e.source;
 
-		if (boots == VanillaItemsArmor.netheriteBoots && legs == VanillaItemsArmor.netheriteLegs && body == VanillaItemsArmor.netheriteBody && helmet == VanillaItemsArmor.netheriteHelmet) {
+		if (boots == VanillaItemsOther.netheriteBoots && legs == VanillaItemsOther.netheriteLegs && body == VanillaItemsOther.netheriteBody && helmet == VanillaItemsOther.netheriteHelmet) {
 			if (s.equals(DamageSource.inFire) || s.equals(DamageSource.onFire) || s.equals(DamageSource.lava)) {
 				e.setCanceled(true);
 			}

@@ -26,12 +26,15 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	private int durability;
 	private String prefix = "divinerpg:textures/armor/";
 	private int damRe;
+	private int fullReduction;
 
 	/**
 	 * Normal constructor
 	 */
 	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, double damReduct, boolean undamageable, String type) {
 		super(armor, par1, par2);
+		fullReduction = (int) damReduct;
+		
 		if (par1 == 0) {
 			damageReduction = (((damReduct)/24)*5)/100;
 		}
@@ -44,6 +47,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		else if (par1 == 3) {
 			damageReduction = (((damReduct)/24)*4)/100;
 		}
+		
 
 		unbreakable = undamageable; //This is not working because it registers the boolean while the game is starting so it just takes the last one given. TODO: find solution.
 		LangRegistry.addItem(this);
@@ -80,7 +84,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	public void addInformation(ItemStack item, EntityPlayer par2EntityPlayer, List list, boolean par4) {
 		double roundPH = Math.round(damageReduction*1000);
 		double roundedDamage = roundPH/10;
-		list.add(damageReduction == 0.0 ? ("No Protection") : "Damage Reduction: " + roundedDamage + "%");
+		list.add(damageReduction == 0.0 ? ("No Protection") : "Damage Reduction: " + roundedDamage + "% (" + fullReduction + "% full)");
 		list.add(!unbreakable ? (item.getMaxDamage() - item.getItemDamage() + " Uses Remaining") : "Unlimited Uses");
 		ArmorInformation.addInfo(item, par2EntityPlayer, list, par4);
 	}
@@ -106,11 +110,6 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	@Override
 	public ArmorProperties getProperties(EntityLivingBase arg0, ItemStack arg1, DamageSource arg2, double arg3, int arg4) {
 		return new ISpecialArmor.ArmorProperties(0, damageReduction, 50000);
-	}
-
-	public Item setTextureName(String par1Str) {
-		this.iconString = (Reference.PREFIX + par1Str);
-		return this;
 	}
 
 	public Item setName(String name){
