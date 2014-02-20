@@ -100,7 +100,7 @@ public class EntityCrab extends EntityDivineRPGMob {
 	}
 
 	protected String getLivingSound() {//TODO LEFT THE ERROR HERE SO IT CAN GET CHANGED SO IT CAN FIX.
-		return Sounds.playSound(Sounds.Crab, worldObj, this, 1, 1);;
+		return Sounds.playSound(Sounds.Crab, worldObj, this, 1, 1);
 	}
 
 	protected String getHurtSound() {

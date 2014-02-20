@@ -18,7 +18,7 @@ public class Sounds {
 		return Prefix + sound + ".ogg";
 	}
 	
-	public static void onEntityPlay(String name, World world, Entity entityName, float volume, float pitch){
+	public static void playSound(String name, World world, Entity entityName, float volume, float pitch){
         world.playSoundAtEntity(entityName, Reference.PREFIX + name, (float)volume, (float)pitch);
 	}
 }
