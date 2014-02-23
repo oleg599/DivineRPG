@@ -4,13 +4,13 @@ import java.util.List;
 
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.TwilightItemsArmor;
-import net.divinerpg.helper.items.VanillaItemsOther;
+import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
 public class ArmorInformation {
 	
-	public static VanillaItemsOther v;
+	public static VanillaItemsArmor v;
 	public static TwilightItemsArmor t;
 	public static IceikaItems i;
 	

@@ -25,7 +25,7 @@ public class EventArmorFullSet {
 	ItemStack chestplate = player.inventory.armorInventory[2];
 	ItemStack head = player.inventory.armorInventory[3];
 
-    private VanillaItemsOther v;
+    private VanillaItemsArmor v;
     
     //TODO Figure out why it isn't working.
     
@@ -50,7 +50,7 @@ public class EventArmorFullSet {
 		
 		DamageSource s = e.source;
 
-		if (boots == VanillaItemsOther.netheriteBoots && legs == VanillaItemsOther.netheriteLegs && body == VanillaItemsOther.netheriteBody && helmet == VanillaItemsOther.netheriteHelmet) {
+		if (boots == VanillaItemsArmor.netheriteBoots && legs == VanillaItemsArmor.netheriteLegs && body == VanillaItemsArmor.netheriteBody && helmet == VanillaItemsArmor.netheriteHelmet) {
 			if (s.equals(DamageSource.inFire) || s.equals(DamageSource.onFire) || s.equals(DamageSource.lava)) {
 				e.setCanceled(true);
 			}

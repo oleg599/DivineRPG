@@ -22,7 +22,7 @@ public class DivineRPGTabs {
 	public static CreativeTabs items = new CreativeTabs("Materials")
 		{public Item getTabIconItem() {return VanillaItemsOther.rupeeIngot;}};
 	public static CreativeTabs armor = new CreativeTabs("Armor")
-		{public Item getTabIconItem() {return VanillaItemsOther.angelicHelmet;}};
+		{public Item getTabIconItem() {return VanillaItemsArmor.angelicHelmet;}};
 	public static CreativeTabs spawner = new CreativeTabs("Spawner")
 		{public Item getTabIconItem() {return VanillaItemsOther.callWatcher;}};
 	public static CreativeTabs utility = new CreativeTabs("Utility")
