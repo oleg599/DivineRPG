@@ -1,6 +1,7 @@
 package divinerpg.helper.tabs;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import divinerpg.helper.blocks.TwilightBlocks;
 import divinerpg.helper.items.ItemsFood;
 import divinerpg.helper.items.VanillaItemsArmor;

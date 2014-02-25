@@ -14,6 +14,8 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
 
+import divinerpg.Reference;
+
 public class UpdateChecker {
 	
 	public static boolean isUpdateAvailable() throws IOException, MalformedURLException {

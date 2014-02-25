@@ -2,6 +2,7 @@ package divinerpg.helper.event;
 
 import javax.xml.transform.Result;
 
+import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
