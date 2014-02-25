@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import divinerpg.Sounds;
 import divinerpg.api.entity.EntityDivineRPGMob;
 import divinerpg.helper.items.VanillaItemsOther;
 
@@ -97,20 +98,17 @@ public class EntityKingCrab extends EntityDivineRPGMob
         this.randomSoundDelay = this.rand.nextInt(40);
     }
 
-    protected String getLivingSound()
-    {
-        return "";
-    }
+    protected String getLivingSound() {
+		return Sounds.playSound(Sounds.Crab, worldObj, this, 1, 1);
+	}
 
-    protected String getHurtSound()
-    {
-        return "";
-    }
+	protected String getHurtSound() {
+		return Sounds.playSound(Sounds.CrabHurt, worldObj, this, 1, 1);
+	}
 
-    protected String getDeathSound()
-    {
-        return "";
-    }
+	protected String getDeathSound() {
+		return Sounds.playSound(Sounds.CrabHurt, worldObj, this, 1, 1);
+	}
 
     protected void dropFewItems(boolean var1, int var2)
     {

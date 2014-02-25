@@ -21,6 +21,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import divinerpg.Sounds;
 import divinerpg.api.entity.EntityDivineRPGMob;
 
 public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAttackMob
@@ -54,7 +55,7 @@ public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAtta
      */
     protected String getLivingSound()
     {
-        return "mob.RPG.AridWarrior";
+        return Sounds.AridWarrior;
     }
 
     /**
@@ -62,7 +63,7 @@ public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAtta
      */
     protected String getHurtSound()
     {
-        return "mob.RPG.AridWarriorHit";
+        return Sounds.AridWarriorHurt;
     }
 
     /**
@@ -70,7 +71,7 @@ public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAtta
      */
     protected String getDeathSound()
     {
-        return "mob.RPG.AridWarriorHit";
+        return Sounds.AridWarriorHurt;
     }
     
     /**

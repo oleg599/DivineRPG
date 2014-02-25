@@ -95,16 +95,16 @@ public class EntityCrab extends EntityDivineRPGMob {
 		this.randomSoundDelay = this.rand.nextInt(40);
 	}
 
-	protected String getLivingSound() {//TODO LEFT THE ERROR HERE SO IT CAN GET CHANGED SO IT CAN FIX.
+	protected String getLivingSound() {
 		return Sounds.playSound(Sounds.Crab, worldObj, this, 1, 1);
 	}
 
 	protected String getHurtSound() {
-		return Sounds.CrabHurt;
+		return Sounds.playSound(Sounds.CrabHurt, worldObj, this, 1, 1);
 	}
 
 	protected String getDeathSound() {
-		return Sounds.CrabHurt;
+		return Sounds.playSound(Sounds.CrabHurt, worldObj, this, 1, 1);
 	}
 
 	protected Item getDropItem() {
