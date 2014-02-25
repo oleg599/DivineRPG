@@ -1,14 +1,13 @@
-package net.divinerpg.helper.tabs;
+package divinerpg.helper.tabs;
 
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.items.ItemsFood;
-import net.divinerpg.helper.items.VanillaItemsArmor;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.helper.items.VanillaItemsTools;
-import net.divinerpg.helper.items.VanillaItemsWeapons;
-import net.divinerpg.helper.items.VetheanItems;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import divinerpg.helper.blocks.TwilightBlocks;
+import divinerpg.helper.items.ItemsFood;
+import divinerpg.helper.items.VanillaItemsArmor;
+import divinerpg.helper.items.VanillaItemsOther;
+import divinerpg.helper.items.VanillaItemsTools;
+import divinerpg.helper.items.VanillaItemsWeapons;
+import divinerpg.helper.items.VetheanItems;
 
 public class DivineRPGTabs {
 	public static CreativeTabs blocks = new CreativeTabs("Blocks") 

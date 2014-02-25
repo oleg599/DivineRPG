@@ -1,15 +1,15 @@
-package net.divinerpg.vethea.items;
+package divinerpg.vethea.items;
 
 import java.util.List;
 
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.vethea.entity.projectile.EntityEvernightProjectile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EntityDamageSourceIndirect;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.helper.DivineAPI;
+import divinerpg.vethea.entity.projectile.EntityEvernightProjectile;
 
 public class ItemEvernight extends ItemStaff
 {

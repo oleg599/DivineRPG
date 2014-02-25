@@ -1,4 +1,4 @@
-package net.divinerpg.helper.mobs;
+package divinerpg.helper.mobs;
 
 public class IceikaMobRegistry {
 

@@ -1,20 +1,11 @@
-package net.divinerpg.twilight.blocks;
+package divinerpg.twilight.blocks;
 
 import java.util.Random;
 
-import net.divinerpg.Reference;
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.divinerpg.twilight.entity.fx.EntityWildWoodPortalFX;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemMonsterPlacer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChunkCoordinates;
@@ -25,6 +16,11 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.helper.blocks.TwilightBlocks;
+import divinerpg.helper.config.ConfigurationHelper;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
+import divinerpg.twilight.entity.fx.EntityWildWoodPortalFX;
 
 public class BlockWildwoodPortal extends BlockBreakable
 {

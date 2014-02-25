@@ -1,12 +1,11 @@
-package net.divinerpg.vethea.items;
+package divinerpg.vethea.items;
 
 import java.util.List;
 
-import net.divinerpg.helper.DivineAPI;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import divinerpg.helper.DivineAPI;
 
 public class ItemVetheanHealingFood extends ItemVetheanFood
 {

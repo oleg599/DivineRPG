@@ -1,12 +1,7 @@
-package net.divinerpg.helper.recipes;
+package divinerpg.helper.recipes;
 
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.items.*;
-import net.divinerpg.helper.items.TwilightItemsOther;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import cpw.mods.fml.common.registry.GameRegistry;
+import divinerpg.helper.DivineAPI;
+import divinerpg.helper.items.TwilightItemsOther;
 
 public class TwilightRecipeHelper {
 	

@@ -1,11 +1,10 @@
-package net.divinerpg.twilight.gen.wildwoods;
+package divinerpg.twilight.gen.wildwoods;
 
 import java.util.List;
 import java.util.Random;
 
-import cpw.mods.fml.common.eventhandler.Event.Result;
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.minecraft.block.Block;
+import javax.xml.transform.Result;
+
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -24,7 +23,7 @@ import net.minecraft.world.gen.feature.WorldGenLakes;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent;
-import net.minecraftforge.event.terraingen.PopulateChunkEvent;
+import divinerpg.helper.blocks.TwilightBlocks;
 
 public class ChunkProviderWildWoods implements IChunkProvider{
 

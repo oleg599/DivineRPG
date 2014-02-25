@@ -1,7 +1,5 @@
-package net.divinerpg.twilight.entity.mob;
+package divinerpg.twilight.entity.mob;
 
-import net.divinerpg.api.entity.EntityDivineRPGBoss;
-import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.IRangedAttackMob;
@@ -12,6 +10,8 @@ import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import divinerpg.api.entity.EntityDivineRPGBoss;
+import divinerpg.helper.items.TwilightItemsWeapons;
 
 public class EntityReyvor extends EntityDivineRPGBoss implements IBossDisplayData, IRangedAttackMob
 {

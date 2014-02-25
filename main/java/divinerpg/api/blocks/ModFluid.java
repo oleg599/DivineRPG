@@ -1,7 +1,8 @@
-package net.divinerpg.api.blocks;
+package divinerpg.api.blocks;
 
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
+
 
 public class ModFluid extends Fluid {
 

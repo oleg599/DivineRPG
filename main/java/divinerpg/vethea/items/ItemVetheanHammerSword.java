@@ -1,6 +1,7 @@
-package net.divinerpg.vethea.items;
+package divinerpg.vethea.items;
 
 import net.minecraftforge.common.util.EnumHelper;
+
 
 public class ItemVetheanHammerSword extends ItemVetheanSword {
 	

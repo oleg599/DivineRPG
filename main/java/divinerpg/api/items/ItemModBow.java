@@ -1,18 +1,7 @@
-package net.divinerpg.api.items;
+package divinerpg.api.items;
 
 import java.util.List;
 
-import net.divinerpg.Reference;
-import net.divinerpg.helper.items.TwilightItemsOther;
-import net.divinerpg.helper.items.TwilightItemsWeapons;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.divinerpg.twilight.entity.projectile.EntityApalachiaArrow;
-import net.divinerpg.twilight.entity.projectile.EntityEdenArrow;
-import net.divinerpg.twilight.entity.projectile.EntityHaliteArrow;
-import net.divinerpg.twilight.entity.projectile.EntityMortumArrow;
-import net.divinerpg.twilight.entity.projectile.EntitySkythernArrow;
-import net.divinerpg.twilight.entity.projectile.EntityWildArrow;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -29,6 +18,16 @@ import net.minecraftforge.event.entity.player.ArrowNockEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.Reference;
+import divinerpg.helper.items.TwilightItemsWeapons;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
+import divinerpg.twilight.entity.projectile.EntityApalachiaArrow;
+import divinerpg.twilight.entity.projectile.EntityEdenArrow;
+import divinerpg.twilight.entity.projectile.EntityHaliteArrow;
+import divinerpg.twilight.entity.projectile.EntityMortumArrow;
+import divinerpg.twilight.entity.projectile.EntitySkythernArrow;
+import divinerpg.twilight.entity.projectile.EntityWildArrow;
 
 public class ItemModBow extends ItemBow {
 

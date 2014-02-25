@@ -1,18 +1,13 @@
-package net.divinerpg.api.blocks;
+package divinerpg.api.blocks;
 
 import java.util.Random;
 
-import net.divinerpg.Reference;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
+import divinerpg.helper.tabs.DivineRPGTabs;
 
 public class BlockModLeaves extends BlockMod
 {

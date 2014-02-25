@@ -1,26 +1,17 @@
-package net.divinerpg.vanilla.entity.mobs;
+package divinerpg.vanilla.entity.mobs;
 
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.vanilla.entity.projectiles.EntityTripletProjectile;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityLargeFireball;
-import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.api.entity.EntityDivineRPGMob;
+import divinerpg.helper.items.VanillaItemsOther;
+import divinerpg.vanilla.entity.projectiles.EntityTripletProjectile;
 
 public class EntityEnderTriplets extends EntityDivineRPGMob implements IMob {
 	

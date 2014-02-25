@@ -1,20 +1,18 @@
-package net.divinerpg.vanilla.items;
+package divinerpg.vanilla.items;
 
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.vanilla.entity.mobs.EntityAyeracoBlue;
-import net.divinerpg.vanilla.entity.mobs.EntityAyeracoGreen;
-import net.divinerpg.vanilla.entity.mobs.EntityAyeracoPurple;
-import net.divinerpg.vanilla.entity.mobs.EntityAyeracoRed;
-import net.divinerpg.vanilla.entity.mobs.EntityAyeracoYellow;
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.Facing;
 import net.minecraft.world.World;
+import divinerpg.api.items.ItemMod;
+import divinerpg.helper.DivineAPI;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.vanilla.entity.mobs.EntityAyeracoBlue;
+import divinerpg.vanilla.entity.mobs.EntityAyeracoGreen;
+import divinerpg.vanilla.entity.mobs.EntityAyeracoPurple;
+import divinerpg.vanilla.entity.mobs.EntityAyeracoRed;
+import divinerpg.vanilla.entity.mobs.EntityAyeracoYellow;
 
 public class ItemHordeHorn extends ItemMod {
 	private int spawnTick;

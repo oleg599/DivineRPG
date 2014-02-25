@@ -1,12 +1,12 @@
-package net.divinerpg.helper.items;
+package divinerpg.helper.items;
 
-import net.divinerpg.api.items.ItemModAxe;
-import net.divinerpg.api.items.ItemModHoe;
-import net.divinerpg.api.items.ItemModPickaxe;
-import net.divinerpg.api.items.ItemModShovel;
-import net.divinerpg.api.items.ItemShickaxe;
-import net.divinerpg.helper.material.ToolMaterialMod;
 import net.minecraft.item.Item;
+import divinerpg.api.items.ItemModAxe;
+import divinerpg.api.items.ItemModHoe;
+import divinerpg.api.items.ItemModPickaxe;
+import divinerpg.api.items.ItemModShovel;
+import divinerpg.api.items.ItemShickaxe;
+import divinerpg.helper.material.ToolMaterialMod;
 
 public class VanillaItemsTools {
 

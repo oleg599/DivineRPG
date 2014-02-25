@@ -1,15 +1,11 @@
-package net.divinerpg.helper.event;
+package divinerpg.helper.event;
 
 import java.util.List;
 
-import net.divinerpg.helper.config.ConfigurationHelper;
 import net.minecraft.command.CommandBase;
-import net.minecraft.command.CommandDifficulty;
-import net.minecraft.command.CommandToggleDownfall;
 import net.minecraft.command.ICommandSender;
-import net.minecraft.command.server.CommandAchievement;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import divinerpg.helper.config.ConfigurationHelper;
 
 public class DivineRPGCommands extends CommandBase{
 

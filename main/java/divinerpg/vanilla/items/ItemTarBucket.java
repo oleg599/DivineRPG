@@ -1,14 +1,9 @@
-package net.divinerpg.vanilla.items;
+package divinerpg.vanilla.items;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.divinerpg.Reference;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemBucket;
-import net.minecraft.world.World;
+import cpw.mods.fml.common.registry.GameRegistry;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
 
 public class ItemTarBucket extends ItemBucket{
 

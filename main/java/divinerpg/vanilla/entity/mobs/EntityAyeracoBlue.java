@@ -1,10 +1,10 @@
-package net.divinerpg.vanilla.entity.mobs;
+package divinerpg.vanilla.entity.mobs;
 
-import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import divinerpg.helper.items.VanillaItemsWeapons;
 
 public class EntityAyeracoBlue extends EntityAyeraco
 {

@@ -1,6 +1,5 @@
-package net.divinerpg.twilight.entity.projectile;
+package divinerpg.twilight.entity.projectile;
 
-import net.divinerpg.twilight.entity.fx.EntityMortumPortalFX;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
@@ -10,6 +9,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.twilight.entity.fx.EntityMortumPortalFX;
 
 public class EntityPhaserMortum extends EntityThrowable
 {

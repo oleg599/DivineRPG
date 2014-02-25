@@ -1,10 +1,9 @@
-package net.divinerpg.twilight.entity.mob.model;
+package divinerpg.twilight.entity.mob.model;
 
-import net.divinerpg.twilight.entity.mob.EntityParatiku;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
+import divinerpg.twilight.entity.mob.EntityParatiku;
 
 public class ModelParatiku extends ModelBase
 {

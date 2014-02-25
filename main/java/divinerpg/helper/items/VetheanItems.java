@@ -1,9 +1,17 @@
-package net.divinerpg.helper.items;
+package divinerpg.helper.items;
 
-import net.divinerpg.api.items.*;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.vethea.items.*;
 import net.minecraft.item.Item;
+import divinerpg.api.items.ItemMod;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.vethea.items.ItemDisk;
+import divinerpg.vethea.items.ItemEvernight;
+import divinerpg.vethea.items.ItemStaff;
+import divinerpg.vethea.items.ItemVetheanCannon;
+import divinerpg.vethea.items.ItemVetheanClaw;
+import divinerpg.vethea.items.ItemVetheanEversight;
+import divinerpg.vethea.items.ItemVetheanFood;
+import divinerpg.vethea.items.ItemVetheanHammerSword;
+import divinerpg.vethea.items.ItemVetheanHealingFood;
 
 public class VetheanItems {
 	

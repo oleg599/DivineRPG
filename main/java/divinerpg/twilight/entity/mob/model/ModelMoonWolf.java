@@ -1,13 +1,9 @@
-package net.divinerpg.twilight.entity.mob.model;
+package divinerpg.twilight.entity.mob.model;
 
-import net.divinerpg.twilight.entity.mob.EntityMoonWolf;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.util.MathHelper;
-
-import org.lwjgl.opengl.GL11;
+import divinerpg.twilight.entity.mob.EntityMoonWolf;
 
 
 public class ModelMoonWolf extends ModelBase

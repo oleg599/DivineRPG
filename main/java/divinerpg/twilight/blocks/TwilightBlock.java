@@ -1,26 +1,16 @@
-package net.divinerpg.twilight.blocks;
+package divinerpg.twilight.blocks;
 
 import java.util.Random;
 
-import net.divinerpg.Reference;
-import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.items.TwilightItemsOther;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
+import divinerpg.helper.blocks.TwilightBlocks;
+import divinerpg.helper.items.TwilightItemsOther;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
 
 public class TwilightBlock extends Block
 {

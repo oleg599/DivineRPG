@@ -1,10 +1,10 @@
-package net.divinerpg.api.blocks;
+package divinerpg.api.blocks;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.divinerpg.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRedstoneLight;
-import net.minecraft.block.material.Material;
+import cpw.mods.fml.common.registry.GameRegistry;
+import divinerpg.Reference;
+
 
 public class BlockModLamp extends BlockRedstoneLight {
 

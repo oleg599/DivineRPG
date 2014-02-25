@@ -1,8 +1,8 @@
-package net.divinerpg.vanilla.entity.mobs.models;
+package divinerpg.vanilla.entity.mobs.models;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.entity.Entity;
+
 
 public class ModelFrost extends ModelBase
 {

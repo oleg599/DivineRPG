@@ -1,7 +1,7 @@
-package net.divinerpg.helper.material;
+package divinerpg.helper.material;
 
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.divinerpg.helper.DivineAPI;
+import divinerpg.helper.DivineAPI;
 
 public class ArmorMaterialMod {
 	

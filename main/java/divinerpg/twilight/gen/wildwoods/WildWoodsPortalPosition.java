@@ -1,6 +1,7 @@
-package net.divinerpg.twilight.gen.wildwoods;
+package divinerpg.twilight.gen.wildwoods;
 
 import net.minecraft.util.ChunkCoordinates;
+
 
 public class WildWoodsPortalPosition extends ChunkCoordinates
 {

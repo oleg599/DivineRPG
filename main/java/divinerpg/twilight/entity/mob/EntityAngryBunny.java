@@ -1,11 +1,8 @@
-package net.divinerpg.twilight.entity.mob;
+package divinerpg.twilight.entity.mob;
 
-import paulscode.sound.SoundBuffer;
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.minecraft.client.audio.SoundHandler;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.world.World;
+import divinerpg.api.entity.EntityDivineRPGMob;
 
 public class EntityAngryBunny extends EntityDivineRPGMob
 {

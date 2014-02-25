@@ -1,12 +1,12 @@
-package net.divinerpg.api.items;
+package divinerpg.api.items;
 
 import java.util.List;
 
-import net.divinerpg.helper.items.IceikaItems;
-import net.divinerpg.helper.items.TwilightItemsArmor;
-import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import divinerpg.helper.items.IceikaItems;
+import divinerpg.helper.items.TwilightItemsArmor;
+import divinerpg.helper.items.VanillaItemsArmor;
 
 public class ArmorInformation {
 	

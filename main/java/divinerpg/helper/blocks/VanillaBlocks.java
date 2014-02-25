@@ -1,12 +1,12 @@
-package net.divinerpg.helper.blocks;
+package divinerpg.helper.blocks;
 
-import net.divinerpg.vanilla.blocks.BlockAcceleron;
-import net.divinerpg.vanilla.blocks.BlockDivineTable;
-import net.divinerpg.vanilla.blocks.BlockTar;
-import net.divinerpg.vanilla.blocks.MobPumpkin;
-import net.divinerpg.vanilla.blocks.VanillaBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import divinerpg.vanilla.blocks.BlockAcceleron;
+import divinerpg.vanilla.blocks.BlockDivineTable;
+import divinerpg.vanilla.blocks.BlockTar;
+import divinerpg.vanilla.blocks.MobPumpkin;
+import divinerpg.vanilla.blocks.VanillaBlock;
 
 public class VanillaBlocks {
 

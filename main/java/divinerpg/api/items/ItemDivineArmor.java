@@ -1,14 +1,7 @@
-package net.divinerpg.api.items;
+package divinerpg.api.items;
 
 import java.util.List;
 
-import net.divinerpg.Reference;
-import net.divinerpg.helper.items.IceikaItems;
-import net.divinerpg.helper.items.TwilightItemsOther;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,6 +11,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.common.ISpecialArmor;
 import cpw.mods.fml.common.registry.GameRegistry;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
 
 public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 

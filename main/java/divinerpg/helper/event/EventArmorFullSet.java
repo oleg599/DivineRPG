@@ -1,15 +1,13 @@
-package net.divinerpg.helper.event;
+package divinerpg.helper.event;
 
-import net.divinerpg.helper.items.VanillaItemsArmor;
-import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
+import divinerpg.helper.items.VanillaItemsArmor;
 
 public class EventArmorFullSet {
 	

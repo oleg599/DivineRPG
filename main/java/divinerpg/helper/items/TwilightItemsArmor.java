@@ -1,8 +1,8 @@
-package net.divinerpg.helper.items;
+package divinerpg.helper.items;
 
-import net.divinerpg.api.items.ItemDivineArmor;
-import net.divinerpg.helper.material.ArmorMaterialMod;
 import net.minecraft.item.Item;
+import divinerpg.api.items.ItemDivineArmor;
+import divinerpg.helper.material.ArmorMaterialMod;
 
 public class TwilightItemsArmor {
 	

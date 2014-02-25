@@ -1,14 +1,13 @@
-package net.divinerpg.client;
+package divinerpg.client;
 
-import cpw.mods.fml.common.network.NetworkRegistry;
-import net.divinerpg.CommonProxy;
-import net.divinerpg.DivineRPG;
-import net.divinerpg.client.render.entity.IceikaEntityRenderer;
-import net.divinerpg.client.render.entity.OverworldEntityRenderer;
-import net.divinerpg.client.render.entity.TwilightEntityRenderer;
-import net.divinerpg.client.render.entity.VetheaEntityRenderer;
-import net.divinerpg.helper.mobs.IceikaMobRegistry;
 import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import divinerpg.CommonProxy;
+import divinerpg.DivineRPG;
+import divinerpg.client.render.entity.IceikaEntityRenderer;
+import divinerpg.client.render.entity.OverworldEntityRenderer;
+import divinerpg.client.render.entity.TwilightEntityRenderer;
+import divinerpg.client.render.entity.VetheaEntityRenderer;
 
 public class ClientProxy extends CommonProxy{
 

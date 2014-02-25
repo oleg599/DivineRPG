@@ -1,14 +1,7 @@
-package net.divinerpg.vanilla.entity.mobs;
+package divinerpg.vanilla.entity.mobs;
 
 import java.util.Calendar;
 
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.vanilla.entity.projectiles.EntitySparklerFX;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
@@ -20,12 +13,14 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.api.entity.EntityDivineRPGMob;
+import divinerpg.helper.items.VanillaItemsOther;
+import divinerpg.vanilla.entity.projectiles.EntitySparklerFX;
 
 public class EntityRainbour extends EntityDivineRPGMob
 {

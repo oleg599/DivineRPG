@@ -1,8 +1,9 @@
-package net.divinerpg.client.render.gui;
+package divinerpg.client.render.gui;
 
-import net.divinerpg.Reference;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.EnumChatFormatting;
+import divinerpg.Reference;
+
 
 public class GUIOverlay {
 	

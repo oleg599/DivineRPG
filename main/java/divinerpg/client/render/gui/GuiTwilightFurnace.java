@@ -1,8 +1,5 @@
-package net.divinerpg.client.render.gui;
+package divinerpg.client.render.gui;
 
-import net.divinerpg.client.render.GuiResourceLocation;
-import net.divinerpg.twilight.blocks.ContainerTwilightFurnace;
-import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 
@@ -10,6 +7,9 @@ import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.client.render.GuiResourceLocation;
+import divinerpg.twilight.blocks.ContainerTwilightFurnace;
+import divinerpg.twilight.blocks.TileEntityTwilightFurnace;
 
 @SideOnly(Side.CLIENT)
 public class GuiTwilightFurnace extends GuiContainer {

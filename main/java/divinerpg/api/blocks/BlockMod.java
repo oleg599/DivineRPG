@@ -12,17 +12,13 @@
 *   See the License for the specific language governing permissions and
 *   limitations under the License.
 */
-package net.divinerpg.api.blocks;
+package divinerpg.api.blocks;
 
-import net.divinerpg.Reference;
-import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
+import divinerpg.Reference;
+import divinerpg.helper.utils.LangRegistry;
 
 /**
  * <strong>Project:</strong> DivineRPG <br>

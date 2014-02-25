@@ -1,22 +1,9 @@
-package net.divinerpg.helper.items;
+package divinerpg.helper.items;
 
-import net.divinerpg.api.items.ItemDivineArmor;
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.api.items.ItemModAxe;
-import net.divinerpg.api.items.ItemModBow;
-import net.divinerpg.api.items.ItemModPickaxe;
-import net.divinerpg.api.items.ItemModShovel;
-import net.divinerpg.api.items.ItemModSword;
-import net.divinerpg.api.items.ItemShickaxe;
-import net.divinerpg.helper.material.ArmorMaterialMod;
-import net.divinerpg.helper.material.ToolMaterialMod;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.twilight.items.ItemTwilightBlitz;
-import net.divinerpg.twilight.items.ItemTwilightClock;
-import net.divinerpg.twilight.items.ItemTwilightPhaser;
-import net.divinerpg.twilight.items.ItemTwilightSpawner;
-import net.divinerpg.vanilla.items.ItemThrowable;
 import net.minecraft.item.Item;
+import divinerpg.api.items.ItemMod;
+import divinerpg.twilight.items.ItemTwilightClock;
+import divinerpg.twilight.items.ItemTwilightSpawner;
 
 public class TwilightItemsOther {
 

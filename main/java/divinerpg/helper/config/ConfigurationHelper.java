@@ -1,10 +1,9 @@
-package net.divinerpg.helper.config;
+package divinerpg.helper.config;
 
 import java.io.File;
 import java.util.HashMap;
 
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.common.config.Configuration;
+import javax.security.auth.login.Configuration;
 
 public class ConfigurationHelper {
 	

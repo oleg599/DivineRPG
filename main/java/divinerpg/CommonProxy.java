@@ -1,26 +1,5 @@
-package net.divinerpg;
+package divinerpg;
 
-import net.divinerpg.helper.DimensionHelper;
-import net.divinerpg.helper.blocks.IceikaBlocks;
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.blocks.VetheaBlocks;
-import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.event.DivineRPGCommands;
-import net.divinerpg.helper.event.EventArmorFullSet;
-import net.divinerpg.helper.event.EventBucketFill;
-import net.divinerpg.helper.event.EventClientLogin;
-import net.divinerpg.helper.event.EventOverlay;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.helper.mobs.IceikaMobRegistry;
-import net.divinerpg.helper.mobs.MobSpawning;
-import net.divinerpg.helper.mobs.OverworldMobRegistry;
-import net.divinerpg.helper.mobs.TwilightMobRegistry;
-import net.divinerpg.helper.mobs.VetheaMobRegistry;
-import net.divinerpg.helper.recipes.TwilightRecipeHelper;
-import net.divinerpg.helper.recipes.VanillaRecipeHelper;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
-import net.divinerpg.worldgen.WorldGenOverworld;
 import net.minecraft.command.CommandHandler;
 import net.minecraft.command.ServerCommandManager;
 import net.minecraft.init.Items;
@@ -35,6 +14,26 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import divinerpg.helper.DimensionHelper;
+import divinerpg.helper.blocks.IceikaBlocks;
+import divinerpg.helper.blocks.TwilightBlocks;
+import divinerpg.helper.blocks.VetheaBlocks;
+import divinerpg.helper.config.ConfigurationHelper;
+import divinerpg.helper.event.DivineRPGCommands;
+import divinerpg.helper.event.EventBucketFill;
+import divinerpg.helper.event.EventClientLogin;
+import divinerpg.helper.event.EventOverlay;
+import divinerpg.helper.items.VanillaItemsOther;
+import divinerpg.helper.mobs.IceikaMobRegistry;
+import divinerpg.helper.mobs.MobSpawning;
+import divinerpg.helper.mobs.OverworldMobRegistry;
+import divinerpg.helper.mobs.TwilightMobRegistry;
+import divinerpg.helper.mobs.VetheaMobRegistry;
+import divinerpg.helper.recipes.TwilightRecipeHelper;
+import divinerpg.helper.recipes.VanillaRecipeHelper;
+import divinerpg.helper.utils.LangRegistry;
+import divinerpg.twilight.blocks.TileEntityTwilightFurnace;
+import divinerpg.worldgen.WorldGenOverworld;
 
 public class CommonProxy {
 

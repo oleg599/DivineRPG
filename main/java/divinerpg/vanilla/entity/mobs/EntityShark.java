@@ -1,22 +1,17 @@
-package net.divinerpg.vanilla.entity.mobs;
+package divinerpg.vanilla.entity.mobs;
 
 import java.util.List;
 
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import divinerpg.api.entity.EntityDivineRPGMob;
+import divinerpg.helper.items.VanillaItemsOther;
 
 public class EntityShark extends EntityDivineRPGMob
 {

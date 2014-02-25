@@ -1,16 +1,14 @@
-package net.divinerpg.vanilla.entity.mobs;
+package divinerpg.vanilla.entity.mobs;
 
-import net.divinerpg.api.entity.EntityDivineRPGBoss;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.helper.items.VanillaItemsWeapons;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.IBossDisplayData;
-import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import divinerpg.api.entity.EntityDivineRPGBoss;
+import divinerpg.helper.items.VanillaItemsOther;
+import divinerpg.helper.items.VanillaItemsWeapons;
 
 public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDisplayData{
 	

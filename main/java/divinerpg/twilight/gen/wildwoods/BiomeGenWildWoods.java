@@ -1,11 +1,10 @@
-package net.divinerpg.twilight.gen.wildwoods;
+package divinerpg.twilight.gen.wildwoods;
 
 import java.util.Random;
 
-import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
-import net.minecraft.world.gen.feature.WorldGenerator;
+import divinerpg.helper.blocks.TwilightBlocks;
 
 public class BiomeGenWildWoods extends BiomeGenBase {
 

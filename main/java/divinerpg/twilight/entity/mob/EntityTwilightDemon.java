@@ -1,8 +1,5 @@
-package net.divinerpg.twilight.entity.mob;
+package divinerpg.twilight.entity.mob;
 
-import net.divinerpg.api.entity.EntityDivineRPGBoss;
-import net.divinerpg.helper.items.TwilightItemsWeapons;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
@@ -11,11 +8,12 @@ import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import divinerpg.api.entity.EntityDivineRPGBoss;
+import divinerpg.helper.items.TwilightItemsWeapons;
 
 public class EntityTwilightDemon extends EntityDivineRPGBoss implements IBossDisplayData
 {

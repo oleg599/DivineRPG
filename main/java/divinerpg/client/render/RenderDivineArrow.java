@@ -1,4 +1,4 @@
-package net.divinerpg.client.render;
+package divinerpg.client.render;
 
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
@@ -12,6 +12,7 @@ import org.lwjgl.opengl.GL12;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 
 @SideOnly(Side.CLIENT)
 public class RenderDivineArrow extends Render

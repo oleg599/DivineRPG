@@ -1,15 +1,15 @@
-package net.divinerpg.helper.blocks;
+package divinerpg.helper.blocks;
 
-import net.divinerpg.api.blocks.BlockModBook;
-import net.divinerpg.api.blocks.BlockModDirt;
-import net.divinerpg.api.blocks.BlockModGlass;
-import net.divinerpg.api.blocks.BlockModGrass;
-import net.divinerpg.api.blocks.BlockModLeaves;
-import net.divinerpg.api.blocks.BlockModLog;
-import net.divinerpg.api.blocks.BlockModSpawner;
-import net.divinerpg.iceika.blocks.IceikaBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import divinerpg.api.blocks.BlockModBook;
+import divinerpg.api.blocks.BlockModDirt;
+import divinerpg.api.blocks.BlockModGlass;
+import divinerpg.api.blocks.BlockModGrass;
+import divinerpg.api.blocks.BlockModLeaves;
+import divinerpg.api.blocks.BlockModLog;
+import divinerpg.api.blocks.BlockModSpawner;
+import divinerpg.iceika.blocks.IceikaBlock;
 
 public class IceikaBlocks {
 	

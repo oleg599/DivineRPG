@@ -1,4 +1,4 @@
-package net.divinerpg.helper.event;
+package divinerpg.helper.event;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,8 +13,6 @@ import java.net.URL;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
-
-import net.divinerpg.Reference;
 
 public class UpdateChecker {
 	

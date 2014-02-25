@@ -1,17 +1,15 @@
-package net.divinerpg.vanilla.blocks;
+package divinerpg.vanilla.blocks;
 
-import net.divinerpg.DivineRPG;
-import net.divinerpg.Reference;
-import net.divinerpg.api.blocks.BlockMod;
-import net.divinerpg.client.GuiHandler;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.DivineRPG;
+import divinerpg.api.blocks.BlockMod;
+import divinerpg.client.GuiHandler;
+import divinerpg.helper.tabs.DivineRPGTabs;
 
 public class BlockDivineTable extends BlockMod{
 

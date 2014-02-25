@@ -1,13 +1,12 @@
-package net.divinerpg.vanilla.entity.projectiles;
+package divinerpg.vanilla.entity.projectiles;
 
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityBlaze;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
+
 
 public class EntityShuriken extends EntityThrowable
 {

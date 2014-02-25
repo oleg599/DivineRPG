@@ -1,6 +1,5 @@
-package net.divinerpg.vanilla.entity.projectiles;
+package divinerpg.vanilla.entity.projectiles;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.util.DamageSource;
@@ -9,6 +8,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 
 public class EntityTripletProjectile extends EntityFireball
 {

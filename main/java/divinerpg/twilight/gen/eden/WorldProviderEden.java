@@ -1,10 +1,10 @@
-package net.divinerpg.twilight.gen.eden;
+package divinerpg.twilight.gen.eden;
 
-import net.divinerpg.helper.DimensionHelper;
-import net.divinerpg.helper.config.ConfigurationHelper;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
+import divinerpg.helper.DimensionHelper;
+import divinerpg.helper.config.ConfigurationHelper;
 
 public class WorldProviderEden extends WorldProvider {
 

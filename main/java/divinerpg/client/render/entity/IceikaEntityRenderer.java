@@ -1,4 +1,4 @@
-package net.divinerpg.client.render.entity;
+package divinerpg.client.render.entity;
 
 public class IceikaEntityRenderer {
 

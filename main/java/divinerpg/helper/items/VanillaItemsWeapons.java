@@ -1,10 +1,10 @@
-package net.divinerpg.helper.items;
+package divinerpg.helper.items;
 
-import net.divinerpg.api.items.ItemModSword;
-import net.divinerpg.helper.material.ToolMaterialMod;
-import net.divinerpg.vanilla.items.ItemInfernoSword;
-import net.divinerpg.vanilla.items.ItemThrowable;
 import net.minecraft.item.Item;
+import divinerpg.api.items.ItemModSword;
+import divinerpg.helper.material.ToolMaterialMod;
+import divinerpg.vanilla.items.ItemInfernoSword;
+import divinerpg.vanilla.items.ItemThrowable;
 
 public class VanillaItemsWeapons {
 

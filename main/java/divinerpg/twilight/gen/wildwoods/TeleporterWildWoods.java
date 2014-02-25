@@ -1,14 +1,10 @@
-package net.divinerpg.twilight.gen.wildwoods;
+package divinerpg.twilight.gen.wildwoods;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.config.ConfigurationHelper;
-import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.Direction;
@@ -16,6 +12,8 @@ import net.minecraft.util.LongHashMap;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.ChunkCoordIntPair;
 import net.minecraft.world.WorldServer;
+import divinerpg.helper.blocks.TwilightBlocks;
+import divinerpg.helper.config.ConfigurationHelper;
 
 public class TeleporterWildWoods {
 	

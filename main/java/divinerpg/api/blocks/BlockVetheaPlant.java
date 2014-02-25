@@ -1,20 +1,11 @@
-package net.divinerpg.api.blocks;
+package divinerpg.api.blocks;
 
-import static net.minecraftforge.common.EnumPlantType.Plains;
-
-import java.util.Random;
-
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.divinerpg.Reference;
-import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFlower;
-import net.minecraft.block.material.Material;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.world.World;
-import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
-import net.minecraftforge.common.util.ForgeDirection;
+import cpw.mods.fml.common.registry.GameRegistry;
+import divinerpg.Reference;
+import divinerpg.helper.blocks.VetheaBlocks;
 
 public class BlockVetheaPlant extends BlockFlower implements IPlantable
 {

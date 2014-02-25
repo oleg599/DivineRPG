@@ -1,20 +1,9 @@
-package net.divinerpg.twilight.blocks;
-
-import static net.minecraftforge.common.util.ForgeDirection.DOWN;
-import static net.minecraftforge.common.util.ForgeDirection.EAST;
-import static net.minecraftforge.common.util.ForgeDirection.NORTH;
-import static net.minecraftforge.common.util.ForgeDirection.SOUTH;
-import static net.minecraftforge.common.util.ForgeDirection.UP;
-import static net.minecraftforge.common.util.ForgeDirection.WEST;
+package divinerpg.twilight.blocks;
 
 import java.util.IdentityHashMap;
 import java.util.Map.Entry;
 import java.util.Random;
 
-import net.divinerpg.Reference;
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -31,6 +20,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.helper.blocks.TwilightBlocks;
+import divinerpg.helper.tabs.DivineRPGTabs;
 
 public class BlockBlueFire extends BlockFire {
 	

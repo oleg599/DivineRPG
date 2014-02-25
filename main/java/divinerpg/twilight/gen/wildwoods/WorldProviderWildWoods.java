@@ -1,10 +1,10 @@
-package net.divinerpg.twilight.gen.wildwoods;
+package divinerpg.twilight.gen.wildwoods;
 
-import net.divinerpg.helper.DimensionHelper;
-import net.divinerpg.helper.config.ConfigurationHelper;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
+import divinerpg.helper.DimensionHelper;
+import divinerpg.helper.config.ConfigurationHelper;
 
 public class WorldProviderWildWoods extends WorldProvider {
 

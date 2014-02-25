@@ -1,9 +1,17 @@
-package net.divinerpg.helper.blocks;
+package divinerpg.helper.blocks;
 
-import net.divinerpg.api.blocks.*;
-import net.divinerpg.twilight.blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import divinerpg.api.blocks.BlockModDirt;
+import divinerpg.api.blocks.BlockModGrass;
+import divinerpg.api.blocks.BlockModLeaves;
+import divinerpg.api.blocks.BlockModLog;
+import divinerpg.api.blocks.BlockModVine;
+import divinerpg.twilight.blocks.BlockBlueFire;
+import divinerpg.twilight.blocks.BlockEdenPortal;
+import divinerpg.twilight.blocks.BlockTwilightFurnace;
+import divinerpg.twilight.blocks.BlockWildwoodPortal;
+import divinerpg.twilight.blocks.TwilightBlock;
 
 public class TwilightBlocks {
 	

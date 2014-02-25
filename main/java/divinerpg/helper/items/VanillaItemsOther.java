@@ -1,13 +1,12 @@
-package net.divinerpg.helper.items;
+package divinerpg.helper.items;
 
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.vanilla.items.ItemHordeHorn;
-import net.divinerpg.vanilla.items.ItemMysteriousClock;
-import net.divinerpg.vanilla.items.ItemTarBucket;
-import net.divinerpg.vanilla.items.ItemVanillaSpawner;
 import net.minecraft.item.Item;
-import cpw.mods.fml.common.registry.GameRegistry;
+import divinerpg.api.items.ItemMod;
+import divinerpg.helper.blocks.VanillaBlocks;
+import divinerpg.vanilla.items.ItemHordeHorn;
+import divinerpg.vanilla.items.ItemMysteriousClock;
+import divinerpg.vanilla.items.ItemTarBucket;
+import divinerpg.vanilla.items.ItemVanillaSpawner;
 
 public class VanillaItemsOther {
 

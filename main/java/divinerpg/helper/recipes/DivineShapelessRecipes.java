@@ -1,4 +1,4 @@
-package net.divinerpg.helper.recipes;
+package divinerpg.helper.recipes;
 
 import java.util.ArrayList;
 import java.util.Iterator;

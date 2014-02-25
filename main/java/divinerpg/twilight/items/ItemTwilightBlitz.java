@@ -1,23 +1,23 @@
-package net.divinerpg.twilight.items;
+package divinerpg.twilight.items;
 
 import java.util.List;
 
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.items.TwilightItemsOther;
-import net.divinerpg.helper.items.TwilightItemsWeapons;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.divinerpg.twilight.entity.projectile.EntityBlitzAlapachia;
-import net.divinerpg.twilight.entity.projectile.EntityBlitzEden;
-import net.divinerpg.twilight.entity.projectile.EntityBlitzHalite;
-import net.divinerpg.twilight.entity.projectile.EntityBlitzMortum;
-import net.divinerpg.twilight.entity.projectile.EntityBlitzSkythern;
-import net.divinerpg.twilight.entity.projectile.EntityBlitzWildWood;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.api.items.ItemMod;
+import divinerpg.helper.items.TwilightItemsOther;
+import divinerpg.helper.items.TwilightItemsWeapons;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
+import divinerpg.twilight.entity.projectile.EntityBlitzAlapachia;
+import divinerpg.twilight.entity.projectile.EntityBlitzEden;
+import divinerpg.twilight.entity.projectile.EntityBlitzHalite;
+import divinerpg.twilight.entity.projectile.EntityBlitzMortum;
+import divinerpg.twilight.entity.projectile.EntityBlitzSkythern;
+import divinerpg.twilight.entity.projectile.EntityBlitzWildWood;
 
 public class ItemTwilightBlitz extends ItemMod {
 	private String sound;

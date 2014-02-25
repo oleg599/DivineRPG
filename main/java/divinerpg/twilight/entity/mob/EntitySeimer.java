@@ -1,17 +1,12 @@
-package net.divinerpg.twilight.entity.mob;
+package divinerpg.twilight.entity.mob;
 
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAIFollowOwner;
 import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import divinerpg.api.entity.EntityDivineRPGMob;
 
 public class EntitySeimer extends EntityDivineRPGMob
 {

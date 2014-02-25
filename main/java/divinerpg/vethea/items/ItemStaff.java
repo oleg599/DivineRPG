@@ -1,19 +1,16 @@
-package net.divinerpg.vethea.items;
+package divinerpg.vethea.items;
 
 import java.util.List;
 
-import net.divinerpg.DivineRPG;
-import net.divinerpg.Sounds;
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.vethea.entity.projectile.EntityBouncingProjectile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.api.items.ItemMod;
+import divinerpg.helper.DivineAPI;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.vethea.entity.projectile.EntityBouncingProjectile;
 
 public class ItemStaff extends ItemMod
 {

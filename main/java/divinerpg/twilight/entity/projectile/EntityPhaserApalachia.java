@@ -1,6 +1,5 @@
-package net.divinerpg.twilight.entity.projectile;
+package divinerpg.twilight.entity.projectile;
 
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
@@ -9,6 +8,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 
 public class EntityPhaserApalachia extends EntityThrowable
 {

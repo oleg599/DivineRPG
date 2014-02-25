@@ -1,11 +1,11 @@
-package net.divinerpg.worldgen;
+package divinerpg.worldgen;
 
 import java.util.Random;
 
-import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import divinerpg.helper.blocks.TwilightBlocks;
 
 public class WorldGenBlueFire extends WorldGenerator {
 

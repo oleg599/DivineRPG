@@ -1,14 +1,13 @@
-package net.divinerpg.vanilla.blocks;
+package divinerpg.vanilla.blocks;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import net.divinerpg.Reference;
-import net.divinerpg.api.blocks.BlockMod;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.api.blocks.BlockMod;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
 
 public class BlockAcceleron extends BlockMod{
 

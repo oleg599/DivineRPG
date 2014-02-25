@@ -1,7 +1,7 @@
-package net.divinerpg.helper.items;
+package divinerpg.helper.items;
 
-import net.divinerpg.api.items.ItemModFood;
 import net.minecraft.item.Item;
+import divinerpg.api.items.ItemModFood;
 
 public class ItemsFood {
 

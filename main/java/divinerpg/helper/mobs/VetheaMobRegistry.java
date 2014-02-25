@@ -1,21 +1,20 @@
-package net.divinerpg.helper.mobs;
+package divinerpg.helper.mobs;
 
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.vethea.entity.*;
-import net.divinerpg.vethea.entity.projectile.EntityAmthirmisDisk;
-import net.divinerpg.vethea.entity.projectile.EntityArksianeDisk;
-import net.divinerpg.vethea.entity.projectile.EntityBouncingProjectile;
-import net.divinerpg.vethea.entity.projectile.EntityCermileDisk;
-import net.divinerpg.vethea.entity.projectile.EntityDarvenDisk;
-import net.divinerpg.vethea.entity.projectile.EntityEvernightProjectile;
-import net.divinerpg.vethea.entity.projectile.EntityEversightProjectile;
-import net.divinerpg.vethea.entity.projectile.EntityHeliosisDisk;
-import net.divinerpg.vethea.entity.projectile.EntityKarosDisk;
-import net.divinerpg.vethea.entity.projectile.EntityPardimalDisk;
-import net.divinerpg.vethea.entity.projectile.EntityQuadroticDisk;
-import net.divinerpg.vethea.entity.projectile.EntityTeakerDisk;
-import net.divinerpg.vethea.entity.projectile.EntityVetheanCannonEversight;
-import net.divinerpg.vethea.entity.projectile.EntityVetheanCannonShot;
+import divinerpg.helper.DivineAPI;
+import divinerpg.vethea.entity.projectile.EntityAmthirmisDisk;
+import divinerpg.vethea.entity.projectile.EntityArksianeDisk;
+import divinerpg.vethea.entity.projectile.EntityBouncingProjectile;
+import divinerpg.vethea.entity.projectile.EntityCermileDisk;
+import divinerpg.vethea.entity.projectile.EntityDarvenDisk;
+import divinerpg.vethea.entity.projectile.EntityEvernightProjectile;
+import divinerpg.vethea.entity.projectile.EntityEversightProjectile;
+import divinerpg.vethea.entity.projectile.EntityHeliosisDisk;
+import divinerpg.vethea.entity.projectile.EntityKarosDisk;
+import divinerpg.vethea.entity.projectile.EntityPardimalDisk;
+import divinerpg.vethea.entity.projectile.EntityQuadroticDisk;
+import divinerpg.vethea.entity.projectile.EntityTeakerDisk;
+import divinerpg.vethea.entity.projectile.EntityVetheanCannonEversight;
+import divinerpg.vethea.entity.projectile.EntityVetheanCannonShot;
 
 public class VetheaMobRegistry {
 

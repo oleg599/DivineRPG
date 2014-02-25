@@ -1,12 +1,9 @@
-package net.divinerpg.twilight.entity.projectile;
+package divinerpg.twilight.entity.projectile;
 
 import java.util.List;
 
-import net.divinerpg.helper.items.TwilightItemsWeapons;
-import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.entity.player.EntityPlayer;
@@ -23,6 +20,7 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.helper.items.TwilightItemsWeapons;
 
 public class EntityHaliteArrow extends EntityArrow {
 	

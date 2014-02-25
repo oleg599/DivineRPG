@@ -1,8 +1,5 @@
-package net.divinerpg.vanilla.entity.mobs;
+package divinerpg.vanilla.entity.mobs;
 
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.ItemsFood;
-import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
@@ -17,8 +14,10 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.world.World;
+import divinerpg.api.entity.EntityDivineRPGMob;
+import divinerpg.helper.items.ItemsFood;
+import divinerpg.helper.items.VanillaItemsOther;
 
 public class EntityIceMan extends EntityDivineRPGMob
 {

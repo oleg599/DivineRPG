@@ -1,8 +1,8 @@
-package net.divinerpg.vethea.entity.projectile;
+package divinerpg.vethea.entity.projectile;
 
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.Item;
 import net.minecraft.world.World;
+
 
 public class EntityQuadroticDisk extends EntityDisk
 {

@@ -1,23 +1,15 @@
-package net.divinerpg.twilight.blocks;
+package divinerpg.twilight.blocks;
 
+import java.awt.Container;
 import java.util.Random;
 
-import net.divinerpg.DivineRPG;
-import net.divinerpg.Reference;
-import net.divinerpg.client.GuiHandler;
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -28,6 +20,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.DivineRPG;
+import divinerpg.client.GuiHandler;
+import divinerpg.helper.blocks.TwilightBlocks;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
 
 public class BlockTwilightFurnace extends BlockContainer {
 

@@ -1,10 +1,10 @@
-package net.divinerpg.vethea.items;
+package divinerpg.vethea.items;
 
-import net.divinerpg.helper.items.VetheanItems;
-import net.divinerpg.vethea.entity.projectile.EntityEversightProjectile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import divinerpg.helper.items.VetheanItems;
+import divinerpg.vethea.entity.projectile.EntityEversightProjectile;
 
 public class ItemVetheanEversight extends ItemVetheanCannon
 {

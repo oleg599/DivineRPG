@@ -1,25 +1,22 @@
-package net.divinerpg.twilight.items;
+package divinerpg.twilight.items;
 
 import java.util.List;
 
-import net.divinerpg.Reference;
-import net.divinerpg.helper.items.TwilightItemsOther;
-import net.divinerpg.helper.items.TwilightItemsWeapons;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.divinerpg.twilight.entity.projectile.EntityPhaserApalachia;
-import net.divinerpg.twilight.entity.projectile.EntityPhaserEden;
-import net.divinerpg.twilight.entity.projectile.EntityPhaserHalite;
-import net.divinerpg.twilight.entity.projectile.EntityPhaserMortum;
-import net.divinerpg.twilight.entity.projectile.EntityPhaserSkythern;
-import net.divinerpg.twilight.entity.projectile.EntityPhaserWildWood;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.helper.items.TwilightItemsWeapons;
+import divinerpg.helper.utils.LangRegistry;
+import divinerpg.twilight.entity.projectile.EntityPhaserApalachia;
+import divinerpg.twilight.entity.projectile.EntityPhaserEden;
+import divinerpg.twilight.entity.projectile.EntityPhaserHalite;
+import divinerpg.twilight.entity.projectile.EntityPhaserMortum;
+import divinerpg.twilight.entity.projectile.EntityPhaserSkythern;
+import divinerpg.twilight.entity.projectile.EntityPhaserWildWood;
 
 public class ItemTwilightPhaser extends Item
 {

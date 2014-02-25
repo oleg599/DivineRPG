@@ -1,8 +1,5 @@
-package net.divinerpg.vanilla.entity.mobs;
+package divinerpg.vanilla.entity.mobs;
 
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -17,9 +14,11 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import divinerpg.api.entity.EntityDivineRPGMob;
+import divinerpg.helper.items.VanillaItemsOther;
+import divinerpg.helper.items.VanillaItemsWeapons;
 
 public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackMob
 {

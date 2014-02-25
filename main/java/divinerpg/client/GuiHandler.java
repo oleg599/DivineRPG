@@ -1,15 +1,14 @@
-package net.divinerpg.client;
+package divinerpg.client;
 
-import net.divinerpg.client.render.gui.GuiDivineTable;
-import net.divinerpg.client.render.gui.GuiTwilightFurnace;
-import net.divinerpg.twilight.blocks.BlockTwilightFurnace;
-import net.divinerpg.twilight.blocks.ContainerTwilightFurnace;
-import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
-import net.divinerpg.vanilla.blocks.contaner.ContainerDivineTable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
+import divinerpg.client.render.gui.GuiDivineTable;
+import divinerpg.client.render.gui.GuiTwilightFurnace;
+import divinerpg.twilight.blocks.ContainerTwilightFurnace;
+import divinerpg.twilight.blocks.TileEntityTwilightFurnace;
+import divinerpg.vanilla.blocks.contaner.ContainerDivineTable;
 
 public class GuiHandler implements IGuiHandler{
 

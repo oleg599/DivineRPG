@@ -1,11 +1,13 @@
-package net.divinerpg.helper;
+package divinerpg.helper;
 
-import net.divinerpg.helper.config.*;
-import net.divinerpg.twilight.gen.eden.*;
-import net.divinerpg.twilight.gen.wildwoods.*;
 import net.minecraft.world.WorldProvider;
-import net.minecraft.world.biome.*;
-import net.minecraftforge.common.*;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.DimensionManager;
+import divinerpg.helper.config.ConfigurationHelper;
+import divinerpg.twilight.gen.eden.BiomeGenEden;
+import divinerpg.twilight.gen.eden.WorldProviderEden;
+import divinerpg.twilight.gen.wildwoods.BiomeGenWildWoods;
+import divinerpg.twilight.gen.wildwoods.WorldProviderWildWoods;
 
 public class DimensionHelper {
 

@@ -1,10 +1,11 @@
-package net.divinerpg.vanilla.entity.projectiles;
+package divinerpg.vanilla.entity.projectiles;
 
 import net.minecraft.client.particle.EntityFX;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 
 @SideOnly(Side.CLIENT)
 public class EntitySparklerFX extends EntityFX

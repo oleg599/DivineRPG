@@ -1,4 +1,4 @@
-package net.divinerpg.client.render;
+package divinerpg.client.render;
 
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
@@ -8,6 +8,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
 
 public class RenderProjectile extends Render
 {

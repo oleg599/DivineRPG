@@ -1,14 +1,14 @@
-package net.divinerpg.vanilla.items;
+package divinerpg.vanilla.items;
 
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.divinerpg.vanilla.entity.mobs.EntityKingOfScorchers;
-import net.divinerpg.vanilla.entity.mobs.EntityNetherWatcher;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import divinerpg.api.items.ItemMod;
+import divinerpg.helper.items.VanillaItemsOther;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
+import divinerpg.vanilla.entity.mobs.EntityKingOfScorchers;
+import divinerpg.vanilla.entity.mobs.EntityNetherWatcher;
 
 public class ItemVanillaSpawner extends ItemMod{
 

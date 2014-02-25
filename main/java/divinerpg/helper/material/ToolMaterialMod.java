@@ -1,7 +1,8 @@
-package net.divinerpg.helper.material;
+package divinerpg.helper.material;
 
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+
 
  public class ToolMaterialMod {
 	

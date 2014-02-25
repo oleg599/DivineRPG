@@ -1,14 +1,19 @@
-package net.divinerpg.twilight.items;
+package divinerpg.twilight.items;
 
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.TwilightItemsOther;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.divinerpg.twilight.entity.mob.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import divinerpg.api.items.ItemMod;
+import divinerpg.helper.config.ConfigurationHelper;
+import divinerpg.helper.items.TwilightItemsOther;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
+import divinerpg.twilight.entity.mob.EntityDensos;
+import divinerpg.twilight.entity.mob.EntityKarot;
+import divinerpg.twilight.entity.mob.EntityReyvor;
+import divinerpg.twilight.entity.mob.EntitySoulFiend;
+import divinerpg.twilight.entity.mob.EntityTwilightDemon;
+import divinerpg.twilight.entity.mob.EntityVamacheron;
 
 public class ItemTwilightSpawner extends ItemMod{
 

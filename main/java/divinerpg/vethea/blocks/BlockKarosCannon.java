@@ -1,31 +1,17 @@
-package net.divinerpg.vethea.blocks;
+package divinerpg.vethea.blocks;
 
 import java.util.Random;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.divinerpg.Reference;
-import net.divinerpg.helper.blocks.VetheaBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.BlockDispenser;
 import net.minecraft.block.material.Material;
 import net.minecraft.dispenser.BehaviorDefaultDispenseItem;
-import net.minecraft.dispenser.IBlockSource;
-import net.minecraft.dispenser.IPosition;
-import net.minecraft.dispenser.PositionImpl;
-import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityDispenser;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IRegistry;
-import net.minecraft.util.MathHelper;
 import net.minecraft.util.RegistryDefaulted;
 import net.minecraft.world.World;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockKarosCannon extends BlockContainer {
 

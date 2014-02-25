@@ -1,6 +1,7 @@
-package net.divinerpg.twilight.gen.eden;
+package divinerpg.twilight.gen.eden;
 
 import net.minecraft.util.ChunkCoordinates;
+
 
 public class EdenPortalPosition extends ChunkCoordinates
 {

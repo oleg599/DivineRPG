@@ -1,25 +1,24 @@
-package net.divinerpg.vanilla.items;
+package divinerpg.vanilla.items;
 
 import java.util.List;
 
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.items.TwilightItemsOther;
-import net.divinerpg.helper.items.TwilightItemsWeapons;
-import net.divinerpg.helper.items.VanillaItemsWeapons;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.twilight.entity.projectile.EntitySlicerApalachia;
-import net.divinerpg.twilight.entity.projectile.EntitySlicerEden;
-import net.divinerpg.twilight.entity.projectile.EntitySlicerHalite;
-import net.divinerpg.twilight.entity.projectile.EntitySlicerMortum;
-import net.divinerpg.twilight.entity.projectile.EntitySlicerSkythern;
-import net.divinerpg.twilight.entity.projectile.EntitySlicerWildWoods;
-import net.divinerpg.vanilla.entity.projectiles.EntityShuriken;
-import net.divinerpg.vanilla.entity.projectiles.EntityVileStorm;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.api.items.ItemMod;
+import divinerpg.helper.items.TwilightItemsWeapons;
+import divinerpg.helper.items.VanillaItemsWeapons;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.twilight.entity.projectile.EntitySlicerApalachia;
+import divinerpg.twilight.entity.projectile.EntitySlicerEden;
+import divinerpg.twilight.entity.projectile.EntitySlicerHalite;
+import divinerpg.twilight.entity.projectile.EntitySlicerMortum;
+import divinerpg.twilight.entity.projectile.EntitySlicerSkythern;
+import divinerpg.twilight.entity.projectile.EntitySlicerWildWoods;
+import divinerpg.vanilla.entity.projectiles.EntityShuriken;
+import divinerpg.vanilla.entity.projectiles.EntityVileStorm;
 
 public class ItemThrowable extends ItemMod {
 

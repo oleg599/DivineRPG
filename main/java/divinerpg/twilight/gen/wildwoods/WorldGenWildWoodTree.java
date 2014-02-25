@@ -1,15 +1,13 @@
-package net.divinerpg.twilight.gen.wildwoods;
+package divinerpg.twilight.gen.wildwoods;
 
 import java.util.Random;
 
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.common.util.ForgeDirection;
+import divinerpg.helper.blocks.TwilightBlocks;
 
 public class WorldGenWildWoodTree extends WorldGenAbstractTree
 {

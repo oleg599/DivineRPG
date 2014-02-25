@@ -1,17 +1,14 @@
-package net.divinerpg.worldgen;
+package divinerpg.worldgen;
 
 import java.util.Random;
 
-import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.ChunkProviderHell;
-import net.minecraft.world.gen.feature.WorldGenFire;
 import net.minecraft.world.gen.feature.WorldGenLakes;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
+import divinerpg.helper.blocks.VanillaBlocks;
 
 public class WorldGenOverworld implements IWorldGenerator{
 

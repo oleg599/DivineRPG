@@ -1,8 +1,5 @@
-package net.divinerpg.twilight.entity.mob;
+package divinerpg.twilight.entity.mob;
 
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.TwilightItemsOther;
-import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.IRangedAttackMob;
@@ -11,10 +8,12 @@ import net.minecraft.entity.ai.EntityAIArrowAttack;
 import net.minecraft.entity.ai.EntityAIFleeSun;
 import net.minecraft.entity.ai.EntityAIRestrictSun;
 import net.minecraft.entity.projectile.EntityArrow;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import divinerpg.api.entity.EntityDivineRPGMob;
+import divinerpg.helper.items.TwilightItemsOther;
+import divinerpg.helper.items.TwilightItemsWeapons;
 
 public class EntityMortumArcher extends EntityDivineRPGMob implements IRangedAttackMob
 {

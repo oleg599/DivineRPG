@@ -1,13 +1,13 @@
-package net.divinerpg.helper.items;
+package divinerpg.helper.items;
 
-import net.divinerpg.api.items.ItemDivineArmor;
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.api.items.ItemModFood;
-import net.divinerpg.api.items.ItemModSword;
-import net.divinerpg.helper.material.ArmorMaterialMod;
-import net.divinerpg.helper.material.ToolMaterialMod;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.item.Item;
+import divinerpg.api.items.ItemDivineArmor;
+import divinerpg.api.items.ItemMod;
+import divinerpg.api.items.ItemModFood;
+import divinerpg.api.items.ItemModSword;
+import divinerpg.helper.material.ArmorMaterialMod;
+import divinerpg.helper.material.ToolMaterialMod;
+import divinerpg.helper.tabs.DivineRPGTabs;
 
 public class IceikaItems {
 	

@@ -1,18 +1,17 @@
-package net.divinerpg.vanilla.blocks.contaner;
+package divinerpg.vanilla.blocks.contaner;
 
-import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.recipes.CraftingDivineTableManager;
-import net.divinerpg.vanilla.blocks.contaner.slot.SlotDivineTable;
+import java.awt.Container;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
-import net.minecraft.inventory.ContainerWorkbench;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryCraftResult;
 import net.minecraft.inventory.InventoryCrafting;
-import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import divinerpg.helper.blocks.VanillaBlocks;
+import divinerpg.helper.recipes.CraftingDivineTableManager;
+import divinerpg.vanilla.blocks.contaner.slot.SlotDivineTable;
 
 public class ContainerDivineTable extends Container {
  

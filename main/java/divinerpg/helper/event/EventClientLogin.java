@@ -1,4 +1,4 @@
-package net.divinerpg.helper.event;
+package divinerpg.helper.event;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,19 +6,13 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import net.divinerpg.Reference;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.helper.DivineAPI;
 
 public class EventClientLogin {
 

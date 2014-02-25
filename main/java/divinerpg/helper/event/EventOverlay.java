@@ -1,10 +1,11 @@
-package net.divinerpg.helper.event;
+package divinerpg.helper.event;
 
-import net.divinerpg.client.render.gui.GUIOverlay;
-import net.divinerpg.helper.config.ConfigurationHelper;
+import java.lang.annotation.ElementType;
+
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import divinerpg.client.render.gui.GUIOverlay;
+import divinerpg.helper.config.ConfigurationHelper;
 
 public class EventOverlay {
 

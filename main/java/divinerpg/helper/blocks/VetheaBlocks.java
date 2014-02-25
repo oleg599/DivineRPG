@@ -1,26 +1,24 @@
-package net.divinerpg.helper.blocks;
+package divinerpg.helper.blocks;
 
-import net.divinerpg.DivineRPG;
-import net.divinerpg.Reference;
-import net.divinerpg.api.blocks.BlockMod;
-import net.divinerpg.api.blocks.BlockModDirt;
-import net.divinerpg.api.blocks.BlockModDoor;
-import net.divinerpg.api.blocks.BlockModGlass;
-import net.divinerpg.api.blocks.BlockModGrass;
-import net.divinerpg.api.blocks.BlockModLamp;
-import net.divinerpg.api.blocks.BlockModLeaves;
-import net.divinerpg.api.blocks.BlockModLog;
-import net.divinerpg.api.blocks.BlockVetheaPlant;
-import net.divinerpg.api.blocks.BlockModSpawner;
-import net.divinerpg.api.blocks.BlockModVine;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.twilight.blocks.BlockBlueFire;
-import net.divinerpg.vethea.blocks.BlockAcid;
-import net.divinerpg.vethea.blocks.BlockHelioticBeam;
-import net.divinerpg.vethea.blocks.BlockKarosCannon;
-import net.divinerpg.vethea.blocks.BlockKarosHeatTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import divinerpg.Reference;
+import divinerpg.api.blocks.BlockMod;
+import divinerpg.api.blocks.BlockModDirt;
+import divinerpg.api.blocks.BlockModDoor;
+import divinerpg.api.blocks.BlockModGlass;
+import divinerpg.api.blocks.BlockModGrass;
+import divinerpg.api.blocks.BlockModLamp;
+import divinerpg.api.blocks.BlockModLeaves;
+import divinerpg.api.blocks.BlockModLog;
+import divinerpg.api.blocks.BlockModSpawner;
+import divinerpg.api.blocks.BlockModVine;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.twilight.blocks.BlockBlueFire;
+import divinerpg.vethea.blocks.BlockAcid;
+import divinerpg.vethea.blocks.BlockHelioticBeam;
+import divinerpg.vethea.blocks.BlockKarosCannon;
+import divinerpg.vethea.blocks.BlockKarosHeatTile;
 
 public class VetheaBlocks {
 

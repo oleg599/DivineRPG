@@ -1,9 +1,10 @@
-package net.divinerpg.api.blocks;
+package divinerpg.api.blocks;
 
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+
 
 public class BlockModDoor extends BlockDoor {
 

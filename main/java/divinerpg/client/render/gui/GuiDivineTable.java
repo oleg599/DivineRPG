@@ -1,15 +1,14 @@
-package net.divinerpg.client.render.gui;
+package divinerpg.client.render.gui;
 
-import org.lwjgl.opengl.GL11;
-
-import net.divinerpg.client.render.GuiResourceLocation;
-import net.divinerpg.vanilla.blocks.contaner.ContainerDivineTable;
-import net.minecraft.client.gui.inventory.GuiBeacon;
 import net.minecraft.client.gui.inventory.GuiContainer;
-import net.minecraft.client.gui.inventory.GuiCrafting;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+
+import org.lwjgl.opengl.GL11;
+
+import divinerpg.client.render.GuiResourceLocation;
+import divinerpg.vanilla.blocks.contaner.ContainerDivineTable;
 
 public class GuiDivineTable extends GuiContainer {
 

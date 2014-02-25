@@ -1,9 +1,6 @@
-package net.divinerpg.helper.recipes.modded;
+package divinerpg.helper.recipes.modded;
 
-import net.divinerpg.helper.recipes.CraftingDivineTableManager;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
+import divinerpg.helper.recipes.CraftingDivineTableManager;
 
 public class RecipesCrafting
 {

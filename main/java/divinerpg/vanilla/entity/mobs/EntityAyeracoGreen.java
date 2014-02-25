@@ -1,8 +1,8 @@
-package net.divinerpg.vanilla.entity.mobs;
+package divinerpg.vanilla.entity.mobs;
 
-import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import divinerpg.helper.items.VanillaItemsWeapons;
 
 public class EntityAyeracoGreen extends EntityAyeraco
 {

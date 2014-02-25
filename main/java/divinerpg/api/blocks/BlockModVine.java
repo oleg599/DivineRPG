@@ -1,4 +1,4 @@
-package net.divinerpg.api.blocks;
+package divinerpg.api.blocks;
 
 import java.util.ArrayList;
 import java.util.Random;

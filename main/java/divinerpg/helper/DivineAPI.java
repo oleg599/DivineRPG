@@ -1,24 +1,19 @@
-package net.divinerpg.helper;
+package divinerpg.helper;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import net.divinerpg.DivineRPG;
-import net.divinerpg.helper.recipes.CraftingDivineTableManager;
-import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
-import net.minecraftforge.common.util.EnumHelper;
 import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IChatComponent;
+import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import divinerpg.DivineRPG;
+import divinerpg.helper.recipes.CraftingDivineTableManager;
 
 public class DivineAPI {
 

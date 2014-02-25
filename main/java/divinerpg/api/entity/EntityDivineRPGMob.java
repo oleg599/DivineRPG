@@ -1,19 +1,14 @@
-package net.divinerpg.api.entity;
+package divinerpg.api.entity;
 
-import net.divinerpg.Reference;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
+import divinerpg.helper.DivineAPI;
+import divinerpg.helper.config.ConfigurationHelper;
 
 public abstract class EntityDivineRPGMob extends EntityMob{
 

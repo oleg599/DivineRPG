@@ -1,8 +1,7 @@
-package net.divinerpg.api.blocks;
+package divinerpg.api.blocks;
 
 import java.util.Random;
 
-import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
@@ -15,6 +14,7 @@ import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.util.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.helper.tabs.DivineRPGTabs;
 
 public class BlockModGrass extends BlockMod implements IGrowable{
 

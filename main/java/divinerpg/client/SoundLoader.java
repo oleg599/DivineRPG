@@ -1,11 +1,8 @@
-package net.divinerpg.client;
+package divinerpg.client;
 
-import net.divinerpg.Reference;
-import net.divinerpg.Sounds;
-import net.minecraft.entity.Entity;
-import net.minecraft.world.World;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import divinerpg.Sounds;
 
 public class SoundLoader {
 

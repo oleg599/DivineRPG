@@ -1,15 +1,9 @@
-package net.divinerpg.api.blocks;
+package divinerpg.api.blocks;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
-import net.divinerpg.Reference;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockGlass;
-import net.minecraft.block.BlockStainedGlass;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
+import divinerpg.Reference;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
 
 public class BlockModGlass extends BlockMod {
 		

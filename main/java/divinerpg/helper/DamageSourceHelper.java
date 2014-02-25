@@ -1,9 +1,14 @@
-package net.divinerpg.helper;
+package divinerpg.helper;
 
-import net.divinerpg.twilight.entity.projectile.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EntityDamageSourceIndirect;
+import divinerpg.twilight.entity.projectile.EntityApalachiaArrow;
+import divinerpg.twilight.entity.projectile.EntityEdenArrow;
+import divinerpg.twilight.entity.projectile.EntityHaliteArrow;
+import divinerpg.twilight.entity.projectile.EntityMortumArrow;
+import divinerpg.twilight.entity.projectile.EntitySkythernArrow;
+import divinerpg.twilight.entity.projectile.EntityWildArrow;
 
 public class DamageSourceHelper {
 

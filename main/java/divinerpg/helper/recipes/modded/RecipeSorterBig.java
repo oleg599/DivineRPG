@@ -1,11 +1,11 @@
-package net.divinerpg.helper.recipes.modded;
+package divinerpg.helper.recipes.modded;
 
 import java.util.Comparator;
 
-import net.divinerpg.helper.recipes.CraftingDivineTableManager;
-import net.divinerpg.helper.recipes.DivineShapedRecipes;
-import net.divinerpg.helper.recipes.DivineShapelessRecipes;
 import net.minecraft.item.crafting.IRecipe;
+import divinerpg.helper.recipes.CraftingDivineTableManager;
+import divinerpg.helper.recipes.DivineShapedRecipes;
+import divinerpg.helper.recipes.DivineShapelessRecipes;
 
 public class RecipeSorterBig implements Comparator{
 

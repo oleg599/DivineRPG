@@ -1,19 +1,17 @@
-package net.divinerpg.vethea.items;
+package divinerpg.vethea.items;
 
 import java.util.List;
 
-import net.divinerpg.DivineRPG;
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.DivineAPI;
-import net.divinerpg.helper.items.VetheanItems;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.vethea.entity.projectile.EntityVetheanCannonShot;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.api.items.ItemMod;
+import divinerpg.helper.DivineAPI;
+import divinerpg.helper.items.VetheanItems;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.vethea.entity.projectile.EntityVetheanCannonShot;
 
 public class ItemVetheanCannon extends ItemMod
 {

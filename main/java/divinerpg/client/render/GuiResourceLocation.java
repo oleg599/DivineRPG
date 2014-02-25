@@ -1,7 +1,8 @@
-package net.divinerpg.client.render;
+package divinerpg.client.render;
 
-import net.divinerpg.Reference;
+import divinerpg.Reference;
 import net.minecraft.util.ResourceLocation;
+
 
 public class GuiResourceLocation {
 	

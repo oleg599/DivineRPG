@@ -1,14 +1,12 @@
-package net.divinerpg.client.render;
+package divinerpg.client.render;
 
 import net.minecraft.client.model.ModelBase;
-import net.minecraft.client.renderer.entity.RenderGiantZombie;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
+
 
 public class RenderSizeable extends RenderLivingCreature
 {

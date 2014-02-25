@@ -1,10 +1,9 @@
-package net.divinerpg.vanilla.entity.mobs;
+package divinerpg.vanilla.entity.mobs;
 
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
-import net.minecraft.item.Item;
 import net.minecraft.world.World;
+import divinerpg.api.entity.EntityDivineRPGMob;
+import divinerpg.helper.items.VanillaItemsOther;
 
 public class EntityGlacon extends EntityDivineRPGMob
 {

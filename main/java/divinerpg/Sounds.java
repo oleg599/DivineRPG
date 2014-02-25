@@ -1,8 +1,8 @@
-package net.divinerpg;
+package divinerpg;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+
 
 public class Sounds {
 

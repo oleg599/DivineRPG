@@ -1,15 +1,14 @@
-package net.divinerpg.twilight.items;
+package divinerpg.twilight.items;
 
-import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.helper.utils.LangRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import divinerpg.api.items.ItemMod;
+import divinerpg.helper.blocks.TwilightBlocks;
+import divinerpg.helper.blocks.VanillaBlocks;
+import divinerpg.helper.tabs.DivineRPGTabs;
+import divinerpg.helper.utils.LangRegistry;
 
 public class ItemTwilightClock extends ItemMod {
 

@@ -1,10 +1,7 @@
-package net.divinerpg.api.blocks;
+package divinerpg.api.blocks;
 
 import java.util.Random;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.divinerpg.Reference;
-import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -12,6 +9,9 @@ import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.world.World;
+import cpw.mods.fml.common.registry.GameRegistry;
+import divinerpg.Reference;
+import divinerpg.helper.tabs.DivineRPGTabs;
 
 public class BlockModSpawner extends BlockContainer {
 

@@ -1,4 +1,4 @@
-package net.divinerpg.helper.utils;
+package divinerpg.helper.utils;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,11 +8,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import net.divinerpg.Reference;
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.DivineAPI;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import divinerpg.Reference;
 
 
 /**

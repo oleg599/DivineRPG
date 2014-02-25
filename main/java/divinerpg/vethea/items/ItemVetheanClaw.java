@@ -1,9 +1,10 @@
-package net.divinerpg.vethea.items;
+package divinerpg.vethea.items;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
 
 public class ItemVetheanClaw extends ItemVetheanHammerSword
 {

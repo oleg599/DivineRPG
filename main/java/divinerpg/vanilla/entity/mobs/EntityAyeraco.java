@@ -1,19 +1,16 @@
-package net.divinerpg.vanilla.entity.mobs;
+package divinerpg.vanilla.entity.mobs;
 
-import net.divinerpg.Sounds;
-import net.divinerpg.api.entity.EntityDivineRPGMob;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.vanilla.entity.projectiles.EntityTripletProjectile;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+import divinerpg.Sounds;
+import divinerpg.api.entity.EntityDivineRPGMob;
+import divinerpg.helper.items.VanillaItemsOther;
+import divinerpg.vanilla.entity.projectiles.EntityTripletProjectile;
 
 public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayData
 {

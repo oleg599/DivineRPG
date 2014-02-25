@@ -1,12 +1,12 @@
-package net.divinerpg.helper.recipes;
+package divinerpg.helper.recipes;
 
-import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.helper.items.ItemsFood;
-import net.divinerpg.helper.items.TwilightItemsOther;
-import net.divinerpg.helper.items.VanillaItemsOther;
-import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import divinerpg.helper.blocks.VanillaBlocks;
+import divinerpg.helper.items.ItemsFood;
+import divinerpg.helper.items.TwilightItemsOther;
+import divinerpg.helper.items.VanillaItemsOther;
+import divinerpg.helper.items.VanillaItemsWeapons;
 
 public class IS {
 

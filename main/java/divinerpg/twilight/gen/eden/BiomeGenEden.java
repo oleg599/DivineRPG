@@ -1,11 +1,11 @@
-package net.divinerpg.twilight.gen.eden;
+package divinerpg.twilight.gen.eden;
 
 import java.awt.Color;
 
-import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.minecraft.world.biome.BiomeGenBase;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.helper.blocks.TwilightBlocks;
 
 public class BiomeGenEden extends BiomeGenBase {
 
