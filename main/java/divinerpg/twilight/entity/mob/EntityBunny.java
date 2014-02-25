@@ -1,5 +1,6 @@
 package divinerpg.twilight.entity.mob;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.nbt.NBTTagCompound;

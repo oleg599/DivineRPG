@@ -1,6 +1,7 @@
 package divinerpg.vanilla.entity.mobs;
 
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import divinerpg.api.entity.EntityDivineRPGMob;
 import divinerpg.helper.items.VanillaItemsOther;

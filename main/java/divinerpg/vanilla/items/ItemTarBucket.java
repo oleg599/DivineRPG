@@ -1,7 +1,10 @@
 package divinerpg.vanilla.items;
 
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBucket;
 import cpw.mods.fml.common.registry.GameRegistry;
+import divinerpg.Reference;
 import divinerpg.helper.tabs.DivineRPGTabs;
 import divinerpg.helper.utils.LangRegistry;
 

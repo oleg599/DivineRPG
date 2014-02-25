@@ -2,6 +2,7 @@ package divinerpg.vanilla.entity.mobs;
 
 import java.util.Calendar;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;

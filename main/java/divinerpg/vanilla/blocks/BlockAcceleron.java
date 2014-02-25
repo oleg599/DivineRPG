@@ -5,6 +5,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.Reference;
 import divinerpg.api.blocks.BlockMod;
 import divinerpg.helper.tabs.DivineRPGTabs;
 import divinerpg.helper.utils.LangRegistry;

@@ -3,8 +3,8 @@ package divinerpg.twilight.gen.wildwoods;
 import java.util.List;
 import java.util.Random;
 
-import javax.xml.transform.Result;
-
+import cpw.mods.fml.common.eventhandler.Event.Result;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -162,7 +162,7 @@ public class ChunkProviderWildWoods implements IChunkProvider{
 
 		ChunkProviderEvent.ReplaceBiomeBlocks event = new ChunkProviderEvent.ReplaceBiomeBlocks(this, var1, var2, var3, var4);
         MinecraftForge.EVENT_BUS.post(event);
-        if (event.getResult() == Result.DENY) return;
+        if (event.getResult() == Result.ALLOW) return;
 		
 		for (int var8 = 0; var8 < 16; ++var8)
 		{

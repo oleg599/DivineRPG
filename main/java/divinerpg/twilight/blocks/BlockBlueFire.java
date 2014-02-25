@@ -24,6 +24,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 import divinerpg.Reference;
 import divinerpg.helper.blocks.TwilightBlocks;
 import divinerpg.helper.tabs.DivineRPGTabs;
+import static net.minecraftforge.common.util.ForgeDirection.*;
+
 
 public class BlockBlueFire extends BlockFire {
 	

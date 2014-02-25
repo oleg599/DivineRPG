@@ -1,5 +1,6 @@
 package divinerpg.vanilla.entity.projectiles;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.util.DamageSource;

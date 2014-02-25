@@ -3,8 +3,7 @@ package divinerpg.twilight.gen.eden;
 import java.util.List;
 import java.util.Random;
 
-import javax.xml.transform.Result;
-
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -23,6 +22,7 @@ import net.minecraft.world.gen.feature.WorldGenLakes;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent;
+import cpw.mods.fml.common.eventhandler.Event.Result;
 import divinerpg.helper.blocks.TwilightBlocks;
 
 public class ChunkProviderEden implements IChunkProvider{

@@ -3,7 +3,7 @@ package divinerpg.helper.config;
 import java.io.File;
 import java.util.HashMap;
 
-import javax.security.auth.login.Configuration;
+import net.minecraftforge.common.config.Configuration;
 
 public class ConfigurationHelper {
 	

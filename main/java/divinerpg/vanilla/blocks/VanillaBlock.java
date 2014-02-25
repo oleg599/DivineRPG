@@ -2,7 +2,9 @@ package divinerpg.vanilla.blocks;
 
 import java.util.Random;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import divinerpg.api.blocks.BlockMod;

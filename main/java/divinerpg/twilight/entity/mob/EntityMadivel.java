@@ -2,6 +2,7 @@ package divinerpg.twilight.entity.mob;
 
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import divinerpg.api.entity.EntityDivineRPGMob;
 import divinerpg.helper.items.TwilightItemsOther;

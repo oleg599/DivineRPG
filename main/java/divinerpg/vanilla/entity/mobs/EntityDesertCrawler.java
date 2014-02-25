@@ -2,6 +2,7 @@ package divinerpg.vanilla.entity.mobs;
 
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.world.World;
 import divinerpg.api.entity.EntityDivineRPGMob;
 

@@ -1,5 +1,6 @@
 package divinerpg.vanilla.blocks;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -12,6 +13,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import divinerpg.Reference;
 import divinerpg.helper.tabs.DivineRPGTabs;
 import divinerpg.helper.utils.LangRegistry;
 

@@ -3,8 +3,6 @@ package divinerpg.api.items;
 import java.util.List;
 import java.util.Set;
 
-import javax.xml.transform.Result;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,6 +16,7 @@ import net.minecraftforge.event.entity.player.UseHoeEvent;
 
 import com.google.common.collect.Sets;
 
+import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;

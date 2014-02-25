@@ -1,15 +1,18 @@
 package divinerpg.vanilla.items;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import divinerpg.Reference;
+import divinerpg.api.items.ItemMod;
 import divinerpg.helper.tabs.DivineRPGTabs;
 import divinerpg.helper.utils.LangRegistry;
 import divinerpg.vanilla.entity.mobs.EntityAncientEntity;
 
-public class ItemMysteriousClock extends Item
+public class ItemMysteriousClock extends ItemMod
 {
 	private World worldObj;
     private String name;

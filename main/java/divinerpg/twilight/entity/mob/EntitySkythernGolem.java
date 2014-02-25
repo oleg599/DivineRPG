@@ -9,17 +9,16 @@ import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import divinerpg.api.entity.EntityDivineRPGMob;
 import divinerpg.helper.items.TwilightItemsOther;
 
-public class EntitySkythernGolem extends EntityDivineRPGMob
-{
-	public EntitySkythernGolem(World var1)
-	{
+public class EntitySkythernGolem extends EntityDivineRPGMob {
+	
+	public EntitySkythernGolem(World var1) {
 		super(var1);
-
 		this.setSize(1.5F, 3.0F);
 		float moveSpeed = 0.5F;
 		this.tasks.addTask(1, new EntityAISwimming(this));

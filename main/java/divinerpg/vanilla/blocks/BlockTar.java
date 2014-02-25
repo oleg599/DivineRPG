@@ -8,6 +8,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import divinerpg.DivineRPG;
+import divinerpg.Reference;
 import divinerpg.helper.utils.LangRegistry;
 
 public class BlockTar extends BlockFluidClassic{

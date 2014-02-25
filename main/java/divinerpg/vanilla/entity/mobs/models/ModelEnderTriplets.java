@@ -2,6 +2,7 @@ package divinerpg.vanilla.entity.mobs.models;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.entity.Entity;
 
 
 public class ModelEnderTriplets extends ModelBase

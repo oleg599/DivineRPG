@@ -7,6 +7,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import divinerpg.DivineRPG;
+import divinerpg.Reference;
 import divinerpg.api.blocks.BlockMod;
 import divinerpg.client.GuiHandler;
 import divinerpg.helper.tabs.DivineRPGTabs;

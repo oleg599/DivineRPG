@@ -1,6 +1,7 @@
 package divinerpg.vethea.entity.projectile;
 
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
 

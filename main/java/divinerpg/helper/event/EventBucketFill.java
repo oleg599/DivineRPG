@@ -1,13 +1,12 @@
 package divinerpg.helper.event;
 
-import javax.xml.transform.Result;
-
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.FillBucketEvent;
+import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import divinerpg.helper.blocks.VanillaBlocks;
 import divinerpg.helper.items.VanillaItemsOther;
