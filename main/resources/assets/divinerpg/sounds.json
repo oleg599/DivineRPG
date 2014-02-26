@@ -1,4 +1,6 @@
 {
     "crab":{"category": "master","sounds": [{"name": "crab","stream": false}]},
-    "crabHurt":{"category": "master","sounds": [{"name": "crabHurt","stream": false}]}
+    "crabHurt":{"category": "master","sounds": [{"name": "crabHurt","stream": false}]},
+    "aridWarrior":{"category": "master","sounds": [{"name": "aridWarrior","stream": false}]},
+    "aridWarriorHurt":{"category": "master","sounds": [{"name": "aridWarriorHurt","stream": false}]}
 }
