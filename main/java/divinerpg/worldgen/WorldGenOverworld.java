@@ -31,12 +31,12 @@ public class WorldGenOverworld implements IWorldGenerator{
 		addOreSpawn(VanillaBlocks.arlemiteOre, world, random, x, z, 16, 16, 2, 3, 1, 15);
 
 		if(world.provider.dimensionId != -1){
-			for(int i = 0; i < 1; i++){
-				int posX = x + random.nextInt(16) + 8;
-				int posY = random.nextInt(200);
-				int posZ = z + random.nextInt(16) + 8;
-				(new WorldGenLakes(VanillaBlocks.tar)).generate(world, random, posX, posY, posZ);
-			}
+
+			int posX = x + random.nextInt(16);
+			int posY = random.nextInt(200);
+			int posZ = z + random.nextInt(16);
+			new WorldGenLakes(VanillaBlocks.tar).generate(world, random, posX, posY, posZ);
+
 		}
 	}
 
