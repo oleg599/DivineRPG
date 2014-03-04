@@ -9,6 +9,7 @@ import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.fx.EntityEdenPortalFX;
+import net.divinerpg.twilight.gen.eden.TeleporterEden;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
