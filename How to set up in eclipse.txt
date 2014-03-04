@@ -1,8 +1,9 @@
 if (OldDivineRPGProject == true) {
 1. Delete the DivineRPG project (Remove it from the disk)
-2. Pull }
+2. Pull 
+}
 else if (NewSetup == true) {
-1 and 2. Clone Git
+1 and 2. Clone Git 
 }
 3. Create a new project
 4. Right click project
