@@ -55,4 +55,23 @@ public class VanillaBlocks {
     public static final Block divineCraftingTable = new BlockDivineTable().setName("divineTable").setHardness(3.0F);
     public static final Block acceleron		  	  = new BlockAcceleron().setName("acceleron");
     public static final Block tar 				  = new BlockTar();
+    
+    public static final Block dyeBlockWhite 	  = new VanillaBlock(rock).setName("dyeBlock");
+    public static final Block dyeBlockBlack 	  = new VanillaBlock(rock).setName("blackDyeBlock");
+    public static final Block dyeBlockBrown 	  = new VanillaBlock(rock).setName("brownDyeBlock");
+    public static final Block dyeBlockRed   	  = new VanillaBlock(rock).setName("redDyeBlock");
+    public static final Block dyeBlockGreen 	  = new VanillaBlock(rock).setName("greenDyeBlock");
+    public static final Block dyeBlockBlue  	  = new VanillaBlock(rock).setName("blueDyeBlock");
+    public static final Block dyeBlockYellow	  = new VanillaBlock(rock).setName("yellowDyeBlock");
+    public static final Block dyeBlockGray  	  = new VanillaBlock(rock).setName("grayDyeBlock");
+    public static final Block dyeBlockLightGray   = new VanillaBlock(rock).setName("lightGrayDyeBlock");
+    public static final Block dyeBlockOrange   	  = new VanillaBlock(rock).setName("orangeDyeBlock");
+    public static final Block dyeBlockLightGreen  = new VanillaBlock(rock).setName("lightGreenDyeBlock");
+    public static final Block dyeBlockLightBlue   = new VanillaBlock(rock).setName("lightBlueDyeBlock");
+    public static final Block dyeBlockCyan   	  = new VanillaBlock(rock).setName("cyanDyeBlock");
+    public static final Block dyeBlockPink        = new VanillaBlock(rock).setName("pinkDyeBlock");
+    public static final Block dyeBlockPurple   	  = new VanillaBlock(rock).setName("purpleDyeBlock");
+    public static final Block dyeBlockMagenta     = new VanillaBlock(rock).setName("magentaDyeBlock");
+    
+    public static final Block facnyWool		      = new VanillaBlock(wool).setName("facnyWool");
 }

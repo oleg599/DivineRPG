@@ -19,6 +19,6 @@ else if (NewSetup == true) {
 14. Click "OK"
 15. Navigate to the git repo in file explorer
 16. In that, go into main > java.
-17. Drag the "divinerpg" folder into eclipse onto src/main/java
+17. Drag the "net" and "com" folders into eclipse onto src/main/java
 18. Check "Link to files and folders"
 19. Do the same for main > resources > assets, this time draging it to src/main/resources
