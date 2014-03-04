@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 
 public class ItemDisk extends ItemVetheanDisk{
 
-	int dam;
+	private int dam;
 	
 	public ItemDisk(int par1) {
 		super(par1);
