@@ -16,24 +16,23 @@ public class DivineRPGCommands extends CommandBase{
 
 	@Override
 	public String getCommandUsage(ICommandSender var1) {
-		return "/DivineRPG <dimension>";
+		return "/DivineRPG <var1> <dimension>";
 	}
 
 	@Override
 	public void processCommand(ICommandSender var1, String[] var2) {
 		EntityPlayerMP playerMP = (EntityPlayerMP)var1;
-		if (playerMP.timeUntilPortal > 0)
-			playerMP.timeUntilPortal = 10;
-		
-		if (var2[0].equalsIgnoreCase("Eden")) {
-			if (playerMP.dimension != ConfigurationHelper.Eden) {
-				playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden);
+		if(!playerMP.worldObj.isRemote){
+			if (var2[0].equalsIgnoreCase("Eden")) {
+				if (playerMP.dimension != ConfigurationHelper.Eden) {
+					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden);
+				}
 			}
-		}
-		
-		if (var2[0].equalsIgnoreCase("WildWoods")) {
-			if (playerMP.dimension != ConfigurationHelper.WildWoods) {
-				playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden);
+
+			if (var2[0].equalsIgnoreCase("WildWoods")) {
+				if (playerMP.dimension != ConfigurationHelper.WildWoods) {
+					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden);
+				}
 			}
 		}
 	}
