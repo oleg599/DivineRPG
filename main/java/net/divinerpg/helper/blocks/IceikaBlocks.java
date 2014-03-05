@@ -5,12 +5,12 @@ import net.divinerpg.api.blocks.BlockModChest;
 import net.divinerpg.api.blocks.BlockModDirt;
 import net.divinerpg.api.blocks.BlockModGlass;
 import net.divinerpg.api.blocks.BlockModGrass;
-import net.divinerpg.api.blocks.BlockModLight;
 import net.divinerpg.api.blocks.BlockModLeaves;
+import net.divinerpg.api.blocks.BlockModLight;
 import net.divinerpg.api.blocks.BlockModLog;
 import net.divinerpg.api.blocks.BlockModSpawner;
 import net.divinerpg.iceika.blocks.BlockCoalstoneFurnace;
-import net.divinerpg.iceika.blocks.BlockWinterberrys;
+import net.divinerpg.iceika.blocks.BlockWinterberryBush;
 import net.divinerpg.iceika.blocks.IceikaBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -28,7 +28,8 @@ public class IceikaBlocks {
 	public static final Block frozenStone         = new IceikaBlock(rock).setName("frozenStone").setHardness(5.0F);
 	public static final Block frozenWood          = new BlockModLog().setName("frozenLog").setHardness(5.0F);
 	public static final Block brittleLeaves       = new BlockModLeaves().setName("brittleLeaves").setHardness(0.1F);
-	public static final Block winterberryBush     = new BlockWinterberrys().setName("winterberryBush").setHardness(0.2F);//Spawns on ground, drops winterberries
+	public static final Block winterberryBush     = new BlockWinterberryBush(false).setName("winterberryBush").setHardness(0.2F);//Spawns on ground, drops winterberries
+	public static final Block winterberryBushRipe = new BlockWinterberryBush(true).setName("ripeWinterberryBush").setHardness(0.2F);
 
 	public static final Block icyStone       	  = new IceikaBlock(rock).setName("icyStone").setHardness(6.0F); //TODO: Make destructible only by explosion
 	public static final Block icyBricks       	  = new IceikaBlock(rock).setName("icyBricks").setHardness(6.0F); //TODO: Make destructible only by explosion
