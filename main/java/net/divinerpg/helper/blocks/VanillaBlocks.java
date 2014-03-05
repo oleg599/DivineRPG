@@ -17,7 +17,7 @@ public class VanillaBlocks {
     public static final Block arlemiteOre         = new VanillaBlock(rock).setName("arlemiteOre").setHardness(3.0F);
     public static final Block realmiteOre         = new VanillaBlock(rock).setName("realmiteOre").setHardness(3.0F);
     public static final Block bloodgemOre         = new VanillaBlock(rock).setName("bloodgemOre").setHardness(3.0F);
-    public static final Block netheriteOre        = new VanillaBlock(rock).setName("netheriteore").setHardness(3.0F);
+    public static final Block netheriteOre        = new VanillaBlock(rock).setName("netheriteOre").setHardness(3.0F);
 
     public static final Block rupeeBlock          = new VanillaBlock(rock).setName("rupeeBlock").setHardness(3.0F);
     public static final Block arlemiteBlock       = new VanillaBlock(rock).setName("arlemiteBlock").setHardness(3.0F);
