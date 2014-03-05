@@ -6,6 +6,7 @@ import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.event.DivineRPGCommands;
+import net.divinerpg.helper.event.EventBonemeal;
 import net.divinerpg.helper.event.EventBucketFill;
 import net.divinerpg.helper.event.EventClientLogin;
 import net.divinerpg.helper.event.EventOverlay;
@@ -45,6 +46,7 @@ public class CommonProxy {
 		MinecraftForge.EVENT_BUS.register(new EventOverlay());
 		//MinecraftForge.EVENT_BUS.register(new EventArmorFullSet());
 		MinecraftForge.EVENT_BUS.register(new EventBucketFill());
+		MinecraftForge.EVENT_BUS.register(new EventBonemeal());
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		ConfigurationHelper.init();
 		OverworldMobRegistry.init();
