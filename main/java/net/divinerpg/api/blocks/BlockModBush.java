@@ -35,12 +35,10 @@ public class BlockModBush extends BlockMod{
 		}
 	}
 	
-	public Item getItemDropped(int par1, Random par2Random, int par3)
-	{
+	public Item getItemDropped(int par1, Random par2Random, int par3) {
 		if (this == IceikaBlocks.winterberryBushRipe) {
 			return IceikaItems.winterberry;
-		}
-		else {
+		} else {
 			return null;
 		}
 	}
