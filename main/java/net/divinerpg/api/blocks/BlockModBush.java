@@ -34,7 +34,7 @@ public class BlockModBush extends BlockMod{
 			w.setBlock(x, y, z, IceikaBlocks.winterberryBush, meta, 2);
 		}
 	}
-	
+
 	public Item getItemDropped(int par1, Random par2Random, int par3) {
 		if (this == IceikaBlocks.winterberryBushRipe) {
 			return IceikaItems.winterberry;
@@ -44,7 +44,7 @@ public class BlockModBush extends BlockMod{
 	}
 
 	public static void grow(World w, int x, int y, int z){
-	int meta = w.getBlockMetadata(x, y, z);
+		int meta = w.getBlockMetadata(x, y, z);
 		if(meta == 0){
 			w.setBlock(x, y, z, IceikaBlocks.winterberryBush, 1, 2);
 		}
