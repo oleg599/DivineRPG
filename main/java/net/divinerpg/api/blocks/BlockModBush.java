@@ -1,18 +1,21 @@
 package net.divinerpg.api.blocks;
 
 import java.util.Random;
+
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 public class BlockModBush extends BlockMod{
 
 	public IIcon grown, notGrown;
+	private int time = 0;
 
 	public BlockModBush(boolean grown) {
 		super(Material.leaves);
@@ -21,16 +24,28 @@ public class BlockModBush extends BlockMod{
 
 	@Override
 	public void updateTick(World w, int x, int y, int z, Random r) {
-		int meta = w.getBlockMetadata(x, y, z);
-		int time = r.nextInt(100) + 8;
-		if(meta == 0 && time > 100){
+		if(time <= 0)
+			time++;
+		
+		if(time != 100)
+			time++;
+		
+		if(time > 100){
 			w.setBlock(x, y, z, IceikaBlocks.winterberryBush, 1, 2);
 		}
 	}
 
 	@Override
+	public void onBlockClicked(World w, int x, int y, int z, EntityPlayer p) {
+		if(w.getBlock(x, y, z) == IceikaBlocks.winterberryBushRipe){
+			p.inventory.addItemStackToInventory(new ItemStack(IceikaItems.winterberry));
+			w.setBlock(x, y, z, IceikaBlocks.winterberryBush);
+		}
+	}
+
+	@Override
 	public void onBlockDestroyedByPlayer(World w, int x, int y, int z, int meta) {
-		if(meta == 1){
+		if(w.getBlock(x, y, z) == IceikaBlocks.winterberryBushRipe){
 			w.setBlock(x, y, z, IceikaBlocks.winterberryBush, meta, 2);
 		}
 	}
@@ -44,9 +59,7 @@ public class BlockModBush extends BlockMod{
 	}
 
 	public static void grow(World w, int x, int y, int z){
-		int meta = w.getBlockMetadata(x, y, z);
-		if(meta == 0){
-			w.setBlock(x, y, z, IceikaBlocks.winterberryBush, 1, 2);
-		}
+		if(w.getBlock(x, y, z) == IceikaBlocks.winterberryBush)
+		w.setBlock(x, y, z, IceikaBlocks.winterberryBushRipe, 1, 2);
 	}
 }
