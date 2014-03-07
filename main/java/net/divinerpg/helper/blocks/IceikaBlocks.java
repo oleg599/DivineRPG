@@ -4,6 +4,7 @@ import net.divinerpg.api.blocks.BlockModBook;
 import net.divinerpg.api.blocks.BlockModBush;
 import net.divinerpg.api.blocks.BlockModChest;
 import net.divinerpg.api.blocks.BlockModDirt;
+import net.divinerpg.api.blocks.BlockModDoor;
 import net.divinerpg.api.blocks.BlockModGlass;
 import net.divinerpg.api.blocks.BlockModGrass;
 import net.divinerpg.api.blocks.BlockModLeaves;
@@ -43,7 +44,7 @@ public class IceikaBlocks {
 	public static final Block frostedGlass        = new BlockModGlass().setName("frostedGlass").setHardness(0.1F); //Windows for the workshops.
 	public static final Block workshopBookcase    = new BlockModBook().setName("workshopBookcase").setHardness(1.5F); //Bookcase for workshops.
 	public static final Block workshopLamp        = new BlockModLight(glass).setName("workshopLamp").setHardness(0.3F); //Lamps for workshops.
-	public static final Block steelDoor           = new IceikaBlock(glass).setName("steelDoor").setHardness(0.3F); //Doors for workshops.
+	public static final Block steelDoor           = new BlockModDoor(glass).setName("steelDoor").setHardness(0.3F); //Doors for workshops.
 	public static final Block coalstoneFurnace    = new BlockCoalstoneFurnace().setName("coalstoneFurnace"); //One in each workshop. Never runs out of fuel
 	
 
