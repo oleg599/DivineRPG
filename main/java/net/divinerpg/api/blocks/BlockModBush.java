@@ -24,7 +24,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockModBush extends BlockMod implements IShearable {
 
 	public IIcon grown, notGrown;
-	private int time = 0;
 	@SideOnly(Side.CLIENT)
 	public IIcon opaqueIcon;
 	@SideOnly(Side.CLIENT)
@@ -34,6 +33,7 @@ public class BlockModBush extends BlockMod implements IShearable {
 		super(Material.leaves);
 		setCreativeTab(DivineRPGTabs.blocks);
 		setHardness(0.3F);
+		setTickRandomly(true);
 		setStepSound(grass);
 	}
 	
@@ -41,23 +41,20 @@ public class BlockModBush extends BlockMod implements IShearable {
 	public void onBlockDestroyedByPlayer(World w, int x, int y, int z, int meta) {
 		if(this == IceikaBlocks.winterberryBushRipe) {
 			w.setBlock(x, y, z, IceikaBlocks.winterberryBush);
-			
-			while (time < 100) {
-				time++;
-				//delay for a second here
-			}
-			if (time >= 100) {
-				w.setBlock(x, y, z, IceikaBlocks.winterberryBushRipe);
-			}
 		}
 	}
 	
-	public Item getItemDropped(int par1, Random par2Random, int par3)
-	{
+	@Override
+	public void updateTick(World w, int x, int y, int z, Random r) {
+		if(r.nextInt(2) == 0 && w.getBlock(x, y, z) == IceikaBlocks.winterberryBush){
+			w.setBlock(x, y, z, IceikaBlocks.winterberryBushRipe);
+		}
+	}
+	
+	public Item getItemDropped(int par1, Random par2Random, int par3) {
 		if (this == IceikaBlocks.winterberryBushRipe) {
 			return IceikaItems.winterberry;
-		}
-		else {
+		} else {
 			return null;
 		}
 	}
@@ -81,8 +78,7 @@ public class BlockModBush extends BlockMod implements IShearable {
 	public String getTextureName() {
 		if (Minecraft.getMinecraft().gameSettings.fancyGraphics) {
 			return Reference.PREFIX + name;
-		}
-		else {
+		} else {
 			return Reference.PREFIX + name + "_fast";
 		}  
     }

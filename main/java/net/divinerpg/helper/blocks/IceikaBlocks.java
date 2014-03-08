@@ -32,11 +32,11 @@ public class IceikaBlocks {
 	public static final Block winterberryBush     = new BlockModBush(false).setName("winterberryBush").setHardness(0.2F);//Spawns on ground, drops winterberries
 	public static final Block winterberryBushRipe = new BlockModBush(true).setName("ripeWinterberryBush").setHardness(0.2F);
 
-	public static final Block icyStone       	  = new IceikaBlock(rock).setName("icyStone").setHardness(6.0F); //TODO: Make destructible only by explosion
-	public static final Block icyBricks       	  = new IceikaBlock(rock).setName("icyBricks").setHardness(6.0F); //TODO: Make destructible only by explosion
+	public static final Block icyStone       	  = new IceikaBlock(rock).setName("icyStone").setBlockUnbreakable(); //TODO: Make destructible only by explosion
+	public static final Block icyBricks       	  = new IceikaBlock(rock).setName("icyBricks").setBlockUnbreakable(); //TODO: Make destructible only by explosion
 	public static final Block frostedChest	      = new BlockModChest().setName("frostedChest").setHardness(2.5F); //Chests in dungeons that drop snowflakes when broken.
-	public static final Block rollumSpawner 	  = new BlockModSpawner("Creeper", false).setName("frozenDungonSpawner").setHardness(5.0F);//change mob to spawn to rollum
-	public static final Block glacideSpawner 	  = new BlockModSpawner("Enderman", false).setName("frozenDungonSpawner").setHardness(5.0F);//change mob to spawn to glacide
+	public static final Block rollumSpawner 	  = new BlockModSpawner("Creeper", false).setName("rollumSpawner").setHardness(5.0F);//change mob to spawn to rollum
+	public static final Block glacideSpawner 	  = new BlockModSpawner("Enderman", false).setName("glacideSpawner").setHardness(5.0F);//change mob to spawn to glacide
 
 	public static final Block snowBricks          = new IceikaBlock(snow).setName("snowBricks").setHardness(1.5F); //What the walls of workshops are made of.
 	public static final Block coalstone           = new IceikaBlock(rock).setName("coalstone").setHardness(2.0F); //The area around the furnace in the workshops.

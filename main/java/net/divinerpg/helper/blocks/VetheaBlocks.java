@@ -24,11 +24,11 @@ public class VetheaBlocks {
 
 	public static Block             	  dreamGrass;
 
-	public static final Block             dreamwreckerSpawner    = new BlockModSpawner("Dreamwrecker", true).setName("dremWreckerSpawner").setBlockTextureName(Reference.PREFIX + "fireCrystal");
-	public static final Block             vermenousSpawner       = new BlockModSpawner("Vermenous", true).setName("vermenousSpawner").setBlockTextureName(Reference.PREFIX + "fireCrystal");
-	public static final Block             twinsSpawner           = new BlockModSpawner("Twins", true).setName("twinsSpawner").setBlockTextureName(Reference.PREFIX + "fireCrystal");
-	public static final Block             biphronSpawner         = new BlockModSpawner("Biphron", true).setName("biphronSpawner").setBlockTextureName(Reference.PREFIX + "fireCrystal");
-	public static final Block             gorgosionSpawner       = new BlockModSpawner("Gorgosion", true).setName("gorgosionSpawner").setBlockTextureName(Reference.PREFIX + "fireCrystal");
+	public static final Block             dreamwreckerSpawner    = new BlockModSpawner("Dreamwrecker", true).setName("dremWreckerSpawner");
+	public static final Block             vermenousSpawner       = new BlockModSpawner("Vermenous", true).setName("vermenousSpawner");
+	public static final Block             twinsSpawner           = new BlockModSpawner("Twins", true).setName("twinsSpawner");
+	public static final Block             biphronSpawner         = new BlockModSpawner("Biphron", true).setName("biphronSpawner");
+	public static final Block             gorgosionSpawner       = new BlockModSpawner("Gorgosion", true).setName("gorgosionSpawner");
 
 	public static final Block             wreckAltar             = new BlockMod(Material.rock).setName("wreckAltar").setCreativeTab(DivineRPGTabs.spawner);
 	public static final Block             quadroticAltar         = new BlockMod(Material.rock).setName("quadroticAltar").setCreativeTab(DivineRPGTabs.spawner);
