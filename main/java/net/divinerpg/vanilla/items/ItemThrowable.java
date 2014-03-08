@@ -32,48 +32,49 @@ public class ItemThrowable extends ItemMod {
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3)
-	{
-		if (!var3.capabilities.isCreativeMode)
-		{
+	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3) {
+		if (!var3.capabilities.isCreativeMode) 
 			--var1.stackSize;
-		}
-		var2.playSoundAtEntity(var3, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+		
+		if(!var2.isRemote){
+			var2.playSoundAtEntity(var3, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 
-		if(var1.getItem() == VanillaItemsWeapons.shuriken){
-			var2.spawnEntityInWorld(new EntityShuriken(var2, var3));
-		}
-		
-		if(var1.getItem() == VanillaItemsWeapons.vileStorm){
-			var2.spawnEntityInWorld(new EntityVileStorm(var2, var3));
-		}
-		
-		if(var1.getItem() == TwilightItemsWeapons.edenSlicer){
-			var2.spawnEntityInWorld(new EntitySlicerEden(var2, var3));
-		}
-		
-		if(var1.getItem() == TwilightItemsWeapons.wildWoodSlicer){
-			var2.spawnEntityInWorld(new EntitySlicerWildWoods(var2, var3));
-		}
-		
-		if(var1.getItem() == TwilightItemsWeapons.apalachiaSlicer){
-			var2.spawnEntityInWorld(new EntitySlicerApalachia(var2, var3));
-		}
-		
-		if(var1.getItem() == TwilightItemsWeapons.skythernSlicer){
-			var2.spawnEntityInWorld(new EntitySlicerSkythern(var2, var3));
-		}
-		
-		if(var1.getItem() == TwilightItemsWeapons.mortumSlicer){
-			var2.spawnEntityInWorld(new EntitySlicerMortum(var2, var3));
-		}
-		
-		if(var1.getItem() == TwilightItemsWeapons.haliteSlicer){
-			var2.spawnEntityInWorld(new EntitySlicerHalite(var2, var3));
+			if(var1.getItem() == VanillaItemsWeapons.shuriken){
+				var2.spawnEntityInWorld(new EntityShuriken(var2, var3));
+			}
+
+			if(var1.getItem() == VanillaItemsWeapons.vileStorm){
+				var2.spawnEntityInWorld(new EntityVileStorm(var2, var3));
+			}
+
+			if(var1.getItem() == TwilightItemsWeapons.edenSlicer){
+				var2.spawnEntityInWorld(new EntitySlicerEden(var2, var3));
+			}
+
+			if(var1.getItem() == TwilightItemsWeapons.wildWoodSlicer){
+				var2.spawnEntityInWorld(new EntitySlicerWildWoods(var2, var3));
+			}
+
+			if(var1.getItem() == TwilightItemsWeapons.apalachiaSlicer){
+				var2.spawnEntityInWorld(new EntitySlicerApalachia(var2, var3));
+			}
+
+			if(var1.getItem() == TwilightItemsWeapons.skythernSlicer){
+				var2.spawnEntityInWorld(new EntitySlicerSkythern(var2, var3));
+			}
+
+			if(var1.getItem() == TwilightItemsWeapons.mortumSlicer){
+				var2.spawnEntityInWorld(new EntitySlicerMortum(var2, var3));
+			}
+
+			if(var1.getItem() == TwilightItemsWeapons.haliteSlicer){
+				var2.spawnEntityInWorld(new EntitySlicerHalite(var2, var3));
+			}
 		}
 		return var1;
 	}
-	
+
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
