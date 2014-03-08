@@ -17,7 +17,7 @@ public class BlockModGlass extends BlockMod {
         return 1;
     }
     
-    public String getTextureName(){
+    public String getTextureName() {
         return Reference.PREFIX + name;
     }
     
