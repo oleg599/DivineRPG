@@ -8,8 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
-import cpw.mods.fml.common.gameevent.TickEvent.ClientTickEvent;
+import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class EventArmorFullSet {
 
@@ -31,10 +30,10 @@ public class EventArmorFullSet {
 		if (!(e.entityLiving instanceof EntityPlayer))
 			return;
 		
-		ItemStack boot = player.inventory.armorInventory[0];
-		ItemStack leg = player.inventory.armorInventory[1];
-		ItemStack chestplate = player.inventory.armorInventory[2];
-		ItemStack head = player.inventory.armorInventory[3];
+		ItemStack boot = player.inventory.armorItemInSlot(0);
+		ItemStack leg = player.inventory.armorItemInSlot(1);
+		ItemStack chestplate = player.inventory.armorItemInSlot(2);
+		ItemStack head = player.inventory.armorItemInSlot(3);
 		
 		if(boot != null) 
 			boots = boot.getItem();
@@ -58,13 +57,13 @@ public class EventArmorFullSet {
 		}
 	}
 
-	@SubscribeEvent
-	public void onTickEvent(ClientTickEvent ev) {
+	/*@SubscribeEvent
+	public void onTickEvent(PlayerTickEvent ev) {
 
-		ItemStack boot = player.inventory.armorInventory[0];
-		ItemStack leg = player.inventory.armorInventory[1];
-		ItemStack chestplate = player.inventory.armorInventory[2];
-		ItemStack head = player.inventory.armorInventory[3];
+		ItemStack boot = player.inventory.armorItemInSlot(0);
+		ItemStack leg = player.inventory.armorItemInSlot(1);
+		ItemStack chestplate = player.inventory.armorItemInSlot(2);
+		ItemStack head = player.inventory.armorItemInSlot(3);
 		
 		if(boot != null) 
 			boots = boot.getItem();
@@ -83,5 +82,5 @@ public class EventArmorFullSet {
 			player.capabilities.isFlying = true;
 			player.fallDistance = 0.0F;
 		}
-	}   
+	}   */
 }
