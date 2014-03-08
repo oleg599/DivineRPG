@@ -2,20 +2,30 @@ package net.divinerpg.api.blocks;
 
 import java.util.Random;
 
+import net.divinerpg.Reference;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.Util;
 import net.minecraft.world.World;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockModBush extends BlockMod{
 
 	public IIcon grown, notGrown;
 	private int time = 0;
-
+	@SideOnly(Side.CLIENT)
+	public IIcon opaqueIcon;
+	@SideOnly(Side.CLIENT)
+	public IIcon blockIcon;
+	
 	public BlockModBush(boolean grown) {
 		super(Material.leaves);
 		setCreativeTab(DivineRPGTabs.blocks);
@@ -51,4 +61,23 @@ public class BlockModBush extends BlockMod{
 			w.setBlock(x, y, z, IceikaBlocks.winterberryBushRipe);
 		}
 	}
+	
+	public boolean isOpaqueCube() {
+		return false;
+	}
+
+	public boolean renderAsNormalBlock() {
+		return false;
+	}
+	
+	//This only checks graphic on start up
+	@Override
+	public String getTextureName() {
+		if (Minecraft.getMinecraft().gameSettings.fancyGraphics) {
+			return Reference.PREFIX + name;
+		}
+		else {
+			return Reference.PREFIX + name + "_fast";
+		}  
+    }
 }
