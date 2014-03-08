@@ -1,5 +1,6 @@
 package net.divinerpg.api.blocks;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 import net.divinerpg.Reference;
@@ -11,13 +12,16 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.Util;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.IShearable;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockModBush extends BlockMod{
+public class BlockModBush extends BlockMod implements IShearable {
 
 	public IIcon grown, notGrown;
 	private int time = 0;
@@ -29,6 +33,8 @@ public class BlockModBush extends BlockMod{
 	public BlockModBush(boolean grown) {
 		super(Material.leaves);
 		setCreativeTab(DivineRPGTabs.blocks);
+		setHardness(0.3F);
+		setStepSound(grass);
 	}
 	
 	@Override
@@ -79,5 +85,17 @@ public class BlockModBush extends BlockMod{
 		else {
 			return Reference.PREFIX + name + "_fast";
 		}  
+    }
+	
+	@Override
+    public boolean isShearable(ItemStack item, IBlockAccess world, int x, int y, int z){
+        return true;
+    }
+
+    @Override
+    public ArrayList<ItemStack> onSheared(ItemStack item, IBlockAccess world, int x, int y, int z, int fortune){
+        ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
+        ret.add(new ItemStack(this, 1, world.getBlockMetadata(x, y, z) & 3));
+        return ret;
     }
 }
