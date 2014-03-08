@@ -1,15 +1,20 @@
 package net.divinerpg.api.blocks;
 
+import java.util.ArrayList;
 import java.util.Random;
 
+import net.divinerpg.Reference;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.IShearable;
 
-public class BlockModLeaves extends BlockMod
+public class BlockModLeaves extends BlockMod implements IShearable
 {
 	int[] adjacentTreeBlocks;
 	String name;
@@ -17,7 +22,7 @@ public class BlockModLeaves extends BlockMod
 
 	public BlockModLeaves() {
 		super(Material.leaves);
-        this.setHardness(0.2F);
+        this.setHardness(0.3F);
         this.setLightOpacity(1);
         this.setTickRandomly(true);
 		setCreativeTab(DivineRPGTabs.blocks);
@@ -189,12 +194,40 @@ public class BlockModLeaves extends BlockMod
 	}
 	
 	@Override
-	public int getRenderType() {
-		return 0;
-	}
+	public Block setTextureName(String name) {
+		if (Minecraft.getMinecraft().gameSettings.fancyGraphics) {
+			return setBlockTextureName(Reference.PREFIX + name);
+		}
+		else {
+			return setBlockTextureName(Reference.PREFIX + name + "_fast");
+		}
+    }
 	
+	//This only checks graphic on start up
+	@Override
+	public String getTextureName() {
+		if (Minecraft.getMinecraft().gameSettings.fancyGraphics) {
+			return Reference.PREFIX + name;
+		}
+		else {
+			return Reference.PREFIX + name + "_fast";
+		}  
+	}
+		
 	@Override
 	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
-		return Item.getItemById(0);
+		return null;
 	}
+
+	@Override
+    public boolean isShearable(ItemStack item, IBlockAccess world, int x, int y, int z){
+        return true;
+    }
+
+    @Override
+    public ArrayList<ItemStack> onSheared(ItemStack item, IBlockAccess world, int x, int y, int z, int fortune){
+        ArrayList<ItemStack> ret = new ArrayList<ItemStack>();
+        ret.add(new ItemStack(this, 1, world.getBlockMetadata(x, y, z) & 3));
+        return ret;
+    }
 }
