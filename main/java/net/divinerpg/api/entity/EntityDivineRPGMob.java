@@ -35,14 +35,16 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 	public void getFollowRange(){getEntityAttribute(SharedMonsterAttributes.followRange).getAttributeValue();}
 
 	public void getKnockbackResistance(){getEntityAttribute(SharedMonsterAttributes.knockbackResistance).getAttributeValue();}
-	
+
 	public abstract String mobName();	
-	
+
 	public void onDeath(DamageSource d) {
 		super.onDeath(d);
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(ConfigurationHelper.canShowDeathChat){
-			p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A " + mobName() + "."));
+		if(!worldObj.isRemote){
+			EntityPlayer p = Minecraft.getMinecraft().thePlayer;
+			if(ConfigurationHelper.canShowDeathChat){
+				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A " + mobName() + "."));
+			}
 		}
 	}
 }

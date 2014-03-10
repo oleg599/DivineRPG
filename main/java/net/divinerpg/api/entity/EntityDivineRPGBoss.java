@@ -12,11 +12,11 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 public abstract class EntityDivineRPGBoss extends EntityMob implements IBossDisplayData{
-	
+
 	public EntityDivineRPGBoss(World par1World) {
 		super(par1World);
 	}
-	
+
 	public void setMaxHP(double d){getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);}
 
 	public void setMoveSpeed(double d){getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);}
@@ -38,12 +38,14 @@ public abstract class EntityDivineRPGBoss extends EntityMob implements IBossDisp
 	public void getKnockbackResistance(){getEntityAttribute(SharedMonsterAttributes.knockbackResistance).getAttributeValue();}
 
 	public abstract String mobName();
-	
+
 	public void onDeath(DamageSource d) {
 		super.onDeath(d);
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(ConfigurationHelper.canShowDeathChat){
-			p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The " + mobName() + " Has Fallen."));
+		if(!worldObj.isRemote){
+			EntityPlayer p = Minecraft.getMinecraft().thePlayer;
+			if(ConfigurationHelper.canShowDeathChat){
+				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The " + mobName() + " Has Fallen."));
+			}
 		}
 	}
 }

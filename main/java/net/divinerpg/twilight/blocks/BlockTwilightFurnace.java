@@ -38,9 +38,7 @@ public class BlockTwilightFurnace extends BlockContainer {
 	private IIcon FurnaceIIconTop;
 	@SideOnly(Side.CLIENT)
 	private IIcon FurnaceIIconFront;
-	
-	private String name;
-	
+		
 	public BlockTwilightFurnace(boolean active) {
 		super(Material.rock);
 		isActive = active;
@@ -280,42 +278,9 @@ public class BlockTwilightFurnace extends BlockContainer {
 	}
     
     public Block setName(String name){
-        this.name = name;
         setBlockName(name);
-        register();
-        return this;
-    }
-    
-    public String getName(){
-        return name;
-    }
-    
-    public void register(){
-        int numChars = 0;
-        char firstLetter = name.charAt(0);
-        if(Character.isLowerCase(firstLetter))
-            firstLetter = Character.toUpperCase(firstLetter);
-        String inGame = name.substring(1);
-        for(int k = 0; k < name.length(); k++){
-            char c = name.charAt(k);
-            int code = (int) c;
-            
-            if(k != 0){
-                for(int p = 65; p < 90; p++){
-                    if(code == p){
-                        numChars++;
-                        if(numChars == 1)
-                            inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-                        else
-                            inGame = new StringBuffer(inGame).insert(k, " ").toString();
-                    }
-                }
-            }
-        }
-        String finalName = firstLetter + inGame;
-        System.err.println(finalName);
         GameRegistry.registerBlock(this, name);
-        LanguageRegistry.addName(this, finalName);
+        return this;
     }
 
 	@Override

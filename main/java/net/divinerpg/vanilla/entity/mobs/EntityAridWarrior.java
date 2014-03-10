@@ -24,12 +24,10 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAttackMob
-{
+public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAttackMob {
     private static final ItemStack defaultHeldItem = new ItemStack(Items.bow, 1);
 
-    public EntityAridWarrior(World par1World)
-    {
+    public EntityAridWarrior(World par1World) {
         super(par1World);
         float moveSpeed = 0.25F;
         this.tasks.addTask(7, new EntityAIArrowAttack(this, 0.25F, 15, 10.0F));        
@@ -50,87 +48,57 @@ public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAtta
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(13.0D);
 	}
 
-    /**
-     * Returns the sound this mob makes while it's alive.
-     */
-    protected String getLivingSound()
-    {
+    protected String getLivingSound() {
         return Sounds.AridWarrior;
     }
 
-    /**
-     * Returns the sound this mob makes when it is hurt.
-     */
-    protected String getHurtSound()
-    {
+    protected String getHurtSound() {
         return Sounds.AridWarriorHurt;
     }
 
-    /**
-     * Returns the sound this mob makes on death.
-     */
-    protected String getDeathSound()
-    {
+    protected String getDeathSound() {
         return Sounds.AridWarriorHurt;
     }
-    
-    /**
-     * Returns true if the newer Entity AI code should be run
-     */
-    public boolean isAIEnabled()
-    {
+
+    public boolean isAIEnabled() {
         return true;
     }
 
-    /**
-     * Returns the item that this EntityLiving is holding, if any.
-     */
-    public ItemStack getHeldItem()
-    {
+    public ItemStack getHeldItem() {
         return defaultHeldItem;
     }
 
-    /**
-     * Drop 0-2 items of this living's type
-     */
-    protected void dropFewItems(boolean par1, int par2)
-    {
+    protected void dropFewItems(boolean par1, int par2) {
         int var3;
         int var4;
         var3 = this.rand.nextInt(3 + par2);
 
-        for (var4 = 0; var4 < var3; ++var4)
-        {
+        for (var4 = 0; var4 < var3; ++var4) {
             this.dropItem(Item.getItemFromBlock(Blocks.sandstone), 30);
         }
 
         var3 = this.rand.nextInt(3 + par2);
 
-        for (var4 = 0; var4 < var3; ++var4)
-        {
+        for (var4 = 0; var4 < var3; ++var4) {
             this.entityDropItem(new ItemStack(Blocks.wool, 10, 14), 0.0F);
         }
     }
 
     @Override
-    public void attackEntityWithRangedAttack(EntityLivingBase var1, float f)
-    {
+    public void attackEntityWithRangedAttack(EntityLivingBase var1, float f) {
         EntityArrow var2 = new EntityArrow(this.worldObj, this, var1, 1.6F, 12.0F);
         int var3 = EnchantmentHelper.getEnchantmentLevel(Enchantment.power.effectId, this.getHeldItem());
         int var4 = EnchantmentHelper.getEnchantmentLevel(Enchantment.punch.effectId, this.getHeldItem());
 
-        if (var3 > 0)
-        {
+        if (var3 > 0) {
             var2.setDamage(var2.getDamage() + (double)var3 * 0.5D + 0.5D);
         }
 
-        if (var4 > 0)
-        {
+        if (var4 > 0) {
             var2.setKnockbackStrength(var4);
         }
 
-        if (EnchantmentHelper.getEnchantmentLevel(Enchantment.flame.effectId, this.getHeldItem()) > 0)
-        {
+        if (EnchantmentHelper.getEnchantmentLevel(Enchantment.flame.effectId, this.getHeldItem()) > 0) {
             var2.setFire(100);
         }
 

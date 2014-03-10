@@ -1,5 +1,6 @@
 package net.divinerpg;
 
+import net.divinerpg.api.entity.EventDeath;
 import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.blocks.IceikaBlocks;
@@ -45,18 +46,26 @@ public class CommonProxy {
 	
 	//ClientProxy
 	public void preInit(FMLPreInitializationEvent event){
+		System.out.println("[DIVINE RPG] ADDING EVENTS");
 		MinecraftForge.EVENT_BUS.register(new EventClientLogin());
 		MinecraftForge.EVENT_BUS.register(new EventOverlay());
 		MinecraftForge.EVENT_BUS.register(new EventBucketFill());
 		MinecraftForge.EVENT_BUS.register(new EventBonemeal());
+		MinecraftForge.EVENT_BUS.register(new EventDeath());
+		System.out.println("[DIVINE RPG] REGISTERING TILE ENTITYS");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
+		System.out.println("[DIVINE RPG] ADDING CONFIGURATIONS");
 		ConfigurationHelper.init();
+		System.out.println("[DIVINE RPG] ADDING MOBS");
 		OverworldMobRegistry.init();
 		TwilightMobRegistry.init();
 		IceikaMobRegistry.init();
 		VetheaMobRegistry.init();
+		System.out.println("[DIVINE RPG] ADDING CRAFTING/SMELTING RECIPES");
 		VanillaRecipeHelper.init();
 		TwilightRecipeHelper.init();
+		
+		System.out.println("[DIVINE RPG] ADDING BLOCKS");
 		TwilightBlocks.init();
 		IceikaBlocks.init();
 		VetheaBlocks.init();
@@ -67,13 +76,15 @@ public class CommonProxy {
 		    LangRegistry.addItemNames();
 		}
 		LangRegistry.closeFile();
-		
+		System.out.println("[DIVINERPG] ADDING DIMENSTIONS");
 		DimensionHelper.init();
+		System.out.println("[DIVINERPG] ADDING MOB SPAWNS");
 		MobSpawning.addSpawns();
 	}
 	
 	public void init(FMLInitializationEvent event){
 		int wut = 10;//What the hell does the int even do?
+		System.out.println("[DIVINER PG] ADDING WORLD GENERATIONS");
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
 		FMLCommonHandler.instance().bus().register(new EventArmorFullSet());
 
@@ -84,6 +95,7 @@ public class CommonProxy {
 	}
 
 	public void serverStarting(FMLServerStartingEvent event){ 
+		System.out.println("[DIVINE RPG] ADDING COMMANDS");
 		if (MinecraftServer.getServer().getCommandManager() instanceof ServerCommandManager) {
 			((CommandHandler) MinecraftServer.getServer().getCommandManager()).registerCommand(new DivineRPGCommands());
 		}

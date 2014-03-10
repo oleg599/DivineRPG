@@ -18,39 +18,41 @@ public class EntityEnderWatcher extends EntityEnderman{
 		super(par1World);
 		this.setSize(0.6F, 0.6F);
 	}
-	
-    protected void applyEntityAttributes() {
-        super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(50.0D);
-    }
 
-    protected Item getDropItem()
-    {
-        return VanillaItemsOther.enderShard;
-    }
-    
-    protected void dropFewItems(boolean par1, int par2)
-    {
-        Item item = this.getDropItem();
-        Item item2 = VanillaItemsOther.watchingEye;
+	protected void applyEntityAttributes() {
+		super.applyEntityAttributes();
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(50.0D);
+	}
 
-        if (item != null)
-        {
-            int j = this.rand.nextInt(2 + par2);
+	protected Item getDropItem()
+	{
+		return VanillaItemsOther.enderShard;
+	}
 
-            for (int k = 0; k < j; ++k)
-            {
-                this.dropItem(item, 2);
-                this.dropItem(item2, 1);
-            }
-        }
-    }
-    
-    public void onDeath(DamageSource d) {
-    	super.onDeath(d);
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(ConfigurationHelper.canShowDeathChat){
-			p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Ender Watcher."));
+	protected void dropFewItems(boolean par1, int par2)
+	{
+		Item item = this.getDropItem();
+		Item item2 = VanillaItemsOther.watchingEye;
+
+		if (item != null)
+		{
+			int j = this.rand.nextInt(2 + par2);
+
+			for (int k = 0; k < j; ++k)
+			{
+				this.dropItem(item, 2);
+				this.dropItem(item2, 1);
+			}
+		}
+	}
+
+	public void onDeath(DamageSource d) {
+		super.onDeath(d);
+		if(!worldObj.isRemote){
+			EntityPlayer p = Minecraft.getMinecraft().thePlayer;
+			if(ConfigurationHelper.canShowDeathChat){
+				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Ender Watcher."));
+			}
 		}
 	}
 }

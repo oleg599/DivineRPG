@@ -27,20 +27,15 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
 	}
 
 	@Override
-    public boolean attackEntityAsMob(Entity par1Entity)
-    {
+    public boolean attackEntityAsMob(Entity par1Entity) {
         super.attackEntityAsMob(par1Entity);
-
-        if (this.entityToAttack != null)
-        {
+        if (this.entityToAttack != null) {
             this.entityToAttack.addVelocity(this.motionX * 10.0D, 3.0D, this.motionZ * 10.0D);
-            if(this.entityToAttack instanceof EntityLiving)
-            {
+            if(this.entityToAttack instanceof EntityLiving) {
                 ((EntityLiving)this.entityToAttack).addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 100, 0));
             }
             return true;
         }
-
         return false;
     }
 	
@@ -50,19 +45,22 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
 		this.dataWatcher.addObject(16, new Integer(100));
 	}
 	
+	@Override
     public void onLivingUpdate() {
         super.onLivingUpdate();
     }
     
+	@Override
     protected String getHurtSound() {
         return "mob.irongolem.hit";
     }
 
+	@Override
     protected String getDeathSound() {
         return "mob.irongolem.death";
     }
 
-    
+	@Override
     protected void dropFewItems(boolean par1, int par2) {
     	
     	Item i = getDropItem();
@@ -70,10 +68,10 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
 
         int var3, var4;
         
-        var3 = this.rand.nextInt(3 + par2);
+        var3 = this.rand.nextInt(6) + 4;
 
-        for (var4 = 0; var4 < 11; var4++) {
-            this.dropItem(i, 5);
+        for (var4 = 0; var4 < var3; var4++) {
+            this.dropItem(i, 1);
         }
 
         for (var4 = 0; var4 < 1; var4++) {
@@ -81,6 +79,7 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
         }
     }
 
+	@Override
     protected Item getDropItem() {
         return VanillaItemsOther.divineShards;
     }

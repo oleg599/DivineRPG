@@ -16,12 +16,15 @@ public class ClientProxy extends CommonProxy{
 
 	@Override
 	public void renderThings() {
+		System.out.println("[DIVINE RPG] RENDERING MOBS");
 		OverworldEntityRenderer.init();
 		TwilightEntityRenderer.init();
 		IceikaEntityRenderer.init();
 		VetheaEntityRenderer.init();
+		System.out.println("[DIVINE RPG] REGISTERING SOUNDS");
 		MinecraftForge.EVENT_BUS.register(new SoundLoader());
 		NetworkRegistry.INSTANCE.registerGuiHandler(DivineRPG.instance, new GuiHandler());
+		System.out.println("[DIVINE RPG] REGISTERING USER CAPES");
 		DevCapes.getInstance().registerConfig("https://dl-web.dropbox.com/get/Divine%20RPG/DivineRPGCapes.json", Reference.MOD_NAME);
 	}
 }

@@ -23,6 +23,7 @@ import net.divinerpg.vanilla.entity.mobs.EntityIceMan;
 import net.divinerpg.vanilla.entity.mobs.EntityJungleDramcryx;
 import net.divinerpg.vanilla.entity.mobs.EntityKingCrab;
 import net.divinerpg.vanilla.entity.mobs.EntityKingOfScorchers;
+import net.divinerpg.vanilla.entity.mobs.EntityMiner;
 import net.divinerpg.vanilla.entity.mobs.EntityNetherWatcher;
 import net.divinerpg.vanilla.entity.mobs.EntityRainbour;
 import net.divinerpg.vanilla.entity.mobs.EntityRotatick;
@@ -36,15 +37,16 @@ public class OverworldMobRegistry {
 
 	public static void init(){
 		DivineAPI.registerDivineRPGMob(EntityEnderWatcher.class, "Ender Watcher");		
-		DivineAPI.registerDivineRPGMob(EntityCrab.class, "Crab");		
+		DivineAPI.registerDivineRPGMob(EntityCrab.class, "Crab");	
+		DivineAPI.registerDivineRPGMob(EntityMiner.class, "Un Dead Miner");		
 		DivineAPI.registerDivineRPGMob(EntityKingCrab.class, "King Crab");	
 		DivineAPI.registerDivineRPGMob(EntityDesertCrawler.class, "Desert Crawler");		
 		DivineAPI.registerDivineRPGMob(EntityCaveCrawler.class, "Cave Crawler");		
 		DivineAPI.registerDivineRPGMob(EntityJungleDramcryx.class, "Jungle Dramcryx");		
 		DivineAPI.registerDivineRPGMob(EntityCyclops.class, "Cyclops");		
 		DivineAPI.registerDivineRPGMob(EntityAncientEntity.class, "Ancient Entity");		
-		DivineAPI.registerDivineRPGMob(EntityWhale.class, "Whale");		
-		DivineAPI.registerDivineRPGMob(EntityHellSpider.class, "Hell Spider");		
+		DivineAPI.registerDivineRPGMob(EntityWhale.class, "Whale");	
+		DivineAPI.registerDivineRPGMob(EntityHellSpider.class, "Hell Spider");	
 		DivineAPI.registerDivineRPGMob(EntityScorcher.class, "Scorhcer");		
 		DivineAPI.registerDivineRPGMob(EntityEnderSpider.class, "Ender Spider");		
 		DivineAPI.registerDivineRPGMob(EntityEnderTriplets.class, "Ender Triplets");
@@ -54,7 +56,7 @@ public class OverworldMobRegistry {
 		DivineAPI.registerDivineRPGMob(EntityAyeracoPurple.class, "Ayeraco Purple");
 		DivineAPI.registerDivineRPGMob(EntityAyeracoRed.class, "Ayeraco Red");
 		DivineAPI.registerDivineRPGMob(EntityAyeracoYellow.class, "Ayeraco Yellow");
-		DivineAPI.registerDivineRPGMob(EntityCorruptedDramcryx.class, "Cave Dramcryx");
+		DivineAPI.registerDivineRPGMob(EntityCorruptedDramcryx.class, "Corrupted Dramcryx");
 		DivineAPI.registerDivineRPGMob(EntityTheEye.class, "The Eye");
 		DivineAPI.registerDivineRPGMob(EntityFrost.class, "Frost");
 		DivineAPI.registerDivineRPGMob(EntityIceMan.class, "Ice Man");
