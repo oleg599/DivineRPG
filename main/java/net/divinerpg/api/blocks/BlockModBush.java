@@ -11,6 +11,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -40,6 +42,7 @@ public class BlockModBush extends BlockMod implements IShearable {
 	@Override
 	public void onBlockDestroyedByPlayer(World w, int x, int y, int z, int meta) {
 		if(this == IceikaBlocks.winterberryBushRipe) {
+			//TODO: Make this only work in survival
 			w.setBlock(x, y, z, IceikaBlocks.winterberryBush);
 		}
 	}
