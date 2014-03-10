@@ -237,6 +237,7 @@ public class EntityNetherWatcher extends EntityFlying implements IMob, IBossDisp
     }
     
     public void onDeath(DamageSource d) {
+    	super.onDeath(d);
 		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 		if(ConfigurationHelper.canShowDeathChat){
 			p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The Nether Watcher Has Fallen."));

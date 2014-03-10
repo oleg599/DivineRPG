@@ -54,6 +54,7 @@ public class EntityEnderSpider extends EntityEnderman
     }
     
     public void onDeath(DamageSource d) {
+    	super.onDeath(d);
 		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 		if(ConfigurationHelper.canShowDeathChat){
 			p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Ender Spider."));
