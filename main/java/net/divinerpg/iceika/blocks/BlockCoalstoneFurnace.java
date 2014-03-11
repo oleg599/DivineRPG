@@ -2,6 +2,7 @@ package net.divinerpg.iceika.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.divinerpg.Reference;
 import net.divinerpg.api.blocks.BlockMod;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.material.Material;
@@ -12,6 +13,10 @@ public class BlockCoalstoneFurnace extends BlockMod {
 
 	private IIcon front;
 	private IIcon other;
+	@SideOnly(Side.CLIENT)
+	private IIcon FurnaceIIconTop;
+	@SideOnly(Side.CLIENT)
+	private IIcon FurnaceIIconFront;
 	
 	public BlockCoalstoneFurnace() {
 		super(rock);
@@ -21,12 +26,19 @@ public class BlockCoalstoneFurnace extends BlockMod {
 		setLightLevel(1.0F);
 	}
 	
-	/*@SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister icon) {
-        front = icon.registerIcon(getTextureName());
-        other = icon.registerIcon("coalstone");
-    }*/
-	
-	//TODO: Render all sides except the front to be the coalstone texture
+	@Override
+	@SideOnly(Side.CLIENT)
+	public IIcon getIcon(int par1, int par2)
+	{
+		return par1 == 1 ? this.FurnaceIIconTop : (par1 == 0 ? this.FurnaceIIconTop : (par1 != par2 ? this.blockIcon : this.FurnaceIIconFront));
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister par1IIconRegister) {
+		this.blockIcon = par1IIconRegister.registerIcon(Reference.PREFIX + "coalstone");
+		this.FurnaceIIconFront = par1IIconRegister.registerIcon(Reference.PREFIX + "coalstoneFurnace");
+		this.FurnaceIIconTop = par1IIconRegister.registerIcon(Reference.PREFIX + "coalstone");
+	}
 
 }

@@ -26,13 +26,9 @@ import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
 import net.divinerpg.worldgen.WorldGenOverworld;
 import net.minecraft.command.CommandHandler;
 import net.minecraft.command.ServerCommandManager;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fluids.FluidContainerRegistry;
-import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
-import net.minecraftforge.fluids.FluidRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -40,7 +36,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class CommonProxy {
+public class CommonProxy{
 
 	public void renderThings(){}
 	
@@ -52,7 +48,8 @@ public class CommonProxy {
 		MinecraftForge.EVENT_BUS.register(new EventBucketFill());
 		MinecraftForge.EVENT_BUS.register(new EventBonemeal());
 		MinecraftForge.EVENT_BUS.register(new EventDeath());
-		System.out.println("[DIVINE RPG] REGISTERING TILE ENTITYS");
+		MinecraftForge.EVENT_BUS.register(new EventArmorFullSet());
+		System.out.println("[DIVINE RPG] REGISTERING TILE ENTITIES");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		System.out.println("[DIVINE RPG] ADDING CONFIGURATIONS");
 		ConfigurationHelper.init();
