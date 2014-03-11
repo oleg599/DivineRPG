@@ -53,14 +53,6 @@ public class BlockModBush extends BlockMod implements IShearable {
 			w.setBlock(x, y, z, IceikaBlocks.winterberryBushRipe);
 		}
 	}
-	
-	public Item getItemDropped(int par1, Random par2Random, int par3) {
-		if (this == IceikaBlocks.winterberryBushRipe) {
-			return IceikaItems.winterberry;
-		} else {
-			return null;
-		}
-	}
 
 	public void grow(World w, int x, int y, int z){
 		if(this == IceikaBlocks.winterberryBush){
@@ -85,6 +77,14 @@ public class BlockModBush extends BlockMod implements IShearable {
 			return Reference.PREFIX + name + "_fast";
 		}  
     }
+	
+	public Item getItemDropped(int par1, Random par2Random, int par3) {
+		if (this == IceikaBlocks.winterberryBushRipe) {
+			return IceikaItems.winterberry;
+		} else {
+			return null;
+		}
+	}
 	
 	@Override
     public boolean isShearable(ItemStack item, IBlockAccess world, int x, int y, int z){

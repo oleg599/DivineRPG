@@ -17,7 +17,6 @@ import net.minecraftforge.common.IShearable;
 public class BlockModLeaves extends BlockMod implements IShearable
 {
 	int[] adjacentTreeBlocks;
-	String name;
 	private static SoundType grass = Block.soundTypeGrass;
 
 	public BlockModLeaves() {
@@ -192,16 +191,6 @@ public class BlockModLeaves extends BlockMod implements IShearable
 	public boolean renderAsNormalBlock() {
 		return false;
 	}
-	
-	@Override
-	public Block setTextureName(String name) {
-		if (Minecraft.getMinecraft().gameSettings.fancyGraphics) {
-			return setBlockTextureName(Reference.PREFIX + name);
-		}
-		else {
-			return setBlockTextureName(Reference.PREFIX + name + "_fast");
-		}
-    }
 	
 	//This only checks graphic on start up
 	@Override
