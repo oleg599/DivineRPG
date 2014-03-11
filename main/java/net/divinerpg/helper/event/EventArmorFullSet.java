@@ -13,15 +13,12 @@ import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class EventArmorFullSet {
 
-	//EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-
 	private Item boots = null;
 	private Item body = null;
 	private Item legs = null;
 	private Item helmet = null;
 	private VanillaItemsArmor v;
 	private TwilightItemsArmor t;
-	private int fire;
 
 	//TODO Figure out why it isn't working.
 
