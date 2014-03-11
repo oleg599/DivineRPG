@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
@@ -24,24 +25,24 @@ public class EventArmorFullSet {
 	public void onLivingHurtEvent(LivingHurtEvent e) {
 		if(e.entity instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer)e.entity;
-			
+
 			ItemStack stackBoots = player.inventory.armorItemInSlot(0);
 			ItemStack stackLegs = player.inventory.armorItemInSlot(1);
 			ItemStack stackBody = player.inventory.armorItemInSlot(2);
 			ItemStack stackHelmet = player.inventory.armorItemInSlot(3);
-			
+
 			if(stackBoots != null) 
 				boots = stackBoots.getItem();
-			
+
 			if(stackLegs != null) 
 				body = stackBody.getItem();
-			
+
 			if(stackBody != null) 
 				legs = stackLegs.getItem();
-			
+
 			if(stackHelmet != null) 
 				helmet = stackHelmet.getItem();
-			
+
 			DamageSource s = e.source;
 
 			//Netherite
@@ -50,7 +51,7 @@ public class EventArmorFullSet {
 					e.setCanceled(true);
 				}
 			}
-			
+
 			//Inferno
 			if (boots == v.infernoBoots && legs == v.infernoLegs && body == v.infernoBody && helmet == v.infernoHelmet) {
 				if (s.equals(DamageSource.inFire) || s.equals(DamageSource.onFire) || s.equals(DamageSource.lava)) {
@@ -58,7 +59,7 @@ public class EventArmorFullSet {
 				}
 			}
 
-		
+
 			//Wither Reaper
 			if (boots == v.witherReaperBoots && legs == v.witherReaperLegs && body == v.witherReaperBody && helmet == v.witherReaperHelmet) {
 				if (s.equals(DamageSource.wither)) {
@@ -73,14 +74,14 @@ public class EventArmorFullSet {
 				}
 			}
 
-		
+
 			//Bedrock
 			if (boots == v.bedrockBoots && legs == v.bedrockLegs && body == v.bedrockBody && helmet == v.bedrockHelmet) {
 				if (s.isExplosion() || s.equals(DamageSource.lava) || s.equals(DamageSource.inFire) || s.equals(DamageSource.onFire)) {
 					e.setCanceled(true);
 				}
 			}
-		
+
 			//Arlemite -untested
 			if (boots == v.arlemiteBoots && legs == v.arlemiteLegs && body == v.arlemiteBody && helmet == v.arlemiteHelmet) {
 				if (s.isProjectile() || s.damageType.equals("thrown")) {
@@ -103,17 +104,12 @@ public class EventArmorFullSet {
 			}*/
 
 			//Divine
-			
+
 			//Skythern
 
 			//Uvite
-			if (boots == TwilightItemsArmor.apalachiaBoots
-					&& legs == TwilightItemsArmor.apalachiaLegs
-					&& body == TwilightItemsArmor.apalachiaBody
-					&& helmet == TwilightItemsArmor.apalachiaHelmet)
-			{
-				if (s.equals(DamageSource.cactus) || s.equals(DamageSource.fallingBlock) || s.equals(DamageSource.anvil) || s.equals(DamageSource.inWall))
-				{
+			if (boots == TwilightItemsArmor.apalachiaBoots && legs == TwilightItemsArmor.apalachiaLegs && body == TwilightItemsArmor.apalachiaBody && helmet == TwilightItemsArmor.apalachiaHelmet) {
+				if (s.equals(DamageSource.cactus) || s.equals(DamageSource.fallingBlock) || s.equals(DamageSource.anvil) || s.equals(DamageSource.inWall)) {
 					e.setCanceled(true);
 				}
 			}
@@ -370,7 +366,7 @@ public class EventArmorFullSet {
 					e.ammount *= 1 - a;
 				}
 			}
-			
+
 			//demonized Arcana
 			else if (helmet == DivineRPG.demonizedHelmetArcana)
 			{
@@ -464,7 +460,7 @@ public class EventArmorFullSet {
 			}
 		}*/
 		}
-		
+
 	}
 
 	@SubscribeEvent
@@ -474,8 +470,8 @@ public class EventArmorFullSet {
 		ItemStack stackLegs = ev.player.inventory.armorItemInSlot(1);
 		ItemStack stackBody = ev.player.inventory.armorItemInSlot(2);
 		ItemStack stackHelmet = ev.player.inventory.armorItemInSlot(3);
-		
-		
+
+
 		if(stackBoots != null)
 			boots = stackBoots.getItem();
 
@@ -492,24 +488,47 @@ public class EventArmorFullSet {
 			ev.player.capabilities.allowFlying = true;
 			ev.player.fallDistance = 0.0F;
 		}
-		
+
 		//Elite Realmite
 		if(boots == v.eliteRealmiteBoots && body == v.eliteRealmiteBody && legs == v.eliteRealmiteLegs && helmet == v.eliteRealmiteHelmet){
 			ev.player.fallDistance = 0.0F;
 		}
-		
-		//Divine
-		if(boots == v.divineBoots && body == v.divineBody && legs == v.divineLegs && helmet == v.divineHelmet){
-			//TODO: Get rid of the bubbles
-			ev.player.addPotionEffect(new PotionEffect(8, -1, 1));
-			ev.player.fallDistance = 0.0F;
-		}
-		
-		//Skythern
-		if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
-			//TODO: Get rid of the bubbles
-			ev.player.addPotionEffect(new PotionEffect(8, -1, 4));
-			ev.player.fallDistance = 0.0F;
-		}
 	}   
+
+	@SubscribeEvent
+	public void onJump(LivingJumpEvent ev) {
+		if (ev.entityLiving instanceof EntityPlayer) {
+			EntityPlayer player = (EntityPlayer)ev.entityLiving;
+			
+			ItemStack stackBoots = player.inventory.armorItemInSlot(0);
+			ItemStack stackLegs = player.inventory.armorItemInSlot(1);
+			ItemStack stackBody = player.inventory.armorItemInSlot(2);
+			ItemStack stackHelmet = player.inventory.armorItemInSlot(3);
+
+
+			if(stackBoots != null)
+				boots = stackBoots.getItem();
+
+			if(stackBody != null)
+				body = stackBody.getItem();
+
+			if(stackLegs != null) 
+				legs = stackLegs.getItem();
+
+			if(stackHelmet != null) 
+				helmet = stackHelmet.getItem();
+
+			//Divine
+			if(boots == v.divineBoots && body == v.divineBody && legs == v.divineLegs && helmet == v.divineHelmet){
+				player.addVelocity(0, 0.2D, 0);
+				player.fallDistance = 0.0F;
+			}
+
+			//Skythern
+			if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
+				player.addVelocity(0, 0.5D, 0);
+				player.fallDistance = 0.0F;
+			}
+		}
+	}
 }
