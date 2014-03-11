@@ -20,8 +20,6 @@ public class EventArmorFullSet {
 	private VanillaItemsArmor v;
 	private TwilightItemsArmor t;
 
-	//TODO Figure out why it isn't working.
-
 	@SubscribeEvent
 	public void onLivingHurtEvent(LivingHurtEvent e) {
 		if(e.entity instanceof EntityPlayer) {
