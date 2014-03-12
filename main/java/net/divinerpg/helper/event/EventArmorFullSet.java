@@ -477,7 +477,7 @@ public class EventArmorFullSet {
 	@SubscribeEvent
 	public void onTickEvent(PlayerTickEvent ev) {
 		float temp = ev.player.fallDistance;
-		
+		System.out.println(ev.player.fallDistance);
 		ItemStack stackBoots = ev.player.inventory.armorItemInSlot(0);
 		ItemStack stackLegs = ev.player.inventory.armorItemInSlot(1);
 		ItemStack stackBody = ev.player.inventory.armorItemInSlot(2);
@@ -504,12 +504,13 @@ public class EventArmorFullSet {
 			helmet = null;
 
 		if (boots == v.angelicBoots && body == v.angelicBody && legs == v.angelicLegs && helmet == v.angelicHelmet){
-			System.out.println("Hi");
 			ev.player.capabilities.allowFlying = true;
+			System.out.println(ev.player.fallDistance);
 			ev.player.fallDistance = 0.0F;
+			System.out.println(ev.player.fallDistance);
 			flown = true;
 		}
-		else if ((boots == null || body == null || legs == null || helmet == null) && flown == true){
+		else if ((!(boots == v.angelicBoots) && !(body == v.angelicBody) && !(legs == v.angelicLegs) && !(helmet == v.angelicHelmet)) && flown == true){
 			ev.player.capabilities.allowFlying = false;
 			ev.player.fallDistance = temp;
 			flown = false;
