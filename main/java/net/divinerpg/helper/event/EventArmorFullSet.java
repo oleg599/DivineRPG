@@ -18,6 +18,9 @@ public class EventArmorFullSet {
 	private Item body = null;
 	private Item legs = null;
 	private Item helmet = null;
+	private boolean flown = false;
+	private boolean jumped = false;
+	private boolean jumped2 = false;
 	private VanillaItemsArmor v;
 	private TwilightItemsArmor t;
 
@@ -31,17 +34,25 @@ public class EventArmorFullSet {
 			ItemStack stackBody = player.inventory.armorItemInSlot(2);
 			ItemStack stackHelmet = player.inventory.armorItemInSlot(3);
 
-			if(stackBoots != null) 
+			if(stackBoots != null)
 				boots = stackBoots.getItem();
+			else
+				boots = null;
+
+			if(stackBody != null)
+				body = stackBody.getItem();
+			else
+				body = null;
 
 			if(stackLegs != null) 
-				body = stackBody.getItem();
-
-			if(stackBody != null) 
 				legs = stackLegs.getItem();
+			else
+				legs = null;
 
 			if(stackHelmet != null) 
 				helmet = stackHelmet.getItem();
+			else
+				helmet = null;
 
 			DamageSource s = e.source;
 
@@ -465,28 +476,43 @@ public class EventArmorFullSet {
 
 	@SubscribeEvent
 	public void onTickEvent(PlayerTickEvent ev) {
-
+		float temp = ev.player.fallDistance;
+		
 		ItemStack stackBoots = ev.player.inventory.armorItemInSlot(0);
 		ItemStack stackLegs = ev.player.inventory.armorItemInSlot(1);
 		ItemStack stackBody = ev.player.inventory.armorItemInSlot(2);
 		ItemStack stackHelmet = ev.player.inventory.armorItemInSlot(3);
 
-
 		if(stackBoots != null)
 			boots = stackBoots.getItem();
+		else
+			boots = null;
 
 		if(stackBody != null)
 			body = stackBody.getItem();
+		else
+			body = null;
 
 		if(stackLegs != null) 
 			legs = stackLegs.getItem();
+		else
+			legs = null;
 
 		if(stackHelmet != null) 
 			helmet = stackHelmet.getItem();
+		else
+			helmet = null;
 
-		if(boots == v.angelicBoots && body == v.angelicBody && legs == v.angelicLegs && helmet == v.angelicHelmet){
+		if (boots == v.angelicBoots && body == v.angelicBody && legs == v.angelicLegs && helmet == v.angelicHelmet){
+			System.out.println("Hi");
 			ev.player.capabilities.allowFlying = true;
 			ev.player.fallDistance = 0.0F;
+			flown = true;
+		}
+		else if ((boots == null || body == null || legs == null || helmet == null) && flown == true){
+			ev.player.capabilities.allowFlying = false;
+			ev.player.fallDistance = temp;
+			flown = false;
 		}
 
 		//Elite Realmite
@@ -499,7 +525,8 @@ public class EventArmorFullSet {
 	public void onJump(LivingJumpEvent ev) {
 		if (ev.entityLiving instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer)ev.entityLiving;
-			
+			float temp = player.fallDistance;
+
 			ItemStack stackBoots = player.inventory.armorItemInSlot(0);
 			ItemStack stackLegs = player.inventory.armorItemInSlot(1);
 			ItemStack stackBody = player.inventory.armorItemInSlot(2);
@@ -508,26 +535,46 @@ public class EventArmorFullSet {
 
 			if(stackBoots != null)
 				boots = stackBoots.getItem();
+			else
+				boots = null;
 
 			if(stackBody != null)
 				body = stackBody.getItem();
+			else
+				body = null;
 
 			if(stackLegs != null) 
 				legs = stackLegs.getItem();
+			else
+				legs = null;
 
 			if(stackHelmet != null) 
 				helmet = stackHelmet.getItem();
+			else
+				helmet = null;
 
 			//Divine
 			if(boots == v.divineBoots && body == v.divineBody && legs == v.divineLegs && helmet == v.divineHelmet){
 				player.addVelocity(0, 0.2D, 0);
 				player.fallDistance = 0.0F;
+				jumped = true;
+			}
+			else if ((boots == null || body == null || legs == null || helmet == null) && jumped == true){
+				player.fallDistance = temp;
+				player.addVelocity(0, -0.2D, 0);
+				jumped = false;
 			}
 
 			//Skythern
 			if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
 				player.addVelocity(0, 0.5D, 0);
 				player.fallDistance = 0.0F;
+				jumped2 = true;
+			}
+			else if ((boots == null && body == null && legs == null && helmet == null) && jumped == true){
+				player.fallDistance = temp;
+				player.addVelocity(0, -0.5D, 0);
+				jumped2 = false;
 			}
 		}
 	}
