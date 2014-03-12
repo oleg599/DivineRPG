@@ -1,6 +1,5 @@
 package net.divinerpg;
 
-import net.divinerpg.api.entity.EventDeath;
 import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.blocks.IceikaBlocks;
@@ -12,6 +11,7 @@ import net.divinerpg.helper.event.EventArmorFullSet;
 import net.divinerpg.helper.event.EventBonemeal;
 import net.divinerpg.helper.event.EventBucketFill;
 import net.divinerpg.helper.event.EventClientLogin;
+import net.divinerpg.helper.event.EventDeath;
 import net.divinerpg.helper.event.EventOverlay;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.mobs.IceikaMobRegistry;

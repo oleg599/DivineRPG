@@ -1,4 +1,4 @@
-package net.divinerpg.api.entity;
+package net.divinerpg.helper.event;
 
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
