@@ -1,8 +1,8 @@
 package net.divinerpg.vanilla.entity.mobs;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
+import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.ItemsFood;
-import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
@@ -106,7 +106,7 @@ public class EntityIceMan extends EntityDivineRPGMob
      */
     protected Item getDropItem()
     {
-        return VanillaItemsOther.iceShards;
+        return IceikaItems.iceShards;
     }
 
     /**
@@ -132,7 +132,7 @@ public class EntityIceMan extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(VanillaItemsOther.iceShards, 3);
+            this.dropItem(IceikaItems.iceShards, 3);
         }
     }
 

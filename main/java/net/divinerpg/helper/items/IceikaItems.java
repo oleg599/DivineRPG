@@ -46,5 +46,8 @@ public class IceikaItems {
 	public static final Item santaBody 		   = new ItemDivineArmor(ArmorMaterialMod.Santa, BODY, 1, true, "santa").setName("santaBody");
 	public static final Item santaLegs 		   = new ItemDivineArmor(ArmorMaterialMod.Santa, LEGS, 2, true, "santa").setName("santaLegs");
 	public static final Item santaBoots 	   = new ItemDivineArmor(ArmorMaterialMod.Santa, BOOTS, 3, true, "santa").setName("santaBoots");
+	
+	public static final Item iceShards          = new ItemMod().setName("iceShards");
+	public static final Item iceStone           = new ItemMod().setName("iceStone");
  
 }

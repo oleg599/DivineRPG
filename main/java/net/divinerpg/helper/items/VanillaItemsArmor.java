@@ -6,7 +6,7 @@ import net.minecraft.item.Item;
 
 public class VanillaItemsArmor {
     
-    public static final int  HEAD               = 0, BODY = 1, LEGS = 2, BOOTS = 3;
+    public static       int  HEAD               = 0, BODY = 1, LEGS = 2, BOOTS = 3;
     
     public static final Item angelicHelmet      = new ItemDivineArmor(ArmorMaterialMod.Angelic, HEAD, 0, 50D, true, "angelic").setName("angelicHelmet");
     public static final Item angelicBody        = new ItemDivineArmor(ArmorMaterialMod.Angelic, BODY, 1, 50D, true, "angelic").setName("angelicBody");

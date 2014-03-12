@@ -1,6 +1,7 @@
 package net.divinerpg.vanilla.entity.mobs;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
+import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -181,14 +182,14 @@ public class EntityFrost extends EntityDivineRPGMob
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(VanillaItemsOther.iceShards, 5);
+            this.dropItem(IceikaItems.iceShards, 5);
         }
 
         var3 = this.rand.nextInt(2 + var2);
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            this.dropItem(VanillaItemsOther.iceStone, 1);
+            this.dropItem(IceikaItems.iceStone, 1);
         }
     }
 

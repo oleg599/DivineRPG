@@ -21,14 +21,12 @@ public class VanillaItemsOther {
     public static final Item bloodgem           = new ItemMod().setName("bloodgem");
 
     public static final Item jungleShards       = new ItemMod().setName("jungleShards");
-    public static final Item iceShards          = new ItemMod().setName("iceShards");
     public static final Item divineShards       = new ItemMod().setName("divineShards");
     public static final Item corruptedShards    = new ItemMod().setName("corruptedShards");
     public static final Item moltenShards       = new ItemMod().setName("moltenShards");
     public static final Item enderShard         = new ItemMod().setName("enderShards");
 
     public static final Item jungleStone        = new ItemMod().setName("jungleStone");
-    public static final Item iceStone           = new ItemMod().setName("iceStone");
     public static final Item divineStone        = new ItemMod().setName("divineStone");
     public static final Item corruptedStone     = new ItemMod().setName("corruptedStone");
     public static final Item moltenStone        = new ItemMod().setName("moltenStone");

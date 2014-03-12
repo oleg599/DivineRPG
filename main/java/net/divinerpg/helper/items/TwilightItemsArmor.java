@@ -6,7 +6,7 @@ import net.minecraft.item.Item;
 
 public class TwilightItemsArmor {
 	
-	public static final int  HEAD               = 0, BODY = 1, LEGS = 2, BOOTS = 3;
+	public static	    int  HEAD               = 0, BODY = 1, LEGS = 2, BOOTS = 3;
 	
 	public static final Item edenHelmet 		= new ItemDivineArmor(ArmorMaterialMod.Eden, HEAD, 0, 60D, true, "eden").setName("edenHelmet");
     public static final Item edenBody 			= new ItemDivineArmor(ArmorMaterialMod.Eden, BODY, 1, 60D, true, "eden").setName("edenBody");

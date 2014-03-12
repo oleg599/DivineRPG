@@ -1,9 +1,13 @@
 package net.divinerpg.helper.recipes;
 
 import net.divinerpg.helper.blocks.VanillaBlocks;
+import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.ItemsFood;
+import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsOther;
+import net.divinerpg.helper.items.VanillaItemsTools;
 import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -29,6 +33,19 @@ public class IS {
 		public static ItemStack vile = new ItemStack(VanillaItemsWeapons.vileStorm);
 		public static ItemStack longsword = new ItemStack(VanillaItemsWeapons.longsword);
 
+		//Tools
+		public static ItemStack arlemitePick = new ItemStack(VanillaItemsTools.arlemitePickaxe);
+		
+		//Armor
+		public static ItemStack realHead = new ItemStack(VanillaItemsArmor.realmiteHelmet);
+		public static ItemStack realBody = new ItemStack(VanillaItemsArmor.realmiteBody);
+		public static ItemStack realLegs = new ItemStack(VanillaItemsArmor.realmiteLegs);
+		public static ItemStack realFeet = new ItemStack(VanillaItemsArmor.realmiteBoots);
+		public static ItemStack edenHead = new ItemStack(TwilightItemsArmor.edenHelmet);
+		public static ItemStack edenBody = new ItemStack(TwilightItemsArmor.edenBody);
+		public static ItemStack edenLegs = new ItemStack(TwilightItemsArmor.edenLegs);
+		public static ItemStack edenFeet = new ItemStack(TwilightItemsArmor.edenBoots);
+
 		//Materials
 		public static ItemStack shadow = new ItemStack(VanillaItemsOther.shadowBar);
 		public static ItemStack netherChuck = new ItemStack(VanillaItemsOther.netheriteChunk);
@@ -39,7 +56,7 @@ public class IS {
 		public static ItemStack bloodgem = new ItemStack(VanillaItemsOther.bloodgem, 9);
 		public static ItemStack corruptStone = new ItemStack(VanillaItemsOther.corruptedStone);
 		public static ItemStack jungleStone = new ItemStack(VanillaItemsOther.jungleStone);
-		public static ItemStack iceStone = new ItemStack(VanillaItemsOther.iceStone);
+		public static ItemStack iceStone = new ItemStack(IceikaItems.iceStone);
 		public static ItemStack moltenStone = new ItemStack(VanillaItemsOther.moltenStone);
 		public static ItemStack divineStone = new ItemStack(VanillaItemsOther.divineStone);
 		public static ItemStack enderStone = new ItemStack(VanillaItemsOther.enderStone);
