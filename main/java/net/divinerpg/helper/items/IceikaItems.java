@@ -2,8 +2,10 @@ package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.ItemDivineArmor;
 import net.divinerpg.api.items.ItemMod;
+import net.divinerpg.api.items.ItemModDoor;
 import net.divinerpg.api.items.ItemModFood;
 import net.divinerpg.api.items.ItemModSword;
+import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.material.ArmorMaterialMod;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
@@ -49,5 +51,7 @@ public class IceikaItems {
 	
 	public static final Item iceShards          = new ItemMod().setName("iceShards");
 	public static final Item iceStone           = new ItemMod().setName("iceStone");
+	
+	public static final Item frozenDoorItem 	= new ItemModDoor(IceikaBlocks.frozenDoor).setName("frozenDoorItem");
  
 }

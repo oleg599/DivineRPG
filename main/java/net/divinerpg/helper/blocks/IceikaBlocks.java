@@ -11,6 +11,7 @@ import net.divinerpg.api.blocks.BlockModLeaves;
 import net.divinerpg.api.blocks.BlockModLight;
 import net.divinerpg.api.blocks.BlockModLog;
 import net.divinerpg.api.blocks.BlockModSpawner;
+import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.iceika.blocks.BlockCoalstoneFurnace;
 import net.divinerpg.iceika.blocks.IceikaBlock;
 import net.minecraft.block.Block;
@@ -44,7 +45,7 @@ public class IceikaBlocks {
 	public static final Block frostedGlass        = new BlockModGlass().setName("frostedGlass").setHardness(0.1F); //Windows for the workshops.
 	public static final Block workshopBookcase    = new BlockModBook().setName("workshopBookcase").setHardness(1.5F); //Bookcase for workshops.
 	public static final Block workshopLamp        = new BlockModLight(glass).setName("workshopLamp").setHardness(0.3F); //Lamps for workshops.
-	public static final Block steelDoor           = new BlockModDoor(glass).setName("steelDoor").setHardness(0.3F); //Doors for workshops.
+	public static final Block frozenDoor          = new BlockModDoor(rock, IceikaItems.frozenDoorItem, true).setName("frozenDoor").setHardness(0.3F); //Doors for workshops.
 	public static final Block coalstoneFurnace    = new BlockCoalstoneFurnace().setName("coalstoneFurnace"); //One in each workshop. Never runs out of fuel
 	
 

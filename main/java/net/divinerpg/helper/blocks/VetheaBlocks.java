@@ -11,6 +11,7 @@ import net.divinerpg.api.blocks.BlockModLeaves;
 import net.divinerpg.api.blocks.BlockModLog;
 import net.divinerpg.api.blocks.BlockModSpawner;
 import net.divinerpg.api.blocks.BlockModVine;
+import net.divinerpg.helper.items.VetheanItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.twilight.blocks.BlockBlueFire;
 import net.divinerpg.vethea.blocks.BlockAcid;
@@ -55,7 +56,7 @@ public class VetheaBlocks {
 	public static final Block             smoothGlass            = new BlockModGlass().setName("smoothGlass").setStepSound(Block.soundTypeGlass).setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             villageLamp            = new BlockMod(Material.glass).setName("villageLamp").setLightLevel(1.0F).setStepSound(Block.soundTypeGlass).setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             cellLamp               = new BlockMod(Material.glass).setName("cellLamp").setLightLevel(1.0F).setStepSound(Block.soundTypeGlass).setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
-	public static final Block             barredDoor             = new BlockModDoor(Material.iron).setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
+	public static final Block             barredDoor             = new BlockModDoor(Material.iron, VetheanItems.barredDoorItem, true).setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             firelight              = new BlockMod(Material.glass).setName("fireLight").setLightLevel(1.0F).setStepSound(Block.soundTypeGlass).setHardness(1F).setResistance(1.0F).setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             hyrewood               = new BlockModLog().setName("hyreWoodLog").setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             mintwoodLeaves         = new BlockModLeaves().setName("mintwoodLeaves").setHardness(1F).setCreativeTab(DivineRPGTabs.vethea);

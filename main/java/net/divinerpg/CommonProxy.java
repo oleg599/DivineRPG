@@ -48,7 +48,6 @@ public class CommonProxy{
 		MinecraftForge.EVENT_BUS.register(new EventBucketFill());
 		MinecraftForge.EVENT_BUS.register(new EventBonemeal());
 		MinecraftForge.EVENT_BUS.register(new EventDeath());
-		MinecraftForge.EVENT_BUS.register(new EventArmorFullSet());
 		System.out.println("[DIVINE RPG] REGISTERING TILE ENTITIES");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		System.out.println("[DIVINE RPG] ADDING CONFIGURATIONS");

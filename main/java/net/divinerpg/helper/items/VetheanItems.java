@@ -1,6 +1,8 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.ItemMod;
+import net.divinerpg.api.items.ItemModDoor;
+import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.vethea.items.ItemDisk;
 import net.divinerpg.vethea.items.ItemEvernight;
@@ -121,4 +123,6 @@ public class VetheanItems {
 	public static final Item dreamFlint 		 = new ItemMod().setName("dreamFlint").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Item moonClock 			 = new ItemMod().setName("moonClock").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Item dreamPowder 		 = new ItemMod().setName("dreamPowder").setCreativeTab(DivineRPGTabs.vethea);
+	
+	public static final Item barredDoorItem 	 = new ItemModDoor(VetheaBlocks.barredDoor).setName("barredDoorItem");
 }
