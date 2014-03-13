@@ -2,6 +2,7 @@ package net.divinerpg.api.items;
 
 import java.util.List;
 
+import net.divinerpg.Reference;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.Entity;
@@ -108,7 +109,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 	}
 
 	public Item setName(String name){
-		setTextureName(name);
+		setTextureName(Reference.PREFIX + name);
 		setUnlocalizedName(name);
 		GameRegistry.registerItem(this, name);
 		return this;
