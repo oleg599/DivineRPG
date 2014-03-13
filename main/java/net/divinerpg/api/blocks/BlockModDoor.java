@@ -32,15 +32,16 @@ public class BlockModDoor extends BlockMod {
     private Item pickItem;
     private boolean canOpenByHand;
     
-	public BlockModDoor(Material mat, Item pick, boolean canOpenByHand) {
+	public BlockModDoor(Material mat, Item pick, boolean hand) {
 		super(mat);
-		this.canOpenByHand = canOpenByHand;
+		canOpenByHand = hand;
 		pickItem = pick;
 		float f = 0.5F;
         float f1 = 1.0F;
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f1, 0.5F + f);
 	}
 
+	@Override
     public Block setName(String name) {
         this.name = name;
         setBlockName(name);
