@@ -130,6 +130,6 @@ public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackM
 
 	@Override
 	public String mobName() {
-		return "Wild Fire";
+		return "Wildfire";
 	}
 }

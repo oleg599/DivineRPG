@@ -39,8 +39,9 @@ public class EventArmorFullSet {
 			ItemStack stackBody = player.inventory.armorItemInSlot(2);
 			ItemStack stackHelmet = player.inventory.armorItemInSlot(3);
 
-			if(stackBoots != null)
+			if(stackBoots != null){
 				boots = stackBoots.getItem();
+				System.out.println(boots);}
 			else
 				boots = null;
 
@@ -107,9 +108,10 @@ public class EventArmorFullSet {
 
 			//Rupee -untested
 			if (boots == v.rupeeBoots && legs == v.rupeeLegs && body == v.rupeeBody && helmet == v.rupeeHelmet) {
-				if (s.equals(DamageSource.generic) || (s.damageType.equals("mob") && !s.isProjectile())) {
+				//if ((s.damageType.equals("mob")) && !s.isProjectile()) {
+					System.out.println("Owch");
 					e.ammount *= 0.2;
-				}
+				//}
 			}
 
 			//Santa
