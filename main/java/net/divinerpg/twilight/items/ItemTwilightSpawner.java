@@ -22,18 +22,15 @@ public class ItemTwilightSpawner extends ItemMod{
 	public ItemTwilightSpawner() {
 		setMaxStackSize(1);
 		this.setCreativeTab(DivineRPGTabs.spawner);
-		LangRegistry.addItem(this);
 	}
 	
 	@Override
-	public boolean onItemUse(ItemStack item, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10)
-	{
+	public boolean onItemUse(ItemStack item, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
 		int var4 = 0;
 		if(par3World.provider.dimensionId == x.Eden || par3World.provider.dimensionId == x.WildWoods || par3World.provider.dimensionId == x.Apalachia 
 				|| par3World.provider.dimensionId == x.Skythern || par3World.provider.dimensionId == x.Mortum){
 			if (!par3World.isRemote) {
 				while (var4 < 1) {//1 = amount of mobs spawning
-					
 					if(item.getItem() == TwilightItemsOther.spawnKarot){
 						EntityKarot var5 = new EntityKarot(par3World);
 						var5.setPosition(par4, par5+1, par6);

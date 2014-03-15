@@ -14,16 +14,13 @@ import net.minecraft.world.World;
 public class ItemTwilightClock extends ItemMod {
 
 	public ItemTwilightClock(){
-		super();
 		setCreativeTab(DivineRPGTabs.utility);
-		LangRegistry.addItem(this);
 	}
 
 	@Override
 	public boolean onItemUse(ItemStack var1, EntityPlayer var2, World var3, int var4, int var5, int var6, int var7, float var8, float var9, float var10) {
-		if (var7 != 1) {
+		if (var7 != 1) 
 			return false;
-		}
 		
 		else if (var2.canPlayerEdit(var4, var5, var6, var7, var1) && var2.canPlayerEdit(var4, var5 + 1, var6, var7, var1)) {
 			Block var11 = var3.getBlock(var4, var5, var6);

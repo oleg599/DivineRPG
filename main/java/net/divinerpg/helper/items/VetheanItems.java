@@ -124,5 +124,5 @@ public class VetheanItems {
 	public static final Item moonClock 			 = new ItemMod().setName("moonClock").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Item dreamPowder 		 = new ItemMod().setName("dreamPowder").setCreativeTab(DivineRPGTabs.vethea);
 	
-	public static final Item barredDoorItem 	 = new ItemModDoor(VetheaBlocks.barredDoor).setName("barredDoorItem");
+	public static final Item barredDoorItem 	 = new ItemModDoor(VetheaBlocks.barredDoor).setName("barredDoor").setCreativeTab(DivineRPGTabs.vethea);
 }

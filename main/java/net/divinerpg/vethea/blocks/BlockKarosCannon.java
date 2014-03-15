@@ -18,13 +18,12 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockKarosCannon extends BlockContainer {
 
-	private String name;
-
 	public static final IRegistry dispenseBehaviorRegistry = new RegistryDefaulted(new BehaviorDefaultDispenseItem());
 	private Random random = new Random();
 
 	public BlockKarosCannon(Material par3) {
 		super(par3);
+		setBlockUnbreakable();
 	}
 
 	public int tickRate(World w) {
@@ -98,42 +97,10 @@ public class BlockKarosCannon extends BlockContainer {
 	}
 
 	public Block setName(String name) {
-		this.name = name;
 		setTextureName(name);
 		setBlockName(name);
-		register();
-		return this;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public String getTextureName() {
-		return Reference.PREFIX + name;
-	}
-
-	public void register() {
-		int numChars = 0;
-		char firstLetter = name.charAt(0);
-		if (Character.isLowerCase(firstLetter))
-			firstLetter = Character.toUpperCase(firstLetter);
-		String inGame = name.substring(1);
-		for (int k = 0; k < name.length(); k++) {
-			char c = name.charAt(k);
-			int code = (int) c;
-
-			if (k != 0) {
-				for (int p = 65; p < 90; p++) {
-					if (code == p) {
-						numChars++;
-						if (numChars == 1) inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-						else inGame = new StringBuffer(inGame).insert(k, " ").toString();
-					}
-				}
-			}
-		}
 		GameRegistry.registerBlock(this, name);
+		return this;
 	}
 
 	@Override

@@ -18,60 +18,45 @@ public class ItemHordeHorn extends ItemMod {
 	private int spawnTick;
 
     public ItemHordeHorn() {
-        super();
         this.maxStackSize = 1;
         this.spawnTick = 600;
         this.setCreativeTab(DivineRPGTabs.spawner);
     }
 
-    public boolean onItemUse(ItemStack var1, EntityPlayer var2, World var3, int var4, int var5, int var6, int var7, float var8, float var9, float var10)
-    {
-        if (var3.isRemote)
-        {
+    public boolean onItemUse(ItemStack var1, EntityPlayer var2, World var3, int var4, int var5, int var6, int var7, float var8, float var9, float var10) {
+        if (var3.isRemote) {
             return true;
-        }
-        else
-        {
+        } else {
             var4 += Facing.offsetsXForSide[var7];
             var5 += Facing.offsetsYForSide[var7];
             var6 += Facing.offsetsZForSide[var7];
             
-            if (var3.provider.dimensionId == 1)
-    		{
-    			if (this.spawnTick == 600)
-    			{
+            if (var3.provider.dimensionId == 1) {
+    			if (this.spawnTick == 600) {
     				//var3.playSoundAtEntity(var2, Sounds.AyeracoSpawn, 20.0F, 1.0F);
     				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "The Green Ayeraco had been called upon!"));
     			}
-    			else if (this.spawnTick == 430)
-    			{
+    			else if (this.spawnTick == 430) {
     				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The Blue Ayeraco has been called upon!"));
     			}
-    			else if (this.spawnTick == 280)
-    			{
+    			else if (this.spawnTick == 280) {
     				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.RED, "The Red Ayeraco has been called upon!"));
     			}
-    			else if (this.spawnTick == 210)
-    			{
+    			else if (this.spawnTick == 210) {
     				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "The Yellow Ayeraco has been called upon!"));
     			}
-    			else if (this.spawnTick == 145)
-    			{
+    			else if (this.spawnTick == 145) {
     				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "The Purple Ayeraco has been called upon!"));
     			}
-    			else if (this.spawnTick == 0)
-    			{
-    				if (this.spawnCreature(var3, var2, var4, var5, var6))
-    				{
+    			else if (this.spawnTick == 0) {
+    				if (this.spawnCreature(var3, var2, var4, var5, var6)) {
     					var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "The Ayeraco Horde has arrived!"));
     					var2.inventory.consumeInventoryItem(this);
     		            return true;
     				}
     			}
     			this.spawnTick -= 5;
-    		}
-    		else
-    		{
+    		} else {
     	        var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "The Ayeraco Horde can only be spawned in the End"));
     		}
             
@@ -79,8 +64,7 @@ public class ItemHordeHorn extends ItemMod {
         }
     }
 	
-    public boolean spawnCreature(World par1, EntityPlayer par2, double par3, double par4, double par5)
-    {
+    public boolean spawnCreature(World par1, EntityPlayer par2, double par3, double par4, double par5) {
     	EntityAyeracoBlue var1 = new EntityAyeracoBlue(par1);
     	EntityAyeracoGreen var2 = new EntityAyeracoGreen(par1);
     	EntityAyeracoRed var3 = new EntityAyeracoRed(par1);

@@ -12,9 +12,9 @@ public class VetheanBlock extends BlockMod {
 
 	public VetheanBlock(Material m) {
 		super(m);
-		LangRegistry.addBlock(this);
 		setCreativeTab(DivineRPGTabs.vethea);
 		setSoundType(rock);
+		setHardness(1F);
 	}
 
 	public Block setSoundType(Block.SoundType name) {

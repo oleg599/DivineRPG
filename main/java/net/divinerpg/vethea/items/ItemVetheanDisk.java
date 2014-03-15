@@ -16,7 +16,6 @@ public class ItemVetheanDisk extends ItemMod {
     public int damage;
     
     public ItemVetheanDisk(int par1) {
-		super();
 		this.maxStackSize = 1;
         this.damage = par1;
         this.setCreativeTab(DivineRPGTabs.vethea);

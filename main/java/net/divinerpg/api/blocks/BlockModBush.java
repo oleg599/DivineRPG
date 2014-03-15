@@ -42,7 +42,6 @@ public class BlockModBush extends BlockMod implements IShearable {
 	@Override
 	public void onBlockDestroyedByPlayer(World w, int x, int y, int z, int meta) {
 		if(this == IceikaBlocks.winterberryBushRipe) {
-			//TODO: Make this only work in survival
 			w.setBlock(x, y, z, IceikaBlocks.winterberryBush);
 		}
 	}
@@ -68,15 +67,24 @@ public class BlockModBush extends BlockMod implements IShearable {
 		return false;
 	}
 	
+	private String name;
+	@Override
+	public Block setName(String name) {
+		super.setName(name);
+		this.name = name;
+		return this;
+	}
+	
 	//This only checks graphic on start up
 	@Override
 	public String getTextureName() {
 		if (Minecraft.getMinecraft().gameSettings.fancyGraphics) {
 			return Reference.PREFIX + name;
-		} else {
+		}
+		else {
 			return Reference.PREFIX + name + "_fast";
 		}  
-    }
+	}
 	
 	public Item getItemDropped(int par1, Random par2Random, int par3) {
 		if (this == IceikaBlocks.winterberryBushRipe) {

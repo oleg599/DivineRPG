@@ -22,11 +22,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemThrowable extends ItemMod {
 
-	private String name;
-	private int    damage;
+	private int damage;
 
 	public ItemThrowable(int damage) {
-		super();
 		this.damage = damage;
 		setCreativeTab(DivineRPGTabs.ranged);
 	}
@@ -74,13 +72,11 @@ public class ItemThrowable extends ItemMod {
 		return var1;
 	}
 
-
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
-	{
+	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 		par3List.add(damage + " Ranged Damage");
-		if(var1.getItem() == VanillaItemsWeapons.vileStorm){
+		if(var1.getItem() == VanillaItemsWeapons.vileStorm) {
 			par3List.add("Poison Damage");
 		}
 	}

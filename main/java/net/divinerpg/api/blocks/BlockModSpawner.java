@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -23,6 +24,7 @@ public class BlockModSpawner extends BlockContainer {
 		this.mobName = mobName;
 		this.setBlockName(mobName);
 		this.setCreativeTab(DivineRPGTabs.spawner);
+		LangRegistry.addBlock(this);
 		isV = isVethean;
 	}
 
@@ -61,11 +63,11 @@ public class BlockModSpawner extends BlockContainer {
 
 	public Block setName(String name){
 		this.name = name;
-		if(isV){
+		if(isV)
 			setTextureName("fireCrystal");
-		}else{
+		else
 			setTextureName("frozenDungenSpawner");
-		}
+		
 		GameRegistry.registerBlock(this, name);
 		setBlockName(name);
 		return this;
@@ -73,9 +75,5 @@ public class BlockModSpawner extends BlockContainer {
 
 	public String getName(){
 		return name;
-	}
-
-	public String getTextureName(){
-		return Reference.PREFIX + name;
 	}
 }

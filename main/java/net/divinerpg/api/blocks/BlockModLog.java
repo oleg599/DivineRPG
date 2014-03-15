@@ -20,7 +20,6 @@ public class BlockModLog extends BlockRotatedPillar{
 	
 	private IIcon top;
 	private IIcon side;
-	private String name;
     protected IIcon[] sideChange;
     protected IIcon[] topChange;
     
@@ -52,45 +51,10 @@ public class BlockModLog extends BlockRotatedPillar{
     }
     
     public Block setName(String name){
-        this.name = name;
         setBlockTextureName(Reference.PREFIX + name);
         setBlockName(name);
-        register();
-        return this;
-    }
-    
-    public String getName(){
-        return name;
-    }
-    
-    public String getTextureName(){
-        return Reference.PREFIX + name;
-    }
-    
-    public void register(){
-        int numChars = 0;
-        char firstLetter = name.charAt(0);
-        if(Character.isLowerCase(firstLetter))
-            firstLetter = Character.toUpperCase(firstLetter);
-        String inGame = name.substring(1);
-        for(int k = 0; k < name.length(); k++){
-            char c = name.charAt(k);
-            int code = (int) c;
-            
-            if(k != 0){
-                for(int p = 65; p < 90; p++){
-                    if(code == p){
-                        numChars++;
-                        if(numChars == 1)
-                            inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-                        else
-                            inGame = new StringBuffer(inGame).insert(k, " ").toString();
-                    }
-                }
-            }
-        }
-        String finalName = firstLetter + inGame;
         GameRegistry.registerBlock(this, name);
+        return this;
     }
 
     public int func_149745_a(Random par1)

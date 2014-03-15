@@ -7,6 +7,7 @@ import java.util.Random;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
 import net.minecraft.block.material.MapColor;
@@ -41,6 +42,7 @@ public class BlockBlueFire extends BlockFire {
         this.setTickRandomly(true);
         setLightLevel(1.0F);
         setCreativeTab(DivineRPGTabs.blocks);//For bug testing
+        LangRegistry.addBlock(this);
     }
 
     public static void func_149843_e() {

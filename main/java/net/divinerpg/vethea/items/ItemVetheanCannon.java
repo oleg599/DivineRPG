@@ -13,12 +13,10 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemVetheanCannon extends ItemMod
-{
+public class ItemVetheanCannon extends ItemMod {
     protected int damage;
 
     public ItemVetheanCannon(int dam) {
-        super();
         this.maxStackSize = 1;
         this.setMaxDamage(-1);
         this.damage = dam;
@@ -26,8 +24,7 @@ public class ItemVetheanCannon extends ItemMod
     }
 
     @Override
-    public ItemStack onItemRightClick(ItemStack par1, World par2, EntityPlayer par3)
-    {
+    public ItemStack onItemRightClick(ItemStack par1, World par2, EntityPlayer par3) {
         if (!par2.isRemote && par3.capabilities.isCreativeMode || par3.inventory.hasItem(VetheanItems.acid)) {
             //par2.playSoundAtEntity(par3, Sounds.Blitz, 1.0F, 1.0F);
             par2.spawnEntityInWorld(new EntityVetheanCannonShot(par2, par3, this.damage));
@@ -37,8 +34,7 @@ public class ItemVetheanCannon extends ItemMod
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
-    {
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
         par3List.add(damage + " Ranged Damage");
         par3List.add("Ammo: Acidfire");
         par3List.add(DivineAPI.GREEN + "Vethean");

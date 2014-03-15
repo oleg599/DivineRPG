@@ -7,8 +7,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemVetheanHealingFood extends ItemVetheanFood
-{
+public class ItemVetheanHealingFood extends ItemVetheanFood {
 
     private int healthGain;
 
@@ -19,22 +18,19 @@ public class ItemVetheanHealingFood extends ItemVetheanFood
     }
 
     @Override
-    public int getMaxItemUseDuration(ItemStack var1)
-    {
+    public int getMaxItemUseDuration(ItemStack var1) {
         return 16;
     }
 
     @Override
     public void onFoodEaten(ItemStack par1ItemStack, World par2World, EntityPlayer player) {
-    	if (player.getHealth() < player.getMaxHealth())
-        {
+    	if (player.getHealth() < player.getMaxHealth()) {
     		player.heal(healthGain);
         }
     }
 
     @Override
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
-    {
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
         par3List.add("Replenishes " + this.healthGain + " Health");
         par3List.add(saturation + " Saturation");
         par3List.add("Pet Food: False");

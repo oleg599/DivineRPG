@@ -8,13 +8,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.world.World;
 
-public class BlockKarosHeatTile extends BlockMod
-{
+public class BlockKarosHeatTile extends BlockMod {
     private final boolean powered;
     public boolean override;
 
-    public BlockKarosHeatTile(boolean var2)
-    {
+    public BlockKarosHeatTile(boolean var2) {
         super(Material.glass);
         this.powered = var2;
         this.override = false;
@@ -23,11 +21,7 @@ public class BlockKarosHeatTile extends BlockMod
         }
     }
 
-    /**
-     * Called whenever the block is added into the world. Args: world, x, y, z
-     */
-    public void onBlockAdded(World var1, int var2, int var3, int var4)
-    {
+    public void onBlockAdded(World var1, int var2, int var3, int var4) {
     	
     	if (this == VetheaBlocks.karosHeatTileGreen) {
     	if (!var1.isRemote && !this.override)

@@ -17,7 +17,6 @@ public class BlockAcceleron extends BlockMod{
 	
 	public BlockAcceleron() {
 		super(Material.rock);
-		LangRegistry.addBlock(this);
 		setCreativeTab(DivineRPGTabs.blocks);
 		slipperiness = 4.0F;
 	}

@@ -15,10 +15,9 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockAcid extends BlockMod
-{
-    public BlockAcid()
-    {
+public class BlockAcid extends BlockMod {
+	
+    public BlockAcid() {
         super(Material.snow);
         this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
         this.setTickRandomly(true);

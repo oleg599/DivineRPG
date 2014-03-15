@@ -39,6 +39,7 @@ public class BlockModDoor extends BlockMod {
 		float f = 0.5F;
         float f1 = 1.0F;
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f1, 0.5F + f);
+        setCreativeTab(null);
 	}
 
 	@Override

@@ -12,12 +12,9 @@ import net.minecraft.world.World;
 
 public class ItemVanillaSpawner extends ItemMod{
 
-	public ItemVanillaSpawner()
-	{
-		super();
+	public ItemVanillaSpawner() {
 		setMaxStackSize(1);
 		setCreativeTab(DivineRPGTabs.spawner);
-		LangRegistry.addItem(this);
 	}
 
 	@Override
@@ -27,8 +24,7 @@ public class ItemVanillaSpawner extends ItemMod{
 			if(par3World.provider.dimensionId == -1){
 				
 				if(par1ItemStack.getItem() == VanillaItemsOther.callWatcher){
-					while(var4 < 1)//1 gets the amount of mobs to spawn at once
-					{
+					while(var4 < 1) {
 						EntityNetherWatcher var5 = new EntityNetherWatcher(par3World);
 						var5.setPosition(par4, par5 +1, par6);
 						par3World.spawnEntityInWorld(var5);

@@ -12,7 +12,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemVetheanSword extends ItemModSword {
 	
-	ToolMaterial tool;
+	protected ToolMaterial tool;
     public ItemVetheanSword(ToolMaterial var2){
         super(var2);
         this.setMaxDamage(-1);

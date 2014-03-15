@@ -23,8 +23,8 @@ public class ItemTwilightBlitz extends ItemMod {
 	private String sound;
 	private int damage;
 	private String ammoType;
-	public ItemTwilightBlitz(int damage, String ammoType)
-	{
+	
+	public ItemTwilightBlitz(int damage, String ammoType) {
 		super();
 		this.maxStackSize = 1;
 		sound = "";
@@ -32,23 +32,16 @@ public class ItemTwilightBlitz extends ItemMod {
 		this.setCreativeTab(DivineRPGTabs.ranged);
 		this.damage = damage;
 		this.ammoType = ammoType;
-		LangRegistry.addItem(this);
 	}
 
-	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3)
-	{
+	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3) {
 		boolean var4 = var3.capabilities.isCreativeMode;
 
-		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.wildWoodDust))
-		{
+		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.wildWoodDust)) {
 			return var1;
-		}
-		else
-		{
-			if(var1.getItem() == TwilightItemsWeapons.wildWoodBlitz)
-			{
-				if(!var2.isRemote)
-				{
+		} else {
+			if(var1.getItem() == TwilightItemsWeapons.wildWoodBlitz) {
+				if(!var2.isRemote) {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzWildWood(var2, var3));
 				}
@@ -56,26 +49,19 @@ public class ItemTwilightBlitz extends ItemMod {
 			}
 		}
 
-		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.mortumDust))
-		{
+		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.mortumDust)) {
 			return var1;
-		}
-		else
-		{
-			if(var1.getItem() == TwilightItemsWeapons.haliteBlitz)
-			{
-				if(!var2.isRemote)
-				{
+		} else {
+			if(var1.getItem() == TwilightItemsWeapons.haliteBlitz) {
+				if(!var2.isRemote) {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzHalite(var2, var3));
 				}
 				var3.inventory.consumeInventoryItem(TwilightItemsOther.mortumDust);
 			}
 
-			if(var1.getItem() == TwilightItemsWeapons.mortumBlitz)
-			{
-				if(!var2.isRemote)
-				{
+			if(var1.getItem() == TwilightItemsWeapons.mortumBlitz) {
+				if(!var2.isRemote) {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzMortum(var2, var3));
 				}
@@ -83,16 +69,11 @@ public class ItemTwilightBlitz extends ItemMod {
 			}
 		}
 
-		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.apalachiaDust))
-		{
+		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.apalachiaDust)) {
 			return var1;
-		}
-		else
-		{
-			if(var1.getItem() == TwilightItemsWeapons.apalachiaBlitz)
-			{
-				if(!var2.isRemote)
-				{
+		} else {
+			if(var1.getItem() == TwilightItemsWeapons.apalachiaBlitz) {
+				if(!var2.isRemote) {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzAlapachia(var2, var3));
 				}
@@ -100,16 +81,11 @@ public class ItemTwilightBlitz extends ItemMod {
 			}
 		}
 
-		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.skythernDust))
-		{
+		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.skythernDust)){
 			return var1;
-		}
-		else
-		{
-			if(var1.getItem() == TwilightItemsWeapons.skythernBlitz)
-			{
-				if(!var2.isRemote)
-				{
+		} else {
+			if(var1.getItem() == TwilightItemsWeapons.skythernBlitz) {
+				if(!var2.isRemote) {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzSkythern(var2, var3));
 				}
@@ -117,16 +93,11 @@ public class ItemTwilightBlitz extends ItemMod {
 			}
 		}
 
-		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.edenDust))
-		{
+		if (!var4 && !var3.inventory.hasItem(TwilightItemsOther.edenDust)) {
 			return var1;
-		}
-		else
-		{
-			if(var1.getItem() == TwilightItemsWeapons.edenBlitz)
-			{
-				if(!var2.isRemote)
-				{
+		} else {
+			if(var1.getItem() == TwilightItemsWeapons.edenBlitz) {
+				if(!var2.isRemote) {
 					var2.playSoundAtEntity(var3, sound, 1.0F, 1.0F);
 					var2.spawnEntityInWorld(new EntityBlitzEden(var2, var3));
 				}
@@ -139,8 +110,7 @@ public class ItemTwilightBlitz extends ItemMod {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
-	{
+	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 	    par3List.add(damage + " Ranged Damage");
 	    par3List.add("Ammo: " + ammoType);
 		par3List.add("Infinite Uses");

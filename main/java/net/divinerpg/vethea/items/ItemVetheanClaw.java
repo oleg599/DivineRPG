@@ -5,9 +5,7 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-
-public class ItemVetheanClaw extends ItemVetheanHammerSword
-{
+public class ItemVetheanClaw extends ItemVetheanHammerSword {
 
     public ItemVetheanClaw(int dam) {
         super(dam);

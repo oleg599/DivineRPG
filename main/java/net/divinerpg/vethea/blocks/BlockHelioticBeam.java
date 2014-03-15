@@ -8,22 +8,15 @@ import net.minecraft.block.material.Material;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockHelioticBeam extends BlockMod
-{
+public class BlockHelioticBeam extends BlockMod {
 
     public BlockHelioticBeam() {
         super(Material.rock);
+        setHardness(1F);
     }
 
     @Override
-    public int getRenderType()
-    {
-        return 31;
-    }
-
-    @Override
-    public int quantityDropped(Random par1Random)
-    {
+    public int quantityDropped(Random par1Random) {
         return 0;
     }
 

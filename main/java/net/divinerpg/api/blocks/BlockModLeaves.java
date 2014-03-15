@@ -192,6 +192,14 @@ public class BlockModLeaves extends BlockMod implements IShearable
 		return false;
 	}
 	
+	private String name;
+	@Override
+	public Block setName(String name) {
+		super.setName(name);
+		this.name = name;
+		return this;
+	}
+	
 	//This only checks graphic on start up
 	@Override
 	public String getTextureName() {
@@ -202,7 +210,7 @@ public class BlockModLeaves extends BlockMod implements IShearable
 			return Reference.PREFIX + name + "_fast";
 		}  
 	}
-		
+	
 	@Override
 	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_) {
 		return null;
