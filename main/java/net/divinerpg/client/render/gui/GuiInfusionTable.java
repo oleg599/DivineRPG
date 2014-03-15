@@ -22,8 +22,7 @@ public class GuiInfusionTable extends GuiContainer {
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3) 
-	{
+	protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3)  {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         mc.getTextureManager().bindTexture(texture);
         int var5 = (this.width - this.xSize) / 2;
@@ -38,7 +37,7 @@ public class GuiInfusionTable extends GuiContainer {
 		item = TeInfusionTable.getStackInSlot(2);
 		if(item != null) {
 			s = item.getDisplayName();
-			this.drawString(fontRendererObj, s, width / 2 - 20, 62, Color.blue.getRGB());
+			drawString(fontRendererObj, s, this.width / 2 - 50, height / 2 - 65, Color.blue.getRGB());
 		}		
 	}
     

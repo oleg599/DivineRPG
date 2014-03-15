@@ -16,7 +16,7 @@ public class ContainerInfusionTable extends Container {
 		this.tileentity = tile_entity;
 		addSlotToContainer(new Slot(tile_entity, 0, 18, 39));
 		addSlotToContainer(new Slot(tile_entity, 1, 18, 59));
-		slot = addSlotToContainer(new SlotFurnace(player_inventory.player, tile_entity, 2, 62, 49));
+		slot = addSlotToContainer(new SlotFurnace(player_inventory.player, tile_entity, 2, 63, 49));
 		bindPlayerInventory(player_inventory);
 	}
 
