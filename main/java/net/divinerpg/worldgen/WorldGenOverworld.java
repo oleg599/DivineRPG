@@ -28,21 +28,24 @@ public class WorldGenOverworld implements IWorldGenerator{
 	private void generateOverworld(World world, Random random, int x, int z) {
 		addOreSpawn(VanillaBlocks.realmiteOre, world, random, x, z, 16, 16, 5, 4, 1, 25);
 		addOreSpawn(VanillaBlocks.arlemiteOre, world, random, x, z, 16, 16, 2, 3, 1, 15);
-		addOreSpawn(VanillaBlocks.arlemiteOre, world, random, x, z, 16, 16, 2, 3, 1, 15);
-
-		if(world.provider.dimensionId != -1){
+		addOreSpawn(VanillaBlocks.rupeeOre,    world, random, x, z, 16, 16, 2, 3, 1, 15);
+		addOreSpawn(Blocks.diamond_ore, 	   world, random, x, z, 16, 16, 2, 6, 1, 23);
+		
+		if(world.provider.dimensionId == 0){
 			if(random.nextInt(8) == 0) {
 				int posX = x + random.nextInt(16) + 8;
 				int posY = random.nextInt(150);
 				int posZ = z + random.nextInt(16) + 8;
-				new WorldGenLakes(VanillaBlocks.tar).generate(world, random, posX, posY, posZ);
+				if(random.nextInt(10) == 0 || posY < 60){
+					(new WorldGenLakes(VanillaBlocks.tar)).generate(world, random, posX, posY, posZ);
+				}
 			}
 		}
 	}
 
 	private void generateNether(World world, Random random, int x, int z) {
 		addNetherOreSpawn(VanillaBlocks.netheriteOre, world, random, x, z, 16, 16, 10, 4, 1, 128);
-		addNetherOreSpawn(VanillaBlocks.bloodgemOre, world, random, x, z, 16, 16, 11, 5, 1, 128);
+		addNetherOreSpawn(VanillaBlocks.bloodgemOre,  world, random, x, z, 16, 16, 11, 5, 1, 128);
 
 		if(world.provider.dimensionId == -1){
 			for (int i = 0; i < 2; ++i) {
