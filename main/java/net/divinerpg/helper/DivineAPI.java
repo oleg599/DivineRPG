@@ -12,11 +12,13 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
 import net.minecraftforge.fluids.FluidRegistry;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -44,6 +46,14 @@ public class DivineAPI {
 	public static void addBucket(Fluid fluid, ItemStack modBucket){
 		FluidContainerRegistry.registerFluidContainer(new FluidContainerData(FluidRegistry.getFluidStack(fluid.getName(), FluidContainerRegistry.BUCKET_VOLUME), modBucket, new ItemStack(Items.bucket)));
 	}
+	
+	public static void addEventBus(Object o){
+		MinecraftForge.EVENT_BUS.register(o);
+	}
+	
+	public static void addSpecialEventBus(Object o){
+		FMLCommonHandler.instance().bus().register(o);
+	}
 
 	public static void addShapelessRecipe(ItemStack i, Object ... o) {
 		GameRegistry.addShapelessRecipe(i, o);
@@ -58,7 +68,7 @@ public class DivineAPI {
 	}
 
 	public static void registerDivineRPGMob(Class entityClass, String entityName) {
-		int entityID = getUniqueID();
+		int entityID = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, entityID);
 		LanguageRegistry.instance().addStringLocalization("entity." + entityName + ".name", entityName);
 		EntityList.IDtoClassMapping.put(entityID, entityClass);
@@ -66,17 +76,9 @@ public class DivineAPI {
 	}
 
 	public static void registerProjectile(Class entityClass, String entityName) {
-		int ID = getProjectileID(); 
+		int ID = EntityRegistry.findGlobalUniqueEntityId(); 
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, ID);
 		EntityRegistry.registerModEntity(entityClass, entityName, ID, DivineRPG.instance, 250, 5, true);
-	}
-
-	private static int getUniqueID() {
-		return EntityRegistry.findGlobalUniqueEntityId();
-	}
-
-	private static int getProjectileID() {
-		return EntityRegistry.findGlobalUniqueEntityId();
 	}
 	
 	public static ArmorMaterial addArmorMaterial(String name, int durability, int[] oldArmor, int enchantability) {

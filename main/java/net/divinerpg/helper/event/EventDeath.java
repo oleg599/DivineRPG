@@ -38,7 +38,7 @@ public class EventDeath {
 
 	@SubscribeEvent
 	public void onMobDeath(LivingDeathEvent e){
-		String player = Minecraft.getMinecraft().thePlayer.getDisplayName();
+		String player = ((EntityPlayer)e.entity).getDisplayName();
 		if(ConfigurationHelper.canShowDeathChat){
 			if(e.source.getSourceOfDamage() instanceof EntityPlayer){
 				if(e.entity instanceof EntityCreeper){

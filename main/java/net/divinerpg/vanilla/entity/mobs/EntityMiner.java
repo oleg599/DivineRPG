@@ -1,7 +1,10 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import java.util.Calendar;
+
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.minecraft.entity.EnumCreatureAttribute;
+import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -50,6 +53,20 @@ public class EntityMiner extends EntityDivineRPGMob
     {
         return defaultHeldItem;
     }
+    
+    protected void addRandomArmor() {
+		super.addRandomArmor();
+		this.setCurrentItemOrArmor(0, defaultHeldItem);
+	}
+
+	public IEntityLivingData onSpawnWithEgg(IEntityLivingData par1EntityLivingData) {
+		par1EntityLivingData = super.onSpawnWithEgg(par1EntityLivingData);
+
+		if (this.getRNG().nextInt(5) > 0) {
+			this.setCurrentItemOrArmor(0, defaultHeldItem);
+		}
+		return par1EntityLivingData;
+	}
 
     protected Item getDropItem()
     {

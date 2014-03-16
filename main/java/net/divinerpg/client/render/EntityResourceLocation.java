@@ -21,7 +21,7 @@ public class EntityResourceLocation {
     public static ResourceLocation whale             = new ResourceLocation(PREFIX + "whale.png");
     public static ResourceLocation enderSpider       = new ResourceLocation(PREFIX + "enderSpider.png");
     public static ResourceLocation enderTriplets     = new ResourceLocation(PREFIX + "enderTriplets.png");
-
+    public static ResourceLocation miner 			 = new ResourceLocation(PREFIX + "miner.png");
     public static ResourceLocation aridWarrior       = new ResourceLocation(PREFIX + "aridWarrior.png");
     public static ResourceLocation ayeraco_Blue      = new ResourceLocation(PREFIX + "ayeracoBlue.png");
     public static ResourceLocation ayeraco_Green     = new ResourceLocation(PREFIX + "ayeracoGreen.png");

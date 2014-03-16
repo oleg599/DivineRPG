@@ -4,6 +4,7 @@ import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.vethea.entity.EntityTwins;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityClientPlayerMP;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;

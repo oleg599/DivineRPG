@@ -1,4 +1,4 @@
-package net.divinerpg.vanilla.entity.mobs.models;
+package net.divinerpg.vanilla.entity.mobs.render.models;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

@@ -27,6 +27,7 @@ import net.divinerpg.vanilla.entity.mobs.EntityIceMan;
 import net.divinerpg.vanilla.entity.mobs.EntityJungleDramcryx;
 import net.divinerpg.vanilla.entity.mobs.EntityKingCrab;
 import net.divinerpg.vanilla.entity.mobs.EntityKingOfScorchers;
+import net.divinerpg.vanilla.entity.mobs.EntityMiner;
 import net.divinerpg.vanilla.entity.mobs.EntityNetherWatcher;
 import net.divinerpg.vanilla.entity.mobs.EntityRainbour;
 import net.divinerpg.vanilla.entity.mobs.EntityRotatick;
@@ -35,24 +36,25 @@ import net.divinerpg.vanilla.entity.mobs.EntityShark;
 import net.divinerpg.vanilla.entity.mobs.EntityTheEye;
 import net.divinerpg.vanilla.entity.mobs.EntityWhale;
 import net.divinerpg.vanilla.entity.mobs.EntityWildFire;
-import net.divinerpg.vanilla.entity.mobs.models.ModelAncientEntity;
-import net.divinerpg.vanilla.entity.mobs.models.ModelAridWarrior;
-import net.divinerpg.vanilla.entity.mobs.models.ModelAyeraco;
-import net.divinerpg.vanilla.entity.mobs.models.ModelCrab;
-import net.divinerpg.vanilla.entity.mobs.models.ModelCrawler;
-import net.divinerpg.vanilla.entity.mobs.models.ModelDramcryx;
-import net.divinerpg.vanilla.entity.mobs.models.ModelEnderTriplets;
-import net.divinerpg.vanilla.entity.mobs.models.ModelEye;
-import net.divinerpg.vanilla.entity.mobs.models.ModelFrost;
-import net.divinerpg.vanilla.entity.mobs.models.ModelGlacon;
-import net.divinerpg.vanilla.entity.mobs.models.ModelKingScorcher;
-import net.divinerpg.vanilla.entity.mobs.models.ModelRainbour;
-import net.divinerpg.vanilla.entity.mobs.models.ModelRotatick;
-import net.divinerpg.vanilla.entity.mobs.models.ModelScorcher;
-import net.divinerpg.vanilla.entity.mobs.models.ModelShark;
-import net.divinerpg.vanilla.entity.mobs.models.ModelWatcher;
-import net.divinerpg.vanilla.entity.mobs.models.ModelWhale;
-import net.divinerpg.vanilla.entity.mobs.models.ModelWildFire;
+import net.divinerpg.vanilla.entity.mobs.render.RenderMiner;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelAncientEntity;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelAridWarrior;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelAyeraco;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelCrab;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelCrawler;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelDramcryx;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelEnderTriplets;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelEye;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelFrost;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelGlacon;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelKingScorcher;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelRainbour;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelRotatick;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelScorcher;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelShark;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelWatcher;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelWhale;
+import net.divinerpg.vanilla.entity.mobs.render.models.ModelWildFire;
 import net.divinerpg.vanilla.entity.projectiles.EntityShuriken;
 import net.divinerpg.vanilla.entity.projectiles.EntityVileStorm;
 import net.minecraft.client.model.ModelBiped;
@@ -94,7 +96,8 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityNetherWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.netherWatcher));
 		RenderingRegistry.registerEntityRenderingHandler(EntityWildFire.class, new RenderDivineMob(new ModelWildFire(), 0.0F, EntityResourceLocation.wildFire));
 		RenderingRegistry.registerEntityRenderingHandler(EntityGlacon.class, new RenderDivineMob(new ModelGlacon(), 0.0F, EntityResourceLocation.glacon));
-		
+		RenderingRegistry.registerEntityRenderingHandler(EntityMiner.class, new RenderMiner());
+
 		//RenderingRegistry.getItemRenderer(item, type)
 	}
 }

@@ -44,11 +44,10 @@ public class CommonProxy{
 	//ClientProxy
 	public void preInit(FMLPreInitializationEvent event){
 		System.out.println("[DIVINE RPG] ADDING EVENTS");
-		MinecraftForge.EVENT_BUS.register(new EventClientLogin());
-		MinecraftForge.EVENT_BUS.register(new EventOverlay());
-		MinecraftForge.EVENT_BUS.register(new EventBucketFill());
-		MinecraftForge.EVENT_BUS.register(new EventBonemeal());
-		MinecraftForge.EVENT_BUS.register(new EventDeath());
+		DivineAPI.addEventBus(new EventClientLogin());
+		DivineAPI.addEventBus(new EventOverlay());
+		DivineAPI.addEventBus(new EventBucketFill());
+		DivineAPI.addEventBus(new EventBonemeal());
 		System.out.println("[DIVINE RPG] REGISTERING TILE ENTITIES");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		GameRegistry.registerTileEntity(TileEntityInfusionTable.class, "Infusion Table");
@@ -84,7 +83,8 @@ public class CommonProxy{
 		int wut = 10;//What the hell does the int even do?
 		System.out.println("[DIVINER PG] ADDING WORLD GENERATIONS");
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
-		FMLCommonHandler.instance().bus().register(new EventArmorFullSet());
+		DivineAPI.addSpecialEventBus(new EventArmorFullSet());
+		DivineAPI.addSpecialEventBus(new EventDeath());
 	}
 	
 	public void postInit(FMLPostInitializationEvent event){
