@@ -3,11 +3,13 @@ package net.divinerpg.twilight.blocks;
 import java.util.Random;
 
 import net.divinerpg.Reference;
+import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.fx.EntityWildWoodPortalFX;
+import net.divinerpg.twilight.gen.wildwoods.TeleporterWildWoods;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
@@ -38,11 +40,11 @@ public class BlockWildwoodPortal extends BlockBreakable
 		setCreativeTab(DivineRPGTabs.blocks);
 	}
 
-    @Override
-    public Item getItem(World par1World, int par2, int par3, int par4) {
-        return Item.getItemFromBlock(this);
-    }
-	
+	@Override
+	public Item getItem(World par1World, int par2, int par3, int par4) {
+		return Item.getItemFromBlock(this);
+	}
+
 	/**
 	 * Ticks the block if it's been scheduled
 	 */
@@ -72,27 +74,15 @@ public class BlockWildwoodPortal extends BlockBreakable
 	}
 
 	@Override
-    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
-    {
-        if ((par5Entity.ridingEntity == null) && (par5Entity.riddenByEntity == null) && ((par5Entity instanceof EntityPlayerMP)))
-        {
-            EntityPlayerMP thePlayer = (EntityPlayerMP)par5Entity;
-            if (thePlayer.timeUntilPortal > 0)
-            {
-                thePlayer.timeUntilPortal = 10;
-            }
-            else if (thePlayer.dimension != ConfigurationHelper.WildWoods)
-            {
-                thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigurationHelper.WildWoods);
-            }
-            else {
-                thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0);
-            }
-        }
-    }
-	
+	public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity player)
+	{
+		if(player instanceof EntityPlayerMP) {
+			EntityPlayerMP playerMP = (EntityPlayerMP) player;
+			int dim = ConfigurationHelper.WildWoods;
+			playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, dim, new TeleporterWildWoods(playerMP.mcServer.worldServerForDimension(dim)));
+		}
+	}
+
 	/**
 	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been
 	 * cleared to be reused)
@@ -281,7 +271,7 @@ public class BlockWildwoodPortal extends BlockBreakable
 			}
 
 			EntityWildWoodPortalFX var20 = new EntityWildWoodPortalFX(p_149734_1_, d0, d1, d2, d3, d4, d5);
-            FMLClientHandler.instance().getClient().effectRenderer.addEffect(var20);
+			FMLClientHandler.instance().getClient().effectRenderer.addEffect(var20);
 		}
 	}
 
@@ -289,7 +279,7 @@ public class BlockWildwoodPortal extends BlockBreakable
 	{
 		return p_149999_0_ & 3;
 	}
-	
+
 	public static class Size
 	{
 		private final World field_150867_a;
@@ -462,47 +452,47 @@ public class BlockWildwoodPortal extends BlockBreakable
 			}
 		}
 	}
-	
-    public Block setTextureName(String name) {
-        return setBlockTextureName(Reference.PREFIX + name);
-    }
 
-    public Block setName(String name) {
-        this.name = name;
-        setTextureName(name);
-        setBlockName(name);
-        register();
-        return this;
-    }
+	public Block setTextureName(String name) {
+		return setBlockTextureName(Reference.PREFIX + name);
+	}
 
-    public String getName() {
-        return name;
-    }
+	public Block setName(String name) {
+		this.name = name;
+		setTextureName(name);
+		setBlockName(name);
+		register();
+		return this;
+	}
 
-    public String getTextureName() {
-        return Reference.PREFIX + name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void register() {
-        int numChars = 0;
-        char firstLetter = name.charAt(0);
-        if (Character.isLowerCase(firstLetter))
-            firstLetter = Character.toUpperCase(firstLetter);
-        String inGame = name.substring(1);
-        for (int k = 0; k < name.length(); k++) {
-            char c = name.charAt(k);
-            int code = (int) c;
+	public String getTextureName() {
+		return Reference.PREFIX + name;
+	}
 
-            if (k != 0) {
-                for (int p = 65; p < 90; p++) {
-                    if (code == p) {
-                        numChars++;
-                        if (numChars == 1) inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-                        else inGame = new StringBuffer(inGame).insert(k, " ").toString();
-                    }
-                }
-            }
-        }
-        GameRegistry.registerBlock(this, name);
-    }
+	public void register() {
+		int numChars = 0;
+		char firstLetter = name.charAt(0);
+		if (Character.isLowerCase(firstLetter))
+			firstLetter = Character.toUpperCase(firstLetter);
+		String inGame = name.substring(1);
+		for (int k = 0; k < name.length(); k++) {
+			char c = name.charAt(k);
+			int code = (int) c;
+
+			if (k != 0) {
+				for (int p = 65; p < 90; p++) {
+					if (code == p) {
+						numChars++;
+						if (numChars == 1) inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
+						else inGame = new StringBuffer(inGame).insert(k, " ").toString();
+					}
+				}
+			}
+		}
+		GameRegistry.registerBlock(this, name);
+	}
 }

@@ -14,9 +14,10 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.LongHashMap;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.ChunkCoordIntPair;
+import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 
-public class TeleporterWildWoods {
+public class TeleporterWildWoods extends Teleporter{
 	
     private final WorldServer worldServerInstance;
     private final Random random;
@@ -24,6 +25,7 @@ public class TeleporterWildWoods {
     private final List destinationCoordinateKeys = new ArrayList();
 
     public TeleporterWildWoods(WorldServer par1WorldServer) {
+    	super(par1WorldServer);
         this.worldServerInstance = par1WorldServer;
         this.random = new Random(par1WorldServer.getSeed());
     }

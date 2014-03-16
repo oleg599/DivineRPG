@@ -78,7 +78,7 @@ public class VanillaBlocks {
 	public static final Block fancyWool 		  = new VanillaBlock(wool).setName("fancyWool");
 	public static final Block iceBlock 			  = new VanillaBlock(ground).setName("iceBlock");
 	public static final Block dirtBlock 		  = new VanillaBlock(ground).setName("dirtBlock");
-	public static final Block soulSandBlock       = new VanillaBlock(ground).setName("souldSandBlock");
+	public static final Block soulSandBlock       = new VanillaBlock(ground).setName("soulSandBlock");
 	public static final Block sandBlock 		  = new VanillaBlock(ground).setName("sandBlock");
 	
 	public static final Block lightFenceBlue 	  = new BlockLightFence(false, "blueFence").setName("blueFence");
