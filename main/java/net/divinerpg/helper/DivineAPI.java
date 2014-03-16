@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 
 import net.divinerpg.DivineRPG;
 import net.divinerpg.helper.recipes.CraftingDivineTableManager;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
 import net.minecraft.init.Items;

@@ -74,7 +74,7 @@ public class CommonProxy{
 		    LangRegistry.addItemNames();
 		}
 		LangRegistry.closeFile();
-		System.out.println("[DIVINERPG] ADDING DIMENSTIONS");
+		System.out.println("[DIVINERPG] ADDING DIMENSIONS");
 		DimensionHelper.init();
 		System.out.println("[DIVINERPG] ADDING MOB SPAWNS");
 		MobSpawning.addSpawns();
@@ -85,7 +85,6 @@ public class CommonProxy{
 		System.out.println("[DIVINER PG] ADDING WORLD GENERATIONS");
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
 		FMLCommonHandler.instance().bus().register(new EventArmorFullSet());
-
 	}
 	
 	public void postInit(FMLPostInitializationEvent event){

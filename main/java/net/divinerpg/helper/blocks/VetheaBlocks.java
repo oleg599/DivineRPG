@@ -45,7 +45,7 @@ public class VetheaBlocks {
 	public static final Block             dreamWoodLog           = new BlockModLog().setName("dreamWoodLog").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             dreamWoodLeaves        = new BlockModLeaves().setName("dreamWoodLeaves").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             dreamBricks1           = new VetheanBlock(Material.rock).setName("dreamBricks1");
-	public static final Block             dreambricks2           = new VetheanBlock(Material.rock).setName("dreamBricks2");
+	public static final Block             dreamBricks2           = new VetheanBlock(Material.rock).setName("dreamBricks2");
 	public static final Block             lunaStone              = new VetheanBlock(Material.rock).setName("lunaStone").setBlockUnbreakable();
 	public static final Block             lunaBricks             = new VetheanBlock(Material.rock).setName("lunaBrick").setBlockUnbreakable();
 	public static final Block             metalCaging            = new VetheanBlock(Material.rock).setName("metalCaging");
@@ -66,7 +66,7 @@ public class VetheaBlocks {
 	public static final Block             karosHeatTileRed       = new BlockKarosHeatTile(true).setName("karosHeatTileRed").setBlockUnbreakable();
 	public static final Block             firewood               = new BlockModLog().setName("fireWoodLog").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             bacterialAcid          = new BlockAcid().setName("bacterialAcid");
-	public static final Block             blockAcid              = new BlockAcid().setName("acid");
+	public static final Block             blockAcid              = new BlockAcid().setName("acidBlock");
 	public static final Block             everstone              = new VetheanBlock(Material.rock).setName("greenEverstone").setBlockUnbreakable();
 	public static final Block             lunicAcid              = new BlockAcid().setName("lunicAcid");
 	public static final Block             firewoodLeaves         = new BlockModLeaves().setName("fireWoodLeaves").setCreativeTab(DivineRPGTabs.vethea);

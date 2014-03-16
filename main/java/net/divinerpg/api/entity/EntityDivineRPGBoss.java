@@ -17,33 +17,63 @@ public abstract class EntityDivineRPGBoss extends EntityMob implements IBossDisp
 		super(par1World);
 	}
 
-	public void setMaxHP(double d){getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);}
+	public double setMaxHP(double d){
+		getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(d);
+		return d;
+	}
 
-	public void setMoveSpeed(double d){getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);}
+	public double setMoveSpeed(double d){
+		getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(d);
+		return d;
+	}
 
-	public void setAttackDamage(double d){getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(13.0D);}
+	public double setAttackDamage(double d){
+		getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(d);
+		return d;
+	}
 
-	public void setFollowRange(double d){getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(100.0D);}
+	public double setFollowRange(double d){
+		getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(d);
+		return d;
+	}
 
-	public void setKnockbackResistance(double d){getEntityAttribute(SharedMonsterAttributes.knockbackResistance).setBaseValue(100.0D);}
+	public double setKnockbackResistance(double d){
+		getEntityAttribute(SharedMonsterAttributes.knockbackResistance).setBaseValue(d);
+		return d;
+	}
 
-	public void getHP(){getEntityAttribute(SharedMonsterAttributes.maxHealth).getAttributeValue();} 
+	public double getHP() {
+		return getEntityAttribute(SharedMonsterAttributes.maxHealth).getAttributeValue();
+	} 
 
-	public void getMoveSpeed(){getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue();}
+	public double getMoveSpeed() { 
+		return getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue();
+	}
 
-	public void getAttackDamage(){getEntityAttribute(SharedMonsterAttributes.attackDamage).getAttributeValue();}
+	public double getAttackDamage(){
+		return getEntityAttribute(SharedMonsterAttributes.attackDamage).getAttributeValue();
+	}
 
-	public void getFollowRange(){getEntityAttribute(SharedMonsterAttributes.followRange).getAttributeValue();}
+	public double getFollowRange(){
+		return getEntityAttribute(SharedMonsterAttributes.followRange).getAttributeValue();
+	}
 
-	public void getKnockbackResistance(){getEntityAttribute(SharedMonsterAttributes.knockbackResistance).getAttributeValue();}
+	public double getKnockbackResistance(){
+		return getEntityAttribute(SharedMonsterAttributes.knockbackResistance).getAttributeValue();
+	}
 
 	public abstract String mobName();
+
+	@Override
+	public boolean canDespawn() {
+		return false;	
+	}
 
 	public void onDeath(DamageSource d) {
 		super.onDeath(d);
 		if(!worldObj.isRemote){
 			EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-			if(ConfigurationHelper.canShowDeathChat){
+			if(ConfigurationHelper.canShowDeathChat || d.getSourceOfDamage() instanceof EntityPlayer){
 				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The " + mobName() + " Has Fallen."));
 			}
 		}

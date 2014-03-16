@@ -117,6 +117,10 @@ public class LangRegistry {
 	public static void addItem(Item item){
 		items.add(item);
 	}
+	
+	public static void addMobName(String entityName){
+		addToFile("entity." + entityName +".name=" + entityName);
+	}
 
 	/*public static void addMob(){
 		String name = DivineAPI.mobName;

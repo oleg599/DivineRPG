@@ -53,6 +53,7 @@ public class VetheanItems {
 	public static final Item arksianeStaff 		= new ItemStaff(36, 10).setName("arksianeStaff");
 	
 	public static final Item honeysuckle 		= new ItemVetheanFood(1, 0.2F).setName("honeysuckle");
+	public static final Item honeychunk 		= new ItemVetheanFood(1, 0.2F).setName("honeychunk");
 	public static final Item dreamCarrot 		= new ItemVetheanFood(3, 0.4F).setName("dreamCarrot");
 	public static final Item dreamMelon 		= new ItemVetheanFood(6, 0.6F).setName("dreamMelon");
 	public static final Item dreamPie 			= new ItemVetheanFood(4, 0.8F).setName("dreamPie");
@@ -60,6 +61,7 @@ public class VetheanItems {
 	public static final Item dreamSweets 		= new ItemVetheanHealingFood(0, 0F, false, 2).setName("dreamSweets");
 	public static final Item dreamSours 		= new ItemVetheanHealingFood(0, 0F, false, 8).setName("dreamSours");
 	public static final Item acid 				= new ItemMod().setName("acid").setCreativeTab(DivineRPGTabs.vethea);
+	public static final Item heivaBelt 			= new ItemMod().setName("heivaBelt").setCreativeTab(DivineRPGTabs.vethea);
 
 	public static final Item hammerTemplate 	= new ItemMod().setName("hammerTemplate").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Item backswordTemplate 	= new ItemMod().setName("backswordTemplate").setCreativeTab(DivineRPGTabs.vethea);
@@ -119,10 +121,18 @@ public class VetheanItems {
 	public static final Item everbright			 = new ItemVetheanClaw(42).setName("everbright");
 	//public static final Item everfight		 	 = new ItemVetheanBow(4.6D, everArrow, "everfight", false, 25, 25);
 	public static final Item evernight			 = new ItemEvernight(115, 200).setName("evernight");
+	public static final Item everfight		 	 = new ItemMod().setName("everfright").setCreativeTab(DivineRPGTabs.vethea);
+	public static final Item everArrow		 	 = new ItemMod().setName("everArrow").setCreativeTab(DivineRPGTabs.vethea);
+
+	public static final Item vetheanArrow 		 = new ItemMod().setName("vetheanArrow").setCreativeTab(DivineRPGTabs.vethea);
+	public static final Item vetheanWarArrow 	 = new ItemMod().setName("vetheanWarArrow").setCreativeTab(DivineRPGTabs.vethea);
+	public static final Item vetheanWrathArrow   = new ItemMod().setName("vetheanWrathArrow").setCreativeTab(DivineRPGTabs.vethea);
+	public static final Item vetheanArrow2 		 = new ItemMod().setName("vetheanArrow2").setCreativeTab(DivineRPGTabs.vethea);
 	
 	public static final Item dreamFlint 		 = new ItemMod().setName("dreamFlint").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Item moonClock 			 = new ItemMod().setName("moonClock").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Item dreamPowder 		 = new ItemMod().setName("dreamPowder").setCreativeTab(DivineRPGTabs.vethea);
+	public static final Item rockChunks 		 = new ItemMod().setName("rockChunks").setCreativeTab(DivineRPGTabs.vethea);
 	
 	public static final Item barredDoorItem 	 = new ItemModDoor(VetheaBlocks.barredDoor).setName("barredDoor").setCreativeTab(DivineRPGTabs.vethea);
 }

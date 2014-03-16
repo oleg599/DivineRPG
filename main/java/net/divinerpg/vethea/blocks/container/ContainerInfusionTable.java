@@ -4,6 +4,7 @@ import net.divinerpg.vethea.blocks.tileentity.TileEntityInfusionTable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
+import net.minecraft.inventory.ContainerEnchantment;
 import net.minecraft.inventory.Slot;
 import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
@@ -32,37 +33,47 @@ public class ContainerInfusionTable extends Container {
 		}
 	}
 
-	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int i) {
-		ItemStack stack = null;
-		Slot slot_object = (Slot) inventorySlots.get(i);
+	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
+        ItemStack itemstack = null;
+        Slot slot = (Slot)this.inventorySlots.get(par2);
 
-		if(slot_object != null && slot_object.getHasStack()) {
-			ItemStack stack_in_slot = slot_object.getStack();
-			stack = stack_in_slot.copy();
+        if (slot != null && slot.getHasStack()) {
+            ItemStack itemstack1 = slot.getStack();
+            itemstack = itemstack1.copy();
 
-			if(i == 0 || i == 1) {
-				if(!mergeItemStack(stack_in_slot, 1, inventorySlots.size(), true)) {
-					return null;
-				}
-			} 
-			else if(!mergeItemStack(stack_in_slot, 0, 1, false)) {
-				return null;
-			}
+            if (par2 == 0) {
+                if (!this.mergeItemStack(itemstack1, 1, 37, true)) {
+                    return null;
+                }
+            } else {
+                if (((Slot)this.inventorySlots.get(0)).getHasStack() || !((Slot)this.inventorySlots.get(0)).isItemValid(itemstack1)) {
+                    return null;
+                }
 
-			if(i == 2) {
-				return null;
-			}
+                if (itemstack1.hasTagCompound() && itemstack1.stackSize == 1) {
+                    ((Slot)this.inventorySlots.get(0)).putStack(itemstack1.copy());
+                    itemstack1.stackSize = 0;
+                }
+                else if (itemstack1.stackSize >= 1) {
+                    ((Slot)this.inventorySlots.get(0)).putStack(new ItemStack(itemstack1.getItem(), 1, itemstack1.getItemDamage()));
+                    itemstack1.stackSize--;
+                }
+            }
 
-			if(stack_in_slot.stackSize == 0) {
-				slot_object.putStack(null);
-			} else {
-				slot_object.onSlotChanged();
-			}
-		}
+            if (itemstack1.stackSize == 0) {
+                slot.putStack((ItemStack)null);
+            } else {
+                slot.onSlotChanged();
+            }
 
-		return stack;
-	}
+            if (itemstack1.stackSize == itemstack.stackSize) {
+                return null;
+            }
+
+            slot.onPickupFromSlot(par1EntityPlayer, itemstack1);
+        }
+        return itemstack;
+    }
 
 	@Override
 	public boolean canInteractWith(EntityPlayer player) {

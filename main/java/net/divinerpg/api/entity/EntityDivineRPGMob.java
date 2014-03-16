@@ -2,6 +2,7 @@ package net.divinerpg.api.entity;
 
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
+import net.divinerpg.vethea.entity.EntityTwins;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
@@ -40,11 +41,19 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 
 	public void onDeath(DamageSource d) {
 		super.onDeath(d);
+		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 		if(!worldObj.isRemote){
-			EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-			if(ConfigurationHelper.canShowDeathChat){
+			if(ConfigurationHelper.canShowDeathChat || d.getSourceOfDamage() instanceof EntityPlayer){
 				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A " + mobName() + "."));
 			}
 		}
+		if(d.getEntity() instanceof EntityTwins){
+			if(!worldObj.isRemote){
+				if(ConfigurationHelper.canShowDeathChat || d.getSourceOfDamage() instanceof EntityPlayer){
+					p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain The " + mobName() + "."));
+				}
+			}
+		}
+		
 	}
 }
