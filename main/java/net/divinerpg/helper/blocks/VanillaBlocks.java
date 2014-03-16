@@ -2,6 +2,7 @@ package net.divinerpg.helper.blocks;
 
 import net.divinerpg.vanilla.blocks.BlockAcceleron;
 import net.divinerpg.vanilla.blocks.BlockDivineTable;
+import net.divinerpg.vanilla.blocks.BlockLightFence;
 import net.divinerpg.vanilla.blocks.BlockTar;
 import net.divinerpg.vanilla.blocks.MobPumpkin;
 import net.divinerpg.vanilla.blocks.VanillaBlock;
@@ -10,9 +11,10 @@ import net.minecraft.block.material.Material;
 
 public class VanillaBlocks {
 
-	static Material           rock                = Material.rock;
-	static Material           wool                = Material.cloth;
-
+	private static Material   rock                = Material.rock;
+	private static Material   wool                = Material.cloth;
+	private static Material   ground              = Material.ground;
+	
 	public static final Block rupeeOre            = new VanillaBlock(rock).setName("rupeeOre").setHardness(3.0F);
 	public static final Block arlemiteOre         = new VanillaBlock(rock).setName("arlemiteOre").setHardness(3.0F);
 	public static final Block realmiteOre         = new VanillaBlock(rock).setName("realmiteOre").setHardness(3.0F);
@@ -74,4 +76,17 @@ public class VanillaBlocks {
 	public static final Block dyeBlockMagenta     = new VanillaBlock(rock).setName("magentaDyeBlock");
 	
 	public static final Block fancyWool 		  = new VanillaBlock(wool).setName("fancyWool");
+	public static final Block iceBlock 			  = new VanillaBlock(ground).setName("iceBlock");
+	public static final Block dirtBlock 		  = new VanillaBlock(ground).setName("dirtBlock");
+	public static final Block soulSandBlock       = new VanillaBlock(ground).setName("souldSandBlock");
+	public static final Block sandBlock 		  = new VanillaBlock(ground).setName("sandBlock");
+	
+	public static final Block lightFenceBlue 	  = new BlockLightFence(false, "blueFence").setName("blueFence");
+    public static final Block lightFenceRed 	  = new BlockLightFence(false, "redFence").setName("redFence");
+    public static final Block lightFenceGreen 	  = new BlockLightFence(false, "greenFence").setName("greenFence");
+
+    public static final Block lightFenceBlueOn 	  = new BlockLightFence(true, "blueFenceOn").setName("blueFence");
+    public static final Block lightFenceRedOn 	  = new BlockLightFence(true, "redFenceOn").setName("redFence");
+    public static final Block lightFenceGreenOn   = new BlockLightFence(true, "greenFenceOn").setName("greenFence");
+    
 }
