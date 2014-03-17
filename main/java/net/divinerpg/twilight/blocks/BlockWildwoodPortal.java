@@ -3,7 +3,6 @@ package net.divinerpg.twilight.blocks;
 import java.util.Random;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
@@ -74,14 +73,23 @@ public class BlockWildwoodPortal extends BlockBreakable
 	}
 
 	@Override
-	public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity player)
-	{
-		if(player instanceof EntityPlayerMP) {
-			EntityPlayerMP playerMP = (EntityPlayerMP) player;
-			int dim = ConfigurationHelper.WildWoods;
-			playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, dim, new TeleporterWildWoods(playerMP.mcServer.worldServerForDimension(dim)));
-		}
-	}
+    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity) {
+        if ((par5Entity.ridingEntity == null) && (par5Entity.riddenByEntity == null) && ((par5Entity instanceof EntityPlayerMP))) {
+        	int dim = ConfigurationHelper.WildWoods;
+        	
+            EntityPlayerMP thePlayer = (EntityPlayerMP)par5Entity;
+            if (thePlayer.timeUntilPortal > 0) {
+                thePlayer.timeUntilPortal = 10;
+            }
+            else if (thePlayer.dimension != dim) {
+                thePlayer.timeUntilPortal = 10;
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, dim, new TeleporterWildWoods(thePlayer.mcServer.worldServerForDimension(dim)));
+            } else {
+                thePlayer.timeUntilPortal = 10;
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new TeleporterWildWoods(thePlayer.mcServer.worldServerForDimension(0)));
+            }
+        }
+    }
 
 	/**
 	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been

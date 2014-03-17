@@ -10,6 +10,7 @@ import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.fx.EntityEdenPortalFX;
 import net.divinerpg.twilight.gen.eden.TeleporterEden;
+import net.divinerpg.twilight.gen.wildwoods.TeleporterWildWoods;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
@@ -74,23 +75,20 @@ public class BlockEdenPortal extends BlockBreakable
 	}
 
 	@Override
-    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
-    {
-        if ((par5Entity.ridingEntity == null) && (par5Entity.riddenByEntity == null) && ((par5Entity instanceof EntityPlayerMP)))
-        {
+    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity) {
+        if ((par5Entity.ridingEntity == null) && (par5Entity.riddenByEntity == null) && ((par5Entity instanceof EntityPlayerMP))) {
+        	int dim = ConfigurationHelper.Eden;
+        	
             EntityPlayerMP thePlayer = (EntityPlayerMP)par5Entity;
-            if (thePlayer.timeUntilPortal > 0)
-            {
+            if (thePlayer.timeUntilPortal > 0) {
                 thePlayer.timeUntilPortal = 10;
             }
-            else if (thePlayer.dimension != ConfigurationHelper.Eden)
-            {
+            else if (thePlayer.dimension != dim) {
                 thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigurationHelper.Eden);
-            }
-            else {
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, dim, new TeleporterEden(thePlayer.mcServer.worldServerForDimension(dim)));
+            } else {
                 thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0);
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new TeleporterEden(thePlayer.mcServer.worldServerForDimension(0)));
             }
         }
     }
