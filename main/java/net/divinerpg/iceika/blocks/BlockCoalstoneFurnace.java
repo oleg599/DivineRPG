@@ -97,8 +97,7 @@ public class BlockCoalstoneFurnace extends BlockMod {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int par1, int par2)
-	{
+	public IIcon getIcon(int par1, int par2) {
 		return par1 == 1 ? this.FurnaceIIconTop : (par1 == 0 ? this.FurnaceIIconTop : (par1 != par2 ? this.blockIcon : this.FurnaceIIconFront));
 	}
 

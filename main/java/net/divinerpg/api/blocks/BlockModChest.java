@@ -23,10 +23,6 @@ public class BlockModChest extends BlockChest {
 	}
 	//TODO: Let it have its own texture
 	
-	public Item getItemDropped(int par1, Random par2, int par3) {
-		return (this == IceikaBlocks.frostedChest) ? IceikaItems.snowflake : getBlock(this);
-	}
-	
 	public static Item getBlock(Block b){
 		return Item.getItemFromBlock(b);
 	}

@@ -13,6 +13,7 @@ import net.divinerpg.api.blocks.BlockModLog;
 import net.divinerpg.api.blocks.BlockModSpawner;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.iceika.blocks.BlockCoalstoneFurnace;
+import net.divinerpg.iceika.blocks.BlockFrostedChest;
 import net.divinerpg.iceika.blocks.IceikaBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -35,7 +36,7 @@ public class IceikaBlocks {
 
 	public static final Block icyStone       	  = new IceikaBlock(rock).setName("icyStone").setBlockUnbreakable(); //TODO: Make destructible only by explosion
 	public static final Block icyBricks       	  = new IceikaBlock(rock).setName("icyBricks").setBlockUnbreakable(); //TODO: Make destructible only by explosion
-	public static final Block frostedChest	      = new BlockModChest().setName("frostedChest").setHardness(2.5F); //Chests in dungeons that drop snowflakes when broken.
+	public static final Block frostedChest	      = new BlockFrostedChest().setName("frostedChest").setHardness(2.5F); //Chests in dungeons that drop snowflakes when broken.
 	public static final Block rollumSpawner 	  = new BlockModSpawner("Creeper", false).setName("rollumSpawner").setHardness(5.0F);//change mob to spawn to rollum
 	public static final Block glacideSpawner 	  = new BlockModSpawner("Enderman", false).setName("glacideSpawner").setHardness(5.0F);//change mob to spawn to glacide
 

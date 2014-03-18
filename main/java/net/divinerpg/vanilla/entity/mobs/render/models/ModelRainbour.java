@@ -237,26 +237,29 @@ public class ModelRainbour extends ModelBase
     model.rotateAngleZ = z;
   }
   
-  public void setRotationAngles(float par2, float par3, float par4, float par5, float par6, float par7, Entity entity)
+  public void setRotationAngles(float par1, float par2, float par3, float par4, float par5, float par6, Entity entity)
   {
-      //this.Head.rotateAngleX = par6 / (180F / (float)Math.PI);
-      //this.Head.rotateAngleY = par5 / (180F / (float)Math.PI);
+      //this.Head.rotateAngleX = par5 / (180F / (float)Math.PI);
+      //this.Head.rotateAngleY = par4 / (180F / (float)Math.PI);
       //this.Head.rotateAngleZ = 0.0F;
-      //this.Body.rotateAngleX = ((float)Math.PI / 4F) + MathHelper.cos(par4 * 0.1F) * 0.15F;
+      //this.Body.rotateAngleX = ((float)Math.PI / 4F) + MathHelper.cos(par3 * 0.1F) * 0.15F;
       //this.Body.rotateAngleY = 0.0F;
-      this.rwing1.rotateAngleZ = MathHelper.cos(par4 * 0.1F) * (float)Math.PI * 0.15F;
+      this.rwing1.rotateAngleZ = MathHelper.cos(par3 * 0.1F) * (float)Math.PI * 0.15F;
       this.lwing1.rotateAngleZ = -this.rwing1.rotateAngleZ;
       
-      this.rwing2.rotateAngleZ = MathHelper.cos(par4 * 0.1F) * (float)Math.PI * 0.15F;
+      this.rwing2.rotateAngleZ = MathHelper.cos(par3 * 0.1F) * (float)Math.PI * 0.15F;
       this.lwing2.rotateAngleZ = -this.rwing2.rotateAngleZ;
       
-      this.rwing3.rotateAngleZ = MathHelper.cos(par4 * 0.1F) * (float)Math.PI * 0.15F;
+      this.rwing3.rotateAngleZ = MathHelper.cos(par3 * 0.1F) * (float)Math.PI * 0.15F;
       this.lwing3.rotateAngleZ = -this.rwing3.rotateAngleZ;
       
-      this.tail1.rotateAngleX = MathHelper.cos(par4 * 0.1F) * (float)Math.PI * 0.05F;
-      this.tail2.rotateAngleX = MathHelper.cos(par4 * 0.1F) * (float)Math.PI * 0.05F;
-      this.tail3.rotateAngleX = MathHelper.cos(par4 * 0.1F) * (float)Math.PI * 0.05F;
-      this.tail4.rotateAngleX = MathHelper.cos(par4 * 0.1F) * (float)Math.PI * 0.05F;
+      this.tail1.rotateAngleX = MathHelper.cos(par3 * 0.1F) * (float)Math.PI * 0.02F;
+      this.tail2.rotateAngleX = MathHelper.cos(par3 * 0.1F) * (float)Math.PI * 0.02F;
+      this.tail3.rotateAngleX = MathHelper.cos(par3 * 0.1F) * (float)Math.PI * 0.02F;
+      this.tail4.rotateAngleX = MathHelper.cos(par3 * 0.1F) * (float)Math.PI * 0.02F;
+      
+      //this.rfoot.rotateAngleX = -0.384F + MathHelper.cos(par1 * 0.0F) * 1.4F * par2;
+      //this.lfoot.rotateAngleX = -0.384F + MathHelper.cos(par1 * 0.0F) * 1.4F * par2;
   }
 
 }
