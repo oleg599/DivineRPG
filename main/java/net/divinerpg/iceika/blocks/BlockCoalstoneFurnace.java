@@ -104,7 +104,7 @@ public class BlockCoalstoneFurnace extends BlockMod {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IIconRegister) {
-		this.blockIcon = par1IIconRegister.registerIcon(Reference.PREFIX + "coalstone");
+		this.blockIcon = par1IIconRegister.registerIcon(Reference.PREFIX + "coalstoneFurnace");
 		this.FurnaceIIconFront = par1IIconRegister.registerIcon(Reference.PREFIX + "coalstoneFurnace");
 		this.FurnaceIIconTop = par1IIconRegister.registerIcon(Reference.PREFIX + "coalstone");
 	}
@@ -142,8 +142,7 @@ public class BlockCoalstoneFurnace extends BlockMod {
 	
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
-	{
+	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random) {
 			int l = par1World.getBlockMetadata(par2, par3, par4);
 			float f = (float)par2 + 0.5F;
 			float f1 = (float)par3 + 0.0F + par5Random.nextFloat() * 6.0F / 16.0F;
@@ -151,26 +150,44 @@ public class BlockCoalstoneFurnace extends BlockMod {
 			float f3 = 0.52F;
 			float f4 = par5Random.nextFloat() * 0.6F - 0.3F;
 
-			if (l == 4)
-			{
+			if (l == 4) {
 				par1World.spawnParticle("smoke", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
 				par1World.spawnParticle("flame", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
 			}
-			else if (l == 5)
-			{
+			else if (l == 5) {
 				par1World.spawnParticle("smoke", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
 				par1World.spawnParticle("flame", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
 			}
-			else if (l == 2)
-			{
+			else if (l == 2) {
 				par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
 				par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
 			}
-			else if (l == 3)
-			{
+			else if (l == 3) {
+				par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
+				par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
+			}
+			
+			
+			f = (float)par2 + 0.7F;
+			f3 = 0.05F;
+			f2 = (float)par4 + 0.5F;
+			f4 = par5Random.nextFloat() * 0.10F - 0.6F;
+			
+			if (l == 4) {
+				par1World.spawnParticle("smoke", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+				par1World.spawnParticle("flame", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+			}
+			else if (l == 5) {
+				par1World.spawnParticle("smoke", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+				par1World.spawnParticle("flame", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+			}
+			else if (l == 2) {
+				par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
+				par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
+			}
+			else if (l == 3) {
 				par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
 				par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
 			}
 	}
-
 }

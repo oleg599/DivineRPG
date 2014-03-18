@@ -27,6 +27,7 @@ public class BlockModGrass extends BlockMod implements IGrowable{
 	
     public BlockModGrass(Block Grass, Block Dirt, String name) {
         super(Material.grass);
+        setStepSound(soundTypeGrass);
         setCreativeTab(DivineRPGTabs.blocks);
         setName(name);
         this.setTickRandomly(true);

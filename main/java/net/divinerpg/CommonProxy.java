@@ -2,6 +2,7 @@ package net.divinerpg;
 
 import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.blocks.ArcanaBlocks;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.blocks.VetheaBlocks;
@@ -66,6 +67,7 @@ public class CommonProxy{
 		TwilightBlocks.init();
 		IceikaBlocks.init();
 		VetheaBlocks.init();
+		ArcanaBlocks.init();
 		
 		LangRegistry.init();
 		if(Reference.DEBUG){
