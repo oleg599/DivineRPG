@@ -3,6 +3,8 @@ package net.divinerpg.helper.event;
 import java.util.List;
 
 import net.divinerpg.helper.config.ConfigurationHelper;
+import net.divinerpg.twilight.gen.eden.TeleporterEden;
+import net.divinerpg.twilight.gen.wildwoods.TeleporterWildWoods;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -25,13 +27,13 @@ public class DivineRPGCommands extends CommandBase{
 		if(!playerMP.worldObj.isRemote){
 			if (var2[0].equalsIgnoreCase("Eden")) {
 				if (playerMP.dimension != ConfigurationHelper.Eden) {
-					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden);
+					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden, new TeleporterEden(playerMP.mcServer.worldServerForDimension(ConfigurationHelper.Eden)));
 				}
 			}
 
 			if (var2[0].equalsIgnoreCase("WildWoods")) {
 				if (playerMP.dimension != ConfigurationHelper.WildWoods) {
-					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden);
+					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden, new TeleporterWildWoods(playerMP.mcServer.worldServerForDimension(ConfigurationHelper.WildWoods)));
 				}
 			}
 		}

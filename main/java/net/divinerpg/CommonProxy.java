@@ -49,6 +49,7 @@ public class CommonProxy{
 		DivineAPI.addEventBus(new EventOverlay());
 		DivineAPI.addEventBus(new EventBucketFill());
 		DivineAPI.addEventBus(new EventBonemeal());
+		DivineAPI.addEventBus(new EventArmorFullSet());
 		System.out.println("[DIVINE RPG] REGISTERING TILE ENTITIES");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		GameRegistry.registerTileEntity(TileEntityInfusionTable.class, "Infusion Table");
