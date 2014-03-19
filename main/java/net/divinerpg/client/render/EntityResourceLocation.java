@@ -8,6 +8,7 @@ public class EntityResourceLocation {
 
     public static final String     PREFIX            = Reference.PREFIX + "textures/mobs/";
     public static final String     PREFIX_PROJECTILE = Reference.PREFIX + "textures/projectiles/";
+    public static final String 	   modelPrefix 		 = Reference.PREFIX + "textures/model/";
 
     public static ResourceLocation enderWatcher      = new ResourceLocation(PREFIX + "enderWatcher.png");
     public static ResourceLocation crab              = new ResourceLocation(PREFIX + "crab.png");
@@ -144,4 +145,16 @@ public class EntityResourceLocation {
     public static ResourceLocation HUSK = new ResourceLocation(PREFIX + "husk.png");
     public static ResourceLocation VERMSILLION = new ResourceLocation(PREFIX + "vermsillion.png");
     public static ResourceLocation STONE_GOLEM = new ResourceLocation(PREFIX + "stoneGolem.png");
+    
+    public static ResourceLocation KING_STATUE = new ResourceLocation(modelPrefix + "statueKos.png");
+    public static ResourceLocation ANCIENT_STATUE = new ResourceLocation(modelPrefix + "statueAnchient.png");
+    public static ResourceLocation AYERACO_STATUE = new ResourceLocation(modelPrefix + "statueAyeraco.png");
+    public static ResourceLocation DENSOS_STATUE = new ResourceLocation(modelPrefix + "statueDensos.png");
+    public static ResourceLocation DEX_STATUE = new ResourceLocation(modelPrefix + "statueDex.png");
+    public static ResourceLocation DRAMIX_STATUE = new ResourceLocation(modelPrefix + "statueDramix.png");
+    public static ResourceLocation PARASECTA_STATUE = new ResourceLocation(modelPrefix + "statueParasecta.png");
+    public static ResourceLocation SOUL_STATUE = new ResourceLocation(modelPrefix + "statueSF.png");
+    public static ResourceLocation TWILIGHT_STATUE = new ResourceLocation(modelPrefix + "statueTwilightDemon.png");
+    public static ResourceLocation VAMACHERON_STATUE = new ResourceLocation(modelPrefix + "statueVamacheron.png");
+    public static ResourceLocation WATCHER_STATUE = new ResourceLocation(modelPrefix + "statueWatcher.png");
 }

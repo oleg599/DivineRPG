@@ -1,5 +1,8 @@
 package net.divinerpg.helper.blocks;
 
+import net.divinerpg.api.blocks.BlockStatue;
+import net.divinerpg.client.render.EntityResourceLocation;
+import net.divinerpg.twilight.entity.mob.model.block.*;
 import net.divinerpg.vanilla.blocks.BlockAcceleron;
 import net.divinerpg.vanilla.blocks.BlockDivineTable;
 import net.divinerpg.vanilla.blocks.BlockLightFence;
@@ -89,4 +92,15 @@ public class VanillaBlocks {
     public static final Block lightFenceRedOn 	  = new BlockLightFence(true, "redFenceOn").setName("redFence");
     public static final Block lightFenceGreenOn   = new BlockLightFence(true, "greenFenceOn").setName("greenFence");
     
+	public static final BlockStatue KingStatue 	  = new BlockStatue(EntityResourceLocation.KING_STATUE, new ModelKingStatue()).setName("kingOfScorchersStatue");
+	public static final BlockStatue AncientStatue = new BlockStatue(EntityResourceLocation.ANCIENT_STATUE, new ModelAncientStatue()).setName("ancientEntityStatue");
+	public static final BlockStatue AyeracoStatue = new BlockStatue(EntityResourceLocation.AYERACO_STATUE, new ModelAyeracoStatue()).setName("ayeracoStatue");
+	public static final BlockStatue TDemonStatue  = new BlockStatue(EntityResourceLocation.TWILIGHT_STATUE, new ModelTwilightStatue()).setName("twilightDemonStatue");
+	public static final BlockStatue VamacheronStatue = new BlockStatue(EntityResourceLocation.VAMACHERON_STATUE, new ModelVamacheronStatue()).setName("vamacheronStatue");
+	public static final BlockStatue DensosStatue  = new BlockStatue(EntityResourceLocation.DENSOS_STATUE, new ModelDensosStatue()).setName("densosStatue");
+	public static final BlockStatue DexStatue 	  = new BlockStatue(EntityResourceLocation.DEX_STATUE, new ModelDexStatue()).setName("dexStatue"); 
+	public static final BlockStatue DramixStatue  = new BlockStatue(EntityResourceLocation.DRAMIX_STATUE, new ModelDramixStatue()).setName("dramixStatue");
+	//public static final BlockStatue ParasectaStatue = new BlockStatue(EntityResourceLocation.PARASECTA_STATUE, new ModelParasecta()).setName("parasectaStatue");
+	public static final BlockStatue SoulFiendStatue = new BlockStatue(EntityResourceLocation.SOUL_STATUE, new ModelSoulStatue()).setName("soulFiendStatue");
+	public static final BlockStatue WatcherStatue = new BlockStatue(EntityResourceLocation.WATCHER_STATUE, new ModelWatcherStatue()).setName("theWatcherStatue");
 }

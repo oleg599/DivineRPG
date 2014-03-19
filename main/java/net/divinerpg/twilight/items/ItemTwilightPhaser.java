@@ -5,6 +5,7 @@ import java.util.List;
 import net.divinerpg.Reference;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.projectile.EntityPhaserApalachia;
 import net.divinerpg.twilight.entity.projectile.EntityPhaserEden;
@@ -40,6 +41,7 @@ public class ItemTwilightPhaser extends ItemMod {
         this.reloadsound = "";
         this.setMaxStackSize(1);
         this.setMaxDamage(3000);
+        setCreativeTab(DivineRPGTabs.ranged);
 	}
 
 	@Override

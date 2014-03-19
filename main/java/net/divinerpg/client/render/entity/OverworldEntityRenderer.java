@@ -4,7 +4,11 @@ import net.divinerpg.client.render.EntityResourceLocation;
 import net.divinerpg.client.render.RenderDivineMob;
 import net.divinerpg.client.render.RenderIconProjectile;
 import net.divinerpg.client.render.RenderSizeable;
+import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.items.VanillaItemsWeapons;
+import net.divinerpg.twilight.entity.mob.model.block.RenderStatue;
+import net.divinerpg.twilight.entity.mob.model.block.RenderStatueItem;
+import net.divinerpg.twilight.entity.mob.model.block.TileEntityStatue;
 import net.divinerpg.vanilla.entity.mobs.EntityAncientEntity;
 import net.divinerpg.vanilla.entity.mobs.EntityAridWarrior;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoBlue;
@@ -59,14 +63,17 @@ import net.divinerpg.vanilla.entity.projectiles.EntityShuriken;
 import net.divinerpg.vanilla.entity.projectiles.EntityVileStorm;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelSpider;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.MinecraftForgeClient;
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class OverworldEntityRenderer {
 
 	public static void init(){
-        RenderingRegistry.registerEntityRenderingHandler(EntityShuriken.class, new RenderIconProjectile(VanillaItemsWeapons.shuriken));
-        RenderingRegistry.registerEntityRenderingHandler(EntityVileStorm.class, new RenderIconProjectile(VanillaItemsWeapons.vileStorm));
-        RenderingRegistry.registerEntityRenderingHandler(EntityEnderWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.enderWatcher));
+		RenderingRegistry.registerEntityRenderingHandler(EntityShuriken.class, new RenderIconProjectile(VanillaItemsWeapons.shuriken));
+		RenderingRegistry.registerEntityRenderingHandler(EntityVileStorm.class, new RenderIconProjectile(VanillaItemsWeapons.vileStorm));
+		RenderingRegistry.registerEntityRenderingHandler(EntityEnderWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.enderWatcher));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCrab.class, new RenderDivineMob(new ModelCrab(), 0.0F, EntityResourceLocation.crab));
 		RenderingRegistry.registerEntityRenderingHandler(EntityKingCrab.class, new RenderSizeable(new ModelCrab(), 0.0F, 1.8F, EntityResourceLocation.crab));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCaveCrawler.class, new RenderDivineMob(new ModelCrawler(), 0.0F, EntityResourceLocation.caveCrawler));
@@ -98,6 +105,17 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityGlacon.class, new RenderDivineMob(new ModelGlacon(), 0.0F, EntityResourceLocation.glacon));
 		RenderingRegistry.registerEntityRenderingHandler(EntityMiner.class, new RenderMiner());
 
-		//RenderingRegistry.getItemRenderer(item, type)
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.KingStatue), new RenderStatueItem(VanillaBlocks.KingStatue));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.AncientStatue), new RenderStatueItem(VanillaBlocks.AncientStatue));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.AyeracoStatue), new RenderStatueItem(VanillaBlocks.AyeracoStatue));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.TDemonStatue), new RenderStatueItem(VanillaBlocks.TDemonStatue));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.VamacheronStatue), new RenderStatueItem(VanillaBlocks.VamacheronStatue));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.DensosStatue), new RenderStatueItem(VanillaBlocks.DensosStatue));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.DexStatue), new RenderStatueItem(VanillaBlocks.DexStatue));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.DramixStatue), new RenderStatueItem(VanillaBlocks.DramixStatue));
+		//MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.ParasectaStatue), new RenderStatueItem(VanillaBlocks.ParasectaStatue));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.SoulFiendStatue), new RenderStatueItem(VanillaBlocks.SoulFiendStatue));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.WatcherStatue), new RenderStatueItem(VanillaBlocks.WatcherStatue));
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityStatue.class, new RenderStatue());
 	}
 }
