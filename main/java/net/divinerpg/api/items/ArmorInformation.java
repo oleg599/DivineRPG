@@ -28,7 +28,7 @@ public class ArmorInformation {
 			list.add("Full Set: 3+ Twilight ore drops");
 		}
 		if(item.getItem() == t.wildwoodBody || item.getItem() == t.wildwoodBoots || item.getItem() == t.wildwoodHelmet || item.getItem() == t.wildwoodLegs){
-			list.add("Full Set: Fast health regen under water");
+			list.add("Full Set: Health regen underwater");
 		}
 		if(item.getItem() == t.apalachiaBody || item.getItem() == t.apalachiaBoots || item.getItem() == t.apalachiaHelmet || item.getItem() == t.apalachiaLegs){
 			list.add("Full Set: Block damage protection");
@@ -43,10 +43,7 @@ public class ArmorInformation {
 			list.add("Full Set: 24+ Melee damage");
 		}
 		if(item.getItem() == v.bedrockBody || item.getItem() == v.bedrockBoots || item.getItem() == v.bedrockHelmet || item.getItem() == v.bedrockLegs){
-			list.add("Full Set: Lava pretection"); list.add("Full Set: Fire protection"); list.add("Full Set: Explosion protection");
-		}
-		if(item.getItem() == v.eliteRealmiteBody || item.getItem() == v.eliteRealmiteBoots || item.getItem() == v.eliteRealmiteHelmet || item.getItem() == v.eliteRealmiteLegs){
-			list.add("Full Set: No fall damage");
+			list.add("Full Set: Fire protection"); list.add("Full Set: Explosion protection");
 		}
 		if(item.getItem() == v.eliteRealmiteBody || item.getItem() == v.eliteRealmiteBoots || item.getItem() == v.eliteRealmiteHelmet || item.getItem() == v.eliteRealmiteLegs){
 			list.add("Full Set: No fall damage");
@@ -64,7 +61,7 @@ public class ArmorInformation {
 			list.add("Full Set: 4x Scythe damage");
 		}
 		if(item.getItem() == v.infernoBody || item.getItem() == v.infernoBoots || item.getItem() == v.infernoHelmet || item.getItem() == v.infernoLegs){
-			list.add("Full Set: Fire protection"); list.add("Full Set: Lava protection");
+			list.add("Full Set: Fire protection");
 		}
 		if(item.getItem() == v.aquastriveBody || item.getItem() == v.aquastriveBoots || item.getItem() == v.aquastriveHelmet || item.getItem() == v.aquastriveLegs){
 			list.add("Full Set: Breath under water"); list.add("Full Set: Swim faster");

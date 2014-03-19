@@ -2,6 +2,7 @@ package net.divinerpg.helper.event;
 
 import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsArmor;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -9,6 +10,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
@@ -20,6 +22,7 @@ public class EventArmorFullSet {
 	private Item body = null;
 	private Item legs = null;
 	private Item helmet = null;
+	public static final String[] isImmuneToFire	= new String[] {"ag","field_70178_ae", "isImmuneToFire"};
 	
 	private VanillaItemsArmor v;
 	private TwilightItemsArmor t;
@@ -34,9 +37,8 @@ public class EventArmorFullSet {
 			ItemStack stackBody = player.inventory.armorItemInSlot(2);
 			ItemStack stackHelmet = player.inventory.armorItemInSlot(3);
 
-			if(stackBoots != null){
+			if(stackBoots != null)
 				boots = stackBoots.getItem();
-				System.out.println(boots);}
 			else
 				boots = null;
 
@@ -56,21 +58,6 @@ public class EventArmorFullSet {
 				helmet = null;
 
 			DamageSource s = e.source;
-
-			//Netherite
-			if (boots == v.netheriteBoots && legs == v.netheriteLegs && body == v.netheriteBody && helmet == v.netheriteHelmet) {
-				if (s.equals(DamageSource.inFire) || s.equals(DamageSource.onFire)) {
-					e.setCanceled(true);
-				}
-			}
-
-			//Inferno
-			if (boots == v.infernoBoots && legs == v.infernoLegs && body == v.infernoBody && helmet == v.infernoHelmet) {
-				if (s.equals(DamageSource.inFire) || s.equals(DamageSource.onFire) || s.equals(DamageSource.lava)) {
-					e.setCanceled(true);
-				}
-			}
-
 
 			//Wither Reaper
 			if (boots == v.witherReaperBoots && legs == v.witherReaperLegs && body == v.witherReaperBody && helmet == v.witherReaperHelmet) {
@@ -523,6 +510,16 @@ public class EventArmorFullSet {
 		if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
 			ev.player.fallDistance = 0.0F;
 		}
+		
+		//Netherite & Inferno
+		if ((boots == v.netheriteBoots && legs == v.netheriteLegs && body == v.netheriteBody && helmet == v.netheriteHelmet) || (boots == v.infernoBoots && legs == v.infernoLegs && body == v.infernoBody && helmet == v.infernoHelmet)) {
+			ObfuscationReflectionHelper.setPrivateValue(Entity.class, ev.player, true, isImmuneToFire);
+		}
+		else {
+			ObfuscationReflectionHelper.setPrivateValue(Entity.class, ev.player, false, isImmuneToFire);
+		}
+		
+		
 	}   
 
 	@SubscribeEvent

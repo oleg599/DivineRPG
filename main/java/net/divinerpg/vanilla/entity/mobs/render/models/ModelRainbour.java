@@ -258,8 +258,8 @@ public class ModelRainbour extends ModelBase
       this.tail3.rotateAngleX = MathHelper.cos(par3 * 0.1F) * (float)Math.PI * 0.02F;
       this.tail4.rotateAngleX = MathHelper.cos(par3 * 0.1F) * (float)Math.PI * 0.02F;
       
-      //this.rfoot.rotateAngleX = -0.384F + MathHelper.cos(par1 * 0.0F) * 1.4F * par2;
-      //this.lfoot.rotateAngleX = -0.384F + MathHelper.cos(par1 * 0.0F) * 1.4F * par2;
+      //this.rfoot.rotateAngleX = -0.384F + 1.4F * par2;
+      //this.lfoot.rotateAngleX = -0.384F + 1.4F * par2;
   }
 
 }
