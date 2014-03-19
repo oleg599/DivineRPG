@@ -55,7 +55,7 @@ public class ArmorInformation {
 			list.add("Full Set: 80% Melee damage protection");
 		}
 		if(item.getItem() == v.krakenBody || item.getItem() == v.krakenBoots || item.getItem() == v.krakenHelmet || item.getItem() == v.krakenLegs){
-			list.add("Full Set: Breath under water");
+			list.add("Full Set: Breathe underwater");
 		}
 		if(item.getItem() == v.jackOManBody || item.getItem() == v.jackOManBoots || item.getItem() == v.jackOManHelmet || item.getItem() == v.jackOManLegs){
 			list.add("Full Set: 4x Scythe damage");
@@ -64,7 +64,7 @@ public class ArmorInformation {
 			list.add("Full Set: Fire protection");
 		}
 		if(item.getItem() == v.aquastriveBody || item.getItem() == v.aquastriveBoots || item.getItem() == v.aquastriveHelmet || item.getItem() == v.aquastriveLegs){
-			list.add("Full Set: Breath under water"); list.add("Full Set: Swim faster");
+			list.add("Full Set: Breathe underwater"); list.add("Full Set: Swim faster");
 		}
 		if(item.getItem() == v.shadowBody || item.getItem() == v.shadowBoots || item.getItem() == v.shadowHelmet || item.getItem() == v.shadowLegs){
 			list.add("Full Set: Move faster");

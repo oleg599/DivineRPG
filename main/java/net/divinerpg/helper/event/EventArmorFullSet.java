@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraftforge.client.GuiIngameForge;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
@@ -76,7 +77,7 @@ public class EventArmorFullSet {
 
 			//Bedrock
 			if (boots == v.bedrockBoots && legs == v.bedrockLegs && body == v.bedrockBody && helmet == v.bedrockHelmet) {
-				if (s.isExplosion() || s.equals(DamageSource.lava) || s.equals(DamageSource.inFire) || s.equals(DamageSource.onFire)) {
+				if (s.isExplosion()) {
 					e.setCanceled(true);
 				}
 			}
@@ -511,15 +512,32 @@ public class EventArmorFullSet {
 			ev.player.fallDistance = 0.0F;
 		}
 		
-		//Netherite & Inferno
-		if ((boots == v.netheriteBoots && legs == v.netheriteLegs && body == v.netheriteBody && helmet == v.netheriteHelmet) || (boots == v.infernoBoots && legs == v.infernoLegs && body == v.infernoBody && helmet == v.infernoHelmet)) {
+		//Netherite, Inferno, and Bedrock
+		if ((boots == v.netheriteBoots && legs == v.netheriteLegs && body == v.netheriteBody && helmet == v.netheriteHelmet) || (boots == v.infernoBoots && legs == v.infernoLegs && body == v.infernoBody && helmet == v.infernoHelmet) || (boots == v.bedrockBoots && legs == v.bedrockLegs && body == v.bedrockBody && helmet == v.bedrockHelmet)) {
 			ObfuscationReflectionHelper.setPrivateValue(Entity.class, ev.player, true, isImmuneToFire);
 		}
 		else {
 			ObfuscationReflectionHelper.setPrivateValue(Entity.class, ev.player, false, isImmuneToFire);
 		}
 		
-		
+		if(boots == v.aquastriveBoots && body == v.aquastriveBody && legs == v.aquastriveLegs && helmet == v.aquastriveHelmet){
+			float speed = 1F;
+			if(ev.player.isInWater())
+			{
+				speed = 1.15F;
+				if(ev.player.motionX > -speed && ev.player.motionX < speed)
+				{
+					ev.player.motionX *= 1.2;
+				}
+				if(ev.player.motionZ > -speed && ev.player.motionZ < speed)
+				{
+					ev.player.motionZ *= speed;
+				}
+			}
+			else {
+				speed = 1.15F;
+			}
+		}	
 	}   
 
 	@SubscribeEvent
