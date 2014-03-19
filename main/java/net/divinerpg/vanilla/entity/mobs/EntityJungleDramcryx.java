@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -13,15 +14,15 @@ public class EntityJungleDramcryx extends EntityDivineRPGMob {
 	}
 
 	protected String getLivingSound() {
-		return "";
+		return playSound(Sounds.Dramcryx);
 	}
 
 	protected String getHurtSound() {
-		return "";
+		return playSound(Sounds.DramcryxHurt);
 	}
 
 	protected String getDeathSound() {
-		return "";
+		return playSound(Sounds.DramcryxHurt);
 	}
 
 	protected void applyEntityAttributes() {

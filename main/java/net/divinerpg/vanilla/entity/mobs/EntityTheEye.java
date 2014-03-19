@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -30,7 +31,7 @@ public class EntityTheEye extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return "mob.RPG.TheEye";
+        return playSound(Sounds.TheEye);
     }
 
     /**
@@ -38,7 +39,7 @@ public class EntityTheEye extends EntityDivineRPGMob
      */
     protected String getHurtSound()
     {
-        return "mob.RPG.TheEyeHit";
+        return playSound(Sounds.TheEyeHurt);
     }
 
     /**
@@ -46,7 +47,7 @@ public class EntityTheEye extends EntityDivineRPGMob
      */
     protected String getDeathSound()
     {
-        return "mob.RPG.TheEyeHit";
+        return playSound(Sounds.TheEyeHurt);
     }
 
     protected void applyEntityAttributes() {

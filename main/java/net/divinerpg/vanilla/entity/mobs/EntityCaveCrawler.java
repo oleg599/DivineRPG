@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -8,27 +9,23 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class EntityCaveCrawler extends EntityDivineRPGMob
-{
-    public EntityCaveCrawler(World par1World)
-    {
+public class EntityCaveCrawler extends EntityDivineRPGMob {
+	
+    public EntityCaveCrawler(World par1World) {
         super(par1World);
         this.setSize(1.5F, 2.0F);
     }
 
-    protected String getLivingSound()
-    {
-        return "";
+    protected String getLivingSound() {
+        return playSound(Sounds.Crawler);
     }
 
-    protected String getHurtSound()
-    {
-        return "";
+    protected String getHurtSound() {
+        return playSound(Sounds.CrawlerHurt);
     }
 
-    protected String getDeathSound()
-    {
-        return "";
+    protected String getDeathSound() {
+        return playSound(Sounds.CrawlerHurt);
     }
 
 	protected void applyEntityAttributes() {
@@ -42,10 +39,8 @@ public class EntityCaveCrawler extends EntityDivineRPGMob
         return VanillaItemsOther.realmiteIngot;
     }
 
-    protected void dropRareDrop(int par1)
-    {
-        switch (this.rand.nextInt(1))
-        {
+    protected void dropRareDrop(int par1) {
+        switch (this.rand.nextInt(1)) {
             case 0:
                 this.entityDropItem(new ItemStack(Items.potionitem, 1, 8196), 0.0F);
                 break;
@@ -53,14 +48,12 @@ public class EntityCaveCrawler extends EntityDivineRPGMob
     }
 
     @Override
-    protected boolean isValidLightLevel()
-    {
+    protected boolean isValidLightLevel() {
         return true;
     }
 
     @Override
-    public boolean getCanSpawnHere()
-    {
+    public boolean getCanSpawnHere() {
         return this.posY < 35.0D && super.getCanSpawnHere();
     }
 

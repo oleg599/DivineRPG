@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.init.Blocks;
@@ -22,17 +23,17 @@ public class EntityDesertCrawler extends EntityDivineRPGMob
 
     protected String getLivingSound()
     {
-        return "";
+        return playSound(Sounds.Crawler);
     }
 
     protected String getHurtSound()
     {
-        return "";
+        return playSound(Sounds.CrawlerHurt);
     }
 
     protected String getDeathSound()
     {
-        return "";
+        return playSound(Sounds.CrawlerHurt);
     }
 
     protected Item getDropItem() {

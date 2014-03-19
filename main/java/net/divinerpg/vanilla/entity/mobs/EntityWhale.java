@@ -2,6 +2,7 @@ package net.divinerpg.vanilla.entity.mobs;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.block.material.Material;
@@ -40,7 +41,7 @@ public class EntityWhale extends EntityDivineRPGMob {
 	 */
 	protected String getLivingSound()
 	{
-		return "mob.RPG.whale";
+		return playSound(Sounds.Whale);
 	}
 
 	/**
@@ -48,7 +49,7 @@ public class EntityWhale extends EntityDivineRPGMob {
 	 */
 	protected String getHurtSound()
 	{
-		return "mob.RPG.whalehurt";
+		return playSound(Sounds.WhaleHurt);
 	}
 
 	/**
@@ -56,7 +57,7 @@ public class EntityWhale extends EntityDivineRPGMob {
 	 */
 	protected String getDeathSound()
 	{
-		return "mob.RPG.whalehurt";
+		return playSound(Sounds.WhaleHurt);
 	}
 
 	/**
@@ -65,14 +66,6 @@ public class EntityWhale extends EntityDivineRPGMob {
 	protected float getSoundVolume()
 	{
 		return 0.4F;
-	}
-
-	/**
-	 * Returns the item ID for the item the mob drops on death.
-	 */
-	protected int getDropItemId()
-	{
-		return 0;
 	}
 
 	/**
@@ -141,7 +134,7 @@ public class EntityWhale extends EntityDivineRPGMob {
 	/**
 	 * Called when the entity is attacked.
 	 */
-	public boolean attackEntityFrom(DamageSource var1, int var2)
+	public boolean attackEntityFrom(DamageSource var1, float var2)
 	{
 		Entity var3 = var1.getEntity();
 

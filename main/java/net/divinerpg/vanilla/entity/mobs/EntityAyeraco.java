@@ -2,6 +2,7 @@ package net.divinerpg.vanilla.entity.mobs;
 
 import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
+import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.vanilla.entity.projectiles.EntityTripletProjectile;
 import net.minecraft.entity.Entity;
@@ -82,7 +83,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     @Override
     protected String getLivingSound()
     {
-        return Sounds.Ayeraco;
+        return playSound(Sounds.Ayeraco);
     }
 
     /**
@@ -91,7 +92,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     @Override
     protected String getHurtSound()
     {
-        return Sounds.AyeracoHit;
+        return playSound(Sounds.AyeracoHurt);
     }
 
     /**
@@ -100,10 +101,8 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     @Override
     protected String getDeathSound()
     {
-        return Sounds.AyeracoHit;
+        return playSound(Sounds.AyeracoHurt);
     }
-
-    protected void func_85033_bc() {}
 
     /**
      * Called to update the entity's position/logic.
@@ -203,10 +202,8 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     @Override
     protected void updateFallState(double par1, boolean par3) {}
 
-    /**
-     * Called when the entity is attacked.
-     */
-    public boolean attackEntityFrom(DamageSource par1DamageSource, int par2)
+    @Override
+    public boolean attackEntityFrom(DamageSource par1DamageSource, float par2)
     {
         if (this.isEntityInvulnerable())
             return false;
@@ -233,24 +230,24 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
         this.dropItem(VanillaItemsOther.divineShards, 2 + this.rand.nextInt(2));
         if (this.rand.nextInt(100) < 2)
         {
-            /*switch (this.rand.nextInt(2))
+            switch (this.rand.nextInt(2))
             {
                 case 0:
-                    this.dropItem(VanillaItems.divineBody, 1);
+                    this.dropItem(VanillaItemsArmor.divineBody, 1);
                 case 1:
-                    this.dropItem(VanillaItems.divineLegs, 1);
-            }*/
+                    this.dropItem(VanillaItemsArmor.divineLegs, 1);
+            }
         }
 
         if (this.rand.nextInt(100) < 5)
         {
-            //this.dropItem(VanillaItems.divineBoots, 1);
+            this.dropItem(VanillaItemsArmor.divineBoots, 1);
         }
 
 
         if (this.rand.nextInt(100) < 3)
         {
-            //this.dropItem(VanillaItems.divineHelmet, 1);
+            this.dropItem(VanillaItemsArmor.divineHelmet, 1);
         }
     }
 

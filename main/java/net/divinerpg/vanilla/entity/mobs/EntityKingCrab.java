@@ -99,15 +99,15 @@ public class EntityKingCrab extends EntityDivineRPGMob
     }
 
     protected String getLivingSound() {
-		return Sounds.playSound(Sounds.Crab, worldObj, this, 1, 1);
+		return playSound(Sounds.Crab);
 	}
 
 	protected String getHurtSound() {
-		return Sounds.playSound(Sounds.CrabHurt, worldObj, this, 1, 1);
+		return playSound(Sounds.CrabHurt);
 	}
 
 	protected String getDeathSound() {
-		return Sounds.playSound(Sounds.CrabHurt, worldObj, this, 1, 1);
+		return playSound(Sounds.CrabHurt);
 	}
 
     protected void dropFewItems(boolean var1, int var2)

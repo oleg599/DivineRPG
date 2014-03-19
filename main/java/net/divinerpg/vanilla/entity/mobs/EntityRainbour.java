@@ -2,6 +2,7 @@ package net.divinerpg.vanilla.entity.mobs;
 
 import java.util.Calendar;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGFlying;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
@@ -179,7 +180,7 @@ public class EntityRainbour extends EntityDivineRPGMob
 	 */
 	protected String getLivingSound()
 	{
-		return "mob.RPG.Rainbour";
+		return playSound(Sounds.Rainbour);
 	}
 
 	/**
@@ -187,7 +188,7 @@ public class EntityRainbour extends EntityDivineRPGMob
 	 */
 	protected String getHurtSound()
 	{
-		return "mob.RPG.RainbourHit";
+		return playSound(Sounds.RainbourHurt);
 	}
 
 	/**
@@ -195,7 +196,7 @@ public class EntityRainbour extends EntityDivineRPGMob
 	 */
 	protected String getDeathSound()
 	{
-		return "mob.RPG.RainbourHit";
+		return playSound(Sounds.RainbourHurt);
 	}
 
 	/**

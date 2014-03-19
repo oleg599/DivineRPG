@@ -2,6 +2,7 @@ package net.divinerpg.vanilla.entity.mobs;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.Entity;
@@ -91,15 +92,15 @@ public class EntityCyclops extends EntityDivineRPGMob {
 	}
 
 	protected String getLivingSound() {
-		return "";
+		return playSound(Sounds.Cyclops);
 	}
 
 	protected String getHurtSound() {
-		return "";
+		return playSound(Sounds.cyclopsHit);
 	}
 
 	protected String getDeathSound() {
-		return "";
+		return playSound(Sounds.cyclopsHit);
 	}
 
 	protected void dropFewItems(boolean var1, int var2) {

@@ -17,6 +17,7 @@ import net.divinerpg.vanilla.entity.mobs.EntityAyeracoPurple;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoRed;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoYellow;
 import net.divinerpg.vanilla.entity.mobs.EntityCaveCrawler;
+import net.divinerpg.vanilla.entity.mobs.EntityCaveclops;
 import net.divinerpg.vanilla.entity.mobs.EntityCorruptedDramcryx;
 import net.divinerpg.vanilla.entity.mobs.EntityCrab;
 import net.divinerpg.vanilla.entity.mobs.EntityCyclops;
@@ -80,6 +81,7 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityDesertCrawler.class, new RenderDivineMob(new ModelCrawler(), 0.0F, EntityResourceLocation.desertCrawler));
 		RenderingRegistry.registerEntityRenderingHandler(EntityJungleDramcryx.class, new RenderDivineMob(new ModelDramcryx(), 0.0F, EntityResourceLocation.jungleDramcryx));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCyclops.class, new RenderSizeable(new ModelBiped(), 0.0F, 2.0F, EntityResourceLocation.cyclops));
+		RenderingRegistry.registerEntityRenderingHandler(EntityCaveclops.class, new RenderSizeable(new ModelBiped(), 0.0F, 2.0F, EntityResourceLocation.caveclops));
 		RenderingRegistry.registerEntityRenderingHandler(EntityAncientEntity.class, new RenderSizeable(new ModelAncientEntity(), 0.0F, 5.0F, EntityResourceLocation.ancient));
 		RenderingRegistry.registerEntityRenderingHandler(EntityWhale.class, new RenderSizeable(new ModelWhale(), 0.0F, 5.0F, EntityResourceLocation.whale));
 		RenderingRegistry.registerEntityRenderingHandler(EntityScorcher.class, new RenderSizeable(new ModelScorcher(), 0.0F, 1.8F, EntityResourceLocation.scorcher));

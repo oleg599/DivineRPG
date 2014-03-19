@@ -1,11 +1,13 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
+import net.divinerpg.api.entity.EntityDivineRPGFlying;
 import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityFlying;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.monster.IMob;
@@ -17,7 +19,7 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class EntityNetherWatcher extends EntityFlying implements IMob, IBossDisplayData
+public class EntityNetherWatcher extends EntityDivineRPGFlying implements IMob, IBossDisplayData
 {
 	public int courseChangeCooldown = 0;
 	public double waypointX;
@@ -176,64 +178,30 @@ public class EntityNetherWatcher extends EntityFlying implements IMob, IBossDisp
 		 return true;
 	 }
 
-	 /**
-	  * Returns the sound this mob makes when it is hurt.
-	  */
-	 protected String getHurtSound()
-	 {
-		 return "mob.RPG.roar";
+	 protected String getHurtSound() {
+		 return playSound(Sounds.Roar);
 	 }
 
-	 /**
-	  * Returns the sound this mob makes on death.
-	  */
-	 protected String getDeathSound()
-	 {
-		 return "mob.RPG.roar";
+	 protected String getDeathSound() {
+		 return playSound(Sounds.Roar);
 	 }
 
-	 /**
-	  * Will return how many at most can spawn in a chunk at once.
-	  */
-	 public int getMaxSpawnedInChunk()
-	 {
-		 return 1;
-	 }
-
-	 /**
-	  * Returns the item ID for the item the mob drops on death.
-	  */
-	 protected Item getDropItem()
-	 {
+	 protected Item getDropItem() {
 		 return VanillaItemsOther.netheriteIngot;
 	 }
 
-	 /**
-	  * Drop 0-2 items of this living's type
-	  */
-	 protected void dropFewItems(boolean var1, int var2)
-	 {
+	 protected void dropFewItems(boolean var1, int var2) {
 		 this.dropItem(VanillaItemsOther.netheriteIngot, 100);
 		 int var3 = this.rand.nextInt(4);
 		 this.dropItem(VanillaItemsOther.blueFireStone, 1);
 
-		 for (int var4 = 0; var4 < 3 + var3; ++var4)
-		 {
+		 for (int var4 = 0; var4 < 3 + var3; ++var4) {
 			 this.dropItem(VanillaItemsOther.divineShards, 1);
 		 }
 
-		 if (this.rand.nextInt(3) == 0)
-		 {
-			 //this.dropItem(VanillaBlocks.watcherStatue, 1);
+		 if (this.rand.nextInt(3) == 0) {
+			 this.dropItem(Item.getItemFromBlock(VanillaBlocks.WatcherStatue), 1);
 		 }
-	 }
-
-	 /**
-	  * Returns the health points of the dragon.
-	  */
-	 public int getDragonHealth()
-	 {
-		 return this.dataWatcher.getWatchableObjectInt(16);
 	 }
 
 	 public void onDeath(DamageSource d) {
@@ -245,4 +213,9 @@ public class EntityNetherWatcher extends EntityFlying implements IMob, IBossDisp
 			 }
 		 }
 	 }
+
+	@Override
+	public String mobName() {
+		return "Nether Watcher";
+	}
 }

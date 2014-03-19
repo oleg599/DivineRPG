@@ -9,6 +9,7 @@ import net.divinerpg.vanilla.entity.mobs.EntityAyeracoPurple;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoRed;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoYellow;
 import net.divinerpg.vanilla.entity.mobs.EntityCaveCrawler;
+import net.divinerpg.vanilla.entity.mobs.EntityCaveclops;
 import net.divinerpg.vanilla.entity.mobs.EntityCorruptedDramcryx;
 import net.divinerpg.vanilla.entity.mobs.EntityCrab;
 import net.divinerpg.vanilla.entity.mobs.EntityCyclops;
@@ -44,6 +45,7 @@ public class OverworldMobRegistry {
 		DivineAPI.registerDivineRPGMob(EntityCaveCrawler.class, "Cave Crawler");		
 		DivineAPI.registerDivineRPGMob(EntityJungleDramcryx.class, "Jungle Dramcryx");		
 		DivineAPI.registerDivineRPGMob(EntityCyclops.class, "Cyclops");		
+		DivineAPI.registerDivineRPGMob(EntityCaveclops.class, "Caveclops");		
 		DivineAPI.registerDivineRPGMob(EntityAncientEntity.class, "Ancient Entity");		
 		DivineAPI.registerDivineRPGMob(EntityWhale.class, "Whale");	
 		DivineAPI.registerDivineRPGMob(EntityHellSpider.class, "Hell Spider");	

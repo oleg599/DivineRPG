@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.EntityLivingBase;
@@ -49,7 +50,7 @@ public class EntityCaveclops extends EntityDivineRPGMob implements IRangedAttack
      */
     protected String getLivingSound()
     {
-        return "mob.RPG.Cyclops";
+        return playSound(Sounds.Cyclops);
     }
 
     /**
@@ -57,7 +58,7 @@ public class EntityCaveclops extends EntityDivineRPGMob implements IRangedAttack
      */
     protected String getHurtSound()
     {
-        return "mob.RPG.CyclopsHit";
+        return playSound(Sounds.cyclopsHit);
     }
 
     /**
@@ -65,7 +66,7 @@ public class EntityCaveclops extends EntityDivineRPGMob implements IRangedAttack
      */
     protected String getDeathSound()
     {
-        return "mob.RPG.CyclopsHit";
+        return playSound(Sounds.cyclopsHit);
     }
 
     /**
