@@ -2,7 +2,10 @@ package net.divinerpg.helper.event;
 
 import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsArmor;
+import net.minecraft.block.material.Material;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -23,7 +26,9 @@ public class EventArmorFullSet {
 	private Item body = null;
 	private Item legs = null;
 	private Item helmet = null;
+	
 	public static final String[] isImmuneToFire	= new String[] {"ag","field_70178_ae", "isImmuneToFire"};
+	public static final String[] isJumping 				= new String[] { "bd","field_70703_bu", "isJumping" 			};
 	
 	private VanillaItemsArmor v;
 	private TwilightItemsArmor t;
@@ -522,20 +527,26 @@ public class EventArmorFullSet {
 		
 		if(boots == v.aquastriveBoots && body == v.aquastriveBody && legs == v.aquastriveLegs && helmet == v.aquastriveHelmet){
 			float speed = 1F;
+			boolean isJumping = false;
+			isJumping = (Boolean)ObfuscationReflectionHelper.getPrivateValue(EntityLivingBase.class, ev.player, this.isJumping);
+			
 			if(ev.player.isInWater())
 			{
-				speed = 1.15F;
-				if(ev.player.motionX > -speed && ev.player.motionX < speed)
-				{
-					ev.player.motionX *= 1.2;
+				if(!ev.player.isSneaking() && !isJumping) {
+					int j = EnchantmentHelper.getRespiration(ev.player);
+					speed = 1.15F;
+					if(ev.player.motionX > -speed && ev.player.motionX < speed) {
+						ev.player.motionX *= speed;
+						ev.player.motionY = 0F;
+					}
+					if(ev.player.motionZ > -speed && ev.player.motionZ < speed) {
+						ev.player.motionZ *= speed;
+						ev.player.motionY = 0F;
+					}
 				}
-				if(ev.player.motionZ > -speed && ev.player.motionZ < speed)
-				{
-					ev.player.motionZ *= speed;
+				else if (isJumping || ev.player.isSneaking()) {
+					ev.player.motionY *= speed;
 				}
-			}
-			else {
-				speed = 1.15F;
 			}
 		}	
 	}   
