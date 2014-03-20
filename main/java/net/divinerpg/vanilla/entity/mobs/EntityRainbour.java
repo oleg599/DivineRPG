@@ -2,6 +2,8 @@ package net.divinerpg.vanilla.entity.mobs;
 
 import java.util.Calendar;
 
+import net.divinerpg.Sounds;
+import net.divinerpg.api.entity.EntityDivineRPGFlying;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.vanilla.entity.projectiles.EntitySparklerFX;
@@ -25,7 +27,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityRainbour extends EntityDivineRPGMob
 {
-	private ChunkCoordinates currentFlightTarget;
+	private ChunkCoordinates spawnPosition;
 
 	public EntityRainbour(World par1World)
 	{
@@ -48,13 +50,12 @@ public class EntityRainbour extends EntityDivineRPGMob
 		return true;
 	}
 
-	public void entityInit()
-	{
-		super.entityInit();
-		this.dataWatcher.addObject(17, "");
-		this.dataWatcher.addObject(16, new Byte((byte)0));
-	}
-
+    protected void entityInit()
+    {
+        super.entityInit();
+        this.dataWatcher.addObject(16, new Byte((byte)0));
+    }
+	
 	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
@@ -63,55 +64,123 @@ public class EntityRainbour extends EntityDivineRPGMob
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(33.0D);
 	}
 
-	/**
-	 * Returns the current armor value as determined by a call to InventoryPlayer.getTotalArmorValue
-	 */
-	public int getTotalArmorValue()
-	{
-		return 0;
-	}
+	protected void collideWithEntity(Entity par1Entity) {}
 
-	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
-	 */
-	public void writeEntityToNBT(NBTTagCompound par1NBTTagCompound)
-	{
-		super.writeEntityToNBT(par1NBTTagCompound);
-		par1NBTTagCompound.setByte("BatFlags", this.dataWatcher.getWatchableObjectByte(16));
-	}
+    protected void collideWithNearbyEntities() {}
 
-	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
-	 */
-	public void readEntityFromNBT(NBTTagCompound par1NBTTagCompound)
-	{
-		super.readEntityFromNBT(par1NBTTagCompound);
+    public boolean getIsBatHanging()
+    {
+        return (this.dataWatcher.getWatchableObjectByte(16) & 1) != 0;
+    }
 
-		this.dataWatcher.updateObject(16, Byte.valueOf(par1NBTTagCompound.getByte("BatFlags")));
-	}
+    public void setIsBatHanging(boolean par1)
+    {
+        byte b0 = this.dataWatcher.getWatchableObjectByte(16);
 
-	/**
-	 * Returns the volume for the sounds this mob makes.
-	 */
-	protected float getSoundVolume()
-	{
-		return 0.1F;
-	}
+        if (par1)
+        {
+            this.dataWatcher.updateObject(16, Byte.valueOf((byte)(b0 | 1)));
+        }
+        else
+        {
+            this.dataWatcher.updateObject(16, Byte.valueOf((byte)(b0 & -2)));
+        }
+    }
+    
+    public void readEntityFromNBT(NBTTagCompound par1NBTTagCompound)
+    {
+        super.readEntityFromNBT(par1NBTTagCompound);
+        this.dataWatcher.updateObject(16, Byte.valueOf(par1NBTTagCompound.getByte("BatFlags")));
+    }
 
-	/**
-	 * Gets the pitch of living sounds in living entities.
-	 */
-	protected float getSoundPitch()
-	{
-		return super.getSoundPitch() * 0.95F;
-	}
+    /**
+     * (abstract) Protected helper method to write subclass entity data to NBT.
+     */
+    public void writeEntityToNBT(NBTTagCompound par1NBTTagCompound)
+    {
+        super.writeEntityToNBT(par1NBTTagCompound);
+        par1NBTTagCompound.setByte("BatFlags", this.dataWatcher.getWatchableObjectByte(16));
+    }
+
+    /**
+     * Called to update the entity's position/logic.
+     */
+    public void onUpdate()
+    {
+        super.onUpdate();
+
+        if (this.getIsBatHanging())
+        {
+            this.motionX = this.motionY = this.motionZ = 0.0D;
+            this.posY = (double)MathHelper.floor_double(this.posY) + 1.0D - (double)this.height;
+        }
+        else
+        {
+            this.motionY *= 0.6000000238418579D;
+        }
+    }
+
+    protected void updateAITasks()
+    {
+        super.updateAITasks();
+
+        if (this.getIsBatHanging())
+        {
+            if (!this.worldObj.getBlock(MathHelper.floor_double(this.posX), (int)this.posY + 1, MathHelper.floor_double(this.posZ)).isNormalCube())
+            {
+                this.setIsBatHanging(false);
+                this.worldObj.playAuxSFXAtEntity((EntityPlayer)null, 1015, (int)this.posX, (int)this.posY, (int)this.posZ, 0);
+            }
+            else
+            {
+                if (this.rand.nextInt(200) == 0)
+                {
+                    this.rotationYawHead = (float)this.rand.nextInt(360);
+                }
+
+                if (this.worldObj.getClosestPlayerToEntity(this, 4.0D) != null)
+                {
+                    this.setIsBatHanging(false);
+                    this.worldObj.playAuxSFXAtEntity((EntityPlayer)null, 1015, (int)this.posX, (int)this.posY, (int)this.posZ, 0);
+                }
+            }
+        }
+        else
+        {
+            if (this.spawnPosition != null && (!this.worldObj.isAirBlock(this.spawnPosition.posX, this.spawnPosition.posY, this.spawnPosition.posZ) || this.spawnPosition.posY < 1))
+            {
+                this.spawnPosition = null;
+            }
+
+            if (this.spawnPosition == null || this.rand.nextInt(30) == 0 || this.spawnPosition.getDistanceSquared((int)this.posX, (int)this.posY, (int)this.posZ) < 4.0F)
+            {
+                this.spawnPosition = new ChunkCoordinates((int)this.posX + this.rand.nextInt(7) - this.rand.nextInt(7), (int)this.posY + this.rand.nextInt(6) - 2, (int)this.posZ + this.rand.nextInt(7) - this.rand.nextInt(7));
+            }
+
+            double d0 = (double)this.spawnPosition.posX + 0.5D - this.posX;
+            double d1 = (double)this.spawnPosition.posY + 0.1D - this.posY;
+            double d2 = (double)this.spawnPosition.posZ + 0.5D - this.posZ;
+            this.motionX += (Math.signum(d0) * 0.5D - this.motionX) * 0.10000000149011612D;
+            this.motionY += (Math.signum(d1) * 0.699999988079071D - this.motionY) * 0.10000000149011612D;
+            this.motionZ += (Math.signum(d2) * 0.5D - this.motionZ) * 0.10000000149011612D;
+            float f = (float)(Math.atan2(this.motionZ, this.motionX) * 180.0D / Math.PI) - 90.0F;
+            float f1 = MathHelper.wrapAngleTo180_float(f - this.rotationYaw);
+            this.moveForward = 0.5F;
+            this.rotationYaw += f1;
+
+            if (this.rand.nextInt(100) == 0 && this.worldObj.getBlock(MathHelper.floor_double(this.posX), (int)this.posY + 1, MathHelper.floor_double(this.posZ)).isNormalCube())
+            {
+                this.setIsBatHanging(true);
+            }
+        }
+    }
 
 	/**
 	 * Returns the sound this mob makes while it's alive.
 	 */
 	protected String getLivingSound()
 	{
-		return "mob.RPG.Rainbour";
+		return playSound(Sounds.rainbour);
 	}
 
 	/**
@@ -119,7 +188,7 @@ public class EntityRainbour extends EntityDivineRPGMob
 	 */
 	protected String getHurtSound()
 	{
-		return "mob.RPG.RainbourHit";
+		return playSound(Sounds.rainbourHurt);
 	}
 
 	/**
@@ -127,7 +196,7 @@ public class EntityRainbour extends EntityDivineRPGMob
 	 */
 	protected String getDeathSound()
 	{
-		return "mob.RPG.RainbourHit";
+		return playSound(Sounds.rainbourHurt);
 	}
 
 	/**
@@ -136,83 +205,6 @@ public class EntityRainbour extends EntityDivineRPGMob
 	public boolean canBePushed()
 	{
 		return false;
-	}
-
-	protected void collideWithEntity(Entity par1Entity) {}
-
-	protected void func_85033_bc() {}
-
-	public boolean getIsBatHanging()
-	{
-		return (this.dataWatcher.getWatchableObjectByte(16) & 1) != 0;
-	}
-
-	public void setIsBatHanging(boolean par1)
-	{
-		byte var2 = this.dataWatcher.getWatchableObjectByte(16);
-
-		if (par1)
-		{
-			this.dataWatcher.updateObject(16, Byte.valueOf((byte)(var2 | 1)));
-		}
-		else
-		{
-			this.dataWatcher.updateObject(16, Byte.valueOf((byte)(var2 & -2)));
-		}
-	}
-
-	/**
-	 * Called to update the entity's position/logic.
-	 */
-	public void onUpdate()
-	{
-		super.onUpdate();
-
-		if (this.getIsBatHanging())
-		{
-			this.motionX = this.motionY = this.motionZ = 0.0D;
-			this.posY = (double)MathHelper.floor_double(this.posY) + 1.0D - (double)this.height;
-		}
-		else
-		{
-			this.motionY *= 0.6000000238418579D;
-		}
-	}
-
-	protected void updateAITasks()
-	{
-		super.updateAITasks();
-
-		if (this.getAttackTarget() != null)
-		{
-			int var1 = (int) this.getAttackTarget().posX;
-			int var2 = (int) this.getAttackTarget().posY;
-			int var3 = (int) this.getAttackTarget().posZ;
-			this.currentFlightTarget = new ChunkCoordinates(var1, var2, var3);
-		}
-		else if (this.currentFlightTarget != null)
-		{
-			this.currentFlightTarget = new ChunkCoordinates((int)(this.posX + this.rand.nextInt(16)), (int)(this.posY + this.rand.nextInt(16)), (int)(this.posZ + this.rand.nextInt(16)));
-		}
-
-		if (this.currentFlightTarget != null)
-		{
-			double var1 = (double)this.currentFlightTarget.posX - this.posX;
-			double var3 = (double)this.currentFlightTarget.posY - this.posY;
-			double var5 = (double)this.currentFlightTarget.posZ - this.posZ;
-
-			if (Math.signum(var1) != 0 || Math.signum(var3) != 0 || Math.signum(var5) != 0)
-			{
-				this.motionX += (Math.signum(var1) * 0.5D - this.motionX) * 0.10000000149011612D;
-				this.motionY += (Math.signum(var3) * 1.699999988079071D - this.motionY) * 0.10000000149011612D;
-				this.motionZ += (Math.signum(var5) * 0.5D - this.motionZ) * 0.10000000149011612D;
-				float var7 = (float)(Math.atan2(this.motionZ, this.motionX) * 180.0D / Math.PI) - 90.0F;
-				float var8 = MathHelper.wrapAngleTo180_float(var7 - this.rotationYaw);
-				this.moveForward = 0.5F;
-				this.rotationYaw += var8;
-			}
-		}
-
 	}
 
 	protected void dropFewItems(boolean var1, int var2) {

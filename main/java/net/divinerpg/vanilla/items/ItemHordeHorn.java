@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.items;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
@@ -33,7 +34,7 @@ public class ItemHordeHorn extends ItemMod {
             
             if (var3.provider.dimensionId == 1) {
     			if (this.spawnTick == 600) {
-    				//var3.playSoundAtEntity(var2, Sounds.AyeracoSpawn, 20.0F, 1.0F);
+    				var3.playSoundAtEntity(var2, Sounds.ayeracoSpawn, 20.0F, 1.0F);
     				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "The Green Ayeraco had been called upon!"));
     			}
     			else if (this.spawnTick == 430) {
@@ -59,7 +60,6 @@ public class ItemHordeHorn extends ItemMod {
     		} else {
     	        var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "The Ayeraco Horde can only be spawned in the End"));
     		}
-            
             return false;
         }
     }

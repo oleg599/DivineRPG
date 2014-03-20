@@ -49,15 +49,15 @@ public class EntityAridWarrior extends EntityDivineRPGMob implements IRangedAtta
 	}
 
     protected String getLivingSound() {
-        return Sounds.AridWarrior;
+    	 return playSound(Sounds.aridWarrior);
     }
 
     protected String getHurtSound() {
-        return Sounds.AridWarriorHurt;
+    	 return playSound(Sounds.aridWarriorHurt);
     }
 
     protected String getDeathSound() {
-        return Sounds.AridWarriorHurt;
+        return playSound(Sounds.aridWarriorHurt);
     }
 
     public boolean isAIEnabled() {

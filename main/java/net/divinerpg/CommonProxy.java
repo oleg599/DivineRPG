@@ -24,6 +24,7 @@ import net.divinerpg.helper.recipes.TwilightRecipeHelper;
 import net.divinerpg.helper.recipes.VanillaRecipeHelper;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
+import net.divinerpg.twilight.entity.mob.model.block.TileEntityStatue;
 import net.divinerpg.vethea.blocks.tileentity.TileEntityInfusionTable;
 import net.divinerpg.worldgen.WorldGenOverworld;
 import net.minecraft.command.CommandHandler;
@@ -53,6 +54,7 @@ public class CommonProxy{
 		System.out.println("[DIVINE RPG] REGISTERING TILE ENTITIES");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		GameRegistry.registerTileEntity(TileEntityInfusionTable.class, "Infusion Table");
+		GameRegistry.registerTileEntity(TileEntityStatue.class, "Statue");
 		System.out.println("[DIVINE RPG] ADDING CONFIGURATIONS");
 		ConfigurationHelper.init();
 		System.out.println("[DIVINE RPG] ADDING MOBS");

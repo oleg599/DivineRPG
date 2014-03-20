@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -106,7 +107,7 @@ public class EntityHellSpider extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return "mob.RPG.Hellspider";
+        return playSound(Sounds.hellSpider);
     }
 
     /**
@@ -114,7 +115,7 @@ public class EntityHellSpider extends EntityDivineRPGMob
      */
     protected String getHurtSound()
     {
-        return "mob.spider";
+        return "mob.spider.say";
     }
 
     /**
@@ -122,7 +123,7 @@ public class EntityHellSpider extends EntityDivineRPGMob
      */
     protected String getDeathSound()
     {
-        return "mob.spiderdeath";
+        return "mob.spider.death";
     }
 
     /**

@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.IceikaItems;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -66,27 +67,24 @@ public class EntityGlacon extends EntityDivineRPGMob
      * Returns the sound this mob makes while it's alive.
      */
     @Override
-    protected String getLivingSound()
-    {
-        return "";//Sound.Glacide;
+    protected String getLivingSound() {
+        return playSound(Sounds.glacide);
     }
 
     /**
      * Returns the sound this mob makes when it is hurt.
      */
     @Override
-    protected String getHurtSound()
-    {
-        return "";//Sound.GlacideHit;
+    protected String getHurtSound() {
+        return playSound(Sounds.glacideHurt);
     }
 
     /**
      * Returns the sound this mob makes on death.
      */
     @Override
-    protected String getDeathSound()
-    {
-        return "";//Sound.GlacideHit;
+    protected String getDeathSound() {
+        return playSound(Sounds.glacideHurt);
     }
 
     @Override

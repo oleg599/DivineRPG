@@ -1,5 +1,6 @@
 package net.divinerpg.api.entity;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.vethea.entity.EntityTwins;
@@ -39,6 +40,10 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 	public void getKnockbackResistance(){getEntityAttribute(SharedMonsterAttributes.knockbackResistance).getAttributeValue();}
 
 	public abstract String mobName();	
+	
+	public String playSound(String sounds){
+		return Sounds.playSound(sounds, worldObj, this);
+	}
 
 	public void onDeath(DamageSource d) {
 		super.onDeath(d);
@@ -47,14 +52,12 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 			if(ConfigurationHelper.canShowDeathChat || d.getSourceOfDamage() instanceof EntityPlayer){
 				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A " + mobName() + "."));
 			}
-		}
+		
 		if(d.getEntity() instanceof EntityTwins){
-			if(!worldObj.isRemote){
 				if(ConfigurationHelper.canShowDeathChat || d.getSourceOfDamage() instanceof EntityPlayer){
 					p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain The " + mobName() + "."));
 				}
 			}
 		}
-		
 	}
 }

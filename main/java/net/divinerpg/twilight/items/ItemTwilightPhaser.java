@@ -3,8 +3,10 @@ package net.divinerpg.twilight.items;
 import java.util.List;
 
 import net.divinerpg.Reference;
+import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.divinerpg.twilight.entity.projectile.EntityPhaserApalachia;
 import net.divinerpg.twilight.entity.projectile.EntityPhaserEden;
@@ -26,7 +28,6 @@ public class ItemTwilightPhaser extends ItemMod {
 	private int firetick;
 	private int firemax;
 	private String firesound;
-	private String reloadsound;
 	String name;
 
 	public ItemTwilightPhaser(int var2, int var3) {
@@ -34,12 +35,10 @@ public class ItemTwilightPhaser extends ItemMod {
 		this.damage = var2;
         this.firemax = var3;
         this.firetick = this.firemax;
-        //this.firesound = this.firesound;
-        //this.reloadsound = this.firesound;
-        this.firesound = "";
-        this.reloadsound = "";
+        this.firesound = Sounds.phaser;
         this.setMaxStackSize(1);
         this.setMaxDamage(3000);
+        setCreativeTab(DivineRPGTabs.ranged);
 	}
 
 	@Override

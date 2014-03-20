@@ -12,15 +12,6 @@ import net.divinerpg.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
-
-/**
- * <strong>Project:</strong> DivineRPG <br>
- *
- * <strong>Class:</strong> LangRegistry
- *
- * @author <a href = "http://youtube.com/BossLetsPlays"> BossLetsPlays</a>
- *
- */
 public class LangRegistry {
 
 	private static ArrayList<Block> blocks   = new ArrayList<Block>();

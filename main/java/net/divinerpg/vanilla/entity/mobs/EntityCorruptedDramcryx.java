@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -17,7 +18,7 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return "mob.RPG.Dramcryx";
+        return playSound(Sounds.dramcryx);
     }
 
     /**
@@ -25,7 +26,7 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
      */
     protected String getHurtSound()
     {
-        return "mob.RPG.DramcryxHit";
+        return playSound(Sounds.dramcryxHurt);
     }
 
     /**
@@ -33,7 +34,7 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
      */
     protected String getDeathSound()
     {
-        return "mob.RPG.DramcryxHit";
+        return playSound(Sounds.dramcryxHurt);
     }
     
 	protected void applyEntityAttributes() {

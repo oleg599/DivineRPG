@@ -2,6 +2,7 @@ package net.divinerpg.vethea.items;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.vethea.entity.projectile.EntityEvernightProjectile;
 import net.minecraft.entity.player.EntityPlayer;
@@ -30,7 +31,7 @@ public class ItemEvernight extends ItemStaff {
     public ItemStack onItemRightClick(ItemStack par1, World par2, EntityPlayer par3) {
         if (!par2.isRemote /*&& ArcanaHelper.useBar(par3, this.cost)*/) {
             par3.attackEntityFrom(new EntityDamageSourceIndirect("arcana", par3, par3).setMagicDamage(), 16);
-            //par2.playSoundAtEntity(par3, Sounds.Staff, 1.0F, 1.0F);
+            par2.playSoundAtEntity(par3, Sounds.staff, 1.0F, 1.0F);
             par2.spawnEntityInWorld(new EntityEvernightProjectile(par2, par3, this.damage));
         }
         return par1;

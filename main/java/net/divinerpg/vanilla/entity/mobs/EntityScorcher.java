@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.Entity;
@@ -43,23 +44,17 @@ public class EntityScorcher extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return "";
+        return playSound(Sounds.scorcher);
     }
 
-    /**
-     * Returns the sound this mob makes when it is hurt.
-     */
     protected String getHurtSound()
     {
-        return "";
+        return "mob.blaze.hit";
     }
 
-    /**
-     * Returns the sound this mob makes on death.
-     */
     protected String getDeathSound()
     {
-        return "";
+        return "mob.blaze.death";
     }
 
     /**

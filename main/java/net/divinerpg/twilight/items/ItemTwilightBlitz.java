@@ -2,6 +2,7 @@ package net.divinerpg.twilight.items;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
@@ -27,7 +28,7 @@ public class ItemTwilightBlitz extends ItemMod {
 	public ItemTwilightBlitz(int damage, String ammoType) {
 		super();
 		this.maxStackSize = 1;
-		sound = "";
+		sound = Sounds.blitz;
 		this.setMaxDamage(-1);
 		this.setCreativeTab(DivineRPGTabs.ranged);
 		this.damage = damage;

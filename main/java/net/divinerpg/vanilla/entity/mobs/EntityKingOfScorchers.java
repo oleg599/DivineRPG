@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.entity.EntityLivingBase;
@@ -100,7 +101,7 @@ public class EntityKingOfScorchers extends EntityDivineRPGBoss implements IBossD
      */
     protected String getLivingSound()
     {
-        return "mob.kingScorcher";
+        return playSound(Sounds.kingScorcher);
     }
 
     /**
@@ -108,7 +109,7 @@ public class EntityKingOfScorchers extends EntityDivineRPGBoss implements IBossD
      */
     protected String getHurtSound()
     {
-        return "mob.kingScorcherHit";
+        return playSound(Sounds.kingScorcherHurt);
     }
 
     /**

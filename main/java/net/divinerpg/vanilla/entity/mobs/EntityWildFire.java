@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.items.VanillaItemsWeapons;
@@ -46,7 +47,7 @@ public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackM
      */
     protected String getLivingSound()
     {
-        return "mob.RPG.Wildfire";
+        return playSound(Sounds.wildFire);
     }
 
     /**
@@ -54,15 +55,7 @@ public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackM
      */
     protected String getHurtSound()
     {
-        return "mob.RPG.WildfireHit";
-    }
-
-    /**
-     * Returns the sound this mob makes on death.
-     */
-    protected String getDeathSound()
-    {
-        return null;
+        return playSound(Sounds.wildFireHurt);
     }
 
     protected void applyEntityAttributes() {

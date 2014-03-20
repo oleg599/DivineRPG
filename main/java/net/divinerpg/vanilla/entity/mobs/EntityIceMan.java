@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.ItemsFood;
@@ -82,7 +83,7 @@ public class EntityIceMan extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return "mob.RPG.Iceman";
+        return playSound(Sounds.iceman);
     }
 
     /**
@@ -90,7 +91,7 @@ public class EntityIceMan extends EntityDivineRPGMob
      */
     protected String getHurtSound()
     {
-        return "mob.RPG.IcemanHit";
+        return playSound(Sounds.iceman);
     }
 
     /**

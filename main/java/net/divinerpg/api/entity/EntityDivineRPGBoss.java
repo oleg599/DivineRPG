@@ -1,5 +1,6 @@
 package net.divinerpg.api.entity;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.minecraft.client.Minecraft;
@@ -67,6 +68,10 @@ public abstract class EntityDivineRPGBoss extends EntityMob implements IBossDisp
 	@Override
 	public boolean canDespawn() {
 		return false;	
+	}
+	
+	public String playSound(String sounds){
+		return Sounds.playSound(sounds, worldObj, this);
 	}
 
 	public void onDeath(DamageSource d) {
