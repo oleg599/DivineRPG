@@ -47,7 +47,7 @@ public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackM
      */
     protected String getLivingSound()
     {
-        return playSound(Sounds.WildFire);
+        return playSound(Sounds.wildFire);
     }
 
     /**
@@ -55,7 +55,7 @@ public class EntityWildFire extends EntityDivineRPGMob implements IRangedAttackM
      */
     protected String getHurtSound()
     {
-        return playSound(Sounds.WildFireHurt);
+        return playSound(Sounds.wildFireHurt);
     }
 
     protected void applyEntityAttributes() {

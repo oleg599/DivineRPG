@@ -14,15 +14,15 @@ public class EntityRotatick extends EntityDivineRPGMob {
     }
 
     protected String getLivingSound() {
-        return playSound(Sounds.Rotatick);
+        return playSound(Sounds.rotatick);
     }
 
     protected String getHurtSound() {
-        return playSound(Sounds.RotatickHurt);
+        return playSound(Sounds.rotatickHurt);
     }
 
     protected String getDeathSound() {
-    	return playSound(Sounds.RotatickHurt);
+    	return playSound(Sounds.rotatickHurt);
     }
 
     protected void applyEntityAttributes() {

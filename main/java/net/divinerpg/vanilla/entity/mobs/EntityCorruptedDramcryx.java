@@ -18,7 +18,7 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return playSound(Sounds.Dramcryx);
+        return playSound(Sounds.dramcryx);
     }
 
     /**
@@ -26,7 +26,7 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
      */
     protected String getHurtSound()
     {
-        return playSound(Sounds.DramcryxHurt);
+        return playSound(Sounds.dramcryxHurt);
     }
 
     /**
@@ -34,7 +34,7 @@ public class EntityCorruptedDramcryx extends EntityDivineRPGMob
      */
     protected String getDeathSound()
     {
-        return playSound(Sounds.DramcryxHurt);
+        return playSound(Sounds.dramcryxHurt);
     }
     
 	protected void applyEntityAttributes() {

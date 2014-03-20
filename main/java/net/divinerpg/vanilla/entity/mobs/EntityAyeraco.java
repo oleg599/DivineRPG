@@ -83,7 +83,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     @Override
     protected String getLivingSound()
     {
-        return playSound(Sounds.Ayeraco);
+        return playSound(Sounds.ayeraco);
     }
 
     /**
@@ -92,7 +92,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     @Override
     protected String getHurtSound()
     {
-        return playSound(Sounds.AyeracoHurt);
+        return playSound(Sounds.ayeracoHurt);
     }
 
     /**
@@ -101,7 +101,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     @Override
     protected String getDeathSound()
     {
-        return playSound(Sounds.AyeracoHurt);
+        return playSound(Sounds.ayeracoHurt);
     }
 
     /**
@@ -124,7 +124,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
             this.tickAbility();
             if (this.halfHp = false)
             {
-                this.worldObj.playSoundAtEntity(this, Sounds.AyeracoHalfHealth, 20.0F,  0.4F / (this.rand.nextFloat() * 0.4F + 0.8F));
+                this.worldObj.playSoundAtEntity(this, Sounds.ayeracoHalfHealth, 20.0F,  0.4F / (this.rand.nextFloat() * 0.4F + 0.8F));
             }
         }
 
@@ -279,7 +279,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
 
     protected void teleportRandomUp(World par1)
     {
-        par1.playSoundAtEntity(this, Sounds.AyeracoTeleport, 2.0F, 0.4F / (this.rand.nextFloat() * 0.4F + 0.8F));
+        par1.playSoundAtEntity(this, Sounds.ayeracoTeleport, 2.0F, 0.4F / (this.rand.nextFloat() * 0.4F + 0.8F));
         this.motionY = 20;
         this.motionX = this.rand.nextInt(5);
         this.motionZ = this.rand.nextInt(5);

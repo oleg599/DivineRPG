@@ -65,7 +65,7 @@ public class EntityCyclops extends EntityDivineRPGMob {
 		return this.angerLevel == 0 ? null : super.findPlayerToAttack();
 	}
 
-	public boolean attackEntityFrom(DamageSource var1, int var2) {
+	public boolean attackEntityFrom(DamageSource var1, float var2) {
 		Entity var3 = var1.getEntity();
 
 		if (var3 instanceof EntityPlayer) {
@@ -92,15 +92,15 @@ public class EntityCyclops extends EntityDivineRPGMob {
 	}
 
 	protected String getLivingSound() {
-		return playSound(Sounds.Cyclops);
+		return playSound(Sounds.cyclops);
 	}
 
 	protected String getHurtSound() {
-		return playSound(Sounds.cyclopsHit);
+		return playSound(Sounds.cyclopsHurt);
 	}
 
 	protected String getDeathSound() {
-		return playSound(Sounds.cyclopsHit);
+		return playSound(Sounds.cyclopsHurt);
 	}
 
 	protected void dropFewItems(boolean var1, int var2) {

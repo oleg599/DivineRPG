@@ -83,7 +83,7 @@ public class EntityIceMan extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return playSound(Sounds.Iceman);
+        return playSound(Sounds.iceman);
     }
 
     /**
@@ -91,7 +91,7 @@ public class EntityIceMan extends EntityDivineRPGMob
      */
     protected String getHurtSound()
     {
-        return playSound(Sounds.Iceman);
+        return playSound(Sounds.iceman);
     }
 
     /**

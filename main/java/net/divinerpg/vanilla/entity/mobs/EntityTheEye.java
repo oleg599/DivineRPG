@@ -31,7 +31,7 @@ public class EntityTheEye extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return playSound(Sounds.TheEye);
+        return playSound(Sounds.theEye);
     }
 
     /**
@@ -39,7 +39,7 @@ public class EntityTheEye extends EntityDivineRPGMob
      */
     protected String getHurtSound()
     {
-        return playSound(Sounds.TheEyeHurt);
+        return playSound(Sounds.theEyeHurt);
     }
 
     /**
@@ -47,7 +47,7 @@ public class EntityTheEye extends EntityDivineRPGMob
      */
     protected String getDeathSound()
     {
-        return playSound(Sounds.TheEyeHurt);
+        return playSound(Sounds.theEyeHurt);
     }
 
     protected void applyEntityAttributes() {

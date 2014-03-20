@@ -50,7 +50,7 @@ public class EntityCaveclops extends EntityDivineRPGMob implements IRangedAttack
      */
     protected String getLivingSound()
     {
-        return playSound(Sounds.Cyclops);
+        return playSound(Sounds.cyclops);
     }
 
     /**
@@ -58,7 +58,7 @@ public class EntityCaveclops extends EntityDivineRPGMob implements IRangedAttack
      */
     protected String getHurtSound()
     {
-        return playSound(Sounds.cyclopsHit);
+        return playSound(Sounds.cyclopsHurt);
     }
 
     /**
@@ -66,7 +66,7 @@ public class EntityCaveclops extends EntityDivineRPGMob implements IRangedAttack
      */
     protected String getDeathSound()
     {
-        return playSound(Sounds.cyclopsHit);
+        return playSound(Sounds.cyclopsHurt);
     }
 
     /**

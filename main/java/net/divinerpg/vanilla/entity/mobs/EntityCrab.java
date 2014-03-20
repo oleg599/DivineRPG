@@ -64,15 +64,15 @@ public class EntityCrab extends EntityDivineRPGMob {
 	}
 
 	protected String getLivingSound() {
-		return playSound(Sounds.Crab);
+		return playSound(Sounds.crab);
 	}
 
 	protected String getHurtSound() {
-		return playSound(Sounds.CrabHurt);
+		return playSound(Sounds.crabHurt);
 	}
 
 	protected String getDeathSound() {
-		return playSound(Sounds.CrabHurt);
+		return playSound(Sounds.crabHurt);
 	}
 
 	protected Item getDropItem() {

@@ -1,10 +1,15 @@
 package net.divinerpg.vanilla.blocks;
 
+import java.util.Random;
+
 import net.divinerpg.Reference;
+import net.divinerpg.Sounds;
+import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirectional;
+import net.minecraft.block.BlockPumpkin;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
@@ -17,17 +22,16 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class MobPumpkin extends BlockDirectional
-{
+public class MobPumpkin extends BlockDirectional {
 
-	private String name;
 	@SideOnly(Side.CLIENT)
 	private IIcon top;
 	@SideOnly(Side.CLIENT)
 	private IIcon front;
 	private static SoundType wood = Block.soundTypeWood;
 	private static Material pumpkin = Material.gourd;
-
+	private Random rand = new Random();
+	
 	public MobPumpkin() {
 		super(pumpkin);
 		setTickRandomly(true);
@@ -51,27 +55,48 @@ public class MobPumpkin extends BlockDirectional
 		return  world.getBlock(par1, par2, par3).isReplaceable(world, par1, par2, par3) && World.doesBlockHaveSolidTopSurface(world, par1, par2 - 1, par3);
 	}
 
-	public void func_149689_a(World world, int x, int y, int z, EntityLivingBase player, ItemStack item)
-	{
+	public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase player, ItemStack item) {
 		int l = MathHelper.floor_double((double)(player.rotationYaw * 4.0F / 360.0F) + 2.5D) & 3;
 		world.setBlockMetadataWithNotify(x, y, z, l, 2);
 	}
 
 	@Override
-	public boolean onBlockActivated(World var1, int var2, int var3, int var4, EntityPlayer player, int var6, float var7, float var8, float var9) {
-		if (!player.isSneaking()) {
-			//TODO Get certain mob sounds to play on right click
-			return true;
-		} else {
-			return false;
-		}
+	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p, int var6, float var7, float var8, float var9) {
+		if(!p.isSneaking()) {
+			if(w.getBlock(x, y, z) == VanillaBlocks.spiderPumpkin)
+				w.playSoundAtEntity(p, "mob.spider.say", 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.glaconPumpkin)
+				w.playSoundAtEntity(p, Sounds.glacide, 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.enderWatcherPumpkin)
+				w.playSoundAtEntity(p, "mob.endermen.idle", 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.jungleSpiderPumpkin)
+				w.playSoundAtEntity(p, Sounds.hellSpider, 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.hellSpiderPumpkin)
+				w.playSoundAtEntity(p, Sounds.hellSpider, 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.enderPumpkin)
+				w.playSoundAtEntity(p, "mob.endermen.scream", 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.creeperPumpkin)
+				w.playSoundAtEntity(p, "mob.creeper.say", 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.skeletonPumpkin)
+				w.playSoundAtEntity(p, "mob.skeleton.say", 100, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.blazePumpkin)
+				w.playSoundAtEntity(p, "mob.blaze.breathe", 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.zombiePumpkin)
+				w.playSoundAtEntity(p, "mob.zombie.say", 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.frostPumpkin)
+				w.playSoundAtEntity(p, Sounds.frost, 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.cyclopsPumpkin)
+				w.playSoundAtEntity(p, Sounds.cyclops, 1, 1);
+			if(w.getBlock(x, y, z) == VanillaBlocks.ghastPumpkin)
+				w.playSoundAtEntity(p, "mob.ghast.scream", 1, 1);
+		} 
+		return true;
 	}
 
 	public Block setName(String name){
-		this.name = name;
 		setBlockName(name);
 		setTextureName(name);
-		register();
+		GameRegistry.registerBlock(this, name);
 		return this;
 	}
 
@@ -84,36 +109,5 @@ public class MobPumpkin extends BlockDirectional
 
 	public Block setTextureName(String name){
 		return setBlockTextureName(Reference.PREFIX + name);
-	}
-
-	public String getName(){
-		return name;
-	}
-
-	public Block register(){
-		int numChars = 0;
-		char firstLetter = name.charAt(0);
-		if(Character.isLowerCase(firstLetter))
-			firstLetter = Character.toUpperCase(firstLetter);
-		String inGame = name.substring(1);
-		for(int k = 0; k < name.length(); k++){
-			char c = name.charAt(k);
-			int code = (int) c;
-
-			if(k != 0){
-				for(int p = 65; p < 90; p++){
-					if(code == p){
-						numChars++;
-						if(numChars == 1)
-							inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-						else
-							inGame = new StringBuffer(inGame).insert(k, " ").toString();
-					}
-				}
-			}
-		}
-		String finalName = firstLetter + inGame;
-		GameRegistry.registerBlock(this, name);
-		return this;
 	}
 }

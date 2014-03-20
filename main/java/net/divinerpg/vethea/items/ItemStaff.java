@@ -2,6 +2,7 @@ package net.divinerpg.vethea.items;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
@@ -35,7 +36,7 @@ public class ItemStaff extends ItemMod {
     @Override
     public ItemStack onItemRightClick(ItemStack par1, World par2, EntityPlayer par3) {
         if (!par2.isRemote /*&& ArcanaHelper.useBar(par3, this.cost)*/) {
-            //par2.playSoundAtEntity(par3, Sounds.Staff, 1.0F, 1.0F);
+            par2.playSoundAtEntity(par3, Sounds.staff, 1.0F, 1.0F);
             par2.spawnEntityInWorld(new EntityBouncingProjectile(par2, par3, this.damage));
         }
         return par1;

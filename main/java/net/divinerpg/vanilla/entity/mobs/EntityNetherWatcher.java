@@ -179,11 +179,11 @@ public class EntityNetherWatcher extends EntityDivineRPGFlying implements IMob, 
 	 }
 
 	 protected String getHurtSound() {
-		 return playSound(Sounds.Roar);
+		 return playSound(Sounds.roar);
 	 }
 
 	 protected String getDeathSound() {
-		 return playSound(Sounds.Roar);
+		 return playSound(Sounds.roar);
 	 }
 
 	 protected Item getDropItem() {

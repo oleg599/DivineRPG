@@ -180,7 +180,7 @@ public class EntityRainbour extends EntityDivineRPGMob
 	 */
 	protected String getLivingSound()
 	{
-		return playSound(Sounds.Rainbour);
+		return playSound(Sounds.rainbour);
 	}
 
 	/**
@@ -188,7 +188,7 @@ public class EntityRainbour extends EntityDivineRPGMob
 	 */
 	protected String getHurtSound()
 	{
-		return playSound(Sounds.RainbourHurt);
+		return playSound(Sounds.rainbourHurt);
 	}
 
 	/**
@@ -196,7 +196,7 @@ public class EntityRainbour extends EntityDivineRPGMob
 	 */
 	protected String getDeathSound()
 	{
-		return playSound(Sounds.RainbourHurt);
+		return playSound(Sounds.rainbourHurt);
 	}
 
 	/**

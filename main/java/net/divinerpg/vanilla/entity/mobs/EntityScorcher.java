@@ -44,7 +44,7 @@ public class EntityScorcher extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return playSound(Sounds.Scorcher);
+        return playSound(Sounds.scorcher);
     }
 
     protected String getHurtSound()

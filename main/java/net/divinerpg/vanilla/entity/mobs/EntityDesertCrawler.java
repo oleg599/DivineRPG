@@ -23,17 +23,17 @@ public class EntityDesertCrawler extends EntityDivineRPGMob
 
     protected String getLivingSound()
     {
-        return playSound(Sounds.Crawler);
+        return playSound(Sounds.crawler);
     }
 
     protected String getHurtSound()
     {
-        return playSound(Sounds.CrawlerHurt);
+        return playSound(Sounds.crawlerHurt);
     }
 
     protected String getDeathSound()
     {
-        return playSound(Sounds.CrawlerHurt);
+        return playSound(Sounds.crawlerHurt);
     }
 
     protected Item getDropItem() {

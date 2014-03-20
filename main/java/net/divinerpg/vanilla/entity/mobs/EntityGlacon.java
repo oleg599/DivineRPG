@@ -68,7 +68,7 @@ public class EntityGlacon extends EntityDivineRPGMob
      */
     @Override
     protected String getLivingSound() {
-        return playSound(Sounds.Glacide);
+        return playSound(Sounds.glacide);
     }
 
     /**
@@ -76,7 +76,7 @@ public class EntityGlacon extends EntityDivineRPGMob
      */
     @Override
     protected String getHurtSound() {
-        return playSound(Sounds.GlacideHurt);
+        return playSound(Sounds.glacideHurt);
     }
 
     /**
@@ -84,7 +84,7 @@ public class EntityGlacon extends EntityDivineRPGMob
      */
     @Override
     protected String getDeathSound() {
-        return playSound(Sounds.GlacideHurt);
+        return playSound(Sounds.glacideHurt);
     }
 
     @Override

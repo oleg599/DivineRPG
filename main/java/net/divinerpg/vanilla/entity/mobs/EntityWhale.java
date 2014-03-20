@@ -41,7 +41,7 @@ public class EntityWhale extends EntityDivineRPGMob {
 	 */
 	protected String getLivingSound()
 	{
-		return playSound(Sounds.Whale);
+		return playSound(Sounds.whale);
 	}
 
 	/**
@@ -49,7 +49,7 @@ public class EntityWhale extends EntityDivineRPGMob {
 	 */
 	protected String getHurtSound()
 	{
-		return playSound(Sounds.WhaleHurt);
+		return playSound(Sounds.whaleHurt);
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class EntityWhale extends EntityDivineRPGMob {
 	 */
 	protected String getDeathSound()
 	{
-		return playSound(Sounds.WhaleHurt);
+		return playSound(Sounds.whaleHurt);
 	}
 
 	/**

@@ -101,7 +101,7 @@ public class EntityKingOfScorchers extends EntityDivineRPGBoss implements IBossD
      */
     protected String getLivingSound()
     {
-        return playSound(Sounds.KingScorcher);
+        return playSound(Sounds.kingScorcher);
     }
 
     /**
@@ -109,7 +109,7 @@ public class EntityKingOfScorchers extends EntityDivineRPGBoss implements IBossD
      */
     protected String getHurtSound()
     {
-        return playSound(Sounds.KingScorcherHurt);
+        return playSound(Sounds.kingScorcherHurt);
     }
 
     /**

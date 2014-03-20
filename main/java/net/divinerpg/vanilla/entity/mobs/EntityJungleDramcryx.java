@@ -14,15 +14,15 @@ public class EntityJungleDramcryx extends EntityDivineRPGMob {
 	}
 
 	protected String getLivingSound() {
-		return playSound(Sounds.Dramcryx);
+		return playSound(Sounds.dramcryx);
 	}
 
 	protected String getHurtSound() {
-		return playSound(Sounds.DramcryxHurt);
+		return playSound(Sounds.dramcryxHurt);
 	}
 
 	protected String getDeathSound() {
-		return playSound(Sounds.DramcryxHurt);
+		return playSound(Sounds.dramcryxHurt);
 	}
 
 	protected void applyEntityAttributes() {

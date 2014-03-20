@@ -64,7 +64,7 @@ public class EntityKingCrab extends EntityDivineRPGMob
         return this.angerLevel == 0 ? null : super.findPlayerToAttack();
     }
 
-    public boolean attackEntityFrom(DamageSource var1, int var2)
+    public boolean attackEntityFrom(DamageSource var1, float var2)
     {
         Entity var3 = var1.getEntity();
 
@@ -99,15 +99,15 @@ public class EntityKingCrab extends EntityDivineRPGMob
     }
 
     protected String getLivingSound() {
-		return playSound(Sounds.Crab);
+		return playSound(Sounds.crab);
 	}
 
 	protected String getHurtSound() {
-		return playSound(Sounds.CrabHurt);
+		return playSound(Sounds.crabHurt);
 	}
 
 	protected String getDeathSound() {
-		return playSound(Sounds.CrabHurt);
+		return playSound(Sounds.crabHurt);
 	}
 
     protected void dropFewItems(boolean var1, int var2)

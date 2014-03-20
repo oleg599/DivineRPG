@@ -107,7 +107,7 @@ public class EntityHellSpider extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return playSound(Sounds.HellSpider);
+        return playSound(Sounds.hellSpider);
     }
 
     /**
