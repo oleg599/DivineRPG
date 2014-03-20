@@ -64,6 +64,14 @@ public class EventArmorFullSet {
 				helmet = null;
 
 			DamageSource s = e.source;
+			System.out.println(e.ammount);
+			
+			//Kraken and Aquastrive
+			if((boots == v.aquastriveBoots && body == v.aquastriveBody && legs == v.aquastriveLegs && helmet == v.aquastriveHelmet) || (boots == v.krakenBoots && body == v.krakenBody && legs == v.krakenLegs && helmet == v.krakenHelmet)) {
+				if (s.equals(DamageSource.drown)) {
+					e.setCanceled(true);
+				}
+			}
 
 			//Wither Reaper
 			if (boots == v.witherReaperBoots && legs == v.witherReaperLegs && body == v.witherReaperBody && helmet == v.witherReaperHelmet) {
@@ -72,16 +80,8 @@ public class EventArmorFullSet {
 				}
 			}
 
-			//Ender
-			if (boots == v.enderBoots && legs == v.enderLegs && body == v.enderBody && helmet == v.enderHelmet) {
-				if (s.isExplosion()) {
-					e.setCanceled(true);
-				}
-			}
-
-
-			//Bedrock
-			if (boots == v.bedrockBoots && legs == v.bedrockLegs && body == v.bedrockBody && helmet == v.bedrockHelmet) {
+			//Ender and Bedrock
+			if ((boots == v.enderBoots && legs == v.enderLegs && body == v.enderBody && helmet == v.enderHelmet) || (boots == v.bedrockBoots && legs == v.bedrockLegs && body == v.bedrockBody && helmet == v.bedrockHelmet)) {
 				if (s.isExplosion()) {
 					e.setCanceled(true);
 				}
@@ -90,16 +90,15 @@ public class EventArmorFullSet {
 			//Arlemite -untested
 			if (boots == v.arlemiteBoots && legs == v.arlemiteLegs && body == v.arlemiteBody && helmet == v.arlemiteHelmet) {
 				if (s.isProjectile() || s.damageType.equals("thrown")) {
-					e.ammount *= 0.2;
+					e.ammount *= 0.4;
 				}
 			}
 
 			//Rupee -untested
 			if (boots == v.rupeeBoots && legs == v.rupeeLegs && body == v.rupeeBody && helmet == v.rupeeHelmet) {
-				//if ((s.damageType.equals("mob")) && !s.isProjectile()) {
-					System.out.println("Owch");
-					e.ammount *= 0.2;
-				//}
+				if ((s.damageType.equals("mob")) && !s.isProjectile()) {
+					e.ammount *= 0.4;
+				}
 			}
 
 			//Santa
@@ -504,7 +503,7 @@ public class EventArmorFullSet {
 
 		//Elite Realmite
 		if(boots == v.eliteRealmiteBoots && body == v.eliteRealmiteBody && legs == v.eliteRealmiteLegs && helmet == v.eliteRealmiteHelmet){
-			ev.player.fallDistance = 0.0F;
+			ev.player.fallDistance = -0.5F;
 		}
 
 		//Divine
@@ -548,7 +547,12 @@ public class EventArmorFullSet {
 					ev.player.motionY *= speed;
 				}
 			}
-		}	
+		}
+		
+		//Shadow
+		if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
+			ev.player.addVelocity(1.0D, 0, 1.0D);
+		}
 	}   
 
 	@SubscribeEvent
@@ -583,8 +587,8 @@ public class EventArmorFullSet {
 
 			//Divine
 			if(boots == v.divineBoots && body == v.divineBody && legs == v.divineLegs && helmet == v.divineHelmet){
-				player.fallDistance = 0.0F;
 				player.addVelocity(0, 0.2D, 0);
+				player.fallDistance = 0.0F;
 			}
 
 			//Skythern
@@ -592,6 +596,7 @@ public class EventArmorFullSet {
 				player.addVelocity(0, 0.5D, 0);
 				player.fallDistance = 0.0F;
 			}
+				
 		}
 	}
 }
