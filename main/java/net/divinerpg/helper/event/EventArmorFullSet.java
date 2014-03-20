@@ -550,8 +550,8 @@ public class EventArmorFullSet {
 		}
 		
 		//Shadow
-		if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
-			ev.player.addVelocity(1.0D, 0, 1.0D);
+		if(boots == v.shadowBoots && body == v.shadowBody && legs == v.shadowLegs && helmet == v.shadowHelmet){
+			ev.player.addPotionEffect(new PotionEffect(1, -1, 0)); //When the second parameter it's set a negative one, there's no bubbles! :D
 		}
 	}   
 
