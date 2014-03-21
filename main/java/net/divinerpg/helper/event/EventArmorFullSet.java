@@ -1,5 +1,7 @@
 package net.divinerpg.helper.event;
 
+import java.util.Random;
+
 import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.divinerpg.twilight.blocks.TwilightBlock;
@@ -12,6 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.world.World;
 import net.minecraftforge.client.GuiIngameForge;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -34,6 +37,7 @@ public class EventArmorFullSet {
 	
 	private VanillaItemsArmor v;
 	private TwilightItemsArmor t;
+	private World world;
 
 	@SubscribeEvent
 	public void onLivingHurtEvent(LivingHurtEvent e) {
@@ -524,6 +528,14 @@ public class EventArmorFullSet {
 			}
 		}
 		
+		//Mortum
+		if(boots == t.mortumBoots && body == t.mortumBody && legs == t.mortumLegs && helmet == t.mortumHelmet){
+			boolean light = world.getBlockLightValue((int)ev.player.posX, (int)ev.player.posY, (int)ev.player.posZ) > 8;
+			if (light) {
+				ev.player.addPotionEffect(new PotionEffect(16, -1, 0)); //When the second parameter is set to negative one, there's no bubbles! :D
+			}
+		}
+		
 		//Skythern
 		if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
 			ev.player.fallDistance = -0.5F;
@@ -564,7 +576,7 @@ public class EventArmorFullSet {
 		
 		//Shadow
 		if(boots == v.shadowBoots && body == v.shadowBody && legs == v.shadowLegs && helmet == v.shadowHelmet){
-			ev.player.addPotionEffect(new PotionEffect(1, -1, 0)); //When the second parameter it's set a negative one, there's no bubbles! :D
+			ev.player.addPotionEffect(new PotionEffect(1, -1, 0)); //When the second parameter is set to negative one, there's no bubbles! :D
 		}
 	}   
 
@@ -640,7 +652,8 @@ public class EventArmorFullSet {
 		
 		//Eden
 		if(boots == t.edenBoots && body == t.edenBody && legs == t.edenLegs && helmet == t.edenHelmet){
-			TwilightBlock.edenArmor = 4;
+			Random rand = new Random();
+			TwilightBlock.edenArmor = rand.nextInt(3) + 3;
 		}
 		else {
 			TwilightBlock.edenArmor = 1;
