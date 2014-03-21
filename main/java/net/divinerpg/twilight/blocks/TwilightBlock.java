@@ -10,6 +10,7 @@ import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
@@ -18,6 +19,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class TwilightBlock extends BlockMod {
 
+	public static int edenArmor = 1; //For Eden armor extra drops
+	
 	public TwilightBlock(Material m) {
 		super(m);
 		setCreativeTab(DivineRPGTabs.blocks);
@@ -51,6 +54,14 @@ public class TwilightBlock extends BlockMod {
 				: (this == TwilightBlocks.mortumOre) ? TwilightItemsOther.mortumFragments
 				: getBlock(this);
 	}
+	
+	public int quantityDropped(Random rand) {
+		if (this == TwilightBlocks.edenOre || this == TwilightBlocks.wildWoodOre || this == TwilightBlocks.apalachiaOre || this == TwilightBlocks.skythernOre || this == TwilightBlocks.mortumOre) {
+			return edenArmor;
+		} else {
+			return 1;
+		}
+    }
 
 	public int func_149679_a(int par1, Random par2) {
 		if (par1 > 0 && getBlock(this) != this.getItemDropped(0, par2, par1))

@@ -2,6 +2,7 @@ package net.divinerpg.helper.event;
 
 import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsArmor;
+import net.divinerpg.twilight.blocks.TwilightBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -14,6 +15,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraftforge.client.GuiIngameForge;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
@@ -499,8 +501,9 @@ public class EventArmorFullSet {
 
 		if (boots == v.angelicBoots && body == v.angelicBody && legs == v.angelicLegs && helmet == v.angelicHelmet){
 			ev.player.capabilities.allowFlying = true;
+			ev.player.fallDistance = -0.5F;
 		}
-
+		
 		//Elite Realmite
 		if(boots == v.eliteRealmiteBoots && body == v.eliteRealmiteBody && legs == v.eliteRealmiteLegs && helmet == v.eliteRealmiteHelmet){
 			ev.player.fallDistance = -0.5F;
@@ -508,12 +511,22 @@ public class EventArmorFullSet {
 
 		//Divine
 		if(boots == v.divineBoots && body == v.divineBody && legs == v.divineLegs && helmet == v.divineHelmet){
-			ev.player.fallDistance = 0.0F;
+			ev.player.fallDistance = -0.5F;
+		}
+		
+		//Wildwood
+		if(boots == t.wildwoodBoots && body == t.wildwoodBody && legs == t.wildwoodLegs && helmet == t.wildwoodHelmet){
+			if (ev.player.isInsideOfMaterial(Material.water)) {
+				float current = ev.player.getHealth();
+		        if ((current > 0.0F) && (current < 20.0F)) {
+		            ev.player.setHealth(current + 0.1F);
+		        }
+			}
 		}
 		
 		//Skythern
 		if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
-			ev.player.fallDistance = 0.0F;
+			ev.player.fallDistance = -0.5F;
 		}
 		
 		//Netherite, Inferno, and Bedrock
@@ -588,15 +601,49 @@ public class EventArmorFullSet {
 			//Divine
 			if(boots == v.divineBoots && body == v.divineBody && legs == v.divineLegs && helmet == v.divineHelmet){
 				player.addVelocity(0, 0.2D, 0);
-				player.fallDistance = 0.0F;
 			}
 
 			//Skythern
 			if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
 				player.addVelocity(0, 0.5D, 0);
-				player.fallDistance = 0.0F;
 			}
 				
+		}
+	}
+	
+	@SubscribeEvent
+	public void onInteractEvent(PlayerInteractEvent ev) {
+		ItemStack stackBoots = ev.entityPlayer.inventory.armorItemInSlot(0);
+		ItemStack stackLegs = ev.entityPlayer.inventory.armorItemInSlot(1);
+		ItemStack stackBody = ev.entityPlayer.inventory.armorItemInSlot(2);
+		ItemStack stackHelmet = ev.entityPlayer.inventory.armorItemInSlot(3);
+
+		if(stackBoots != null)
+			boots = stackBoots.getItem();
+		else
+			boots = null;
+
+		if(stackBody != null)
+			body = stackBody.getItem();
+		else
+			body = null;
+
+		if(stackLegs != null) 
+			legs = stackLegs.getItem();
+		else
+			legs = null;
+
+		if(stackHelmet != null) 
+			helmet = stackHelmet.getItem();
+		else
+			helmet = null;
+		
+		//Eden
+		if(boots == t.edenBoots && body == t.edenBody && legs == t.edenLegs && helmet == t.edenHelmet){
+			TwilightBlock.edenArmor = 4;
+		}
+		else {
+			TwilightBlock.edenArmor = 1;
 		}
 	}
 }
