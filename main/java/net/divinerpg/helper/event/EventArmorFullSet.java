@@ -12,8 +12,10 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.client.GuiIngameForge;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
@@ -530,9 +532,10 @@ public class EventArmorFullSet {
 		
 		//Mortum
 		if(boots == t.mortumBoots && body == t.mortumBody && legs == t.mortumLegs && helmet == t.mortumHelmet){
-			boolean light = world.getBlockLightValue((int)ev.player.posX, (int)ev.player.posY, (int)ev.player.posZ) > 8;
+			boolean light = world.getBlockLightValue((int)ev.player.posX, (int)ev.player.posY, (int)ev.player.posZ) < 7;
 			if (light) {
-				ev.player.addPotionEffect(new PotionEffect(16, 10, 10)); //When the second parameter is set to negative one, there's no bubbles! :D
+				ev.player.addPotionEffect(new PotionEffect(16, 208, 10, true)); //The 208 is necessary
+				//TODO Render a duplicate of what the potion does, instead of adding the potion
 			}
 		}
 		
@@ -578,7 +581,7 @@ public class EventArmorFullSet {
 		if(boots == v.shadowBoots && body == v.shadowBody && legs == v.shadowLegs && helmet == v.shadowHelmet){
 			ev.player.addPotionEffect(new PotionEffect(1, -1, 0)); //When the second parameter is set to negative one, there's no bubbles! :D
 		}
-	}   
+	}  
 
 	@SubscribeEvent
 	public void onJump(LivingJumpEvent ev) {
