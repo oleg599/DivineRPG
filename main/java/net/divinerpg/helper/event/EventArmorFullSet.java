@@ -35,7 +35,7 @@ public class EventArmorFullSet {
 	private Item helmet = null;
 	
 	public static final String[] isImmuneToFire	= new String[] {"ag","field_70178_ae", "isImmuneToFire"};
-	public static final String[] isJumping 				= new String[] { "bd","field_70703_bu", "isJumping" 			};
+	public static final String[] isJumping 		= new String[] { "bd","field_70703_bu", "isJumping" 			};
 	
 	private VanillaItemsArmor v;
 	private TwilightItemsArmor t;
@@ -473,12 +473,48 @@ public class EventArmorFullSet {
 			}
 		}*/
 		}
+		/*else {
+			EntityPlayer player = (EntityPlayer)e.entity;
+
+			ItemStack stackBoots = player.inventory.armorItemInSlot(0);
+			ItemStack stackLegs = player.inventory.armorItemInSlot(1);
+			ItemStack stackBody = player.inventory.armorItemInSlot(2);
+			ItemStack stackHelmet = player.inventory.armorItemInSlot(3);
+
+			if(stackBoots != null)
+				boots = stackBoots.getItem();
+			else
+				boots = null;
+
+			if(stackBody != null)
+				body = stackBody.getItem();
+			else
+				body = null;
+
+			if(stackLegs != null) 
+				legs = stackLegs.getItem();
+			else
+				legs = null;
+
+			if(stackHelmet != null) 
+				helmet = stackHelmet.getItem();
+			else
+				helmet = null;
+
+			DamageSource s = e.source;
+			
+			//Halite
+			if (boots == t.haliteBoots && legs == t.haliteLegs && body == t.haliteBody && helmet == t.haliteHelmet) {
+				if ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile()) {
+					e.ammount += 24;
+				}
+			}
+		}*/
 
 	}
 
 	@SubscribeEvent
 	public void onTickEvent(PlayerTickEvent ev) {
-		flyTemp = ev.player.fallDistance;
 		world = ev.player.worldObj;
 		ItemStack stackBoots = ev.player.inventory.armorItemInSlot(0);
 		ItemStack stackLegs = ev.player.inventory.armorItemInSlot(1);
