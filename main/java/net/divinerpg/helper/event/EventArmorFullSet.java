@@ -477,7 +477,7 @@ public class EventArmorFullSet {
 	@SubscribeEvent
 	public void onTickEvent(PlayerTickEvent ev) {
 		flyTemp = ev.player.fallDistance;
-		
+		world = ev.player.worldObj;
 		ItemStack stackBoots = ev.player.inventory.armorItemInSlot(0);
 		ItemStack stackLegs = ev.player.inventory.armorItemInSlot(1);
 		ItemStack stackBody = ev.player.inventory.armorItemInSlot(2);
@@ -532,7 +532,7 @@ public class EventArmorFullSet {
 		if(boots == t.mortumBoots && body == t.mortumBody && legs == t.mortumLegs && helmet == t.mortumHelmet){
 			boolean light = world.getBlockLightValue((int)ev.player.posX, (int)ev.player.posY, (int)ev.player.posZ) > 8;
 			if (light) {
-				ev.player.addPotionEffect(new PotionEffect(16, -1, 0)); //When the second parameter is set to negative one, there's no bubbles! :D
+				ev.player.addPotionEffect(new PotionEffect(16, 10, 10)); //When the second parameter is set to negative one, there's no bubbles! :D
 			}
 		}
 		
