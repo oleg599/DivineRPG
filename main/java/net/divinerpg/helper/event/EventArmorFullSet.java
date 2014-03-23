@@ -1,11 +1,15 @@
 package net.divinerpg.helper.event;
 
+import java.awt.event.KeyEvent;
 import java.util.Random;
+
+import org.lwjgl.input.Keyboard;
 
 import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.divinerpg.twilight.blocks.TwilightBlock;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -18,6 +22,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.client.GuiIngameForge;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
@@ -35,7 +40,7 @@ public class EventArmorFullSet {
 	private Item helmet = null;
 	
 	public static final String[] isImmuneToFire	= new String[] {"ag","field_70178_ae", "isImmuneToFire"};
-	public static final String[] isJumping 		= new String[] { "bd","field_70703_bu", "isJumping" 			};
+	public static final String[] isJumping 		= new String[] {"bd","field_70703_bu", "isJumping"};
 	
 	private VanillaItemsArmor v;
 	private TwilightItemsArmor t;
@@ -73,20 +78,6 @@ public class EventArmorFullSet {
 
 			DamageSource s = e.source;
 			System.out.println(e.ammount);
-			
-			//Kraken and Aquastrive
-			if((boots == v.aquastriveBoots && body == v.aquastriveBody && legs == v.aquastriveLegs && helmet == v.aquastriveHelmet) || (boots == v.krakenBoots && body == v.krakenBody && legs == v.krakenLegs && helmet == v.krakenHelmet)) {
-				if (s.equals(DamageSource.drown)) {
-					e.setCanceled(true);
-				}
-			}
-
-			//Wither Reaper
-			if (boots == v.witherReaperBoots && legs == v.witherReaperLegs && body == v.witherReaperBody && helmet == v.witherReaperHelmet) {
-				if (s.equals(DamageSource.wither)) {
-					e.setCanceled(true);
-				}
-			}
 
 			//Ender and Bedrock
 			if ((boots == v.enderBoots && legs == v.enderLegs && body == v.enderBody && helmet == v.enderHelmet) || (boots == v.bedrockBoots && legs == v.bedrockLegs && body == v.bedrockBody && helmet == v.bedrockHelmet)) {
@@ -117,15 +108,6 @@ public class EventArmorFullSet {
 			}*/
 
 			//Divine
-
-			//Skythern
-
-			//Uvite
-			if (boots == TwilightItemsArmor.apalachiaBoots && legs == TwilightItemsArmor.apalachiaLegs && body == TwilightItemsArmor.apalachiaBody && helmet == TwilightItemsArmor.apalachiaHelmet) {
-				if (s.equals(DamageSource.cactus) || s.equals(DamageSource.fallingBlock) || s.equals(DamageSource.anvil) || s.equals(DamageSource.inWall)) {
-					e.setCanceled(true);
-				}
-			}
 
 			/*//Degraded Melee
 			else if (helmet == DivineRPG.degradedHelmetMelee)
@@ -570,7 +552,7 @@ public class EventArmorFullSet {
 		if(boots == t.mortumBoots && body == t.mortumBody && legs == t.mortumLegs && helmet == t.mortumHelmet){
 			boolean light = world.getBlockLightValue((int)ev.player.posX, (int)ev.player.posY, (int)ev.player.posZ) < 7;
 			if (light) {
-				ev.player.addPotionEffect(new PotionEffect(16, 208, 10, true)); //The 208 is necessary
+				ev.player.addPotionEffect(new PotionEffect(16, 208, 10)); //The 208 is necessary
 				//TODO Render a duplicate of what the potion does, instead of adding the potion
 			}
 		}
@@ -589,15 +571,13 @@ public class EventArmorFullSet {
 		}
 		
 		if(boots == v.aquastriveBoots && body == v.aquastriveBody && legs == v.aquastriveLegs && helmet == v.aquastriveHelmet){
-			float speed = 1F;
+			float speed = 1.1F;
 			boolean isJumping = false;
 			isJumping = (Boolean)ObfuscationReflectionHelper.getPrivateValue(EntityLivingBase.class, ev.player, this.isJumping);
 			
 			if(ev.player.isInWater())
 			{
 				if(!ev.player.isSneaking() && !isJumping) {
-					int j = EnchantmentHelper.getRespiration(ev.player);
-					speed = 1.15F;
 					if(ev.player.motionX > -speed && ev.player.motionX < speed) {
 						ev.player.motionX *= speed;
 						ev.player.motionY = 0F;
@@ -607,7 +587,7 @@ public class EventArmorFullSet {
 						ev.player.motionY = 0F;
 					}
 				}
-				else if (isJumping || ev.player.isSneaking()) {
+				if (isJumping || ev.player.isSneaking()) {
 					ev.player.motionY *= speed;
 				}
 			}
@@ -698,4 +678,61 @@ public class EventArmorFullSet {
 			TwilightBlock.edenArmor = 1;
 		}
 	}
+	
+	@SubscribeEvent
+	public void onLivingAttackEvent(LivingAttackEvent e) {
+		if(e.entity instanceof EntityPlayer) {
+			EntityPlayer player = (EntityPlayer)e.entity;
+
+			ItemStack stackBoots = player.inventory.armorItemInSlot(0);
+			ItemStack stackLegs = player.inventory.armorItemInSlot(1);
+			ItemStack stackBody = player.inventory.armorItemInSlot(2);
+			ItemStack stackHelmet = player.inventory.armorItemInSlot(3);
+
+			if(stackBoots != null)
+				boots = stackBoots.getItem();
+			else
+				boots = null;
+
+			if(stackBody != null)
+				body = stackBody.getItem();
+			else
+				body = null;
+
+			if(stackLegs != null) 
+				legs = stackLegs.getItem();
+			else
+				legs = null;
+
+			if(stackHelmet != null) 
+				helmet = stackHelmet.getItem();
+			else
+				helmet = null;
+
+			DamageSource s = e.source;
+			
+			//Kraken and Aquastrive
+			if((boots == v.aquastriveBoots && body == v.aquastriveBody && legs == v.aquastriveLegs && helmet == v.aquastriveHelmet) || (boots == v.krakenBoots && body == v.krakenBody && legs == v.krakenLegs && helmet == v.krakenHelmet)) {
+				if (s.equals(DamageSource.drown)) {
+					e.setCanceled(true);
+				}
+			}
+			
+			//Uvite
+			if (boots == TwilightItemsArmor.apalachiaBoots && legs == TwilightItemsArmor.apalachiaLegs && body == TwilightItemsArmor.apalachiaBody && helmet == TwilightItemsArmor.apalachiaHelmet) {
+				if (s.equals(DamageSource.cactus) || s.equals(DamageSource.fallingBlock) || s.equals(DamageSource.anvil) || s.equals(DamageSource.inWall)) {
+					e.setCanceled(true);
+				}
+			}
+			
+			//Wither Reaper
+			if (boots == v.witherReaperBoots && legs == v.witherReaperLegs && body == v.witherReaperBody && helmet == v.witherReaperHelmet) {
+				if (s.equals(DamageSource.wither)) {
+					e.setCanceled(true);
+				}
+			}
+		}
+	}
+	
+	
 }
