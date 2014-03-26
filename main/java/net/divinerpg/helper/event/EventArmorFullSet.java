@@ -1,27 +1,21 @@
 package net.divinerpg.helper.event;
 
-import java.awt.event.KeyEvent;
 import java.util.Random;
 
-import org.lwjgl.input.Keyboard;
-
+import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.divinerpg.twilight.blocks.TwilightBlock;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import net.minecraftforge.client.GuiIngameForge;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -47,7 +41,7 @@ public class EventArmorFullSet {
 	private World world;
 
 	@SubscribeEvent
-	public void onLivingHurtEvent(LivingHurtEvent e) {
+	public void onPlayerHurtEvent(LivingHurtEvent e) {
 		if(e.entity instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer)e.entity;
 
@@ -86,14 +80,14 @@ public class EventArmorFullSet {
 				}
 			}
 
-			//Arlemite -untested
+			//Arlemite
 			if (boots == v.arlemiteBoots && legs == v.arlemiteLegs && body == v.arlemiteBody && helmet == v.arlemiteHelmet) {
 				if (s.isProjectile() || s.damageType.equals("thrown")) {
 					e.ammount *= 0.4;
 				}
 			}
 
-			//Rupee -untested
+			//Rupee
 			if (boots == v.rupeeBoots && legs == v.rupeeLegs && body == v.rupeeBody && helmet == v.rupeeHelmet) {
 				if ((s.damageType.equals("mob")) && !s.isProjectile()) {
 					e.ammount *= 0.4;
@@ -101,7 +95,7 @@ public class EventArmorFullSet {
 			}
 
 			//Santa
-			/*else if (boots == IceikaItems.santaBoots && legs == IceikaItems.santaLegs && body == IceikaItems.santaBody && helmet == IceikaItems.santaHead) {
+			/*if (boots == IceikaItems.santaBoots && legs == IceikaItems.santaLegs && body == IceikaItems.santaBody && helmet == IceikaItems.santaHead) {
 				if (e.entityLiving.worldObj.provider.dimensionId == DimensionConfigHelper.IceikaID) {
 					e.ammount *= 0.2;
 				}
@@ -455,44 +449,6 @@ public class EventArmorFullSet {
 			}
 		}*/
 		}
-		/*else {
-			EntityPlayer player = (EntityPlayer)e.entity;
-
-			ItemStack stackBoots = player.inventory.armorItemInSlot(0);
-			ItemStack stackLegs = player.inventory.armorItemInSlot(1);
-			ItemStack stackBody = player.inventory.armorItemInSlot(2);
-			ItemStack stackHelmet = player.inventory.armorItemInSlot(3);
-
-			if(stackBoots != null)
-				boots = stackBoots.getItem();
-			else
-				boots = null;
-
-			if(stackBody != null)
-				body = stackBody.getItem();
-			else
-				body = null;
-
-			if(stackLegs != null) 
-				legs = stackLegs.getItem();
-			else
-				legs = null;
-
-			if(stackHelmet != null) 
-				helmet = stackHelmet.getItem();
-			else
-				helmet = null;
-
-			DamageSource s = e.source;
-			
-			//Halite
-			if (boots == t.haliteBoots && legs == t.haliteLegs && body == t.haliteBody && helmet == t.haliteHelmet) {
-				if ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile()) {
-					e.ammount += 24;
-				}
-			}
-		}*/
-
 	}
 
 	@SubscribeEvent
@@ -524,11 +480,11 @@ public class EventArmorFullSet {
 			helmet = null;
 
 		if (boots == v.angelicBoots && body == v.angelicBody && legs == v.angelicLegs && helmet == v.angelicHelmet){
-			ev.player.capabilities.allowFlying = true;
+			ev.player.capabilities.isFlying = true;
 			ev.player.fallDistance = -0.5F;
 		}
 		
-		//Elite Realmite
+		//Elite Realmiteq
 		if(boots == v.eliteRealmiteBoots && body == v.eliteRealmiteBody && legs == v.eliteRealmiteLegs && helmet == v.eliteRealmiteHelmet){
 			ev.player.fallDistance = -0.5F;
 		}
@@ -552,7 +508,7 @@ public class EventArmorFullSet {
 		if(boots == t.mortumBoots && body == t.mortumBody && legs == t.mortumLegs && helmet == t.mortumHelmet){
 			boolean light = world.getBlockLightValue((int)ev.player.posX, (int)ev.player.posY, (int)ev.player.posZ) < 7;
 			if (light) {
-				ev.player.addPotionEffect(new PotionEffect(16, 208, 10)); //The 208 is necessary
+				ev.player.addPotionEffect(new PotionEffect(16, 210, 10)); //The 210 is necessary
 				//TODO Render a duplicate of what the potion does, instead of adding the potion
 			}
 		}
@@ -597,6 +553,23 @@ public class EventArmorFullSet {
 		if(boots == v.shadowBoots && body == v.shadowBody && legs == v.shadowLegs && helmet == v.shadowHelmet){
 			ev.player.addPotionEffect(new PotionEffect(1, -1, 0)); //When the second parameter is set to negative one, there's no bubbles! :D
 		}
+		
+		//Skeleman
+		if(boots == v.skelemanBoots && body == v.skelemanBody && legs == v.skelemanLegs && helmet == v.skelemanHelmet){
+			if(ev.player.getFoodStats().needFood()) {
+				ev.player.getFoodStats().addStats(1, 0);
+			}
+		}
+		
+		//Santa
+		/*if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
+			if (e.entityLiving.worldObj.provider.dimensionId == DimensionConfigHelper.IceikaID) {
+				if(ev.player.getFoodStats().needFood()) {
+					ev.player.getFoodStats().addStats(1, 0);
+				}
+				ev.player.addPotionEffect(new PotionEffect(1, -1, 0));
+			}
+		}*/
 	}  
 
 	@SubscribeEvent
@@ -680,7 +653,7 @@ public class EventArmorFullSet {
 	}
 	
 	@SubscribeEvent
-	public void onLivingAttackEvent(LivingAttackEvent e) {
+	public void onPlayerAttackEvent(LivingAttackEvent e) {
 		if(e.entity instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer)e.entity;
 
@@ -734,5 +707,54 @@ public class EventArmorFullSet {
 		}
 	}
 	
-	
+	@SubscribeEvent
+	public void onLivingHurtEvent(LivingHurtEvent e) {
+		if(e.entity instanceof EntityPlayer) {
+			EntityPlayer player = (EntityPlayer)e.entity;
+
+			ItemStack stackBoots = player.inventory.armorItemInSlot(0);
+			ItemStack stackLegs = player.inventory.armorItemInSlot(1);
+			ItemStack stackBody = player.inventory.armorItemInSlot(2);
+			ItemStack stackHelmet = player.inventory.armorItemInSlot(3);
+
+			if(stackBoots != null)
+				boots = stackBoots.getItem();
+			else
+				boots = null;
+
+			if(stackBody != null)
+				body = stackBody.getItem();
+			else
+				body = null;
+
+			if(stackLegs != null) 
+				legs = stackLegs.getItem();
+			else
+				legs = null;
+
+			if(stackHelmet != null) 
+				helmet = stackHelmet.getItem();
+			else
+				helmet = null;
+		}
+		
+		if(!(e.entity instanceof EntityPlayer)) {
+			DamageSource s = e.source;
+			
+			//Santa
+			/*if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
+				if (e.entityLiving.worldObj.provider.dimensionId == DimensionConfigHelper.IceikaID) {
+					e.ammount += 6;
+				}
+			}*/
+			
+			//Halite
+			if (boots == t.haliteBoots && legs == t.haliteLegs && body == t.haliteBody && helmet == t.haliteHelmet) {
+				if ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile()) {
+					e.ammount += 24;
+					System.out.println(e.ammount);
+				}
+			}
+		}
+	}
 }
