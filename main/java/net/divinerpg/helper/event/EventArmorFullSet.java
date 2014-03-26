@@ -484,7 +484,7 @@ public class EventArmorFullSet {
 			ev.player.fallDistance = -0.5F;
 		}
 		
-		//Elite Realmiteq
+		//Elite Realmite
 		if(boots == v.eliteRealmiteBoots && body == v.eliteRealmiteBody && legs == v.eliteRealmiteLegs && helmet == v.eliteRealmiteHelmet){
 			ev.player.fallDistance = -0.5F;
 		}
@@ -743,7 +743,7 @@ public class EventArmorFullSet {
 			
 			//Santa
 			/*if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
-				if (e.entityLiving.worldObj.provider.dimensionId == DimensionConfigHelper.IceikaID) {
+				if ((e.entityLiving.worldObj.provider.dimensionId == DimensionConfigHelper.IceikaID) && ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile())) {
 					e.ammount += 6;
 				}
 			}*/
