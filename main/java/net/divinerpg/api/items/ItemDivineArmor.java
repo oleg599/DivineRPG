@@ -51,17 +51,6 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		setArmorType(type, par2);
 	}
 
-	/**
-	 * Constructor to use if no damage reduction
-	 */
-	public ItemDivineArmor(ArmorMaterial armor, int par1, int par2, boolean undamageable, String type){
-		this(armor, par1, par2, 0.0D, undamageable, type);	
-		this.unbreakable = undamageable; 
-		LangRegistry.addItem(this);
-		setCreativeTab(DivineRPGTabs.armor);
-		setArmorType(type, par2);
-	}
-
 	private void setArmorType(String type, int par2) {
 		if(par2 == 0 || par2 == 1 || par2 == 3) {
 			prefix = prefix + type + "_1.png";
@@ -69,6 +58,7 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		else {
 			prefix = prefix + type + "_2.png";
 		}
+		System.out.println(prefix);
 	}
 
 	@Override

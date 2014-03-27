@@ -48,10 +48,10 @@ public class VanillaItemsArmor {
     public static final Item krakenLegs         = new ItemDivineArmor(ArmorMaterialMod.Kraken, LEGS, 2, 30D, false, "kraken").setName("krakenLegs");
     public static final Item krakenBoots        = new ItemDivineArmor(ArmorMaterialMod.Kraken, BOOTS, 3, 30D, false, "kraken").setName("krakenBoots");
     
-    public static final Item jackOManHelmet     = new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, true, "jackOMan").setName("jackOManHelmet");
-    public static final Item jackOManBody       = new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, true, "jackOMan").setName("jackOManBody");
-    public static final Item jackOManLegs       = new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, true, "jackOMan").setName("jackOManLegs");
-    public static final Item jackOManBoots      = new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, true, "jackOMan").setName("jackOManBoots");
+    public static final Item jackOManHelmet     = new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, 0.0D, true, "jackOMan").setName("jackOManHelmet");
+    public static final Item jackOManBody       = new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, 0.0D, true, "jackOMan").setName("jackOManBody");
+    public static final Item jackOManLegs       = new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, 0.0D, true, "jackOMan").setName("jackOManLegs");
+    public static final Item jackOManBoots      = new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, 0.0D, true, "jackOMan").setName("jackOManBoots");
     
     public static final Item infernoHelmet      = new ItemDivineArmor(ArmorMaterialMod.Inferno, HEAD, 0, 60D, true, "inferno").setName("infernoHelmet");
     public static final Item infernoBody        = new ItemDivineArmor(ArmorMaterialMod.Inferno, BODY, 1, 60D, true, "inferno").setName("infernoBody");
@@ -73,15 +73,15 @@ public class VanillaItemsArmor {
     public static final Item netheriteLegs      = new ItemDivineArmor(ArmorMaterialMod.Netherite, LEGS, 2, 50D, true, "netherite").setName("netheriteLegs");
     public static final Item netheriteBoots     = new ItemDivineArmor(ArmorMaterialMod.Netherite, BOOTS, 3, 50D, true, "netherite").setName("netheriteBoots");
     
-    public static final Item skelemanHelmet     = new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, true, "skeleman").setName("skelemanHelmet");
-    public static final Item skelemanBody       = new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, true, "skeleman").setName("skelemanBody");//Costumes have no damage protection
-    public static final Item skelemanLegs       = new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, true, "skeleman").setName("skelemanLegs");
-    public static final Item skelemanBoots      = new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, true, "skeleman").setName("skelemanBoots");
+    public static final Item skelemanHelmet     = new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, 0.0D, true, "skeleman").setName("skelemanHelmet");
+    public static final Item skelemanBody       = new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, 0.0D, true, "skeleman").setName("skelemanBody");
+    public static final Item skelemanLegs       = new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, 0.0D, true, "skeleman").setName("skelemanLegs");
+    public static final Item skelemanBoots      = new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, 0.0D, true, "skeleman").setName("skelemanBoots");
     
-    public static final Item witherReaperHelmet = new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, true, "witherReaper").setName("witherReaperHelmet");
-    public static final Item witherReaperBody   = new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, true, "witherReaper").setName("witherReaperBody");
-    public static final Item witherReaperLegs   = new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, true, "witherReaper").setName("witherReaperLegs");
-    public static final Item witherReaperBoots  = new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, true, "witherReaper").setName("witherReaperBoots");
+    public static final Item witherReaperHelmet = new ItemDivineArmor(ArmorMaterialMod.Costumes, HEAD, 0, 0.0D, true, "witherReaper").setName("witherReaperHelmet");
+    public static final Item witherReaperBody   = new ItemDivineArmor(ArmorMaterialMod.Costumes, BODY, 1, 0.0D, true, "witherReaper").setName("witherReaperBody");
+    public static final Item witherReaperLegs   = new ItemDivineArmor(ArmorMaterialMod.Costumes, LEGS, 2, 0.0D, true, "witherReaper").setName("witherReaperLegs");
+    public static final Item witherReaperBoots  = new ItemDivineArmor(ArmorMaterialMod.Costumes, BOOTS, 3, 0.0D, true, "witherReaper").setName("witherReaperBoots");
     
     public static final Item enderHelmet        = new ItemDivineArmor(ArmorMaterialMod.Ender, HEAD, 0, 65D, true, "ender").setName("enderHelmet");
     public static final Item enderBody          = new ItemDivineArmor(ArmorMaterialMod.Ender, BODY, 1, 65D, true, "ender").setName("enderBody");

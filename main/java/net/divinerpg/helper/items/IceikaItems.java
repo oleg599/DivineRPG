@@ -44,10 +44,10 @@ public class IceikaItems {
 	//public static final Item icicleBow = new ItemIceBow().setName("icicleBow");
 	//public static final Item snowStormBow = new ItemSnowStormBow().setName("snowStormBow");
 	
-	public static final Item santaHead		   = new ItemDivineArmor(ArmorMaterialMod.Santa, HEAD, 0, true, "santa").setName("santaHelmet");
-	public static final Item santaBody 		   = new ItemDivineArmor(ArmorMaterialMod.Santa, BODY, 1, true, "santa").setName("santaBody");
-	public static final Item santaLegs 		   = new ItemDivineArmor(ArmorMaterialMod.Santa, LEGS, 2, true, "santa").setName("santaLegs");
-	public static final Item santaBoots 	   = new ItemDivineArmor(ArmorMaterialMod.Santa, BOOTS, 3, true, "santa").setName("santaBoots");
+	public static final Item santaHead		   = new ItemDivineArmor(ArmorMaterialMod.Santa, HEAD, 0, 0.0D, true, "santa").setName("santaHelmet");
+	public static final Item santaBody 		   = new ItemDivineArmor(ArmorMaterialMod.Santa, BODY, 1, 0.0D, true, "santa").setName("santaBody");
+	public static final Item santaLegs 		   = new ItemDivineArmor(ArmorMaterialMod.Santa, LEGS, 2, 0.0D, true, "santa").setName("santaLegs");
+	public static final Item santaBoots 	   = new ItemDivineArmor(ArmorMaterialMod.Santa, BOOTS, 3, 0.0D, true, "santa").setName("santaBoots");
 	
 	public static final Item iceShards         = new ItemMod().setName("iceShards");
 	public static final Item iceStone          = new ItemMod().setName("iceStone");
