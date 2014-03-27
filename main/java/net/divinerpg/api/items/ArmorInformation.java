@@ -2,6 +2,7 @@ package net.divinerpg.api.items;
 
 import java.util.List;
 
+import net.divinerpg.helper.items.ArcanaItems;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsArmor;
@@ -13,10 +14,11 @@ public class ArmorInformation {
 	public static VanillaItemsArmor v;
 	public static TwilightItemsArmor t;
 	public static IceikaItems i;
+	public static ArcanaItems a;
 	
 	public static void addInfo(ItemStack item, EntityPlayer par2EntityPlayer, List list, boolean par4) {
 		if(item.getItem() == v.angelicBody || item.getItem() == v.angelicBoots || item.getItem() == v.angelicHelmet || item.getItem() == v.angelicLegs){
-			list.add("Full Set: No fall damage"); list.add("Full Set: Allows flight");
+			list.add("Full Set: No fall damage"); list.add("Full Set: Flight");
 		}
 		if(item.getItem() == i.santaBody || item.getItem() == i.santaBoots || item.getItem() == i.santaHead || item.getItem() == i.santaLegs){
 			list.add("Full Set: Massive buff in Iceika"); list.add("Iceika: Speeds up player"); list.add("Iceika: Adds 6x melee damage"); list.add("Iceika: Refills hunger"); list.add("Iceika: 80% Damage reduction");
@@ -28,7 +30,7 @@ public class ArmorInformation {
 			list.add("Full Set: 3+ Twilight ore drops");
 		}
 		if(item.getItem() == t.wildwoodBody || item.getItem() == t.wildwoodBoots || item.getItem() == t.wildwoodHelmet || item.getItem() == t.wildwoodLegs){
-			list.add("Full Set: Health regen underwater");
+			list.add("Full Set: Health regeneration underwater");
 		}
 		if(item.getItem() == t.apalachiaBody || item.getItem() == t.apalachiaBoots || item.getItem() == t.apalachiaHelmet || item.getItem() == t.apalachiaLegs){
 			list.add("Full Set: Block damage protection");
@@ -80,6 +82,12 @@ public class ArmorInformation {
 		}
 		if(item.getItem() == v.enderBody || item.getItem() == v.enderBoots || item.getItem() == v.enderHelmet || item.getItem() == v.enderLegs){
 			list.add("Full Set: Explosion protection");
+		}
+		if(item.getItem() == a.vemosBody || item.getItem() == a.vemosBoots || item.getItem() == a.vemosHelmet || item.getItem() == a.vemosLegs){
+			list.add("Full Set: Health regeneration");
+		}
+		if(item.getItem() == a.kormaBody || item.getItem() == a.kormaBoots || item.getItem() == a.kormaHelmet || item.getItem() == a.kormaLegs){
+			list.add("Full Set: Arcana regeneration");
 		}
 	}
 }

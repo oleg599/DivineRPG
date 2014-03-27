@@ -2,6 +2,7 @@ package net.divinerpg.helper.event;
 
 import java.util.Random;
 
+import net.divinerpg.helper.items.ArcanaItems;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsArmor;
@@ -504,6 +505,14 @@ public class EventArmorFullSet {
 			}
 		}
 		
+		//Vemos
+		if(boots == ArcanaItems.vemosBoots && body == ArcanaItems.vemosBody && legs == ArcanaItems.vemosLegs && helmet == ArcanaItems.vemosHelmet){
+			float current = ev.player.getHealth();
+			if ((current > 0.0F) && (current < 20.0F)) {
+				ev.player.setHealth(current + 0.1F);
+			}
+		}
+				
 		//Mortum
 		if(boots == t.mortumBoots && body == t.mortumBody && legs == t.mortumLegs && helmet == t.mortumHelmet){
 			boolean light = world.getBlockLightValue((int)ev.player.posX, (int)ev.player.posY, (int)ev.player.posZ) < 7;
@@ -545,6 +554,12 @@ public class EventArmorFullSet {
 				}
 				if (isJumping || ev.player.isSneaking()) {
 					ev.player.motionY *= speed;
+					if(ev.player.motionX > -speed && ev.player.motionX < speed) {
+						ev.player.motionX *= speed;
+					}
+					if(ev.player.motionZ > -speed && ev.player.motionZ < speed) {
+						ev.player.motionZ *= speed;
+					}
 				}
 			}
 		}
@@ -752,7 +767,6 @@ public class EventArmorFullSet {
 			if (boots == t.haliteBoots && legs == t.haliteLegs && body == t.haliteBody && helmet == t.haliteHelmet) {
 				if ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile()) {
 					e.ammount += 24;
-					System.out.println(e.ammount);
 				}
 			}
 		}
