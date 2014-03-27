@@ -18,6 +18,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
@@ -39,15 +40,16 @@ public class BlockCoalstoneFurnace extends BlockMod {
 		setLightLevel(1.0F);
 	}
 	
-	/*@Override
+	@Override
 	public boolean onBlockActivated(World var1, int var2, int var3, int var4, EntityPlayer player, int var6, float var7, float var8, float var9) {
 		if (!player.isSneaking()) {
-			player.openGui(DivineRPG.instance, GuiHandler.coalstoneFurnace, var1, var2, var3, var4);
+			System.out.println("HI");
+			player.openGui(DivineRPG.instance, 0/*GuiHandler.coalstineFurnace*/, var1, var2, var3, var4);
 			return true;
 		} else {
 			return false;
 		}
-	}*/
+	}
 
 	public Item func_149650_a(int par1, Random par2Random, int par3)
 	{

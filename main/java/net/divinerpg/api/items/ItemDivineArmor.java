@@ -58,7 +58,6 @@ public class ItemDivineArmor extends ItemArmor implements ISpecialArmor{
 		else {
 			prefix = prefix + type + "_2.png";
 		}
-		System.out.println(prefix);
 	}
 
 	@Override
