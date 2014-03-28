@@ -43,7 +43,6 @@ public class BlockCoalstoneFurnace extends BlockMod {
 	@Override
 	public boolean onBlockActivated(World var1, int var2, int var3, int var4, EntityPlayer player, int var6, float var7, float var8, float var9) {
 		if (!player.isSneaking()) {
-			System.out.println("HI");
 			player.openGui(DivineRPG.instance, 0/*GuiHandler.coalstineFurnace*/, var1, var2, var3, var4);
 			return true;
 		} else {

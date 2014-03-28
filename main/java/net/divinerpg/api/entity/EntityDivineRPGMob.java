@@ -50,12 +50,12 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 		if(!worldObj.isRemote){
 			if(ConfigurationHelper.canShowDeathChat || d.getSourceOfDamage() instanceof EntityPlayer){
-				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A " + mobName() + "."));
+				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has slain a " + mobName() + "."));
 			}
 		
 		if(d.getEntity() instanceof EntityTwins){
 				if(ConfigurationHelper.canShowDeathChat || d.getSourceOfDamage() instanceof EntityPlayer){
-					p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain The " + mobName() + "."));
+					p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has slain the " + mobName() + "."));
 				}
 			}
 		}
