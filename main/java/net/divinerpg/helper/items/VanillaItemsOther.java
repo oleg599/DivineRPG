@@ -1,10 +1,10 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.ItemMod;
+import net.divinerpg.api.items.ItemModBucket;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.vanilla.items.ItemHordeHorn;
 import net.divinerpg.vanilla.items.ItemMysteriousClock;
-import net.divinerpg.vanilla.items.ItemTarBucket;
 import net.divinerpg.vanilla.items.ItemVanillaSpawner;
 import net.minecraft.item.Item;
 
@@ -54,7 +54,7 @@ public class VanillaItemsOther {
     public static final Item redDiamondChunk  	= new ItemMod().setName("redDiamondChunk");
     public static final Item yellowDiamondChunk = new ItemMod().setName("yellowDiamondChunk");
     
-    public static final Item tarBucket 			= new ItemTarBucket(VanillaBlocks.tar).setName("bucketOfTar");
+    public static final Item tarBucket 			= new ItemModBucket(VanillaBlocks.tar).setName("bucketOfTar");
     
     public static final Item watchingEye        = new ItemMod().setName("watchingEye");
     public static final Item callWatcher        = new ItemVanillaSpawner().setName("callOfTheWatcher");

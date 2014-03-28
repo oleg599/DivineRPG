@@ -11,37 +11,28 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 public class EntityScythe extends EntityThrowable {
-	EntityLivingBase base;
-	public static float damage = 4.0F;
+	
+	public static float damage = 5.0F;
 
-	public EntityScythe(World var1)
-    {
+	public EntityScythe(World var1) {
         super(var1);
     }
 
-    public EntityScythe(World var1, EntityLivingBase var2)
-    {
+    public EntityScythe(World var1, EntityLivingBase var2) {
         super(var1, var2);
     }
 
-    public EntityScythe(World var1, double var2, double var4, double var6)
-    {
+    public EntityScythe(World var1, double var2, double var4, double var6) {
         super(var1, var2, var4, var6);
     }
 
-    /**
-     * Called when this EntityScythe hits a block or entity.
-     */
     @Override
-    protected void onImpact(MovingObjectPosition var1)
-    {
-        if (var1.entityHit != null)
-        {
+    protected void onImpact(MovingObjectPosition var1) {
+        if (var1.entityHit != null) {
             var1.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), damage);
         }
 
-        if (!this.worldObj.isRemote)
-        {
+        if (!this.worldObj.isRemote) {
             this.setDead();
         }
     }

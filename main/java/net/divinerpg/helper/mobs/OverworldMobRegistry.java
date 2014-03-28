@@ -33,10 +33,13 @@ import net.divinerpg.vanilla.entity.mobs.EntityShark;
 import net.divinerpg.vanilla.entity.mobs.EntityTheEye;
 import net.divinerpg.vanilla.entity.mobs.EntityWhale;
 import net.divinerpg.vanilla.entity.mobs.EntityWildFire;
+import net.divinerpg.vanilla.entity.projectiles.EntityScythe;
 
 public class OverworldMobRegistry {
 
 	public static void init(){
+		DivineAPI.registerProjectile(EntityScythe.class, "Scythe");
+		
 		DivineAPI.registerDivineRPGMob(EntityEnderWatcher.class, "Ender Watcher");		
 		DivineAPI.registerDivineRPGMob(EntityCrab.class, "Crab");	
 		DivineAPI.registerDivineRPGMob(EntityMiner.class, "Un Dead Miner");		

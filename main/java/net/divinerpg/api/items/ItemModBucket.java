@@ -1,4 +1,4 @@
-package net.divinerpg.vanilla.items;
+package net.divinerpg.api.items;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
@@ -8,9 +8,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBucket;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-public class ItemTarBucket extends ItemBucket{
+public class ItemModBucket extends ItemBucket{
 
-	public ItemTarBucket(Block liquid) {
+	public ItemModBucket(Block liquid) {
 		super(liquid);
 		LangRegistry.addItem(this);
 	}

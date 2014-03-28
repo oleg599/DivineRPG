@@ -41,19 +41,20 @@ public class Sounds {
 	public static final String roar = "divinerpg:roar";
 	public static final String scorcher = "divinerpg:scorcher";
 	public static final String frost = "divinerpg:frost";
-	public static final String phaser = "divinerpg:phaser";
-	public static final String staff = "divinerpg:staff";
-	public static final String blitz = "divinerpg:blitz";
 	public static final String jackOMan = "divinerpg:jackOMan";
+	public static final String deepLaugh = "divinerpg:deepLaugh";
+	public static final String phaser = "divinerpg:phaser";
+	public static final String blitz = "divinerpg:blitz";
+	public static final String staff = "divinerpg:staff";
 
 
 	public static String playSound(String name, World world, Entity entity, float volume, float pitch){
-		world.playSoundAtEntity(entity, name, (float)volume, (float)pitch); 
+		world.playSoundAtEntity(entity, name, volume, pitch); 
 		return name;
 	}
 
 	public static String playSound(String name, World world, Entity entity){
-		world.playSoundAtEntity(entity, name, 1, 1); 
+		world.playSoundAtEntity(entity, name, 1.0F, 1.0F); 
 		return name;
 	}
 }

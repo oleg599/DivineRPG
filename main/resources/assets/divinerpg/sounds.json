@@ -34,7 +34,9 @@
       "roar":{"category":"master","sounds":[{"name": "roar","stream": false}]},
       "scorcher":{"category":"master","sounds":[{"name": "scorcher","stream": false}]},
       "frost":{"category":"master","sounds":[{"name": "frost","stream": false}]},
-      "divinerpg:phaser":{"category":"neutral","sounds":["divinerpg:phaser"]},
-      "divinerpg:staff":{"category":"neutral","sounds":["divinerpg:staff"]},
-      "divinerpg:blitz":{"category":"neutral","sounds":["divinerpg:blitz"]}
+      "jackOMan":{"category":"master","sounds":[{"name": "jackOMan","stream": false}]},
+      "deepLaugh":{"category":"neutral","sounds":["deepLaugh"]},
+      "phaser":{"category":"neutral","sounds":["phaser"]},
+      "blitz":{"category":"neutral","sounds":["blitz"]},
+      "staff":{"category":"neutral","sounds":["staff"]}
 }
