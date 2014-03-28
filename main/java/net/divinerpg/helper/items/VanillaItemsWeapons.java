@@ -4,6 +4,7 @@ import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.api.items.ItemModSword;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.vanilla.items.ItemInfernoSword;
+import net.divinerpg.vanilla.items.ItemScythe;
 import net.divinerpg.vanilla.items.ItemThrowable;
 import net.minecraft.item.Item;
 
@@ -53,6 +54,7 @@ public class VanillaItemsWeapons {
     
     public static final Item shuriken       	= new ItemThrowable(4).setName("shuriken");
     public static final Item vileStorm       	= new ItemThrowable(4).setName("vileStorm");
-    public static final Item scythe		       	= new ItemMod().setName("scythe");
+    public static final Item scythe		       	= new ItemScythe().setName("scythe");
+    public static final Item scytheProjectile 	= new ItemMod().setName("scytheProjectile").setCreativeTab(null);
     
 }

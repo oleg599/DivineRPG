@@ -84,7 +84,7 @@ public class CommonProxy{
 	
 	public void init(FMLInitializationEvent event){
 		int wut = 10;//What the hell does the int even do?
-		System.out.println("[DIVINER PG] ADDING WORLD GENERATIONS");
+		System.out.println("[DIVINE RPG] ADDING WORLD GENERATIONS");
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
 		DivineAPI.addSpecialEventBus(new EventArmorFullSet());
 		DivineAPI.addSpecialEventBus(new EventDeath());

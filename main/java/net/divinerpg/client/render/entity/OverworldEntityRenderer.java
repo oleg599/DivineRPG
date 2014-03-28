@@ -5,10 +5,12 @@ import net.divinerpg.client.render.RenderDivineMob;
 import net.divinerpg.client.render.RenderIconProjectile;
 import net.divinerpg.client.render.RenderSizeable;
 import net.divinerpg.helper.blocks.VanillaBlocks;
+import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.divinerpg.twilight.entity.mob.model.block.RenderStatue;
 import net.divinerpg.twilight.entity.mob.model.block.RenderStatueItem;
 import net.divinerpg.twilight.entity.mob.model.block.TileEntityStatue;
+import net.divinerpg.twilight.entity.projectile.EntitySlicerMortum;
 import net.divinerpg.vanilla.entity.mobs.EntityAncientEntity;
 import net.divinerpg.vanilla.entity.mobs.EntityAridWarrior;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoBlue;
@@ -60,6 +62,7 @@ import net.divinerpg.vanilla.entity.mobs.render.models.ModelShark;
 import net.divinerpg.vanilla.entity.mobs.render.models.ModelWatcher;
 import net.divinerpg.vanilla.entity.mobs.render.models.ModelWhale;
 import net.divinerpg.vanilla.entity.mobs.render.models.ModelWildFire;
+import net.divinerpg.vanilla.entity.projectiles.EntityScythe;
 import net.divinerpg.vanilla.entity.projectiles.EntityShuriken;
 import net.divinerpg.vanilla.entity.projectiles.EntityVileStorm;
 import net.minecraft.client.model.ModelBiped;
@@ -74,6 +77,7 @@ public class OverworldEntityRenderer {
 	public static void init(){
 		RenderingRegistry.registerEntityRenderingHandler(EntityShuriken.class, new RenderIconProjectile(VanillaItemsWeapons.shuriken));
 		RenderingRegistry.registerEntityRenderingHandler(EntityVileStorm.class, new RenderIconProjectile(VanillaItemsWeapons.vileStorm));
+		RenderingRegistry.registerEntityRenderingHandler(EntityScythe.class, new RenderIconProjectile(VanillaItemsWeapons.scytheProjectile));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEnderWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.enderWatcher));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCrab.class, new RenderDivineMob(new ModelCrab(), 0.0F, EntityResourceLocation.crab));
 		RenderingRegistry.registerEntityRenderingHandler(EntityKingCrab.class, new RenderSizeable(new ModelCrab(), 0.0F, 1.8F, EntityResourceLocation.crab));

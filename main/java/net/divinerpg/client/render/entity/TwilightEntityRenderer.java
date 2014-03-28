@@ -7,6 +7,7 @@ import net.divinerpg.client.render.RenderIconProjectile;
 import net.divinerpg.client.render.RenderProjectile;
 import net.divinerpg.client.render.RenderSizeable;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
+import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.divinerpg.twilight.entity.mob.EntityAngryBunny;
 import net.divinerpg.twilight.entity.mob.EntityApalachiaArcher;
 import net.divinerpg.twilight.entity.mob.EntityApalachiaCadillion;
@@ -83,6 +84,9 @@ import net.divinerpg.twilight.entity.projectile.EntitySlicerMortum;
 import net.divinerpg.twilight.entity.projectile.EntitySlicerSkythern;
 import net.divinerpg.twilight.entity.projectile.EntitySlicerWildWoods;
 import net.divinerpg.twilight.entity.projectile.EntityWildArrow;
+import net.divinerpg.vanilla.entity.projectiles.EntityScythe;
+import net.divinerpg.vanilla.entity.projectiles.EntityShuriken;
+import net.divinerpg.vanilla.entity.projectiles.EntityVileStorm;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class TwilightEntityRenderer {

@@ -7,6 +7,7 @@ import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.divinerpg.twilight.blocks.TwilightBlock;
+import net.divinerpg.vanilla.entity.projectiles.EntityScythe;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -585,6 +586,14 @@ public class EventArmorFullSet {
 				ev.player.addPotionEffect(new PotionEffect(1, -1, 0));
 			}
 		}*/
+		
+		//Jack O Man
+		if(boots == v.jackOManBoots && body == v.jackOManBody && legs == v.jackOManLegs && helmet == v.jackOManHelmet){
+			EntityScythe.damage = 16.0F;
+		}
+		else if (!(EntityScythe.damage == 4.0F)) {
+			EntityScythe.damage = 4.0F;
+		}
 	}  
 
 	@SubscribeEvent
