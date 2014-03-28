@@ -8,6 +8,7 @@ import net.divinerpg.vanilla.entity.mobs.EntityAyeracoGreen;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoPurple;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoRed;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoYellow;
+import net.divinerpg.vanilla.entity.mobs.EntityBabyCrab;
 import net.divinerpg.vanilla.entity.mobs.EntityCaveCrawler;
 import net.divinerpg.vanilla.entity.mobs.EntityCaveclops;
 import net.divinerpg.vanilla.entity.mobs.EntityCorruptedDramcryx;
@@ -42,6 +43,7 @@ public class OverworldMobRegistry {
 		
 		DivineAPI.registerDivineRPGMob(EntityEnderWatcher.class, "Ender Watcher");		
 		DivineAPI.registerDivineRPGMob(EntityCrab.class, "Crab");	
+		DivineAPI.registerDivineRPGMob(EntityBabyCrab.class, "Baby Crab");
 		DivineAPI.registerDivineRPGMob(EntityMiner.class, "Un Dead Miner");		
 		DivineAPI.registerDivineRPGMob(EntityKingCrab.class, "King Crab");	
 		DivineAPI.registerDivineRPGMob(EntityDesertCrawler.class, "Desert Crawler");		

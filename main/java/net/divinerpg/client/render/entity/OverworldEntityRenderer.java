@@ -18,6 +18,7 @@ import net.divinerpg.vanilla.entity.mobs.EntityAyeracoGreen;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoPurple;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoRed;
 import net.divinerpg.vanilla.entity.mobs.EntityAyeracoYellow;
+import net.divinerpg.vanilla.entity.mobs.EntityBabyCrab;
 import net.divinerpg.vanilla.entity.mobs.EntityCaveCrawler;
 import net.divinerpg.vanilla.entity.mobs.EntityCaveclops;
 import net.divinerpg.vanilla.entity.mobs.EntityCorruptedDramcryx;
@@ -80,6 +81,7 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityScythe.class, new RenderIconProjectile(VanillaItemsWeapons.scytheProjectile));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEnderWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, EntityResourceLocation.enderWatcher));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCrab.class, new RenderDivineMob(new ModelCrab(), 0.0F, EntityResourceLocation.crab));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBabyCrab.class, new RenderSizeable(new ModelCrab(), 0.0F, 0.5F, EntityResourceLocation.crab));
 		RenderingRegistry.registerEntityRenderingHandler(EntityKingCrab.class, new RenderSizeable(new ModelCrab(), 0.0F, 1.8F, EntityResourceLocation.crab));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCaveCrawler.class, new RenderDivineMob(new ModelCrawler(), 0.0F, EntityResourceLocation.caveCrawler));
 		RenderingRegistry.registerEntityRenderingHandler(EntityDesertCrawler.class, new RenderDivineMob(new ModelCrawler(), 0.0F, EntityResourceLocation.desertCrawler));

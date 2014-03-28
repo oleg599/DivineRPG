@@ -13,19 +13,19 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class EntityCrab extends EntityDivineRPGMob {
+public class EntityBabyCrab extends EntityDivineRPGMob {
 	
 	private int angerLevel = 0;
 
-	public EntityCrab(World var1) {
+	public EntityBabyCrab(World var1) {
 		super(var1);
 		this.setSize(1.5F, 1.0F);
-		this.experienceValue = 40;
+		this.experienceValue = 30;
 	}
 
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(160.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100.0D);
 		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(25.0D);
 	}
@@ -76,6 +76,6 @@ public class EntityCrab extends EntityDivineRPGMob {
 
 	@Override
 	public String mobName() {
-		return "Crab";
+		return "Baby Crab";
 	}
 }
