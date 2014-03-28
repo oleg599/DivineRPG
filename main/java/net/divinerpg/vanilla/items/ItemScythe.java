@@ -41,6 +41,7 @@ public class ItemScythe extends ItemMod {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-		par3List.add((int)EntityScythe.damage + " Ranged Damage");
+		par3List.add((int)EntityScythe.damage + " Ranged damage");
+		par3List.add("Infinite ammo and durability");
 	}
 }

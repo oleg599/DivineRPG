@@ -68,6 +68,8 @@ public class EntityResourceLocation {
     public static ResourceLocation mortumArrow 	 	 = addProjectile("mortumArrow.png");
     public static ResourceLocation haliteArrow 	 	 = addProjectile("haliteArrow.png");
     
+    public static ResourceLocation scytheProjectile  = addProjectile("scytheProjectile.png");
+    
     public static ResourceLocation angryBunny		 = addMob("angryBunny.png");
     public static ResourceLocation angryBunnyTamed 	 = addMob("angryBunnyTamed.png");
     public static ResourceLocation densos			 = addMob("densos.png");
