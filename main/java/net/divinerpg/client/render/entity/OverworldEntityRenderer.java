@@ -4,6 +4,7 @@ import net.divinerpg.client.render.EntityResourceLocation;
 import net.divinerpg.client.render.RenderDivineMob;
 import net.divinerpg.client.render.RenderIconProjectile;
 import net.divinerpg.client.render.RenderSizeable;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.divinerpg.helper.items.VanillaItemsWeapons;
@@ -113,17 +114,17 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityGlacon.class, new RenderDivineMob(new ModelGlacon(), 0.0F, EntityResourceLocation.glacon));
 		RenderingRegistry.registerEntityRenderingHandler(EntityMiner.class, new RenderMiner());
 
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.KingStatue), new RenderStatueItem(VanillaBlocks.KingStatue));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.AncientStatue), new RenderStatueItem(VanillaBlocks.AncientStatue));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.AyeracoStatue), new RenderStatueItem(VanillaBlocks.AyeracoStatue));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.TDemonStatue), new RenderStatueItem(VanillaBlocks.TDemonStatue));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.VamacheronStatue), new RenderStatueItem(VanillaBlocks.VamacheronStatue));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.DensosStatue), new RenderStatueItem(VanillaBlocks.DensosStatue));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.DexStatue), new RenderStatueItem(VanillaBlocks.DexStatue));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.DramixStatue), new RenderStatueItem(VanillaBlocks.DramixStatue));
-		//MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.ParasectaStatue), new RenderStatueItem(VanillaBlocks.ParasectaStatue));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.SoulFiendStatue), new RenderStatueItem(VanillaBlocks.SoulFiendStatue));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(VanillaBlocks.WatcherStatue), new RenderStatueItem(VanillaBlocks.WatcherStatue));
+		DivineAPI.registerItemRenderer(VanillaBlocks.KingStatue, new RenderStatueItem(VanillaBlocks.KingStatue));
+		DivineAPI.registerItemRenderer(VanillaBlocks.AncientStatue, new RenderStatueItem(VanillaBlocks.AncientStatue));
+		DivineAPI.registerItemRenderer(VanillaBlocks.AyeracoStatue, new RenderStatueItem(VanillaBlocks.AyeracoStatue));
+		DivineAPI.registerItemRenderer(VanillaBlocks.TDemonStatue, new RenderStatueItem(VanillaBlocks.TDemonStatue));
+		DivineAPI.registerItemRenderer(VanillaBlocks.VamacheronStatue, new RenderStatueItem(VanillaBlocks.VamacheronStatue));
+		DivineAPI.registerItemRenderer(VanillaBlocks.DensosStatue, new RenderStatueItem(VanillaBlocks.DensosStatue));
+		DivineAPI.registerItemRenderer(VanillaBlocks.DexStatue, new RenderStatueItem(VanillaBlocks.DexStatue));
+		DivineAPI.registerItemRenderer(VanillaBlocks.DramixStatue, new RenderStatueItem(VanillaBlocks.DramixStatue));
+		//DivineAPI.registerItemRenderer(VanillaBlocks.ParasectaStatue, new RenderStatueItem(VanillaBlocks.ParasectaStatue));
+		DivineAPI.registerItemRenderer(VanillaBlocks.SoulFiendStatue, new RenderStatueItem(VanillaBlocks.SoulFiendStatue));
+		DivineAPI.registerItemRenderer(VanillaBlocks.WatcherStatue, new RenderStatueItem(VanillaBlocks.WatcherStatue));
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityStatue.class, new RenderStatue());
 	}
 }

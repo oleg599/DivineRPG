@@ -4,14 +4,17 @@ import java.lang.reflect.Method;
 
 import net.divinerpg.DivineRPG;
 import net.divinerpg.helper.recipes.CraftingDivineTableManager;
-import net.divinerpg.helper.utils.LangRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraftforge.client.IItemRenderer;
+import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fluids.Fluid;
@@ -82,7 +85,7 @@ public class DivineAPI {
 	}
 	
 	public static ArmorMaterial addArmorMaterial(String name, int durability, int[] oldArmor, int enchantability) {
-		int duraNew = (int) Math.round(durability/13.75);
+		int duraNew = (int) Math.round(durability / 13.75);
         return EnumHelper.addEnum(ArmorMaterial.class, name, duraNew, oldArmor, enchantability);
     }
 	
@@ -101,5 +104,13 @@ public class DivineAPI {
 	public static String DARK_PURPLE = "\u00a75", GOLD = "\u00a76", GRAY = "\u00a77", DARK_GRAY = "\u00a78", BLUE = "\u00a79";
 	public static String GREEN = "\u00a7a", AQUA = "\u00a7b", RED = "\u00a7c", LIGHT_PURPLE = "\u00a7d", YELLOW = "\u00a7e";
 	public static String WHITE = "\u00a7f";
+
+	public static void registerItemRenderer(Item i, IItemRenderer te) {
+		MinecraftForgeClient.registerItemRenderer(i, te);
+	}
+	
+	public static void registerItemRenderer(Block b, IItemRenderer te) {
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(b), te);
+	}
 
 }
