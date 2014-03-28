@@ -2,6 +2,8 @@ package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.ItemDivineArmor;
 import net.divinerpg.api.items.ItemMod;
+import net.divinerpg.api.items.ItemModDoor;
+import net.divinerpg.helper.blocks.ArcanaBlocks;
 import net.divinerpg.helper.material.ArmorMaterialMod;
 import net.minecraft.item.Item;
 
@@ -28,4 +30,7 @@ public class ArcanaItems {
 	public static final Item vemosLegs			= new ItemDivineArmor(ArmorMaterialMod.Korma, LEGS, 2, 45D, true, "vemos").setName("vemosLegs");
 	public static final Item vemosBoots			= new ItemDivineArmor(ArmorMaterialMod.Korma, BOOTS, 3, 45D, true, "vemos").setName("vemosBoots");
 
+	public static final Item oreDoorItem1 	    = new ItemModDoor(ArcanaBlocks.oreDoor1).setName("oreDoor1Item");
+	
+	public static final Item oreKey1 			= new ItemMod().setName("key1");
 }

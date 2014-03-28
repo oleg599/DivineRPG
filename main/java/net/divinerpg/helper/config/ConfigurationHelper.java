@@ -19,8 +19,7 @@ public class ConfigurationHelper {
 		cfg.save();
 	}
 
-	public static boolean keepLoadingEden, keepLoadingWildWoods, keepLoadingApalachia, keepLoadingSkythern, keepLoadingMortum,
-	keepLoadingVethea, keepLoadingArcana, keepLoadingIceika;
+	public static boolean keepLoadingEden, keepLoadingWildWoods, keepLoadingApalachia, keepLoadingSkythern, keepLoadingMortum, keepLoadingVethea, keepLoadingArcana, keepLoadingIceika;
 	public static boolean canShowDeathChat, canShowIngameVersion;
 
 	public static int Eden, WildWoods, Apalachia, Skythern, Mortum, Vethea, Arcana, Iceika;

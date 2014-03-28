@@ -5,6 +5,9 @@ import net.divinerpg.api.blocks.BlockModGlass;
 import net.divinerpg.api.blocks.BlockModGrass;
 import net.divinerpg.api.blocks.BlockModLadder;
 import net.divinerpg.arcana.blocks.ArcanaBlock;
+import net.divinerpg.arcana.blocks.BlockOreDoor;
+import net.divinerpg.helper.items.ArcanaItems;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -35,6 +38,8 @@ public class ArcanaBlocks {
 	public static final Block stainedGlass7 		= new BlockModGlass().setName("stainedGlass7");
 	public static final Block stainedGlass8 		= new BlockModGlass().setName("stainedGlass8");
 
+	public static final Block oreDoor1 				= new BlockOreDoor(Material.iron, ArcanaItems.oreDoorItem1, ArcanaItems.oreKey1).setName("oreDoor1").setCreativeTab(DivineRPGTabs.blocks);
+	
 	public static void init(){
 		arcanaGrass = new BlockModGrass(arcanaGrass, arcanaDirt, "arcanite");
 	}
