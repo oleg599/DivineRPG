@@ -13,11 +13,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockTar extends BlockFluidClassic{
 
-	public IIcon[] theIIcon;
+	private IIcon[] theIIcon;
 	
 	public BlockTar() {
-		super(DivineRPG.Mod, Material.lava);
-		DivineRPG.Mod.setBlock(this);
+		super(DivineRPG.tarFluid, Material.lava);
+		DivineRPG.tarFluid.setBlock(this);
 		setLightLevel(1F);
 		GameRegistry.registerBlock(this, "Tar");
 		setBlockName("Tar");
@@ -31,6 +31,6 @@ public class BlockTar extends BlockFluidClassic{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IIconRegister) {
-		this.theIIcon = new IIcon[] {par1IIconRegister.registerIcon(Reference.MOD_ID + ":" + "Tar"), par1IIconRegister.registerIcon(Reference.MOD_ID + ":" + "Tar")};
+		this.theIIcon = new IIcon[] {par1IIconRegister.registerIcon(Reference.PREFIX + "Tar"), par1IIconRegister.registerIcon(Reference.PREFIX + "Tar")};
 	}
 }
