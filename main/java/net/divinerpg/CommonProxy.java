@@ -91,7 +91,7 @@ public class CommonProxy{
 	}
 	
 	public void postInit(FMLPostInitializationEvent event){
-		DivineAPI.addBucket(DivineRPG.Mod, new ItemStack(VanillaItemsOther.tarBucket));
+		DivineAPI.addBucket(DivineRPG.tarFluid, new ItemStack(VanillaItemsOther.tarBucket));
 	}
 
 	public void serverStarting(FMLServerStartingEvent event){ 

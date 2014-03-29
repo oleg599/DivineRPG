@@ -6,10 +6,10 @@ import net.minecraftforge.fluids.FluidRegistry;
 
 public class ModFluid extends Fluid {
 
-	public ModFluid(String fluidName) {
+	public ModFluid(String fluidName, int density, int viscosity) {
 		super(fluidName);
-		setDensity(10);
-		setViscosity(5000);
+		setDensity(density);
+		setViscosity(viscosity);
 		FluidRegistry.registerFluid(this);
 	}
 }

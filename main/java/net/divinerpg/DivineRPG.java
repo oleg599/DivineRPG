@@ -22,7 +22,7 @@ public class DivineRPG {
 	
 	//Awesome seed: 1414274842007233730
 	
-	public static Fluid Mod = new ModFluid("Fluid");
+	public static Fluid tarFluid = new ModFluid("Tar", 10, 5000);
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
