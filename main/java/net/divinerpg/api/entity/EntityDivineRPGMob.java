@@ -47,15 +47,15 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 
 	public void onDeath(DamageSource d) {
 		super.onDeath(d);
-		EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-		if(!worldObj.isRemote){
-			if(ConfigurationHelper.canShowDeathChat || d.getSourceOfDamage() instanceof EntityPlayer){
-				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has slain a " + mobName() + "."));
+		EntityPlayer p = (EntityPlayer)d.getSourceOfDamage();
+		if(!worldObj.isRemote && ConfigurationHelper.canShowDeathChat){
+			if(d.getSourceOfDamage() instanceof EntityPlayer){
+				p.addChatComponentMessage(DivineAPI.addChatMessage(DivineAPI.AQUA + "[" + DivineAPI.BLUE + "DivineRPG" + DivineAPI.AQUA + "]" + " " + p.getDisplayName() + " Has Slain A " + mobName() + "."));
 			}
 		
 		if(d.getEntity() instanceof EntityTwins){
-				if(ConfigurationHelper.canShowDeathChat || d.getSourceOfDamage() instanceof EntityPlayer){
-					p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has slain the " + mobName() + "."));
+				if(d.getSourceOfDamage() instanceof EntityPlayer){
+					p.addChatComponentMessage(DivineAPI.addChatMessage(DivineAPI.AQUA + "[" + DivineAPI.BLUE + "DivineRPG" + DivineAPI.AQUA + "]" + " " + p.getDisplayName() + " Has Slain The " + mobName() + "."));
 				}
 			}
 		}

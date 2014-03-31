@@ -49,6 +49,7 @@ public class CommonProxy{
 		DivineAPI.addEventBus(new EventBucketFill());
 		DivineAPI.addEventBus(new EventBonemeal());
 		DivineAPI.addEventBus(new EventArmorFullSet());
+		//DivineAPI.addEventBus(new EventDeath());//TODO figure out why death prints twice in game
 		System.out.println("[DIVINE RPG] REGISTERING TILE ENTITIES");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		GameRegistry.registerTileEntity(TileEntityInfusionTable.class, "Infusion Table");
@@ -87,7 +88,6 @@ public class CommonProxy{
 		System.out.println("[DIVINE RPG] ADDING WORLD GENERATIONS");
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
 		DivineAPI.addSpecialEventBus(new EventArmorFullSet());
-		DivineAPI.addSpecialEventBus(new EventDeath());
 	}
 	
 	public void postInit(FMLPostInitializationEvent event){

@@ -19,7 +19,7 @@ public class EntityBabyCrab extends EntityDivineRPGMob {
 
 	public EntityBabyCrab(World var1) {
 		super(var1);
-		this.setSize(1.5F, 1.0F);
+		this.setSize(0.6F, 0.6F);
 		this.experienceValue = 30;
 	}
 

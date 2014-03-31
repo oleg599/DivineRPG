@@ -15,8 +15,8 @@ import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayData
-{
+public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayData {
+	
     private String colour;
     private int waitTick;
     private ChunkCoordinates currentFlightTarget;
@@ -26,8 +26,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     private boolean halfHp;
     public float moveSpeed = 0.3F;
     
-    public EntityAyeraco(World var1, String par3)
-    {
+    public EntityAyeraco(World var1, String par3) {
         super(var1);
         this.setSize(3.0F, 1.9F);
         this.colour = par3;
@@ -38,8 +37,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     }
 
     @Override
-    protected void applyEntityAttributes()
-    {
+    protected void applyEntityAttributes() {
         super.applyEntityAttributes();
         this.setMaxHP(1000.0D);
         this.setMoveSpeed(0.43000000417232513D);
@@ -47,8 +45,7 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     }
 
     @Override
-    protected void entityInit()
-    {
+    protected void entityInit() {
         super.entityInit();
         this.dataWatcher.addObject(16, new Integer(100));
     }
@@ -57,81 +54,50 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
         return "Ayeraco " + this.colour;
     }
 
-    public int getMaxArmor()
-    {
-        return 10;
-    }
-
-    /**
-     * Returns true if the newer Entity AI code should be run
-     */
     @Override
-    protected boolean isAIEnabled()
-    {
+    protected boolean isAIEnabled() {
         return true;
     }
 
     @Override
-    public void onLivingUpdate()
-    {
+    public void onLivingUpdate() {
         super.onLivingUpdate();
     }
 
-    /**
-     * Returns the Sounds this mob makes while it's alive.
-     */
     @Override
-    protected String getLivingSound()
-    {
+    protected String getLivingSound() {
         return playSound(Sounds.ayeraco);
     }
 
-    /**
-     * Returns the Sounds this mob makes when it is hurt.
-     */
     @Override
-    protected String getHurtSound()
-    {
+    protected String getHurtSound() {
         return playSound(Sounds.ayeracoHurt);
     }
 
-    /**
-     * Returns the Sounds this mob makes on death.
-     */
     @Override
-    protected String getDeathSound()
-    {
+    protected String getDeathSound() {
         return playSound(Sounds.ayeracoHurt);
     }
 
-    /**
-     * Called to update the entity's position/logic.
-     */
     @Override
-    public void onUpdate()
-    {
+    public void onUpdate() {
         super.onUpdate();
         this.motionY *= 0.6000000238418579D;
     }
 
     @Override
-    protected void updateAITasks()
-    {
+    protected void updateAITasks() {
         super.updateAITasks();
 
-        //if (func_110138_aP() * 2 < func_110143_aJ())
-        {
+        /*if (func_110138_aP() * 2 < func_110143_aJ()) {
             this.tickAbility();
-            if (this.halfHp = false)
-            {
+            if (this.halfHp = false) {
                 this.worldObj.playSoundAtEntity(this, Sounds.ayeracoHalfHealth, 20.0F,  0.4F / (this.rand.nextFloat() * 0.4F + 0.8F));
             }
-        }
+        }*/
 
-        if (this.waitTick == 0)
-        {
-            if (this.getAttackTarget() != null)
-            {
+        if (this.waitTick == 0) {
+            if (this.getAttackTarget() != null) {
                 int var1 = (int) this.getAttackTarget().posX;
                 int var2 = (int) this.getAttackTarget().posY;
                 int var3 = (int) this.getAttackTarget().posZ;
@@ -140,14 +106,12 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
 
             this.motionY = 0;
 
-            if (this.currentFlightTarget != null)
-            {
+            if (this.currentFlightTarget != null) {
                 double var1 = this.currentFlightTarget.posX - this.posX;
                 double var3 = this.currentFlightTarget.posY - this.posY;
                 double var5 = this.currentFlightTarget.posZ - this.posZ;
 
-                if (Math.signum(var1) != 0 || Math.signum(var3) != 0 || Math.signum(var5) != 0)
-                {
+                if (Math.signum(var1) != 0 || Math.signum(var3) != 0 || Math.signum(var5) != 0) {
                     this.motionX = Math.signum(var1) * moveSpeed;
                     this.motionY += (Math.signum(var3) * 5.699999988079071D - this.motionY) * 0.10000000149011612D;
                     this.motionZ = Math.signum(var5) * moveSpeed;
@@ -157,21 +121,17 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
                     this.rotationYaw += var8;
                 }
             }
-        }
-        else
-        {
+        } else {
             this.waitTick--;
             this.motionY = 0.3;
             this.motionX = this.moveX;
             this.motionZ = this.moveZ;
         }
 
-        if (!this.attacks)
-        {
+        if (!this.attacks) {
             this.waitTick = 80;
             this.attacks = true;
-            if (this.canTeleport())
-            {
+            if (this.canTeleport()) {
                 this.waitTick = 0;
                 this.teleportRandomUp(this.worldObj);
             }
@@ -179,32 +139,20 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
 
     }
 
-    /**
-     * returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to
-     * prevent them from trampling crops
-     */
     @Override
     protected boolean canTriggerWalking()
     {
         return false;
     }
 
-    /**
-     * Called when the mob is falling. Calculates and applies fall damage.
-     */
     @Override
     protected void fall(float par1) {}
 
-    /**
-     * Takes in the distance the entity has fallen this tick and whether its on the ground to update the fall distance
-     * and deal fall damage if landing on the ground.  Args: distanceFallenThisTick, onGround
-     */
     @Override
     protected void updateFallState(double par1, boolean par3) {}
 
     @Override
-    public boolean attackEntityFrom(DamageSource par1DamageSource, float par2)
-    {
+    public boolean attackEntityFrom(DamageSource par1DamageSource, float par2) {
         if (this.isEntityInvulnerable())
             return false;
         else if (par1DamageSource.getSourceOfDamage() instanceof EntityTripletProjectile)
@@ -252,33 +200,28 @@ public class EntityAyeraco extends EntityDivineRPGMob implements IBossDisplayDat
     }
 
     @Override
-    public boolean attackEntityAsMob(Entity par1Entity)
-    {
+    public boolean attackEntityAsMob(Entity par1Entity) {
         this.attacks = false;
         return super.attackEntityAsMob(par1Entity);
     }
 
     protected void tickAbility(){}
 
-    protected boolean canBlockProjectiles()
-    {
+    protected boolean canBlockProjectiles() {
         return true;
     }
 
-    protected boolean canTeleport()
-    {
+    protected boolean canTeleport() {
         return true;
     }
 
-    public boolean abilityActive()
-    {
-        //if (func_110138_aP() * 2 <= func_110143_aJ() && !this.isDead)
+    public boolean abilityActive() {
+        if (getHealth() * 2 <= getMaxHealth() && !this.isDead)
             return true;
-       // return false;
+        return false;
     }
 
-    protected void teleportRandomUp(World par1)
-    {
+    protected void teleportRandomUp(World par1) {
         par1.playSoundAtEntity(this, Sounds.ayeracoTeleport, 2.0F, 0.4F / (this.rand.nextFloat() * 0.4F + 0.8F));
         this.motionY = 20;
         this.motionX = this.rand.nextInt(5);

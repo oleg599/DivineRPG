@@ -13,15 +13,13 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class EntityKingCrab extends EntityDivineRPGMob
-{
+public class EntityKingCrab extends EntityDivineRPGMob {
     private int angerLevel = 0;
     private int randomSoundDelay = 5;
 
-    public EntityKingCrab(World var1)
-    {
+    public EntityKingCrab(World var1) {
         super(var1);
-        this.setSize(2.0F, 2.0F);
+        this.setSize(2.0F, 1.5F);
         this.experienceValue = 40;
     }
     
@@ -32,67 +30,54 @@ public class EntityKingCrab extends EntityDivineRPGMob
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(29.0D);
 	}
 
-    protected boolean isAIEnabled()
-    {
+    protected boolean isAIEnabled() {
         return false;
     }
 
-    public void onLivingUpdate()
-    {
+    public void onLivingUpdate() {
         super.onLivingUpdate();
     }
 
-    public void onUpdate()
-    {
+    public void onUpdate() {
         super.onUpdate();
     }
 
-    public void writeEntityToNBT(NBTTagCompound var1)
-    {
+    public void writeEntityToNBT(NBTTagCompound var1) {
         super.writeEntityToNBT(var1);
         var1.setShort("Anger", (short)this.angerLevel);
     }
 
-    public void readEntityFromNBT(NBTTagCompound var1)
-    {
+    public void readEntityFromNBT(NBTTagCompound var1) {
         super.readEntityFromNBT(var1);
         this.angerLevel = var1.getShort("Anger");
     }
 
-    protected Entity findPlayerToAttack()
-    {
+    protected Entity findPlayerToAttack() {
         return this.angerLevel == 0 ? null : super.findPlayerToAttack();
     }
 
-    public boolean attackEntityFrom(DamageSource var1, float var2)
-    {
+    public boolean attackEntityFrom(DamageSource var1, float var2) {
         Entity var3 = var1.getEntity();
 
-        if (var3 instanceof EntityPlayer)
-        {
+        if (var3 instanceof EntityPlayer) {
             List var4 = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(32.0D, 32.0D, 32.0D));
 
-            for (int var5 = 0; var5 < var4.size(); ++var5)
-            {
+            for (int var5 = 0; var5 < var4.size(); ++var5) {
                 Entity var6 = (Entity)var4.get(var5);
 
-                if (var6 instanceof EntityCrab)
-                {
+                if (var6 instanceof EntityCrab) {
                 	EntityCrab var7 = (EntityCrab)var6;
-                }else if (var6 instanceof EntityKingCrab)
-                {
+                }
+                else if (var6 instanceof EntityKingCrab) {
                 	EntityKingCrab var7 = (EntityKingCrab)var6;
                 }
             }
-
             this.becomeAngryAt(var3);
         }
-
         return super.attackEntityFrom(var1, var2);
     }
 
-    private void becomeAngryAt(Entity var1)
-    {
+    private void becomeAngryAt(Entity var1) {
         this.entityToAttack = var1;
         this.angerLevel = 400 + this.rand.nextInt(400);
         this.randomSoundDelay = this.rand.nextInt(40);
@@ -110,24 +95,20 @@ public class EntityKingCrab extends EntityDivineRPGMob
 		return playSound(Sounds.crabHurt);
 	}
 
-    protected void dropFewItems(boolean var1, int var2)
-    {
+    protected void dropFewItems(boolean var1, int var2) {
         int var3 = this.rand.nextInt(2 + var2);
         int var4;
 
-        for (var4 = 0; var4 < var3; ++var4)
-        {
+        for (var4 = 0; var4 < var3; ++var4) {
             this.dropItem(VanillaItemsOther.crabClaw, 1);
         }
 
-        for (var4 = 0; var4 < var3; ++var4)
-        {
+        for (var4 = 0; var4 < var3; ++var4) {
             this.dropItem(VanillaItemsOther.aquaticPellets, 3);
         }
     }
 
-    protected Item getDropItem()
-    {
+    protected Item getDropItem() {
         return VanillaItemsOther.crabClaw;
     }
 

@@ -293,7 +293,7 @@ public class WreckForm1 extends ModelBase
     public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
     {
         super.render(entity, f, f1, f2, f3, f4, f5);
-        setRotationAngles(f, f1, f2, f3, f4, f5);
+        setRotationAngles(f, f1, f2, f3, f4, f5, entity);
         part1.render(f5);
         part2.render(f5);
         leftarm1.render(f5);
@@ -342,7 +342,7 @@ public class WreckForm1 extends ModelBase
         model.rotateAngleZ = z;
     }
 
-    public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5)
+    public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity e)
     {
         this.leftleg1.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1-0.3490659F;
         this.leftleg2.rotateAngleX = MathHelper.cos(f * 0.6662F) * 1.4F * f1-0.3490659F;

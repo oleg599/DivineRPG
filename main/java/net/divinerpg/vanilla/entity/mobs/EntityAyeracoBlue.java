@@ -1,6 +1,7 @@
 package net.divinerpg.vanilla.entity.mobs;
 
 import net.divinerpg.helper.items.VanillaItemsWeapons;
+import net.minecraft.init.Blocks;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
@@ -17,30 +18,26 @@ public class EntityAyeracoBlue extends EntityAyeraco
     private int beamY;
     private int beamZ;
 
-    public EntityAyeracoBlue (World par1World)
-    {
-        super (par1World, "Blue");
+    public EntityAyeracoBlue (World par1World) {
+        super(par1World, "Blue");
     }
 
-    public void initOthers (EntityAyeraco par2, EntityAyeraco par3, EntityAyeraco par4, EntityAyeraco par5)
-	{
+    public void initOthers (EntityAyeraco par2, EntityAyeraco par3, EntityAyeraco par4, EntityAyeraco par5) {
 		this.aGreen = par2;
 		this.aRed = par3;
 		this.aYellow = par4;
 		this.aPurple = par5;
 	}
 	
-	public void setBeamLocation(int x, int y, int z)
-	{
+	public void setBeamLocation(int x, int y, int z) {
 		beamX = x;
 		beamY = y;
 		beamZ = z;
 	}
 	
-	public void onDeath(DamageSource par1DamageSource)
-    {
+	public void onDeath(DamageSource par1DamageSource) {
     	super.onDeath(par1DamageSource);
-    	//worldObj.func_147449_b(beamX, beamY, beamZ, null);
+    	//worldObj.setBlock(beamX, beamY, beamZ, Blocks.air);
     }
 
 	protected boolean canBlockProjectiles()

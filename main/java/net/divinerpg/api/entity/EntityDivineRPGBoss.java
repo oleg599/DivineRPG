@@ -76,10 +76,10 @@ public abstract class EntityDivineRPGBoss extends EntityMob implements IBossDisp
 
 	public void onDeath(DamageSource d) {
 		super.onDeath(d);
-		if(!worldObj.isRemote){
-			EntityPlayer p = Minecraft.getMinecraft().thePlayer;
-			if(ConfigurationHelper.canShowDeathChat || d.getSourceOfDamage() instanceof EntityPlayer){
-				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The " + mobName() + " Has Fallen."));
+		EntityPlayer p = (EntityPlayer)d.getSourceOfDamage();
+		if(!worldObj.isRemote && ConfigurationHelper.canShowDeathChat){
+			if(d.getSourceOfDamage() instanceof EntityPlayer){
+				p.addChatMessage(DivineAPI.addChatMessage(DivineAPI.AQUA + "[" + DivineAPI.BLUE + "DivineRPG" + DivineAPI.AQUA + "]" + " " + "The " + mobName() + " Has Fallen."));
 			}
 		}
 	}
