@@ -43,29 +43,29 @@ public class CommonProxy{
 	
 	//ClientProxy
 	public void preInit(FMLPreInitializationEvent event){
-		System.out.println("[DIVINE RPG] ADDING EVENTS");
+		System.out.println("[DIVINERPG] ADDING EVENTS");
 		DivineAPI.addEventBus(new EventClientLogin());
 		DivineAPI.addEventBus(new EventOverlay());
 		DivineAPI.addEventBus(new EventBucketFill());
 		DivineAPI.addEventBus(new EventBonemeal());
 		DivineAPI.addEventBus(new EventArmorFullSet());
-		//DivineAPI.addEventBus(new EventDeath());//TODO figure out why death prints twice in game
-		System.out.println("[DIVINE RPG] REGISTERING TILE ENTITIES");
+		DivineAPI.addEventBus(new EventDeath());
+		System.out.println("[DIVINERPG] REGISTERING TILE ENTITIES");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		GameRegistry.registerTileEntity(TileEntityInfusionTable.class, "Infusion Table");
 		GameRegistry.registerTileEntity(TileEntityStatue.class, "Statue");
-		System.out.println("[DIVINE RPG] ADDING CONFIGURATIONS");
+		System.out.println("[DIVINERPG] ADDING CONFIGURATIONS");
 		ConfigurationHelper.init();
-		System.out.println("[DIVINE RPG] ADDING MOBS");
+		System.out.println("[DIVINERPG] ADDING MOBS");
 		OverworldMobRegistry.init();
 		TwilightMobRegistry.init();
 		IceikaMobRegistry.init();
 		VetheaMobRegistry.init();
-		System.out.println("[DIVINE RPG] ADDING CRAFTING/SMELTING RECIPES");
+		System.out.println("[DIVINERPG] ADDING CRAFTING/SMELTING RECIPES");
 		VanillaRecipeHelper.init();
 		TwilightRecipeHelper.init();
 		
-		System.out.println("[DIVINE RPG] ADDING BLOCKS");
+		System.out.println("[DIVINERPG] ADDING BLOCKS");
 		TwilightBlocks.init();
 		IceikaBlocks.init();
 		VetheaBlocks.init();
@@ -85,7 +85,7 @@ public class CommonProxy{
 	
 	public void init(FMLInitializationEvent event){
 		int wut = 10;//What the hell does the int even do?
-		System.out.println("[DIVINE RPG] ADDING WORLD GENERATIONS");
+		System.out.println("[DIVINERPG] ADDING WORLD GENERATIONS");
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
 		DivineAPI.addSpecialEventBus(new EventArmorFullSet());
 	}
@@ -95,7 +95,7 @@ public class CommonProxy{
 	}
 
 	public void serverStarting(FMLServerStartingEvent event){ 
-		System.out.println("[DIVINE RPG] ADDING COMMANDS");
+		System.out.println("[DIVINERPG] ADDING COMMANDS");
 		if (MinecraftServer.getServer().getCommandManager() instanceof ServerCommandManager) {
 			((CommandHandler) MinecraftServer.getServer().getCommandManager()).registerCommand(new DivineRPGCommands());
 		}
