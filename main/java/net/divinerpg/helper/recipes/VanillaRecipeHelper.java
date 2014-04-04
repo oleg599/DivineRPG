@@ -27,6 +27,11 @@ public class VanillaRecipeHelper {
 		DivineAPI.addRecipe(IS.realBody, "I I", "III", "III", 'I', VanillaItemsOther.realmiteIngot);
 		DivineAPI.addRecipe(IS.realLegs, "III", "I I", "I I", 'I', VanillaItemsOther.realmiteIngot);
 		DivineAPI.addRecipe(IS.realFeet, "   ", "I I", "I I", 'I', VanillaItemsOther.realmiteIngot);
+		
+		DivineAPI.addRecipe(IS.eliteHead, "III", "I I", "  ", 'I', VanillaBlocks.realmiteBlock);
+		DivineAPI.addRecipe(IS.eliteBody, "I I", "III", "III", 'I', VanillaBlocks.realmiteBlock);
+		DivineAPI.addRecipe(IS.eliteLegs, "III", "I I", "I I", 'I', VanillaBlocks.realmiteBlock);
+		DivineAPI.addRecipe(IS.eliteFeet, "   ", "I I", "I I", 'I', VanillaBlocks.realmiteBlock);
 
 		DivineAPI.addRecipe(IS.netherChuck, " I ", "III", " I ", 'I', VanillaItemsOther.netheriteIngot);
 

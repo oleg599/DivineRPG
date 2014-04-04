@@ -45,6 +45,10 @@ public class IS {
 		public static ItemStack edenBody = new ItemStack(TwilightItemsArmor.edenBody);
 		public static ItemStack edenLegs = new ItemStack(TwilightItemsArmor.edenLegs);
 		public static ItemStack edenFeet = new ItemStack(TwilightItemsArmor.edenBoots);
+		public static ItemStack eliteHead = new ItemStack(VanillaItemsArmor.eliteRealmiteHelmet);
+		public static ItemStack eliteBody = new ItemStack(VanillaItemsArmor.eliteRealmiteBody);
+		public static ItemStack eliteLegs = new ItemStack(VanillaItemsArmor.eliteRealmiteLegs);
+		public static ItemStack eliteFeet = new ItemStack(VanillaItemsArmor.eliteRealmiteBoots);
 
 		//Materials
 		public static ItemStack shadow = new ItemStack(VanillaItemsOther.shadowBar);
