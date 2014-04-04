@@ -10,6 +10,8 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
 public class DivineRPG {
@@ -24,6 +26,7 @@ public class DivineRPG {
 	
 	public static Fluid tarFluid = new ModFluid("Tar", 10, 5000);
 	
+	@SideOnly(Side.CLIENT)
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
 		proxy.renderThings();

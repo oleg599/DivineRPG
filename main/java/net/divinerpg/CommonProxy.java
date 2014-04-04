@@ -36,12 +36,15 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class CommonProxy{
 
 	public void renderThings(){}
 	
 	//ClientProxy
+	@SideOnly(Side.CLIENT)
 	public void preInit(FMLPreInitializationEvent event){
 		System.out.println("[DIVINERPG] ADDING EVENTS");
 		DivineAPI.addEventBus(new EventClientLogin());
