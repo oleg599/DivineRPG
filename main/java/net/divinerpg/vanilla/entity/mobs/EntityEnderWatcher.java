@@ -51,7 +51,7 @@ public class EntityEnderWatcher extends EntityEnderman{
 		if(!worldObj.isRemote){
 			EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 			if(ConfigurationHelper.canShowDeathChat){
-				p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_AQUA, p.getDisplayName() + " Has Slain A Ender Watcher."));
+				DivineAPI.sendMessageToAll(DivineAPI.DARK_AQUA + p.getDisplayName() + " Has Slain A Ender Watcher.");
 			}
 		}
 	}

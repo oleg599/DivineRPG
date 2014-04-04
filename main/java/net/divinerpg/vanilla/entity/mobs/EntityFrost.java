@@ -1,5 +1,6 @@
 package net.divinerpg.vanilla.entity.mobs;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.VanillaItemsOther;
@@ -43,7 +44,7 @@ public class EntityFrost extends EntityDivineRPGMob
      */
     protected String getLivingSound()
     {
-        return "mob.RPG.Frost";
+        return playSound(Sounds.frost);
     }
 
     /**

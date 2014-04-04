@@ -21,6 +21,7 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidContainerRegistry.FluidContainerData;
 import net.minecraftforge.fluids.FluidRegistry;
+import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -113,4 +114,7 @@ public class DivineAPI {
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(b), te);
 	}
 
+	public static void sendMessageToAll(String message){
+		FMLClientHandler.instance().getClient().ingameGUI.getChatGUI().printChatMessage(addChatMessage(AQUA + "[" + DARK_BLUE + "DivineRPG" + AQUA + "] " + WHITE + message));
+	}
 }

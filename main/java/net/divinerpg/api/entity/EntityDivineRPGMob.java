@@ -51,12 +51,12 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 		EntityPlayer p = (EntityPlayer)d.getSourceOfDamage();
 		if(!worldObj.isRemote && ConfigurationHelper.canShowDeathChat){
 			if(d.getSourceOfDamage() instanceof EntityPlayer){
-				p.addChatComponentMessage(DivineAPI.addChatMessage(DivineAPI.AQUA + "[" + DivineAPI.BLUE + "DivineRPG" + DivineAPI.AQUA + "]" + " " + p.getDisplayName() + " has slain a " + mobName() + "."));
+				DivineAPI.sendMessageToAll(DivineAPI.AQUA + "[" + DivineAPI.BLUE + "DivineRPG" + DivineAPI.AQUA + "]" + " " + p.getDisplayName() + " has slain a " + mobName() + ".");
 			}
 		
 		if(d.getEntity() instanceof EntityTwins){
 				if(d.getSourceOfDamage() instanceof EntityPlayer){
-					p.addChatComponentMessage(DivineAPI.addChatMessage(DivineAPI.AQUA + "[" + DivineAPI.BLUE + "DivineRPG" + DivineAPI.AQUA + "]" + " " + p.getDisplayName() + " has slain the " + mobName() + "."));
+					DivineAPI.sendMessageToAll(DivineAPI.AQUA + "[" + DivineAPI.BLUE + "DivineRPG" + DivineAPI.AQUA + "]" + " " + p.getDisplayName() + " has slain the " + mobName() + ".");
 				}
 			}
 		}
