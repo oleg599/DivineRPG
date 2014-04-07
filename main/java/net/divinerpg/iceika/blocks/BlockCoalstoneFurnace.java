@@ -50,21 +50,17 @@ public class BlockCoalstoneFurnace extends BlockMod {
 		}
 	}
 
-	public Item func_149650_a(int par1, Random par2Random, int par3)
-	{
+	public Item func_149650_a(int par1, Random par2Random, int par3) {
 		return Item.getItemFromBlock(TwilightBlocks.twilightFurnace);
 	}
 
-	public void onBlockAdded(World par1World, int par2, int par3, int par4)
-	{
+	public void onBlockAdded(World par1World, int par2, int par3, int par4) {
 		super.onBlockAdded(par1World, par2, par3, par4);
 		this.setDefaultDirection(par1World, par2, par3, par4);
 	}
 	
-	private void setDefaultDirection(World par1World, int par2, int par3, int par4)
-	{
-		if (!par1World.isRemote)
-		{
+	private void setDefaultDirection(World par1World, int par2, int par3, int par4) {
+		if (!par1World.isRemote) {
 			Block l = par1World.getBlock(par2, par3, par4 - 1);
 			Block i1 = par1World.getBlock(par2, par3, par4 + 1);
 			Block j1 = par1World.getBlock(par2 - 1, par3, par4);
@@ -72,24 +68,16 @@ public class BlockCoalstoneFurnace extends BlockMod {
 			byte b0 = 3;
 
 			if (l.func_149730_j() && !i1.func_149730_j())
-			{
 				b0 = 3;
-			}
 
 			if (i1.func_149730_j() && !l.func_149730_j())
-			{
 				b0 = 2;
-			}
 
 			if (j1.func_149730_j() && !k1.func_149730_j())
-			{
 				b0 = 5;
-			}
 
 			if (k1.func_149730_j() && !j1.func_149730_j())
-			{
 				b0 = 4;
-			}
 
 			par1World.setBlockMetadataWithNotify(par2, par3, par4, b0, 2);
 		}
