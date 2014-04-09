@@ -82,7 +82,7 @@ public class VetheanItems {
 	public static final Item cermileCannon 		 = new ItemVetheanCannon(12).setName("cermileCannon");
 	public static final Item pardimalCannon 	 = new ItemVetheanCannon(15).setName("pardimalCannon");
 	public static final Item quadroticCannon 	 = new ItemVetheanCannon(19).setName("quadroticCannon");
-	public static final Item karosCannonItem 	 = new ItemVetheanCannon(21).setName("karosCannon");
+	public static final Item karosCannonItem 	 = new ItemVetheanCannon(21).setName("karosCannonItem");
 	public static final Item heliosisCannon 	 = new ItemVetheanCannon(28).setName("heliosisCannon");
 	public static final Item arksianeCannon 	 = new ItemVetheanCannon(36).setName("arksianeCannon");
 	

@@ -53,7 +53,7 @@ public class VetheaBlocks {
 	public static final Block             dreamLamp              = new VetheanBlock(Material.glass).setName("dreamLampOff").setBlockUnbreakable();
 	public static final Block             weedwoodVine           = new BlockModVine().setName("weedWoodVine").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             blossomingWeedwoodVine = new BlockModVine().setName("blossemedWeedWoodVine").setCreativeTab(DivineRPGTabs.vethea);
-	public static final Block             cryptWall              = new VetheanBlock(Material.rock).setName("chamberWall1").setBlockUnbreakable();
+	public static final Block             cryptWall              = new VetheanBlock(Material.rock).setName("cryptWall").setBlockUnbreakable();
 	public static final Block             smoothGlass            = new BlockModGlass().setName("smoothGlass").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             villageLamp            = new VetheanBlock(Material.glass).setName("villageLamp").setLightLevel(1.0F).setStepSound(Block.soundTypeGlass);
 	public static final Block             cellLamp               = new VetheanBlock(Material.glass).setName("cellLamp").setLightLevel(1.0F).setStepSound(Block.soundTypeGlass);
@@ -94,8 +94,8 @@ public class VetheaBlocks {
 	public static final Block             hungerstone2           = new VetheanBlock(Material.rock).setName("hungerStone2");
 	public static final Block             cryptFloor             = new VetheanBlock(Material.rock).setName("cryptFloor").setBlockUnbreakable();
 	public static final Block             hallWall               = new VetheanBlock(Material.rock).setName("hallWall").setBlockUnbreakable();
-	public static final BlockHelioticBeam helioticBeam           = (BlockHelioticBeam) new BlockHelioticBeam().setName("helioticBeam");
-	public static final BlockKarosCannon  karosCannon            = (BlockKarosCannon) new BlockKarosCannon(Material.rock).setName("karosCannon");
+	public static final BlockHelioticBeam helioticBeam           = (BlockHelioticBeam)new BlockHelioticBeam().setName("helioticBeam");
+	public static final BlockKarosCannon  karosCannon            = (BlockKarosCannon)new BlockKarosCannon(Material.rock).setName("karosCannon");
 
 	public static void init() {
 		dreamGrass = new BlockModGrass(dreamGrass, dreamDirt, "dream").setCreativeTab(DivineRPGTabs.vethea);
