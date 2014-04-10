@@ -17,7 +17,7 @@ public class VanillaItemsWeapons {
     public static final Item bedrockSword       = new ItemModSword(ToolMaterialMod.BedrockSword).setName("bedrockSword");
     public static final Item realmiteSword      = new ItemModSword(ToolMaterialMod.Realmite).setName("realmiteSword");
     public static final Item rupeeSword         = new ItemModSword(ToolMaterialMod.Rupee).setName("rupeeSword");
-    public static final Item sandslash          = new ItemModSword(ToolMaterialMod.Sandslash).setName("sandSlash");
+    public static final Item sandslash          = new ItemModSword(ToolMaterialMod.Sandslash).setName("sandslash");
     public static final Item divineSword        = new ItemModSword(ToolMaterialMod.DivineSword).setName("divineSword");
     public static final Item blueDivineSword    = new ItemModSword(ToolMaterialMod.DivineSword).setName("blueDivineSword");
     public static final Item yellowDivineSword  = new ItemModSword(ToolMaterialMod.DivineSword).setName("yellowDivineSword");
