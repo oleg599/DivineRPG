@@ -76,6 +76,7 @@ public class CommonProxy{
 		
 		LangRegistry.init();
 		if(Reference.DEBUG){
+			System.out.println("[DIVINERPG] DEBUG MODE");
 		    LangRegistry.addBlockNames();
 		    LangRegistry.addItemNames();
 		}
