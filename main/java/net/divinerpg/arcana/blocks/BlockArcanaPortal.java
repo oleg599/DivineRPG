@@ -16,36 +16,22 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockArcanaPortal extends BlockMod
-{
-
+public class BlockArcanaPortal extends BlockMod {
     private int firetick;
     private int firemax = 200;
 
-    public BlockArcanaPortal()
-    {
+    public BlockArcanaPortal() {
         super(Material.portal);
-        this.setLightLevel(1.0F);
+        setLightLevel(1.0F);
+        setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.0625F, 1.0F);
     }
 
     /**
      * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two
      * adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
      */
-    @Override
-    public boolean isOpaqueCube()
-    {
+    public boolean isOpaqueCube() {
         return false;
-    }
-
-    /**
-     * Updates the blocks bounds based on its current state. Args: world, x, y, z
-     */
-    @Override
-    public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
-    {
-        float var5 = 0.0625F;
-        this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, var5, 1.0F);
     }
 
     /**
@@ -57,8 +43,7 @@ public class BlockArcanaPortal extends BlockMod
      * Returns the quantity of items to drop on block destruction.
      */
     @Override
-    public int quantityDropped(Random par1Random)
-    {
+    public int quantityDropped(Random par1Random) {
         return 0;
     }
 
@@ -66,17 +51,14 @@ public class BlockArcanaPortal extends BlockMod
      * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
      */
     @Override
-    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
-    {
+    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity) {
         if ((par5Entity.ridingEntity == null) && (par5Entity.riddenByEntity == null) && ((par5Entity instanceof EntityPlayerMP)))
         {
             EntityPlayerMP thePlayer = (EntityPlayerMP)par5Entity;
             if (thePlayer.timeUntilPortal > 0)
-            {
                 thePlayer.timeUntilPortal = 10;
-            }
-            else if (thePlayer.dimension != ConfigurationHelper.Arcana)
-            {
+            
+            else if (thePlayer.dimension != ConfigurationHelper.Arcana) {
                 thePlayer.timeUntilPortal = 10;
                 thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigurationHelper.Arcana, new TeleporterArcana(thePlayer.mcServer.worldServerForDimension(ConfigurationHelper.Arcana)));
             }
@@ -89,20 +71,15 @@ public class BlockArcanaPortal extends BlockMod
 
     @Override
     @SideOnly(Side.CLIENT)
-
     /**
      * A randomly called display update to be able to add particles or other items for display
      */
-    public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
-    {
+    public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random){
 
         double var6 = par2 + par5Random.nextFloat();
         double var8 = par3 + 0.8F;
         double var10 = par4 + par5Random.nextFloat();
-        double var12 = 0.0D;
-        double var14 = 0.0D;
-        double var16 = 0.0D;
-        par1World.spawnParticle("smoke", var6, var8, var10, var12, var14, var16);
+        par1World.spawnParticle("smoke", var6, var8, var10, 0, 0, 0);
     }
 
     @Override
