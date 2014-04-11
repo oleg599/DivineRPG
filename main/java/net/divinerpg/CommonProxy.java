@@ -42,7 +42,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class CommonProxy{
 
 	public void renderThings(){}
-	
+
 	//ClientProxy
 	@SideOnly(Side.CLIENT)
 	public void preInit(FMLPreInitializationEvent event){
@@ -67,33 +67,41 @@ public class CommonProxy{
 		System.out.println("[DIVINERPG] ADDING CRAFTING/SMELTING RECIPES");
 		VanillaRecipeHelper.init();
 		TwilightRecipeHelper.init();
-		
+
 		System.out.println("[DIVINERPG] ADDING BLOCKS");
 		TwilightBlocks.init();
 		IceikaBlocks.init();
 		VetheaBlocks.init();
 		ArcanaBlocks.init();
-		
-		LangRegistry.init();
+
 		if(Reference.DEBUG){
+			LangRegistry.init();
 			System.out.println("[DIVINERPG] DEBUG MODE");
-		    LangRegistry.addBlockNames();
-		    LangRegistry.addItemNames();
+			LangRegistry.addBlockNames();
+			LangRegistry.addItemNames();
+			LangRegistry.closeFile();
+
+			SoundGenerator.init();
+			SoundGenerator.addToFile("{");
+			SoundGenerator.addSingleSound();
+			SoundGenerator.addMobSound();
+			SoundGenerator.addItemSound();
+			SoundGenerator.addToFile("}");
+			SoundGenerator.closeFile();
 		}
-		LangRegistry.closeFile();
 		System.out.println("[DIVINERPG] ADDING DIMENSIONS");
 		DimensionHelper.init();
 		System.out.println("[DIVINERPG] ADDING MOB SPAWNS");
 		MobSpawning.addSpawns();
 	}
-	
+
 	public void init(FMLInitializationEvent event){
 		int wut = 10;//What the hell does the int even do?
 		System.out.println("[DIVINERPG] ADDING WORLD GENERATIONS");
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
 		DivineAPI.addSpecialEventBus(new EventArmorFullSet());
 	}
-	
+
 	public void postInit(FMLPostInitializationEvent event){
 		DivineAPI.addBucket(DivineRPG.tarFluid, new ItemStack(VanillaItemsOther.tarBucket));
 	}
