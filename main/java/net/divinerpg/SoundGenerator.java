@@ -10,17 +10,13 @@ import java.util.ArrayList;
 
 public class SoundGenerator {
 
-	private static ArrayList<String> single;
-	private static ArrayList<String> item;
-	private static ArrayList<String> mob;
+	private static ArrayList<String> single = new ArrayList<String>();
+	private static ArrayList<String> item = new ArrayList<String>();
+	private static ArrayList<String> mob = new ArrayList<String>();
 	private static BufferedWriter writer;
 	private static boolean canWrite;
 
 	public static void main(String[] args){
-		single = new ArrayList<String>();
-		item = new ArrayList<String>();
-		mob = new ArrayList<String>();
-
 		addSounds();
 		addObject();
 	}
