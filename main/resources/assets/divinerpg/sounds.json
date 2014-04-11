@@ -36,6 +36,7 @@
     "wildFire":{"category":"master","sounds":[{"name" :"wildFire", stream": false}]},
     "wildFireHurt":{"category":"master","sounds":[{"name": "wildFireHurt", stream": false}]},
     "deepLaugh":{"category":"neutral","sounds":["deepLaugh"]},
+    "heal":{"category":"neutral","sounds":["heal"]},
     "phaser":{"category":"neutral","sounds":["phaser"]},
     "blitz":{"category":"neutral","sounds":["blitz"]},
     "staff":{"category":"neutral","sounds":["staff"]}

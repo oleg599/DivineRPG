@@ -43,10 +43,10 @@ public class Sounds {
 	public static String ayeracoPillar = "divinerpg:ayeracoPillar";
 	public static String ayeracoSpawn = "divinerpg:ayeracoSpawn";
 	public static String deepLaugh = "divinerpg:deepLaugh";
+	public static String heal = "divinerpg:heal";
 	public static String phaser = "divinerpg:phaser";
 	public static String blitz = "divinerpg:blitz";
 	public static String staff = "divinerpg:staff";
-	public static String heal = "divinerpg:heal";
 
 
 	public static String playSound(String name, World world, Entity entity, float volume, float pitch){
