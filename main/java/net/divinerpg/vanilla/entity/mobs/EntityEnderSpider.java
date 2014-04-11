@@ -53,7 +53,7 @@ public class EntityEnderSpider extends EntityEnderman
 		this.dropItem(VanillaItemsOther.enderShard, 1);
 	}
 
-	public void onDeath(DamageSource d) {
+	/*public void onDeath(DamageSource d) {
 		super.onDeath(d);
 		if(!worldObj.isRemote){
 			EntityPlayer p = Minecraft.getMinecraft().thePlayer;
@@ -61,5 +61,5 @@ public class EntityEnderSpider extends EntityEnderman
 				DivineAPI.sendMessageToAll(DivineAPI.DARK_AQUA + p.getDisplayName() + " Has Slain A Ender Spider.");
 			}
 		}
-	}
+	}*/
 }

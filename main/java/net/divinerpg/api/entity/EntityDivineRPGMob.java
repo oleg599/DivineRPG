@@ -46,7 +46,7 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 		return Sounds.playSound(sounds, worldObj, this);
 	}
 
-	public void onDeath(DamageSource d) {
+	/*public void onDeath(DamageSource d) {
 		super.onDeath(d);
 		EntityPlayer p = (EntityPlayer)d.getSourceOfDamage();
 		if(!worldObj.isRemote && ConfigurationHelper.canShowDeathChat){
@@ -60,5 +60,5 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 				}
 			}
 		}
-	}
+	}*/
 }

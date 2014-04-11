@@ -16,11 +16,6 @@ public class SoundGenerator {
 	private static BufferedWriter writer;
 	private static boolean canWrite;
 
-	public static void main(String[] args){
-		addSounds();
-		addObject();
-	}
-
 	public static void init() {
 		if(Reference.DEBUG){
 			File f = new File("./DivineRPG/sounds.json");

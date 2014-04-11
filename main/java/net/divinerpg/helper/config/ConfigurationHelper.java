@@ -55,7 +55,7 @@ public class ConfigurationHelper {
 	}	
 	
 	public static void miscInit(){
-		canShowDeathChat = cfg.get("GUI", "Can Show Death Chat For DivineRPG Mobs", true).getBoolean(true);
+		canShowDeathChat = cfg.get("GUI", "Can Show Death Chat For DivineRPG Mobs", false).getBoolean(false);//TODO FALSE UNTILL FIGURED OUT WHY RANGED WEAPONS DO STUFFS
 		canShowVanillaDeathChat = cfg.get("GUI", "Can Show Death Chat For Vanilla Mobs", true).getBoolean(true);
 		canShowIngameVersion = cfg.get("GUI", "Can Show in-game version text in top left corner", true).getBoolean(true);
 	}

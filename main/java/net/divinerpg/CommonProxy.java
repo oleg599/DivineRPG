@@ -52,7 +52,7 @@ public class CommonProxy{
 		DivineAPI.addEventBus(new EventBucketFill());
 		DivineAPI.addEventBus(new EventBonemeal());
 		DivineAPI.addEventBus(new EventArmorFullSet());
-		DivineAPI.addEventBus(new EventDeath());
+		//DivineAPI.addEventBus(new EventDeath());
 		System.out.println("[DIVINERPG] REGISTERING TILE ENTITIES");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		GameRegistry.registerTileEntity(TileEntityInfusionTable.class, "Infusion Table");
@@ -82,11 +82,14 @@ public class CommonProxy{
 			LangRegistry.closeFile();
 
 			SoundGenerator.init();
+			SoundGenerator.addSounds();
 			SoundGenerator.addToFile("{");
 			SoundGenerator.addSingleSound();
 			SoundGenerator.addMobSound();
 			SoundGenerator.addItemSound();
 			SoundGenerator.addToFile("}");
+			SoundGenerator.addToFile("\n");
+			SoundGenerator.addObject();
 			SoundGenerator.closeFile();
 		}
 		System.out.println("[DIVINERPG] ADDING DIMENSIONS");
