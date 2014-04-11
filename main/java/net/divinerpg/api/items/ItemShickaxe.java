@@ -26,16 +26,13 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemShickaxe extends ItemTool
-{
-	private static final Set<Blocks> blocksEffectiveAgainst = Sets.newHashSet(new Blocks[256]);
+public class ItemShickaxe extends ItemTool {
+	
+	private static final Set<Block> blocksEffectiveAgainst = Sets.newHashSet(Block.blockRegistry);
 
 	protected ToolMaterial theToolMaterial;
 
-	private String name;
-
-	public ItemShickaxe(ToolMaterial par2EnumToolMaterial)
-	{
+	public ItemShickaxe(ToolMaterial par2EnumToolMaterial) {
 		super(0, par2EnumToolMaterial, blocksEffectiveAgainst);
 		this.theToolMaterial = par2EnumToolMaterial;
 		setCreativeTab(DivineRPGTabs.tools);
@@ -43,25 +40,26 @@ public class ItemShickaxe extends ItemTool
 	}
 
 	@Override
-	public boolean canHarvestBlock(Block par1Block, ItemStack itemStack)
-	{
+	public boolean canHarvestBlock(Block par1Block, ItemStack itemStack) {
 		if(par1Block != Blocks.bedrock)
 			return true;
 		else
 			return false;
 	}
 
-	public boolean func_150897_b(Block block)
-	{
+	@Override
+	public boolean func_150897_b(Block block) {
         return block == Blocks.obsidian ? this.toolMaterial.getHarvestLevel() == 3 : (block != Blocks.diamond_block && block != Blocks.diamond_ore ? (block != Blocks.emerald_ore && block != Blocks.emerald_block ? (block != Blocks.gold_block && block != Blocks.gold_ore ? (block != Blocks.iron_block && block != Blocks.iron_ore ? (block != Blocks.lapis_block && block != Blocks.lapis_ore ? (block != Blocks.redstone_ore && block != Blocks.lit_redstone_ore ? (block.getMaterial() == Material.rock ? true : (block.getMaterial() == Material.iron ? true : block.getMaterial() == Material.anvil)) : this.toolMaterial.getHarvestLevel() >= 2) : this.toolMaterial.getHarvestLevel() >= 1) : this.toolMaterial.getHarvestLevel() >= 1) : this.toolMaterial.getHarvestLevel() >= 2) : this.toolMaterial.getHarvestLevel() >= 2) : this.toolMaterial.getHarvestLevel() >= 2);
 	}
 
+	@Override
 	public float func_150893_a(ItemStack item, Block block) {
-		return 	block.getMaterial() != Material.anvil && block.getMaterial() != Material.cactus && block.getMaterial() != Material.cake && block.getMaterial() != Material.carpet && block.getMaterial() != Material.circuits && block.getMaterial() != Material.clay 
+		return super.func_150893_a(item, block);
+		/*return 	block.getMaterial() != Material.anvil && block.getMaterial() != Material.cactus && block.getMaterial() != Material.cake && block.getMaterial() != Material.carpet && block.getMaterial() != Material.circuits && block.getMaterial() != Material.clay 
 				&& block.getMaterial() != Material.cloth && block.getMaterial() != Material.coral && block.getMaterial() != Material.craftedSnow && block.getMaterial() != Material.dragonEgg && block.getMaterial() != Material.fire && block.getMaterial() != Material.glass
 				&& block.getMaterial() != Material.gourd && block.getMaterial() != Material.grass && block.getMaterial() != Material.ground && block.getMaterial() != Material.ice && block.getMaterial() != Material.iron && block.getMaterial() != Material.leaves && block.getMaterial() != Material.packedIce
 				&& block.getMaterial() != Material.piston && block.getMaterial() != Material.plants && block.getMaterial() != Material.portal && block.getMaterial() != Material.redstoneLight && block.getMaterial() != Material.rock && block.getMaterial() != Material.sand && block.getMaterial() != Material.snow && block.getMaterial() != Material.sponge 
-				&& block.getMaterial() != Material.tnt && block.getMaterial() != Material.vine && block.getMaterial() != Material.web && block.getMaterial() != Material.wood ? super.func_150893_a(item, block) : this.efficiencyOnProperMaterial;
+				&& block.getMaterial() != Material.tnt && block.getMaterial() != Material.vine && block.getMaterial() != Material.web && block.getMaterial() != Material.wood ? super.func_150893_a(item, block) : this.efficiencyOnProperMaterial;*/
 	}
 
 	@Override
@@ -109,44 +107,15 @@ public class ItemShickaxe extends ItemTool
 			par3List.add(DivineAPI.GREEN + "Infinite Uses");
 		}
 	}
-	public Item setTextureName(String par1Str)
-	{
+	public Item setTextureName(String par1Str) {
 		this.iconString = (Reference.PREFIX + par1Str);
 		return this;
 	}
 
 	public Item setName(String name){
-		this.name = name;
 		setTextureName(name);
 		setUnlocalizedName(name);
-		register();
-		return this;
-	}
-
-	public void register(){
-		int numChars = 0;
-		char firstLetter = name.charAt(0);
-		if(Character.isLowerCase(firstLetter))
-			firstLetter = Character.toUpperCase(firstLetter);
-		String inGame = name.substring(1);
-		for(int k = 0; k < name.length(); k++){
-			char c = name.charAt(k);
-			int code = (int) c;
-
-			if(k != 0){
-				for(int p = 65; p < 90; p++){
-					if(code == p){
-						numChars++;
-						if(numChars == 1)
-							inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-						else
-							inGame = new StringBuffer(inGame).insert(k, " ").toString();
-					}
-				}
-			}
-		}
-		String finalName = firstLetter + inGame;
 		GameRegistry.registerItem(this, name);
-		LanguageRegistry.addName(this, finalName);
+		return this;
 	}
 }
