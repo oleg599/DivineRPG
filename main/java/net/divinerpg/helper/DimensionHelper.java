@@ -1,5 +1,7 @@
 package net.divinerpg.helper;
 
+import net.divinerpg.arcana.gen.BiomeGenArcana;
+import net.divinerpg.arcana.gen.WorldProviderArcana;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.twilight.gen.eden.BiomeGenEden;
 import net.divinerpg.twilight.gen.eden.WorldProviderEden;
@@ -18,18 +20,18 @@ public class DimensionHelper {
 	public static BiomeGenBase Mortum 		= new BiomeGenEden(ConfigurationHelper.MortumBiome);
 	public static BiomeGenBase Iceika 		= new BiomeGenEden(ConfigurationHelper.IceikaBiome);
 	public static BiomeGenBase Vethea 		= new BiomeGenEden(ConfigurationHelper.VetheaBiome);
-	public static BiomeGenBase Arcana 		= new BiomeGenEden(ConfigurationHelper.ArcanaBiome);
+	public static BiomeGenBase Arcana 		= new BiomeGenArcana(ConfigurationHelper.ArcanaBiome);
 
 	public static void init(){
 		addDimension(ConfigurationHelper.Eden, WorldProviderEden.class, ConfigurationHelper.keepLoadingEden);
 		addDimension(ConfigurationHelper.WildWoods, WorldProviderWildWoods.class, ConfigurationHelper.keepLoadingWildWoods);
-		
+		addDimension(ConfigurationHelper.Arcana, WorldProviderArcana.class, ConfigurationHelper.keepLoadingArcana);
 		/*addDimension(ConfigurationHelper.Apalachia, WorldProviderApalachia.class, ConfigurationHelper.keepLoadingApalachia);
 		addDimension(ConfigurationHelper.Skythern, WorldProviderSkythern.class, ConfigurationHelper.keepLoadingSkythern);
 		addDimension(ConfigurationHelper.Mortum, WorldProviderMortum.class, ConfigurationHelper.keepLoadingMortum);
 		addDimension(ConfigurationHelper.Vethea, WorldProviderVethea.class, ConfigurationHelper.keepLoadingVethea);
 		addDimension(ConfigurationHelper.Iceika, WorldProviderIceika.class, ConfigurationHelper.keepLoadingIceika);
-		addDimension(ConfigurationHelper.Arcana, WorldProviderArcana.class, ConfigurationHelper.keepLoadingArcana);*/
+		*/
 
 
 	}

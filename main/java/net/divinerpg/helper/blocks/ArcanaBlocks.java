@@ -5,6 +5,8 @@ import net.divinerpg.api.blocks.BlockModGlass;
 import net.divinerpg.api.blocks.BlockModGrass;
 import net.divinerpg.api.blocks.BlockModLadder;
 import net.divinerpg.arcana.blocks.ArcanaBlock;
+import net.divinerpg.arcana.blocks.BlockArcanaFrame;
+import net.divinerpg.arcana.blocks.BlockArcanaPortal;
 import net.divinerpg.arcana.blocks.BlockOreDoor;
 import net.divinerpg.helper.items.ArcanaItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
@@ -28,6 +30,8 @@ public class ArcanaBlocks {
 	public static final Block soulSludge			= new ArcanaBlock(rock).setName("soulSludge");
 	public static final Block degradedBrick			= new ArcanaBlock(rock).setName("degradedBrick");
 	public static final Block darkDegradedBrick 	= new ArcanaBlock(rock).setName("darkDegradedBrick");
+	public static final Block ancientBrick		 	= new ArcanaBlock(rock).setName("ancientBrick");
+	public static final Block ancientStone		 	= new ArcanaBlock(rock).setName("ancientStone");
 	public static final Block lightDegradedBrick 	= new ArcanaBlock(rock).setName("lightDegradedBrick");
 	public static final Block stainedGlass 			= new BlockModGlass().setName("stainedGlass");
 	public static final Block stainedGlass2 		= new BlockModGlass().setName("stainedGlass2");
@@ -37,6 +41,21 @@ public class ArcanaBlocks {
 	public static final Block stainedGlass6 		= new BlockModGlass().setName("stainedGlass6");
 	public static final Block stainedGlass7 		= new BlockModGlass().setName("stainedGlass7");
 	public static final Block stainedGlass8 		= new BlockModGlass().setName("stainedGlass8");
+	public static final Block dramixAltar	 		= new BlockModGlass().setName("dramixAltar");
+	public static final Block parasectaAltar 		= new BlockModGlass().setName("parasectaAltar");
+	public static final Block oreDoor2		 		= new BlockModGlass().setName("oreDoor2");
+	public static final Block oreDoor3		 		= new BlockModGlass().setName("oreDoor3");
+	public static final Block oreDoor4		 		= new BlockModGlass().setName("oreDoor4");
+	public static final Block dungenSpawnerPrisoner = new ArcanaBlock(rock).setName("dungenSpawnerPrisoner");
+	public static final Block razorbackSpawner      = new ArcanaBlock(rock).setName("razorbackSpawner");
+	public static final Block deathHoundSpawner 	= new ArcanaBlock(rock).setName("deathHoundSpawner");
+	public static final Block ancientTile 			= new ArcanaBlock(rock).setName("ancientTile");
+	public static final Block extractor 			= new ArcanaBlock(rock).setName("extractor");
+	public static final Block deathcryxSpawner      = new ArcanaBlock(rock).setName("deathcryxSpawner");
+	public static final Block livingStatueSpawner 	= new ArcanaBlock(rock).setName("livingStatueSpawner");
+	public static final Block roamerSpawner			= new ArcanaBlock(rock).setName("roamerSpawner");
+	public static final Block arcanaPortalFrame     = new BlockArcanaFrame().setName("arcanaPortalFrame");
+	public static final Block arcanaPortal     		= new BlockArcanaPortal().setName("arcanaPortal");
 
 	public static final Block oreDoor1 				= new BlockOreDoor(Material.iron, ArcanaItems.oreDoorItem1, ArcanaItems.oreKey1).setName("oreDoor1").setCreativeTab(DivineRPGTabs.blocks);
 	
