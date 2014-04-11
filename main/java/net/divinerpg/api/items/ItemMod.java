@@ -34,7 +34,7 @@ public class ItemMod extends Item {
 		return par1ItemStack;
 	}
 
-	public Item setName(String name){
+	public Item setName(String name) {
 		setTextureName(name);
 		setUnlocalizedName(name);
 		GameRegistry.registerItem(this, name);
