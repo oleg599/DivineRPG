@@ -30,7 +30,7 @@ public class BlockModGrass extends BlockMod implements IGrowable{
         setStepSound(soundTypeGrass);
         setCreativeTab(DivineRPGTabs.blocks);
         setName(name);
-        this.setTickRandomly(true);
+        setTickRandomly(true);
         grass = Grass;
         dirt = Dirt;
     }
@@ -64,7 +64,7 @@ public class BlockModGrass extends BlockMod implements IGrowable{
                     int k1 = par4 + par5Random.nextInt(3) - 1;
 
                     if (par1World.getBlock(i1, j1, k1) == dirt && par1World.getBlockLightValue(i1, j1 + 1, k1) >= 4 && par1World.getBlockLightOpacity(i1, j1 + 1, k1) <= 2) {
-                        par1World.setBlock(i1, j1, k1, grass);
+                        //par1World.setBlock(i1, j1, k1, grass);
                     }
                 }
             }

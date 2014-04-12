@@ -137,7 +137,7 @@ public class ChunkProviderEden implements IChunkProvider{
 
     public Chunk provideChunk(int par1, int par2)
     {
-        this.rand.setSeed((long)par1 * 341873128712L + (long)par2 * 132897987541L);
+        this.rand.setSeed((long)par1 * 391279128714L + (long)par2 * 132894987741L);
         Block[] ablock = new Block[32768];
         this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
         this.generateTerrain(par1, par2, ablock, this.biomesForGeneration);
