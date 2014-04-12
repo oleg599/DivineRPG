@@ -20,7 +20,7 @@ public class IceikaItems {
 	public static final Item icicleBane 	   = new ItemModSword(ToolMaterialMod.IcicleBane).setName("icicleBane");
 	public static final Item icineSword	 	   = new ItemModSword(ToolMaterialMod.Icine).setName("icineSword");
 	public static final Item enderice 		   = new ItemModSword(ToolMaterialMod.Enderice).setName("enderice");
-	public static final Item snowSlash 		   = new ItemModSword(ToolMaterialMod.SnowSlash).setName("snowslash");
+	public static final Item snowSlash 		   = new ItemModSword(ToolMaterialMod.Snowslash).setName("snowslash");
 	public static final Item glacierSword 	   = new ItemModSword(ToolMaterialMod.Glacier).setName("glacierSword");
 	public static final Item frostkingSword    = new ItemModSword(ToolMaterialMod.Frostking).setName("frostkingSword");
 	public static final Item frozenMaul 	   = new ItemModSword(ToolMaterialMod.FrozenMaul).setName("frozenMaul");

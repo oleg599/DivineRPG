@@ -16,7 +16,7 @@ public class VanillaItemsTools {
     public static final Item rupeeShovel        = new ItemModShovel(ToolMaterialMod.Rupee).setName("rupeeShovel");
     public static final Item rupeeHoe           = new ItemModHoe(ToolMaterialMod.Rupee).setName("rupeeHoe");
 
-    public static final Item arlemiteShickaxe   = new ItemShickaxe(ToolMaterialMod.arlemiteShick).setName("arlemiteShickaxe");
+    public static final Item arlemiteShickaxe   = new ItemShickaxe(ToolMaterialMod.ArlemiteShick).setName("arlemiteShickaxe");
     public static final Item arlemitePickaxe    = new ItemModPickaxe(ToolMaterialMod.Arlemite).setName("arlemitePickaxe");
     public static final Item arlemiteAxe        = new ItemModAxe(ToolMaterialMod.Arlemite).setName("arlemiteAxe");
     public static final Item arlemiteShovel     = new ItemModShovel(ToolMaterialMod.Arlemite).setName("arlemiteShovel");

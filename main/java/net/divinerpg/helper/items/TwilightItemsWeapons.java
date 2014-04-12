@@ -12,12 +12,12 @@ import net.minecraft.item.Item;
 
 public class TwilightItemsWeapons {
 	
-	public static final Item edenBlade          = new ItemModSword(ToolMaterialMod.edenSword).setName("edenBlade");
-    public static final Item wildWoodBlade      = new ItemModSword(ToolMaterialMod.wildWoodSword).setName("wildWoodBlade");
-    public static final Item apalachiaBlade     = new ItemModSword(ToolMaterialMod.apalachiaSword).setName("apalachiaBlade");
-    public static final Item skythernBlade      = new ItemModSword(ToolMaterialMod.skythernSword).setName("skythernBlade");
-    public static final Item mortumBlade        = new ItemModSword(ToolMaterialMod.mortumSword).setName("mortumBlade");
-    public static final Item haliteBlade        = new ItemModSword(ToolMaterialMod.halite).setName("haliteBlade");
+	public static final Item edenBlade          = new ItemModSword(ToolMaterialMod.EdenSword).setName("edenBlade");
+    public static final Item wildWoodBlade      = new ItemModSword(ToolMaterialMod.WildWoodSword).setName("wildWoodBlade");
+    public static final Item apalachiaBlade     = new ItemModSword(ToolMaterialMod.ApalachiaSword).setName("apalachiaBlade");
+    public static final Item skythernBlade      = new ItemModSword(ToolMaterialMod.SkythernSword).setName("skythernBlade");
+    public static final Item mortumBlade        = new ItemModSword(ToolMaterialMod.MortumSword).setName("mortumBlade");
+    public static final Item haliteBlade        = new ItemModSword(ToolMaterialMod.Halite).setName("haliteBlade");
     
     public static final Item edenSlicer         = new ItemThrowable(12).setName("edenSlicer");
     public static final Item wildWoodSlicer     = new ItemThrowable(18).setName("wildWoodSlicer");

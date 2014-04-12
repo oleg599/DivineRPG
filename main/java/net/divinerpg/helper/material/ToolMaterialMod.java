@@ -2,17 +2,27 @@ package net.divinerpg.helper.material;
 
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+import net.divinerpg.helper.DivineAPI;
 
-
- public class ToolMaterialMod {
+public class ToolMaterialMod {
 	
-		    public static ToolMaterial Rupee 			= EnumHelper.addToolMaterial("rupee", 6, 2500, 16.0F, 4, 0);
+	 		//Weapons
+	 		public static ToolMaterial Longsword 		= DivineAPI.addMeleeMaterial("longsword", 750, 10, 15);
+			public static ToolMaterial IcicleBane 		= DivineAPI.addMeleeMaterial("icicleBane", 16, 15);
+			public static ToolMaterial Icine  	 		= DivineAPI.addMeleeMaterial("icine", 34, 15);
+			public static ToolMaterial Enderice 		= DivineAPI.addMeleeMaterial("enderice", 28, 15);
+			public static ToolMaterial Snowslash 		= DivineAPI.addMeleeMaterial("snowslash", 150, 38, 15);
+			public static ToolMaterial Glacier 			= DivineAPI.addMeleeMaterial("glacier", 1000, 18, 15);
+			public static ToolMaterial Frostking 		= DivineAPI.addMeleeMaterial("frostking", 6000, 16, 15);
+			public static ToolMaterial FrozenMaul 		= DivineAPI.addMeleeMaterial("frozenMaul", 30, 15);
+		
+		    public static ToolMaterial Rupee 			= EnumHelper.addToolMaterial("rupee", 6, 2500, 15.0F, 4, 0);
 			public static ToolMaterial Arlemite 		= EnumHelper.addToolMaterial("arlemite", 3, 3000, 13.0F, 4, 10);
 			public static ToolMaterial Realmite 		= EnumHelper.addToolMaterial("realmite", 3, 4000, 12.0F, 1, 10);
 			public static ToolMaterial Inferno 			= EnumHelper.addToolMaterial("infernosword", 0, -1, 0, 7, 22);
-			public static ToolMaterial RupeeShick 		= EnumHelper.addToolMaterial("rupeeShick", 4, -1, 16.0F, 6, 15);
+			public static ToolMaterial RupeeShick 		= EnumHelper.addToolMaterial("rupeeShick", 4, -1, 15.0F, 6, 15);
 			public static ToolMaterial ArlemiteSword 	= EnumHelper.addToolMaterial("arlemite", 1, 4000, 1.5F, 4, 10);
-			public static ToolMaterial arlemiteShick 	= EnumHelper.addToolMaterial("arlemiteShick", 4, 13000, 15.0F, 6, 15);
+			public static ToolMaterial ArlemiteShick 	= EnumHelper.addToolMaterial("arlemiteShick", 4, 13000, 15.0F, 6, 15);
 			public static ToolMaterial EnderSword 		= EnumHelper.addToolMaterial("enderSword", 0, -1, 0, 18, 16);
 			public static ToolMaterial SlimeSword 		= EnumHelper.addToolMaterial("slimesword", 0, 1000, 0, 6, 22);
 			public static ToolMaterial DivineSword 		= EnumHelper.addToolMaterial("divinesword", 0, -1, 0, 24, 22);
@@ -39,26 +49,17 @@ import net.minecraftforge.common.util.EnumHelper;
 			public static ToolMaterial ScorchingSword  	= EnumHelper.addToolMaterial("scorchingSword", 0, 500, 0.0F, 21, 15);
 			public static ToolMaterial BluefireSword   	= EnumHelper.addToolMaterial("bluefireSword", 0, 3000, 0.0F, 19, 15);
 			public static ToolMaterial CorruptedMaul   	= EnumHelper.addToolMaterial("corruptedMaul", 0, 6000, 0.0F, 13, 15);
-			public static ToolMaterial halite 	   		= EnumHelper.addToolMaterial("halite", 10, 2000, 0, 86, 22);
-			public static ToolMaterial skythernSword 	= EnumHelper.addToolMaterial("skythern", 100, 6000, 48.0F, 55, 22);
-			public static ToolMaterial edenSword	   	= EnumHelper.addToolMaterial("eden", 100, 6000, 20.0F, 25, 22);
-			public static ToolMaterial wildWoodSword 	= EnumHelper.addToolMaterial("wildwood", 100, 6000, 28.0F, 35, 22);
-			public static ToolMaterial apalachiaSword   = EnumHelper.addToolMaterial("apalachia", 100, 6000, 40.0F, 45, 22);
-			public static ToolMaterial mortumSword     	= EnumHelper.addToolMaterial("mortum", 100, 6000, 55.0F, 65, 22);
-			public static ToolMaterial skythernTools 	= EnumHelper.addToolMaterial("skythern", 100, 6000, 48.0F, 0, 22);
-			public static ToolMaterial edenTools 		= EnumHelper.addToolMaterial("eden", 100, 6000, 20.0F, 0, 22);
-			public static ToolMaterial wildWoodTools 	= EnumHelper.addToolMaterial("wildwood", 100, 6000, 28.0F, 0, 22);
-			public static ToolMaterial apalachiaTools 	= EnumHelper.addToolMaterial("apalachia", 100, 6000, 40.0F, 0, 22);
-			public static ToolMaterial mortumTools 		= EnumHelper.addToolMaterial("mortum", 100, 6000, 55.0F, 0, 22);
-			public static ToolMaterial divineTools 		= EnumHelper.addToolMaterial("divine", 8, 35000, 20.0F, 0, 10);
-			public static ToolMaterial Longsword 		= EnumHelper.addToolMaterial("longsword", 0, 750, 0.0F, 10, 15);
-			public static ToolMaterial IcicleBane 		= EnumHelper.addToolMaterial("icicleBane", 0, 750, 0.0F, 10, 15);
-			public static ToolMaterial Icine  	 		= EnumHelper.addToolMaterial("icine", 0, 750, 0.0F, 10, 15);
-			public static ToolMaterial Enderice 		= EnumHelper.addToolMaterial("enderice", 0, 750, 0.0F, 10, 15);
-			public static ToolMaterial SnowSlash 		= EnumHelper.addToolMaterial("snowSlash", 0, 750, 0.0F, 10, 15);
-			public static ToolMaterial Glacier 			= EnumHelper.addToolMaterial("glacier", 0, 750, 0.0F, 10, 15);
-			public static ToolMaterial Frostking 		= EnumHelper.addToolMaterial("frostking", 0, 750, 0.0F, 10, 15);
-			public static ToolMaterial FrozenMaul 		= EnumHelper.addToolMaterial("frozenMaul", 0, 750, 0.0F, 10, 15);
-			public static ToolMaterial Frossivence 		= EnumHelper.addToolMaterial("frossivence", 0, 750, 0.0F, 10, 15);
+			public static ToolMaterial Halite 	   		= EnumHelper.addToolMaterial("halite", 10, 2000, 0, 86, 22);
+			public static ToolMaterial SkythernSword 	= EnumHelper.addToolMaterial("skythern", 100, 6000, 48.0F, 55, 22);
+			public static ToolMaterial EdenSword	   	= EnumHelper.addToolMaterial("eden", 100, 6000, 20.0F, 25, 22);
+			public static ToolMaterial WildWoodSword 	= EnumHelper.addToolMaterial("wildwood", 100, 6000, 28.0F, 35, 22);
+			public static ToolMaterial ApalachiaSword   = EnumHelper.addToolMaterial("apalachia", 100, 6000, 40.0F, 45, 22);
+			public static ToolMaterial MortumSword     	= EnumHelper.addToolMaterial("mortum", 100, 6000, 55.0F, 65, 22);
+			public static ToolMaterial SkythernTools 	= EnumHelper.addToolMaterial("skythern", 100, 6000, 48.0F, 0, 22);
+			public static ToolMaterial EdenTools 		= EnumHelper.addToolMaterial("eden", 100, 6000, 20.0F, 0, 22);
+			public static ToolMaterial WildWoodTools 	= EnumHelper.addToolMaterial("wildwood", 100, 6000, 28.0F, 0, 22);
+			public static ToolMaterial ApalachiaTools 	= EnumHelper.addToolMaterial("apalachia", 100, 6000, 40.0F, 0, 22);
+			public static ToolMaterial MortumTools 		= EnumHelper.addToolMaterial("mortum", 100, 6000, 55.0F, 0, 22);
+			public static ToolMaterial DivineTools 		= EnumHelper.addToolMaterial("divine", 8, 35000, 20.0F, 0, 10);
 
 }

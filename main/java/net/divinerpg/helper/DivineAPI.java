@@ -9,6 +9,7 @@ import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityList.EntityEggInfo;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
@@ -117,4 +118,12 @@ public class DivineAPI {
 	public static void sendMessageToAll(String message){
 		FMLClientHandler.instance().getClient().ingameGUI.getChatGUI().printChatMessage(addChatMessage(AQUA + "[" + DARK_BLUE + "DivineRPG" + AQUA + "] " + WHITE + message));
 	}
+	
+	public static ToolMaterial addMeleeMaterial(String name, int maxUses, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, name, 0, maxUses, 0, damage - 5, enchantability);
+    }
+	
+	public static ToolMaterial addMeleeMaterial(String name, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, name, 0, -1, 0, damage - 5, enchantability);
+    }
 }
