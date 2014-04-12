@@ -8,6 +8,7 @@ import java.util.Random;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
+import net.divinerpg.twilight.blocks.BlockEdenPortal;
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ChunkCoordinates;
@@ -41,6 +42,7 @@ public class TeleporterEden extends Teleporter{
                 this.placeInExistingPortal(par1Entity, par2, par4, par6, par8);
             }
         }
+        
         else
         {
             int i = MathHelper.floor_double(par1Entity.posX);
@@ -48,7 +50,7 @@ public class TeleporterEden extends Teleporter{
             int k = MathHelper.floor_double(par1Entity.posZ);
             byte b0 = 1;
             byte b1 = 0;
-
+            /*
             for (int l = -2; l <= 2; ++l)
             {
                 for (int i1 = -2; i1 <= 2; ++i1)
@@ -62,9 +64,9 @@ public class TeleporterEden extends Teleporter{
                         this.worldServerInstance.setBlock(k1, l1, i2, flag ? VanillaBlocks.divineRock : Blocks.air);
                     }
                 }
-            }
+            }*/
 
-            par1Entity.setLocationAndAngles((double)i, (double)j, (double)k, par1Entity.rotationYaw, 0.0F);
+            par1Entity.setLocationAndAngles((double)BlockEdenPortal.x, (double)BlockEdenPortal.y, (double)BlockEdenPortal.z, par1Entity.rotationYaw, 0.0F);
             par1Entity.motionX = par1Entity.motionY = par1Entity.motionZ = 0.0D;
         }
     }

@@ -32,6 +32,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockEdenPortal extends BlockBreakable
 {
 	public static final int[][] field_150001_a = new int[][] {new int[0], {3, 1}, {2, 0}};
+	public static int x;
+	public static int y;
+	public static int z;
 
 	public String name;
 	public BlockEdenPortal() {
@@ -84,6 +87,10 @@ public class BlockEdenPortal extends BlockBreakable
                 thePlayer.timeUntilPortal = 10;
             }
             else if (thePlayer.dimension != dim) {
+            	x = par2 + 1;
+            	y = par3;
+            	z = par4 + 1;
+            	System.out.print(y);
                 thePlayer.timeUntilPortal = 10;
                 thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, dim, new TeleporterEden(thePlayer.mcServer.worldServerForDimension(dim)));
             } else {
