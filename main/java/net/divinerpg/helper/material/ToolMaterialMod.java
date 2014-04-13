@@ -15,6 +15,12 @@ public class ToolMaterialMod {
 			public static ToolMaterial Glacier 			= DivineAPI.addMeleeMaterial("glacier", 1000, 18, 15);
 			public static ToolMaterial Frostking 		= DivineAPI.addMeleeMaterial("frostking", 6000, 16, 15);
 			public static ToolMaterial FrozenMaul 		= DivineAPI.addMeleeMaterial("frozenMaul", 30, 15);
+			public static ToolMaterial SlimeSword 		= DivineAPI.addMeleeMaterial("slimeSword", 1000, 11, 22);
+			public static ToolMaterial OceanKnife 		= DivineAPI.addMeleeMaterial("oceanKnife", 2000, 14, 10);
+			public static ToolMaterial BedrockSword 	= DivineAPI.addMeleeMaterial("bedrockSword", 14000, 13, 22);
+			public static ToolMaterial EnderSword 		= DivineAPI.addMeleeMaterial("enderSword", 23, 16);
+			public static ToolMaterial DivineSword 		= DivineAPI.addMeleeMaterial("divineSword", 24, 22);
+			public static ToolMaterial AquaMaul 		= DivineAPI.addMeleeMaterial("aquaMaul", 10000, 29, 10);
 		
 		    public static ToolMaterial Rupee 			= EnumHelper.addToolMaterial("rupee", 6, 2500, 15.0F, 4, 0);
 			public static ToolMaterial Arlemite 		= EnumHelper.addToolMaterial("arlemite", 3, 3000, 13.0F, 4, 10);
@@ -23,12 +29,6 @@ public class ToolMaterialMod {
 			public static ToolMaterial RupeeShick 		= EnumHelper.addToolMaterial("rupeeShick", 4, -1, 15.0F, 6, 15);
 			public static ToolMaterial ArlemiteSword 	= EnumHelper.addToolMaterial("arlemite", 1, 4000, 1.5F, 4, 10);
 			public static ToolMaterial ArlemiteShick 	= EnumHelper.addToolMaterial("arlemiteShick", 4, 13000, 15.0F, 6, 15);
-			public static ToolMaterial EnderSword 		= EnumHelper.addToolMaterial("enderSword", 0, -1, 0, 18, 16);
-			public static ToolMaterial SlimeSword 		= EnumHelper.addToolMaterial("slimesword", 0, 1000, 0, 6, 22);
-			public static ToolMaterial DivineSword 		= EnumHelper.addToolMaterial("divinesword", 0, -1, 0, 24, 22);
-			public static ToolMaterial AquaMaul 		= EnumHelper.addToolMaterial("aquasword", 1, 10000, 1.5F, 18, 10);
-			public static ToolMaterial OceanKnife 		= EnumHelper.addToolMaterial("oceanKnife", 3, 2000, 0.0F, 9, 10);
-			public static ToolMaterial BedrockSword 	= EnumHelper.addToolMaterial("bedrocksword", 0, 14000, 0, 8, 22);
 			public static ToolMaterial Sandslash 		= EnumHelper.addToolMaterial("sandslash", 0, 200, 0, 27, 22);
 			public static ToolMaterial BloodgemTool 	= EnumHelper.addToolMaterial("bloodgem", 0, 520, 2.0F, 4, 15);
 			public static ToolMaterial Cyclops 			= EnumHelper.addToolMaterial("cyclops", 0, 1000, 8.0F, 3, 10);
