@@ -12,11 +12,11 @@ import net.minecraft.item.Item;
 
 public class TwilightItemsWeapons {
 	
-	public static final Item edenBlade          = new ItemModSword(ToolMaterialMod.EdenSword).setName("edenBlade");
-    public static final Item wildWoodBlade      = new ItemModSword(ToolMaterialMod.WildWoodSword).setName("wildWoodBlade");
-    public static final Item apalachiaBlade     = new ItemModSword(ToolMaterialMod.ApalachiaSword).setName("apalachiaBlade");
-    public static final Item skythernBlade      = new ItemModSword(ToolMaterialMod.SkythernSword).setName("skythernBlade");
-    public static final Item mortumBlade        = new ItemModSword(ToolMaterialMod.MortumSword).setName("mortumBlade");
+	public static final Item edenBlade          = new ItemModSword(ToolMaterialMod.Eden).setName("edenBlade");
+    public static final Item wildWoodBlade      = new ItemModSword(ToolMaterialMod.Wildwood).setName("wildWoodBlade");
+    public static final Item apalachiaBlade     = new ItemModSword(ToolMaterialMod.Apalachia).setName("apalachiaBlade");
+    public static final Item skythernBlade      = new ItemModSword(ToolMaterialMod.Skythern).setName("skythernBlade");
+    public static final Item mortumBlade        = new ItemModSword(ToolMaterialMod.Mortum).setName("mortumBlade");
     public static final Item haliteBlade        = new ItemModSword(ToolMaterialMod.Halite).setName("haliteBlade");
     
     public static final Item edenSlicer         = new ItemThrowable(12).setName("edenSlicer");

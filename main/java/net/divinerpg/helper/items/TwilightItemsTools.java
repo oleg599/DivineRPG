@@ -21,7 +21,7 @@ public class TwilightItemsTools {
     public static final Item skythernPickaxe    = new ItemModPickaxe(ToolMaterialMod.SkythernTools).setName("skythernPickaxe");
     public static final Item mortumPickaxe      = new ItemModPickaxe(ToolMaterialMod.MortumTools).setName("mortumPickaxe");
 
-    public static final Item edenAxe            = new ItemModAxe(ToolMaterialMod.EdenSword).setName("edenAxe");
+    public static final Item edenAxe            = new ItemModAxe(ToolMaterialMod.EdenTools).setName("edenAxe");
     public static final Item wildWoodAxe        = new ItemModAxe(ToolMaterialMod.WildWoodTools).setName("wildWoodAxe");
     public static final Item apalachiaAxe       = new ItemModAxe(ToolMaterialMod.ApalachiaTools).setName("apalachiaAxe");
     public static final Item skythernAxe        = new ItemModAxe(ToolMaterialMod.SkythernTools).setName("skythernAxe");
