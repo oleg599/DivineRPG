@@ -57,7 +57,7 @@ public class ArcanaBlocks {
 	public static final Block arcanaPortalFrame     = new BlockArcanaFrame().setName("arcanaPortalFrame");
 	public static final Block arcanaPortal     		= new BlockArcanaPortal().setName("arcanaPortal");
 
-	public static final Block oreDoor1 				= new BlockOreDoor(Material.iron, ArcanaItems.oreDoorItem1, ArcanaItems.oreKey1).setName("oreDoor1").setCreativeTab(DivineRPGTabs.blocks);
+	public static final Block oreDoor1 				= new BlockOreDoor(Material.iron, ArcanaItems.oreDoorItem1, ArcanaItems.oreKey1, false).setName("oreDoor1").setCreativeTab(DivineRPGTabs.blocks);
 	
 	public static void init(){
 		arcanaGrass = new BlockModGrass(arcanaGrass, arcanaDirt, "arcanite");

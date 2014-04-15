@@ -10,8 +10,8 @@ public class BlockOreDoor extends BlockModDoor{
 
 	private Item key;
 	
-	public BlockOreDoor(Material mat, Item pick, Item key) {
-		super(mat, pick, false);
+	public BlockOreDoor(Material mat, Item pick, Item key, boolean canOpen) {
+		super(mat, pick, canOpen);
 		this.key = key;
 	}
 	
@@ -19,10 +19,9 @@ public class BlockOreDoor extends BlockModDoor{
 	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p, int side, float hitX, float hitY, float hitZ) {
 		if(p.getHeldItem() == null || p.getHeldItem().getItem() != key){
 			return false;
-		} else if(p.getHeldItem().getItem() == key){
+		} else {
 			p.getHeldItem().stackSize--;
-			return true;
+			return super.onBlockActivated(w, x, y, z, p, side, hitX, hitY, hitZ);
 		}
-		return super.onBlockActivated(w, x, y, z, p, side, hitX, hitY, hitZ);
 	}
 }

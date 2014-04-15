@@ -16,6 +16,10 @@ public class ItemMod extends Item {
 		super();
 		setCreativeTab(DivineRPGTabs.items);
 		LangRegistry.addItem(this);
+		if(this.getUnlocalizedName().startsWith("k")){
+			LangRegistry.addKeyItem(this);
+			setCreativeTab(DivineRPGTabs.utility);
+		}
 	}
 
 	public Item setTextureName(String par1Str) {
