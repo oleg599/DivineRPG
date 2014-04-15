@@ -24,6 +24,7 @@ public class ConfigurationHelper {
 
 	public static int Eden, WildWoods, Apalachia, Skythern, Mortum, Vethea, Arcana, Iceika;
 	public static int EdenBiome, WildWoodsBiome, ApalachiaBiome, SkythernBiome, MortumBiome, VetheaBiome, ArcanaBiome, IceikaBiome;
+	public static int arcanaX, arcanaY;
 
 	public static void dimensionInit(){
 		EdenBiome = cfg.get("Dimension", "Eden Biome ID", 40).getInt();
@@ -58,6 +59,8 @@ public class ConfigurationHelper {
 		canShowDeathChat = cfg.get("GUI", "Can Show Death Chat For DivineRPG Mobs", false).getBoolean(false);//TODO FALSE UNTILL FIGURED OUT WHY RANGED WEAPONS DO STUFFS
 		canShowVanillaDeathChat = cfg.get("GUI", "Can Show Death Chat For Vanilla Mobs", true).getBoolean(true);
 		canShowIngameVersion = cfg.get("GUI", "Can Show in-game version text in top left corner", true).getBoolean(true);
+		arcanaX = 220;
+		arcanaY = 18;
 	}
 
 	public static int getConfig(String name) {

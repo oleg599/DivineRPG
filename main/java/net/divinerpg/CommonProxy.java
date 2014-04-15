@@ -1,5 +1,6 @@
 package net.divinerpg;
 
+import net.divinerpg.client.ArcanaTickHandler;
 import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.blocks.ArcanaBlocks;
@@ -96,6 +97,7 @@ public class CommonProxy{
 		DimensionHelper.init();
 		System.out.println("[DIVINERPG] ADDING MOB SPAWNS");
 		MobSpawning.addSpawns();
+		DivineAPI.addSpecialEventBus(new ArcanaTickHandler());
 	}
 
 	public void init(FMLInitializationEvent event){

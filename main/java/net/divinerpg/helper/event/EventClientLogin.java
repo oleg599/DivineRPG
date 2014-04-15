@@ -7,11 +7,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 import net.divinerpg.Reference;
+import net.divinerpg.client.ArcanaHelper;
 import net.divinerpg.helper.DivineAPI;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -85,4 +87,24 @@ public class EventClientLogin {
 			}
 		}
 	} 
+	
+	@SubscribeEvent
+	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event){ 
+		ArcanaHelper.setBarValue(200);
+	}
+
+	@SubscribeEvent
+	public void onPlayerLoggedOut(PlayerEvent.PlayerLoggedOutEvent event){ 
+		ArcanaHelper.setBarValue(0);
+	}
+
+	@SubscribeEvent
+	public void onPlayerRespawn(PlayerEvent.PlayerRespawnEvent event){ 
+		ArcanaHelper.setBarValue(200);
+	}
+
+	@SubscribeEvent
+	public void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event){
+		ArcanaHelper.setBarValue(200);
+	}
 }

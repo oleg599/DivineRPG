@@ -5,7 +5,6 @@ import net.divinerpg.api.items.ItemModDoor;
 import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.vethea.items.ItemDisk;
-import net.divinerpg.vethea.items.ItemEvernight;
 import net.divinerpg.vethea.items.ItemStaff;
 import net.divinerpg.vethea.items.ItemVetheanCannon;
 import net.divinerpg.vethea.items.ItemVetheanClaw;
@@ -120,7 +119,7 @@ public class VetheanItems {
 	public static final Item everlight			 = new ItemVetheanHammerSword(44).setName("everlight");
 	public static final Item everbright			 = new ItemVetheanClaw(42).setName("everbright");
 	//public static final Item everfight		 	 = new ItemVetheanBow(4.6D, everArrow, "everfight", false, 25, 25);
-	public static final Item evernight			 = new ItemEvernight(115, 200).setName("evernight");
+	public static final Item evernight			 = new ItemStaff(115, 200).setName("evernight");
 	public static final Item everfight		 	 = new ItemMod().setName("everfright").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Item everArrow		 	 = new ItemMod().setName("everArrow").setCreativeTab(DivineRPGTabs.vethea);
 
