@@ -34,15 +34,18 @@ public class ArcanaHelper implements IExtendedEntityProperties{
 		} else {
 			regen(0);
 		}
+		if(arcana >= 200){
+			arcana = 200;
+		}
 	}                
 
 	public static boolean useBar(int amount) {
 		if(arcana < amount) {
-			regenDelay = 30;
+			regenDelay = 100;
 			return false;
 		}
 		arcana -= amount;
-		regenDelay = 30;
+		regenDelay = 100;
 		return true;
 	}
 

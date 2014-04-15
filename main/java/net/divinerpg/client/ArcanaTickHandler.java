@@ -41,7 +41,7 @@ public class ArcanaTickHandler {
 			int y = k - cfg.arcanaY;
 			int x = i - cfg.arcanaX;
 			gig.drawTexturedModalRect(x, y, 0, 0, 200, 9);
-			gig.drawTexturedModalRect(x, y, 0, 9, (int)ArcanaHelper.getBarValue(), 20);  
+			gig.drawTexturedModalRect(x, y, 0, 9, (int)(float)ArcanaHelper.getBarValue(), 20);
 		}
 	}
 

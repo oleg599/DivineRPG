@@ -45,7 +45,7 @@ public class ItemStaff extends ItemMod {
 		if (!par2.isRemote && ArcanaHelper.useBar(this.cost)) {
 			par2.spawnEntityInWorld(new EntityBouncingProjectile(par2, par3, this.damage));
 
-			if(par1.getUnlocalizedName().contains("evernight")){
+			if(!par2.isRemote && par1.getUnlocalizedName().contains("evernight")){
 				par3.attackEntityFrom(new EntityDamageSourceIndirect("arcana", par3, par3).setMagicDamage(), 16);
 				par2.spawnEntityInWorld(new EntityEvernightProjectile(par2, par3, this.damage));
 			}

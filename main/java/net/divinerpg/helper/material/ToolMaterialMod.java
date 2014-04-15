@@ -41,7 +41,8 @@ public class ToolMaterialMod {
 			public static ToolMaterial Wildwood     	= DivineAPI.addMeleeMaterial("wildwood", 6000, 44, 22);
 			public static ToolMaterial Apalachia	    = DivineAPI.addMeleeMaterial("apalachia", 6000, 54, 22);
 			public static ToolMaterial Mortum	    	= DivineAPI.addMeleeMaterial("mortum", 6000, 76, 22);
-		
+			public static ToolMaterial stormSword	    = DivineAPI.addMeleeMaterial("mortum", 5, 22);
+
 			//Tools
 		    public static ToolMaterial Rupee 			= EnumHelper.addToolMaterial("rupee", 6, 2500, 15.0F, 4, 0);
 			public static ToolMaterial Arlemite 		= EnumHelper.addToolMaterial("arlemite", 3, 3000, 13.0F, 4, 10);

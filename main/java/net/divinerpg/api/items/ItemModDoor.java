@@ -43,30 +43,30 @@ public class ItemModDoor extends ItemMod {
 		}
 	}
 
-	public static void placeDoorBlock(World p_150924_0_, int p_150924_1_, int p_150924_2_, int p_150924_3_, int p_150924_4_, Block p_150924_5_) {
+	public static void placeDoorBlock(World w, int i, int j, int k, int rotation, Block door) {
 		byte b0 = 0;
 		byte b1 = 0;
 
-		if (p_150924_4_ == 0) {
+		if (rotation == 0) {
 			b1 = 1;
 		}
 
-		if (p_150924_4_ == 1) {
+		if (rotation == 1) {
 			b0 = -1;
 		}
 
-		if (p_150924_4_ == 2) {
+		if (rotation == 2) {
 			b1 = -1;
 		}
 
-		if (p_150924_4_ == 3) {
+		if (rotation == 3) {
 			b0 = 1;
 		}
 
-		int i1 = (p_150924_0_.getBlock(p_150924_1_ - b0, p_150924_2_, p_150924_3_ - b1).isNormalCube() ? 1 : 0) + (p_150924_0_.getBlock(p_150924_1_ - b0, p_150924_2_ + 1, p_150924_3_ - b1).isNormalCube() ? 1 : 0);
-		int j1 = (p_150924_0_.getBlock(p_150924_1_ + b0, p_150924_2_, p_150924_3_ + b1).isNormalCube() ? 1 : 0) + (p_150924_0_.getBlock(p_150924_1_ + b0, p_150924_2_ + 1, p_150924_3_ + b1).isNormalCube() ? 1 : 0);
-		boolean flag = p_150924_0_.getBlock(p_150924_1_ - b0, p_150924_2_, p_150924_3_ - b1) == p_150924_5_ || p_150924_0_.getBlock(p_150924_1_ - b0, p_150924_2_ + 1, p_150924_3_ - b1) == p_150924_5_;
-		boolean flag1 = p_150924_0_.getBlock(p_150924_1_ + b0, p_150924_2_, p_150924_3_ + b1) == p_150924_5_ || p_150924_0_.getBlock(p_150924_1_ + b0, p_150924_2_ + 1, p_150924_3_ + b1) == p_150924_5_;
+		int i1 = (w.getBlock(i - b0, j, k - b1).isNormalCube() ? 1 : 0) + (w.getBlock(i - b0, j + 1, k - b1).isNormalCube() ? 1 : 0);
+		int j1 = (w.getBlock(i + b0, j, k + b1).isNormalCube() ? 1 : 0) + (w.getBlock(i + b0, j + 1, k + b1).isNormalCube() ? 1 : 0);
+		boolean flag = w.getBlock(i - b0, j, k - b1) == door || w.getBlock(i - b0, j + 1, k - b1) == door;
+		boolean flag1 = w.getBlock(i + b0, j, k + b1) == door || w.getBlock(i + b0, j + 1, k + b1) == door;
 		boolean flag2 = false;
 
 		if (flag && !flag1) {
@@ -76,9 +76,9 @@ public class ItemModDoor extends ItemMod {
 			flag2 = true;
 		}
 
-		p_150924_0_.setBlock(p_150924_1_, p_150924_2_, p_150924_3_, p_150924_5_, p_150924_4_, 2);
-		p_150924_0_.setBlock(p_150924_1_, p_150924_2_ + 1, p_150924_3_, p_150924_5_, 8 | (flag2 ? 1 : 0), 2);
-		p_150924_0_.notifyBlocksOfNeighborChange(p_150924_1_, p_150924_2_, p_150924_3_, p_150924_5_);
-		p_150924_0_.notifyBlocksOfNeighborChange(p_150924_1_, p_150924_2_ + 1, p_150924_3_, p_150924_5_);
+		w.setBlock(i, j, k, door, rotation, 2);
+		w.setBlock(i, j + 1, k, door, 8 | (flag2 ? 1 : 0), 2);
+		w.notifyBlocksOfNeighborChange(i, j, k, door);
+		w.notifyBlocksOfNeighborChange(i, j + 1, k, door);
 	}
 }
