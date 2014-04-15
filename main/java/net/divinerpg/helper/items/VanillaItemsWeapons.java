@@ -41,7 +41,7 @@ public class VanillaItemsWeapons {
     public static final Item corruptedMaul      = new ItemModSword(ToolMaterialMod.CorruptedMaul).setName("corruptedMaul");
     public static final Item frostSword         = new ItemModSword(ToolMaterialMod.Frost).setName("frostSword");
     public static final Item infernoSword       = new ItemInfernoSword(ToolMaterialMod.Inferno).setName("infernoSword");
-    public static final Item bloodgemSword      = new ItemModSword(ToolMaterialMod.BloodgemTool).setName("bloodgemSword");
+    public static final Item bloodgemSword      = new ItemModSword(ToolMaterialMod.Bloodgem).setName("bloodgemSword");
     public static final Item moltenSword        = new ItemModSword(ToolMaterialMod.Molten).setName("moltenSword");
     public static final Item scorchingSword     = new ItemModSword(ToolMaterialMod.Scorching).setName("scorchingSword");
     public static final Item bluefireSword      = new ItemModSword(ToolMaterialMod.Bluefire).setName("bluefireSword");
