@@ -120,26 +120,26 @@ public class DivineAPI {
 	}
 	
 	public static ToolMaterial addMeleeMaterial(String name, int maxUses, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, 0, maxUses, 0, damage - 4, enchantability);
+        return EnumHelper.addEnum(ToolMaterial.class, name, 0, maxUses, 0, damage - 5, enchantability);
     }
 	
 	public static ToolMaterial addMeleeMaterial(String name, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, 0, -1, 0, damage - 4, enchantability);
+        return EnumHelper.addEnum(ToolMaterial.class, name, 0, -1, 0, damage - 5, enchantability);
     }
 	
 	public static ToolMaterial addToolMaterial(String name, int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, maxUses, efficiency, damage - 4, enchantability);
+        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, maxUses, efficiency, damage - 5, enchantability);
     }
 	
 	public static ToolMaterial addToolMaterial(String name, int harvestLevel, float efficiency, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, -1, efficiency, damage - 4, enchantability);
+        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, -1, efficiency, damage - 5, enchantability);
     }
 	
 	public static ToolMaterial addShickMaterial(String name, int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, maxUses, efficiency, damage - 4, enchantability);
+        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, maxUses, efficiency, damage - 5, enchantability);
     }
 	
 	public static ToolMaterial addShickMaterial(String name, int harvestLevel, float efficiency, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, -1, efficiency, damage - 4, enchantability);
+        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, -1, efficiency, damage - 5, enchantability);
     }
 }
