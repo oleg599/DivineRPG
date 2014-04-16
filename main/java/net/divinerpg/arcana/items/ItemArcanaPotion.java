@@ -41,7 +41,7 @@ public class ItemArcanaPotion extends ItemMod{
 
 	@Override
 	public int getMaxItemUseDuration(ItemStack par1ItemStack) {
-		return 32;
+		return 10;
 	}
 
 	@Override
