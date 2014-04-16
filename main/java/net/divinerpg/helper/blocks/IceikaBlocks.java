@@ -46,7 +46,7 @@ public class IceikaBlocks {
 	public static final Block frostedGlass        = new BlockModGlass().setName("frostedGlass").setHardness(0.1F); //Windows for the workshops.
 	public static final Block workshopBookcase    = new BlockModBook().setName("workshopBookcase").setHardness(1.5F); //Bookcase for workshops.
 	public static final Block workshopLamp        = new BlockModLight(glass).setName("workshopLamp").setHardness(0.3F); //Lamps for workshops.
-	public static final Block frozenDoorBlock     = new BlockModDoor(Material.iron, IceikaItems.frozenDoor, true).setName("frozenDoorBlock").setHardness(7.0F); //Doors for workshops.
+	public static final Block steelDoorBlock      = new BlockModDoor(Material.iron, IceikaItems.steelDoor, true).setName("steelDoorBlock").setHardness(7.0F); //Doors for workshops.
 	public static final Block coalstoneFurnace    = new BlockCoalstoneFurnace().setName("coalstoneFurnace"); //One in each workshop. Never runs out of fuel
 	
 

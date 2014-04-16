@@ -52,6 +52,6 @@ public class IceikaItems {
 	public static final Item iceShards         = new ItemMod().setName("iceShards");
 	public static final Item iceStone          = new ItemMod().setName("iceStone");
 	
-	public static final Item frozenDoor	       = new ItemModDoor(IceikaBlocks.frozenDoorBlock).setName("frozenDoor");
+	public static final Item steelDoor	       = new ItemModDoor(IceikaBlocks.steelDoorBlock).setName("frozenDoor");
  
 }

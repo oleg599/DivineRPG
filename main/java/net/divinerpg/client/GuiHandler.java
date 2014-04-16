@@ -3,6 +3,8 @@ package net.divinerpg.client;
 import net.divinerpg.client.render.gui.GuiDivineTable;
 import net.divinerpg.client.render.gui.GuiInfusionTable;
 import net.divinerpg.client.render.gui.GuiTwilightFurnace;
+import net.divinerpg.iceika.blocks.ContainerCoalstoneFurnace;
+import net.divinerpg.iceika.blocks.TileEntityCoalstoneFurnace;
 import net.divinerpg.twilight.blocks.ContainerTwilightFurnace;
 import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
 import net.divinerpg.vanilla.blocks.contaner.ContainerDivineTable;
@@ -16,7 +18,7 @@ import cpw.mods.fml.common.network.IGuiHandler;
 public class GuiHandler implements IGuiHandler{
 
 	public static int guiID = 0;
-	public static int divineTable = guiID++, twilightFurnace = guiID++, infusionTable = guiID++, hunger = guiID++;
+	public static int divineTable = guiID++, twilightFurnace = guiID++, infusionTable = guiID++, hunger = guiID++, coalstone = guiID++;
 	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
@@ -30,6 +32,9 @@ public class GuiHandler implements IGuiHandler{
 		
 		if(ID == infusionTable)
 			return new ContainerInfusionTable(player.inventory, (TileEntityInfusionTable)entity);
+		
+		if(ID == coalstone)
+			return new ContainerCoalstoneFurnace(player.inventory, (TileEntityCoalstoneFurnace)entity);
 		
 		return null;
 	}
@@ -46,6 +51,9 @@ public class GuiHandler implements IGuiHandler{
 		
 		if(ID == infusionTable)
 			return new GuiInfusionTable(new ContainerInfusionTable(player.inventory, (TileEntityInfusionTable)entity));
+		
+		if(ID == coalstone)
+			return new ContainerCoalstoneFurnace(player.inventory, (TileEntityCoalstoneFurnace)entity);
 		
 		return null;
 	}

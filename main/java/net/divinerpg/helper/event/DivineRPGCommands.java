@@ -2,6 +2,7 @@ package net.divinerpg.helper.event;
 
 import java.util.List;
 
+import net.divinerpg.arcana.gen.TeleporterArcana;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.twilight.gen.eden.TeleporterEden;
 import net.divinerpg.twilight.gen.wildwoods.TeleporterWildWoods;
@@ -34,6 +35,12 @@ public class DivineRPGCommands extends CommandBase{
 			if (var2[0].equalsIgnoreCase("WildWoods")) {
 				if (playerMP.dimension != ConfigurationHelper.WildWoods) {
 					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden, new TeleporterWildWoods(playerMP.mcServer.worldServerForDimension(ConfigurationHelper.WildWoods)));
+				}
+			}
+			
+			if (var2[0].equalsIgnoreCase("Arcana")) {
+				if (playerMP.dimension != ConfigurationHelper.Arcana) {
+					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Arcana, new TeleporterArcana(playerMP.mcServer.worldServerForDimension(ConfigurationHelper.Arcana)));
 				}
 			}
 		}
