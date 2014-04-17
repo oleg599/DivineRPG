@@ -761,7 +761,7 @@ public class EventArmorFullSet {
 			else
 				helmet = null;
 		}
-		
+			System.out.println(e.ammount);
 		if(!(e.entity instanceof EntityPlayer)) {
 			DamageSource s = e.source;
 			
