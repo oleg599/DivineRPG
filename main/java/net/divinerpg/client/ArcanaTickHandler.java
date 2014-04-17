@@ -40,8 +40,8 @@ public class ArcanaTickHandler {
 			this.mc.getTextureManager().bindTexture(new ResourceLocation(Reference.MOD_ID, "textures/gui/arcanaBar.png"));
 			int y = k - cfg.arcanaY;
 			int x = i - cfg.arcanaX;
-			gig.drawTexturedModalRect(x, y, 0, 0, 200, 9);
-			gig.drawTexturedModalRect(x, y, 0, 9, (int)(float)ArcanaHelper.getBarValue(), 20);
+			gig.drawTexturedModalRect(x, y, 0, 0, 100, 9);
+			gig.drawTexturedModalRect(x, y, 0, 9, (int)(12.5 * (ArcanaHelper.getBarValue() / 25)), 18);  
 		}
 	}
 
