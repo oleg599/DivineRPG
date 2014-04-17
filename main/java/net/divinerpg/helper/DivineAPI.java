@@ -82,8 +82,8 @@ public class DivineAPI {
 
 	public static void registerProjectile(Class entityClass, String entityName) {
 		int ID = EntityRegistry.findGlobalUniqueEntityId(); 
-		EntityRegistry.registerGlobalEntityID(entityClass, entityName, ID);
-		EntityRegistry.registerModEntity(entityClass, entityName, ID, DivineRPG.instance, 250, 5, true);
+		EntityRegistry.registerGlobalEntityID(entityClass, entityName + " Projectile", ID);
+		EntityRegistry.registerModEntity(entityClass, entityName + " Projectile", ID, DivineRPG.instance, 250, 5, true);
 	}
 	
 	public static ArmorMaterial addArmorMaterial(String name, int durability, int[] oldArmor, int enchantability) {

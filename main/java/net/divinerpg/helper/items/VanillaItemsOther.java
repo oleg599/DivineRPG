@@ -3,9 +3,9 @@ package net.divinerpg.helper.items;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.api.items.ItemModBucket;
 import net.divinerpg.helper.blocks.VanillaBlocks;
-import net.divinerpg.vanilla.items.ItemHordeHorn;
-import net.divinerpg.vanilla.items.ItemMysteriousClock;
-import net.divinerpg.vanilla.items.ItemVanillaSpawner;
+import net.divinerpg.items.vanilla.ItemHordeHorn;
+import net.divinerpg.items.vanilla.ItemMysteriousClock;
+import net.divinerpg.items.vanilla.ItemVanillaSpawner;
 import net.minecraft.item.Item;
 
 public class VanillaItemsOther {

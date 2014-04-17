@@ -2,10 +2,10 @@ package net.divinerpg.helper.event;
 
 import java.util.List;
 
-import net.divinerpg.arcana.gen.TeleporterArcana;
+import net.divinerpg.dimension.gen.arcana.TeleporterArcana;
+import net.divinerpg.dimension.gen.twilight.eden.TeleporterEden;
+import net.divinerpg.dimension.gen.twilight.wild_woods.TeleporterWildWoods;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.twilight.gen.eden.TeleporterEden;
-import net.divinerpg.twilight.gen.wildwoods.TeleporterWildWoods;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayerMP;

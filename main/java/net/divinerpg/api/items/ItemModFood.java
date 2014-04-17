@@ -27,10 +27,7 @@ public class ItemModFood extends ItemFood {
 		wolf = wolfFood;
 		LangRegistry.addItem(this);
 	}
-	
-	/**
-	 * For potion effects
-	 */
+
 	public ItemModFood(int food, float sat, boolean wolfFood, int potionID, int potionDuration, int potionAmplifier, float potionEffectProbability){
         super(food, sat, wolfFood);
         setCreativeTab(DivineRPGTabs.food);
@@ -52,39 +49,10 @@ public class ItemModFood extends ItemFood {
         return setTextureName(Reference.PREFIX + par1Str);
     }
 	
-    private String name;
     public Item setName(String name){
-        this.name = name;
         setImageName(name);
         setUnlocalizedName(name);
-        register();
+        GameRegistry.registerItem(this, name);
         return this;
     }
-    
-    public void register(){
-        int numChars = 0;
-        char firstLetter = name.charAt(0);
-        if(Character.isLowerCase(firstLetter))
-            firstLetter = Character.toUpperCase(firstLetter);
-        String inGame = name.substring(1);
-        for(int k = 0; k < name.length(); k++){
-            char c = name.charAt(k);
-            int code = (int) c;
-            
-            if(k != 0){
-                for(int p = 65; p < 90; p++){
-                    if(code == p){
-                        numChars++;
-                        if(numChars == 1)
-                            inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-                        else
-                            inGame = new StringBuffer(inGame).insert(k, " ").toString();
-                    }
-                }
-            }
-        }
-        String finalName = firstLetter + inGame;
-        GameRegistry.registerItem(this, name);
-    }
-	
 }

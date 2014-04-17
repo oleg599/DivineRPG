@@ -28,11 +28,10 @@ public class ItemModSword extends ItemSword{
 
 	@Override
 	public void addInformation(ItemStack item, EntityPlayer player, List infoList, boolean par4) {
-		if(item.getMaxDamage() == -1) {
+		if(item.getMaxDamage() != -1) {
+        	infoList.add(item.getMaxDamage() - item.getItemDamage() + " Uses Remaining");
+		} else {
 			infoList.add(DivineAPI.GREEN + "Infinite Uses");
-		}
-		else {
-			infoList.add(item.getMaxDamage() - item.getItemDamage() + " Uses Remaining");
 		}
 	}
 	

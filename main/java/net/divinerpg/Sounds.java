@@ -47,6 +47,9 @@ public class Sounds {
 	public static String phaser = "divinerpg:phaser";
 	public static String blitz = "divinerpg:blitz";
 	public static String staff = "divinerpg:staff";
+	public static String starlight = "divinerpg:starlight";
+	public static String sparkler = "divinerpg:sparkler";
+
 
 
 	public static String playSound(String name, World world, Entity entity, float volume, float pitch){

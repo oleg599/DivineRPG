@@ -1,15 +1,15 @@
 package net.divinerpg.client;
 
+import net.divinerpg.blocks.iceika.ContainerCoalstoneFurnace;
+import net.divinerpg.blocks.iceika.TileEntityCoalstoneFurnace;
+import net.divinerpg.blocks.twilight.ContainerTwilightFurnace;
+import net.divinerpg.blocks.twilight.TileEntityTwilightFurnace;
+import net.divinerpg.blocks.vanilla.container.ContainerDivineTable;
+import net.divinerpg.blocks.vethea.container.ContainerInfusionTable;
+import net.divinerpg.blocks.vethea.container.tile_entity.TileEntityInfusionTable;
 import net.divinerpg.client.render.gui.GuiDivineTable;
 import net.divinerpg.client.render.gui.GuiInfusionTable;
 import net.divinerpg.client.render.gui.GuiTwilightFurnace;
-import net.divinerpg.iceika.blocks.ContainerCoalstoneFurnace;
-import net.divinerpg.iceika.blocks.TileEntityCoalstoneFurnace;
-import net.divinerpg.twilight.blocks.ContainerTwilightFurnace;
-import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
-import net.divinerpg.vanilla.blocks.contaner.ContainerDivineTable;
-import net.divinerpg.vethea.blocks.container.ContainerInfusionTable;
-import net.divinerpg.vethea.blocks.tileentity.TileEntityInfusionTable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;

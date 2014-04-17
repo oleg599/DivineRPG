@@ -4,14 +4,14 @@ import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.api.items.ItemModDoor;
 import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.vethea.items.ItemDisk;
-import net.divinerpg.vethea.items.ItemStaff;
-import net.divinerpg.vethea.items.ItemVetheanCannon;
-import net.divinerpg.vethea.items.ItemVetheanClaw;
-import net.divinerpg.vethea.items.ItemVetheanEversight;
-import net.divinerpg.vethea.items.ItemVetheanFood;
-import net.divinerpg.vethea.items.ItemVetheanHammerSword;
-import net.divinerpg.vethea.items.ItemVetheanHealingFood;
+import net.divinerpg.items.vethea.ItemDisk;
+import net.divinerpg.items.vethea.ItemStaff;
+import net.divinerpg.items.vethea.ItemVetheanCannon;
+import net.divinerpg.items.vethea.ItemVetheanClaw;
+import net.divinerpg.items.vethea.ItemVetheanEversight;
+import net.divinerpg.items.vethea.ItemVetheanFood;
+import net.divinerpg.items.vethea.ItemVetheanHammerSword;
+import net.divinerpg.items.vethea.ItemVetheanHealingFood;
 import net.minecraft.item.Item;
 
 public class VetheanItems {

@@ -1,12 +1,12 @@
 package net.divinerpg.helper;
 
-import net.divinerpg.arcana.gen.BiomeGenArcana;
-import net.divinerpg.arcana.gen.WorldProviderArcana;
+import net.divinerpg.dimension.gen.arcana.BiomeGenArcana;
+import net.divinerpg.dimension.gen.arcana.WorldProviderArcana;
+import net.divinerpg.dimension.gen.twilight.eden.BiomeGenEden;
+import net.divinerpg.dimension.gen.twilight.eden.WorldProviderEden;
+import net.divinerpg.dimension.gen.twilight.wild_woods.BiomeGenWildWoods;
+import net.divinerpg.dimension.gen.twilight.wild_woods.WorldProviderWildWoods;
 import net.divinerpg.helper.config.ConfigurationHelper;
-import net.divinerpg.twilight.gen.eden.BiomeGenEden;
-import net.divinerpg.twilight.gen.eden.WorldProviderEden;
-import net.divinerpg.twilight.gen.wildwoods.BiomeGenWildWoods;
-import net.divinerpg.twilight.gen.wildwoods.WorldProviderWildWoods;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;

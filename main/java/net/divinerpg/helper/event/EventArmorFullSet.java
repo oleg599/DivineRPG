@@ -2,12 +2,12 @@ package net.divinerpg.helper.event;
 
 import java.util.Random;
 
+import net.divinerpg.blocks.twilight.TwilightBlock;
+import net.divinerpg.entity.vanilla.projectile.EntityScythe;
 import net.divinerpg.helper.items.ArcanaItems;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsArmor;
-import net.divinerpg.twilight.blocks.TwilightBlock;
-import net.divinerpg.vanilla.entity.projectiles.EntityScythe;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -761,7 +761,7 @@ public class EventArmorFullSet {
 			else
 				helmet = null;
 		}
-			System.out.println(e.ammount);
+
 		if(!(e.entity instanceof EntityPlayer)) {
 			DamageSource s = e.source;
 			

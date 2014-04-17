@@ -1,8 +1,8 @@
 package net.divinerpg.client.render.gui;
 
+import net.divinerpg.blocks.twilight.ContainerTwilightFurnace;
+import net.divinerpg.blocks.twilight.TileEntityTwilightFurnace;
 import net.divinerpg.client.render.GuiResourceLocation;
-import net.divinerpg.twilight.blocks.ContainerTwilightFurnace;
-import net.divinerpg.twilight.blocks.TileEntityTwilightFurnace;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 

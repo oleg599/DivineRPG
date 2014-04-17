@@ -26,12 +26,16 @@ public class ItemModPickaxe extends ItemPickaxe{
 
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List infoList, boolean par4) {
-        infoList.add(item.getMaxDamage() - item.getItemDamage() + " Uses Remaining");
         infoList.add(DivineAPI.BLUE + "Efficiency: " + this.t.getEfficiencyOnProperMaterial());
+        if(item.getMaxDamage() != -1) {
+        	infoList.add(item.getMaxDamage() - item.getItemDamage() + " Uses Remaining");
+		} else {
+			infoList.add(DivineAPI.GREEN + "Infinite Uses");
+		}
     }
     
     public Item setName(String name){
-        setTextureName(name);
+        setTextureName(Reference.PREFIX + name);
         setUnlocalizedName(name);
         GameRegistry.registerItem(this, name);
         return this;

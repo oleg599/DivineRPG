@@ -11,10 +11,10 @@ import net.divinerpg.api.blocks.BlockModLeaves;
 import net.divinerpg.api.blocks.BlockModLight;
 import net.divinerpg.api.blocks.BlockModLog;
 import net.divinerpg.api.blocks.BlockModSpawner;
+import net.divinerpg.blocks.iceika.BlockCoalstoneFurnace;
+import net.divinerpg.blocks.iceika.BlockFrostedChest;
+import net.divinerpg.blocks.iceika.IceikaBlock;
 import net.divinerpg.helper.items.IceikaItems;
-import net.divinerpg.iceika.blocks.BlockCoalstoneFurnace;
-import net.divinerpg.iceika.blocks.BlockFrostedChest;
-import net.divinerpg.iceika.blocks.IceikaBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

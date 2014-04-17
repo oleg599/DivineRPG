@@ -74,13 +74,12 @@ public abstract class EntityDivineRPGBoss extends EntityMob implements IBossDisp
 		return Sounds.playSound(sounds, worldObj, this);
 	}
 
-	/*public void onDeath(DamageSource d) {
+	public void onDeath(DamageSource d) {
 		super.onDeath(d);
-		EntityPlayer p = (EntityPlayer)d.getSourceOfDamage();
 		if(!worldObj.isRemote && ConfigurationHelper.canShowDeathChat){
-			if(d.getSourceOfDamage() instanceof EntityPlayer){
+			if(d.getSourceOfDamage() != null && d.getSourceOfDamage() instanceof EntityPlayer){
 				DivineAPI.sendMessageToAll(DivineAPI.AQUA + "[" + DivineAPI.BLUE + "DivineRPG" + DivineAPI.AQUA + "]" + " " + "The " + mobName() + " Has Fallen.");
 			}
 		}
-	}*/
+	}
 }

@@ -2,9 +2,9 @@ package net.divinerpg.api.blocks;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.divinerpg.Reference;
+import net.divinerpg.client.render.block.ModelDivineBlock;
+import net.divinerpg.client.render.block.TileEntityStatue;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.twilight.entity.mob.model.block.ModelDivineBlock;
-import net.divinerpg.twilight.entity.mob.model.block.TileEntityStatue;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;

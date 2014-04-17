@@ -5,9 +5,9 @@ import net.divinerpg.api.items.ItemModBow;
 import net.divinerpg.api.items.ItemModSword;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
-import net.divinerpg.twilight.items.ItemTwilightBlitz;
-import net.divinerpg.twilight.items.ItemTwilightPhaser;
-import net.divinerpg.vanilla.items.ItemThrowable;
+import net.divinerpg.items.twilight.ItemTwilightBlitz;
+import net.divinerpg.items.twilight.ItemTwilightPhaser;
+import net.divinerpg.items.vanilla.ItemThrowable;
 import net.minecraft.item.Item;
 
 public class TwilightItemsWeapons {

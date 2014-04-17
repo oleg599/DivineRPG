@@ -3,8 +3,8 @@ package net.divinerpg.client.render.gui;
 import java.awt.Color;
 
 import net.divinerpg.Reference;
-import net.divinerpg.vethea.blocks.container.ContainerInfusionTable;
-import net.divinerpg.vethea.blocks.tileentity.TileEntityInfusionTable;
+import net.divinerpg.blocks.vethea.container.ContainerInfusionTable;
+import net.divinerpg.blocks.vethea.container.tile_entity.TileEntityInfusionTable;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;

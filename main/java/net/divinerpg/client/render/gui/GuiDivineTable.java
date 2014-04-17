@@ -1,7 +1,7 @@
 package net.divinerpg.client.render.gui;
 
+import net.divinerpg.blocks.vanilla.container.ContainerDivineTable;
 import net.divinerpg.client.render.GuiResourceLocation;
-import net.divinerpg.vanilla.blocks.contaner.ContainerDivineTable;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.StatCollector;

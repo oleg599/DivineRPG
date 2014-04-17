@@ -9,14 +9,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class RecipesInfusionTable {
-	
+
 	public static HashMap<List<Integer>, ItemStack> recipes = new HashMap<List<Integer>, ItemStack>();
-	public static HashMap<List<Integer>, Integer> numbero = new HashMap<List<Integer>, Integer>();
-	
+	public static HashMap<List<Integer>, Integer> number = new HashMap<List<Integer>, Integer>();
+
 	public RecipesInfusionTable() {
 		this.recipes();
 	}
-	
+
 	public static void recipes() {
 		/*addRecipe(VetheanItems.teakerLump, VetheanItems.bowTemplate, 4, new ItemStack(VetheanItems.teakerBow));
 		addRecipe(VetheanItems.amthrimisLump, VetheanItems.bowTemplate, 5, new ItemStack(VetheanItems.amthrimisBow));
@@ -37,7 +37,7 @@ public class RecipesInfusionTable {
 		addRecipe(VetheanItems.karosLump, VetheanItems.clawTemplate, 16, new ItemStack(VetheanItems.karosClaw));
 		addRecipe(VetheanItems.heliosisLump, VetheanItems.clawTemplate, 17, new ItemStack(VetheanItems.heliosisClaw));
 		addRecipe(VetheanItems.arksianeLump, VetheanItems.clawTemplate, 21, new ItemStack(VetheanItems.arksianeClaw));
-		
+
 		addRecipe(VetheanItems.teakerLump, VetheanItems.staffTemplate, 2, new ItemStack(VetheanItems.teakerStaff));
 		addRecipe(VetheanItems.amthrimisLump, VetheanItems.staffTemplate, 3, new ItemStack(VetheanItems.amthrimisStaff));
 		addRecipe(VetheanItems.darvenLump, VetheanItems.staffTemplate, 4, new ItemStack(VetheanItems.darvenStaff));
@@ -123,29 +123,29 @@ public class RecipesInfusionTable {
 		addRecipe(VetheanItems.arksianeLump, VetheanItems.TormentedTemplate, 24, new ItemStack(VetheanItems.tormentedLegs));
 		addRecipe(VetheanItems.arksianeLump, VetheanItems.TormentedTemplate, 35, new ItemStack(VetheanItems.tormentedChest));*/
 	}
-	
+
 	public static void addRecipe(Item Item1, Item Item2, int i, ItemStack item) {
 		int i1 = Item.getIdFromItem(Item1);
 		int i2 = Item.getIdFromItem(Item2);
-		if(i1 != 0 && item != null) {
-			recipes.put(Arrays.asList(i1, i2, numbero.put(Arrays.asList(i1, i2), i)), item);
-		}
+		if(i1 != 0 && item != null) 
+			recipes.put(Arrays.asList(i1, i2, number.put(Arrays.asList(i1, i2), i)), item);
+
 	}
-	
+
 	public static ItemStack getResult(Item Item1, Item Item2) {
 		int i1 = Item.getIdFromItem(Item1);
 		int i2 = Item.getIdFromItem(Item2);
-		ItemStack item = (ItemStack)recipes.get(Arrays.asList(i1, i2, numbero.get(Arrays.asList(i1, i2))));
+		ItemStack item = (ItemStack)recipes.get(Arrays.asList(i1, i2, number.get(Arrays.asList(i1, i2))));
 		if(item != null)
 			return item;
 		else
 			return null;
 	}
-	
+
 	public static int getStackSize(Item Item1, Item Item2) {
 		int i1 = Item.getIdFromItem(Item1);
 		int i2 = Item.getIdFromItem(Item2);
-		int i = numbero.get(Arrays.asList(i1, i2));
+		int i = number.get(Arrays.asList(i1, i2));
 		if(i != 0)
 			return i;
 		else

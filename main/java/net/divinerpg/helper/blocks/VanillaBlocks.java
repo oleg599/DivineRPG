@@ -1,14 +1,9 @@
 package net.divinerpg.helper.blocks;
 
 import net.divinerpg.api.blocks.BlockStatue;
-import net.divinerpg.client.render.EntityResourceLocation;
-import net.divinerpg.twilight.entity.mob.model.block.*;
-import net.divinerpg.vanilla.blocks.BlockAcceleron;
-import net.divinerpg.vanilla.blocks.BlockDivineTable;
-import net.divinerpg.vanilla.blocks.BlockLightFence;
-import net.divinerpg.vanilla.blocks.BlockTar;
-import net.divinerpg.vanilla.blocks.MobPumpkin;
-import net.divinerpg.vanilla.blocks.VanillaBlock;
+import net.divinerpg.blocks.vanilla.*;
+import net.divinerpg.client.render.*;
+import net.divinerpg.client.render.block.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

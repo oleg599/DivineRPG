@@ -13,7 +13,7 @@ import org.lwjgl.opengl.GL12;
 public class RenderProjectile extends Render
 {
     public ResourceLocation texture;
-    float scale;
+    private float scale;
 
     public RenderProjectile(ResourceLocation par1) {
         texture = par1;
@@ -53,8 +53,7 @@ public class RenderProjectile extends Render
     }
 
     @Override
-    public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9)
-    {
+    public void doRender(Entity par1Entity, double par2, double par4, double par6, float par8, float par9) {
         this.renderProjectile((EntityThrowable)par1Entity, par2, par4, par6);
     }
 

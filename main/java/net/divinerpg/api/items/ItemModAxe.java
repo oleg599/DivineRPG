@@ -26,11 +26,15 @@ public class ItemModAxe extends ItemAxe{
 	
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List infoList, boolean par4) {
-        infoList.add(item.getMaxDamage() - item.getItemDamage() + " Uses Remaining");
         infoList.add(DivineAPI.BLUE + "Efficiency: " + this.t.getEfficiencyOnProperMaterial());
+        if(item.getMaxDamage() != -1) {
+        	infoList.add(item.getMaxDamage() - item.getItemDamage() + " Uses Remaining");
+		} else {
+			infoList.add(DivineAPI.GREEN + "Infinite Uses");
+		}
     }
-    public Item setTextureName(String par1Str)
-    {
+    
+    public Item setTextureName(String par1Str) {
         this.iconString = (Reference.PREFIX + par1Str);
         return this;
     }
@@ -40,35 +44,7 @@ public class ItemModAxe extends ItemAxe{
         this.name = name;
         setTextureName(name);
         setUnlocalizedName(name);
-        register();
+        GameRegistry.registerItem(this, name);
         return this;
     }
-    
-    public void register(){
-        int numChars = 0;
-        char firstLetter = name.charAt(0);
-        if(Character.isLowerCase(firstLetter))
-            firstLetter = Character.toUpperCase(firstLetter);
-        String inGame = name.substring(1);
-        for(int k = 0; k < name.length(); k++){
-            char c = name.charAt(k);
-            int code = (int) c;
-            
-            if(k != 0){
-                for(int p = 65; p < 90; p++){
-                    if(code == p){
-                        numChars++;
-                        if(numChars == 1)
-                            inGame = new StringBuffer(inGame).insert(k - 1, " ").toString();
-                        else
-                            inGame = new StringBuffer(inGame).insert(k, " ").toString();
-                    }
-                }
-            }
-        }
-        String finalName = firstLetter + inGame;
-        GameRegistry.registerItem(this, name);
-        LanguageRegistry.addName(this, finalName);
-    }
-
 }

@@ -5,11 +5,11 @@ import net.divinerpg.api.blocks.BlockModGrass;
 import net.divinerpg.api.blocks.BlockModLeaves;
 import net.divinerpg.api.blocks.BlockModLog;
 import net.divinerpg.api.blocks.BlockModVine;
-import net.divinerpg.twilight.blocks.BlockBlueFire;
-import net.divinerpg.twilight.blocks.BlockEdenPortal;
-import net.divinerpg.twilight.blocks.BlockTwilightFurnace;
-import net.divinerpg.twilight.blocks.BlockWildwoodPortal;
-import net.divinerpg.twilight.blocks.TwilightBlock;
+import net.divinerpg.blocks.twilight.BlockBlueFire;
+import net.divinerpg.blocks.twilight.BlockEdenPortal;
+import net.divinerpg.blocks.twilight.BlockTwilightFurnace;
+import net.divinerpg.blocks.twilight.BlockWildwoodPortal;
+import net.divinerpg.blocks.twilight.TwilightBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 

@@ -1,8 +1,8 @@
 package net.divinerpg.helper.items;
 
 import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.twilight.items.ItemTwilightClock;
-import net.divinerpg.twilight.items.ItemTwilightSpawner;
+import net.divinerpg.items.twilight.ItemTwilightClock;
+import net.divinerpg.items.twilight.ItemTwilightSpawner;
 import net.minecraft.item.Item;
 
 public class TwilightItemsOther {

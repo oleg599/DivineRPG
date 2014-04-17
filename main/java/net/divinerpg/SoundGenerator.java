@@ -113,13 +113,13 @@ public class SoundGenerator {
 
 	public static void addObject(){
 		for(String s : mob){
-			addToFile("public static String " + s + " = \"" + "divinerpg:" + s + "\";");
-			addToFile("public static String " + s + "Hurt" + " = \"" + "divinerpg:" + s + "Hurt" + "\";");
+			addToFile("		public static String " + s + " = \"" + "divinerpg:" + s + "\";");
+			addToFile("		public static String " + s + "Hurt" + " = \"" + "divinerpg:" + s + "Hurt" + "\";");
 		}
 		for(String s : single)
-			addToFile("public static String " + s + " = \"" + "divinerpg:" + s + "\";");
+			addToFile("		public static String " + s + " = \"" + "divinerpg:" + s + "\";");
 		for(String s : item)
-			addToFile("public static String " + s + " = \"" + "divinerpg:" + s + "\";");
+			addToFile("		public static String " + s + " = \"" + "divinerpg:" + s + "\";");
 	}
 
 	public static void addSounds(){
@@ -160,6 +160,7 @@ public class SoundGenerator {
 		addItemSound("staff");
 
 		//Arcana
-
+		addItemSound("starlight");
+		addItemSound("sparkler");
 	}
 }

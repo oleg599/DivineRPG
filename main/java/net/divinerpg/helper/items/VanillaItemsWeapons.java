@@ -3,10 +3,10 @@ package net.divinerpg.helper.items;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.api.items.ItemModSword;
 import net.divinerpg.helper.material.ToolMaterialMod;
-import net.divinerpg.vanilla.items.ItemInfernoSword;
-import net.divinerpg.vanilla.items.ItemScythe;
-import net.divinerpg.vanilla.items.ItemSerenadeOfHealth;
-import net.divinerpg.vanilla.items.ItemThrowable;
+import net.divinerpg.items.vanilla.ItemInfernoSword;
+import net.divinerpg.items.vanilla.ItemScythe;
+import net.divinerpg.items.vanilla.ItemSerenadeOfHealth;
+import net.divinerpg.items.vanilla.ItemThrowable;
 import net.minecraft.item.Item;
 
 public class VanillaItemsWeapons {
@@ -56,7 +56,6 @@ public class VanillaItemsWeapons {
     public static final Item shuriken       	= new ItemThrowable(4).setName("shuriken");
     public static final Item vileStorm       	= new ItemThrowable(4).setName("vileStorm");
     public static final Item scythe		       	= new ItemScythe().setName("scythe");
-    public static final Item scytheProjectile 	= new ItemMod().setName("scytheProjectile").setCreativeTab(null);
     
     public static final Item serenadeOfHealth 	= new ItemSerenadeOfHealth().setName("serenadeOfHealth");
     
