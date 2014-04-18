@@ -27,9 +27,9 @@ public class EntityVileStorm extends EntityThrowable {
 		if (var1.entityHit != null) {
 			byte var2 = 4;
 
-			if(var1.entityHit instanceof EntityLiving && !(var1.entityHit != getThrower())){
+			if(var1.entityHit instanceof EntityLiving){
 				var1.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), var2);
-				//base.addPotionEffect(new PotionEffect(Potion.poison.id, 40, 3));
+				((EntityLivingBase)var1.entityHit).addPotionEffect(new PotionEffect(Potion.poison.id, 40, 3));
 			}
 		}
 
