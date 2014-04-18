@@ -7,6 +7,7 @@ import net.divinerpg.api.blocks.BlockMod;
 import net.divinerpg.helper.blocks.ArcanaBlocks;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
+import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
@@ -14,14 +15,13 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ArcanaBlock extends BlockMod {
 
-	public ArcanaBlock(Material m) {
+	public ArcanaBlock(Material m/*, float hardness, SoundType sound*/) {
 		super(m);
 		setCreativeTab(DivineRPGTabs.blocks);
-		setStepSound(Block.soundTypeStone);
-
+		//setStepSound(sound);
 		if(isBreakable())
 			this.setBlockUnbreakable();
-		setHardness(6.0F);
+		//setHardness(hardness);
 	}
 
 	private boolean isBreakable(){

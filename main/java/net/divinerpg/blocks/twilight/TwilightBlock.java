@@ -1,17 +1,21 @@
 package net.divinerpg.blocks.twilight;
 
+import java.util.List;
 import java.util.Random;
 
 import net.divinerpg.Reference;
 import net.divinerpg.api.blocks.BlockMod;
+import net.divinerpg.helper.DivineAPI;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -21,17 +25,11 @@ public class TwilightBlock extends BlockMod {
 
 	public static int edenArmor = 1; //For Eden armor extra drops
 	
-	public TwilightBlock(Material m) {
+	public TwilightBlock(Material m, float hardness) {
 		super(m);
 		setCreativeTab(DivineRPGTabs.blocks);
 		setStepSound(Block.soundTypeStone);
-		//setBreakSound(Block.soundTypeStone);
-		
-		if(isOre()){
-			setHardness(9.0F);
-		} else {
-			setHardness(6.0F);
-		}
+		setHardness(hardness);
 	}
 
 	public static Item getBlock(Block b){

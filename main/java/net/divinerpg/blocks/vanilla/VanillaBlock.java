@@ -19,25 +19,16 @@ import net.minecraft.world.World;
 
 public class VanillaBlock extends BlockMod {
 
-	private static SoundType stone = Block.soundTypeStone;
-	private static SoundType grass = Block.soundTypeGravel;
-	private static SoundType cloth = Block.soundTypeCloth;
-	private static SoundType wood = Block.soundTypeWood;
 	private Random rand = new Random();
 
-	public VanillaBlock(Material m) {
+	public VanillaBlock(Material m, float hardness, SoundType sound) {
 		super(m);
 		setCreativeTab(DivineRPGTabs.blocks);
-		setStepSound(stone);
+		setStepSound(sound);
+		setHardness(hardness);
 		if(this == VanillaBlocks.purpleStone || this == VanillaBlocks.blueStone) {
 			setLightLevel(1.0F);
-			setStepSound(grass);
 		}
-		if(this == VanillaBlocks.checker || this == VanillaBlocks.rainbowWool) 
-			setStepSound(cloth);
-
-		if(this == VanillaBlocks.crate)
-			setStepSound(wood);
 	}
 
 	public static Item getBlock(Block b){

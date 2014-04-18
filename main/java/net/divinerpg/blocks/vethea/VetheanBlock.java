@@ -10,11 +10,11 @@ public class VetheanBlock extends BlockMod {
 
     private static SoundType rock = Block.soundTypeStone;
 
-	public VetheanBlock(Material m) {
+	public VetheanBlock(Material m/*, float hardness, SoundType sound*/) {
 		super(m);
 		setCreativeTab(DivineRPGTabs.vethea);
-		setSoundType(rock);
-		setHardness(1F);
+		//setSoundType(sound);
+		//setHardness(hardness);
 	}
 
 	public Block setSoundType(Block.SoundType name) {

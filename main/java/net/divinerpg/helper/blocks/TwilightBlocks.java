@@ -29,17 +29,17 @@ public class TwilightBlocks {
     public static final Block skythernDirt    		= new BlockModDirt().setName("skythernDirt");
     public static final Block mortumDirt      		= new BlockModDirt().setName("mortumDirt");
 
-    public static final Block edenOre         		= new TwilightBlock(rock).setName("edenOre");
-    public static final Block wildWoodOre     		= new TwilightBlock(rock).setName("wildWoodOre");
-    public static final Block apalachiaOre    		= new TwilightBlock(rock).setName("apalachiaOre");
-    public static final Block skythernOre     		= new TwilightBlock(rock).setName("skythernOre");
-    public static final Block mortumOre       		= new TwilightBlock(rock).setName("mortumOre");
+    public static final Block edenOre         		= new TwilightBlock(rock, 9.0F).setName("edenOre");
+    public static final Block wildWoodOre     		= new TwilightBlock(rock, 9.0F).setName("wildWoodOre");
+    public static final Block apalachiaOre    		= new TwilightBlock(rock, 9.0F).setName("apalachiaOre");
+    public static final Block skythernOre     		= new TwilightBlock(rock, 9.0F).setName("skythernOre");
+    public static final Block mortumOre       		= new TwilightBlock(rock, 9.0F).setName("mortumOre");
 
-    public static final Block edenBlock       		= new TwilightBlock(rock).setName("edenBlock");
-    public static final Block wildWoodBlock   		= new TwilightBlock(rock).setName("wildWoodBlock");
-    public static final Block apalachiaBlock  		= new TwilightBlock(rock).setName("apalachiaBlock");
-    public static final Block skythernBlock   		= new TwilightBlock(rock).setName("skythernBlock");
-    public static final Block mortumBlock     		= new TwilightBlock(rock).setName("mortumBlock");
+    public static final Block edenBlock       		= new TwilightBlock(rock, 9.0F).setName("edenBlock");
+    public static final Block wildWoodBlock   		= new TwilightBlock(rock, 9.0F).setName("wildWoodBlock");
+    public static final Block apalachiaBlock  		= new TwilightBlock(rock, 9.0F).setName("apalachiaBlock");
+    public static final Block skythernBlock   		= new TwilightBlock(rock, 9.0F).setName("skythernBlock");
+    public static final Block mortumBlock     		= new TwilightBlock(rock, 9.0F).setName("mortumBlock");
 
     public static final Block edenLeaves      		= new BlockModLeaves().setName("edenLeaves");
     public static final Block wildWoodLeaves  		= new BlockModLeaves().setName("wildWoodLeaves");
@@ -53,14 +53,14 @@ public class TwilightBlocks {
     public static final Block skythernLogs    		= new BlockModLog().setName("skythernLog");
     public static final Block mortumLogs      		= new BlockModLog().setName("mortumLog");
 
-    public static final Block twilightStone   			 = new TwilightBlock(rock).setName("twilightStone");
+    public static final Block twilightStone   			 = new TwilightBlock(rock, 6.0F).setName("twilightStone");
     public static final Block wildWoodsVine   			 = new BlockModVine().setName("wildWoodsVine");
     public static final Block blueFire        			 = new BlockBlueFire().setName("blueFire");
     public static final BlockEdenPortal edenPortal  	 = (BlockEdenPortal)new BlockEdenPortal().setName("edenPortal");
     public static final BlockWildwoodPortal wildWoodPortal= (BlockWildwoodPortal)new BlockWildwoodPortal().setName("wildwoodPortal");
-    public static final Block apalachiaPortal  			 = new TwilightBlock(rock).setName("apalachiaPortal");
-    public static final Block skythernPortal   			 = new TwilightBlock(rock).setName("skythernPortal");
-    public static final Block mortumPortal     			 = new TwilightBlock(rock).setName("mortumPortal");
+    public static final Block apalachiaPortal  			 = new TwilightBlock(rock, 0.0F).setName("apalachiaPortal");
+    public static final Block skythernPortal   			 = new TwilightBlock(rock, 0.0F).setName("skythernPortal");
+    public static final Block mortumPortal     			 = new TwilightBlock(rock, 0.0F).setName("mortumPortal");
     public static final Block twilightFurnace 			 = new BlockTwilightFurnace(false).setName("twilightFurnace");
     public static final Block twilightFurnaceOn 		 = new BlockTwilightFurnace(true).setName("twilightFurnaceOn");
     

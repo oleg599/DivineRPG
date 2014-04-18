@@ -5,6 +5,7 @@ import net.divinerpg.blocks.vanilla.*;
 import net.divinerpg.client.render.*;
 import net.divinerpg.client.render.block.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.Block.SoundType;
 import net.minecraft.block.material.Material;
 
 public class VanillaBlocks {
@@ -13,17 +14,22 @@ public class VanillaBlocks {
 	private static Material   wool                = Material.cloth;
 	private static Material   ground              = Material.ground;
 	
-	public static final Block rupeeOre            = new VanillaBlock(rock).setName("rupeeOre").setHardness(3.0F);
-	public static final Block arlemiteOre         = new VanillaBlock(rock).setName("arlemiteOre").setHardness(3.0F);
-	public static final Block realmiteOre         = new VanillaBlock(rock).setName("realmiteOre").setHardness(3.0F);
-	public static final Block bloodgemOre         = new VanillaBlock(rock).setName("bloodgemOre").setHardness(3.0F);
-	public static final Block netheriteOre        = new VanillaBlock(rock).setName("netheriteOre").setHardness(3.0F);
+	private static SoundType stone = Block.soundTypeStone;
+	private static SoundType grass = Block.soundTypeGravel;
+	private static SoundType cloth = Block.soundTypeCloth;
+	private static SoundType wood = Block.soundTypeWood;
+	
+	public static final Block rupeeOre            = new VanillaBlock(rock, 3.0F, stone).setName("rupeeOre");
+	public static final Block arlemiteOre         = new VanillaBlock(rock, 3.0F, stone).setName("arlemiteOre");
+	public static final Block realmiteOre         = new VanillaBlock(rock, 3.0F, stone).setName("realmiteOre");
+	public static final Block bloodgemOre         = new VanillaBlock(rock, 3.0F, stone).setName("bloodgemOre");
+	public static final Block netheriteOre        = new VanillaBlock(rock, 3.0F, stone).setName("netheriteOre");
 
-	public static final Block rupeeBlock          = new VanillaBlock(rock).setName("rupeeBlock").setHardness(3.0F);
-	public static final Block arlemiteBlock       = new VanillaBlock(rock).setName("arlemiteBlock").setHardness(3.0F);
-	public static final Block realmiteBlock       = new VanillaBlock(rock).setName("realmiteBlock").setHardness(3.0F);
-	public static final Block bloodgemBlock       = new VanillaBlock(rock).setName("bloodgemBlock").setHardness(3.0F);
-	public static final Block netheriteBlock      = new VanillaBlock(rock).setName("netheriteBlock").setHardness(3.0F);
+	public static final Block rupeeBlock          = new VanillaBlock(rock, 3.0F, stone).setName("rupeeBlock");
+	public static final Block arlemiteBlock       = new VanillaBlock(rock, 3.0F, stone).setName("arlemiteBlock");
+	public static final Block realmiteBlock       = new VanillaBlock(rock, 3.0F, stone).setName("realmiteBlock");
+	public static final Block bloodgemBlock       = new VanillaBlock(rock, 3.0F, stone).setName("bloodgemBlock");
+	public static final Block netheriteBlock      = new VanillaBlock(rock, 3.0F, stone).setName("netheriteBlock");
 
 	public static final Block spiderPumpkin       = new MobPumpkin().setName("spiderPumpkin");
 	public static final Block enderPumpkin        = new MobPumpkin().setName("enderPumpkin");
@@ -39,45 +45,45 @@ public class VanillaBlocks {
 	public static final Block jungleSpiderPumpkin = new MobPumpkin().setName("jungleSpiderPumpkin");
 	public static final Block hellSpiderPumpkin   = new MobPumpkin().setName("hellSpiderPumpkin");
 
-	public static final Block checker             = new VanillaBlock(wool).setName("checker").setHardness(0.5F);
-	public static final Block rainbowWool         = new VanillaBlock(wool).setName("rainbowWool").setHardness(0.5F);
-	public static final Block crate               = new VanillaBlock(wool).setName("crate").setHardness(1.0F);
-	public static final Block blueStone           = new VanillaBlock(wool).setName("blueStone").setHardness(1.0F);
-	public static final Block purpleStone         = new VanillaBlock(wool).setName("purpleStone").setHardness(1.0F);
+	public static final Block checker             = new VanillaBlock(wool, 0.5F, cloth).setName("checker");
+	public static final Block rainbowWool         = new VanillaBlock(wool, 0.5F, cloth).setName("rainbowWool");
+	public static final Block crate               = new VanillaBlock(wool, 1.0F, cloth).setName("crate");
+	public static final Block blueStone           = new VanillaBlock(wool, 1.0F, cloth).setName("blueStone");
+	public static final Block purpleStone         = new VanillaBlock(wool, 1.0F, cloth).setName("purpleStone");
 
-	public static final Block blueVane            = new VanillaBlock(rock).setName("blueVane").setHardness(2.0F);
-	public static final Block cyanVane            = new VanillaBlock(rock).setName("cyanVane").setHardness(2.0F);
-	public static final Block purpleVane          = new VanillaBlock(rock).setName("purpleVane").setHardness(2.0F);
-	public static final Block redVane             = new VanillaBlock(rock).setName("redVane").setHardness(2.0F);
-	public static final Block yellowVane          = new VanillaBlock(rock).setName("yellowVane").setHardness(2.0F);
+	public static final Block blueVane            = new VanillaBlock(rock, 2.0F, stone).setName("blueVane");
+	public static final Block cyanVane            = new VanillaBlock(rock, 2.0F, stone).setName("cyanVane");
+	public static final Block purpleVane          = new VanillaBlock(rock, 2.0F, stone).setName("purpleVane");
+	public static final Block redVane             = new VanillaBlock(rock, 2.0F, stone).setName("redVane");
+	public static final Block yellowVane          = new VanillaBlock(rock, 2.0F, stone).setName("yellowVane");
 
-	public static final Block divineRock          = new VanillaBlock(rock).setName("divineRock").setHardness(1.5F);
+	public static final Block divineRock          = new VanillaBlock(rock, 1.5F, stone).setName("divineRock").setHardness(1.5F);
 	public static final Block divineCraftingTable = new BlockDivineTable().setName("divineTable").setHardness(3.0F);
 	public static final Block acceleron		  	  = new BlockAcceleron().setName("acceleron");
 	public static final Block tar 				  = new BlockTar();
 
-	public static final Block dyeBlockWhite 	  = new VanillaBlock(rock).setName("dyeBlock");
-	public static final Block dyeBlockBlack 	  = new VanillaBlock(rock).setName("blackDyeBlock");
-	public static final Block dyeBlockBrown 	  = new VanillaBlock(rock).setName("brownDyeBlock");
-	public static final Block dyeBlockRed   	  = new VanillaBlock(rock).setName("redDyeBlock");
-	public static final Block dyeBlockGreen 	  = new VanillaBlock(rock).setName("greenDyeBlock");
-	public static final Block dyeBlockBlue  	  = new VanillaBlock(rock).setName("blueDyeBlock");
-	public static final Block dyeBlockYellow	  = new VanillaBlock(rock).setName("yellowDyeBlock");
-	public static final Block dyeBlockGray  	  = new VanillaBlock(rock).setName("grayDyeBlock");
-	public static final Block dyeBlockLightGray   = new VanillaBlock(rock).setName("lightGrayDyeBlock");
-	public static final Block dyeBlockOrange   	  = new VanillaBlock(rock).setName("orangeDyeBlock");
-	public static final Block dyeBlockLightGreen  = new VanillaBlock(rock).setName("lightGreenDyeBlock");
-	public static final Block dyeBlockLightBlue   = new VanillaBlock(rock).setName("lightBlueDyeBlock");
-	public static final Block dyeBlockCyan   	  = new VanillaBlock(rock).setName("cyanDyeBlock");
-	public static final Block dyeBlockPink        = new VanillaBlock(rock).setName("pinkDyeBlock");
-	public static final Block dyeBlockPurple   	  = new VanillaBlock(rock).setName("purpleDyeBlock");
-	public static final Block dyeBlockMagenta     = new VanillaBlock(rock).setName("magentaDyeBlock");
+	public static final Block dyeBlockWhite 	  = new VanillaBlock(rock, 1.5F, stone).setName("dyeBlock");
+	public static final Block dyeBlockBlack 	  = new VanillaBlock(rock, 1.5F, stone).setName("blackDyeBlock");
+	public static final Block dyeBlockBrown 	  = new VanillaBlock(rock, 1.5F, stone).setName("brownDyeBlock");
+	public static final Block dyeBlockRed   	  = new VanillaBlock(rock, 1.5F, stone).setName("redDyeBlock");
+	public static final Block dyeBlockGreen 	  = new VanillaBlock(rock, 1.5F, stone).setName("greenDyeBlock");
+	public static final Block dyeBlockBlue  	  = new VanillaBlock(rock, 1.5F, stone).setName("blueDyeBlock");
+	public static final Block dyeBlockYellow	  = new VanillaBlock(rock, 1.5F, stone).setName("yellowDyeBlock");
+	public static final Block dyeBlockGray  	  = new VanillaBlock(rock, 1.5F, stone).setName("grayDyeBlock");
+	public static final Block dyeBlockLightGray   = new VanillaBlock(rock, 1.5F, stone).setName("lightGrayDyeBlock");
+	public static final Block dyeBlockOrange   	  = new VanillaBlock(rock, 1.5F, stone).setName("orangeDyeBlock");
+	public static final Block dyeBlockLightGreen  = new VanillaBlock(rock, 1.5F, stone).setName("lightGreenDyeBlock");
+	public static final Block dyeBlockLightBlue   = new VanillaBlock(rock, 1.5F, stone).setName("lightBlueDyeBlock");
+	public static final Block dyeBlockCyan   	  = new VanillaBlock(rock, 1.5F, stone).setName("cyanDyeBlock");
+	public static final Block dyeBlockPink        = new VanillaBlock(rock, 1.5F, stone).setName("pinkDyeBlock");
+	public static final Block dyeBlockPurple   	  = new VanillaBlock(rock, 1.5F, stone).setName("purpleDyeBlock");
+	public static final Block dyeBlockMagenta     = new VanillaBlock(rock, 1.5F, stone).setName("magentaDyeBlock");
 	
-	public static final Block fancyWool 		  = new VanillaBlock(wool).setName("fancyWool");
-	public static final Block iceBlock 			  = new VanillaBlock(ground).setName("iceBlock");
-	public static final Block dirtBlock 		  = new VanillaBlock(ground).setName("dirtBlock");
-	public static final Block soulSandBlock       = new VanillaBlock(ground).setName("soulSandBlock");
-	public static final Block sandBlock 		  = new VanillaBlock(ground).setName("sandBlock");
+	public static final Block fancyWool 		  = new VanillaBlock(wool, 0.5F, cloth).setName("fancyWool");
+	public static final Block iceBlock 			  = new VanillaBlock(ground, 1.5F, grass).setName("iceBlock"); ///WTF are these
+	public static final Block dirtBlock 		  = new VanillaBlock(ground, 1.5F, grass).setName("dirtBlock");
+	public static final Block soulSandBlock       = new VanillaBlock(ground, 1.5F, grass).setName("soulSandBlock");
+	public static final Block sandBlock 		  = new VanillaBlock(ground, 1.5F, grass).setName("sandBlock");
 	
 	public static final Block lightFenceBlue 	  = new BlockLightFence(false, "blueFence").setName("blueFence");
     public static final Block lightFenceRed 	  = new BlockLightFence(false, "redFence").setName("redFence");
