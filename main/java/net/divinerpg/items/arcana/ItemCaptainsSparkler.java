@@ -7,6 +7,7 @@ import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.client.ArcanaHelper;
 import net.divinerpg.entity.arcana.projectile.EntitySparkler;
 import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -21,8 +22,7 @@ public class ItemCaptainsSparkler extends ItemMod {
 	public ItemCaptainsSparkler() {
 		this.maxStackSize = 1;
 		this.setMaxDamage(-1);
-		this.weaponDamage = 1;
-		this.setCreativeTab(CreativeTabs.tabCombat);
+		this.setCreativeTab(DivineRPGTabs.ranged);
 	}
 
 	@Override

@@ -8,45 +8,37 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 
-public class EntityShuriken extends EntityThrowable
-{
-    public EntityShuriken(World var1)
-    {
+public class EntityShuriken extends EntityThrowable {
+	
+    public EntityShuriken(World var1) {
         super(var1);
     }
 
-    public EntityShuriken(World var1, EntityLivingBase var3)
-    {
+    public EntityShuriken(World var1, EntityLivingBase var3) {
         super(var1, var3);
     }
 
-    public EntityShuriken(World var1, double var2, double var4, double var6)
-    {
+    public EntityShuriken(World var1, double var2, double var4, double var6) {
         super(var1, var2, var4, var6);
     }
 
     /**
      * Called when this EntityThrowable hits a block or entity.
      */
-    protected void onImpact(MovingObjectPosition var1)
-    {
-        if (var1.entityHit != null)
-        {
+    protected void onImpact(MovingObjectPosition var1) {
+        if (var1.entityHit != null) {
             byte var2 = 4;
 
-            if (var1.entityHit instanceof EntityBlaze)
-            {
+            if (var1.entityHit instanceof EntityBlaze) {
                 var2 = 4;
             }
 
-            if (var1.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), var2))
-            {
+            if (var1.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), var2)) {
                 boolean var3 = true;
             }
         }
 
-        if (!this.worldObj.isRemote)
-        {
+        if (!this.worldObj.isRemote) {
             this.setDead();
         }
     }
