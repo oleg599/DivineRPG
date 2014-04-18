@@ -58,32 +58,16 @@ public class ToolMaterialMod {
 			public static ToolMaterial EdenShick 		= DivineAPI.addShickMaterial(100, 6000, 20.0F, 27, 22);
 			public static ToolMaterial WildwoodShick 	= DivineAPI.addShickMaterial(100, 6000, 28.0F, 40, 22);
 			public static ToolMaterial ApalachiaShick 	= DivineAPI.addShickMaterial(100, 6000, 40.0F, 49, 22);
-			public static ToolMaterial MortumShick 		= DivineAPI.addShickMaterial(100, 6000, 55.0F, 68, 22);
-			
-			//Picks
-		    public static ToolMaterial RupeePick		= DivineAPI.addPickMaterial(6, 2500, 15.0F, 7, 0);
-			public static ToolMaterial ArlemitePick 	= DivineAPI.addPickMaterial(3, 3000, 13.0F, 7, 10);
-			public static ToolMaterial RealmitePick 	= DivineAPI.addPickMaterial(3, 4000, 12.0F, 1, 10);
-			public static ToolMaterial BloodgemPick 	= DivineAPI.addPickMaterial(0, 520, 2.0F, 4, 15);
-			public static ToolMaterial CyclopsPick 		= DivineAPI.addPickMaterial(0, 1000, 8.0F, 3, 10);
-			public static ToolMaterial BedrockPick		= DivineAPI.addPickMaterial(3, 9.0F, 8, 10);
-			public static ToolMaterial CorruptedPick 	= DivineAPI.addPickMaterial(3, 6000, 16.0F, 8, 10);
-			public static ToolMaterial SkythernPick 	= DivineAPI.addPickMaterial(100, 6000, 48.0F, 50, 22);
-			public static ToolMaterial EdenPick 		= DivineAPI.addPickMaterial(100, 6000, 20.0F, 23, 22);
-			public static ToolMaterial WildwoodPick 	= DivineAPI.addPickMaterial(100, 6000, 28.0F, 36, 22);
-			public static ToolMaterial ApalachiaPick 	= DivineAPI.addPickMaterial(100, 6000, 40.0F, 42, 22);
-			public static ToolMaterial MortumPick 		= DivineAPI.addPickMaterial(100, 6000, 55.0F, 56, 22);
-			public static ToolMaterial DivinePick 		= DivineAPI.addPickMaterial(8, 35000, 20.0F, 23, 10);
+			public static ToolMaterial MortumShick 		= DivineAPI.addShickMaterial(100, 6000, 55.0F, 68, 22);	
 			
 			//Axes
 			public static ToolMaterial RupeeAxe 		= DivineAPI.addAxeMaterial(6, 2500, 15.0F, 8, 0);
 			public static ToolMaterial ArlemiteAxe 		= DivineAPI.addAxeMaterial(3, 3000, 13.0F, 8, 10);
-			public static ToolMaterial RealmiteAxe 		= DivineAPI.addAxeMaterial(3, 4000, 12.0F, 1, 10);
-			public static ToolMaterial SandslashAxe 	= DivineAPI.addAxeMaterial(0, 200, 0, 27, 22);
-			public static ToolMaterial BloodgemAxe 		= DivineAPI.addAxeMaterial(0, 520, 2.0F, 4, 15);
-			public static ToolMaterial CyclopsAxe 		= DivineAPI.addAxeMaterial(0, 1000, 8.0F, 3, 10);
-			public static ToolMaterial BedrockAxe		= DivineAPI.addAxeMaterial(3, -1, 9.0F, 8, 10);
-			public static ToolMaterial CorruptedAxe 	= DivineAPI.addAxeMaterial(3, 6000, 16.0F, 8, 10);
+			public static ToolMaterial RealmiteAxe 		= DivineAPI.addAxeMaterial(3, 4000, 12.0F, 5, 10);
+			public static ToolMaterial BloodgemAxe 		= DivineAPI.addAxeMaterial(0, 520, 2.0F, 8, 15);
+			public static ToolMaterial CyclopsAxe 		= DivineAPI.addAxeMaterial(0, 1000, 8.0F, 7, 10);
+			public static ToolMaterial BedrockAxe		= DivineAPI.addAxeMaterial(3, -1, 9.0F, 11, 10);
+			public static ToolMaterial CorruptedAxe 	= DivineAPI.addAxeMaterial(3, 6000, 16.0F, 15, 10);
 			public static ToolMaterial SkythernAxe 		= DivineAPI.addAxeMaterial(100, 6000, 48.0F, 57, 22);
 			public static ToolMaterial EdenAxe 			= DivineAPI.addAxeMaterial(100, 6000, 20.0F, 26, 22);
 			public static ToolMaterial WildwoodAxe 		= DivineAPI.addAxeMaterial(100, 6000, 28.0F, 40, 22);
@@ -91,14 +75,29 @@ public class ToolMaterialMod {
 			public static ToolMaterial MortumAxe 		= DivineAPI.addAxeMaterial(100, 6000, 55.0F, 66, 22);
 			public static ToolMaterial DivineAxe 		= DivineAPI.addAxeMaterial(8, 35000, 20.0F, 26, 10);
 			
+			//Picks
+		    public static ToolMaterial RupeePick		= DivineAPI.addPickMaterial(6, 2500, 15.0F, 7, 0);
+			public static ToolMaterial ArlemitePick 	= DivineAPI.addPickMaterial(3, 3000, 13.0F, 7, 10);
+			public static ToolMaterial RealmitePick 	= DivineAPI.addPickMaterial(3, 4000, 12.0F, 6, 10);
+			public static ToolMaterial BloodgemPick 	= DivineAPI.addPickMaterial(0, 520, 2.0F, 7, 15);
+			public static ToolMaterial CyclopsPick 		= DivineAPI.addPickMaterial(0, 1000, 8.0F, 3, 10);
+			public static ToolMaterial BedrockPick		= DivineAPI.addPickMaterial(3, 9.0F, 10, 10);
+			public static ToolMaterial CorruptedPick 	= DivineAPI.addPickMaterial(3, 6000, 16.0F, 14, 10);
+			public static ToolMaterial SkythernPick 	= DivineAPI.addPickMaterial(100, 6000, 48.0F, 50, 22);
+			public static ToolMaterial EdenPick 		= DivineAPI.addPickMaterial(100, 6000, 20.0F, 23, 22);
+			public static ToolMaterial WildwoodPick 	= DivineAPI.addPickMaterial(100, 6000, 28.0F, 36, 22);
+			public static ToolMaterial ApalachiaPick 	= DivineAPI.addPickMaterial(100, 6000, 40.0F, 42, 22);
+			public static ToolMaterial MortumPick 		= DivineAPI.addPickMaterial(100, 6000, 55.0F, 56, 22);
+			public static ToolMaterial DivinePick 		= DivineAPI.addPickMaterial(8, 35000, 20.0F, 23, 10);
+			
 			//Shovels
 			public static ToolMaterial RupeeSpade 		= DivineAPI.addSpadeMaterial(6, 2500, 15.0F, 6, 0);
 			public static ToolMaterial ArlemiteSpade 	= DivineAPI.addSpadeMaterial(3, 3000, 13.0F, 6, 10);
-			public static ToolMaterial RealmiteSpade 	= DivineAPI.addSpadeMaterial(3, 4000, 12.0F, 1, 10);
-			public static ToolMaterial BloodgemSpade 	= DivineAPI.addSpadeMaterial(0, 520, 2.0F, 4, 15);
+			public static ToolMaterial RealmiteSpade 	= DivineAPI.addSpadeMaterial(3, 4000, 12.0F, 5, 10);
+			public static ToolMaterial BloodgemSpade 	= DivineAPI.addSpadeMaterial(0, 520, 2.0F, 6, 15);
 			public static ToolMaterial CyclopsSpade 	= DivineAPI.addSpadeMaterial(0, 1000, 8.0F, 3, 10);
 			public static ToolMaterial BedrockSpade		= DivineAPI.addSpadeMaterial(3, -1, 9.0F, 8, 10);
-			public static ToolMaterial CorruptedSpade 	= DivineAPI.addSpadeMaterial(3, 6000, 16.0F, 8, 10);
+			public static ToolMaterial CorruptedSpade 	= DivineAPI.addSpadeMaterial(3, 6000, 16.0F, 12, 10);
 			public static ToolMaterial SkythernSpade 	= DivineAPI.addSpadeMaterial(100, 6000, 48.0F, 43, 22);
 			public static ToolMaterial EdenSpade		= DivineAPI.addSpadeMaterial(100, 6000, 20.0F, 20, 22);
 			public static ToolMaterial WildwoodSpade 	= DivineAPI.addSpadeMaterial(100, 6000, 28.0F, 31, 22);
