@@ -2,6 +2,9 @@ package net.divinerpg.api.items;
 
 import java.util.List;
 import java.util.Set;
+import java.util.Timer;
+
+import org.apache.commons.lang3.time.StopWatch;
 
 import net.divinerpg.Reference;
 import net.divinerpg.helper.DivineAPI;
@@ -9,6 +12,7 @@ import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -51,9 +55,17 @@ public class ItemShickaxe extends ItemTool {
 	public boolean func_150897_b(Block block) {
         return block == Blocks.obsidian ? this.toolMaterial.getHarvestLevel() == 3 : (block != Blocks.diamond_block && block != Blocks.diamond_ore ? (block != Blocks.emerald_ore && block != Blocks.emerald_block ? (block != Blocks.gold_block && block != Blocks.gold_ore ? (block != Blocks.iron_block && block != Blocks.iron_ore ? (block != Blocks.lapis_block && block != Blocks.lapis_ore ? (block != Blocks.redstone_ore && block != Blocks.lit_redstone_ore ? (block.getMaterial() == Material.rock ? true : (block.getMaterial() == Material.iron ? true : block.getMaterial() == Material.anvil)) : this.toolMaterial.getHarvestLevel() >= 2) : this.toolMaterial.getHarvestLevel() >= 1) : this.toolMaterial.getHarvestLevel() >= 1) : this.toolMaterial.getHarvestLevel() >= 2) : this.toolMaterial.getHarvestLevel() >= 2) : this.toolMaterial.getHarvestLevel() >= 2);
 	}
+	private boolean once = false;
+	private boolean once2 = false;
 
+	StopWatch time = new StopWatch();
 	@Override
 	public float func_150893_a(ItemStack item, Block block) {
+		if (once == false) {
+			time.start();
+			once = true;
+			once2 = false;
+		}
 		return super.func_150893_a(item, block);
 		/*return 	block.getMaterial() != Material.anvil && block.getMaterial() != Material.cactus && block.getMaterial() != Material.cake && block.getMaterial() != Material.carpet && block.getMaterial() != Material.circuits && block.getMaterial() != Material.clay 
 				&& block.getMaterial() != Material.cloth && block.getMaterial() != Material.coral && block.getMaterial() != Material.craftedSnow && block.getMaterial() != Material.dragonEgg && block.getMaterial() != Material.fire && block.getMaterial() != Material.glass
@@ -61,6 +73,18 @@ public class ItemShickaxe extends ItemTool {
 				&& block.getMaterial() != Material.piston && block.getMaterial() != Material.plants && block.getMaterial() != Material.portal && block.getMaterial() != Material.redstoneLight && block.getMaterial() != Material.rock && block.getMaterial() != Material.sand && block.getMaterial() != Material.snow && block.getMaterial() != Material.sponge 
 				&& block.getMaterial() != Material.tnt && block.getMaterial() != Material.vine && block.getMaterial() != Material.web && block.getMaterial() != Material.wood ? super.func_150893_a(item, block) : this.efficiencyOnProperMaterial;*/
 	}
+	@Override
+	public boolean onBlockDestroyed(ItemStack p_150894_1_, World p_150894_2_, Block p_150894_3_, int p_150894_4_, int p_150894_5_, int p_150894_6_, EntityLivingBase p_150894_7_)
+    {
+		if (once2 == false) {
+			System.out.println(time.toString());
+			time.stop();
+        	time.reset();
+        	once = false;
+        	once2 = true;
+		}
+		return true;
+    }
 
 	@Override
 	public boolean onItemUse(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {

@@ -119,27 +119,43 @@ public class DivineAPI {
 		FMLClientHandler.instance().getClient().ingameGUI.getChatGUI().printChatMessage(addChatMessage(AQUA + "[" + DARK_BLUE + "DivineRPG" + AQUA + "] " + WHITE + message));
 	}
 	
-	public static ToolMaterial addMeleeMaterial(String name, int maxUses, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, 0, maxUses, 0, damage - 5, enchantability);
+	public static ToolMaterial addMeleeMaterial(int maxUses, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, "", 0, maxUses, 0, damage - 5, enchantability);
     }
 	
-	public static ToolMaterial addMeleeMaterial(String name, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, 0, -1, 0, damage - 5, enchantability);
+	public static ToolMaterial addMeleeMaterial(float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, "", 0, -1, 0, damage - 5, enchantability);
     }
 	
-	public static ToolMaterial addToolMaterial(String name, int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, maxUses, efficiency, damage - 5, enchantability);
+	public static ToolMaterial addAxeMaterial(int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, "", harvestLevel, maxUses, efficiency, damage - 4, enchantability);
     }
 	
-	public static ToolMaterial addToolMaterial(String name, int harvestLevel, float efficiency, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, -1, efficiency, damage - 5, enchantability);
+	public static ToolMaterial addAxeMaterial(int harvestLevel, float efficiency, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, "", harvestLevel, -1, efficiency, damage - 4, enchantability);
     }
 	
-	public static ToolMaterial addShickMaterial(String name, int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, maxUses, efficiency, damage - 5, enchantability);
+	public static ToolMaterial addPickMaterial(int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, "", harvestLevel, maxUses, efficiency, damage - 3, enchantability);
     }
 	
-	public static ToolMaterial addShickMaterial(String name, int harvestLevel, float efficiency, float damage, int enchantability) {
-        return EnumHelper.addEnum(ToolMaterial.class, name, harvestLevel, -1, efficiency, damage - 5, enchantability);
+	public static ToolMaterial addPickMaterial(int harvestLevel, float efficiency, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, "", harvestLevel, -1, efficiency, damage - 3, enchantability);
+    }
+	
+	public static ToolMaterial addSpadeMaterial(int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, "", harvestLevel, maxUses, efficiency, damage - 2, enchantability);
+    }
+	
+	public static ToolMaterial addSpadeMaterial(int harvestLevel, float efficiency, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, "", harvestLevel, -1, efficiency, damage - 2, enchantability);
+    }
+	
+	public static ToolMaterial addShickMaterial(int harvestLevel, int maxUses, float efficiency, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, "", harvestLevel, maxUses, efficiency, damage - 1, enchantability);
+    }
+	
+	public static ToolMaterial addShickMaterial(int harvestLevel, float efficiency, float damage, int enchantability) {
+        return EnumHelper.addEnum(ToolMaterial.class, "", harvestLevel, -1, efficiency, damage - 1, enchantability);
     }
 }
