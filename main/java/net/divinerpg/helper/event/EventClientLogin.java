@@ -87,24 +87,4 @@ public class EventClientLogin {
 			}
 		}
 	} 
-	
-	@SubscribeEvent
-	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event){ 
-		ArcanaHelper.setBarValue(200);
-	}
-
-	@SubscribeEvent
-	public void onPlayerLoggedOut(PlayerEvent.PlayerLoggedOutEvent event){ 
-		ArcanaHelper.setBarValue(0);
-	}
-
-	@SubscribeEvent
-	public void onPlayerRespawn(PlayerEvent.PlayerRespawnEvent event){ 
-		ArcanaHelper.setBarValue(200);
-	}
-
-	@SubscribeEvent
-	public void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event){
-		ArcanaHelper.setBarValue(200);
-	}
 }

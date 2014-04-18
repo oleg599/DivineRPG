@@ -76,7 +76,7 @@ public class VetheaEntityRegistry {
 		DivineAPI.registerProjectile(EntityVetheanCannonEversight.class, "Cannon Eversight");
 		DivineAPI.registerProjectile(EntityEversightProjectile.class, "Eversight");
 		
-		DivineAPI.registerDivineRPGMob(EntityVermenous.class, "Vermenous");
+		/*DivineAPI.registerDivineRPGMob(EntityVermenous.class, "Vermenous");
         DivineAPI.registerDivineRPGMob(EntityEnt.class, "Ent");
         DivineAPI.registerDivineRPGMob(EntityCymesoid.class, "Cymesoid");
         DivineAPI.registerDivineRPGMob(EntityDreamwrecker.class, "Dream Wrecker");
@@ -116,6 +116,6 @@ public class VetheaEntityRegistry {
         DivineAPI.registerDivineRPGMob(EntityTempleGuardian.class, "Temple Guardian");
         DivineAPI.registerDivineRPGMob(EntityEhu.class, "Ehu");
         DivineAPI.registerDivineRPGMob(EntityStoneGolem.class, "Stone Golem");
-        DivineAPI.registerDivineRPGMob(EntityHusk.class, "Husk");
+        DivineAPI.registerDivineRPGMob(EntityHusk.class, "Husk");*/
 	}
 }

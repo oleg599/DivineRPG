@@ -13,13 +13,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ItemMod extends Item {
 
 	public ItemMod(){
-		super();
 		setCreativeTab(DivineRPGTabs.items);
 		LangRegistry.addItem(this);
-		if(this.getUnlocalizedName().startsWith("k")){
-			LangRegistry.addKeyItem(this);
-			setCreativeTab(DivineRPGTabs.utility);
-		}
 	}
 
 	public Item setTextureName(String par1Str) {

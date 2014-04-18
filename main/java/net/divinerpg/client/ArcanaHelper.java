@@ -64,6 +64,11 @@ public class ArcanaHelper implements IExtendedEntityProperties{
 	public static void setBarValue(int i) {
 		arcana += i;
 	}
+	
+	public static void removeBarValue(int i) {
+		regenDelay = 100;
+		arcana -= i;
+	}
 
 	@Override
 	public void init(Entity entity, World world) { }

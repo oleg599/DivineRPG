@@ -65,7 +65,7 @@ public class CommonProxy{
 		OverworldEntityRegistry.init();
 		TwilightEntityRegistry.init();
 		IceikaEntityRegistry.init();
-		//VetheaEntityRegistry.init();//TODO Figure out why it crashes when vethean mob spawns
+		VetheaEntityRegistry.init();//TODO Figure out why it crashes when vethean mob spawns
 		ArcanaEntityRegistry.init();
 		System.out.println("[DIVINERPG] ADDING CRAFTING/SMELTING RECIPES");
 		VanillaRecipeHelper.init();

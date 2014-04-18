@@ -7,6 +7,7 @@ import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.client.ArcanaHelper;
 import net.divinerpg.entity.arcana.projectile.EntityStarlight;
 import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
@@ -21,6 +22,7 @@ public class ItemStaffStarlight  extends ItemMod {
 
 	public ItemStaffStarlight() {
 		this.maxStackSize = 1;
+		setCreativeTab(DivineRPGTabs.ranged);
 	}
 
 	@Override

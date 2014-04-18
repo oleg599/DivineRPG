@@ -8,6 +8,7 @@ import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.Phase;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.RenderTickEvent;
@@ -50,4 +51,24 @@ public class ArcanaTickHandler {
 	}
 
 	private void onTickStart() { }
+
+	@SubscribeEvent
+	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event){ 
+		ArcanaHelper.setBarValue(0);
+	}
+
+	@SubscribeEvent
+	public void onPlayerLoggedOut(PlayerEvent.PlayerLoggedOutEvent event){ 
+		ArcanaHelper.setBarValue(0);
+	}
+
+	@SubscribeEvent
+	public void onPlayerRespawn(PlayerEvent.PlayerRespawnEvent event){ 
+		ArcanaHelper.setBarValue(200);
+	}
+
+	@SubscribeEvent
+	public void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event){
+		ArcanaHelper.setBarValue(200);
+	}
 }

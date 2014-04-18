@@ -3,6 +3,7 @@ package net.divinerpg.helper.event;
 import java.util.Random;
 
 import net.divinerpg.blocks.twilight.TwilightBlock;
+import net.divinerpg.client.ArcanaHelper;
 import net.divinerpg.entity.vanilla.projectile.EntityScythe;
 import net.divinerpg.helper.items.ArcanaItems;
 import net.divinerpg.helper.items.IceikaItems;
@@ -27,17 +28,17 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
 public class EventArmorFullSet {
-	
+
 	private float flyTemp;
-	
+
 	private Item boots = null;
 	private Item body = null;
 	private Item legs = null;
 	private Item helmet = null;
-	
+
 	public static final String[] isImmuneToFire	= new String[] {"ag","field_70178_ae", "isImmuneToFire"};
 	public static final String[] isJumping 		= new String[] {"bd","field_70703_bu", "isJumping"};
-	
+
 	private VanillaItemsArmor v;
 	private TwilightItemsArmor t;
 	private World world;
@@ -482,10 +483,17 @@ public class EventArmorFullSet {
 			helmet = null;
 
 		if (boots == v.angelicBoots && body == v.angelicBody && legs == v.angelicLegs && helmet == v.angelicHelmet){
-			ev.player.capabilities.isFlying = true;
+			if(ev.player.capabilities.isFlying){
+				ArcanaHelper.removeBarValue(1);
+			}
+			if(ArcanaHelper.getBarValue() >= 0){
+				ev.player.capabilities.allowFlying = true;
+			} else {
+				ev.player.capabilities.isFlying = false;
+			}
 			ev.player.fallDistance = -0.5F;
 		}
-		
+
 		//Elite Realmite
 		if(boots == v.eliteRealmiteBoots && body == v.eliteRealmiteBody && legs == v.eliteRealmiteLegs && helmet == v.eliteRealmiteHelmet){
 			ev.player.fallDistance = -0.5F;
@@ -495,17 +503,17 @@ public class EventArmorFullSet {
 		if(boots == v.divineBoots && body == v.divineBody && legs == v.divineLegs && helmet == v.divineHelmet){
 			ev.player.fallDistance = -0.5F;
 		}
-		
+
 		//Wildwood
 		if(boots == t.wildwoodBoots && body == t.wildwoodBody && legs == t.wildwoodLegs && helmet == t.wildwoodHelmet){
 			if (ev.player.isInsideOfMaterial(Material.water)) {
 				float current = ev.player.getHealth();
-		        if ((current > 0.0F) && (current < 20.0F)) {
-		            ev.player.setHealth(current + 0.1F);
-		        }
+				if ((current > 0.0F) && (current < 20.0F)) {
+					ev.player.setHealth(current + 0.1F);
+				}
 			}
 		}
-		
+
 		//Vemos
 		if(boots == ArcanaItems.vemosBoots && body == ArcanaItems.vemosBody && legs == ArcanaItems.vemosLegs && helmet == ArcanaItems.vemosHelmet){
 			float current = ev.player.getHealth();
@@ -513,7 +521,7 @@ public class EventArmorFullSet {
 				ev.player.setHealth(current + 0.1F);
 			}
 		}
-				
+
 		//Mortum
 		if(boots == t.mortumBoots && body == t.mortumBody && legs == t.mortumLegs && helmet == t.mortumHelmet){
 			boolean light = world.getBlockLightValue((int)ev.player.posX, (int)ev.player.posY, (int)ev.player.posZ) < 7;
@@ -522,12 +530,12 @@ public class EventArmorFullSet {
 				//TODO Render a duplicate of what the potion does, instead of adding the potion
 			}
 		}
-		
+
 		//Skythern
 		if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
 			ev.player.fallDistance = -0.5F;
 		}
-		
+
 		//Netherite, Inferno, and Bedrock
 		if ((boots == v.netheriteBoots && legs == v.netheriteLegs && body == v.netheriteBody && helmet == v.netheriteHelmet) || (boots == v.infernoBoots && legs == v.infernoLegs && body == v.infernoBody && helmet == v.infernoHelmet) || (boots == v.bedrockBoots && legs == v.bedrockLegs && body == v.bedrockBody && helmet == v.bedrockHelmet)) {
 			ObfuscationReflectionHelper.setPrivateValue(Entity.class, ev.player, true, isImmuneToFire);
@@ -535,14 +543,13 @@ public class EventArmorFullSet {
 		else {
 			ObfuscationReflectionHelper.setPrivateValue(Entity.class, ev.player, false, isImmuneToFire);
 		}
-		
+
 		if(boots == v.aquastriveBoots && body == v.aquastriveBody && legs == v.aquastriveLegs && helmet == v.aquastriveHelmet){
 			float speed = 1.1F;
 			boolean isJumping = false;
 			isJumping = (Boolean)ObfuscationReflectionHelper.getPrivateValue(EntityLivingBase.class, ev.player, this.isJumping);
-			
-			if(ev.player.isInWater())
-			{
+
+			if(ev.player.isInWater()) {
 				if(!ev.player.isSneaking() && !isJumping) {
 					if(ev.player.motionX > -speed && ev.player.motionX < speed) {
 						ev.player.motionX *= speed;
@@ -564,19 +571,19 @@ public class EventArmorFullSet {
 				}
 			}
 		}
-		
+
 		//Shadow
 		if(boots == v.shadowBoots && body == v.shadowBody && legs == v.shadowLegs && helmet == v.shadowHelmet){
 			ev.player.addPotionEffect(new PotionEffect(1, -1, 0)); //When the second parameter is set to negative one, there's no bubbles! :D
 		}
-		
+
 		//Skeleman
 		if(boots == v.skelemanBoots && body == v.skelemanBody && legs == v.skelemanLegs && helmet == v.skelemanHelmet){
 			if(ev.player.getFoodStats().needFood()) {
 				ev.player.getFoodStats().addStats(1, 0);
 			}
 		}
-		
+
 		//Santa
 		/*if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
 			if (e.entityLiving.worldObj.provider.dimensionId == DimensionConfigHelper.IceikaID) {
@@ -586,7 +593,7 @@ public class EventArmorFullSet {
 				ev.player.addPotionEffect(new PotionEffect(1, -1, 0));
 			}
 		}*/
-		
+
 		//Jack O Man
 		if(boots == v.jackOManBoots && body == v.jackOManBody && legs == v.jackOManLegs && helmet == v.jackOManHelmet){
 			EntityScythe.damage = 16.0F;
@@ -635,10 +642,10 @@ public class EventArmorFullSet {
 			if(boots == t.skythernBoots && body == t.skythernBody && legs == t.skythernLegs && helmet == t.skythernHelmet){
 				player.addVelocity(0, 0.5D, 0);
 			}
-				
+
 		}
 	}
-	
+
 	@SubscribeEvent
 	public void onInteractEvent(PlayerInteractEvent ev) {
 		ItemStack stackBoots = ev.entityPlayer.inventory.armorItemInSlot(0);
@@ -665,17 +672,16 @@ public class EventArmorFullSet {
 			helmet = stackHelmet.getItem();
 		else
 			helmet = null;
-		
+
 		//Eden
 		if(boots == t.edenBoots && body == t.edenBody && legs == t.edenLegs && helmet == t.edenHelmet){
 			Random rand = new Random();
 			TwilightBlock.edenArmor = rand.nextInt(3) + 3;
-		}
-		else {
+		} else {
 			TwilightBlock.edenArmor = 1;
 		}
 	}
-	
+
 	@SubscribeEvent
 	public void onPlayerAttackEvent(LivingAttackEvent e) {
 		if(e.entity instanceof EntityPlayer) {
@@ -707,21 +713,21 @@ public class EventArmorFullSet {
 				helmet = null;
 
 			DamageSource s = e.source;
-			
+
 			//Kraken and Aquastrive
 			if((boots == v.aquastriveBoots && body == v.aquastriveBody && legs == v.aquastriveLegs && helmet == v.aquastriveHelmet) || (boots == v.krakenBoots && body == v.krakenBody && legs == v.krakenLegs && helmet == v.krakenHelmet)) {
 				if (s.equals(DamageSource.drown)) {
 					e.setCanceled(true);
 				}
 			}
-			
+
 			//Uvite
 			if (boots == TwilightItemsArmor.apalachiaBoots && legs == TwilightItemsArmor.apalachiaLegs && body == TwilightItemsArmor.apalachiaBody && helmet == TwilightItemsArmor.apalachiaHelmet) {
 				if (s.equals(DamageSource.cactus) || s.equals(DamageSource.fallingBlock) || s.equals(DamageSource.anvil) || s.equals(DamageSource.inWall)) {
 					e.setCanceled(true);
 				}
 			}
-			
+
 			//Wither Reaper
 			if (boots == v.witherReaperBoots && legs == v.witherReaperLegs && body == v.witherReaperBody && helmet == v.witherReaperHelmet) {
 				if (s.equals(DamageSource.wither)) {
@@ -730,7 +736,7 @@ public class EventArmorFullSet {
 			}
 		}
 	}
-	
+
 	@SubscribeEvent
 	public void onLivingHurtEvent(LivingHurtEvent e) {
 		if(e.entity instanceof EntityPlayer) {
@@ -764,14 +770,14 @@ public class EventArmorFullSet {
 
 		if(!(e.entity instanceof EntityPlayer)) {
 			DamageSource s = e.source;
-			
+
 			//Santa
 			/*if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
 				if ((e.entityLiving.worldObj.provider.dimensionId == DimensionConfigHelper.IceikaID) && ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile())) {
 					e.ammount += 6;
 				}
 			}*/
-			
+
 			//Halite
 			if (boots == t.haliteBoots && legs == t.haliteLegs && body == t.haliteBody && helmet == t.haliteHelmet) {
 				if ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile()) {

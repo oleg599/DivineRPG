@@ -32,8 +32,8 @@ public class ArcanaItems {
 
 	public static final Item oreDoorItem1 	    = new ItemModDoor(ArcanaBlocks.oreDoor1).setName("oreDoor1Item");
 	
-	public static final Item oreKey1 			= new ItemMod().setName("key1");
-	public static final Item oreKey2 			= new ItemMod().setName("key2");
-	public static final Item oreKey3 			= new ItemMod().setName("key3");
-	public static final Item oreKey4 			= new ItemMod().setName("key4");
+	public static final Item oreKey1 			= new ItemKey().setName("key1");
+	public static final Item oreKey2 			= new ItemKey().setName("key2");
+	public static final Item oreKey3 			= new ItemKey().setName("key3");
+	public static final Item oreKey4 			= new ItemKey().setName("key4");
 }
