@@ -46,7 +46,8 @@ public class ItemArcanaPotion extends ItemMod{
 
 	@Override
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
-		par3EntityPlayer.setItemInUse(par1ItemStack, this.getMaxItemUseDuration(par1ItemStack));
+		if(ArcanaHelper.getBarValue() != 200)
+			par3EntityPlayer.setItemInUse(par1ItemStack, this.getMaxItemUseDuration(par1ItemStack));
 		return par1ItemStack;
 	}
 

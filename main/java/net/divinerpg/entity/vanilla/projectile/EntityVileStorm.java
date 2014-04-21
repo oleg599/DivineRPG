@@ -12,7 +12,6 @@ import net.minecraft.world.World;
 
 
 public class EntityVileStorm extends EntityThrowable {
-	EntityLivingBase base;
 
 	public EntityVileStorm(World var1) {
 		super(var1);
@@ -20,7 +19,6 @@ public class EntityVileStorm extends EntityThrowable {
 
 	public EntityVileStorm(World var1, EntityLivingBase var3) {
 		super(var1, var3);
-		base = var3;
 	}
 
 	protected void onImpact(MovingObjectPosition var1) {

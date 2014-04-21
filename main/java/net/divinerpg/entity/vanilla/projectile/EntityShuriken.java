@@ -22,9 +22,6 @@ public class EntityShuriken extends EntityThrowable {
         super(var1, var2, var4, var6);
     }
 
-    /**
-     * Called when this EntityThrowable hits a block or entity.
-     */
     protected void onImpact(MovingObjectPosition var1) {
         if (var1.entityHit != null) {
             byte var2 = 4;

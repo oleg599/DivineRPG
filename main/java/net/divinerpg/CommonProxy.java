@@ -78,8 +78,8 @@ public class CommonProxy{
 		ArcanaBlocks.init();
 
 		if(Reference.DEBUG){
-			LangRegistry.init();
 			System.out.println("[DIVINERPG] DEBUG MODE");
+			LangRegistry.init();
 			LangRegistry.addBlockNames();
 			LangRegistry.addItemNames();
 			LangRegistry.closeFile();
