@@ -97,16 +97,14 @@ public class ItemStaffStarlight  extends ItemMod {
 		boolean stars;
 		if(par1ItemStack.getItem() == ArcanaItems.staffStarlight){
 			arcana = 25;
-			damage = 40;
 			stars = true;
 		} else {
 			arcana = 5;
-			damage = 40;
 			stars = false;
 		}
 		par3List.add(arcana + " Arcana");
 		par3List.add(stars ? "Drops several stars from the sky" : "Drops a star from the sky");
-		par3List.add(damage + " Ranged Damage");
+		par3List.add("40 Ranged Damage");
 		par3List.add(DivineAPI.GREEN + "Infinite Uses");
 	}
 }
