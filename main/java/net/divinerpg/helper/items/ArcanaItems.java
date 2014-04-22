@@ -12,7 +12,7 @@ public class ArcanaItems {
 	
 	public static final Item dungeonTokens 		= new ItemMod().setName("dungeonTokens");
 	public static final Item staffStarlight  	= new ItemStaffStarlight().setName("staffOfStarlight");
-	public static final Item starlight 			= new ItemMod().setName("starlight");
+	public static final Item starlight 			= new ItemStaffStarlight().setName("starlight");
 	public static final Item stormSword 		= new ItemStormSword(ToolMaterialMod.Storm).setName("stormSword");
 	public static final Item captainsSparkler   = new ItemCaptainsSparkler().setName("captainsSparkler");
 	public static final Item strongArcanaPotion = new ItemArcanaPotion(200).setName("strongArcanaPotion");

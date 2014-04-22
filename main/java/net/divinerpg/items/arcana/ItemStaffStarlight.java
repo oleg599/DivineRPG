@@ -5,8 +5,9 @@ import java.util.List;
 import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.client.ArcanaHelper;
-import net.divinerpg.entity.arcana.projectile.EntityStarlight;
+import net.divinerpg.entity.arcana.projectile.EntityStar;
 import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.items.ArcanaItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -68,15 +69,21 @@ public class ItemStaffStarlight  extends ItemMod {
 					--var23;             
 
 				if (var26 == 5) 
-					++var23;                
+					++var23;      
 
-				if(!par2World.isRemote && ArcanaHelper.useBar(25)) {
-					Sounds.playSound(Sounds.starlight, par2World, par3EntityPlayer);
-					par3EntityPlayer.getLook(1);
-					for(int i = 0; i < 4; i++){
-						par2World.spawnEntityInWorld(new EntityStarlight(par2World, (double)var23 + 0.5D, (double)var24 + 25D, (double)var25 + 0.5D));
+				if(par1ItemStack.getItem() == ArcanaItems.staffStarlight){
+					if(!par2World.isRemote && ArcanaHelper.useBar(25)) {
+						for(int i = 0; i < 8; i++)
+							par2World.spawnEntityInWorld(new EntityStar(par2World, (double)var23 + 0.5D, (double)var24 + 25D, (double)var25 + 0.5D));
+						Sounds.playSound(Sounds.starlight, par2World, par3EntityPlayer, 1.0F, 0.5F);
+					}
+				} else {
+					if(!par2World.isRemote && ArcanaHelper.useBar(5)) {
+						par2World.spawnEntityInWorld(new EntityStar(par2World, (double)var23 + 0.5D, (double)var24 + 25D, (double)var25 + 0.5D));
+						Sounds.playSound(Sounds.starlight, par2World, par3EntityPlayer);
 					}
 				}
+				par3EntityPlayer.getLook(1);
 			}
 		}
 		return par1ItemStack;
@@ -85,9 +92,21 @@ public class ItemStaffStarlight  extends ItemMod {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-		par3List.add("25 Arcana");
-		par3List.add("Drops a star from the sky");
-		par3List.add("40 Ranged Damage");
+		int damage;
+		int arcana;
+		boolean stars;
+		if(par1ItemStack.getItem() == ArcanaItems.staffStarlight){
+			arcana = 25;
+			damage = 40;
+			stars = true;
+		} else {
+			arcana = 5;
+			damage = 40;
+			stars = false;
+		}
+		par3List.add(arcana + " Arcana");
+		par3List.add(stars ? "Drops several stars from the sky" : "Drops a star from the sky");
+		par3List.add(damage + " Ranged Damage");
 		par3List.add(DivineAPI.GREEN + "Infinite Uses");
 	}
 }

@@ -10,7 +10,7 @@ public class ArcanaEntityRenderer {
 	private static EntityResourceLocation x;
 	
 	public static void init(){
-		RenderingRegistry.registerEntityRenderingHandler(EntityStarlight.class, new RenderStarlight(x.starlight));
+		RenderingRegistry.registerEntityRenderingHandler(EntityStar.class, new RenderStarlight(x.starlight));
 		RenderingRegistry.registerEntityRenderingHandler(EntitySparkler.class, new RenderProjectile(x.sparkler));
 	}	
 }

@@ -1,10 +1,7 @@
 package net.divinerpg.client.render.entity.arcana;
 
-import java.awt.Color;
 import java.util.Random;
 
-import net.divinerpg.client.render.RenderProjectile;
-import net.divinerpg.entity.arcana.projectile.EntityStarlight;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.entity.Entity;

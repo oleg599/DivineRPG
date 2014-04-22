@@ -10,10 +10,11 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class EntityStarlight extends EntityThrowable {
+public class EntityStar extends EntityThrowable {
 	
     private Color colour;
-    public EntityStarlight(World par1World) {
+    
+    public EntityStar(World par1World) {
         super(par1World);
         this.motionX = this.rand.nextGaussian() * 0.05;
         this.motionZ = this.rand.nextGaussian() * 0.05;
@@ -21,7 +22,7 @@ public class EntityStarlight extends EntityThrowable {
         colour = new Color(this.rand.nextInt(255), this.rand.nextInt(255), this.rand.nextInt(255));
     }
 
-    public EntityStarlight(World par1World, EntityLiving par2EntityLiving) {
+    public EntityStar(World par1World, EntityLiving par2EntityLiving) {
         super(par1World, par2EntityLiving);
         this.motionX = this.rand.nextGaussian() * 0.05;
         this.motionZ = this.rand.nextGaussian() * 0.05;
@@ -29,7 +30,7 @@ public class EntityStarlight extends EntityThrowable {
         colour = new Color(this.rand.nextInt(255), this.rand.nextInt(255), this.rand.nextInt(255));
     }
 
-    public EntityStarlight(World par1World, double par2, double par4, double par6) {
+    public EntityStar(World par1World, double par2, double par4, double par6) {
         super(par1World, par2, par4, par6);
         this.motionX = this.rand.nextGaussian() * 0.05;
         this.motionZ = this.rand.nextGaussian() * 0.05;
@@ -37,12 +38,12 @@ public class EntityStarlight extends EntityThrowable {
         colour = new Color(this.rand.nextInt(255), this.rand.nextInt(255), this.rand.nextInt(255));
     }
 
-    public Color getColor() {
+    public Color getColour() {
         return this.colour;
     }
 
     @SideOnly(Side.CLIENT)
-    public int getRenderColor(int par1) {
+    public int getRenderColour(int par1) {
         return this.rand.nextInt(255);
     }
 
