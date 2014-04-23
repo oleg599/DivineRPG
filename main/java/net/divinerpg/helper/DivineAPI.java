@@ -1,6 +1,7 @@
 package net.divinerpg.helper;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 
 import net.divinerpg.DivineRPG;
 import net.divinerpg.helper.recipes.CraftingDivineTableManager;
@@ -11,6 +12,9 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
@@ -157,5 +161,24 @@ public class DivineAPI {
 	
 	public static ToolMaterial addShickMaterial(int harvestLevel, float efficiency, float damage, int enchantability) {
         return EnumHelper.addEnum(ToolMaterial.class, "", harvestLevel, -1, efficiency, damage - 1, enchantability);
+    }
+	
+	public static void removeRecipe(Item removed) {
+        ItemStack recipeResult = null;
+        ArrayList recipes = (ArrayList)CraftingManager.getInstance().getRecipeList();
+
+        for (int i = 0; i < recipes.size(); i++) {
+            IRecipe tmpRecipe = (IRecipe)recipes.get(i);
+
+            if (tmpRecipe instanceof ShapedRecipes) {
+                ShapedRecipes recipe = (ShapedRecipes)tmpRecipe;
+                recipeResult = recipe.getRecipeOutput();
+            }
+
+            if (ItemStack.areItemStacksEqual(new ItemStack(removed), recipeResult)) {
+                System.out.println("[DivineRPG] Removed Recipe: " + recipes.get(i) + " -> " + recipeResult);
+                recipes.remove(i);
+            }
+        }
     }
 }

@@ -20,10 +20,6 @@ public class ArmorMaterialMod {
 	public static ArmorMaterial Shadow 				= DivineAPI.addArmorMaterial("Shadow", 0, new int[] { 3, 4, 3, 2 }, 10);
 	public static ArmorMaterial Aquatic 			= DivineAPI.addArmorMaterial("Aquastrive", 0, new int[] { 6, 7, 6, 6 }, 10);
 	public static ArmorMaterial EliteRealmite 		= DivineAPI.addArmorMaterial("Elite Realmite", 0, new int[] { 4, 4, 4, 3 }, 10);
-	public static ArmorMaterial Diamond 			= DivineAPI.addArmorMaterial("Diamond", 3500, new int[]{3, 8, 6, 3}, 10);
-	public static ArmorMaterial Iron 				= DivineAPI.addArmorMaterial("Iron", 1500, new int[]{2, 6, 5, 2}, 9);
-	public static ArmorMaterial Gold 				= DivineAPI.addArmorMaterial("Gold", 700, new int[]{3, 8, 6, 3}, 10);
-	public static ArmorMaterial Leather 			= DivineAPI.addArmorMaterial("Leather", 150, new int[]{3, 8, 6, 3}, 10);
 	public static ArmorMaterial Grim 				= DivineAPI.addArmorMaterial("Grim", 200, new int[] {3, 5, 3, 2}, 22);
 	public static ArmorMaterial Ender 				= DivineAPI.addArmorMaterial("Ender", 0, new int[] { 7, 7, 6, 6 }, 10);
 	public static ArmorMaterial Kraken 				= DivineAPI.addArmorMaterial("Kraken", 5000, new int[] { 2, 4, 2, 2 }, 10);

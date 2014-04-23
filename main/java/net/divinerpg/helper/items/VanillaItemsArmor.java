@@ -87,25 +87,4 @@ public class VanillaItemsArmor {
     public static final Item enderBody          = new ItemDivineArmor(ArmorMaterialMod.Ender, BODY, 1, 65D, true, "ender").setName("enderBody");
     public static final Item enderLegs          = new ItemDivineArmor(ArmorMaterialMod.Ender, LEGS, 2, 65D, true, "ender").setName("enderLegs");
     public static final Item enderBoots         = new ItemDivineArmor(ArmorMaterialMod.Ender, BOOTS, 3, 65D, true, "ender").setName("enderBoots");
-    
-    public static final Item ironHelmet         = new ItemDivineArmor(ArmorMaterialMod.Iron, HEAD, 0, 26D, false, "iron").setName("ironHelmet");
-    public static final Item ironBody           = new ItemDivineArmor(ArmorMaterialMod.Iron, BODY, 1, 26D, false, "iron").setName("ironBody");
-    public static final Item ironLegs           = new ItemDivineArmor(ArmorMaterialMod.Iron, LEGS, 2, 26D, false, "iron").setName("ironLegs");
-    public static final Item ironBoots          = new ItemDivineArmor(ArmorMaterialMod.Iron, BOOTS, 3, 26D, false, "iron").setName("ironBoots");
-    
-    public static final Item diamondHelmet      = new ItemDivineArmor(ArmorMaterialMod.Diamond, HEAD, 0, 40D, false, "diamond").setName("diamondHelmet");
-    public static final Item diamondBody        = new ItemDivineArmor(ArmorMaterialMod.Diamond, BODY, 1, 40D, false, "diamond").setName("diamondBody");
-    public static final Item diamondLegs        = new ItemDivineArmor(ArmorMaterialMod.Diamond, LEGS, 2, 40D, false, "diamond").setName("diamondLegs");
-    public static final Item diamondBoots       = new ItemDivineArmor(ArmorMaterialMod.Diamond, BOOTS, 3, 40D, false, "diamond").setName("diamondBoots");
-    
-    public static final Item goldHelmet         = new ItemDivineArmor(ArmorMaterialMod.Gold, HEAD, 0, 20D, false, "gold").setName("goldHelmet");
-    public static final Item goldBody           = new ItemDivineArmor(ArmorMaterialMod.Gold, BODY, 1, 20D, false, "gold").setName("goldBody");
-    public static final Item goldLegs           = new ItemDivineArmor(ArmorMaterialMod.Gold, LEGS, 2, 20D, false, "gold").setName("goldLegs");
-    public static final Item goldBoots          = new ItemDivineArmor(ArmorMaterialMod.Gold, BOOTS, 3, 20D, false, "gold").setName("goldBoots");
-    
-    public static final Item leatherHelmet      = new ItemDivineArmor(ArmorMaterialMod.Leather, HEAD, 0, 10D, false, "leather").setName("leatherHelmet");
-    public static final Item leatherBody        = new ItemDivineArmor(ArmorMaterialMod.Leather, BODY, 1, 10D, false, "leather").setName("leatherBody");
-    public static final Item leatherLegs        = new ItemDivineArmor(ArmorMaterialMod.Leather, LEGS, 2, 10D, false, "leather").setName("leatherLegs");
-    public static final Item leatherBoots       = new ItemDivineArmor(ArmorMaterialMod.Leather, BOOTS, 3, 10D, false, "leather").setName("leatherBoots");
-
 }
