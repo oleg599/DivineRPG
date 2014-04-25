@@ -49,6 +49,7 @@ public class Sounds {
 	public static String staff = "divinerpg:staff";
 	public static String starlight = "divinerpg:starlight";
 	public static String sparkler = "divinerpg:sparkler";
+	public static String carol = "divinerpg:soundOfCarols";
 
 
 

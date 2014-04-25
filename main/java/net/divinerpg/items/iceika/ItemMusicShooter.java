@@ -4,14 +4,9 @@ import java.util.List;
 
 import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.entity.iceika.projectile.EntityCarols;
-import net.divinerpg.entity.vanilla.projectile.EntityModSnowball;
-import net.divinerpg.entity.vanilla.projectile.EntityScythe;
-import net.divinerpg.helper.items.TwilightItemsOther;
+import net.divinerpg.entity.iceika.projectile.EntityMusic;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntitySnowball;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
@@ -28,8 +23,9 @@ public class ItemMusicShooter extends ItemMod {
 	@Override
 	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3) {
 		if(!var2.isRemote) {
-				var2.spawnEntityInWorld(new EntityCarols(var2, var3));
+				var2.spawnEntityInWorld(new EntityMusic(var2, var3));
 				var1.damageItem(1, var3);
+				Sounds.playSound(Sounds.carol, var2, var3);
 		}
 		return var1;
 	}

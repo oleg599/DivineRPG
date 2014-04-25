@@ -1,9 +1,9 @@
 package net.divinerpg.client.render.entity;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import net.divinerpg.client.render.EntityResourceLocation;
 import net.divinerpg.client.render.RenderProjectile;
-import net.divinerpg.entity.iceika.projectile.EntityCarols;
+import net.divinerpg.entity.iceika.projectile.EntityMusic;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class IceikaEntityRenderer {
 
@@ -11,7 +11,7 @@ public class IceikaEntityRenderer {
 	
 	public static void init(){
 		
-		RenderingRegistry.registerEntityRenderingHandler(EntityCarols.class, new RenderProjectile(x.music));
+		RenderingRegistry.registerEntityRenderingHandler(EntityMusic.class, new RenderProjectile(x.music));
 		
 	}
 }
