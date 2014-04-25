@@ -9,6 +9,7 @@ import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.material.ArmorMaterialMod;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
+import net.divinerpg.items.iceika.ItemMusicShooter;
 import net.minecraft.item.Item;
 
 public class IceikaItems {
@@ -28,7 +29,7 @@ public class IceikaItems {
 	//Not a real sword
 	public static final Item frossivence 	   = new ItemMod().setName("frossivence").setCreativeTab(DivineRPGTabs.swords);
 	
-	public static final Item soundOfCarols     = new ItemMod().setName("soundofCarols").setCreativeTab(DivineRPGTabs.ranged);
+	public static final Item soundOfCarols     = new ItemMusicShooter().setName("soundofCarols").setCreativeTab(DivineRPGTabs.ranged);
 	public static final Item frostclawCannon   = new ItemMod().setName("frostclawCannon").setCreativeTab(DivineRPGTabs.ranged);
 	public static final Item fractiteCannon    = new ItemMod().setName("fractiteCannon").setCreativeTab(DivineRPGTabs.ranged);
 	public static final Item snowflakeShuriken = new ItemMod().setName("snowflakeShuriken").setCreativeTab(DivineRPGTabs.ranged);
