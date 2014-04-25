@@ -1,0 +1,58 @@
+package net.divinerpg.dimension.gen.iceika;
+
+import net.divinerpg.helper.DimensionHelper;
+import net.divinerpg.helper.config.ConfigurationHelper;
+import net.minecraft.world.WorldProvider;
+import net.minecraft.world.chunk.IChunkProvider;
+
+public class WorldProviderIceika extends WorldProvider{
+
+	@Override
+	public void registerWorldChunkManager() {
+		this.dimensionId = ConfigurationHelper.Iceika;
+		this.worldChunkMgr = new WorldChunkManagerIceika(DimensionHelper.Iceika);
+	}
+
+	@Override
+	public float getCloudHeight() {
+		return 128.0F;
+	}
+	
+	@Override
+	public boolean canSnowAt(int x, int y, int z, boolean checkLight) {
+		return true;
+	}
+
+	@Override
+	public IChunkProvider createChunkGenerator() {
+		return new ChunkProviderIceika(this.worldObj, this.worldObj.getSeed());
+	}
+
+	@Override
+	public boolean isSurfaceWorld() {
+		return false;
+
+	}
+	
+	@Override
+	public float calculateCelestialAngle(long var1, float var3) {
+		return 0.3F;
+	}
+
+
+	@Override
+	public boolean canRespawnHere() {
+		return true;
+	}
+
+	@Override
+	public String getDimensionName() {
+		return "Iceika";
+	}
+
+	@Override
+	public String getSaveFolder() {
+		return "Iceika";
+	}
+
+}

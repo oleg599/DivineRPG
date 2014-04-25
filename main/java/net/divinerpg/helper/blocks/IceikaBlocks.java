@@ -13,6 +13,7 @@ import net.divinerpg.api.blocks.BlockModLog;
 import net.divinerpg.api.blocks.BlockModSpawner;
 import net.divinerpg.blocks.iceika.BlockCoalstoneFurnace;
 import net.divinerpg.blocks.iceika.BlockFrostedChest;
+import net.divinerpg.blocks.iceika.BlockIceikaPortal;
 import net.divinerpg.blocks.iceika.IceikaBlock;
 import net.divinerpg.helper.items.IceikaItems;
 import net.minecraft.block.Block;
@@ -55,7 +56,8 @@ public class IceikaBlocks {
 	public static final Block workshopLamp        = new BlockModLight(glass).setName("workshopLamp").setHardness(0.3F); //Lamps for workshops.
 	public static final Block steelDoorBlock      = new BlockModDoor(Material.iron, IceikaItems.steelDoor, true).setName("steelDoorBlock").setHardness(7.0F); //Doors for workshops.
 	public static final Block coalstoneFurnace    = new BlockCoalstoneFurnace().setName("coalstoneFurnace"); //One in each workshop. Never runs out of fuel
-	
+	public static final BlockIceikaPortal portal  = (BlockIceikaPortal)new BlockIceikaPortal().setName("iceikaPortal");
+
 
 	public static void init() {
 		frozenGrass = new BlockModGrass(frozenGrass, frozenDirt, "frozen").setHardness(2.5F);
