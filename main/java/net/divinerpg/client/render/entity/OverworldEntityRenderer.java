@@ -18,6 +18,7 @@ public class OverworldEntityRenderer {
 	
 	public static void init(){
 		RenderingRegistry.registerEntityRenderingHandler(EntityShuriken.class, new RenderIconProjectile(VanillaItemsWeapons.shuriken));
+		RenderingRegistry.registerEntityRenderingHandler(EntityModSnowball.class, new RenderProjectile(x.snowball));
 		RenderingRegistry.registerEntityRenderingHandler(EntityVileStorm.class, new RenderIconProjectile(VanillaItemsWeapons.vileStorm));
 		RenderingRegistry.registerEntityRenderingHandler(EntityScythe.class, new RenderProjectile(x.scytheProjectile));
 		RenderingRegistry.registerEntityRenderingHandler(EntityEnderWatcher.class, new RenderDivineMob(new ModelWatcher(), 0.0F, x.enderWatcher));

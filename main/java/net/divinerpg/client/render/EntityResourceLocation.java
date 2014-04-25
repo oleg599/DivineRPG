@@ -61,6 +61,7 @@ public class EntityResourceLocation {
     public static ResourceLocation cannon 			 = addProjectile("cannon");
     public static ResourceLocation eversightCannon 	 = addProjectile("cannon");
     public static ResourceLocation eversight 	 	 = addProjectile("eversight");
+    public static ResourceLocation snowball 	 	 = addProjectile("snowball");
 
     public static ResourceLocation edenArrow 	 	 = addProjectile("edenArrow");
     public static ResourceLocation wildArrow 	 	 = addProjectile("wildArrow");
