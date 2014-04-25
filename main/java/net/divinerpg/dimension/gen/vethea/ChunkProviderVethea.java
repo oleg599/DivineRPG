@@ -308,8 +308,8 @@ public class ChunkProviderVethea implements IChunkProvider {
 						BiomeGenBase var23 = this.biomesForGeneration[var14 + var21 + 2 + (var15 + var22 + 2) * (par5 + 5)];
 						float var24 = this.parabolicField[var21 + 2 + (var22 + 2) * 5] / (var23.rootHeight + 2.0F);
 
-						if (var23.rootHeight > var20.rootHeight) {
-							var24 /= 2.0F;
+						if (var23.rootHeight > var20.heightVariation) {
+							var24 /= 3.0F;
 						}
 
 						var16 += var23.rootHeight * var24;
@@ -434,7 +434,7 @@ public class ChunkProviderVethea implements IChunkProvider {
 
 			if (l1 <= 0 + p_150560_2_.nextInt(5))
 			{
-				p_150560_3_[i2] = VetheaBlocks.dreamStone;
+				p_150560_3_[i2] = VetheaBlocks.dreamStone;//
 			}
 			else
 			{
@@ -463,7 +463,7 @@ public class ChunkProviderVethea implements IChunkProvider {
 							{
 								if (b.getFloatTemperature(p_150560_5_, l1, p_150560_6_) < 0.15F)
 								{
-									block = VetheaBlocks.dreamStone;
+									block = b.topBlock;
 									b0 = 0;
 								}
 							}
@@ -478,8 +478,8 @@ public class ChunkProviderVethea implements IChunkProvider {
 							else if (l1 < 56 - l)
 							{
 								block = null;
-								block1 = VetheaBlocks.dreamStone;
-								p_150560_3_[i2] = VetheaBlocks.dreamStone;
+								block1 = b.fillerBlock;
+								p_150560_3_[i2] = b.topBlock;
 							}
 							else
 							{
@@ -494,7 +494,7 @@ public class ChunkProviderVethea implements IChunkProvider {
 							if (k == 0 && block1 == VetheaBlocks.dreamStone)
 							{
 								k = p_150560_2_.nextInt(4) + Math.max(0, l1 - 63);
-								block1 = VetheaBlocks.dreamStone;
+								block1 = VetheaBlocks.dreamStone;//
 							}
 						}
 					}
