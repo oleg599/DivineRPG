@@ -15,7 +15,7 @@ import net.minecraftforge.common.DimensionManager;
 
 public class DimensionHelper {
 
-	protected static final BiomeGenBase.Height IceikaHeight = new BiomeGenBase.Height(0.0F, 2.0F);
+	protected static final BiomeGenBase.Height IceikaHeight = new BiomeGenBase.Height(0.0F, 0.7F);
 	
 	public static BiomeGenBase Eden 		= new BiomeGenEden(ConfigurationHelper.EdenBiome);
 	public static BiomeGenBase WildWoods 	= new BiomeGenWildWoods(ConfigurationHelper.WildWoodsBiome);
@@ -34,11 +34,7 @@ public class DimensionHelper {
 		/*addDimension(ConfigurationHelper.Apalachia, WorldProviderApalachia.class, ConfigurationHelper.keepLoadingApalachia);
 		addDimension(ConfigurationHelper.Skythern, WorldProviderSkythern.class, ConfigurationHelper.keepLoadingSkythern);
 		addDimension(ConfigurationHelper.Mortum, WorldProviderMortum.class, ConfigurationHelper.keepLoadingMortum);
-		addDimension(ConfigurationHelper.Vethea, WorldProviderVethea.class, ConfigurationHelper.keepLoadingVethea);
-		
-		*/
-
-
+		addDimension(ConfigurationHelper.Vethea, WorldProviderVethea.class, ConfigurationHelper.keepLoadingVethea);*/
 	}
 
 	private static void addDimension(int id, Class<? extends WorldProvider> w, boolean keeploading){

@@ -1,5 +1,6 @@
 package net.divinerpg.dimension.gen.iceika;
 
+import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.ANIMALS;
 import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.LAKE;
 
 import java.util.List;
@@ -7,11 +8,14 @@ import java.util.Random;
 
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFalling;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.IProgressUpdate;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.ChunkPosition;
+import net.minecraft.world.SpawnerAnimals;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -23,7 +27,12 @@ import net.minecraft.world.gen.NoiseGenerator;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 import net.minecraft.world.gen.feature.WorldGenLakes;
+import net.minecraft.world.gen.feature.WorldGenMinable;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.terraingen.ChunkProviderEvent;
+import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.terraingen.TerrainGen;
+import cpw.mods.fml.common.eventhandler.Event.Result;
 
 public class ChunkProviderIceika implements IChunkProvider {
 
@@ -35,7 +44,7 @@ public class ChunkProviderIceika implements IChunkProvider {
 	private final double[] da;
 	private final float[] parabolicField;
 	private double[] stoneNoise = new double[256];
-	private MapGenBase caveGenerator = new MapGenCaves();
+	private MapGenBase caveGenerator = new MapGenIceikaCaves();
 	private BiomeGenBase[] biomesForGeneration;
 	private double[] gen1, gen2, gen3, gen4;
 	private int[][] ia = new int[32][32];
@@ -115,7 +124,7 @@ public class ChunkProviderIceika implements IChunkProvider {
 									b[j3 += short1] = IceikaBlocks.frozenStone;
 
 								else if(k2 * 8 + l2 < b0) 
-									b[j3 += short1] = Blocks.ice;
+									b[j3 += short1] = IceikaBlocks.frozenGrass;
 								else 
 									b[j3 += short1] = null;
 
@@ -136,68 +145,113 @@ public class ChunkProviderIceika implements IChunkProvider {
 	}
 
 	public void replaceBlocksForBiome(int i, int j, Block[] ba, byte[] by, BiomeGenBase[] b) {
-		byte var5 = 63;
-		double var6 = 0.03125D;
-		this.stoneNoise = this.noiseGen5.generateNoiseOctaves(this.stoneNoise, i * 16, j * 16, 0, 16, 16, 1, var6 * 2.0D, var6 * 2.0D, var6 * 2.0D);
+		double d0 = 0.03125D;
+		this.stoneNoise = this.noiseGen4.func_151599_a(this.stoneNoise, (double)(i * 16), (double)(j * 16), 16, 16, d0 * 2.0D, d0 * 2.0D, 1.0D);
 
-		for (int var8 = 0; var8 < 16; ++var8) {
-			for (int var9 = 0; var9 < 16; ++var9) {
-				BiomeGenBase var10 = b[var9 + var8 * 16];
-				int var12 = (int)(this.stoneNoise[var8 + var9 * 16] / 3.0D + 3.0D + this.rand.nextDouble() * 0.25D);
-				int var13 = -1;
-				Block var14 = var10.topBlock;
-				Block var15 = var10.fillerBlock;
-
-				for (int var16 = 127; var16 >= 0; --var16) {
-					int var17 = (var9 * 16 + var8) * 128 + var16;
-
-					if (var16 <= 0 + this.rand.nextInt(5)) {
-						ba[var17] = Blocks.bedrock;
-					} else {
-						Block var18 = ba[var17];
-
-						if (var18 == null) {
-							var13 = -1;
-						}
-						else if (var18 != Blocks.stone)  {
-							if (var13 == -1) {
-								if (var12 <= 0) {
-									var14 = null;
-									var15 = IceikaBlocks.frozenStone;
-								}
-								else if (var16 >= var5 - 4 && var16 <= var5 + 1) {
-									var14 = var10.topBlock;
-									var15 = var10.fillerBlock;
-								}
-
-								if (var16 < var5 && var14 == null) {
-									var14 = Blocks.ice;
-								}
-
-								var13 = var12;
-
-								if (var16 >= var5 - 1) {
-									ba[var17] = var14;
-								} else {
-									ba[var17] = var15;
-								}
-							}
-							else if (var13 > 0) {
-								--var13;
-								ba[var17] = var15;
-
-								if (var13 == 0 && var15 == Blocks.sand) {
-									var13 = this.rand.nextInt(4);
-									var15 = Blocks.sandstone;
-								}
-							}
-						}
-					}
-				}
+		for(int k = 0; k < 16; ++k) {
+			for(int l = 0; l < 16; ++l) {
+				BiomeGenBase biomegenbase = b[l + k * 16];
+				genBiomeTerrain(this.worldObj, this.rand, ba, by, i * 16 + k, j * 16 + l, this.stoneNoise[l + k * 16], biomegenbase);
 			}
 		}
 	}
 
+	public final void genBiomeTerrain(World p_150560_1_, Random p_150560_2_, Block[] p_150560_3_, byte[] p_150560_4_, int p_150560_5_, int p_150560_6_, double p_150560_7_, BiomeGenBase b)
+    {
+        boolean flag = true;
+        Block block = b.topBlock;
+        byte b0 = (byte)(b.field_150604_aj & 255);
+        Block block1 = b.fillerBlock;
+        int k = -1;
+        int l = (int)(p_150560_7_ / 3.0D + 3.0D + p_150560_2_.nextDouble() * 0.25D);
+        int i1 = p_150560_5_ & 15;
+        int j1 = p_150560_6_ & 15;
+        int k1 = p_150560_3_.length / 256;
+
+        for (int l1 = 255; l1 >= 0; --l1)
+        {
+            int i2 = (j1 * 16 + i1) * k1 + l1;
+
+            if (l1 <= 0 + p_150560_2_.nextInt(5))
+            {
+                p_150560_3_[i2] = Blocks.bedrock;
+            }
+            else
+            {
+                Block block2 = p_150560_3_[i2];
+
+                if (block2 != null && block2.getMaterial() != Material.air)
+                {
+                    if (block2 == IceikaBlocks.frozenStone)
+                    {
+                        if (k == -1)
+                        {
+                            if (l <= 0)
+                            {
+                                block = null;
+                                b0 = 0;
+                                block1 = IceikaBlocks.frozenStone;
+                            }
+                            else if (l1 >= 59 && l1 <= 64)
+                            {
+                                block = b.topBlock;
+                                b0 = (byte)(b.field_150604_aj & 255);
+                                block1 = b.fillerBlock;
+                            }
+
+                            if (l1 < 63 && (block == null || block.getMaterial() == Material.air))
+                            {
+                                if (b.getFloatTemperature(p_150560_5_, l1, p_150560_6_) < 0.15F)
+                                {
+                                    block = Blocks.ice;
+                                    b0 = 0;
+                                }
+                                else
+                                {
+                                    block = IceikaBlocks.frozenStone;
+                                    b0 = 0;
+                                }
+                            }
+
+                            k = l;
+
+                            if (l1 >= 62)
+                            {
+                                p_150560_3_[i2] = block;
+                                p_150560_4_[i2] = b0;
+                            }
+                            else if (l1 < 56 - l)
+                            {
+                                block = null;
+                                block1 = IceikaBlocks.frozenStone;
+                                p_150560_3_[i2] = IceikaBlocks.frozenStone;
+                            }
+                            else
+                            {
+                                p_150560_3_[i2] = block1;
+                            }
+                        }
+                        else if (k > 0)
+                        {
+                            --k;
+                            p_150560_3_[i2] = block1;
+
+                            if (k == 0 && block1 == IceikaBlocks.frozenStone)
+                            {
+                                k = p_150560_2_.nextInt(4) + Math.max(0, l1 - 63);
+                                block1 = IceikaBlocks.frozenStone;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    k = -1;
+                }
+            }
+        }
+    }
+	
 	@Override
 	public Chunk loadChunk(int par1, int par2) {
 		return this.provideChunk(par1, par2);
@@ -350,13 +404,13 @@ public class ChunkProviderIceika implements IChunkProvider {
 			y = this.worldObj.getHeightValue(x, z);
 			var17.generate(this.worldObj, this.rand, x, y, z);
 		}	
-
+		
 		if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, var4, var5, false, LAKE) && this.rand.nextInt(4) == 0) {
-			var12 = var4 + this.rand.nextInt(16) + 8;
-			var13 = this.rand.nextInt(128);
-			var14 = var5 + this.rand.nextInt(16) + 8;
-			(new WorldGenLakes(Blocks.ice)).generate(this.worldObj, this.rand, var12, var13, var14);
-		}
+            var12 = var4 + this.rand.nextInt(16) + 8;
+            var13 = this.rand.nextInt(128);
+            var14 = var5 + this.rand.nextInt(16) + 8;
+            (new WorldGenLakes(Blocks.ice)).generate(this.worldObj, this.rand, var12, var13, var14);
+        }
 	}
 
 	@Override
@@ -379,7 +433,7 @@ public class ChunkProviderIceika implements IChunkProvider {
 
 	@Override
 	public String makeString() {
-		return "RandomLevelSource";
+		return "Iceika";
 	}
 
 	@Override
