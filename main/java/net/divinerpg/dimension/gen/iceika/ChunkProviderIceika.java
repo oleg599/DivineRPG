@@ -1,18 +1,17 @@
 package net.divinerpg.dimension.gen.iceika;
 
-import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.ANIMALS;
+import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.LAKE;
 
 import java.util.List;
 import java.util.Random;
 
+import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFalling;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.IProgressUpdate;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.ChunkPosition;
-import net.minecraft.world.SpawnerAnimals;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -23,11 +22,8 @@ import net.minecraft.world.gen.MapGenCaves;
 import net.minecraft.world.gen.NoiseGenerator;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.terraingen.ChunkProviderEvent;
-import net.minecraftforge.event.terraingen.PopulateChunkEvent;
+import net.minecraft.world.gen.feature.WorldGenLakes;
 import net.minecraftforge.event.terraingen.TerrainGen;
-import cpw.mods.fml.common.eventhandler.Event.Result;
 
 public class ChunkProviderIceika implements IChunkProvider {
 
@@ -116,10 +112,10 @@ public class ChunkProviderIceika implements IChunkProvider {
 
 							for(int k3 = 0; k3 < 4; ++k3) {
 								if((d15 += d16) > 0.0D) 
-									b[j3 += short1] = Blocks.stone;
+									b[j3 += short1] = IceikaBlocks.frozenStone;
 
 								else if(k2 * 8 + l2 < b0) 
-									b[j3 += short1] = Blocks.water;
+									b[j3 += short1] = Blocks.ice;
 								else 
 									b[j3 += short1] = null;
 
@@ -140,17 +136,64 @@ public class ChunkProviderIceika implements IChunkProvider {
 	}
 
 	public void replaceBlocksForBiome(int i, int j, Block[] ba, byte[] by, BiomeGenBase[] b) {
-		ChunkProviderEvent.ReplaceBiomeBlocks event = new ChunkProviderEvent.ReplaceBiomeBlocks(this, i, j, ba, b);
-		MinecraftForge.EVENT_BUS.post(event);
-		if(event.getResult() == Result.DENY) return;
+		byte var5 = 63;
+		double var6 = 0.03125D;
+		this.stoneNoise = this.noiseGen5.generateNoiseOctaves(this.stoneNoise, i * 16, j * 16, 0, 16, 16, 1, var6 * 2.0D, var6 * 2.0D, var6 * 2.0D);
 
-		double d0 = 0.03125D;
-		this.stoneNoise = this.noiseGen4.func_151599_a(this.stoneNoise, (double)(i * 16), (double)(j * 16), 16, 16, d0 * 2.0D, d0 * 2.0D, 1.0D);
+		for (int var8 = 0; var8 < 16; ++var8) {
+			for (int var9 = 0; var9 < 16; ++var9) {
+				BiomeGenBase var10 = b[var9 + var8 * 16];
+				int var12 = (int)(this.stoneNoise[var8 + var9 * 16] / 3.0D + 3.0D + this.rand.nextDouble() * 0.25D);
+				int var13 = -1;
+				Block var14 = var10.topBlock;
+				Block var15 = var10.fillerBlock;
 
-		for(int k = 0; k < 16; ++k) {
-			for(int l = 0; l < 16; ++l) {
-				BiomeGenBase biomegenbase = b[l + k * 16];
-				biomegenbase.genTerrainBlocks(this.worldObj, this.rand, ba, by, i * 16 + k, j * 16 + l, this.stoneNoise[l + k * 16]);
+				for (int var16 = 127; var16 >= 0; --var16) {
+					int var17 = (var9 * 16 + var8) * 128 + var16;
+
+					if (var16 <= 0 + this.rand.nextInt(5)) {
+						ba[var17] = Blocks.bedrock;
+					} else {
+						Block var18 = ba[var17];
+
+						if (var18 == null) {
+							var13 = -1;
+						}
+						else if (var18 != Blocks.stone)  {
+							if (var13 == -1) {
+								if (var12 <= 0) {
+									var14 = null;
+									var15 = IceikaBlocks.frozenStone;
+								}
+								else if (var16 >= var5 - 4 && var16 <= var5 + 1) {
+									var14 = var10.topBlock;
+									var15 = var10.fillerBlock;
+								}
+
+								if (var16 < var5 && var14 == null) {
+									var14 = Blocks.ice;
+								}
+
+								var13 = var12;
+
+								if (var16 >= var5 - 1) {
+									ba[var17] = var14;
+								} else {
+									ba[var17] = var15;
+								}
+							}
+							else if (var13 > 0) {
+								--var13;
+								ba[var17] = var15;
+
+								if (var13 == 0 && var15 == Blocks.sand) {
+									var13 = this.rand.nextInt(4);
+									var15 = Blocks.sandstone;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -291,23 +334,29 @@ public class ChunkProviderIceika implements IChunkProvider {
 	public void populate(IChunkProvider par1IChunkProvider, int par2, int par3) {
 		int var4 = par2 * 16;
 		int var5 = par3 * 16;
-		BlockFalling.fallInstantly = true;
 		BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(var4 + 16, var5 + 16);
-		this.rand.setSeed(this.worldObj.getSeed());
 		long p1 = this.rand.nextLong() / 2L * 2L + 1L;
 		long j1 = this.rand.nextLong() / 2L * 2L + 1L;
+		this.rand.setSeed(this.worldObj.getSeed());
 		this.rand.setSeed((long)par2 * p1 + (long)par3 * j1 ^ this.worldObj.getSeed());
-		boolean flag = false;
-		MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Pre(par1IChunkProvider, worldObj, rand, par2, par3, flag));
 		int j, var12, var13, var14;
 
-		biomegenbase.decorate(this.worldObj, this.rand, var4, var5);
+		WorldGenGiantTree var17 = new WorldGenGiantTree(true);
+		int x, i, y, z;
 
-		if(TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, ANIMALS)) 
-			SpawnerAnimals.performWorldGenSpawning(this.worldObj, biomegenbase, var4 + 8, var5 + 8, 16, 16, this.rand);
+		for (i = 0; i < 14; i++) {
+			x = var4 + this.rand.nextInt(16);
+			z = var5 + this.rand.nextInt(16);
+			y = this.worldObj.getHeightValue(x, z);
+			var17.generate(this.worldObj, this.rand, x, y, z);
+		}	
 
-		MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Post(par1IChunkProvider, worldObj, rand, par2, par3, flag));
-		BlockFalling.fallInstantly = false;
+		if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, var4, var5, false, LAKE) && this.rand.nextInt(4) == 0) {
+			var12 = var4 + this.rand.nextInt(16) + 8;
+			var13 = this.rand.nextInt(128);
+			var14 = var5 + this.rand.nextInt(16) + 8;
+			(new WorldGenLakes(Blocks.ice)).generate(this.worldObj, this.rand, var12, var13, var14);
+		}
 	}
 
 	@Override
