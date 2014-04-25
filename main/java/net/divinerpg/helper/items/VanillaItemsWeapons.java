@@ -3,6 +3,7 @@ package net.divinerpg.helper.items;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.api.items.ItemModSword;
 import net.divinerpg.helper.material.ToolMaterialMod;
+import net.divinerpg.items.vanilla.ItemFrostCannon;
 import net.divinerpg.items.vanilla.ItemInfernoSword;
 import net.divinerpg.items.vanilla.ItemScythe;
 import net.divinerpg.items.vanilla.ItemSerenadeOfHealth;
@@ -56,6 +57,7 @@ public class VanillaItemsWeapons {
     public static final Item shuriken       	= new ItemThrowable(4).setName("shuriken");
     public static final Item vileStorm       	= new ItemThrowable(4).setName("vileStorm");
     public static final Item scythe		       	= new ItemScythe().setName("scythe");
+    public static final Item frostCannon       	= new ItemFrostCannon().setName("frostCannon");
     
     public static final Item serenadeOfHealth 	= new ItemSerenadeOfHealth().setName("serenadeOfHealth");
     
