@@ -15,6 +15,7 @@ import net.divinerpg.blocks.vethea.BlockInfusionTable;
 import net.divinerpg.blocks.vethea.BlockKarosCannon;
 import net.divinerpg.blocks.vethea.BlockKarosHeatTile;
 import net.divinerpg.blocks.vethea.BlockVetheaPlant;
+import net.divinerpg.blocks.vethea.BlockVetheaPortal;
 import net.divinerpg.blocks.vethea.VetheanBlock;
 import net.divinerpg.helper.items.VetheanItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
@@ -37,7 +38,7 @@ public class VetheaBlocks {
 	public static final Block             raglokAltar            = new VetheanBlock(Material.rock).setName("raglokAltar").setCreativeTab(DivineRPGTabs.spawner);
 	public static final Block             lunicAltar             = new VetheanBlock(Material.rock).setName("lunicAltar").setCreativeTab(DivineRPGTabs.spawner);
 
-	//public static final BlockVetheaPortal vetheaPortal           = (BlockVetheaPortal)new BlockVetheaPortal().setName("vetheaPortal");
+	public static final BlockVetheaPortal vetheaPortal           = (BlockVetheaPortal)new BlockVetheaPortal().setName("vetheaPortal");
 	public static final Block             dreamStone             = new VetheanBlock(Material.rock).setName("dreamStone");
 	public static final Block             dreamDirt              = new BlockModDirt().setName("dreamDirt").setCreativeTab(DivineRPGTabs.vethea);
 	public static final Block             fireCrystal            = new VetheanBlock(Material.rock).setName("fireCrystal").setLightLevel(0.7F).setStepSound(Block.soundTypeGlass);
