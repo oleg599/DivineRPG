@@ -32,11 +32,9 @@ public class EntityMusic extends EntityThrowable {
     @Override
     public void onUpdate()  {
         super.onUpdate();
-
-        for (int var3 = 0; var3 < 8; ++var3) {
-            EntitySkythernPortalFX var20 = new EntitySkythernPortalFX(this.worldObj, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D); //Change to music notes
-            FMLClientHandler.instance().getClient().effectRenderer.addEffect(var20);
-        }
+        this.worldObj.spawnParticle("note", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
+            //EntitySkythernPortalFX var20 = new EntitySkythernPortalFX(this.worldObj, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D); //Change to music notes
+            //FMLClientHandler.instance().getClient().effectRenderer.addEffect(var20);
     }
 
     @Override
