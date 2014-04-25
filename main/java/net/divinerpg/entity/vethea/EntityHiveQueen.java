@@ -19,9 +19,10 @@ import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
 
-public class EntityHiveQueen extends EntityDivineRPGBoss{
+public class EntityHiveQueen extends EntityDivineRPGBoss implements IBossDisplayData{
 	
     private int spawnTick;
     private int deathTicks;
@@ -165,5 +166,16 @@ public class EntityHiveQueen extends EntityDivineRPGBoss{
             this.setDead();
         }
     }
+
+	@Override
+	public String name() {
+		return "HiveQueen";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

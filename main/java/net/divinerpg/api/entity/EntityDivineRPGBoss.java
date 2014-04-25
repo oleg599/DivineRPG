@@ -12,8 +12,10 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
-public abstract class EntityDivineRPGBoss extends EntityMob implements IBossDisplayData{
+public abstract class EntityDivineRPGBoss extends EntityMob implements IDivineRPGBoss{
 
+	private static String name;
+	
 	public EntityDivineRPGBoss(World par1World) {
 		super(par1World);
 	}
@@ -65,6 +67,14 @@ public abstract class EntityDivineRPGBoss extends EntityMob implements IBossDisp
 
 	public abstract String mobName();
 
+	public String setName(String name){
+		return this.name = name;
+	}
+	
+	public static String getName(){
+		return name;
+	}
+	
 	@Override
 	public boolean canDespawn() {
 		return false;	

@@ -14,6 +14,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -141,4 +142,15 @@ public class EntityTwilightDemon extends EntityDivineRPGBoss implements IBossDis
 	 public String mobName() {
 		 return "Twilight Demon";
 	 }
+
+	@Override
+	public String name() {
+		return "Twilight Demon";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

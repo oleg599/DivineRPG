@@ -11,6 +11,7 @@ import net.minecraft.entity.ai.EntityAIArrowAttack;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.item.Item;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -156,5 +157,16 @@ public class EntityKingOfScorchers extends EntityDivineRPGBoss implements IBossD
 	@Override
 	public String mobName() {
 		return "Scorcher King";
+	}
+
+	@Override
+	public String name() {
+		return "Scorcher King";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

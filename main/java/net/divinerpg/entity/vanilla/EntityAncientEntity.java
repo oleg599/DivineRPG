@@ -10,6 +10,7 @@ import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
 
 public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDisplayData{
@@ -87,5 +88,21 @@ public class EntityAncientEntity extends EntityDivineRPGBoss implements IBossDis
 	@Override
 	public String mobName() {
 		return "Ancient Entity";
+	}
+
+	@Override
+	public String setName(String name) {
+		return "Ancient Entity";
+	}
+	
+	@Override
+	public String name() {
+		return "Ancient Entity";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

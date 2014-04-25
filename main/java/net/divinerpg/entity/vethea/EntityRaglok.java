@@ -29,6 +29,7 @@ import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -426,5 +427,16 @@ public class EntityRaglok extends EntityDivineRPGBoss implements IRangedAttackMo
 	@Override
 	public String mobName() {
 		return "Raglok";
+	}
+
+	@Override
+	public String name() {
+		return "Raglok";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

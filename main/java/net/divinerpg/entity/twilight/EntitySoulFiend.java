@@ -10,6 +10,7 @@ import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -135,5 +136,16 @@ public class EntitySoulFiend extends EntityDivineRPGBoss implements IBossDisplay
 	@Override
 	public String mobName() {
 		return "Soul Fiend";
+	}
+
+	@Override
+	public String name() {
+		return "Soul Fiend";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
