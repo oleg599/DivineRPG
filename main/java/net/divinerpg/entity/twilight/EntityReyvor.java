@@ -10,6 +10,7 @@ import net.minecraft.entity.ai.EntityAIArrowAttack;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -136,6 +137,17 @@ public class EntityReyvor extends EntityDivineRPGBoss implements IBossDisplayDat
 	@Override
 	public String mobName() {
 		return "Reyvor";
+	}
+
+	@Override
+	public String name() {
+		return "Reyvor";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

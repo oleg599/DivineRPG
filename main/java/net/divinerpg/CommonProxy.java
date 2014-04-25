@@ -3,6 +3,7 @@ package net.divinerpg;
 import net.divinerpg.blocks.twilight.TileEntityTwilightFurnace;
 import net.divinerpg.blocks.vethea.container.tile_entity.TileEntityInfusionTable;
 import net.divinerpg.client.ArcanaTickHandler;
+import net.divinerpg.client.render.BossTickHandler;
 import net.divinerpg.client.render.block.TileEntityStatue;
 import net.divinerpg.dimension.gen.vanilla.WorldGenOverworld;
 import net.divinerpg.helper.DimensionHelper;
@@ -107,6 +108,7 @@ public class CommonProxy{
 		System.out.println("[DIVINERPG] ADDING WORLD GENERATIONS");
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
 		DivineAPI.addSpecialEventBus(new EventArmorFullSet());
+		DivineAPI.addSpecialEventBus(new BossTickHandler());
 	}
 
 	public void postInit(FMLPostInitializationEvent event){

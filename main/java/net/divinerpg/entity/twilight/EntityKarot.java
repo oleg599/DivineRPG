@@ -8,6 +8,7 @@ import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
@@ -140,5 +141,16 @@ public class EntityKarot extends EntityDivineRPGBoss implements IBossDisplayData
 	@Override
 	public String mobName() {
 		return "Karot";
+	}
+
+	@Override
+	public String name() {
+		return "Karot";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

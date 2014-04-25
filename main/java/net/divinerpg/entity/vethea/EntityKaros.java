@@ -18,6 +18,7 @@ import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
 
 public class EntityKaros extends EntityDivineRPGBoss implements IBossDisplayData
@@ -413,6 +414,16 @@ public class EntityKaros extends EntityDivineRPGBoss implements IBossDisplayData
 	@Override
 	public String mobName() {
 		return "Dr Karos";
+	}
+
+	@Override
+	public String name() {
+		return "Karos";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		return null;
 	}
 
 }

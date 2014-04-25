@@ -16,6 +16,7 @@ import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.ChunkCoordinates;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
 
 public class EntityVamacheron extends EntityDivineRPGBoss implements IBossDisplayData
@@ -150,5 +151,16 @@ public class EntityVamacheron extends EntityDivineRPGBoss implements IBossDispla
 	@Override
 	public String mobName() {
 		return "Vamacheron";
+	}
+
+	@Override
+	public String name() {
+		return "Vamacheron";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

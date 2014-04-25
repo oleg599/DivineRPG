@@ -30,7 +30,7 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityJungleDramcryx.class, new RenderDivineMob(new ModelDramcryx(), 0.0F, x.jungleDramcryx));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCyclops.class, new RenderSizeable(new ModelBiped(), 0.0F, 2.0F, x.cyclops));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCaveclops.class, new RenderSizeable(new ModelBiped(), 0.0F, 2.0F, x.caveclops));
-		RenderingRegistry.registerEntityRenderingHandler(EntityAncientEntity.class, new RenderSizeable(new ModelAncientEntity(), 0.0F, 5.0F, x.ancient));
+		RenderingRegistry.registerEntityRenderingHandler(EntityAncientEntity.class, new RenderAncientEntity(new ModelAncientEntity(), 0.0F, 5.0F, x.ancient));
 		RenderingRegistry.registerEntityRenderingHandler(EntityWhale.class, new RenderSizeable(new ModelWhale(), 0.0F, 5.0F, x.whale));
 		RenderingRegistry.registerEntityRenderingHandler(EntityScorcher.class, new RenderSizeable(new ModelScorcher(), 0.0F, 1.8F, x.scorcher));
 		RenderingRegistry.registerEntityRenderingHandler(EntityHellSpider.class, new RenderSizeable(new ModelSpider(), 0.0F, 1.2F ,x.hellSpider));

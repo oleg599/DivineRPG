@@ -18,6 +18,7 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
 
 public class EntityQuadro extends EntityDivineRPGBoss implements IRangedAttackMob, IBossDisplayData
@@ -246,5 +247,16 @@ public class EntityQuadro extends EntityDivineRPGBoss implements IRangedAttackMo
 	@Override
 	public String mobName() {
 		return "Quadro";
+	}
+
+	@Override
+	public String name() {
+		return "Quadro";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
