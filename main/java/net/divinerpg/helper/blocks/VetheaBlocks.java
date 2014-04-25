@@ -95,6 +95,8 @@ public class VetheaBlocks {
 	public static final Block             hungerstone2           = new VetheanBlock(Material.rock).setName("hungerStone2");
 	public static final Block             cryptFloor             = new VetheanBlock(Material.rock).setName("cryptFloor").setBlockUnbreakable();
 	public static final Block             hallWall               = new VetheanBlock(Material.rock).setName("hallWall").setBlockUnbreakable();
+	public static final Block             karosBricks            = new VetheanBlock(Material.rock).setName("karosBrick").setBlockUnbreakable();
+	public static final Block             karosBricks2           = new VetheanBlock(Material.rock).setName("KarosBrick2").setBlockUnbreakable();
 	public static final BlockHelioticBeam helioticBeam           = (BlockHelioticBeam)new BlockHelioticBeam().setName("helioticBeam");
 	public static final BlockKarosCannon  karosCannon            = (BlockKarosCannon)new BlockKarosCannon(Material.rock).setName("karosCannon");
 
