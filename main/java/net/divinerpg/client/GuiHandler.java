@@ -7,6 +7,7 @@ import net.divinerpg.blocks.twilight.TileEntityTwilightFurnace;
 import net.divinerpg.blocks.vanilla.container.ContainerDivineTable;
 import net.divinerpg.blocks.vethea.container.ContainerInfusionTable;
 import net.divinerpg.blocks.vethea.container.tile_entity.TileEntityInfusionTable;
+import net.divinerpg.client.render.gui.GuiCoalstoneFurnace;
 import net.divinerpg.client.render.gui.GuiDivineTable;
 import net.divinerpg.client.render.gui.GuiInfusionTable;
 import net.divinerpg.client.render.gui.GuiTwilightFurnace;
@@ -53,7 +54,7 @@ public class GuiHandler implements IGuiHandler{
 			return new GuiInfusionTable(new ContainerInfusionTable(player.inventory, (TileEntityInfusionTable)entity));
 		
 		if(ID == coalstone)
-			return new ContainerCoalstoneFurnace(player.inventory, (TileEntityCoalstoneFurnace)entity);
+			return new GuiCoalstoneFurnace(player.inventory, (TileEntityCoalstoneFurnace)entity);
 		
 		return null;
 	}

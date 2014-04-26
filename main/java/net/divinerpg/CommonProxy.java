@@ -50,8 +50,8 @@ public class CommonProxy{
 	@SideOnly(Side.CLIENT)
 	public void preInit(FMLPreInitializationEvent event){
 		System.out.println("[DIVINERPG] ADDING EVENTS");
-		DivineAPI.addEventBus(new EventClientLogin());
-		DivineAPI.addEventBus(new EventOverlay());
+		if(!Reference.DEBUG)
+			DivineAPI.addEventBus(new EventClientLogin());
 		DivineAPI.addEventBus(new EventBucketFill());
 		DivineAPI.addEventBus(new EventBonemeal());
 		DivineAPI.addEventBus(new EventArmorFullSet());
@@ -80,6 +80,7 @@ public class CommonProxy{
 
 		if(Reference.DEBUG){
 			System.out.println("[DIVINERPG] DEBUG MODE");
+			DivineAPI.addEventBus(new EventOverlay());
 			LangRegistry.init();
 			LangRegistry.addBlockNames();
 			LangRegistry.addItemNames();

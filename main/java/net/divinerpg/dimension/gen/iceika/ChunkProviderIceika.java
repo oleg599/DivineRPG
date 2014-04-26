@@ -1,38 +1,31 @@
 package net.divinerpg.dimension.gen.iceika;
 
-import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.ANIMALS;
 import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.LAKE;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.IProgressUpdate;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.ChunkPosition;
-import net.minecraft.world.SpawnerAnimals;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.MapGenBase;
-import net.minecraft.world.gen.MapGenCaves;
 import net.minecraft.world.gen.NoiseGenerator;
 import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 import net.minecraft.world.gen.feature.WorldGenLakes;
-import net.minecraft.world.gen.feature.WorldGenMinable;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.terraingen.ChunkProviderEvent;
-import net.minecraftforge.event.terraingen.PopulateChunkEvent;
+import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.event.terraingen.TerrainGen;
-import cpw.mods.fml.common.eventhandler.Event.Result;
 
 public class ChunkProviderIceika implements IChunkProvider {
 
@@ -48,11 +41,33 @@ public class ChunkProviderIceika implements IChunkProvider {
 	private BiomeGenBase[] biomesForGeneration;
 	private double[] gen1, gen2, gen3, gen4;
 	private int[][] ia = new int[32][32];
-
+	private ArrayList<WorldGenerator> lights, village, dungons;
+	
+	
 	public ChunkProviderIceika(World par1World, long par2) {
 		this.worldObj = par1World;
 		this.type = par1World.getWorldInfo().getTerrainType();
 		this.rand = new Random(par2);
+		lights = new ArrayList(5);
+		lights.add(new LightPost1());
+		lights.add(new LightPost2());
+		lights.add(new LightPost3());
+		lights.add(new LightPost4());
+		lights.add(new LightPost5());
+		
+		village = new ArrayList(7);
+		village.add(new SnowyVillage1());
+		village.add(new SnowyVillage2());
+		village.add(new SnowyVillage3());
+		village.add(new SnowyVillage4());
+		village.add(new SnowyVillage5());
+		village.add(new SnowyVillage6());
+		village.add(new SnowyVillage7());
+		
+		dungons = new ArrayList(2);
+		dungons.add(new WorldGenIceikaDungeon());
+		dungons.add(new WorldGenDungeon2());
+		
 		this.noiseGen1 = new NoiseGeneratorOctaves(this.rand, 16);
 		this.noiseGen2 = new NoiseGeneratorOctaves(this.rand, 16);
 		this.noiseGen3 = new NoiseGeneratorOctaves(this.rand, 8);
@@ -393,16 +408,13 @@ public class ChunkProviderIceika implements IChunkProvider {
 		long j1 = this.rand.nextLong() / 2L * 2L + 1L;
 		this.rand.setSeed(this.worldObj.getSeed());
 		this.rand.setSeed((long)par2 * p1 + (long)par3 * j1 ^ this.worldObj.getSeed());
-		int j, var12, var13, var14;
+		int j, var12, var13, var14, x, i, y, z;
 
-		WorldGenGiantTree var17 = new WorldGenGiantTree(true);
-		int x, i, y, z;
-
-		for (i = 0; i < 14; i++) {
+		for (i = 0; i < 10; i++) {
 			x = var4 + this.rand.nextInt(16);
 			z = var5 + this.rand.nextInt(16);
 			y = this.worldObj.getHeightValue(x, z);
-			var17.generate(this.worldObj, this.rand, x, y, z);
+			(new WorldGenGiantTree(true)).generate(this.worldObj, this.rand, x, y, z);
 		}	
 		
 		if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, var4, var5, false, LAKE) && this.rand.nextInt(4) == 0) {
@@ -411,6 +423,27 @@ public class ChunkProviderIceika implements IChunkProvider {
             var14 = var5 + this.rand.nextInt(16) + 8;
             (new WorldGenLakes(Blocks.ice)).generate(this.worldObj, this.rand, var12, var13, var14);
         }
+		
+		if(rand.nextInt(5) == 0){
+			x = var4 + rand.nextInt(16) + 8;
+			y = rand.nextInt(50);
+			z = var5 + rand.nextInt(16) + 8;
+			(dungons.get(rand.nextInt(2))).generate(worldObj, rand, x, y, z);
+		}
+		
+		for(i = 0; i < 10; i++){
+			x = var4 + rand.nextInt(16) + 8;
+			y = rand.nextInt(128);
+			z = var5 + rand.nextInt(16) + 8;
+			(village.get(rand.nextInt(7))).generate(worldObj, rand, x, y, z);
+		}
+		
+		for(i = 0; i < 10; i++){
+			x = var4 + rand.nextInt(16) + 8;
+			y = rand.nextInt(128);
+			z = var5 + rand.nextInt(16) + 8;
+			(lights.get(rand.nextInt(5))).generate(worldObj, rand, x, y, z);
+		}
 	}
 
 	@Override
