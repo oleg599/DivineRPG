@@ -445,7 +445,7 @@ public class BlockIceikaPortal extends BlockBreakable
 
 		protected boolean func_150857_a(Block block)
 		{
-			return block.getMaterial() == Material.air || block == TwilightBlocks.blueFire || block == IceikaBlocks.portal;
+			return block.getMaterial() == Material.air || block == IceikaBlocks.iceikaFire || block == IceikaBlocks.portal;
 		}
 
 		public boolean func_150860_b()

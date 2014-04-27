@@ -10,6 +10,7 @@ import net.divinerpg.helper.material.ArmorMaterialMod;
 import net.divinerpg.helper.material.ToolMaterialMod;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.items.iceika.ItemMusicShooter;
+import net.divinerpg.items.iceika.ItemSnowGlobe;
 import net.minecraft.item.Item;
 
 public class IceikaItems {
@@ -54,5 +55,6 @@ public class IceikaItems {
 	public static final Item iceStone          = new ItemMod().setName("iceStone");
 	
 	public static final Item steelDoor	       = new ItemModDoor(IceikaBlocks.steelDoorBlock).setName("frozenDoor");
+	public static final Item snowGlobe		   = new ItemSnowGlobe().setName("snowGlobe");
  
 }
