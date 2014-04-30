@@ -21,8 +21,16 @@ public class VanillaBlock extends BlockMod {
 
 	private Random rand = new Random();
 
-	public VanillaBlock(Material m, float hardness, SoundType sound) {
+	public VanillaBlock(Material m, float hardness, SoundType sound, int harvestLevel) {
 		super(m);
+		setCreativeTab(DivineRPGTabs.blocks);
+		setStepSound(sound);
+		setHardness(hardness);
+		this.setHarvestLevel("pickaxe", harvestLevel);
+	}
+	
+	public VanillaBlock(Material m, float hardness, SoundType sound) {
+		this(m, hardness, sound, 0);
 		setCreativeTab(DivineRPGTabs.blocks);
 		setStepSound(sound);
 		setHardness(hardness);

@@ -19,11 +19,11 @@ public class VanillaBlocks {
 	private static SoundType cloth = Block.soundTypeCloth;
 	private static SoundType wood = Block.soundTypeWood;
 	
-	public static final Block rupeeOre            = new VanillaBlock(rock, 3.0F, stone).setName("rupeeOre");
-	public static final Block arlemiteOre         = new VanillaBlock(rock, 3.0F, stone).setName("arlemiteOre");
-	public static final Block realmiteOre         = new VanillaBlock(rock, 3.0F, stone).setName("realmiteOre");
-	public static final Block bloodgemOre         = new VanillaBlock(rock, 3.0F, stone).setName("bloodgemOre");
-	public static final Block netheriteOre        = new VanillaBlock(rock, 3.0F, stone).setName("netheriteOre");
+	public static final Block rupeeOre            = new VanillaBlock(rock, 3.0F, stone, 3).setName("rupeeOre");
+	public static final Block arlemiteOre         = new VanillaBlock(rock, 3.0F, stone, 3).setName("arlemiteOre");
+	public static final Block realmiteOre         = new VanillaBlock(rock, 3.0F, stone, 3).setName("realmiteOre");
+	public static final Block bloodgemOre         = new VanillaBlock(rock, 3.0F, stone, 3).setName("bloodgemOre");
+	public static final Block netheriteOre        = new VanillaBlock(rock, 3.0F, stone, 3).setName("netheriteOre");
 
 	public static final Block rupeeBlock          = new VanillaBlock(rock, 3.0F, stone).setName("rupeeBlock");
 	public static final Block arlemiteBlock       = new VanillaBlock(rock, 3.0F, stone).setName("arlemiteBlock");

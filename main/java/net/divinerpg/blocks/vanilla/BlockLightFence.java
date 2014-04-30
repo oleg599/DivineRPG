@@ -20,7 +20,6 @@ public class BlockLightFence extends BlockModFence {
 	public BlockLightFence(boolean par1, String par2) {
 		super(Reference.PREFIX + par2);
 		this.powered = par1;
-		setCreativeTab(DivineRPGTabs.blocks);
 		setStepSound(Block.soundTypeGlass);
 		LangRegistry.addBlock(this);
 		if (par1) {
@@ -37,10 +36,12 @@ public class BlockLightFence extends BlockModFence {
 			setTextureName(name + "On");
 			setBlockName(name + "On");
 			GameRegistry.registerBlock(this, name + "On");
+			setCreativeTab(null);
 		} else {
 			setTextureName(name);
 			setBlockName(name);
 			GameRegistry.registerBlock(this, name);
+			setCreativeTab(DivineRPGTabs.blocks);
 		}
 		return this;
 	}
