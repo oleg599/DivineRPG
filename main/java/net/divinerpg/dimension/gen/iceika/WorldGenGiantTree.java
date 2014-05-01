@@ -23,8 +23,8 @@ public class WorldGenGiantTree extends WorldGenerator {
     @Override
     public boolean generate(World world, Random rand, int x, int y, int z) {
         final int height = 20 + rand.nextInt(10);
-        final int j = 1 + rand.nextInt(12);
-        final int k = height - j;
+        final int leafHeight = 1 + rand.nextInt(12);
+        final int leafStart = height - leafHeight;
         final int l = 2 + rand.nextInt(9);
 
         if (y < 1 || y + height + 1 > 256) return false;
@@ -35,7 +35,7 @@ public class WorldGenGiantTree extends WorldGenerator {
 
             int k1 = 1;
 
-            if (y1 - y < j) {
+            if (y1 - y < leafHeight) {
                 k1 = 0;
             } else {
                 k1 = l;
@@ -64,7 +64,7 @@ public class WorldGenGiantTree extends WorldGenerator {
         int j2 = 1;
         boolean flag1 = false;
 
-        for (int i3 = 0; i3 <= k; i3++) {
+        for (int i3 = 0; i3 <= leafStart; i3++) {
             final int k3 = y + height - i3;
 
             for (int i4 = x - l1; i4 <= x + l1; i4++) {
