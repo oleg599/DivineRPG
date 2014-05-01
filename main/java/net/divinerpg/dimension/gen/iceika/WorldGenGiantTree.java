@@ -22,7 +22,7 @@ public class WorldGenGiantTree extends WorldGenerator {
 
     @Override
     public boolean generate(World world, Random rand, int x, int y, int z) {
-        final int height = rand.nextInt(20);
+        final int height = 20 + rand.nextInt(10);
         final int j = 1 + rand.nextInt(12);
         final int k = height - j;
         final int l = 2 + rand.nextInt(9);
