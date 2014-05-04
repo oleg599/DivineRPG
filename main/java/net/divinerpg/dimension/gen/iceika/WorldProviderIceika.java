@@ -3,6 +3,7 @@ package net.divinerpg.dimension.gen.iceika;
 import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.minecraft.world.WorldProvider;
+import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
 
 public class WorldProviderIceika extends WorldProvider{
@@ -10,7 +11,7 @@ public class WorldProviderIceika extends WorldProvider{
 	@Override
 	public void registerWorldChunkManager() {
 		this.dimensionId = ConfigurationHelper.Iceika;
-		this.worldChunkMgr = new WorldChunkManagerIceika(DimensionHelper.Iceika);
+		this.worldChunkMgr = new WorldChunkManagerHell(DimensionHelper.Iceika, 1.0F);
 	}
 
 	@Override

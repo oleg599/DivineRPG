@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import net.divinerpg.dimension.gen.iceika.village.WorldGenWorkShop;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -41,32 +42,32 @@ public class ChunkProviderIceika implements IChunkProvider {
 	private BiomeGenBase[] biomesForGeneration;
 	private double[] gen1, gen2, gen3, gen4;
 	private int[][] ia = new int[32][32];
-	private ArrayList<WorldGenerator> lights, village, dungons;
+	//private ArrayList<WorldGenerator> lights, village, dungons;
 	
 	
 	public ChunkProviderIceika(World par1World, long par2) {
 		this.worldObj = par1World;
 		this.type = par1World.getWorldInfo().getTerrainType();
 		this.rand = new Random(par2);
-		lights = new ArrayList(5);
+		/*lights = new ArrayList(5);
 		lights.add(new LightPost1());
 		lights.add(new LightPost2());
 		lights.add(new LightPost3());
 		lights.add(new LightPost4());
 		lights.add(new LightPost5());
+
+		dungons = new ArrayList(2);
+		dungons.add(new WorldGenIceikaDungeon());
+		dungons.add(new WorldGenDungeon2());*/
 		
-		village = new ArrayList(7);
-		village.add(new SnowyVillage1());
+		/*village = new ArrayList(7);
+		village.add(new WorldGenWorkShop());
 		village.add(new SnowyVillage2());
 		village.add(new SnowyVillage3());
 		village.add(new SnowyVillage4());
 		village.add(new SnowyVillage5());
 		village.add(new SnowyVillage6());
-		village.add(new SnowyVillage7());
-		
-		dungons = new ArrayList(2);
-		dungons.add(new WorldGenIceikaDungeon());
-		dungons.add(new WorldGenDungeon2());
+		village.add(new SnowyVillage7());*/
 		
 		this.noiseGen1 = new NoiseGeneratorOctaves(this.rand, 16);
 		this.noiseGen2 = new NoiseGeneratorOctaves(this.rand, 16);
@@ -424,7 +425,7 @@ public class ChunkProviderIceika implements IChunkProvider {
             (new WorldGenLakes(Blocks.ice)).generate(this.worldObj, this.rand, var12, var13, var14);
         }
 		
-		if(rand.nextInt(5) == 0){
+		/*if(rand.nextInt(5) == 0){
 			x = var4 + rand.nextInt(16) + 8;
 			y = rand.nextInt(50);
 			z = var5 + rand.nextInt(16) + 8;
@@ -435,15 +436,15 @@ public class ChunkProviderIceika implements IChunkProvider {
 			x = var4 + rand.nextInt(16) + 8;
 			y = rand.nextInt(128);
 			z = var5 + rand.nextInt(16) + 8;
-			(village.get(rand.nextInt(7))).generate(worldObj, rand, x, y, z);
+			(lights.get(rand.nextInt(5))).generate(worldObj, rand, x, y, z);
 		}
 		
 		for(i = 0; i < 10; i++){
 			x = var4 + rand.nextInt(16) + 8;
 			y = rand.nextInt(128);
 			z = var5 + rand.nextInt(16) + 8;
-			(lights.get(rand.nextInt(5))).generate(worldObj, rand, x, y, z);
-		}
+			(villages.get(rand.nextInt(7)).generate(worldObj, rand, x, y, z);
+		}*///TODO Figur out why it crash's
 	}
 
 	@Override

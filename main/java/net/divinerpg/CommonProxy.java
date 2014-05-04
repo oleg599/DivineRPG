@@ -1,5 +1,6 @@
 package net.divinerpg;
 
+import net.divinerpg.blocks.iceika.tile_entity.TileEntityFrostedChest;
 import net.divinerpg.blocks.twilight.TileEntityTwilightFurnace;
 import net.divinerpg.blocks.vethea.container.tile_entity.TileEntityInfusionTable;
 import net.divinerpg.client.ArcanaTickHandler;
@@ -60,6 +61,7 @@ public class CommonProxy{
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
 		GameRegistry.registerTileEntity(TileEntityInfusionTable.class, "Infusion Table");
 		GameRegistry.registerTileEntity(TileEntityStatue.class, "Statue");
+		GameRegistry.registerTileEntity(TileEntityFrostedChest.class, "Iceika Chest");
 		System.out.println("[DIVINERPG] ADDING CONFIGURATIONS");
 		ConfigurationHelper.init();
 		System.out.println("[DIVINERPG] ADDING ENTITYS");

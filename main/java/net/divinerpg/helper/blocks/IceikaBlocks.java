@@ -25,7 +25,7 @@ public class IceikaBlocks {
 	
     public static Material rock                 = Material.rock;
     public static Material grass     			= Material.grass;
-    public static Material snow       		    = Material.snow;
+    public static Material snow       		    = Material.snow;//Thats a no no
     public static Material glass		        = Material.glass;
     public static Material wool			        = Material.cloth;
     
@@ -49,7 +49,7 @@ public class IceikaBlocks {
 	public static final Block rollumSpawner 	  = new BlockModSpawner("Creeper", false).setName("rollumSpawner").setHardness(5.0F);//change mob to spawn to rollum
 	public static final Block glacideSpawner 	  = new BlockModSpawner("Enderman", false).setName("glacideSpawner").setHardness(5.0F);//change mob to spawn to glacide
 
-	public static final Block snowBricks          = new IceikaBlock(snow, 6.0F, stone).setName("snowBricks"); //What the walls of workshops are made of.
+	public static final Block snowBricks          = new IceikaBlock(rock, 6.0F, stone).setName("snowBricks"); //What the walls of workshops are made of.
 	public static final Block coalstone           = new IceikaBlock(rock, 3.0F, stone).setName("coalstone"); //The area around the furnace in the workshops.
 	public static final Block workshopCarpet      = new IceikaBlock(wool, 0.1F, cloth).setName("workshopCarpet"); //The floor of the workshops.
 	public static final Block frostedGlass        = new BlockModGlass().setName("frostedGlass").setHardness(0.1F); //Windows for the workshops.
