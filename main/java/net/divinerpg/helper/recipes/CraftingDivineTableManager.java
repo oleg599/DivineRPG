@@ -166,7 +166,7 @@ public class CraftingDivineTableManager {
         //this.addRecipe(new ItemStack(Blocks.beacon, 1), new Object[] {"GGG", "GSG", "OOO", 'G', Blocks.glass, 'S', Items.nether_star, 'O', Blocks.obsidian});
         //this.addRecipe(new ItemStack(Blocks.nether_brick, 1), new Object[] {"NN", "NN", 'N', Items.netherbrick});*/
         
-        Collections.sort(this.recipes, new Comparator()
+        /*Collections.sort(this.recipes, new Comparator()
         {
             public int compare(IRecipe par1IRecipe, IRecipe par2IRecipe)
             {
@@ -176,7 +176,7 @@ public class CraftingDivineTableManager {
             {
                 return this.compare((IRecipe)par1Obj, (IRecipe)par2Obj);
             }
-        });
+        });*/
     }
 
     public DivineShapedRecipes addRecipe(ItemStack par1ItemStack, Object ... par2ArrayOfObj)

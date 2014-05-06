@@ -14,7 +14,7 @@ public class WorldGenVetheanPillar extends WorldGenerator {
 		int var1 = this.getSize(par1, par3, par4, par5);
 		int var2 = par2.nextInt(4) + 3;
 		for (int i = 0; i < var1; i++) {
-			while(par1.getBlock(par3, par4, par5) == Blocks.air)
+			while(par1.isAirBlock(par3, par4, par5))
 				par4++;
 			this.placeBlockCircle(par1, par3, i + par4, par5, Math.abs(((var1 / 2) - i)) / 5 + var2);
 		}
@@ -49,7 +49,7 @@ public class WorldGenVetheanPillar extends WorldGenerator {
 	private void placeBlockCircle(World par1World, int x, int y, int z, int radius) {
 		for (float i = 0; i < radius; i += 0.5) {
 			for (float j = 0; j < 2 * Math.PI * i; j += 0.5) {
-				par1World.setBlock((int)Math.floor(x + Math.sin(j) * i), y, (int)Math.floor(z + Math.cos(j) * i), VetheaBlocks.dreamStone);
+				par1World.setBlock((int)Math.floor(x + Math.sin(j) * i), y + 1, (int)Math.floor(z + Math.cos(j) * i), VetheaBlocks.dreamStone);
 			}
 		}
 	}
