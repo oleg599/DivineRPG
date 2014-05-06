@@ -2,6 +2,7 @@ package net.divinerpg.api.items;
 
 import scala.util.Random;
 import net.divinerpg.Reference;
+import net.divinerpg.api.worldgen.WorldGenAPI;
 import net.divinerpg.blocks.iceika.tile_entity.TileEntityFrostedChest;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.items.IceikaItems;
@@ -30,5 +31,11 @@ public class ItemModBucket extends ItemBucket{
 		setUnlocalizedName(name);
 		GameRegistry.registerItem(this, name);
 		return this; 
+	}
+	
+	@Override
+	public boolean onItemUse(ItemStack i, EntityPlayer p, World w, int x, int y, int z, int i1, float f, float f1, float f2) {
+		WorldGenAPI.drawHollowCube(100, w, x, y, z, IceikaBlocks.coalstone);
+		return true;
 	}
 }
