@@ -1,5 +1,7 @@
 package net.divinerpg.entity.iceika.projectile;
 
+import java.util.Random;
+
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -10,11 +12,14 @@ import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.tileentity.TileEntityNote;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 public class EntityCarol extends EntityThrowable {
+	Random r = new Random();
+	double color = 0.0D + (24.0D - 0.0D) * r.nextDouble();
 
 	public EntityCarol(World var1) {
         super(var1);
@@ -32,9 +37,13 @@ public class EntityCarol extends EntityThrowable {
     @Override
     public void onUpdate()  {
         super.onUpdate();
-        this.worldObj.spawnParticle("note", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
-            //EntitySkythernPortalFX var20 = new EntitySkythernPortalFX(this.worldObj, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D); //Change to music notes
-            //FMLClientHandler.instance().getClient().effectRenderer.addEffect(var20);
+        if (color >= 24.0D) {
+        	color = 0.0D;
+        }
+        else {
+        	color++;
+        }
+        this.worldObj.spawnParticle("note", this.posX, this.posY, this.posZ, color / 24.0D, 0.0D, 0.0D);
     }
 
     @Override

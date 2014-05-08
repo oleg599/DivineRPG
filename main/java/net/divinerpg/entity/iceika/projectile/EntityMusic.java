@@ -1,5 +1,7 @@
 package net.divinerpg.entity.iceika.projectile;
 
+import java.util.Random;
+
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -15,6 +17,8 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 public class EntityMusic extends EntityThrowable {
+	Random r = new Random();
+	double color = 0.0D + (24.0D - 0.0D) * r.nextDouble();
 
 	public EntityMusic(World var1) {
         super(var1);
@@ -32,7 +36,7 @@ public class EntityMusic extends EntityThrowable {
     @Override
     public void onUpdate()  {
         super.onUpdate();
-        this.worldObj.spawnParticle("note", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
+        this.worldObj.spawnParticle("note", this.posX, this.posY, this.posZ, color / 24.0D, 0.0D, 0.0D);
     }
 
     @Override
