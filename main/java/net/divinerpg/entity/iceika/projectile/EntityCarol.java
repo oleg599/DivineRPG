@@ -19,7 +19,7 @@ import net.minecraft.world.World;
 
 public class EntityCarol extends EntityThrowable {
 	Random r = new Random();
-	double color = 0.0D + (24.0D - 0.0D) * r.nextDouble();
+	int color = r.nextInt(25);
 
 	public EntityCarol(World var1) {
         super(var1);
@@ -37,13 +37,13 @@ public class EntityCarol extends EntityThrowable {
     @Override
     public void onUpdate()  {
         super.onUpdate();
-        if (color >= 24.0D) {
-        	color = 0.0D;
+        if (color >= 24) {
+        	color = 0;
         }
         else {
         	color++;
         }
-        this.worldObj.spawnParticle("note", this.posX, this.posY, this.posZ, color / 24.0D, 0.0D, 0.0D);
+        this.worldObj.spawnParticle("note", this.posX, this.posY, this.posZ, (double)color / 24.0D, 0.0D, 0.0D);
     }
 
     @Override

@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 
 public class EntityMusic extends EntityThrowable {
 	Random r = new Random();
-	double color = 0.0D + (24.0D - 0.0D) * r.nextDouble();
+	int color = r.nextInt(25);
 
 	public EntityMusic(World var1) {
         super(var1);
@@ -36,7 +36,7 @@ public class EntityMusic extends EntityThrowable {
     @Override
     public void onUpdate()  {
         super.onUpdate();
-        this.worldObj.spawnParticle("note", this.posX, this.posY, this.posZ, color / 24.0D, 0.0D, 0.0D);
+        this.worldObj.spawnParticle("note", this.posX, this.posY, this.posZ, (double)color / 24.0D, 0.0D, 0.0D);
     }
 
     @Override
