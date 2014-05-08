@@ -30,7 +30,8 @@ public class IceikaItems {
 	//Not a real sword
 	public static final Item frossivence 	   = new ItemMod().setName("frossivence").setCreativeTab(DivineRPGTabs.swords);
 	
-	public static final Item soundOfCarols     = new ItemMusicShooter().setName("soundofCarols").setCreativeTab(DivineRPGTabs.ranged);
+	public static final Item soundOfCarols     = new ItemMusicShooter().setName("soundOfCarols").setCreativeTab(DivineRPGTabs.ranged);
+	public static final Item soundOfMusic      = new ItemMusicShooter().setName("soundOfMusic").setCreativeTab(DivineRPGTabs.ranged);
 	public static final Item frostclawCannon   = new ItemMod().setName("frostclawCannon").setCreativeTab(DivineRPGTabs.ranged);
 	public static final Item fractiteCannon    = new ItemMod().setName("fractiteCannon").setCreativeTab(DivineRPGTabs.ranged);
 	public static final Item snowflakeShuriken = new ItemMod().setName("snowflakeShuriken").setCreativeTab(DivineRPGTabs.ranged);

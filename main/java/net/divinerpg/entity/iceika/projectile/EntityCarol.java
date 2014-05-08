@@ -14,17 +14,17 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
-public class EntityMusic extends EntityThrowable {
+public class EntityCarol extends EntityThrowable {
 
-	public EntityMusic(World var1) {
+	public EntityCarol(World var1) {
         super(var1);
     }
 
-    public EntityMusic(World var1, EntityLivingBase var2) {
+    public EntityCarol(World var1, EntityLivingBase var2) {
         super(var1, var2);
     }
 
-    public EntityMusic(World var1, double var2, double var4, double var6) {
+    public EntityCarol(World var1, double var2, double var4, double var6) {
         super(var1, var2, var4, var6);
     }
     
@@ -33,12 +33,14 @@ public class EntityMusic extends EntityThrowable {
     public void onUpdate()  {
         super.onUpdate();
         this.worldObj.spawnParticle("note", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
+            //EntitySkythernPortalFX var20 = new EntitySkythernPortalFX(this.worldObj, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D); //Change to music notes
+            //FMLClientHandler.instance().getClient().effectRenderer.addEffect(var20);
     }
 
     @Override
     protected void onImpact(MovingObjectPosition var1) {
         if (var1.entityHit != null) {
-            var1.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), 10.0F);
+            var1.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), 16.0F);
         }
 
         if (!this.worldObj.isRemote) {
