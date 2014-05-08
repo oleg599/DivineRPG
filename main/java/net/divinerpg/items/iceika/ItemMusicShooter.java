@@ -31,7 +31,7 @@ public class ItemMusicShooter extends ItemMod {
 			}
 			else {
 				var2.spawnEntityInWorld(new EntityMusic(var2, var3));
-				//Sounds.playSound(Sounds.music, var2, var3);
+				Sounds.playSound(Sounds.music, var2, var3);
 			}
 			var1.damageItem(1, var3);	
 		}
@@ -43,11 +43,9 @@ public class ItemMusicShooter extends ItemMod {
 	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 		if (this == IceikaItems.soundOfCarols) {
 			par3List.add("16 Ranged damage");
-		}
-		else {
+		} else {
 			par3List.add("10 Ranged damage");
 		}
 		par3List.add(var1.getMaxDamage() - var1.getItemDamage() + " Uses");
 	}
-
 }

@@ -155,7 +155,9 @@ public class SoundGenerator {
 		addItemSound("blitz");
 
 		//Iceika
-
+		addItemSound("soundOfCarols");
+		addItemSound("soundOfMusic");
+		
 		//Vethea
 		addItemSound("staff");
 

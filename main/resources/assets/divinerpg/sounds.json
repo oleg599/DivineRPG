@@ -39,6 +39,8 @@
     "heal":{"category":"neutral","sounds":["heal"]},
     "phaser":{"category":"neutral","sounds":["phaser"]},
     "blitz":{"category":"neutral","sounds":["blitz"]},
+    "soundOfCarols":{"category":"neutral","sounds":["soundOfCarols"]},
+    "soundOfMusic":{"category":"neutral","sounds":["soundOfMusic"]},
     "staff":{"category":"neutral","sounds":["staff"]},
     "starlight":{"category":"neutral","sounds":["starlight"]},
     "sparkler":{"category":"neutral","sounds":["sparkler"]}

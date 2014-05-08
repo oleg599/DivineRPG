@@ -50,7 +50,7 @@ public class Sounds {
 	public static String starlight = "divinerpg:starlight";
 	public static String sparkler = "divinerpg:sparkler";
 	public static String carol = "divinerpg:soundOfCarols";
-
+	public static String music = "divinerpg:soundOfMusic";
 
 
 	public static String playSound(String name, World world, Entity entity, float volume, float pitch){
