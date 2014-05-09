@@ -9,9 +9,8 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-
-public class RenderProjectile extends Render
-{
+public class RenderProjectile extends Render {
+	
     public ResourceLocation texture;
     private float scale;
 
