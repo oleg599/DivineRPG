@@ -6,6 +6,7 @@ import net.divinerpg.client.render.RenderProjectile;
 import net.divinerpg.client.render.block.ItemRendererFrostedChest;
 import net.divinerpg.client.render.block.RenderTileEntityFrostedChest;
 import net.divinerpg.entity.iceika.projectile.EntityCarol;
+import net.divinerpg.entity.iceika.projectile.EntityFrostclaw;
 import net.divinerpg.entity.iceika.projectile.EntityMusic;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.minecraft.item.Item;
@@ -21,6 +22,7 @@ public class IceikaEntityRenderer {
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityCarol.class, new RenderProjectile(x.music));
 		RenderingRegistry.registerEntityRenderingHandler(EntityMusic.class, new RenderProjectile(x.music));
+		RenderingRegistry.registerEntityRenderingHandler(EntityFrostclaw.class, new RenderProjectile(x.frostclaw));
 		
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFrostedChest.class, new RenderTileEntityFrostedChest());
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(IceikaBlocks.frostedChest), new ItemRendererFrostedChest());

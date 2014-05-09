@@ -1,6 +1,7 @@
 {
     "jackOMan":{"category":"master","sounds":[{"name":"jackOMan", stream": false}]},
     "frost":{"category":"master","sounds":[{"name":"frost", stream": false}]},
+    "frostclawCannon":{"category":"neutral","sounds":["frostclawCannon"]},
     "scorcher":{"category":"master","sounds":[{"name":"scorcher", stream": false}]},
     "roar":{"category":"master","sounds":[{"name":"roar", stream": false}]},
     "iceman":{"category":"master","sounds":[{"name":"iceman", stream": false}]},

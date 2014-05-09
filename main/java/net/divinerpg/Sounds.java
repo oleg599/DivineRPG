@@ -51,6 +51,7 @@ public class Sounds {
 	public static String sparkler = "divinerpg:sparkler";
 	public static String carol = "divinerpg:soundOfCarols";
 	public static String music = "divinerpg:soundOfMusic";
+	public static String frostclaw = "divinerpg:frostclawCannon";
 
 
 	public static String playSound(String name, World world, Entity entity, float volume, float pitch){
