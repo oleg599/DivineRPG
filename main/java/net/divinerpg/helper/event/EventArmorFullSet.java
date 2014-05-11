@@ -4,7 +4,9 @@ import java.util.Random;
 
 import net.divinerpg.blocks.twilight.TwilightBlock;
 import net.divinerpg.client.ArcanaHelper;
+import net.divinerpg.dimension.gen.iceika.TeleporterIceika;
 import net.divinerpg.entity.vanilla.projectile.EntityScythe;
+import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.ArcanaItems;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.TwilightItemsArmor;
@@ -98,11 +100,11 @@ public class EventArmorFullSet {
 			}
 
 			//Santa
-			/*if (boots == IceikaItems.santaBoots && legs == IceikaItems.santaLegs && body == IceikaItems.santaBody && helmet == IceikaItems.santaHead) {
-				if (e.entityLiving.worldObj.provider.dimensionId == DimensionConfigHelper.IceikaID) {
+			if (boots == IceikaItems.santaBoots && legs == IceikaItems.santaLegs && body == IceikaItems.santaBody && helmet == IceikaItems.santaHead) {
+				if (e.entityLiving.worldObj.provider.dimensionId == ConfigurationHelper.Iceika) {
 					e.ammount *= 0.2;
 				}
-			}*/
+			}
 
 			//Divine
 
@@ -574,7 +576,7 @@ public class EventArmorFullSet {
 
 		//Shadow
 		if(boots == v.shadowBoots && body == v.shadowBody && legs == v.shadowLegs && helmet == v.shadowHelmet){
-			ev.player.addPotionEffect(new PotionEffect(1, -1, 0)); //When the second parameter is set to negative one, there's no bubbles! :D
+			ev.player.addPotionEffect(new PotionEffect(1, -1, 1));
 		}
 
 		//Skeleman
@@ -585,14 +587,14 @@ public class EventArmorFullSet {
 		}
 
 		//Santa
-		/*if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
-			if (e.entityLiving.worldObj.provider.dimensionId == DimensionConfigHelper.IceikaID) {
+		if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
+			if (ev.player.worldObj.provider.dimensionId == ConfigurationHelper.Iceika) {
 				if(ev.player.getFoodStats().needFood()) {
 					ev.player.getFoodStats().addStats(1, 0);
 				}
-				ev.player.addPotionEffect(new PotionEffect(1, -1, 0));
+				ev.player.addPotionEffect(new PotionEffect(1, -1, 1));
 			}
-		}*/
+		}
 
 		//Jack O Man
 		if(boots == v.jackOManBoots && body == v.jackOManBody && legs == v.jackOManLegs && helmet == v.jackOManHelmet){
@@ -772,11 +774,11 @@ public class EventArmorFullSet {
 			DamageSource s = e.source;
 
 			//Santa
-			/*if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
-				if ((e.entityLiving.worldObj.provider.dimensionId == DimensionConfigHelper.IceikaID) && ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile())) {
+			if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
+				if ((e.entityLiving.worldObj.provider.dimensionId == ConfigurationHelper.Iceika) && ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile())) {
 					e.ammount += 6;
 				}
-			}*/
+			}
 
 			//Halite
 			if (boots == t.haliteBoots && legs == t.haliteLegs && body == t.haliteBody && helmet == t.haliteHelmet) {

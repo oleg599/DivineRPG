@@ -20,7 +20,7 @@ import net.minecraft.world.WorldServer;
 
 public class TeleporterIceika extends Teleporter{
 	
-    private final WorldServer worldServerInstance;
+	private final WorldServer worldServerInstance;
     private final Random random;
     private final LongHashMap destinationCoordinateCache = new LongHashMap();
     private final List destinationCoordinateKeys = new ArrayList();
