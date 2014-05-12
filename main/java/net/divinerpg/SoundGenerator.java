@@ -153,6 +153,14 @@ public class SoundGenerator {
 		//Twilight
 		addItemSound("phaser");
 		addItemSound("blitz");
+		addSingleSound("hiss");
+		addMobSound("growl");
+		addSingleSound("archer");
+		addSingleSound("cadillion");
+		addMobSound("cori");
+		addSingleSound("coriShoot");
+		addSingleSound("croak");
+		addMobSound("bunny");
 
 		//Iceika
 		addItemSound("soundOfCarols");

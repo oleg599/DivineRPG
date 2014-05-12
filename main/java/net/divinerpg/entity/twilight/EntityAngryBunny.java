@@ -1,22 +1,20 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.world.World;
 
-public class EntityAngryBunny extends EntityDivineRPGMob
-{
-	public EntityAngryBunny(World var1)
-	{
+public class EntityAngryBunny extends EntityDivineRPGMob {
+	
+	public EntityAngryBunny(World var1) {
 		super(var1);
-		this.setSize(1F, 1.5F);
+		this.setSize(1F, 1F);
 		this.experienceValue = 40;
-		this.getNavigator().setAvoidsWater(true);
 	}
 
 	@Override
-	protected void applyEntityAttributes()
-	{
+	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
         getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(60.0D);
         getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.7D);
@@ -30,13 +28,8 @@ public class EntityAngryBunny extends EntityDivineRPGMob
 	}
 
 	@Override
-	public void onUpdate() {
-		super.onUpdate();
-	}
-
-	@Override
 	protected String getLivingSound() {
-		return "";//Sound.Hiss;
+		return playSound(Sounds.hiss);
 	}
 
 	/**
@@ -45,7 +38,7 @@ public class EntityAngryBunny extends EntityDivineRPGMob
 	@Override
 	protected String getHurtSound()
 	{
-		return "";//Sound.GrowlHit;
+		return playSound(Sounds.growlHurt);
 	}
 
 	/**
@@ -54,7 +47,7 @@ public class EntityAngryBunny extends EntityDivineRPGMob
 	@Override
 	protected String getDeathSound()
 	{
-		return "";//Sound.GrowlHit;
+		return playSound(Sounds.growlHurt);
 	}
 
 	@Override

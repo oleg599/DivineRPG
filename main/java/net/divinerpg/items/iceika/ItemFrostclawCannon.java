@@ -29,7 +29,7 @@ public class ItemFrostclawCannon extends ItemMod {
 	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3) {
 		if(!var2.isRemote) {
 				var2.spawnEntityInWorld(new EntityFrostclaw(var2, var3));
-				Sounds.playSound(Sounds.frostclaw, var2, var3);
+				Sounds.playSound(Sounds.frostclawCannon, var2, var3);
 				var1.damageItem(1, var3);			
 		}
 		return var1;

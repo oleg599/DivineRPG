@@ -1,6 +1,7 @@
 
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -63,7 +64,7 @@ public class EntityApalachiaGolem extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Growl;
+        return playSound(Sounds.growl);
     }
 
     /**
@@ -72,7 +73,7 @@ public class EntityApalachiaGolem extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.GrowlHit;
+        return playSound(Sounds.growlHurt);
     }
 
     /**
@@ -81,7 +82,7 @@ public class EntityApalachiaGolem extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.GrowlHit;
+        return playSound(Sounds.growlHurt);
     }
 
     /**

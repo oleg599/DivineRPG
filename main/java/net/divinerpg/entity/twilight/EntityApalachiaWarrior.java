@@ -1,5 +1,6 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
@@ -63,7 +64,7 @@ public class EntityApalachiaWarrior extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Hiss;
+        return playSound(Sounds.hiss);
     }
 
     /**
@@ -81,7 +82,7 @@ public class EntityApalachiaWarrior extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.GrowlHit;
+        return playSound(Sounds.growlHurt);
     }
 
     /**
@@ -90,7 +91,7 @@ public class EntityApalachiaWarrior extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.GrowlHit;
+        return playSound(Sounds.growlHurt);
     }
 
     /**
