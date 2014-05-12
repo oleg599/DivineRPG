@@ -27,11 +27,11 @@ public class ItemMusicShooter extends ItemMod {
 		if(!var2.isRemote) {
 			if (this == IceikaItems.soundOfCarols) {
 				var2.spawnEntityInWorld(new EntityCarol(var2, var3));
-				Sounds.playSound(Sounds.carol, var2, var3);
+				Sounds.playSound(Sounds.soundOfCarols, var2, var3);
 			}
 			else {
 				var2.spawnEntityInWorld(new EntityMusic(var2, var3));
-				Sounds.playSound(Sounds.music, var2, var3);
+				Sounds.playSound(Sounds.soundOfMusic, var2, var3);
 			}
 			var1.damageItem(1, var3);	
 		}

@@ -2,6 +2,7 @@ package net.divinerpg.entity.twilight;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.Entity;
@@ -39,16 +40,6 @@ public class EntityApalachiaTomo extends EntityDivineRPGMob
     protected boolean isAIEnabled()
     {
         return false;
-    }
-
-    /**
-     * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons
-     * use this to react to sunlight and start to burn.
-     */
-    @Override
-    public void onLivingUpdate()
-    {
-        super.onLivingUpdate();
     }
 
     /**
@@ -146,7 +137,7 @@ public class EntityApalachiaTomo extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Croak;
+        return playSound(Sounds.croak);
     }
 
     /**
@@ -155,7 +146,7 @@ public class EntityApalachiaTomo extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.GrowlHit;
+        return playSound(Sounds.growlHurt);
     }
 
     /**
@@ -164,7 +155,7 @@ public class EntityApalachiaTomo extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.GrowlHit;
+        return playSound(Sounds.growlHurt);
     }
 
     /**

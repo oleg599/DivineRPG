@@ -1,5 +1,6 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -275,15 +276,12 @@ public class EntityBunny extends EntityDivineRPGMob
         }
 
         return super.interact(var1);
-    }
+    }*/
 
-    /**
-     * Returns the sound this mob makes while it's alive.
-     *
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Rowl;
+        return playSound(Sounds.bunny);
     }
 
     /**
@@ -292,7 +290,7 @@ public class EntityBunny extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.BunnyHit;
+        return playSound(Sounds.bunnyHurt);
     }
 
     /**
@@ -301,7 +299,7 @@ public class EntityBunny extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.BunnyHit;
+        return playSound(Sounds.bunnyHurt);
     }
 
 	@Override
