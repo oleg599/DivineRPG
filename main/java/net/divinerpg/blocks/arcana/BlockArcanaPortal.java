@@ -6,6 +6,7 @@ import java.util.Random;
 import net.divinerpg.api.blocks.BlockMod;
 import net.divinerpg.dimension.gen.arcana.TeleporterArcana;
 import net.divinerpg.helper.config.ConfigurationHelper;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -24,6 +25,7 @@ public class BlockArcanaPortal extends BlockMod {
         super(Material.portal);
         setLightLevel(1.0F);
         setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.0625F, 1.0F);
+        setCreativeTab(DivineRPGTabs.blocks);
     }
 
     /**

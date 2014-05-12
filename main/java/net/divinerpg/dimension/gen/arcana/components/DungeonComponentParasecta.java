@@ -2,7 +2,7 @@
  *** MADE BY MITHION'S .SCHEMATIC TO JAVA CONVERTING TOOL v1.6 ***
  */
 
-package net.divinerpg.dimension.gen.arcana;
+package net.divinerpg.dimension.gen.arcana.components;
 import java.util.Random;
 
 import net.divinerpg.helper.blocks.ArcanaBlocks;
@@ -10,7 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class DungeonComponent20 extends WorldGenerator
+public class DungeonComponentParasecta extends WorldGenerator
 {
     protected Block[] GetValidSpawnBlocks()
     {
@@ -33,7 +33,7 @@ public class DungeonComponent20 extends WorldGenerator
         return false;
     }
 
-    public DungeonComponent20() { }
+    public DungeonComponentParasecta() { }
 
     @Override
     public boolean generate(World world, Random rand, int i, int j, int k)

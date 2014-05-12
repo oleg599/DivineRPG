@@ -1,4 +1,4 @@
-package net.divinerpg.dimension.gen.arcana;
+package net.divinerpg.dimension.gen.arcana.components;
 
 import java.util.Random;
 

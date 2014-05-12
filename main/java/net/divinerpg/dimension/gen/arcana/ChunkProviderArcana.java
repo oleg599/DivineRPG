@@ -5,6 +5,31 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import net.divinerpg.dimension.gen.arcana.components.DungeonCeiling;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponenet18;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponenet19;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent1;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent10;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent11;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent12;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent13;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent14;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent15;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent16;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent17;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent2;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent22;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent3;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent4;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent5;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent6;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent7;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent8;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponent9;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponentBase;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponentDramix;
+import net.divinerpg.dimension.gen.arcana.components.DungeonComponentParasecta;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.util.IProgressUpdate;
@@ -14,6 +39,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
+import net.minecraft.world.gen.ChunkProviderFlat;
 import net.minecraft.world.gen.FlatGeneratorInfo;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraft.world.gen.structure.MapGenStructure;
@@ -25,7 +51,7 @@ public class ChunkProviderArcana implements IChunkProvider{
 	private World worldObj;
 	private Random random;
 	private final FlatGeneratorInfo flatGenerator;
-	private final byte[] cachedBlockIDs = new byte[256];
+	private final Block[] cachedBlockIDs = new Block[256];
 	private final byte[] cachedBlockMetadata = new byte[256];
 	private final List structureGenerators = new ArrayList();
 
@@ -59,8 +85,8 @@ public class ChunkProviderArcana implements IChunkProvider{
 		Rooms.add(new DungeonComponenet18());
 		Rooms.add(new DungeonComponenet19());
 		Rooms.add(new DungeonComponent8());
-		Rooms.add(new DungeonComponent20());
-		Rooms.add(new DungeonComponent21());
+		Rooms.add(new DungeonComponentParasecta());
+		Rooms.add(new DungeonComponentDramix());
 		Ceiling = new DungeonCeiling();
 
 	}
@@ -71,43 +97,49 @@ public class ChunkProviderArcana implements IChunkProvider{
 	}
 
 	@Override
-	public Chunk provideChunk(int par1, int par2)
-	{
+	public Chunk provideChunk(int par1, int par2) {
 		Chunk chunk = new Chunk(this.worldObj, par1, par2);
+        int l;
 
-		for (int k = 0; k < this.cachedBlockIDs.length; ++k)
-		{
-			int l = k >> 4;
-		ExtendedBlockStorage extendedblockstorage = chunk.getBlockStorageArray()[l];
+        for(int k = 0; k < this.cachedBlockIDs.length; ++k) {
+            Block block = this.cachedBlockIDs[k];
 
-		if (extendedblockstorage == null)
-		{
-			extendedblockstorage = new ExtendedBlockStorage(k, !this.worldObj.provider.hasNoSky);
-			chunk.getBlockStorageArray()[l] = extendedblockstorage;
-		}
+            if(block != null) {
+                l = k >> 4;
+                ExtendedBlockStorage extendedblockstorage = chunk.getBlockStorageArray()[l];
 
-		for (int i1 = 0; i1 < 16; ++i1)
-		{
-			for (int j1 = 0; j1 < 16; ++j1)
-			{
-				//extendedblockstorage.setExtBlockID(i1, k & 15, j1, this.cachedBlockIDs[k] & 255);
-				extendedblockstorage.setExtBlocklightValue(i1, k & 15, j1, this.cachedBlockIDs[k] & 255);
-				extendedblockstorage.setExtBlockMetadata(i1, k & 15, j1, this.cachedBlockMetadata[k]);
-			}
-		}
-		}
+                if(extendedblockstorage == null) {
+                    extendedblockstorage = new ExtendedBlockStorage(k, !this.worldObj.provider.hasNoSky);
+                    chunk.getBlockStorageArray()[l] = extendedblockstorage;
+                }
 
-		chunk.generateSkylightMap();
-		BiomeGenBase[] abiomegenbase = this.worldObj.getWorldChunkManager().loadBlockGeneratorData((BiomeGenBase[])null, par1 * 16, par2 * 16, 16, 16);
-		byte[] abyte = chunk.getBiomeArray();
+                for(int i1 = 0; i1 < 16; ++i1) {
+                    for(int j1 = 0; j1 < 16; ++j1) {
+                        extendedblockstorage.func_150818_a(i1, k & 15, j1, block);
+                        extendedblockstorage.setExtBlockMetadata(i1, k & 15, j1, this.cachedBlockMetadata[k]);
+                    }
+                }
+            }
+        }
 
-		for (int k1 = 0; k1 < abyte.length; ++k1)
-		{
-			abyte[k1] = (byte)abiomegenbase[k1].biomeID;
-		}
+        chunk.generateSkylightMap();
+        BiomeGenBase[] abiomegenbase = this.worldObj.getWorldChunkManager().loadBlockGeneratorData((BiomeGenBase[])null, par1 * 16, par2 * 16, 16, 16);
+        byte[] abyte = chunk.getBiomeArray();
 
-		chunk.generateSkylightMap();
-		return chunk;
+        for (l = 0; l < abyte.length; ++l)
+        {
+            abyte[l] = (byte)abiomegenbase[l].biomeID;
+        }
+
+        Iterator iterator = this.structureGenerators.iterator();
+
+        while (iterator.hasNext()) {
+            MapGenStructure mapgenstructure = (MapGenStructure)iterator.next();
+            mapgenstructure.func_151539_a(this, this.worldObj, par1, par2, (Block[])null);
+        }
+
+        chunk.generateSkylightMap();
+        return chunk;
 	}
 
 	@Override
@@ -117,7 +149,6 @@ public class ChunkProviderArcana implements IChunkProvider{
 
 	@Override
 	public void populate(IChunkProvider chunkProvider, int chunkX, int chunkY) {
-
 		int x = chunkX * 16; // X the actual X position in world.
 		int y = chunkY * 16;
 		BiomeGenBase biome = this.worldObj.getBiomeGenForCoords(x + 16, y + 16);
@@ -133,30 +164,23 @@ public class ChunkProviderArcana implements IChunkProvider{
 		Chunk chunk = this.worldObj.getChunkFromChunkCoords(chunkX, chunkY);
 		ArrayList<Object> dungeonRooms = Rooms;
 
-		for (int i = 1; i < 5; i++)
-		{
+		for (int i = 1; i < 5; i++) {
 			roomToGenerate = rand.nextInt(23); //# of different rooms to generate
 			boosRoomFlag = rand.nextInt(5); //Chance for boss rooms to generate 1/number specified
 
-			if (roomToGenerate > 19 && boosRoomFlag != 0 || i > 3) // boss chance
-			{
+			if (roomToGenerate > 19 && boosRoomFlag != 0 || i > 3){ // boss chance
 				roomToGenerate = rand.nextInt(20);
 			}
 
-			if (roomToGenerate < 21) //boss rooms have to use world gen while the rest use chunk gen
-			{
+			if (roomToGenerate < 21){ //boss rooms have to use world gen while the rest use chunk gen
 				((DungeonComponentBase)(dungeonRooms.get(roomToGenerate))).generate(chunk, rand, x, i * 8, y);
-			}
-			else
-			{
+			} else {
 				((WorldGenerator)(dungeonRooms.get(roomToGenerate))).generate(this.worldObj, rand, x, i * 8, y);
 			}
 		}
 		DungeonCeiling dungeonCeiling = Ceiling;
 		dungeonCeiling.generate(chunk, rand, x, 40, y);//80
 	}
-
-
 
 	@Override
 	public boolean saveChunks(boolean flag, IProgressUpdate iprogressupdate) {

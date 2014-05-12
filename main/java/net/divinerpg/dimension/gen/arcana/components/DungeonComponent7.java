@@ -2,7 +2,7 @@
  *** MADE BY MITHION'S .SCHEMATIC TO JAVA CONVERTING TOOL v1.6 ***
  */
 
-package net.divinerpg.dimension.gen.arcana;
+package net.divinerpg.dimension.gen.arcana.components;
 import java.util.Random;
 
 import net.divinerpg.helper.blocks.ArcanaBlocks;
