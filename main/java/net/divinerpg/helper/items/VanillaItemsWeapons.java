@@ -7,6 +7,7 @@ import net.divinerpg.items.vanilla.ItemFrostCannon;
 import net.divinerpg.items.vanilla.ItemInfernoSword;
 import net.divinerpg.items.vanilla.ItemScythe;
 import net.divinerpg.items.vanilla.ItemSerenadeOfHealth;
+import net.divinerpg.items.vanilla.ItemSerenadeStriker;
 import net.divinerpg.items.vanilla.ItemThrowable;
 import net.minecraft.item.Item;
 
@@ -60,5 +61,6 @@ public class VanillaItemsWeapons {
     public static final Item frostCannon       	= new ItemFrostCannon().setName("frostCannon");
     
     public static final Item serenadeOfHealth 	= new ItemSerenadeOfHealth().setName("serenadeOfHealth");
+    public static final Item serenadeStriker 	= new ItemSerenadeStriker().setName("serenadeStriker");
     
 }

@@ -26,6 +26,7 @@ import net.divinerpg.helper.event.EventBonemeal;
 import net.divinerpg.helper.event.EventBucketFill;
 import net.divinerpg.helper.event.EventClientLogin;
 import net.divinerpg.helper.event.EventDeath;
+import net.divinerpg.helper.event.EventLightningStrike;
 import net.divinerpg.helper.event.EventOverlay;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.recipes.TwilightRecipeHelper;
@@ -56,6 +57,7 @@ public class CommonProxy{
 		DivineAPI.addEventBus(new EventBucketFill());
 		DivineAPI.addEventBus(new EventBonemeal());
 		DivineAPI.addEventBus(new EventArmorFullSet());
+		DivineAPI.addEventBus(new EventLightningStrike());
 		//DivineAPI.addEventBus(new EventDeath());
 		System.out.println("[DIVINERPG] REGISTERING TILE ENTITIES");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
@@ -112,6 +114,7 @@ public class CommonProxy{
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
 		DivineAPI.addSpecialEventBus(new EventArmorFullSet());
 		DivineAPI.addSpecialEventBus(new BossTickHandler());
+		DivineAPI.addSpecialEventBus(new EventLightningStrike());
 	}
 
 	public void postInit(FMLPostInitializationEvent event){
