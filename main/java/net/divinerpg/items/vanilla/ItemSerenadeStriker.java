@@ -26,28 +26,29 @@ public class ItemSerenadeStriker extends ItemMod {
 		LangRegistry.addItem(this);
 		setMaxDamage(100);
 	}
-	
+
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
-	      final double eyeHeight = 1.62;
-	      final double reachDistance = 300;
-	      Vec3 startPos = player.getPosition(1.0F);
-	      if (!world.isRemote) startPos = startPos.addVector(0, eyeHeight, 0);
-	      Vec3 look = player.getLook(1.0F);
-	      Vec3 endPos = startPos.addVector(look.xCoord * reachDistance, look.yCoord * reachDistance, look.zCoord * reachDistance);
-	      MovingObjectPosition rarTrace = world.rayTraceBlocks(startPos, endPos);
+		final double eyeHeight = 1.62;
+		final double reachDistance = 300;
+		Vec3 startPos = player.getPosition(1.0F);
+		if (!world.isRemote) startPos = startPos.addVector(0, eyeHeight, 0);
+		Vec3 look = player.getLook(1.0F);
+		Vec3 endPos = startPos.addVector(look.xCoord * reachDistance, look.yCoord * reachDistance, look.zCoord * reachDistance);
+		MovingObjectPosition rarTrace = world.rayTraceBlocks(startPos, endPos);
 
-	      if (rarTrace != null && rarTrace.typeOfHit == MovingObjectType.BLOCK) {
-	        int i = rarTrace.blockX;
-	        int j = rarTrace.blockY;
-	        int k = rarTrace.blockZ;
+		if (rarTrace != null && rarTrace.typeOfHit == MovingObjectType.BLOCK) {
+			int i = rarTrace.blockX;
+			int j = rarTrace.blockY;
+			int k = rarTrace.blockZ;
 
-	        world.spawnEntityInWorld(new EntityLightningBolt(world, i, j, k));
-	        world.spawnEntityInWorld(new EntityLightningBolt(world, i, j, k));
-	        world.spawnEntityInWorld(new EntityLightningBolt(world, i, j, k));
-	      }
+			world.spawnEntityInWorld(new EntityLightningBolt(world, i, j, k));
+			world.spawnEntityInWorld(new EntityLightningBolt(world, i, j, k));
+			world.spawnEntityInWorld(new EntityLightningBolt(world, i, j, k));
+			Sounds.playSound(Sounds.serenade, world, player);
+		}
 		return stack;
 	}
-		
+
 	@Override
 	public void addInformation(ItemStack item, EntityPlayer player, List infoList, boolean par4) {
 		infoList.add("Strikes lightning where you are looking");

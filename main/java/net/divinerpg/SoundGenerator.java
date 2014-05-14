@@ -149,6 +149,7 @@ public class SoundGenerator {
 		addSingleSound("ayeracoSpawn");
 		addItemSound("deepLaugh");
 		addItemSound("heal");
+		addItemSound("serenade");
 
 		//Twilight
 		addItemSound("phaser");
@@ -161,6 +162,7 @@ public class SoundGenerator {
 		addSingleSound("coriShoot");
 		addSingleSound("croak");
 		addMobSound("bunny");
+		addSingleSound("highHit");
 
 		//Iceika
 		addItemSound("soundOfCarols");

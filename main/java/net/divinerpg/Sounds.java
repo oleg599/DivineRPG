@@ -49,13 +49,14 @@ public class Sounds {
 	public static String ayeracoPillar = "divinerpg:ayeracoPillar";
 	public static String ayeracoSpawn = "divinerpg:ayeracoSpawn";
 	public static String hiss = "divinerpg:hiss";
-	public static String highHit = "divinerpg:highHit";
 	public static String archer = "divinerpg:archer";
 	public static String cadillion = "divinerpg:cadillion";
 	public static String coriShoot = "divinerpg:coriShoot";
 	public static String croak = "divinerpg:croak";
+	public static String highHit = "divinerpg:highHit";
 	public static String deepLaugh = "divinerpg:deepLaugh";
 	public static String heal = "divinerpg:heal";
+	public static String serenade = "divinerpg:serenade";
 	public static String phaser = "divinerpg:phaser";
 	public static String blitz = "divinerpg:blitz";
 	public static String soundOfCarols = "divinerpg:soundOfCarols";
@@ -64,7 +65,6 @@ public class Sounds {
 	public static String staff = "divinerpg:staff";
 	public static String starlight = "divinerpg:starlight";
 	public static String sparkler = "divinerpg:sparkler";
-
 
 	public static String playSound(String name, World world, Entity entity, float volume, float pitch){
 		world.playSoundAtEntity(entity, name, volume, pitch); 

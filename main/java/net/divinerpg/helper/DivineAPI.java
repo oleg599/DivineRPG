@@ -78,6 +78,7 @@ public class DivineAPI {
 
 	public static void registerDivineRPGMob(Class entityClass, String entityName) {
 		int entityID = EntityRegistry.findGlobalUniqueEntityId();
+		//EntityRegistry.registerModEntity(entityClass, entityName, entityID, reflectionFactory, entityID, entityID, isSetup);
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, entityID);
 		LanguageRegistry.instance().addStringLocalization("entity." + entityName + ".name", entityName);
 		EntityList.IDtoClassMapping.put(entityID, entityClass);

@@ -33,7 +33,7 @@ public class ItemSerenadeOfDeath extends ItemMod {
 	@Override
 	public ItemStack onItemRightClick(ItemStack var1, World var2, EntityPlayer var3) {
 		if(!var2.isRemote){
-			//Sounds.playSound(Sounds.serenade, var2, var3);
+			Sounds.playSound(Sounds.serenade, var2, var3);
 			var2.spawnEntityInWorld(new EntityDeath(var2, var3));
 		}
 		return var1;
