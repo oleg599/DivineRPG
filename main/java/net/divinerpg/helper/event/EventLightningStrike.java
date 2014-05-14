@@ -9,7 +9,6 @@ public class EventLightningStrike {
 	
 	@SubscribeEvent
 	public void onLightningStrike(EntityStruckByLightningEvent e) {
-		System.out.println("HI");
 		e.entity.attackEntityFrom(DamageSource.onFire, 16);
 	}
 	
