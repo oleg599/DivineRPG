@@ -75,6 +75,7 @@ public class EntityResourceLocation {
     public static ResourceLocation scytheProjectile  = addProjectile("scythe");
     public static ResourceLocation starlight	     = addProjectile("starlight");
     public static ResourceLocation sparkler		     = addProjectile("sparkler");
+    public static ResourceLocation death		     = addProjectile("serenadeOfDeath");
 
     public static ResourceLocation angryBunny		 = addMob("angryBunny");
     public static ResourceLocation angryBunnyTamed 	 = addMob("angryBunnyTamed");
