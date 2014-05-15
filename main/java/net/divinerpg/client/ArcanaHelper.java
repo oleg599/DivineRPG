@@ -41,11 +41,11 @@ public class ArcanaHelper implements IExtendedEntityProperties{
 
 	public static boolean useBar(int amount) {
 		if(arcana < amount) {
-			regenDelay = 100;
+			regenDelay = 50;
 			return false;
 		}
 		arcana -= amount;
-		regenDelay = 100;
+		regenDelay = 50;
 		return true;
 	}
 
@@ -66,7 +66,7 @@ public class ArcanaHelper implements IExtendedEntityProperties{
 	}
 	
 	public static void removeBarValue(int i) {
-		regenDelay = 100;
+		regenDelay = 50;
 		arcana -= i;
 	}
 
