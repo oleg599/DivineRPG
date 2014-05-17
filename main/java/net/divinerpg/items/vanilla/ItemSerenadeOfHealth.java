@@ -15,8 +15,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class ItemSerenadeOfHealth extends ItemMod {
+	
 	public ItemSerenadeOfHealth(){
-		super();
 		setCreativeTab(DivineRPGTabs.tools);
 		LangRegistry.addItem(this);
 		setMaxDamage(20);

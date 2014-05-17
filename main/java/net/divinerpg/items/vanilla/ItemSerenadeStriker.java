@@ -20,8 +20,8 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
 public class ItemSerenadeStriker extends ItemMod {
+	
 	public ItemSerenadeStriker(){
-		super();
 		setCreativeTab(DivineRPGTabs.tools);
 		LangRegistry.addItem(this);
 		setMaxDamage(100);
