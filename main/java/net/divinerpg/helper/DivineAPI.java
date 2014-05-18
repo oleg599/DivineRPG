@@ -18,6 +18,7 @@ import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.IChatComponent;
 import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
@@ -77,8 +78,8 @@ public class DivineAPI {
 	}
 
 	public static void registerDivineRPGMob(Class entityClass, String entityName) {
-		int entityID = EntityRegistry.findGlobalUniqueEntityId();
-		//EntityRegistry.registerModEntity(entityClass, entityName, entityID, reflectionFactory, entityID, entityID, isSetup);
+		int entityID = EntityRegistry.instance().findGlobalUniqueEntityId();
+		
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, entityID);
 		LanguageRegistry.instance().addStringLocalization("entity." + entityName + ".name", entityName);
 		EntityList.IDtoClassMapping.put(entityID, entityClass);
@@ -102,8 +103,8 @@ public class DivineAPI {
 		return ret;
 	}
 	
-	public static ChatComponentTranslation addChatMessage(String str, Object... args) {
-		ChatComponentTranslation ret = new ChatComponentTranslation(str, args);
+	public static ChatComponentTranslation addChatMessage(String str) {
+		ChatComponentTranslation ret = new ChatComponentTranslation(str);
 		return ret;
 	}
 
@@ -121,7 +122,7 @@ public class DivineAPI {
 	}
 
 	public static void sendMessageToAll(String message){
-		FMLClientHandler.instance().getClient().ingameGUI.getChatGUI().printChatMessage(addChatMessage(AQUA + "[" + DARK_BLUE + "DivineRPG" + AQUA + "] " + WHITE + message));
+		FMLClientHandler.instance().getClient().ingameGUI.getChatGUI().printChatMessage(new ChatComponentTranslation(AQUA + "[" + DARK_BLUE + "DivineRPG" + AQUA + "] " + WHITE + message));
 	}
 	
 	public static ToolMaterial addMeleeMaterial(int maxUses, float damage, int enchantability) {
@@ -164,19 +165,19 @@ public class DivineAPI {
         return EnumHelper.addEnum(ToolMaterial.class, "", harvestLevel, -1, efficiency, damage - 1, enchantability);
     }
 	
-	public static void removeRecipe(Item removed) {
+	public static void removeCraftingRecipe(Item removed) {
         ItemStack recipeResult = null;
         ArrayList recipes = (ArrayList)CraftingManager.getInstance().getRecipeList();
 
-        for (int i = 0; i < recipes.size(); i++) {
+        for(int i = 0; i < recipes.size(); i++) {
             IRecipe tmpRecipe = (IRecipe)recipes.get(i);
 
-            if (tmpRecipe instanceof ShapedRecipes) {
+            if(tmpRecipe instanceof ShapedRecipes) {
                 ShapedRecipes recipe = (ShapedRecipes)tmpRecipe;
                 recipeResult = recipe.getRecipeOutput();
             }
 
-            if (ItemStack.areItemStacksEqual(new ItemStack(removed), recipeResult)) {
+            if(ItemStack.areItemStacksEqual(new ItemStack(removed), recipeResult)) {
                 System.out.println("[DivineRPG] Removed Recipe: " + recipes.get(i) + " -> " + recipeResult);
                 recipes.remove(i);
             }

@@ -45,10 +45,7 @@ public class ItemShickaxe extends ItemTool {
 
 	@Override
 	public boolean canHarvestBlock(Block par1Block, ItemStack itemStack) {
-		if(par1Block != Blocks.bedrock)
-			return true;
-		else
-			return false;
+		return !(par1Block == Blocks.bedrock);
 	}
 
 	@Override
