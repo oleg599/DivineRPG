@@ -3,13 +3,13 @@ package net.divinerpg.dimension.gen.iceika.village;
 import java.util.Random;
 
 import net.divinerpg.api.items.ItemModDoor;
+import net.divinerpg.api.worldgen.WorldGenAPI;
 import net.divinerpg.blocks.iceika.tile_entity.TileEntityFrostedChest;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.items.IceikaItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
-import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenWorkShop extends WorldGenerator{
@@ -17,86 +17,26 @@ public class WorldGenWorkShop extends WorldGenerator{
 	@Override
 	public boolean generate(World w, Random r, int x, int y, int z) {
 		
-		doCoalstone(w, x, y, z);
-		doCoalstone(w, x, y + 1, z);
-		doAir(w, x, y + 1, z);
-		doBricks(w, x, y + 2, z);
-		doAir(w, x, y + 2, z);
-		doCoalstone(w, x, y + 3, z);
-		doAir(w, x, y + 3, z);
-		doBricks(w, x, y + 4, z);
-		doAir(w, x, y + 4, z);
+		WorldGenAPI.drawRectangle(14, 14, 1, w, x, y, z, IceikaBlocks.coalstone);
+		WorldGenAPI.drawRectangle(14, 14, 1, w, x, y + 1, z, IceikaBlocks.coalstone);
+		WorldGenAPI.drawRectangle(14, 14, 1, w, x, y + 2, z, IceikaBlocks.snowBricks);
+		WorldGenAPI.drawRectangle(14, 14, 1, w, x, y + 3, z, IceikaBlocks.coalstone);
+		WorldGenAPI.drawRectangle(14, 14, 1, w, x, y + 4, z, IceikaBlocks.snowBricks);
+		WorldGenAPI.drawCube(12, w, x + 1, y, z + 1, Blocks.air);
+		WorldGenAPI.drawRectangle(12, 12, 1, w, x + 1, y + 5, z + 1, IceikaBlocks.snowBricks);
+		WorldGenAPI.drawRectangle(10, 10, 1, w, x + 2, y + 5, z + 2, Blocks.air);
+		WorldGenAPI.drawRectangle(10, 10, 1, w, x + 2, y + 6, z + 2, IceikaBlocks.snowBricks);
+		WorldGenAPI.drawRectangle(8, 8, 1, w, x + 3, y + 6, z + 3, Blocks.air);
+		WorldGenAPI.drawRectangle(8, 8, 1, w, x + 3, y + 7, z + 3, IceikaBlocks.snowBricks);
+		WorldGenAPI.drawRectangle(6, 6, 1, w, x + 4, y + 7, z + 4, Blocks.air);
+		WorldGenAPI.drawRectangle(6, 6, 1, w, x + 4, y + 8, z + 4, IceikaBlocks.snowBricks);
+		WorldGenAPI.drawRectangle(4, 4, 1, w, x + 5, y + 8, z + 5, Blocks.air);
+		WorldGenAPI.drawRectangle(4, 4, 1, w, x + 5, y + 9, z + 5, IceikaBlocks.snowBricks);
+		WorldGenAPI.drawRectangle(2, 2, 1, w, x + 6, y + 9, z + 6, Blocks.air);
+		WorldGenAPI.drawRectangle(2, 2, 1, w, x + 6, y + 9, z + 6, IceikaBlocks.frostedGlass);
 
-		doRoof(w, x, y + 5, z);
 		doMisc(w, x, y, z, new ItemStack(IceikaItems.snowflake));
-		
 		return true;
-	}
-
-	public static void doAir(World w, int x, int y, int z){
-		for(int x1 = 0; x1 < 12; x1++){
-			for(int z1 = 0; z1 < 12; z1++){
-				w.setBlock(x + x1 + 1, y, z + z1 + 1, Blocks.air);
-			}
-		}
-	}
-
-	public static void doCoalstone(World w, int x, int y, int z){
-		for(int x1 = 0; x1 < 14; x1++){
-			for(int z1 = 0; z1 < 14; z1++){
-				w.setBlock(x + x1, y, z + z1, IceikaBlocks.coalstone);
-			}
-		}
-	}
-
-	public static void doBricks(World w, int x, int y, int z){
-		for(int x1 = 0; x1 < 14; x1++){
-			for(int z1 = 0; z1 < 14; z1++){
-				w.setBlock(x + x1, y, z + z1, IceikaBlocks.snowBricks);
-			}
-		}
-	}
-
-	public static void doRoof(World w, int x, int y, int z){
-		for(int x1 = 0; x1 < 12; x1++){
-			for(int z1 = 0; z1 < 12; z1++){
-				w.setBlock(x + x1 + 1, y, z + z1 + 1, IceikaBlocks.snowBricks);
-			}
-		}
-
-		for(int x1 = 0; x1 < 10; x1++){
-			for(int z1 = 0; z1 < 10; z1++){
-				w.setBlock(x + x1 + 2, y + 1, z + z1 + 2, IceikaBlocks.snowBricks);
-				w.setBlock(x + x1 + 2, y, z + z1 + 2, Blocks.air);
-			}
-		}
-
-		for(int x1 = 0; x1 < 8; x1++){
-			for(int z1 = 0; z1 < 8; z1++){
-				w.setBlock(x + x1 + 3, y + 2, z + z1 + 3, IceikaBlocks.snowBricks);
-				w.setBlock(x + x1 + 3, y + 1, z + z1 + 3, Blocks.air);
-			}
-		}
-
-		for(int x1 = 0; x1 < 6; x1++){
-			for(int z1 = 0; z1 < 6; z1++){
-				w.setBlock(x + x1 + 4, y + 3, z + z1 + 4, IceikaBlocks.snowBricks);
-				w.setBlock(x + x1 + 4, y + 2, z + z1 + 4, Blocks.air);
-			}
-		}
-
-		for(int x1 = 0; x1 < 4; x1++){
-			for(int z1 = 0; z1 < 4; z1++){
-				w.setBlock(x + x1 + 5, y + 4, z + z1 + 5, IceikaBlocks.snowBricks);
-				w.setBlock(x + x1 + 5, y + 3, z + z1 + 5, Blocks.air);
-			}
-		}
-
-		for(int x1 = 0; x1 < 2; x1++){
-			for(int z1 = 0; z1 < 2; z1++){
-				w.setBlock(x + x1 + 6, y + 4, z + z1 + 6, IceikaBlocks.frostedGlass);
-			}
-		}
 	}
 
 	public static void doMisc(World w, int x, int y, int z, ItemStack i){
@@ -194,7 +134,7 @@ public class WorldGenWorkShop extends WorldGenerator{
 			}
 		}
 
-		if(chest != null && chest2 != null){
+		if(chest != null && chest2 != null && !w.isRemote){
 			chest.setInventorySlotContents(r.nextInt(26) + 1, i);
 			chest2.setInventorySlotContents(r.nextInt(26) + 1, i);
 			chest.setInventorySlotContents(r.nextInt(26) + 1, i);

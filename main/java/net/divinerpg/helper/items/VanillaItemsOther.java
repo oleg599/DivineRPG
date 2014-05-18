@@ -42,7 +42,6 @@ public class VanillaItemsOther {
     public static final Item legendaryEnderEye  = new ItemMod().setName("legendaryEnderEye");
     public static final Item sharkFin           = new ItemMod().setName("sharkFin");
     public static final Item whaleFin           = new ItemMod().setName("whaleFin");
-    public static final Item noImage            = new ItemMod().setName("noImage").setCreativeTab(null);
     public static final Item netheriteChunk     = new ItemMod().setName("netheriteChunk");
     public static final Item blueFireStone      = new ItemMod().setName("bluefireStone");
     public static final Item purpleBlaze        = new ItemMod().setName("purpleBlaze");

@@ -112,7 +112,7 @@ public class EntityLheiva extends EntityDivineRPGMob
         Entity var1 = par1DamageSource.getEntity();
         if (var1 != null && var1 instanceof EntityPlayer)
         {
-            if (((EntityPlayer) var1).inventory.hasItem(VetheanItems.heivaBelt))
+            if (((EntityPlayer) var1).inventory.hasItem(VetheanItems.heviaBelt))
                 return super.attackEntityFrom(par1DamageSource, par2);
         }
         return false;

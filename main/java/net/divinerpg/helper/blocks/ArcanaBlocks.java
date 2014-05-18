@@ -5,6 +5,7 @@ import net.divinerpg.api.blocks.BlockModGlass;
 import net.divinerpg.api.blocks.BlockModGrass;
 import net.divinerpg.api.blocks.BlockModLadder;
 import net.divinerpg.blocks.arcana.ArcanaBlock;
+import net.divinerpg.blocks.arcana.ArcanaSpawner;
 import net.divinerpg.blocks.arcana.BlockArcanaFrame;
 import net.divinerpg.blocks.arcana.BlockArcanaPortal;
 import net.divinerpg.blocks.arcana.BlockOreDoor;
@@ -43,21 +44,21 @@ public class ArcanaBlocks {
 	public static final Block stainedGlass8 		= new BlockModGlass().setName("stainedGlass8");
 	public static final Block dramixAltar	 		= new BlockModGlass().setName("dramixAltar");
 	public static final Block parasectaAltar 		= new BlockModGlass().setName("parasectaAltar");
-	public static final Block oreDoor2		 		= new BlockModGlass().setName("oreDoor2");
-	public static final Block oreDoor3		 		= new BlockModGlass().setName("oreDoor3");
-	public static final Block oreDoor4		 		= new BlockModGlass().setName("oreDoor4");
-	public static final Block dungenSpawnerPrisoner = new ArcanaBlock(rock).setName("dungenSpawnerPrisoner");
-	public static final Block razorbackSpawner      = new ArcanaBlock(rock).setName("razorbackSpawner");
-	public static final Block deathHoundSpawner 	= new ArcanaBlock(rock).setName("deathHoundSpawner");
+	public static final Block dungenSpawnerPrisoner = new ArcanaSpawner("").setName("dungenSpawnerPrisoner");
+	public static final Block razorbackSpawner      = new ArcanaSpawner("").setName("razorbackSpawner");
+	public static final Block deathHoundSpawner 	= new ArcanaSpawner("").setName("deathHoundSpawner");
+	public static final Block deathcryxSpawner      = new ArcanaSpawner("").setName("deathcryxSpawner");
+	public static final Block livingStatueSpawner 	= new ArcanaSpawner("").setName("livingStatueSpawner");
+	public static final Block roamerSpawner			= new ArcanaSpawner("").setName("roamerSpawner");
 	public static final Block ancientTile 			= new ArcanaBlock(rock).setName("ancientTile");
 	public static final Block extractor 			= new ArcanaBlock(rock).setName("extractor");
-	public static final Block deathcryxSpawner      = new ArcanaBlock(rock).setName("deathcryxSpawner");
-	public static final Block livingStatueSpawner 	= new ArcanaBlock(rock).setName("livingStatueSpawner");
-	public static final Block roamerSpawner			= new ArcanaBlock(rock).setName("roamerSpawner");
 	public static final Block arcanaPortalFrame     = new BlockArcanaFrame().setName("arcanaPortalFrame");
 	public static final Block arcanaPortal     		= new BlockArcanaPortal().setName("arcanaPortal");
 
-	public static final Block oreDoor1 				= new BlockOreDoor(Material.iron, ArcanaItems.oreDoorItem1, ArcanaItems.oreKey1, false).setName("oreDoor1").setCreativeTab(DivineRPGTabs.blocks);
+	public static final Block oreDoor1 				= new BlockOreDoor(ArcanaItems.oreDoorItem1, ArcanaItems.oreKey1).setName("oreDoor1");
+	public static final Block oreDoor2		 		= new BlockOreDoor(ArcanaItems.oreDoorItem2, ArcanaItems.oreKey2).setName("oreDoor2");
+	public static final Block oreDoor3		 		= new BlockOreDoor(ArcanaItems.oreDoorItem3, ArcanaItems.oreKey3).setName("oreDoor3");
+	public static final Block oreDoor4		 		= new BlockOreDoor(ArcanaItems.oreDoorItem4, ArcanaItems.oreKey4).setName("oreDoor4");
 	
 	public static void init(){
 		arcanaGrass = new BlockModGrass(arcanaGrass, arcanaDirt, "arcanite");

@@ -56,7 +56,6 @@ public class BlockFrostedChest extends BlockContainer {
 			return true;
 		} else {
 			IInventory iinventory = getInventory(w, x, y, z);
-
 			if (iinventory != null) {
 				p.displayGUIChest(iinventory);
 			}
@@ -135,7 +134,7 @@ public class BlockFrostedChest extends BlockContainer {
 	}
 
 	public Block setName(String name) {
-		setTextureName(name);
+		setBlockTextureName("ice");
 		setBlockName(name);
 		GameRegistry.registerBlock(this, name);
 		return this;

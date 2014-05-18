@@ -31,7 +31,10 @@ public class ArcanaItems {
 	public static final Item vemosBoots			= new ItemDivineArmor(ArmorMaterialMod.Korma, BOOTS, 3, 45D, true, "vemos").setName("vemosBoots");
 
 	public static final Item oreDoorItem1 	    = new ItemModDoor(ArcanaBlocks.oreDoor1).setName("oreDoor1Item");
-	
+	public static final Item oreDoorItem2 	    = new ItemModDoor(ArcanaBlocks.oreDoor2).setName("oreDoor2Item");
+	public static final Item oreDoorItem3 	    = new ItemModDoor(ArcanaBlocks.oreDoor3).setName("oreDoor3Item");
+	public static final Item oreDoorItem4 	    = new ItemModDoor(ArcanaBlocks.oreDoor4).setName("oreDoor4Item");
+
 	public static final Item oreKey1 			= new ItemKey().setName("key1");
 	public static final Item oreKey2 			= new ItemKey().setName("key2");
 	public static final Item oreKey3 			= new ItemKey().setName("key3");
