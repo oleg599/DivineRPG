@@ -4,6 +4,7 @@ import java.util.Random;
 
 import net.divinerpg.Reference;
 import net.divinerpg.dimension.gen.iceika.village.WorldGenLibrary;
+import net.divinerpg.dimension.gen.iceika.village.WorldGenLight1;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
@@ -32,7 +33,6 @@ public class ItemModBucket extends ItemBucket{
 	@Override
 	public boolean onItemUse(ItemStack i, EntityPlayer p, World w, int x, int y, int z, int i1, float f, float f1, float f2) {
 		Random r = new Random();
-		(new WorldGenLibrary()).generate(w, r, x, y, z);
 		return true;
 	}
 }
