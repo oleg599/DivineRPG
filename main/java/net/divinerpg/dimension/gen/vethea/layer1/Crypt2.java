@@ -2588,9 +2588,9 @@ public class Crypt2 extends WorldGenerator
 		world.setBlock(i + 21, j + 1, k + 4, Blocks.air);
 		world.setBlock(i + 21, j + 1, k + 5, Blocks.air);
 		
-		/*EntityLiving entity = new EntityCryptKeeper(world);
+		EntityLiving entity = new EntityCryptKeeper(world);
 		entity.setLocationAndAngles(i + 21, j + 1, k + 6, 0.0F, 0.0F);
-		world.spawnEntityInWorld(entity);*/
+		world.spawnEntityInWorld(entity);
 		
 		world.setBlock(i + 21, j + 1, k + 7, Blocks.air);
 		world.setBlock(i + 21, j + 1, k + 8, VetheaBlocks.cryptWall);

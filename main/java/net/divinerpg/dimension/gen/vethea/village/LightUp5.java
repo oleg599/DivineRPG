@@ -5,7 +5,9 @@
 package net.divinerpg.dimension.gen.vethea.village;
 import java.util.Random;
 
+import net.divinerpg.entity.vethea.EntityHungerHungry;
 import net.divinerpg.helper.blocks.VetheaBlocks;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
@@ -20,9 +22,9 @@ public class LightUp5 extends WorldGenerator
 
 	public boolean generate(World world, Random rand, int i, int j, int k) {
 
-		//EntityLiving entity = new EntityHungerHungry(world);
-		//entity.setLocationAndAngles(i+ 0F, j +1.0F, k+0F, 0.0F, 0.0F);
-		//world.spawnEntityInWorld(entity);
+		EntityLiving entity = new EntityHungerHungry(world);
+		entity.setLocationAndAngles(i+ 0F, j +1.0F, k+0F, 0.0F, 0.0F);
+		world.spawnEntityInWorld(entity);
 		
 		world.setBlock(i + 0, j + 0, k + 2, VetheaBlocks.darkEverstone);
 		world.setBlock(i + 0, j + 0, k + 3, VetheaBlocks.darkEverstone);

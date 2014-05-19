@@ -74,14 +74,10 @@ public class DivineAPI {
 	}
 
 	public static void registerDivineRPGMob(Class entityClass, String entityName, int ID) {
-		int entityID = EntityRegistry.findGlobalUniqueEntityId();
 		int modID = 275;
+		int entityID = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(entityClass, entityName, entityID, 0x000000, 0xFFFFFF);
 		EntityRegistry.registerModEntity(entityClass, entityName, ID, DivineRPG.instance, 120, 5, true);
-		/*EntityRegistry.registerGlobalEntityID(entityClass, entityName, entityID);
-		LanguageRegistry.instance().addStringLocalization("entity." + entityName + ".name", entityName);
-		EntityList.IDtoClassMapping.put(entityID, entityClass);
-		EntityList.entityEggs.put(entityID, new EntityEggInfo(entityID, 0x000000, 0xFFFFFF));*/
 	}
 
 	public static void registerProjectile(Class entityClass, String entityName) {

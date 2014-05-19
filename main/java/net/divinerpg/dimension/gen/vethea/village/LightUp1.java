@@ -22,9 +22,9 @@ public class LightUp1 extends WorldGenerator
 
 	public boolean generate(World world, Random rand, int i, int j, int k) {
 		
-		/*EntityLiving entity = new EntityHungerHungry(world);
+		EntityLiving entity = new EntityHungerHungry(world);
 		entity.setLocationAndAngles(i+ 0F, j +1.0F, k+0F, 0.0F, 0.0F);
-		world.spawnEntityInWorld(entity);*/
+		world.spawnEntityInWorld(entity);
 		
 		world.setBlock(i + 0, j + 2, k + 2, VetheaBlocks.firelight);
 		world.setBlock(i + 1, j + 0, k + 2, VetheaBlocks.darkEverstone);
