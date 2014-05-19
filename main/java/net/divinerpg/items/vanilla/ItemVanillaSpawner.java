@@ -40,13 +40,13 @@ public class ItemVanillaSpawner extends ItemMod{
 						par3World.spawnEntityInWorld(var5);
 						par1ItemStack.stackSize--;
 						var4++;
-						DivineAPI.sendMessageToAll(DivineAPI.AQUA + player.getDisplayName() + " Spawned The King Of Scorchers");
+						DivineAPI.sendMessageToAll(DivineAPI.AQUA + player.getDisplayName() + " Spawned The King of Scorchers");
 						return true;
 					}
 				}
 			}
 			if(par3World.provider.dimensionId != -1){
-				player.addChatMessage(DivineAPI.addChatMessage(DivineAPI.AQUA + "This Item Can Only Be Used In The Nether!"));
+				player.addChatMessage(DivineAPI.addChatMessage(DivineAPI.AQUA + "This item can only be used in the Nether!"));
 			}
 		}
 		return false;
