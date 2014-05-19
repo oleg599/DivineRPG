@@ -6,19 +6,16 @@ import java.util.ArrayList;
 import net.divinerpg.DivineRPG;
 import net.divinerpg.helper.recipes.CraftingDivineTableManager;
 import net.minecraft.block.Block;
-import net.minecraft.entity.EntityList;
-import net.minecraft.entity.EntityList.EntityEggInfo;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.ShapedRecipes;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.IChatComponent;
 import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,11 +28,10 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class DivineAPI {
 
-	static int mobID = 110, projectileID = 230;
+	public static int mobID = 275, projectileID = 230;
 	
 	private static Object reflectionFactory = null;
     private static Method newConstructorAccessor = null;
@@ -77,13 +73,15 @@ public class DivineAPI {
 		GameRegistry.addSmelting(input, output, XP);
 	}
 
-	public static void registerDivineRPGMob(Class entityClass, String entityName) {
-		int entityID = EntityRegistry.instance().findGlobalUniqueEntityId();
-		
-		EntityRegistry.registerGlobalEntityID(entityClass, entityName, entityID);
+	public static void registerDivineRPGMob(Class entityClass, String entityName, int ID) {
+		int entityID = EntityRegistry.findGlobalUniqueEntityId();
+		int modID = 275;
+		EntityRegistry.registerGlobalEntityID(entityClass, entityName, entityID, 0x000000, 0xFFFFFF);
+		EntityRegistry.registerModEntity(entityClass, entityName, ID, DivineRPG.instance, 120, 5, true);
+		/*EntityRegistry.registerGlobalEntityID(entityClass, entityName, entityID);
 		LanguageRegistry.instance().addStringLocalization("entity." + entityName + ".name", entityName);
 		EntityList.IDtoClassMapping.put(entityID, entityClass);
-		EntityList.entityEggs.put(entityID, new EntityEggInfo(entityID, 0x000000, 0xFFFFFF));
+		EntityList.entityEggs.put(entityID, new EntityEggInfo(entityID, 0x000000, 0xFFFFFF));*/
 	}
 
 	public static void registerProjectile(Class entityClass, String entityName) {

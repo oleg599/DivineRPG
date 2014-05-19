@@ -53,7 +53,9 @@ import net.divinerpg.helper.DivineAPI;
 
 public class TwilightEntityRegistry {
 
-	public static void init(){
+	
+	
+	public static void init(){	
 	    DivineAPI.registerProjectile(EntitySlicerEden.class, "edenSlicer");
 	    DivineAPI.registerProjectile(EntitySlicerWildWoods.class, "wildSlicer");
         DivineAPI.registerProjectile(EntitySlicerApalachia.class, "apalachiaSlicer");
@@ -67,37 +69,37 @@ public class TwilightEntityRegistry {
         DivineAPI.registerProjectile(EntityPhaserMortum.class, "mortumPhaser");
         DivineAPI.registerProjectile(EntityPhaserHalite.class, "halitePhaser");
         
-        DivineAPI.registerDivineRPGMob(EntityCadillion.class, "Cadillion");
-        DivineAPI.registerDivineRPGMob(EntityEdenTomo.class, "Eden Tomo");
-        DivineAPI.registerDivineRPGMob(EntityBunny.class, "Bunny");
-        DivineAPI.registerDivineRPGMob(EntityAngryBunny.class, "Angry Bunny");
-        DivineAPI.registerDivineRPGMob(EntityCori.class, "Eden Cori");
-        DivineAPI.registerDivineRPGMob(EntityMadivel.class, "Madivel");
-        DivineAPI.registerDivineRPGMob(EntityNesro.class, "Nesro");
-        DivineAPI.registerDivineRPGMob(EntityWildWoodGolem.class, "WildWood Golem");
-        DivineAPI.registerDivineRPGMob(EntityWildWoodTomo.class, "WildWood Tomo");
-        DivineAPI.registerDivineRPGMob(EntityVerek.class, "Verek");
-        DivineAPI.registerDivineRPGMob(EntityMoonWolf.class, "Moon Wolf");
-        DivineAPI.registerDivineRPGMob(EntityApalachiaCadillion.class, "Apalachia Cadillion");
-        DivineAPI.registerDivineRPGMob(EntityApalachiaTomo.class, "Apalachia Tomo");
-        DivineAPI.registerDivineRPGMob(EntityApalachiaGolem.class, "Apalachia Golem");
-        DivineAPI.registerDivineRPGMob(EntityApalachiaWarrior.class, "Enchant Warrior");
-        DivineAPI.registerDivineRPGMob(EntitySkythernArcher.class, "Skythern Archer");
-        DivineAPI.registerDivineRPGMob(EntityApalachiaArcher.class, "Twilight Archer");
-        DivineAPI.registerDivineRPGMob(EntitySamek.class, "Samek");
-        DivineAPI.registerDivineRPGMob(EntitySkythernGolem.class, "Skythern Golem");
-        DivineAPI.registerDivineRPGMob(EntityCori2.class, "Skythern Cori");
-        DivineAPI.registerDivineRPGMob(EntitySkythernFiend.class, "Skythern Fiend");
-        DivineAPI.registerDivineRPGMob(EntityMortumCadillion.class, "Mortum Cadillion");
-        DivineAPI.registerDivineRPGMob(EntityMortumDemon.class, "Mortum Demon");
-        DivineAPI.registerDivineRPGMob(EntityBaslisk.class, "Baslisk");
-        DivineAPI.registerDivineRPGMob(EntitySoulStealer.class, "Soul Stealer");
-        DivineAPI.registerDivineRPGMob(EntityDensos.class, "Densos");
-        DivineAPI.registerDivineRPGMob(EntityReyvor.class, "Reyvor");
-        DivineAPI.registerDivineRPGMob(EntityTwilightDemon.class, "Twilight Demon");
-        DivineAPI.registerDivineRPGMob(EntitySoulFiend.class, "Soul Fiend");
-        DivineAPI.registerDivineRPGMob(EntityVamacheron.class, "Vamacheron");
-        DivineAPI.registerDivineRPGMob(EntityKarot.class, "Karot");
+        DivineAPI.registerDivineRPGMob(EntityCadillion.class, "Cadillion", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityEdenTomo.class, "Eden Tomo", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityBunny.class, "Bunny", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityAngryBunny.class, "Angry Bunny", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityCori.class, "Eden Cori", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityMadivel.class, "Madivel", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityNesro.class, "Nesro", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityWildWoodGolem.class, "WildWood Golem", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityWildWoodTomo.class, "WildWood Tomo", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityVerek.class, "Verek", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityMoonWolf.class, "Moon Wolf", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityApalachiaCadillion.class, "Apalachia Cadillion", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityApalachiaTomo.class, "Apalachia Tomo", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityApalachiaGolem.class, "Apalachia Golem", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityApalachiaWarrior.class, "Enchant Warrior", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntitySkythernArcher.class, "Skythern Archer", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityApalachiaArcher.class, "Twilight Archer", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntitySamek.class, "Samek", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntitySkythernGolem.class, "Skythern Golem", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityCori2.class, "Skythern Cori", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntitySkythernFiend.class, "Skythern Fiend", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityMortumCadillion.class, "Mortum Cadillion", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityMortumDemon.class, "Mortum Demon", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityBaslisk.class, "Baslisk", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntitySoulStealer.class, "Soul Stealer", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityDensos.class, "Densos", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityReyvor.class, "Reyvor", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityTwilightDemon.class, "Twilight Demon", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntitySoulFiend.class, "Soul Fiend", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityVamacheron.class, "Vamacheron", DivineAPI.mobID++);
+        DivineAPI.registerDivineRPGMob(EntityKarot.class, "Karot", DivineAPI.mobID++);
         
         DivineAPI.registerProjectile(EntityEdenArrow.class, "Eden Arrow");
         DivineAPI.registerProjectile(EntityWildArrow.class, "Wild Arrow");
