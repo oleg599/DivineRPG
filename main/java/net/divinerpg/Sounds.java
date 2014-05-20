@@ -38,6 +38,14 @@ public class Sounds {
 	public static String coriHurt = "divinerpg:coriHurt";
 	public static String bunny = "divinerpg:bunny";
 	public static String bunnyHurt = "divinerpg:bunnyHurt";
+	public static String rollum = "divinerpg:rollum";
+	public static String rollumHurt = "divinerpg:rollumHurt";
+	public static String hastreus = "divinerpg:hastreus";
+	public static String hastreusHurt = "divinerpg:hastreusHurt";
+	public static String fractite = "divinerpg:fractite";
+	public static String fractiteHurt = "divinerpg:fractiteHurt";
+	public static String alicanto = "divinerpg:alicanto";
+	public static String alicantoHurt = "divinerpg:alicantoHurt";
 	public static String jackOMan = "divinerpg:jackOMan";
 	public static String frost = "divinerpg:frost";
 	public static String scorcher = "divinerpg:scorcher";

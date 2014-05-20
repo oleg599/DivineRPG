@@ -25,8 +25,11 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
@@ -119,27 +122,27 @@ public class EntityWreck extends EntityDivineRPGBoss implements IRangedAttackMob
 
         if (this.waitTick <= 0)
         {
-            //this.manageAbilities();
+            this.manageAbilities();
             super.updateAITasks();
         }
     }
 
 
-   /* public void manageAbilities()
+    public void manageAbilities()
     {
         if (!this.worldObj.isRemote)
         {
-            this.dataWatcher.updateObject(16, func_110138_aP());
+            this.dataWatcher.updateObject(16, getHealth());
         }
 
         EntityPlayerMP player = (EntityPlayerMP) this.worldObj.getClosestVulnerablePlayerToEntity(this, 64.0D);
 
-        if (func_110138_aP() < 5000 / 3 && ability == DEFAULT)
+        if (getHealth() < 5000 / 3 && ability == DEFAULT)
         {
             stage = RANGED;
             this.tasks.removeTask(meleeAI);
         }
-        else if (func_110138_aP() < 5000 * 2 / 3 && ability == DEFAULT)
+        else if (getHealth() < 5000 * 2 / 3 && ability == DEFAULT)
         {
             stage = ARCANA;
             this.tasks.addTask(2, rangedAI);
@@ -220,7 +223,7 @@ public class EntityWreck extends EntityDivineRPGBoss implements IRangedAttackMob
                 {
                     int var2 = (int) ((this.posX - player.posX) / 5) * i;
                     int var3 = (int) ((this.posZ - player.posZ) / 5) * i;
-                    this.worldObj.setBlock((int)this.posX - var2, (int)this.posY, (int)this.posZ - var3, Block.fire.blockID);
+                    this.worldObj.setBlock((int)this.posX - var2, (int)this.posY, (int)this.posZ - var3, Blocks.fire);
                 }
                 ability = DEFAULT;
             }
@@ -241,7 +244,7 @@ public class EntityWreck extends EntityDivineRPGBoss implements IRangedAttackMob
         }
 
     }
-*/
+
     private void message()
     {
         List list = this.worldObj.getEntitiesWithinAABBExcludingEntity(this, this.boundingBox.expand(64.0D, 64.0D, 64.0D));
@@ -440,7 +443,7 @@ public class EntityWreck extends EntityDivineRPGBoss implements IRangedAttackMob
     @Override
     public void attackEntityWithRangedAttack(EntityLivingBase entity, float par2) 
     {
-        /*switch(ability)
+        switch(ability)
         {
             case BOUNCE:
                 if (this.rangedAttackCounter == 0)
@@ -451,7 +454,7 @@ public class EntityWreck extends EntityDivineRPGBoss implements IRangedAttackMob
                     this.rangedAttackCounter++;
                 }
                 break;
-            case SPEED:
+            /*case SPEED:
                 EntityWreckStrengthShot var2 = new EntityWreckStrengthShot(this.worldObj, this, 15);
                 this.worldObj.spawnEntityInWorld(var2);
                 ++this.rangedAttackCounter;
@@ -491,10 +494,10 @@ public class EntityWreck extends EntityDivineRPGBoss implements IRangedAttackMob
                 {
                     this.rangedAttackCounter++;
                 }
-                break;
+                break;*/
             default:
              	break;
-        }*/
+        }
     }
 
     /**

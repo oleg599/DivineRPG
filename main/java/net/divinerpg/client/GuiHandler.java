@@ -19,7 +19,7 @@ import cpw.mods.fml.common.network.IGuiHandler;
 public class GuiHandler implements IGuiHandler{
 
 	public static int guiID = 0;
-	public static int divineTable = guiID++, twilightFurnace = guiID++, infusionTable = guiID++, hunger = guiID++, coalstone = guiID++;
+	public static int divineTable = guiID++, twilightFurnace = guiID++, infusionTable = guiID++, hunger = guiID++, coalstone = guiID++, tinker = guiID++, merchent = guiID++;
 	
 	@Override
 	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {

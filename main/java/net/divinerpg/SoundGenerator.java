@@ -168,6 +168,10 @@ public class SoundGenerator {
 		addItemSound("soundOfCarols");
 		addItemSound("soundOfMusic");
 		addItemSound("frostclawCannon");
+		addMobSound("rollum");
+		addMobSound("hastreus");
+		addMobSound("fractite");
+		addMobSound("alicanto");
 		
 		//Vethea
 		addItemSound("staff");
