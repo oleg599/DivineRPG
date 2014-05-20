@@ -28,6 +28,7 @@ public class ItemSerenadeOfDeath extends ItemMod {
 	public ItemSerenadeOfDeath() {
 		setCreativeTab(DivineRPGTabs.ranged);
 		setMaxStackSize(1);
+		setMaxDamage(500);
 	}
 	
 	@Override
@@ -35,6 +36,7 @@ public class ItemSerenadeOfDeath extends ItemMod {
 		if(!var2.isRemote){
 			Sounds.playSound(Sounds.serenade, var2, var3);
 			var2.spawnEntityInWorld(new EntityDeath(var2, var3));
+			var1.damageItem(1, var3);
 		}
 		return var1;
 	}
@@ -43,6 +45,6 @@ public class ItemSerenadeOfDeath extends ItemMod {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack var1, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 		par3List.add("12 Ranged damage");
-		par3List.add("Infinite ammo and durability");
+		par3List.add(getMaxDamage() - var1.getItemDamage() + " Uses");
 	}
 }
