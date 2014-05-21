@@ -168,14 +168,14 @@ public class EntityResourceLocation {
     public static ResourceLocation VAMACHERON_STATUE = addModel("statueVamacheron");
     public static ResourceLocation WATCHER_STATUE	 = addModel("statueWatcher");
     
-    public static ResourceLocation GLACON = addMob("glacon.png");
-    public static ResourceLocation FROZEN_ARCHER = addMob("frozenArcher.png");
-    public static ResourceLocation ROLLUM = addMob("rollum.png");
-    public static ResourceLocation ALICANTO = addMob("alicanto.png");
-    public static ResourceLocation FRACTITE = addMob("fractite.png");
-    public static ResourceLocation HASTERUS = addMob("hastreus.png");
-    public static ResourceLocation WORKSHOP_TINKER = addMob("workshopTinkerer.png");
-    public static ResourceLocation WORKSHOP_MERCHANT = addMob("workshopMerchant.png");
+    public static ResourceLocation GLACON = addMob("glacon");
+    public static ResourceLocation FROZEN_ARCHER = addMob("frozenArcher");
+    public static ResourceLocation ROLLUM = addMob("rollum");
+    public static ResourceLocation ALICANTO = addMob("alicanto");
+    public static ResourceLocation FRACTITE = addMob("fractite");
+    public static ResourceLocation HASTERUS = addMob("hastreus");
+    public static ResourceLocation WORKSHOP_TINKER = addMob("workshopTinkerer");
+    public static ResourceLocation WORKSHOP_MERCHANT = addMob("workshopMerchant");
     
     private static ResourceLocation addMob(String tex){
     	return new ResourceLocation(PREFIX + tex + ".png");
