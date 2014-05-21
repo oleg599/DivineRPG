@@ -1,5 +1,6 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -74,7 +75,7 @@ public class EntitySkythernFiend extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "mob.RPG.Insect";
+        return Sounds.insect;
     }
 
     /**

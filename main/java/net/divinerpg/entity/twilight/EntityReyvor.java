@@ -1,20 +1,30 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
+import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.IRangedAttackMob;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIArrowAttack;
+import net.minecraft.entity.ai.EntityAIAttackOnCollide;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
+import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.ai.EntityAIWander;
+import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.boss.IBossDisplayData;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class EntityReyvor extends EntityDivineRPGBoss implements IBossDisplayData, IRangedAttackMob
+public class EntityReyvor extends EntityDivineRPGBoss implements IRangedAttackMob
 {
     private static final ItemStack defaultHeldItem = new ItemStack(TwilightItemsWeapons.mortumBow, 1);
 
@@ -22,6 +32,14 @@ public class EntityReyvor extends EntityDivineRPGBoss implements IBossDisplayDat
     {
         super(var1);        
         this.tasks.addTask(7, new EntityAIArrowAttack(this, this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue(), 60, 64.0F));  
+        this.getNavigator().setAvoidsWater(true);
+        this.tasks.addTask(1, new EntityAISwimming(this));
+		this.tasks.addTask(5, new EntityAIAttackOnCollide(this, getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue(), true));
+		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 32.0F));
+		this.tasks.addTask(9, new EntityAILookIdle(this));
+		this.tasks.addTask(6, new EntityAIWander(this, getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue()));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
+		this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true));
     }
     
     @Override
@@ -78,7 +96,7 @@ public class EntityReyvor extends EntityDivineRPGBoss implements IBossDisplayDat
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Reyvor;
+        return Sounds.reyvor;
     }
 
     /**
@@ -87,7 +105,7 @@ public class EntityReyvor extends EntityDivineRPGBoss implements IBossDisplayDat
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.ReyvorHit;
+        return Sounds.reyvorHurt;
     }
 
     /**
@@ -111,7 +129,7 @@ public class EntityReyvor extends EntityDivineRPGBoss implements IBossDisplayDat
     @Override
     public void dropFewItems(boolean par1, int par2)
     {
-        //this.dropItem(TwilightItems.haliteLegs, 1);
+        this.dropItem(TwilightItemsArmor.haliteLegs, 1);
     }
 
     /**

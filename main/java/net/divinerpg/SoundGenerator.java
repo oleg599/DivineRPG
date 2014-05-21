@@ -163,7 +163,16 @@ public class SoundGenerator {
 		addSingleSound("croak");
 		addMobSound("bunny");
 		addSingleSound("highHit");
-
+		addSingleSound("coriIdle");
+		addSingleSound("mucky");
+		addMobSound("nesro");
+		addMobSound("madivel");
+		addSingleSound("insect");
+		addMobSound("densos");
+		addMobSound("reyvor");
+		addMobSound("verek");
+		addSingleSound("demonDarkness");
+		
 		//Iceika
 		addItemSound("soundOfCarols");
 		addItemSound("soundOfMusic");

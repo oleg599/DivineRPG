@@ -38,6 +38,16 @@ public class Sounds {
 	public static String coriHurt = "divinerpg:coriHurt";
 	public static String bunny = "divinerpg:bunny";
 	public static String bunnyHurt = "divinerpg:bunnyHurt";
+	public static String nesro = "divinerpg:nesro";
+	public static String nesroHurt = "divinerpg:nesroHurt";
+	public static String madivel = "divinerpg:madivel";
+	public static String madivelHurt = "divinerpg:madivelHurt";
+	public static String densos = "divinerpg:densos";
+	public static String densosHurt = "divinerpg:densosHurt";
+	public static String reyvor = "divinerpg:reyvor";
+	public static String reyvorHurt = "divinerpg:reyvorHurt";
+	public static String verek = "divinerpg:verek";
+	public static String verekHurt = "divinerpg:verekHurt";
 	public static String rollum = "divinerpg:rollum";
 	public static String rollumHurt = "divinerpg:rollumHurt";
 	public static String hastreus = "divinerpg:hastreus";
@@ -62,6 +72,10 @@ public class Sounds {
 	public static String coriShoot = "divinerpg:coriShoot";
 	public static String croak = "divinerpg:croak";
 	public static String highHit = "divinerpg:highHit";
+	public static String coriIdle = "divinerpg:coriIdle";
+	public static String mucky = "divinerpg:mucky";
+	public static String insect = "divinerpg:insect";
+	public static String demonDarkness = "divinerpg:demonDarkness";
 	public static String deepLaugh = "divinerpg:deepLaugh";
 	public static String heal = "divinerpg:heal";
 	public static String serenade = "divinerpg:serenade";

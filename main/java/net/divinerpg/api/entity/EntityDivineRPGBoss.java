@@ -80,6 +80,11 @@ public abstract class EntityDivineRPGBoss extends EntityMob implements IDivineRP
 		return false;	
 	}
 	
+	@Override
+	protected boolean isAIEnabled() {
+		return true;
+	}
+	
 	public String playSound(String sounds){
 		return Sounds.playSound(sounds, worldObj, this);
 	}

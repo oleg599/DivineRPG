@@ -1,5 +1,6 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -78,7 +79,7 @@ public class EntitySkythernArcher extends EntityApalachiaArcher
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Archer;
+        return Sounds.archer;
     }
 
     /**
@@ -96,7 +97,7 @@ public class EntitySkythernArcher extends EntityApalachiaArcher
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.HighHit;
+        return Sounds.highHit;
     }
 
     /**
@@ -105,7 +106,7 @@ public class EntitySkythernArcher extends EntityApalachiaArcher
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.HighHit;
+        return Sounds.highHit;
     }
 
     /**

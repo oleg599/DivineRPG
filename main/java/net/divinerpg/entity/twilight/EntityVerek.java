@@ -1,10 +1,18 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAttackOnCollide;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
+import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.ai.EntityAIWander;
+import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
@@ -13,6 +21,14 @@ public class EntityVerek extends EntityDivineRPGMob
     public EntityVerek(World var1)
     {
         super(var1);
+        this.getNavigator().setAvoidsWater(true);
+        this.tasks.addTask(1, new EntityAISwimming(this));
+		this.tasks.addTask(5, new EntityAIAttackOnCollide(this, getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue(), true));
+		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 32.0F));
+		this.tasks.addTask(9, new EntityAILookIdle(this));
+		this.tasks.addTask(6, new EntityAIWander(this, getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue()));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
+		this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true));
     }
 
     @Override
@@ -23,15 +39,7 @@ public class EntityVerek extends EntityDivineRPGMob
         getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(100D);
         getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(19D);
     }
-    
-    public int getAttackStrength(Entity var1)
-    {
-        return 35;
-    }
 
-    /**
-     * Returns the current armor value as determined by a call to InventoryPlayer.getTotalArmorValue
-     */
     @Override
     public int getTotalArmorValue()
     {
@@ -68,7 +76,7 @@ public class EntityVerek extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Verek;
+        return Sounds.verek;
     }
 
     /**
@@ -77,7 +85,7 @@ public class EntityVerek extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.VerekHit;
+        return Sounds.verekHurt;
     }
 
     /**
@@ -86,7 +94,7 @@ public class EntityVerek extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.VerekHit;
+        return Sounds.verekHurt;
     }
 
     /**

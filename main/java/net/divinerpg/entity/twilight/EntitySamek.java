@@ -2,6 +2,7 @@ package net.divinerpg.entity.twilight;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.Entity;
@@ -161,7 +162,7 @@ public class EntitySamek extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Verek;
+        return Sounds.verek;
     }
 
     /**
@@ -170,7 +171,7 @@ public class EntitySamek extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.VerekHit;
+        return Sounds.verekHurt;
     }
 
     /**
@@ -179,7 +180,7 @@ public class EntitySamek extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.VerekHit;
+        return Sounds.verekHurt;
     }
 
     /**

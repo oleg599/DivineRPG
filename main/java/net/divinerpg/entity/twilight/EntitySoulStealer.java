@@ -1,5 +1,6 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.Entity;
@@ -90,7 +91,7 @@ public class EntitySoulStealer extends EntityDivineRPGMob
 	@Override
 	protected String getLivingSound()
 	{
-		return "";//Sound.Insect;
+		return Sounds.insect;
 	}
 
 	/**

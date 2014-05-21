@@ -1,4 +1,4 @@
-package net.divinerpg.entity.twilight;
+package net.divinerpg.entity.arcana;
 
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.minecraft.entity.SharedMonsterAttributes;

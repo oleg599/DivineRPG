@@ -2,6 +2,7 @@ package net.divinerpg.entity.twilight;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.Entity;
@@ -23,8 +24,6 @@ public class EntityCadillion extends EntityDivineRPGMob
         super(var1);
         this.setSize(1.0F, 1.3F);
         this.experienceValue = 40;
-        
-
     }
 
     @Override
@@ -42,19 +41,6 @@ public class EntityCadillion extends EntityDivineRPGMob
         return false;
     }
 
-    /**
-     * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons
-     * use this to react to sunlight and start to burn.
-     */
-    @Override
-    public void onLivingUpdate()
-    {
-        super.onLivingUpdate();
-    }
-
-    /**
-     * Called to update the entity's position/logic.
-     */
     @Override
     public void onUpdate()
     {
@@ -62,18 +48,6 @@ public class EntityCadillion extends EntityDivineRPGMob
         super.onUpdate();
     }
 
-    /**
-     * Checks if the entity's current position is a valid location to spawn this entity.
-     */
-    @Override
-    public boolean getCanSpawnHere()
-    {
-        return this.worldObj.checkNoEntityCollision(this.boundingBox) && this.worldObj.getCollidingBoundingBoxes(this, this.boundingBox).size() == 0 && !this.worldObj.isAnyLiquid(this.boundingBox);
-    }
-
-    /**
-     * (abstract) Protected helper method to write subclass entity data to NBT.
-     */
     @Override
     public void writeEntityToNBT(NBTTagCompound var1)
     {
@@ -81,9 +55,6 @@ public class EntityCadillion extends EntityDivineRPGMob
         var1.setShort("Anger", (short)this.angerLevel);
     }
 
-    /**
-     * (abstract) Protected helper method to read subclass entity data from NBT.
-     */
     @Override
     public void readEntityFromNBT(NBTTagCompound var1)
     {
@@ -91,19 +62,12 @@ public class EntityCadillion extends EntityDivineRPGMob
         this.angerLevel = var1.getShort("Anger");
     }
 
-    /**
-     * Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking
-     * (Animals, Spiders at day, peaceful PigZombies).
-     */
     @Override
     protected Entity findPlayerToAttack()
     {
         return this.angerLevel == 0 ? null : super.findPlayerToAttack();
     }
 
-    /**
-     * Called when the entity is attacked.
-     */
     public boolean attackEntityFrom(DamageSource var1, int var2)
     {
         Entity var3 = var1.getEntity();
@@ -141,7 +105,7 @@ public class EntityCadillion extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Cadillion;
+        return Sounds.cadillion;
     }
 
     /**
@@ -150,7 +114,7 @@ public class EntityCadillion extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.GrowlHit;
+        return Sounds.growlHurt;
     }
 
     /**
@@ -159,7 +123,7 @@ public class EntityCadillion extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.GrowlHit;
+        return Sounds.growlHurt;
     }
 
     /**

@@ -1,5 +1,6 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
@@ -79,7 +80,7 @@ public class EntityMortumArcher extends EntityDivineRPGMob implements IRangedAtt
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Archer;
+        return Sounds.archer;
     }
 
     /**
@@ -97,7 +98,7 @@ public class EntityMortumArcher extends EntityDivineRPGMob implements IRangedAtt
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.HighHit;
+        return Sounds.highHit;
     }
 
     /**
@@ -106,7 +107,7 @@ public class EntityMortumArcher extends EntityDivineRPGMob implements IRangedAtt
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.HighHit;
+        return Sounds.highHit;
     }
 
     /**

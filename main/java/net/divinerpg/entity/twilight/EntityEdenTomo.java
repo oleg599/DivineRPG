@@ -2,6 +2,7 @@ package net.divinerpg.entity.twilight;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.Entity;
@@ -41,19 +42,6 @@ public class EntityEdenTomo extends EntityDivineRPGMob
         return false;
     }
 
-    /**
-     * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons
-     * use this to react to sunlight and start to burn.
-     */
-    @Override
-    public void onLivingUpdate()
-    {
-        super.onLivingUpdate();
-    }
-
-    /**
-     * Called to update the entity's position/logic.
-     */
     @Override
     public void onUpdate()
     {
@@ -146,7 +134,7 @@ public class EntityEdenTomo extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Croak;
+        return Sounds.croak;
     }
 
     /**
@@ -155,7 +143,7 @@ public class EntityEdenTomo extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.GrowlHit;
+        return Sounds.growlHurt;
     }
 
     /**
@@ -164,7 +152,7 @@ public class EntityEdenTomo extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.GrowlHit;
+        return Sounds.growlHurt;
     }
 
     /**
