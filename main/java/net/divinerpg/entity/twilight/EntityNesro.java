@@ -1,5 +1,6 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
@@ -105,7 +106,7 @@ public class EntityNesro extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Nesro;
+        return Sounds.nesro;
     }
 
     /**
@@ -114,7 +115,7 @@ public class EntityNesro extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.NesroHit;
+        return Sounds.nesroHurt;
     }
 
     /**
@@ -123,7 +124,7 @@ public class EntityNesro extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.NesroHit;
+        return Sounds.nesroHurt;
     }
 
     /**

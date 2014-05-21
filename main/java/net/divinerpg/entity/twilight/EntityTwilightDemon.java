@@ -1,5 +1,6 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.Entity;
@@ -36,8 +37,6 @@ public class EntityTwilightDemon extends EntityDivineRPGBoss implements IBossDis
 		super.entityInit();
 		this.dataWatcher.addObject(16, new Integer(100));
 	}
-
-
 
 	@Override
 	protected void applyEntityAttributes()
@@ -102,7 +101,7 @@ public class EntityTwilightDemon extends EntityDivineRPGBoss implements IBossDis
 	 @Override
 	 protected String getLivingSound()
 	{
-		 return "";//Sound.Insect;
+		 return Sounds.insect;
 	}
 
 	 /**

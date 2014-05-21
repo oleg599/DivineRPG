@@ -1,14 +1,17 @@
 package net.divinerpg.entity.twilight;
 
-import net.divinerpg.api.entity.EntityDivineRPGMob;
+import net.divinerpg.Sounds;
+import net.divinerpg.api.entity.EntityDivineRPGBoss;
+import net.divinerpg.helper.items.TwilightItemsArmor;
 import net.divinerpg.helper.items.TwilightItemsWeapons;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class EntityDensos extends EntityDivineRPGMob implements IBossDisplayData
+public class EntityDensos extends EntityDivineRPGBoss
 {
     private static final ItemStack defaultHeldItem = new ItemStack(TwilightItemsWeapons.haliteBlade, 1);
 
@@ -66,7 +69,7 @@ public class EntityDensos extends EntityDivineRPGMob implements IBossDisplayData
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Densos;
+        return Sounds.densos;
     }
 
     /**
@@ -75,7 +78,7 @@ public class EntityDensos extends EntityDivineRPGMob implements IBossDisplayData
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.DensosHit;
+        return Sounds.densosHurt;
     }
 
     @Override
@@ -93,15 +96,25 @@ public class EntityDensos extends EntityDivineRPGMob implements IBossDisplayData
 
         for (var4 = 0; var4 < var3; ++var4)
         {
-            //this.dropItem(TwilightItems.haliteHelmet, 1);
-            //this.dropItem(TwilightItems.haliteBody, 1);
-            //this.dropItem(TwilightItems.haliteLegs, 1);
-            //this.dropItem(TwilightItems.haliteBoots, 1);
+            this.dropItem(TwilightItemsArmor.haliteHelmet, 1);
+            this.dropItem(TwilightItemsArmor.haliteBody, 1);
+            this.dropItem(TwilightItemsArmor.haliteLegs, 1);
+            this.dropItem(TwilightItemsArmor.haliteBoots, 1);
         }
     }
 
 	@Override
 	public String mobName() {
 		return "Densos";
+	}
+
+	@Override
+	public String name() {
+		return "Densos";
+	}
+
+	@Override
+	public IChatComponent chat() {
+		return null;
 	}
 }

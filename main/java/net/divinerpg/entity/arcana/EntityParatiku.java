@@ -1,4 +1,4 @@
-package net.divinerpg.entity.twilight;
+package net.divinerpg.entity.arcana;
 
 import java.util.Calendar;
 
@@ -8,6 +8,10 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAttackOnCollide;
+import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
@@ -27,13 +31,13 @@ public class EntityParatiku extends EntityDivineRPGMob
 		this.setSize(0.9F, 0.9F);
 		this.setIsBatHanging(true);
 		this.getNavigator().setAvoidsWater(true);
-		/*this.tasks.addTask(1, new EntityAISwimming(this));
-        this.tasks.addTask(4, new EntityAIParatikuFollowOwner(this, (float) this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue(), 10.0F, 2.0F));
+		this.tasks.addTask(1, new EntityAISwimming(this));
+        //this.tasks.addTask(4, new EntityAIParatikuFollowOwner(this, (float) this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue(), 10.0F, 2.0F));
         this.tasks.addTask(5, new EntityAIAttackOnCollide(this, 0.3D, true));
         this.tasks.addTask(9, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(9, new EntityAILookIdle(this));
-        this.targetTasks.addTask(1, new EntityAIParatikuOwnerHurtByTarget(this));
-        this.targetTasks.addTask(2, new EntityAIParatikuOwnerHurtTarget(this));*/
+       // this.targetTasks.addTask(1, new EntityAIParatikuOwnerHurtByTarget(this));
+        //this.targetTasks.addTask(2, new EntityAIParatikuOwnerHurtTarget(this));
 	}
 
 	@Override

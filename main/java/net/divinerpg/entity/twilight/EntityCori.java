@@ -1,10 +1,19 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAttackOnCollide;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
+import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.ai.EntityAIWander;
+import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChunkCoordinates;
@@ -18,23 +27,20 @@ public class EntityCori extends EntityDivineRPGMob
     public double waypointY;
     public double waypointZ;
     private Entity targetedEntity = null;
-
-    /** Cooldown time between target loss and new target aquirement. */
     private int aggroCooldown = 0;
     public int prevAttackCounter = 0;
     public int attackCounter = 0;
-
-    /**
-     * randomly selected ChunkCoordinates in a 7x6x7 box around the bat (y offset -2 to 4) towards which it will fly.
-     * upon getting close a new target will be selected
-     */
     private ChunkCoordinates currentFlightTarget;
 
-    public EntityCori(World var1)
-    {
+    public EntityCori(World var1) {
         super(var1);
-        
-
+        this.getNavigator().setAvoidsWater(true);
+        this.tasks.addTask(1, new EntityAISwimming(this));
+		this.tasks.addTask(5, new EntityAIAttackOnCollide(this, getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue(), true));
+		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 32.0F));
+		this.tasks.addTask(9, new EntityAILookIdle(this));
+		this.tasks.addTask(6, new EntityAIWander(this, getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue()));
+		this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true));
     }
 
     @Override
@@ -64,14 +70,8 @@ public class EntityCori extends EntityDivineRPGMob
 
 
     @Override
-    protected void updateEntityActionState()
-    {
-        if (!this.worldObj.isRemote)
-        {
-            this.setDead();
-        }
+    protected void updateEntityActionState() {
 
-        this.despawnEntity();
         this.prevAttackCounter = this.attackCounter;
         double var1 = this.waypointX - this.posX;
         double var3 = this.waypointY - this.posY;
@@ -267,7 +267,7 @@ public class EntityCori extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.CoriIdle;
+        return Sounds.coriIdle;
     }
 
     /**
@@ -276,7 +276,7 @@ public class EntityCori extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.CoriHit;
+        return Sounds.coriHurt;
     }
 
     /**
@@ -285,7 +285,7 @@ public class EntityCori extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.CoriHit;
+        return Sounds.coriHurt;
     }
 
     /**

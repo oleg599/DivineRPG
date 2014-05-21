@@ -2,6 +2,7 @@ package net.divinerpg.entity.twilight;
 
 import java.util.List;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.Entity;
@@ -140,7 +141,7 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Cadillion;
+        return Sounds.cadillion;
     }
 
     /**
@@ -149,7 +150,7 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.GrowlHit;
+        return Sounds.growlHurt;
     }
 
     /**
@@ -158,7 +159,7 @@ public class EntityWildWoodCadillion extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.GrowlHit;
+        return Sounds.growlHurt;
     }
 
     /**

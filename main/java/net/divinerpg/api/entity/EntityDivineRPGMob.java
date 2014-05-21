@@ -46,6 +46,11 @@ public abstract class EntityDivineRPGMob extends EntityMob{
 	public String playSound(String sounds){
 		return Sounds.playSound(sounds, worldObj, this);
 	}
+	
+	@Override
+	protected boolean isAIEnabled() {
+		return true;
+	}
 
 	/*public void onDeath(DamageSource d) {
 		super.onDeath(d);

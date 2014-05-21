@@ -42,7 +42,7 @@ public class IceikaEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityFrostclaw.class, new RenderProjectile(x.frostclaw));
 		
         RenderingRegistry.registerEntityRenderingHandler(EntityAlicanto.class, new RenderDivineMob(new ModelAlicanto(), 0.0F, x.ALICANTO));
-        RenderingRegistry.registerEntityRenderingHandler(EntityFractite.class, new RenderSizeable(new ModelFractite(), 2.0F, 2.0F, x.FRACTITE));
+        RenderingRegistry.registerEntityRenderingHandler(EntityFractite.class, new RenderDivineMob(new ModelFractite(), 0.5F, x.FRACTITE));
         RenderingRegistry.registerEntityRenderingHandler(EntityGlacide.class, new RenderSizeable(new ModelGlacide(), 0.0F, 1.0F, x.GLACON));
         RenderingRegistry.registerEntityRenderingHandler(EntityHastreus.class, new RenderDivineMob(new ModelHastreus(), 0.0F, x.HASTERUS));
         RenderingRegistry.registerEntityRenderingHandler(EntityFrostArcher.class, new RenderDivineMob(new ModelBiped(), 0.0F, x.FROZEN_ARCHER));

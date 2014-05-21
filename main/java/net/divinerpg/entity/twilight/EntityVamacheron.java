@@ -103,7 +103,7 @@ public class EntityVamacheron extends EntityDivineRPGBoss implements IBossDispla
     @Override
     protected String getLivingSound()
     {
-        return "mob.zombie";
+        return null;
     }
 
     /**
@@ -112,7 +112,7 @@ public class EntityVamacheron extends EntityDivineRPGBoss implements IBossDispla
     @Override
     protected String getHurtSound()
     {
-        return "mob.zombiehurt";
+        return null;
     }
 
     /**
@@ -121,7 +121,7 @@ public class EntityVamacheron extends EntityDivineRPGBoss implements IBossDispla
     @Override
     protected String getDeathSound()
     {
-        return "mob.zombiedeath";
+        return null;
     }
 
     /**

@@ -1,9 +1,18 @@
 package net.divinerpg.entity.twilight;
 
+import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGMob;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAttackOnCollide;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
+import net.minecraft.entity.ai.EntityAISwimming;
+import net.minecraft.entity.ai.EntityAIWander;
+import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
@@ -12,6 +21,14 @@ public class EntityMadivel extends EntityDivineRPGMob
     public EntityMadivel(World var1)
     {
         super(var1);
+        this.getNavigator().setAvoidsWater(true);
+        this.tasks.addTask(1, new EntityAISwimming(this));
+		this.tasks.addTask(5, new EntityAIAttackOnCollide(this, getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue(), true));
+		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 32.0F));
+		this.tasks.addTask(9, new EntityAILookIdle(this));
+		this.tasks.addTask(6, new EntityAIWander(this, getEntityAttribute(SharedMonsterAttributes.movementSpeed).getAttributeValue()));
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
+		this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, true));
     }
 
     @Override
@@ -23,37 +40,10 @@ public class EntityMadivel extends EntityDivineRPGMob
         getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(40D);
     }
 
-    /**
-     * Returns true if the newer Entity AI code should be run
-     */
-    @Override
-    protected boolean isAIEnabled()
-    {
-        return true;
-    }
-
-    /**
-     * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons
-     * use this to react to sunlight and start to burn.
-     */
-    @Override
-    public void onLivingUpdate()
-    {
-        if (this.worldObj.isDaytime() && !this.worldObj.isRemote)
-        {
-            float var1 = this.getBrightness(1.0F);
-        }
-
-        super.onLivingUpdate();
-    }
-
-    /**
-     * Returns the sound this mob makes while it's alive.
-     */
     @Override
     protected String getLivingSound()
     {
-        return "";//Sound.Madivel;
+        return Sounds.madivel;
     }
 
     /**
@@ -62,7 +52,7 @@ public class EntityMadivel extends EntityDivineRPGMob
     @Override
     protected String getHurtSound()
     {
-        return "";//Sound.MadivelHit;
+        return Sounds.madivelHurt;
     }
 
     /**
@@ -71,7 +61,7 @@ public class EntityMadivel extends EntityDivineRPGMob
     @Override
     protected String getDeathSound()
     {
-        return "";//Sound.MadivelHit;
+        return Sounds.madivelHurt;
     }
 
     /**
@@ -91,24 +81,6 @@ public class EntityMadivel extends EntityDivineRPGMob
     {
         super.dropFewItems(var1, var2);
         //this.dropItem(TwilightItems.rawEmpoweredMeat, 1);
-    }
-
-    /**
-     * Get this Entity's EnumCreatureAttribute
-     */
-    @Override
-    public EnumCreatureAttribute getCreatureAttribute()
-    {
-        return EnumCreatureAttribute.UNDEAD;
-    }
-
-    /**
-     * Checks to make sure the light is not too bright where the mob is spawning
-     */
-    @Override
-    protected boolean isValidLightLevel()
-    {
-        return true;
     }
 
 	@Override

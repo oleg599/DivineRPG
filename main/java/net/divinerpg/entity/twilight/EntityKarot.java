@@ -12,7 +12,7 @@ import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class EntityKarot extends EntityDivineRPGBoss implements IBossDisplayData
+public class EntityKarot extends EntityDivineRPGBoss
 {
     private int spawnTick;
 
@@ -91,7 +91,7 @@ public class EntityKarot extends EntityDivineRPGBoss implements IBossDisplayData
     @Override
     protected String getLivingSound()
     {
-        return "mob.zombie";
+        return null;
     }
 
     /**
@@ -100,7 +100,7 @@ public class EntityKarot extends EntityDivineRPGBoss implements IBossDisplayData
     @Override
     protected String getHurtSound()
     {
-        return "mob.zombiehurt";
+        return null;
     }
 
     /**
@@ -109,7 +109,7 @@ public class EntityKarot extends EntityDivineRPGBoss implements IBossDisplayData
     @Override
     protected String getDeathSound()
     {
-        return "mob.zombiedeath";
+        return null;
     }
 
     @Override
