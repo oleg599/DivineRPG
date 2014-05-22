@@ -1,6 +1,6 @@
 package net.divinerpg.entity.vanilla;
 
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.minecraft.client.Minecraft;

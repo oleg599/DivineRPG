@@ -2,7 +2,7 @@ package net.divinerpg.entity.vanilla;
 
 import net.divinerpg.Sounds;
 import net.divinerpg.api.entity.EntityDivineRPGFlying;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.VanillaItemsOther;
@@ -209,7 +209,7 @@ public class EntityNetherWatcher extends EntityDivineRPGFlying implements IMob, 
 		 if(!worldObj.isRemote){
 			 EntityPlayer p = Minecraft.getMinecraft().thePlayer;
 			 if(ConfigurationHelper.canShowDeathChat){
-				 p.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The Nether Watcher Has Fallen."));
+				 p.addChatMessage(Util.addChatMessage(EnumChatFormatting.BLUE, "The Nether Watcher Has Fallen."));
 			 }
 		 }
 	 }

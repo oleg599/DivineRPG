@@ -7,7 +7,7 @@ import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.client.ArcanaHelper;
 import net.divinerpg.entity.vethea.projectile.EntityBouncingProjectile;
 import net.divinerpg.entity.vethea.projectile.EntityEvernightProjectile;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.VetheanItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -38,7 +38,7 @@ public class ItemStaff extends ItemMod {
 		} else {
 			par3List.add("Consumes " + this.cost + " Arcana");
 		}
-		par3List.add(DivineAPI.GREEN + "Vethean");
+		par3List.add(Util.GREEN + "Vethean");
 	}
 
 	@Override

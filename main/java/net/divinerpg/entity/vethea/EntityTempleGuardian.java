@@ -1,7 +1,7 @@
 package net.divinerpg.entity.vethea;
 
 import net.divinerpg.api.entity.EntityGive;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.VetheanItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -25,19 +25,19 @@ public class EntityTempleGuardian extends EntityGive
                 switch (this.rand.nextInt(5))
                 {
                     case 0:
-                        DivineAPI.addChatMessage("Temple Guardian: You are moving upwards, beware of the imminent danger.");
+                        Util.addChatMessage("Temple Guardian: You are moving upwards, beware of the imminent danger.");
                         break;
                     case 1:
-                        DivineAPI.addChatMessage("Temple Guardian: These places aren't for you.");
+                        Util.addChatMessage("Temple Guardian: These places aren't for you.");
                         break;
                     case 2:
-                        DivineAPI.addChatMessage("Temple Guardian: This is dangerous, what are you doing here?");
+                        Util.addChatMessage("Temple Guardian: This is dangerous, what are you doing here?");
                         break;
                     case 3:
-                        DivineAPI.addChatMessage("Temple Guardian: Temples are suited for humans.");
+                        Util.addChatMessage("Temple Guardian: Temples are suited for humans.");
                         break;
                     case 4:
-                        DivineAPI.addChatMessage("Temple Guardian: They are getting closer to killing you.");
+                        Util.addChatMessage("Temple Guardian: They are getting closer to killing you.");
                         break;
                 }
             }

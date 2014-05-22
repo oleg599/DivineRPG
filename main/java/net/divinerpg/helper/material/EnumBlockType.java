@@ -9,7 +9,13 @@ public enum EnumBlockType {
     ROCK(Material.rock, Block.soundTypeStone),
     DIRT(Material.ground, Block.soundTypeGravel),
     LEAVES(Material.leaves, Block.soundTypeGrass),
-    WOOD(Material.wood, Block.soundTypeWood);
+    WOOD(Material.wood, Block.soundTypeWood),
+    GLASS(Material.glass, Block.soundTypeGlass),
+    GRASS(Material.grass, Block.soundTypeGrass),
+    VINES(Material.vine, Block.soundTypeGrass),
+    CLOTH(Material.cloth, Block.soundTypeCloth),
+    PORTAL(Material.portal, Block.soundTypeStone),
+    IRON(Material.iron, Block.soundTypeMetal);
 
     private Material  material;
     private SoundType sound;

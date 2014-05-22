@@ -7,7 +7,7 @@ import java.util.Random;
 
 import net.divinerpg.DivineRPG;
 import net.divinerpg.client.GuiHandler;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.divinerpg.helper.items.VetheanItems;
 import net.minecraft.block.Block;
@@ -212,13 +212,13 @@ public class EntityHungerHungry extends EntityVillager implements INpc, IMerchan
                 switch (this.rand.nextInt(3))
                 {
                     case 0:
-                        DivineAPI.addChatMessage("The Hunger: mmm. I'm hungry.");
+                        Util.addChatMessage("The Hunger: mmm. I'm hungry.");
                         break;
                     case 1:
-                        DivineAPI.addChatMessage("The Hunger: Can you come a little closer?");
+                        Util.addChatMessage("The Hunger: Can you come a little closer?");
                         break;
                     case 2:
-                        DivineAPI.addChatMessage("The Hunger: You need to fatten yourself up.");
+                        Util.addChatMessage("The Hunger: You need to fatten yourself up.");
                         break;
                 }
 

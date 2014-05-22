@@ -1,13 +1,13 @@
 package net.divinerpg.helper.entity;
 
 import net.divinerpg.entity.arcana.projectile.*;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 
 public class ArcanaEntityRegistry {
 
 	public static void init(){
-		DivineAPI.registerProjectile(EntityStar.class, "Star");
-		DivineAPI.registerProjectile(EntitySparkler.class, "Sparkler");
+		Util.registerProjectile(EntityStar.class, "Star");
+		Util.registerProjectile(EntitySparkler.class, "Sparkler");
 
 	}
 }

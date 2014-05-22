@@ -6,7 +6,7 @@ import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.client.ArcanaHelper;
 import net.divinerpg.entity.arcana.projectile.EntityStar;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.ArcanaItems;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -105,6 +105,6 @@ public class ItemStaffStarlight  extends ItemMod {
 		par3List.add(arcana + " Arcana");
 		par3List.add(stars ? "Drops several stars from the sky" : "Drops a star from the sky");
 		par3List.add("40 Ranged Damage");
-		par3List.add(DivineAPI.GREEN + "Infinite Uses");
+		par3List.add(Util.GREEN + "Infinite Uses");
 	}
 }

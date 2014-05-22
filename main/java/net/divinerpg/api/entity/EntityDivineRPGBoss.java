@@ -1,7 +1,7 @@
 package net.divinerpg.api.entity;
 
 import net.divinerpg.Sounds;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -93,7 +93,7 @@ public abstract class EntityDivineRPGBoss extends EntityMob implements IDivineRP
 		super.onDeath(d);
 		if(!worldObj.isRemote && ConfigurationHelper.canShowDeathChat){
 			if(d.getSourceOfDamage() != null && d.getSourceOfDamage() instanceof EntityPlayer){
-				DivineAPI.sendMessageToAll(DivineAPI.AQUA + "[" + DivineAPI.BLUE + "DivineRPG" + DivineAPI.AQUA + "]" + " " + "The " + mobName() + " Has Fallen.");
+				Util.sendMessageToAll(Util.AQUA + "[" + Util.BLUE + "DivineRPG" + Util.AQUA + "]" + " " + "The " + mobName() + " Has Fallen.");
 			}
 		}
 	}

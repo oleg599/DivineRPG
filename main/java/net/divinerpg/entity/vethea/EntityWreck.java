@@ -4,7 +4,7 @@ import java.util.List;
 
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
 import net.divinerpg.entity.vethea.projectile.EntityBouncingProjectile;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.VetheanItems;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -256,30 +256,30 @@ public class EntityWreck extends EntityDivineRPGBoss implements IRangedAttackMob
                 switch (ability)
                 {
                     case CHARGE:
-                    	DivineAPI.addChatMessage("CHARRGEE!");
+                    	Util.addChatMessage("CHARRGEE!");
                         break;
                     case PULL:
                         this.playSound(""/*Sound.FeelSoulArksiane*/, 1.0F, 1.0F);
-                        DivineAPI.addChatMessage("Come Feel the Soul of Arksiane.");
+                        Util.addChatMessage("Come Feel the Soul of Arksiane.");
                         break;
                     case FIRE:
-                    	DivineAPI.addChatMessage("Arksiane, give me fire!");
+                    	Util.addChatMessage("Arksiane, give me fire!");
                         break;
                     case FREEZE:
                         this.playSound(""/*Sound.StopAtOnce*/, 1.0F, 1.0F);
-                        DivineAPI.addChatMessage("Stop at once in the name of the great Arksiane!");
+                        Util.addChatMessage("Stop at once in the name of the great Arksiane!");
                         break;
                     case SPEED:
                         this.playSound(""/*Sound.Speed*/, 1.0F, 1.0F);
-                        DivineAPI.addChatMessage("Speed!");
+                        Util.addChatMessage("Speed!");
                         break;
                     case EXPLOSIONS:
                         this.playSound(""/*Sound.Explosions*/, 1.0F, 1.0F);
-                        DivineAPI.addChatMessage("Explosions!");
+                        Util.addChatMessage("Explosions!");
                         break;
                     case STRENGTH:
                         this.playSound(""/*Sound.Strength*/, 1.0F, 1.0F);
-                        DivineAPI.addChatMessage( "Strength!");
+                        Util.addChatMessage( "Strength!");
                         break;
                     default:
                         break;

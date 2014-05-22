@@ -8,7 +8,7 @@ import java.util.Random;
 import net.divinerpg.DivineRPG;
 import net.divinerpg.api.entity.EntityDivineRPGVillager;
 import net.divinerpg.client.GuiHandler;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.block.Block;
@@ -55,7 +55,7 @@ public class EntityWorkshopTickerer extends EntityDivineRPGVillager {
 	}
 
 	@Override
-	public void interact(DivineAPI api) {
+	public void interact(Util api) {
 		switch(this.rand.nextInt(4)) {
 		case 0:
 			api.addChatMessage("Tinkerer: Hohoho.");

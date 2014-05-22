@@ -1,19 +1,17 @@
 package net.divinerpg.blocks.arcana;
 
 import net.divinerpg.api.blocks.BlockModDoor;
-import net.minecraft.block.material.Material;
+import net.divinerpg.helper.material.EnumBlockType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
 public class BlockOreDoor extends BlockModDoor{
 
-	private Item key;
 
-	public BlockOreDoor(Item pick, Item key) {
-		super(Material.iron, pick, false);
-		this.key = key;
-	}
+    public BlockOreDoor(String name, Item pick, Item key) {
+        super(EnumBlockType.IRON, name, pick, key);
+    }
 
 	@Override
 	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p, int side, float hitX, float hitY, float hitZ) {

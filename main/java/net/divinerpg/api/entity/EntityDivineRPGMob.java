@@ -2,7 +2,7 @@ package net.divinerpg.api.entity;
 
 import net.divinerpg.Sounds;
 import net.divinerpg.entity.vethea.EntityTwins;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.event.EventDeath;
 import net.minecraft.client.Minecraft;

@@ -1,6 +1,6 @@
 package net.divinerpg.helper.event;
 
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLiving;
@@ -30,7 +30,7 @@ public class EventDeath {
 		if(ConfigurationHelper.canShowVanillaDeathChat){
 			if(e.source.getSourceOfDamage() instanceof EntityPlayer){	
 				if((e.entity instanceof EntityZombie) || (e.entity instanceof EntityCreeper) || (e.entity instanceof EntityWitch) || (e.entity instanceof EntityBlaze) || (e.entity instanceof EntityMagmaCube) || (e.entity instanceof EntitySilverfish) || (e.entity instanceof EntityCaveSpider) || (e.entity instanceof EntityEnderman) || (e.entity instanceof EntityPigZombie) || (e.entity instanceof EntityGhast) || (e.entity instanceof EntitySlime) || (e.entity instanceof EntitySpider) || (e.entity instanceof EntitySkeleton)) {
-					DivineAPI.sendMessageToAll(DivineAPI.AQUA + "[" + DivineAPI.BLUE + "DivineRPG" + DivineAPI.AQUA + "]" + " " + p.getDisplayName() + " has slain a " + getEntityName((EntityLiving)e.entityLiving));
+					Util.sendMessageToAll(Util.AQUA + "[" + Util.BLUE + "DivineRPG" + Util.AQUA + "]" + " " + p.getDisplayName() + " has slain a " + getEntityName((EntityLiving)e.entityLiving));
 				}
 			}
 		}

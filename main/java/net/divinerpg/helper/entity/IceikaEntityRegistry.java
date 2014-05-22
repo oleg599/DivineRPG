@@ -11,23 +11,23 @@ import net.divinerpg.entity.iceika.EntityWorkshopTickerer;
 import net.divinerpg.entity.iceika.projectile.EntityCarol;
 import net.divinerpg.entity.iceika.projectile.EntityFrostclaw;
 import net.divinerpg.entity.iceika.projectile.EntityMusic;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 
 public class IceikaEntityRegistry {
 
 	public static void init() {
-		DivineAPI.registerProjectile(EntityCarol.class, "Carol");
-		DivineAPI.registerProjectile(EntityMusic.class, "Music");
-		DivineAPI.registerProjectile(EntityFrostclaw.class, "Frostclaw");
+		Util.registerProjectile(EntityCarol.class, "Carol");
+		Util.registerProjectile(EntityMusic.class, "Music");
+		Util.registerProjectile(EntityFrostclaw.class, "Frostclaw");
 		
-		DivineAPI.registerDivineRPGMob(EntityAlicanto.class, "Alicanto", DivineAPI.mobID++);
-		DivineAPI.registerDivineRPGMob(EntityFractite.class, "Fractite", DivineAPI.mobID++);
-		DivineAPI.registerDivineRPGMob(EntityGlacide.class, "Glacide", DivineAPI.mobID++);
-		DivineAPI.registerDivineRPGMob(EntityHastreus.class, "Hastreus", DivineAPI.mobID++);
-		DivineAPI.registerDivineRPGMob(EntityFrostArcher.class, "Frost Archer", DivineAPI.mobID++);
-        DivineAPI.registerDivineRPGMob(EntityRollum.class, "Rollum", DivineAPI.mobID++);
-        DivineAPI.registerDivineRPGMob(EntityWorkshopTickerer.class, "Workshop Tinkerer", DivineAPI.mobID++);
-        DivineAPI.registerDivineRPGMob(EntityWorkshopMerchant.class, "Workshop Merchant", DivineAPI.mobID++);
+		Util.registerDivineRPGMob(EntityAlicanto.class, "Alicanto", Util.mobID++);
+		Util.registerDivineRPGMob(EntityFractite.class, "Fractite", Util.mobID++);
+		Util.registerDivineRPGMob(EntityGlacide.class, "Glacide", Util.mobID++);
+		Util.registerDivineRPGMob(EntityHastreus.class, "Hastreus", Util.mobID++);
+		Util.registerDivineRPGMob(EntityFrostArcher.class, "Frost Archer", Util.mobID++);
+        Util.registerDivineRPGMob(EntityRollum.class, "Rollum", Util.mobID++);
+        Util.registerDivineRPGMob(EntityWorkshopTickerer.class, "Workshop Tinkerer", Util.mobID++);
+        Util.registerDivineRPGMob(EntityWorkshopMerchant.class, "Workshop Merchant", Util.mobID++);
 	}
 	
 }

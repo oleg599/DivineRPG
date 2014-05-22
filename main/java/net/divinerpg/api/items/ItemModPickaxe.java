@@ -3,7 +3,7 @@ package net.divinerpg.api.items;
 import java.util.List;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.player.EntityPlayer;
@@ -26,11 +26,11 @@ public class ItemModPickaxe extends ItemPickaxe{
 
     @Override
     public void addInformation(ItemStack item, EntityPlayer player, List infoList, boolean par4) {
-        infoList.add(DivineAPI.BLUE + "Efficiency: " + this.t.getEfficiencyOnProperMaterial());
+        infoList.add(Util.BLUE + "Efficiency: " + this.t.getEfficiencyOnProperMaterial());
         if(item.getMaxDamage() != -1) {
         	infoList.add(item.getMaxDamage() - item.getItemDamage() + " Uses Remaining");
 		} else {
-			infoList.add(DivineAPI.GREEN + "Infinite Uses");
+			infoList.add(Util.GREEN + "Infinite Uses");
 		}
     }
     

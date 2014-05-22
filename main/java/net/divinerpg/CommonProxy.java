@@ -8,7 +8,7 @@ import net.divinerpg.client.render.BossTickHandler;
 import net.divinerpg.client.render.block.TileEntityStatue;
 import net.divinerpg.dimension.gen.vanilla.WorldGenOverworld;
 import net.divinerpg.helper.DimensionHelper;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.blocks.ArcanaBlocks;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.blocks.TwilightBlocks;
@@ -54,12 +54,12 @@ public class CommonProxy{
 	public void preInit(FMLPreInitializationEvent event){
 		System.out.println("[DIVINERPG] ADDING EVENTS");
 		if(!Reference.DEBUG)
-			DivineAPI.addEventBus(new EventClientLogin());
-		DivineAPI.addEventBus(new EventBucketFill());
-		DivineAPI.addEventBus(new EventBonemeal());
-		DivineAPI.addEventBus(new EventArmorFullSet());
-		DivineAPI.addEventBus(new EventLightningStrike());
-		DivineAPI.addEventBus(new EventHarvest());
+			Util.addEventBus(new EventClientLogin());
+		Util.addEventBus(new EventBucketFill());
+		Util.addEventBus(new EventBonemeal());
+		Util.addEventBus(new EventArmorFullSet());
+		Util.addEventBus(new EventLightningStrike());
+		Util.addEventBus(new EventHarvest());
 		//DivineAPI.addEventBus(new EventDeath());
 		System.out.println("[DIVINERPG] REGISTERING TILE ENTITIES");
 		GameRegistry.registerTileEntity(TileEntityTwilightFurnace.class, "Twilight Furnace");
@@ -86,7 +86,7 @@ public class CommonProxy{
 
 		if(Reference.DEBUG){
 			System.out.println("[DIVINERPG] DEBUG MODE");
-			DivineAPI.addEventBus(new EventOverlay());
+			Util.addEventBus(new EventOverlay());
 			LangRegistry.init();
 			LangRegistry.addTabNames();
 			LangRegistry.addBlockNames();
@@ -108,20 +108,20 @@ public class CommonProxy{
 		DimensionHelper.init();
 		System.out.println("[DIVINERPG] ADDING MOB SPAWNS");
 		MobSpawning.addSpawns();
-		DivineAPI.addSpecialEventBus(new ArcanaTickHandler());
+		Util.addSpecialEventBus(new ArcanaTickHandler());
 	}
 
 	public void init(FMLInitializationEvent event){
 		int wut = 10;//What the hell does the int even do?
 		System.out.println("[DIVINERPG] ADDING WORLD GENERATIONS");
 		GameRegistry.registerWorldGenerator(new WorldGenOverworld(), wut);
-		DivineAPI.addSpecialEventBus(new EventArmorFullSet());
-		DivineAPI.addSpecialEventBus(new BossTickHandler());
-		DivineAPI.addSpecialEventBus(new EventLightningStrike());
+		Util.addSpecialEventBus(new EventArmorFullSet());
+		Util.addSpecialEventBus(new BossTickHandler());
+		Util.addSpecialEventBus(new EventLightningStrike());
 	}
 
 	public void postInit(FMLPostInitializationEvent event){
-		DivineAPI.addBucket(DivineRPG.tarFluid, new ItemStack(VanillaItemsOther.tarBucket));
+		Util.addBucket(DivineRPG.tarFluid, new ItemStack(VanillaItemsOther.tarBucket));
 	}
 
 	public void serverStarting(FMLServerStartingEvent event){ 

@@ -57,17 +57,17 @@ public class OverworldEntityRenderer {
 		RenderingRegistry.registerEntityRenderingHandler(EntityGlacon.class, new RenderDivineMob(new ModelGlacon(), 0.0F, x.glacon));
 		RenderingRegistry.registerEntityRenderingHandler(EntityMiner.class, new RenderMiner());
 
-		DivineAPI.registerItemRenderer(VanillaBlocks.KingStatue, new RenderStatueItem(VanillaBlocks.KingStatue));
-		DivineAPI.registerItemRenderer(VanillaBlocks.AncientStatue, new RenderStatueItem(VanillaBlocks.AncientStatue));
-		DivineAPI.registerItemRenderer(VanillaBlocks.AyeracoStatue, new RenderStatueItem(VanillaBlocks.AyeracoStatue));
-		DivineAPI.registerItemRenderer(VanillaBlocks.TDemonStatue, new RenderStatueItem(VanillaBlocks.TDemonStatue));
-		DivineAPI.registerItemRenderer(VanillaBlocks.VamacheronStatue, new RenderStatueItem(VanillaBlocks.VamacheronStatue));
-		DivineAPI.registerItemRenderer(VanillaBlocks.DensosStatue, new RenderStatueItem(VanillaBlocks.DensosStatue));
-		DivineAPI.registerItemRenderer(VanillaBlocks.DexStatue, new RenderStatueItem(VanillaBlocks.DexStatue));
-		DivineAPI.registerItemRenderer(VanillaBlocks.DramixStatue, new RenderStatueItem(VanillaBlocks.DramixStatue));
+		Util.registerItemRenderer(VanillaBlocks.KingStatue, new RenderStatueItem(VanillaBlocks.KingStatue));
+		Util.registerItemRenderer(VanillaBlocks.AncientStatue, new RenderStatueItem(VanillaBlocks.AncientStatue));
+		Util.registerItemRenderer(VanillaBlocks.AyeracoStatue, new RenderStatueItem(VanillaBlocks.AyeracoStatue));
+		Util.registerItemRenderer(VanillaBlocks.TDemonStatue, new RenderStatueItem(VanillaBlocks.TDemonStatue));
+		Util.registerItemRenderer(VanillaBlocks.VamacheronStatue, new RenderStatueItem(VanillaBlocks.VamacheronStatue));
+		Util.registerItemRenderer(VanillaBlocks.DensosStatue, new RenderStatueItem(VanillaBlocks.DensosStatue));
+		Util.registerItemRenderer(VanillaBlocks.DexStatue, new RenderStatueItem(VanillaBlocks.DexStatue));
+		Util.registerItemRenderer(VanillaBlocks.DramixStatue, new RenderStatueItem(VanillaBlocks.DramixStatue));
 		//DivineAPI.registerItemRenderer(VanillaBlocks.ParasectaStatue, new RenderStatueItem(VanillaBlocks.ParasectaStatue));
-		DivineAPI.registerItemRenderer(VanillaBlocks.SoulFiendStatue, new RenderStatueItem(VanillaBlocks.SoulFiendStatue));
-		DivineAPI.registerItemRenderer(VanillaBlocks.WatcherStatue, new RenderStatueItem(VanillaBlocks.WatcherStatue));
+		Util.registerItemRenderer(VanillaBlocks.SoulFiendStatue, new RenderStatueItem(VanillaBlocks.SoulFiendStatue));
+		Util.registerItemRenderer(VanillaBlocks.WatcherStatue, new RenderStatueItem(VanillaBlocks.WatcherStatue));
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityStatue.class, new RenderStatue());
 	}
 }

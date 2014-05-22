@@ -3,7 +3,7 @@ package net.divinerpg.items.vethea;
 import java.util.List;
 
 import net.divinerpg.api.items.ItemModSword;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -31,6 +31,6 @@ public class ItemVetheanSword extends ItemModSword {
         if (this instanceof ItemVetheanClaw) {
             par3List.add("Can not Block");
         }
-        par3List.add(DivineAPI.GREEN + "Vethean");
+        par3List.add(Util.GREEN + "Vethean");
     }
 }

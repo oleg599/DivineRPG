@@ -31,12 +31,12 @@ public class BlockModBush extends BlockMod implements IShearable {
 
     protected String                    stateChangeName;
     protected boolean                   isGrown;
-    protected Item drop;
+    protected Item                      drop;
 
     public BlockModBush(boolean grown, String name) {
         this(grown, name, "null", null);
     }
-    
+
     public BlockModBush(boolean grown, String name, Item drop) {
         this(grown, name, "null", drop);
     }
@@ -84,7 +84,7 @@ public class BlockModBush extends BlockMod implements IShearable {
     }
 
     public Item getItemDropped(int par1, Random par2Random, int par3) {
-        if(drop != null) return drop;
+        if (drop != null) return drop;
         return null;
     }
 

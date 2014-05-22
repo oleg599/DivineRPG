@@ -1,24 +1,34 @@
 package net.divinerpg.api.blocks;
 
+import net.divinerpg.Reference;
+import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
 import net.minecraft.block.BlockFenceGate;
 import net.minecraft.block.material.Material;
 import net.minecraft.world.IBlockAccess;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+
 public class BlockModFence extends BlockFence {
+    
+    protected String name;
 
-
-	public BlockModFence(String textureName) {
-		super(textureName, Material.wood);
+	public BlockModFence(String name) {
+		super(Reference.PREFIX + name, Material.wood);
+		this.name = name;
+		setBlockName(name);
+		GameRegistry.registerBlock(this, name);
+		LangRegistry.addBlock(this);
 	}	
 	
+	@Override
     public boolean canConnectFenceTo(IBlockAccess blockAccess, int x, int y, int z) {
         Block block = blockAccess.getBlock(x, y, z);
 
-        /*if (block != this ? block.getMaterial().isOpaque() && block.renderAsNormalBlock() ? block.getMaterial() != Material.gourd : false : true) {
-        	return true;
-        }*/
+//        if (block != this ? block.getMaterial().isOpaque() && block.renderAsNormalBlock() ?  block.getMaterial()
+//                != Material.gourd : false : true)
+//        	return true;
 		return block instanceof BlockFence || block instanceof BlockFenceGate;
     }
 }

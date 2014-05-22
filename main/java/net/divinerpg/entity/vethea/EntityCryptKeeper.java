@@ -1,7 +1,7 @@
 package net.divinerpg.entity.vethea;
 
 import net.divinerpg.api.entity.EntityGive;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.VetheanItems;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,19 +27,19 @@ public class EntityCryptKeeper extends EntityGive {
 
                 switch (this.rand.nextInt(5)) {
                     case 0:
-                        DivineAPI.addChatMessage("Crypt Keeper: You are safer down here.");
+                        Util.addChatMessage("Crypt Keeper: You are safer down here.");
                         break;
                     case 1:
-                    	DivineAPI.addChatMessage("Crypt Keeper: Beware of the higher layers.");
+                    	Util.addChatMessage("Crypt Keeper: Beware of the higher layers.");
                         break;
                     case 2:
-                    	DivineAPI.addChatMessage("Crypt Keeper: Take this reward, use it wisely.");
+                    	Util.addChatMessage("Crypt Keeper: Take this reward, use it wisely.");
                         break;
                     case 3:
-                    	DivineAPI.addChatMessage("Crypt Keeper: What the future holds is dark.");
+                    	Util.addChatMessage("Crypt Keeper: What the future holds is dark.");
                         break;
                     case 4:
-                        DivineAPI.addChatMessage("Crypt Keeper: This isn't a nice world.");
+                        Util.addChatMessage("Crypt Keeper: This isn't a nice world.");
                         break;
                 }
             }

@@ -5,7 +5,7 @@ import java.util.Random;
 
 import net.divinerpg.Reference;
 import net.divinerpg.api.blocks.BlockMod;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.items.TwilightItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;

@@ -7,7 +7,7 @@ import net.divinerpg.entity.vanilla.EntityAyeracoGreen;
 import net.divinerpg.entity.vanilla.EntityAyeracoPurple;
 import net.divinerpg.entity.vanilla.EntityAyeracoRed;
 import net.divinerpg.entity.vanilla.EntityAyeracoYellow;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -35,30 +35,30 @@ public class ItemHordeHorn extends ItemMod {
             if (var3.provider.dimensionId == 1) {
     			if (this.spawnTick == 600) {
     				var3.playSoundAtEntity(var2, Sounds.ayeracoSpawn, 20.0F, 1.0F);
-    				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.GREEN, "The Green Ayeraco Has Been Called Upon"));
+    				var2.addChatMessage(Util.addChatMessage(EnumChatFormatting.GREEN, "The Green Ayeraco Has Been Called Upon"));
     			}
     			else if (this.spawnTick == 430) 
-    				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.BLUE, "The Blue Ayeraco Has Been Called Upon"));
+    				var2.addChatMessage(Util.addChatMessage(EnumChatFormatting.BLUE, "The Blue Ayeraco Has Been Called Upon"));
     			
     			else if (this.spawnTick == 280) 
-    				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.RED, "The Red Ayeraco Has Been Called Upon"));
+    				var2.addChatMessage(Util.addChatMessage(EnumChatFormatting.RED, "The Red Ayeraco Has Been Called Upon"));
     			
     			else if (this.spawnTick == 210) 
-    				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.YELLOW, "The Yellow Ayeraco Has Been Called Upon"));
+    				var2.addChatMessage(Util.addChatMessage(EnumChatFormatting.YELLOW, "The Yellow Ayeraco Has Been Called Upon"));
     			
     			else if (this.spawnTick == 145) 
-    				var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.DARK_PURPLE, "The Purple Ayeraco Has Been Called Upon"));
+    				var2.addChatMessage(Util.addChatMessage(EnumChatFormatting.DARK_PURPLE, "The Purple Ayeraco Has Been Called Upon"));
     			
     			else if (this.spawnTick == 0) {
     				if (this.spawn(var3, var2, var4, var5, var6)) {
-    					var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "The Ayeraco Horde Has Arrived!"));
+    					var2.addChatMessage(Util.addChatMessage(EnumChatFormatting.AQUA, "The Ayeraco Horde Has Arrived!"));
     					var2.inventory.consumeInventoryItem(this);
     		            return true;
     				}
     			}
     			this.spawnTick -= 5;
     		} else 
-    	        var2.addChatMessage(DivineAPI.addChatMessage(EnumChatFormatting.AQUA, "The Ayeraco Horde Can Only Be Spawned In The End"));
+    	        var2.addChatMessage(Util.addChatMessage(EnumChatFormatting.AQUA, "The Ayeraco Horde Can Only Be Spawned In The End"));
             return false;
         }
     }

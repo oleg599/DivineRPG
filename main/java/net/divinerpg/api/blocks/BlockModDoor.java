@@ -21,15 +21,16 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockModDoor extends BlockMod {
 
     @SideOnly(Side.CLIENT)
-    private IIcon[] topIcon;
+    protected IIcon[] topIcon;
     @SideOnly(Side.CLIENT)
-    private IIcon[] bottomIcon;
-    private Item    pickItem;
-    private boolean canOpenByHand;
+    protected IIcon[] bottomIcon;
+    protected Item    pickItem;
+    protected Item    key;
+    protected boolean canOpenByHand;
 
-    public BlockModDoor(EnumBlockType blockType, String name, Item pick, boolean hand) {
+    public BlockModDoor(EnumBlockType blockType, String name, Item pick, Item key) {
         super(blockType, name);
-        canOpenByHand = hand;
+        canOpenByHand = key != null;
         pickItem = pick;
         setTickRandomly(true);
         float f = 0.5f;
@@ -113,8 +114,7 @@ public class BlockModDoor extends BlockMod {
         return super.getCollisionBoundingBoxFromPool(world, x, y, z);
     }
 
-    public void setBlockBoundsBasedOnState(IBlockAccess blockAccess, int x, int y, int z)
-    {
+    public void setBlockBoundsBasedOnState(IBlockAccess blockAccess, int x, int y, int z) {
         this.thisMustBeNamedBetter(this.reallyBrock_ThisIsJustGettingSillyNow_StopFingCopyingCode(blockAccess, x, y, z));
     }
 
@@ -162,31 +162,35 @@ public class BlockModDoor extends BlockMod {
     }
 
     public void onBlockClicked(World world, int x, int y, int z, EntityPlayer player) {}
-
-    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int par6, float par7, float par8, float par9) {
-        if (!canOpenByHand) return false; //Allow items to interact with the door
-
-        int i1 = this.reallyBrock_ThisIsJustGettingSillyNow_StopFingCopyingCode(world, x, y, z);
-        int j1 = i1 & 7;
-        j1 ^= 4;
-
-        if ((i1 & 8) == 0) {
-            world.setBlockMetadataWithNotify(x, y, z, j1, 2);
-            world.markBlockRangeForRenderUpdate(x, y, z, x, y, z);
-        } else {
-            world.setBlockMetadataWithNotify(x, y - 1, z, j1, 2);
-            world.markBlockRangeForRenderUpdate(x, y - 1, z, x, y, z);
-        }
-
+    
+    protected void notifyAndUpdateBlock(World world, int x, int y, int z, int j1, boolean flag, EntityPlayer player){
+        int yOffset = flag ? 0 : 1;
+        world.setBlockMetadataWithNotify(x, y - yOffset, z, j1, 2);
+        world.markBlockRangeForRenderUpdate(x, y - yOffset, z, x, y, z);
         world.playAuxSFXAtEntity(player, 1003, x, y, z, 0);
+    }
+
+    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
+        int i1 = this.reallyBrock_ThisIsJustGettingSillyNow_StopFingCopyingCode(world, x, y, z);
+        int j1 = (i1 & 7) ^ 4;
+        boolean flag = (i1 & 8) == 0;
+        if (!canOpenByHand) {
+            if (player.getHeldItem() != null && player.getHeldItem().getItem() == key) {
+                player.getHeldItem().stackSize--;
+                notifyAndUpdateBlock(world, x, y, z, j1, flag, player);
+                return true;
+            }
+            return false;
+        }
+        notifyAndUpdateBlock(world, x, y, z, j1, flag, player);
         return true;
     }
 
-    public void brockStopCopyingCodeAndNameThis_youWroteItYouShouldKnowWhatItDoes(World world, int x, int y, int z, boolean whatIsThisForBrock) {
+    public void brockStopCopyingCodeAndNameThis_youWroteItYouShouldKnowWhatItDoes(World world, int x, int y, int z, boolean flag) {
         int l = this.reallyBrock_ThisIsJustGettingSillyNow_StopFingCopyingCode(world, x, y, z);
         boolean flag1 = (l & 4) != 0;
 
-        if (flag1 != whatIsThisForBrock) {
+        if (flag1 != flag) {
             int i1 = l & 7;
             i1 ^= 4;
 

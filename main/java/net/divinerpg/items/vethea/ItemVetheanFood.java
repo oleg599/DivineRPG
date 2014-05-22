@@ -3,7 +3,7 @@ package net.divinerpg.items.vethea;
 import java.util.List;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.entity.player.EntityPlayer;
@@ -32,7 +32,7 @@ public class ItemVetheanFood extends ItemFood {
 		par3List.add("Replenishes " + food + " Hunger");
 		par3List.add(saturation + " Saturation");
 		par3List.add("Pet Food: False");
-		par3List.add(DivineAPI.GREEN + "Vethean");
+		par3List.add(Util.GREEN + "Vethean");
 	}
 
 	public Item setTextureName(String par1Str) {

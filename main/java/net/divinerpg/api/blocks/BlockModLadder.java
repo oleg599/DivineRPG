@@ -1,27 +1,23 @@
 package net.divinerpg.api.blocks;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.divinerpg.Reference;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockLadder;
+
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockModLadder extends BlockLadder { 
 
-	public BlockModLadder() {
+    protected String name;
+    
+	public BlockModLadder(String name) {
+	    this.name = name;
+	    setBlockTextureName(Reference.PREFIX + name);
+        setBlockName(name);
+        setCreativeTab(DivineRPGTabs.blocks);
+        GameRegistry.registerBlock(this, name);
 		LangRegistry.addBlock(this);
-		setCreativeTab(DivineRPGTabs.blocks);
 	}
 	
-	public Block setTextureName(String name) {
-        return setBlockTextureName(Reference.PREFIX + name);
-    }
-
-    public Block setName(String name) {
-        setTextureName(name);
-        setBlockName(name);
-        GameRegistry.registerBlock(this, name);
-        return this;
-    }
 }

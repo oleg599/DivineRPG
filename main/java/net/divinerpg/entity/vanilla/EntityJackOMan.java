@@ -7,7 +7,7 @@ import java.util.Random;
 
 import net.divinerpg.DivineRPG;
 import net.divinerpg.Sounds;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.VanillaItemsArmor;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.items.VanillaItemsWeapons;
@@ -183,16 +183,16 @@ public class EntityJackOMan extends EntityVillager implements INpc, IMerchant
                 switch (this.rand.nextInt(4))
             	{
             	case 0:
-            		var1.addChatMessage(DivineAPI.addChatMessage("Jack'O Man: BOO!"));
+            		var1.addChatMessage(Util.addChatMessage("Jack'O Man: BOO!"));
             		break;
             	case 1:
-            		var1.addChatMessage(DivineAPI.addChatMessage("Jack'O Man: I seem to have lost my head."));
+            		var1.addChatMessage(Util.addChatMessage("Jack'O Man: I seem to have lost my head."));
             		break;
             	case 2:
-            		var1.addChatMessage(DivineAPI.addChatMessage("Jack'O Man: HURAH!"));
+            		var1.addChatMessage(Util.addChatMessage("Jack'O Man: HURAH!"));
             		break;
             	case 3:
-            		var1.addChatMessage(DivineAPI.addChatMessage("Jack'O Man: Have you seen my head?"));
+            		var1.addChatMessage(Util.addChatMessage("Jack'O Man: Have you seen my head?"));
             		break;
             	}
                 

@@ -5,7 +5,7 @@ import java.util.List;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.blocks.IceikaBlocks;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;

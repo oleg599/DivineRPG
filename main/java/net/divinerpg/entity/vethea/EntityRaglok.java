@@ -3,7 +3,7 @@ package net.divinerpg.entity.vethea;
 import java.util.List;
 
 import net.divinerpg.api.entity.EntityDivineRPGBoss;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.VetheanItems;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
@@ -168,7 +168,7 @@ public class EntityRaglok extends EntityDivineRPGBoss implements IRangedAttackMo
                 {
                     case LIGHTNING:
                         this.playSound(""/*Sound.RaglokGuardian*/, 1.0F, 1.0F);
-                        DivineAPI.addChatMessage("You think you can fight me? I am the great guardian of Heliosis!");
+                        Util.addChatMessage("You think you can fight me? I am the great guardian of Heliosis!");
                         break;
                     case BLIND:
                         this.playSound(""/*Sound.RaglokDark*/, 1.0F, 1.0F);

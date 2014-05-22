@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 import net.divinerpg.DivineRPG;
 import net.divinerpg.client.GuiHandler;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.minecraft.entity.EntityLiving;
@@ -143,7 +143,7 @@ public abstract class EntityDivineRPGVillager extends EntityVillager implements 
 	@Override
 	public boolean interact(EntityPlayer var1) {
 		if(!this.worldObj.isRemote) {
-			interact(new DivineAPI());
+			interact(new Util());
 			var1.openGui(DivineRPG.instance, guiID(), this.worldObj, getEntityId(), 0, 0);
 			return true;
 		} else {
@@ -151,7 +151,7 @@ public abstract class EntityDivineRPGVillager extends EntityVillager implements 
 		}
 	}
 
-	public abstract void interact(DivineAPI api);
+	public abstract void interact(Util api);
 
 	public abstract int guiID();
 

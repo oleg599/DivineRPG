@@ -8,7 +8,7 @@ import java.util.Random;
 import net.divinerpg.DivineRPG;
 import net.divinerpg.api.entity.EntityDivineRPGVillager;
 import net.divinerpg.client.GuiHandler;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.IceikaItems;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityLiving;
@@ -53,19 +53,19 @@ public class EntityWorkshopMerchant extends EntityDivineRPGVillager {
 	}
 
 	@Override
-	public void interact(DivineAPI api) {
+	public void interact(Util api) {
 		switch(this.rand.nextInt(4)) {
 		case 0:
-			DivineAPI.addChatMessage("Merchent: Hohoho.");
+			Util.addChatMessage("Merchent: Hohoho.");
 			break;
 		case 1:
-			DivineAPI.addChatMessage("Merchent: It's cold outside.");
+			Util.addChatMessage("Merchent: It's cold outside.");
 			break;
 		case 2:
-			DivineAPI.addChatMessage("Merchent: It's cold inside.");
+			Util.addChatMessage("Merchent: It's cold inside.");
 			break;
 		case 3:
-			DivineAPI.addChatMessage("Merchent: Burr!");
+			Util.addChatMessage("Merchent: Burr!");
 			break;
 		}
 	}

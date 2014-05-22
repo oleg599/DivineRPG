@@ -3,7 +3,7 @@ package net.divinerpg.items.vanilla;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.entity.vanilla.EntityKingOfScorchers;
 import net.divinerpg.entity.vanilla.EntityNetherWatcher;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
@@ -30,7 +30,7 @@ public class ItemVanillaSpawner extends ItemMod{
 						par3World.spawnEntityInWorld(var5);
 						par1ItemStack.stackSize--;
 						var4++;
-						DivineAPI.sendMessageToAll(DivineAPI.AQUA + player.getDisplayName() + " Spawned The Watcher");
+						Util.sendMessageToAll(Util.AQUA + player.getDisplayName() + " Spawned The Watcher");
 						return true;
 					} 
 
@@ -40,13 +40,13 @@ public class ItemVanillaSpawner extends ItemMod{
 						par3World.spawnEntityInWorld(var5);
 						par1ItemStack.stackSize--;
 						var4++;
-						DivineAPI.sendMessageToAll(DivineAPI.AQUA + player.getDisplayName() + " Spawned The King of Scorchers");
+						Util.sendMessageToAll(Util.AQUA + player.getDisplayName() + " Spawned The King of Scorchers");
 						return true;
 					}
 				}
 			}
 			if(par3World.provider.dimensionId != -1){
-				player.addChatMessage(DivineAPI.addChatMessage(DivineAPI.AQUA + "This item can only be used in the Nether!"));
+				player.addChatMessage(Util.addChatMessage(Util.AQUA + "This item can only be used in the Nether!"));
 			}
 		}
 		return false;

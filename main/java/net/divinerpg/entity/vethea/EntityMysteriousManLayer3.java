@@ -1,7 +1,7 @@
 package net.divinerpg.entity.vethea;
 
 import net.divinerpg.api.entity.EntityGive;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.items.VetheanItems;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -29,16 +29,16 @@ public class EntityMysteriousManLayer3 extends EntityGive {
                 switch (this.rand.nextInt(4))
                 {
                     case 0:
-                        DivineAPI.addChatMessage("Mysterious Man: Infuse this, I can feel the stength when you do.");
+                        Util.addChatMessage("Mysterious Man: Infuse this, I can feel the stength when you do.");
                         break;
                     case 1:
-                        DivineAPI.addChatMessage("Mysterious Man: Thank you for aiding me in my plan.");
+                        Util.addChatMessage("Mysterious Man: Thank you for aiding me in my plan.");
                         break;
                     case 2:
-                        DivineAPI.addChatMessage("Mysterious Man: The surface is just above us.");
+                        Util.addChatMessage("Mysterious Man: The surface is just above us.");
                         break;
                     case 3:
-                        DivineAPI.addChatMessage("Mysterious Man: Can you believe that we're submerged so far?.");
+                        Util.addChatMessage("Mysterious Man: Can you believe that we're submerged so far?.");
                         break;
                 }
 

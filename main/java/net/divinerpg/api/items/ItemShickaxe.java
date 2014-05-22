@@ -7,7 +7,7 @@ import java.util.Timer;
 import org.apache.commons.lang3.time.StopWatch;
 
 import net.divinerpg.Reference;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
 import net.minecraft.block.Block;
@@ -91,11 +91,11 @@ public class ItemShickaxe extends ItemTool {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-		par3List.add(DivineAPI.BLUE + "Efficiency: " + this.theToolMaterial.getEfficiencyOnProperMaterial());
+		par3List.add(Util.BLUE + "Efficiency: " + this.theToolMaterial.getEfficiencyOnProperMaterial());
 		if (par1ItemStack.getMaxDamage() != -1) {
 			par3List.add(par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage() + " Uses");
 		} else {
-			par3List.add(DivineAPI.GREEN + "Infinite Uses");
+			par3List.add(Util.GREEN + "Infinite Uses");
 		}
 	}
 	public Item setTextureName(String par1Str) {

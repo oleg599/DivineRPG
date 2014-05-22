@@ -6,7 +6,7 @@ import net.divinerpg.Sounds;
 import net.divinerpg.api.items.ItemMod;
 import net.divinerpg.client.ArcanaHelper;
 import net.divinerpg.entity.arcana.projectile.EntitySparkler;
-import net.divinerpg.helper.DivineAPI;
+import net.divinerpg.helper.Util;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -39,6 +39,6 @@ public class ItemCaptainsSparkler extends ItemMod {
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
 		par3List.add("7 Arcana");
 		par3List.add("26 Ranged Damage");
-		par3List.add(DivineAPI.GREEN + "Infinite Uses");
+		par3List.add(Util.GREEN + "Infinite Uses");
 	}
 }
