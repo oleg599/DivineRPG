@@ -16,7 +16,7 @@ Currently the code for the mod may contain several errors, as I (BossLetsPlays) 
 4. As a side note, please refrain from making major changes to the code while I am in this process, and do not fix any errors I have created unless you know 500% what you are doing. The errors I am creating are done intentionally to remind myself what must be changed. Any new classes during or after my rewrite process will be deleted if it contains any nonsense code such as parameters or functions being named func_324_fwe, or likewise. If it is an overriden method, you are expected to create a helper method that is properly named, and place the code in there and then call that method in the overriden function rather than putting the code in the function named method.
 
 ####Important Links
-1. [DevineRPG Website] (http://wiki.divinerpg.net)
+1. [DivineRPG Website] (http://wiki.divinerpg.net)
 2. [BossLetsPlays' Channel] (http://www.youtube.com/BossLetsPlays)
 
 ###Credits
@@ -37,6 +37,46 @@ These people contribute textures and models.
 
 ###Contributing
 ***
+
+####Setting Up in Eclipse
+See "Sebmitting a Pull Request" if you do not have permissions to edit the GitHub.
+
+#####Cloning
+
+1. Clone Git
+	* Window > Show View > Other... > Git > Git Repositories > OK
+	* In the new "Git Repositories" view, click the icon with the yellow background and the blue arrow (http://prntscr.com/3j042b)
+	* Copy this without the quotes "https://github.com/TheSlayerMC/DivineRPG.git" into the URI line,
+	* Enter you GitHub username and password
+	* Click next twice
+	* Click "browse" and choose where you want the source stored.
+	* Click finish
+2. Create a new project
+
+#####Setting Up
+
+3. Right click project
+4. Go to "Build path > Configure build path"
+5. Delete the default "src" folder
+6. Click "Add Folder"
+7. Click "Create New Folder"
+8. Folder name: "src/main/java"
+9. Click "Create New Folder" again while the src folder is highlighted
+10. Folder name: "main/resources"
+11. Click "OK"
+12. Add the Minecraft project to the build path
+13. Click "OK"
+14. Navigate to the git repo in file explorer
+15. In that, go into main > java.
+16. Drag the "net" and "com" folders into eclipse onto src/main/java
+17. Check "Link to files and folders"
+18. Do the same for main > resources > assets, this time draging it to src/main/resources
+
+#####Pushing
+19. Right click the "DivineRPG" in the Git view.
+20. Click "Push"
+21. Type your username and password if it asks.
+
 ####Submitting a Pull Request
 Want to help improve our code? Fix bugs? Add to the mod? Make artistic improvements for us?
 
