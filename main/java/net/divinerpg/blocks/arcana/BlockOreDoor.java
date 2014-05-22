@@ -19,7 +19,7 @@ public class BlockOreDoor extends BlockModDoor{
 	public boolean onBlockActivated(World w, int x, int y, int z, EntityPlayer p, int side, float hitX, float hitY, float hitZ) {
 		if(p.getHeldItem() != null && p.getHeldItem().getItem() == key){
 			p.getHeldItem().stackSize--;
-			int i1 = this.func_150012_g(w, x, y, z);
+			int i1 = this.reallyBrock_ThisIsJustGettingSillyNow_StopFingCopyingCode(w, x, y, z);
             int j1 = i1 & 7;
             j1 ^= 4;
 

@@ -7,28 +7,51 @@ import net.divinerpg.helper.items.VanillaItemsOther;
 import net.divinerpg.helper.items.VanillaItemsTools;
 import net.divinerpg.helper.items.VanillaItemsWeapons;
 import net.divinerpg.helper.items.VetheanItems;
+import net.divinerpg.helper.utils.LangRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class DivineRPGTabs {
-	public static CreativeTabs blocks = new CreativeTabs("Blocks") 
-	{public Item getTabIconItem() {return Item.getItemFromBlock(TwilightBlocks.edenOre);}};
-	public static CreativeTabs swords = new CreativeTabs("Swords") 
-	{public Item getTabIconItem() {return VanillaItemsWeapons.aquaton;}};
-	public static CreativeTabs ranged = new CreativeTabs("Ranged")
-	{public Item getTabIconItem() {return VanillaItemsWeapons.vileStorm;}};
-	public static CreativeTabs tools = new CreativeTabs("Tools")
-	{public Item getTabIconItem() {return VanillaItemsTools.rupeeShickaxe;}};
-	public static CreativeTabs items = new CreativeTabs("Materials")
-	{public Item getTabIconItem() {return VanillaItemsOther.rupeeIngot;}};
-	public static CreativeTabs armor = new CreativeTabs("Armor")
-	{public Item getTabIconItem() {return VanillaItemsArmor.angelicHelmet;}};
-	public static CreativeTabs spawner = new CreativeTabs("Spawner")
-	{public Item getTabIconItem() {return VanillaItemsOther.callWatcher;}};
-	public static CreativeTabs utility = new CreativeTabs("Utility")
-	{public Item getTabIconItem() {return VanillaItemsOther.tarBucket;}};
-	public static CreativeTabs food = new CreativeTabs("Herbalism")
-	{public Item getTabIconItem() {return ItemsFood.bacon;}};
-	public static CreativeTabs vethea = new CreativeTabs("Vethea")
-	{public Item getTabIconItem() {return VetheanItems.karosStaff;}};
+public class DivineRPGTabs extends CreativeTabs {
+
+    private Item                icon;
+    private String              name;
+
+    public static DivineRPGTabs blocks  = new DivineRPGTabs("Blocks", TwilightBlocks.edenOre);
+    public static DivineRPGTabs ranged  = new DivineRPGTabs("Ranged", "Ranged Weapons", VanillaItemsWeapons.vileStorm);
+    public static DivineRPGTabs swords  = new DivineRPGTabs("Swords", "Melee Weapons", VanillaItemsWeapons.aquaton);
+    public static DivineRPGTabs tools   = new DivineRPGTabs("Tools", VanillaItemsTools.rupeeShickaxe);
+    public static DivineRPGTabs items   = new DivineRPGTabs("Materials", "Raw Materials", VanillaItemsOther.rupeeIngot);
+    public static DivineRPGTabs armor   = new DivineRPGTabs("Armor", VanillaItemsArmor.angelicHelmet);
+    public static DivineRPGTabs spawner = new DivineRPGTabs("Spawner", VanillaItemsOther.callWatcher);
+    public static DivineRPGTabs utility = new DivineRPGTabs("Utility", VanillaItemsOther.tarBucket);
+    public static DivineRPGTabs food    = new DivineRPGTabs("Herbalism", ItemsFood.bacon);
+    public static DivineRPGTabs vethea  = new DivineRPGTabs("Vethea", VetheanItems.karosStaff);
+
+    public DivineRPGTabs(String lable, Item icon) {
+        this(lable, lable, icon);
+    }
+
+    public DivineRPGTabs(String lable, Block icon) {
+        this(lable, lable, icon);
+    }
+
+    public DivineRPGTabs(String lable, String name, Block icon) {
+        this(lable, name, Item.getItemFromBlock(icon));
+    }
+
+    public DivineRPGTabs(String lable, String name, Item icon) {
+        super(getNextID(), lable);
+        this.icon = icon;
+        LangRegistry.addTab(this);
+    }
+
+    @Override
+    public Item getTabIconItem() {
+        return icon;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

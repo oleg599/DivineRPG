@@ -25,7 +25,6 @@ import net.divinerpg.helper.event.EventArmorFullSet;
 import net.divinerpg.helper.event.EventBonemeal;
 import net.divinerpg.helper.event.EventBucketFill;
 import net.divinerpg.helper.event.EventClientLogin;
-import net.divinerpg.helper.event.EventDeath;
 import net.divinerpg.helper.event.EventHarvest;
 import net.divinerpg.helper.event.EventLightningStrike;
 import net.divinerpg.helper.event.EventOverlay;
@@ -37,6 +36,7 @@ import net.minecraft.command.CommandHandler;
 import net.minecraft.command.ServerCommandManager;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
+
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -88,6 +88,7 @@ public class CommonProxy{
 			System.out.println("[DIVINERPG] DEBUG MODE");
 			DivineAPI.addEventBus(new EventOverlay());
 			LangRegistry.init();
+			LangRegistry.addTabNames();
 			LangRegistry.addBlockNames();
 			LangRegistry.addItemNames();
 			LangRegistry.closeFile();

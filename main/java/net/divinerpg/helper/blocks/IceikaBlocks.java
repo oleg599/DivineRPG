@@ -2,7 +2,6 @@ package net.divinerpg.helper.blocks;
 
 import net.divinerpg.api.blocks.BlockModBook;
 import net.divinerpg.api.blocks.BlockModBush;
-import net.divinerpg.api.blocks.BlockModChest;
 import net.divinerpg.api.blocks.BlockModDirt;
 import net.divinerpg.api.blocks.BlockModDoor;
 import net.divinerpg.api.blocks.BlockModGlass;
@@ -34,14 +33,14 @@ public class IceikaBlocks {
 	private static SoundType cloth = Block.soundTypeCloth;
 	private static SoundType wood = Block.soundTypeWood;
 
-    public static		Block frozenGrass;
+    public static		Block frozenGrass; //Uhm, why this here?
     
-	public static final Block frozenDirt          = new BlockModDirt().setName("frozenDirt").setHardness(2.5F);
+	public static final Block frozenDirt          = new BlockModDirt("frozenDirt").setHardness(2.5F);
 	public static final Block frozenStone         = new IceikaBlock(rock, 6.0F, stone).setName("frozenStone");
 	public static final Block frozenWood          = new BlockModLog().setName("frozenLog").setHardness(5.0F);
 	public static final Block brittleLeaves       = new BlockModLeaves().setName("brittleLeaves").setHardness(0.1F);
-	public static final Block winterberryBush     = new BlockModBush(false).setName("winterberryBush").setHardness(0.2F);//Spawns on ground, drops winterberries
-	public static final Block winterberryBushRipe = new BlockModBush(true).setName("ripeWinterberryBush").setHardness(0.2F);
+	public static final Block winterberryBush     = new BlockModBush(false, "winterberryBush", "ripeWinterberryBush", null).setHardness(0.2F);//Spawns on ground, drops winterberries
+	public static final Block winterberryBushRipe = new BlockModBush(true, "ripeWinterberryBush", "winterberryBush", IceikaItems.winterberry).setHardness(0.2F);
 
 	public static final Block icyStone       	  = new IceikaBlock(rock, 0.1F, stone).setName("icyStone").setBlockUnbreakable(); //TODO: Make destructible only by explosion
 	public static final Block icyBricks       	  = new IceikaBlock(rock, 0.1F, stone).setName("icyBricks").setBlockUnbreakable(); //TODO: Make destructible only by explosion
