@@ -27,20 +27,20 @@ public class DivineRPGCommands extends CommandBase{
 		EntityPlayerMP playerMP = (EntityPlayerMP)var1;
 		if(!playerMP.worldObj.isRemote){
 			if (var2[0].equalsIgnoreCase("Eden")) {
-				if (playerMP.dimension != ConfigurationHelper.Eden) {
-					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden, new TeleporterEden(playerMP.mcServer.worldServerForDimension(ConfigurationHelper.Eden)));
+				if (playerMP.dimension != ConfigurationHelper.eden) {
+					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.eden, new TeleporterEden(playerMP.mcServer.worldServerForDimension(ConfigurationHelper.eden)));
 				}
 			}
 
 			if (var2[0].equalsIgnoreCase("WildWoods")) {
-				if (playerMP.dimension != ConfigurationHelper.WildWoods) {
-					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Eden, new TeleporterWildWoods(playerMP.mcServer.worldServerForDimension(ConfigurationHelper.WildWoods)));
+				if (playerMP.dimension != ConfigurationHelper.wildWoods) {
+					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.eden, new TeleporterWildWoods(playerMP.mcServer.worldServerForDimension(ConfigurationHelper.wildWoods)));
 				}
 			}
 			
 			if (var2[0].equalsIgnoreCase("Arcana")) {
-				if (playerMP.dimension != ConfigurationHelper.Arcana) {
-					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.Arcana, new TeleporterArcana(playerMP.mcServer.worldServerForDimension(ConfigurationHelper.Arcana)));
+				if (playerMP.dimension != ConfigurationHelper.arcana) {
+					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ConfigurationHelper.arcana, new TeleporterArcana(playerMP.mcServer.worldServerForDimension(ConfigurationHelper.arcana)));
 				}
 			}
 		}

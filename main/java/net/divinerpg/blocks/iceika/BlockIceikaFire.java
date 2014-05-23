@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 public class BlockIceikaFire extends BlockBlueFire {
 
 	public void onBlockAdded(World world, int x, int y, int z) {
-        if (world.provider.dimensionId > 0 || !IceikaBlocks.portal.func_150000_e(world, x, y, z)) {
+        if (world.provider.dimensionId > 0 || !IceikaBlocks.portal.isPortalCorrectSize(world, x, y, z)) {
             if (!World.doesBlockHaveSolidTopSurface(world, x, y - 1, z) && !this.canNeighborBurn(world, x, y, z)) {
                 world.setBlockToAir(x, y, z);
             } else {

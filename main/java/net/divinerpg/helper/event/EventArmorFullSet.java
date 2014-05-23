@@ -101,7 +101,7 @@ public class EventArmorFullSet {
 
 			//Santa
 			if (boots == IceikaItems.santaBoots && legs == IceikaItems.santaLegs && body == IceikaItems.santaBody && helmet == IceikaItems.santaHead) {
-				if (e.entityLiving.worldObj.provider.dimensionId == ConfigurationHelper.Iceika) {
+				if (e.entityLiving.worldObj.provider.dimensionId == ConfigurationHelper.iceika) {
 					e.ammount *= 0.2;
 				}
 			}
@@ -588,7 +588,7 @@ public class EventArmorFullSet {
 
 		//Santa
 		if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
-			if (ev.player.worldObj.provider.dimensionId == ConfigurationHelper.Iceika) {
+			if (ev.player.worldObj.provider.dimensionId == ConfigurationHelper.iceika) {
 				if(ev.player.getFoodStats().needFood()) {
 					ev.player.getFoodStats().addStats(1, 0);
 				}
@@ -775,7 +775,7 @@ public class EventArmorFullSet {
 
 			//Santa
 			if(boots == IceikaItems.santaBoots && body == IceikaItems.santaBody && legs == IceikaItems.santaLegs && helmet == IceikaItems.santaHead){
-				if ((e.entityLiving.worldObj.provider.dimensionId == ConfigurationHelper.Iceika) && ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile())) {
+				if ((e.entityLiving.worldObj.provider.dimensionId == ConfigurationHelper.iceika) && ((s.getEntity() instanceof EntityPlayer) && !s.isProjectile())) {
 					e.ammount += 6;
 				}
 			}

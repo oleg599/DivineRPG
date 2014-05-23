@@ -80,7 +80,7 @@ public class BlockEdenPortal extends BlockBreakable
 	@Override
     public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity) {
         if ((par5Entity.ridingEntity == null) && (par5Entity.riddenByEntity == null) && ((par5Entity instanceof EntityPlayerMP))) {
-        	int dim = ConfigurationHelper.Eden;
+        	int dim = ConfigurationHelper.eden;
         	
             EntityPlayerMP thePlayer = (EntityPlayerMP)par5Entity;
             if (thePlayer.timeUntilPortal > 0) {

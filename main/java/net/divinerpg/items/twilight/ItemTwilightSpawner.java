@@ -27,8 +27,8 @@ public class ItemTwilightSpawner extends ItemMod{
 	@Override
 	public boolean onItemUse(ItemStack item, EntityPlayer par2EntityPlayer, World par3World, int par4, int par5, int par6, int par7, float par8, float par9, float par10) {
 		int var4 = 0;
-		if(par3World.provider.dimensionId == x.Eden || par3World.provider.dimensionId == x.WildWoods || par3World.provider.dimensionId == x.Apalachia 
-				|| par3World.provider.dimensionId == x.Skythern || par3World.provider.dimensionId == x.Mortum){
+		if(par3World.provider.dimensionId == x.eden || par3World.provider.dimensionId == x.wildWoods || par3World.provider.dimensionId == x.apalachia 
+				|| par3World.provider.dimensionId == x.skythern || par3World.provider.dimensionId == x.mortum){
 			if (!par3World.isRemote) {
 				while (var4 < 1) {//1 = amount of mobs spawning
 					if(item.getItem() == TwilightItemsOther.spawnKarot){

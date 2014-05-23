@@ -20,21 +20,21 @@ public class DimensionHelper {
 	protected static final BiomeGenBase.Height IceikaHeight = new BiomeGenBase.Height(0.0F, 0.7F); 
 	protected static final BiomeGenBase.Height VetheaHeight = new BiomeGenBase.Height(-1.0F, 0.0F);
 	
-	public static BiomeGenBase Eden 		= new BiomeGenEden(ConfigurationHelper.EdenBiome);
-	public static BiomeGenBase WildWoods 	= new BiomeGenWildWoods(ConfigurationHelper.WildWoodsBiome);
-	public static BiomeGenBase Apalachia 	= new BiomeGenEden(ConfigurationHelper.ApalachiaBiome);
-	public static BiomeGenBase Skythern 	= new BiomeGenEden(ConfigurationHelper.SkythernBiome);
-	public static BiomeGenBase Mortum 		= new BiomeGenEden(ConfigurationHelper.MortumBiome);
-	public static BiomeGenBase Iceika 		= new BiomeGenIceika(ConfigurationHelper.IceikaBiome).setHeight(IceikaHeight);
-	public static BiomeGenBase Vethea 		= new BiomeGenVethea(ConfigurationHelper.VetheaBiome).setHeight(VetheaHeight);
-	public static BiomeGenBase Arcana 		= new BiomeGenArcana(ConfigurationHelper.ArcanaBiome);
+	public static BiomeGenBase Eden 		= new BiomeGenEden(ConfigurationHelper.edenBiome);
+	public static BiomeGenBase WildWoods 	= new BiomeGenWildWoods(ConfigurationHelper.wildWoodsBiome);
+	public static BiomeGenBase Apalachia 	= new BiomeGenEden(ConfigurationHelper.apalachiaBiome);
+	public static BiomeGenBase Skythern 	= new BiomeGenEden(ConfigurationHelper.skythernBiome);
+	public static BiomeGenBase Mortum 		= new BiomeGenEden(ConfigurationHelper.mortumBiome);
+	public static BiomeGenBase Iceika 		= new BiomeGenIceika(ConfigurationHelper.iceikaBiome).setHeight(IceikaHeight);
+	public static BiomeGenBase Vethea 		= new BiomeGenVethea(ConfigurationHelper.vetheaBiome).setHeight(VetheaHeight);
+	public static BiomeGenBase Arcana 		= new BiomeGenArcana(ConfigurationHelper.arcanaBiome);
 
 	public static void init(){
-		addDimension(ConfigurationHelper.Eden, WorldProviderEden.class, ConfigurationHelper.keepLoadingEden);
-		addDimension(ConfigurationHelper.WildWoods, WorldProviderWildWoods.class, ConfigurationHelper.keepLoadingWildWoods);
-		addDimension(ConfigurationHelper.Arcana, WorldProviderArcana.class, ConfigurationHelper.keepLoadingArcana);
-		addDimension(ConfigurationHelper.Iceika, WorldProviderIceika.class, ConfigurationHelper.keepLoadingIceika);
-		addDimension(ConfigurationHelper.Vethea, WorldProviderVethea.class, ConfigurationHelper.keepLoadingVethea);
+		addDimension(ConfigurationHelper.eden, WorldProviderEden.class, ConfigurationHelper.keepLoadingEden);
+		addDimension(ConfigurationHelper.wildWoods, WorldProviderWildWoods.class, ConfigurationHelper.keepLoadingWildWoods);
+		addDimension(ConfigurationHelper.arcana, WorldProviderArcana.class, ConfigurationHelper.keepLoadingArcana);
+		addDimension(ConfigurationHelper.iceika, WorldProviderIceika.class, ConfigurationHelper.keepLoadingIceika);
+		addDimension(ConfigurationHelper.vethea, WorldProviderVethea.class, ConfigurationHelper.keepLoadingVethea);
 		/*addDimension(ConfigurationHelper.Apalachia, WorldProviderApalachia.class, ConfigurationHelper.keepLoadingApalachia);
 		addDimension(ConfigurationHelper.Skythern, WorldProviderSkythern.class, ConfigurationHelper.keepLoadingSkythern);
 		addDimension(ConfigurationHelper.Mortum, WorldProviderMortum.class, ConfigurationHelper.keepLoadingMortum);

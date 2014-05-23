@@ -36,7 +36,7 @@ public class TeleporterVethea extends Teleporter{
 
     public void placeInPortal(Entity par1Entity, double par2, double par4, double par6, float par8)
     {
-        if (this.worldServerInstance.provider.dimensionId == ConfigurationHelper.Vethea)
+        if (this.worldServerInstance.provider.dimensionId == ConfigurationHelper.vethea)
         {
             if (!this.placeInExistingPortal(par1Entity, par2, par4, par6, par8))
             {

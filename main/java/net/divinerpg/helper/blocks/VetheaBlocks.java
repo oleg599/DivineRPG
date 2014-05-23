@@ -1,11 +1,9 @@
 package net.divinerpg.helper.blocks;
 
-import net.divinerpg.api.blocks.BlockModDirt;
 import net.divinerpg.api.blocks.BlockModDoor;
 import net.divinerpg.api.blocks.BlockModGlass;
 import net.divinerpg.api.blocks.BlockModGrass;
 import net.divinerpg.api.blocks.BlockModLeaves;
-import net.divinerpg.api.blocks.BlockModLight;
 import net.divinerpg.api.blocks.BlockModLog;
 import net.divinerpg.api.blocks.BlockModSpawner;
 import net.divinerpg.api.blocks.BlockModVine;
@@ -26,11 +24,11 @@ public class VetheaBlocks {
 
 	public static Block             	  dreamGrass;
 
-	public static final Block             dreamwreckerSpawner    = new BlockModSpawner("Dreamwrecker", true).setName("dremWreckerSpawner");
-	public static final Block             vermenousSpawner       = new BlockModSpawner("Vermenous", true).setName("vermenousSpawner");
-	public static final Block             twinsSpawner           = new BlockModSpawner("Twins", true).setName("twinsSpawner");
-	public static final Block             biphronSpawner         = new BlockModSpawner("Biphron", true).setName("biphronSpawner");
-	public static final Block             gorgosionSpawner       = new BlockModSpawner("Gorgosion", true).setName("gorgosionSpawner");
+	public static final Block             dreamwreckerSpawner    = new BlockModSpawner("dreamWreckerSpawner", "Dreamwrecker", "fireCrystal");
+	public static final Block             vermenousSpawner       = new BlockModSpawner("vermenousSpawner", "Vermenous", "fireCrystal");
+	public static final Block             twinsSpawner           = new BlockModSpawner("twinsSpawner", "Twins", "fireCrystal");
+	public static final Block             biphronSpawner         = new BlockModSpawner("biphronSpawner", "Biphron", "fireCrystal");
+	public static final Block             gorgosionSpawner       = new BlockModSpawner("gorgosionSpawner", "Gorgosion", "fireCrystal");
 
 	public static final Block             wreckAltar             = new VetheanBlock(Material.rock).setName("wreckAltar").setCreativeTab(DivineRPGTabs.spawner);
 	public static final Block             quadroticAltar         = new VetheanBlock(Material.rock).setName("quadroticAltar").setCreativeTab(DivineRPGTabs.spawner);

@@ -56,9 +56,9 @@ public class BlockArcanaPortal extends BlockMod {
             EntityPlayerMP thePlayer = (EntityPlayerMP)entity;
             if (thePlayer.timeUntilPortal > 0)
                 thePlayer.timeUntilPortal = 10;
-            else if (thePlayer.dimension != ConfigurationHelper.Arcana) {
+            else if (thePlayer.dimension != ConfigurationHelper.arcana) {
                 thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigurationHelper.Arcana, new TeleporterArcana(thePlayer.mcServer.worldServerForDimension(ConfigurationHelper.Arcana)));
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ConfigurationHelper.arcana, new TeleporterArcana(thePlayer.mcServer.worldServerForDimension(ConfigurationHelper.arcana)));
             } else {
                 thePlayer.timeUntilPortal = 10;
                 thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new TeleporterArcana(thePlayer.mcServer.worldServerForDimension(0)));

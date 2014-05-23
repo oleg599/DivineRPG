@@ -16,7 +16,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class BlockMod extends Block {
     
     protected String name;
-    protected String textureName;
+    public String textureName;
     protected EnumBlockType blockType;
     
     public BlockMod(String name){

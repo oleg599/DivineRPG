@@ -15,7 +15,7 @@ public class WorldProviderArcana extends WorldProvider
     public void registerWorldChunkManager()
     {
         this.worldChunkMgr = new WorldChunkManagerHell(DimensionHelper.Arcana, 0.5F);
-        this.dimensionId = ConfigurationHelper.Arcana;
+        this.dimensionId = ConfigurationHelper.arcana;
     }
 
     /**

@@ -34,7 +34,7 @@ public class TeleporterEden extends Teleporter{
 
     public void placeInPortal(Entity par1Entity, double par2, double par4, double par6, float par8)
     {
-        if (this.worldServerInstance.provider.dimensionId == ConfigurationHelper.Eden)
+        if (this.worldServerInstance.provider.dimensionId == ConfigurationHelper.eden)
         {
             if (!this.placeInExistingPortal(par1Entity, par2, par4, par6, par8))
             {

@@ -10,7 +10,7 @@ public class WorldProviderVethea extends WorldProvider {
 	
 	public void registerWorldChunkManager()  {
 		this.worldChunkMgr = new WorldChunkManagerHell(DimensionHelper.Vethea, 1.0F);
-		this.dimensionId = ConfigurationHelper.Vethea;
+		this.dimensionId = ConfigurationHelper.vethea;
 	}
 
 	public float getCloudHeight() {

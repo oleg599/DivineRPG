@@ -15,16 +15,21 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class BlockModSpawner extends BlockContainer {
 
+    protected String name;
 	protected String mobName;
+	
+	public BlockModSpawner(String name, String mobName){
+	    this(name, mobName, "frozenDungeonSpawner");
+	}
 
-	public BlockModSpawner(String mobName, boolean isVethean) {
+	public BlockModSpawner(String name, String mobName, String textureName) {
 		super(Material.rock);
+		this.name = name;
 		this.mobName = mobName;
-		setBlockName(mobName);
-		if(isVethean) setBlockTextureName(Reference.PREFIX + "fireCrystal");
-		else setBlockTextureName(Reference.PREFIX + "frozenDungeonSpawner");
+		setBlockName(name);
+		setBlockTextureName(Reference.PREFIX + textureName);
 		setCreativeTab(DivineRPGTabs.spawner);
-		GameRegistry.registerBlock(this, mobName);
+		GameRegistry.registerBlock(this, name);
 		LangRegistry.addBlock(this);
 	}
 
