@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-import net.divinerpg.blocks.twilight.BlockEdenPortal;
+import net.divinerpg.blocks.twilight.BlockTwilightPortal;
 import net.divinerpg.helper.blocks.TwilightBlocks;
 import net.divinerpg.helper.blocks.VanillaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
@@ -51,7 +51,7 @@ public class TeleporterEden extends Teleporter{
             byte b0 = 1;
             byte b1 = 0;
 
-            par1Entity.setLocationAndAngles((double)BlockEdenPortal.x, (double)BlockEdenPortal.y, (double)BlockEdenPortal.z, par1Entity.rotationYaw, 0.0F);
+            par1Entity.setLocationAndAngles((double)BlockTwilightPortal.x, (double)BlockTwilightPortal.y, (double)BlockTwilightPortal.z, par1Entity.rotationYaw, 0.0F);
             par1Entity.motionX = par1Entity.motionY = par1Entity.motionZ = 0.0D;
         }
     }

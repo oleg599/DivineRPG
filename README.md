@@ -15,6 +15,7 @@ Currently the code for the mod may contain several errors, as I (BossLetsPlays) 
 3. In the future after the rewrite, even major updates will take anywhere between 30 minutes to a week at most
 4. As a side note, please refrain from making major changes to the code while I am in this process, and do not fix any errors I have created unless you know 500% what you are doing. The errors I am creating are done intentionally to remind myself what must be changed. Any new classes during or after my rewrite process will be deleted if it contains any nonsense code such as parameters or functions being named func_324_fwe, or likewise. If it is an overriden method, you are expected to create a helper method that is properly named, and place the code in there and then call that method in the overriden function rather than putting the code in the function named method.
 
+***
 ####Important Links
 1. [DivineRPG Website] (http://wiki.divinerpg.net)
 2. [BossLetsPlays' Channel] (http://www.youtube.com/BossLetsPlays)
