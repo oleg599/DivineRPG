@@ -9,13 +9,14 @@ import net.divinerpg.api.blocks.BlockModGrass;
 import net.divinerpg.api.blocks.BlockModLeaves;
 import net.divinerpg.api.blocks.BlockModLog;
 import net.divinerpg.api.blocks.BlockModSpawner;
+import net.divinerpg.api.blocks.portal.BlockModPortal;
 import net.divinerpg.blocks.iceika.BlockFrostedChest;
 import net.divinerpg.blocks.iceika.BlockIceikaFire;
-import net.divinerpg.blocks.iceika.BlockIceikaPortal;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.items.IceikaItems;
 import net.divinerpg.helper.material.EnumBlockType;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 
 public class IceikaBlocks {
 
@@ -44,6 +45,6 @@ public class IceikaBlocks {
     public static final Block steelDoorBlock      = new BlockModDoor(EnumBlockType.IRON, "steelDoorBlock", IceikaItems.steelDoor, null).setHardness(7.0F);      //Doors for workshops.
 //    public static final Block coalstoneFurnace    = new BlockCoalstoneFurnace().setName("coalstoneFurnace"); TODO: 'Machine' API needs to be implemented (will take from my TechCraft)                                                   //One in each workshop. Never runs out of fuel
     public static final Block iceikaFire          = new BlockIceikaFire().setName("iceikaFire");                                                                // Used by snowglobe to light iceika portal
-    public static final Block portal              = new BlockIceikaPortal("iceikaPortal", ConfigurationHelper.iceika);
+    public static final Block portal              = new BlockModPortal("iceikaPortal", ConfigurationHelper.iceika, iceikaFire, Blocks.snow);
 
 }

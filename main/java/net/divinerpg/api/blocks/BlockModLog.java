@@ -14,7 +14,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockModLog extends BlockRotatedPillar{
+public class BlockModLog extends BlockRotatedPillar {
 	
 	protected IIcon top;
 	protected IIcon side;

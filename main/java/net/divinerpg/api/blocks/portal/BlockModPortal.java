@@ -1,9 +1,9 @@
-package net.divinerpg.api.blocks;
+package net.divinerpg.api.blocks.portal;
 
 import java.util.Random;
 
 import net.divinerpg.Reference;
-import net.divinerpg.api.blocks.portal.PortalSize;
+import net.divinerpg.api.worldgen.DivineTeleporter;
 import net.divinerpg.entity.twilight.effects.EntityGreenPortalFX;
 import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.divinerpg.helper.utils.LangRegistry;
@@ -15,29 +15,28 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemMonsterPlacer;
 import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.Teleporter;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldServer;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public abstract class BlockModPortal extends BlockBreakable {
+public class BlockModPortal extends BlockBreakable {
 
     public static final int[][] sides = new int[][] { new int[0], { 3, 1 }, { 2, 0 } };
     protected String            name;
     protected int               dimensionID;
     protected Block             fireBlock;
-    protected Block             blockField;
+    protected Block             blockFrame;
+    
 
     public BlockModPortal(String name, int dimensionID, Block fireBlock, Block blockField) {
         super(Reference.PREFIX + name, Material.portal, false);
         this.name = name;
         this.dimensionID = dimensionID;
         this.fireBlock = fireBlock;
-        this.blockField = blockField;
+        this.blockFrame = blockField;
         setBlockName(name);
         setBlockTextureName(Reference.PREFIX + name);
         setCreativeTab(DivineRPGTabs.blocks);
@@ -45,8 +44,6 @@ public abstract class BlockModPortal extends BlockBreakable {
         GameRegistry.registerBlock(this, name);
         LangRegistry.addBlock(this);
     }
-
-    protected abstract Teleporter getTeleporter(WorldServer worldServer);
 
     @Override
     public void onEntityCollidedWithBlock(World world, int xPos, int yPos, int zPos, Entity entity) {
@@ -58,10 +55,10 @@ public abstract class BlockModPortal extends BlockBreakable {
             }
             else if (thePlayer.dimension != dimensionID) {
                 thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, dimensionID, getTeleporter(thePlayer.mcServer.worldServerForDimension(dimensionID)));
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, dimensionID, new DivineTeleporter(thePlayer.mcServer.worldServerForDimension(dimensionID), dimensionID, this, blockFrame));
             } else {
                 thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, getTeleporter(thePlayer.mcServer.worldServerForDimension(0)));
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new DivineTeleporter(thePlayer.mcServer.worldServerForDimension(0), 0, this, blockFrame));
             }
         }
     }
@@ -115,8 +112,8 @@ public abstract class BlockModPortal extends BlockBreakable {
 
     //Brock originally called this func_150000_e like an idiot, so is this a good rename?
     public boolean hasPortalSizeChanged(World world, int xPos, int yPos, int zPos) {
-        PortalSize size = new PortalSize(world, xPos, yPos, zPos, 1, this, fireBlock, blockField);
-        PortalSize size1 = new PortalSize(world, xPos, yPos, zPos, 2, this, fireBlock, blockField);
+        PortalSize size = new PortalSize(world, xPos, yPos, zPos, 1, this, fireBlock, blockFrame);
+        PortalSize size1 = new PortalSize(world, xPos, yPos, zPos, 2, this, fireBlock, blockFrame);
 
         if (size.isInChunk() && (size.value == 0)) {
             size.setPortalSizeMaybe();
@@ -132,8 +129,8 @@ public abstract class BlockModPortal extends BlockBreakable {
     @Override
     public void onNeighborBlockChange(World world, int xPos, int yPos, int zPos, Block block) {
         int w = getMeta(world.getBlockMetadata(xPos, yPos, zPos));
-        PortalSize size = new PortalSize(world, xPos, yPos, zPos, 1, this, fireBlock, blockField);
-        PortalSize size1 = new PortalSize(world, xPos, yPos, zPos, 2, this, fireBlock, blockField);
+        PortalSize size = new PortalSize(world, xPos, yPos, zPos, 1, this, fireBlock, blockFrame);
+        PortalSize size1 = new PortalSize(world, xPos, yPos, zPos, 2, this, fireBlock, blockFrame);
 
         if (w == 1 && (!size.isInChunk() || size.value < size.rotationOrMaybeNumSides * size.directionOrSideMaybe)) world.setBlock(xPos, yPos, zPos, Blocks.air);
         else if (w == 2 && (!size1.isInChunk() || size1.value < size1.rotationOrMaybeNumSides * size1.directionOrSideMaybe)) world.setBlock(xPos, yPos, zPos, Blocks.air);

@@ -15,7 +15,8 @@ public enum EnumBlockType {
     VINES(Material.vine, Block.soundTypeGrass),
     CLOTH(Material.cloth, Block.soundTypeCloth),
     PORTAL(Material.portal, Block.soundTypeStone),
-    IRON(Material.iron, Block.soundTypeMetal);
+    IRON(Material.iron, Block.soundTypeMetal),
+    SNOW(Material.snow, Block.soundTypeSnow);
 
     private Material  material;
     private SoundType sound;

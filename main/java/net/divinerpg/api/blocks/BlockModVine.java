@@ -16,8 +16,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
 
-public class BlockModVine extends BlockMod implements IShearable
-{
+public class BlockModVine extends BlockMod implements IShearable {
 
     public BlockModVine(String name) {
         super(EnumBlockType.VINES, name);

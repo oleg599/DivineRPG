@@ -3,8 +3,9 @@ package net.divinerpg.blocks.vethea;
 import java.util.Random;
 
 import net.divinerpg.api.blocks.BlockMod;
+import net.divinerpg.helper.material.EnumBlockType;
+import net.divinerpg.helper.tabs.DivineRPGTabs;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -12,13 +13,14 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockAcid extends BlockMod {
 	
-    public BlockAcid() {
-        super(Material.snow);
+    public BlockAcid(String name) {
+        super(EnumBlockType.SNOW, name, DivineRPGTabs.vethea);
         this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
         this.setTickRandomly(true);
     }
@@ -143,9 +145,7 @@ public class BlockAcid extends BlockMod {
     {
 
         if (var5 instanceof EntityPlayer)
-        {
             var5.attackEntityFrom(DamageSource.cactus, 3);
-        }
     }
 
     @Override

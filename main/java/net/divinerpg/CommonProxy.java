@@ -9,10 +9,6 @@ import net.divinerpg.client.render.block.TileEntityStatue;
 import net.divinerpg.dimension.gen.vanilla.WorldGenOverworld;
 import net.divinerpg.helper.DimensionHelper;
 import net.divinerpg.helper.Util;
-import net.divinerpg.helper.blocks.ArcanaBlocks;
-import net.divinerpg.helper.blocks.IceikaBlocks;
-import net.divinerpg.helper.blocks.TwilightBlocks;
-import net.divinerpg.helper.blocks.VetheaBlocks;
 import net.divinerpg.helper.config.ConfigurationHelper;
 import net.divinerpg.helper.entity.ArcanaEntityRegistry;
 import net.divinerpg.helper.entity.IceikaEntityRegistry;
@@ -79,10 +75,6 @@ public class CommonProxy{
 		TwilightRecipeHelper.init();
 
 		System.out.println("[DIVINERPG] ADDING BLOCKS");
-		TwilightBlocks.init();
-		IceikaBlocks.init();
-		VetheaBlocks.init();
-		ArcanaBlocks.init();
 
 		if(Reference.DEBUG){
 			System.out.println("[DIVINERPG] DEBUG MODE");

@@ -21,21 +21,22 @@ public class LangRegistry {
     private static ArrayList<DivineRPGTabs> tabs = new ArrayList<DivineRPGTabs>();
     private static BufferedWriter   writer;
     private final static String     FILE_NAME = "/en_US.lang";
-    private static String           DIRECTORY = "./DivineRPG/resources/assets/drpg/lang";
+    private static String           DIRECTORY = "./DivineRPG/resources/assets/divinerpg/lang";
     private static String           PATH;
 
+    //TODO Make file paths in array, make look for directory, not the file
     public static void init() {
         if (Reference.DEBUG) {
             PATH = DIRECTORY + FILE_NAME;
             File file = new File(PATH);
             if (!file.exists()) {
-                DIRECTORY = "./resources/assets/drpg/lang";
+                DIRECTORY = "./resources/assets/divinerpg/lang";
                 PATH = DIRECTORY + FILE_NAME;
                 file = new File(PATH);
                 if (!file.exists()) {
-                    file = new File("./main/resources/assets/drpg/lang" + FILE_NAME);
+                    file = new File("./main/resources/assets/divinerpg/lang" + FILE_NAME);
                     if (!file.exists()) {
-                        file = new File("./src/main/resources/assets/drpg/lang" + FILE_NAME);
+                        file = new File("./src/main/resources/assets/divinerpg/lang" + FILE_NAME);
                         if (!file.exists())
                             file = new File("." + FILE_NAME);
                     }
