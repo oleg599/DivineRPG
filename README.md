@@ -46,36 +46,36 @@ See "Sebmitting a Pull Request" if you do not have permissions to edit the GitHu
 
 1. Clone Git
 	* Window > Show View > Other... > Git > Git Repositories > OK
-	* In the new "Git Repositories" view, click the icon with the yellow background and the blue arrow (http://prntscr.com/3j042b)
+	* In the new `Git Repositories` view, click the icon with the yellow background and the blue arrow (http://prntscr.com/3j042b)
 	* Copy this without the quotes "https://github.com/TheSlayerMC/DivineRPG.git" into the URI line,
 	* Enter you GitHub username and password
 	* Click next twice
-	* Click "browse" and choose where you want the source stored.
+	* Click `browse` and choose where you want the source stored.
 	* Click finish
 2. Create a new project
 
 #####Setting Up
 
 3. Right click project
-4. Go to "Build path > Configure build path"
-5. Delete the default "src" folder
-6. Click "Add Folder"
-7. Click "Create New Folder"
-8. Folder name: "src/main/java"
-9. Click "Create New Folder" again while the src folder is highlighted
-10. Folder name: "main/resources"
-11. Click "OK"
+4. Go to `Build path > Configure build path`
+5. Delete the default `src` folder
+6. Click `Add Folder`
+7. Click `Create New Folder`
+8. Folder name: `src/main/java`
+9. Click `Create New Folder` again while the src folder is highlighted
+10. Folder name: `main/resources`
+11. Click `OK`
 12. Add the Minecraft project to the build path
-13. Click "OK"
+13. Click `OK`
 14. Navigate to the git repo in file explorer
 15. In that, go into main > java.
-16. Drag the "net" and "com" folders into eclipse onto src/main/java
-17. Check "Link to files and folders"
+16. Drag the `net` and `com` folders into eclipse onto src/main/java
+17. Check `Link to files and folders`
 18. Do the same for main > resources > assets, this time draging it to src/main/resources
 
 #####Pushing
-19. Right click the "DivineRPG" in the Git view.
-20. Click "Push"
+19. Right click the `DivineRPG` in the Git view.
+20. Click `Push`
 21. Type your username and password if it asks.
 
 ####Submitting a Pull Request
